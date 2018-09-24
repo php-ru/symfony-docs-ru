@@ -361,7 +361,7 @@ Remote Stores
 ~~~~~~~~~~~~~
 
 Remote stores (:ref:`MemcachedStore <lock-store-memcached>`,
-:ref:`PdoStore <lock-store-pdo>`, :ref:`RedisStore <lock-store-redis>`) and
+:ref:`PdoStore <lock-store-pdo>`, :ref:`RedisStore <lock-store-redis>`, and
 :ref:`ZookeeperStore <lock-store-zookeeper>`) use a unique token to recognize
 the true owner of the lock. This token is stored in the
 :class:`Symfony\\Component\\Lock\\Key` object and is used internally by
@@ -630,4 +630,4 @@ are still running.
 .. _`ZooKeeper`: https://zookeeper.apache.org/
 
 .. ready: no
-.. revision: ae20f9d81
+.. revision: 79a29c88229cea1318b6060cfbd171fd1a2679be

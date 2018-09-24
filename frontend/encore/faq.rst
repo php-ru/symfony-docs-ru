@@ -8,7 +8,7 @@ How do I deploy my Encore Assets?
 
 There are two important things to remember when deploying your assets.
 
-**1) Run ``encore production``**
+**1) Compile assets for production**
 
 Optimize your assets for production by running:
 
@@ -133,4 +133,4 @@ this via:
     require('respond.js/dest/respond.src.js');
 
 .. ready: no
-.. revision: 2ba4c7370
+.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5

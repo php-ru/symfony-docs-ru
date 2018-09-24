@@ -322,7 +322,7 @@ instead::
     use Symfony\Component\Process\PhpProcess;
 
     $process = new PhpProcess(<<<EOF
-        <?php echo 'Hello World'; ?>
+        <?= 'Hello World' ?>
     EOF
     );
     $process->run();
@@ -464,4 +464,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: 28287958b
+.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5

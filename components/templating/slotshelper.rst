@@ -67,10 +67,10 @@ set in a slot is in the ``_content`` slot.
     <?php $view['slots']->set('title', $page->title) ?>
 
     <h1>
-        <?php echo $page->title ?>
+        <?= $page->title ?>
     </h1>
     <p>
-        <?php echo $page->body ?>
+        <?= $page->body ?>
     </p>
 
 .. note::
@@ -87,4 +87,4 @@ For large slots, there is also an extended syntax:
     <?php $view['slots']->stop() ?>
 
 .. ready: no
-.. revision: f4f6c498c
+.. revision: e3cc3def0805855858d8e4387edb6148344c85ba

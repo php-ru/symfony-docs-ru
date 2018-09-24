@@ -161,9 +161,8 @@ Go Deeper with Setup
 
 .. _`Stellar Development with Symfony`: http://symfonycasts.com/screencast/symfony
 .. _`Composer`: https://getcomposer.org/
-.. _`technical requirements`: https://symfony.com/doc/current/reference/requirements.html
-.. _`The Symfony Demo application`: https://github.com/symfony/symfony-demo
+.. _`The Symfony Demo application`: https://github.com/symfony/demo
 .. _`symfony/symfony-demo`: https://github.com/symfony/demo
 
 .. ready: no
-.. revision: 1a6ed635c
+.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5

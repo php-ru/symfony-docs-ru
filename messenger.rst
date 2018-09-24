@@ -645,7 +645,7 @@ factories. Defining such requires a two-step configuration based on Symfony's
 
     .. code-block:: xml
 
-        <!-- cconfig/services.xml -->
+        <!-- config/services.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -845,7 +845,7 @@ Register your Factory
 
     .. code-block:: xml
 
-        <!-- cconfig/services.xml -->
+        <!-- config/services.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -922,4 +922,4 @@ will give you access to the following services:
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: 9ba447c70
+.. revision: 18d917afc0b03d1842d43fdb54ec29e05453fad4

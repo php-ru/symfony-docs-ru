@@ -992,7 +992,7 @@ You can also use expressions inside your templates:
             '"ROLE_ADMIN" in roles or (not is_anonymous() and user.isSuperAdmin())'
         ))): ?>
             <a href="...">Delete</a>
-        <?php endif; ?>
+        <?php endif ?>
 
 For more details on expressions and security, see :doc:`/security/expressions`.
 
@@ -1351,4 +1351,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony-security
 
 .. ready: no
-.. revision: 16c0ee782
+.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1

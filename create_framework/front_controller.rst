@@ -190,7 +190,7 @@ And the ``hello.php`` script can now be converted to a template::
     <!-- example.com/src/pages/hello.php -->
     <?php $name = $request->get('name', 'World') ?>
 
-    Hello <?php echo htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>
+    Hello <?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8') ?>
 
 We have the first version of our framework::
 
@@ -231,4 +231,4 @@ variable.
     extracting the URL map to a configuration file.
 
 .. ready: no
-.. revision: 1761050bd
+.. revision: e3cc3def0805855858d8e4387edb6148344c85ba

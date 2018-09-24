@@ -92,7 +92,7 @@ array of ``key => value`` pairs representing option names and their respective v
     $client = RedisAdapter::createConnection(
 
         // provide a string dsn
-        'redis://localhost:6739',
+        'redis://localhost:6379',
 
         // associative array of configuration options
         array(
@@ -162,4 +162,4 @@ Available Options
 .. _`TCP-keepalive`: https://redis.io/topics/clients#tcp-keepalive
 
 .. ready: no
-.. revision: fc7e15536
+.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1

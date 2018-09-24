@@ -4,10 +4,10 @@
 Profiler Configuration Reference (WebProfilerBundle)
 ====================================================
 
-The WebProfilerBundle provides detailed technical information about each request
-execution and displays it in both the web debug toolbar and the
-:doc:`profiler </profiler>`. All these options are configured under the
-``web_profiler`` key in your application configuration.
+The WebProfilerBundle is a **development tool** that provides detailed technical
+information about each request execution and displays it in both the web debug
+toolbar and the :doc:`profiler </profiler>`. All these options are configured
+under the ``web_profiler`` key in your application configuration.
 
 .. code-block:: terminal
 
@@ -70,4 +70,4 @@ is useful when the application makes lots of Ajax requests or they are heavy and
 you want to exclude some of them.
 
 .. ready: no
-.. revision: 4e0f567e5
+.. revision: f7538d1f6623fd33644bdb6cc393e8aaa32e6aed

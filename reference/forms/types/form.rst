@@ -68,6 +68,8 @@ option on the form.
 
 .. include:: /reference/forms/types/options/compound.rst.inc
 
+.. _reference-form-option-constraints:
+
 .. include:: /reference/forms/types/options/constraints.rst.inc
 
 .. include:: /reference/forms/types/options/data.rst.inc
@@ -153,4 +155,4 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 .. include:: /reference/forms/types/options/translation_domain.rst.inc
 
 .. ready: no
-.. revision: 5bdf70895
+.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5

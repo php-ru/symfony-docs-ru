@@ -3,9 +3,9 @@ group_by
 
 **type**: ``array``, ``callable`` or ``string`` **default**: ``null``
 
-You can easily "group" options in a select simply by passing a multi-dimensional
-array to ``choices``. See the :ref:`Grouping Options <form-choices-simple-grouping>`
-section about that.
+You can group the ``<option>`` elements of a ``<select>`` into ``<optgroup>``
+by passing a multi-dimensional array to ``choices``. See the
+:ref:`Grouping Options <form-choices-simple-grouping>` section about that.
 
 The ``group_by`` option is an alternative way to group choices, which gives you
 a bit more flexibility.
@@ -32,7 +32,7 @@ Take the following example::
     ));
 
 This groups the dates that are within 3 days into "Soon" and everything else into
-a "Later" group:
+a "Later" ``<optgroup>``:
 
 .. image:: /_images/reference/form/choice-example5.png
    :align: center
@@ -42,4 +42,4 @@ If you return ``null``, the option won't be grouped. You can also pass a string
 details about using a property path.
 
 .. ready: no
-.. revision: 8875c445c
+.. revision: 2d5e4afb41e30c179734b958c42f8a14700e10cb

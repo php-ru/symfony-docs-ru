@@ -622,11 +622,6 @@ dsn
 
 The DSN where to store the profiling information.
 
-.. seealso::
-
-    See :doc:`/profiler/storage` for more information about the
-    profiler storage.
-
 request
 ~~~~~~~
 
@@ -2066,4 +2061,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: af6265828
+.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1

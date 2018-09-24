@@ -14,7 +14,7 @@ be directly set inside the template:
 
     .. code-block:: html+php
 
-        <?php echo $view['form']->widget($form['save'], array('label' => 'Click me')) ?>
+        <?= $view['form']->widget($form['save'], array('label' => 'Click me')) ?>
 
 .. ready: no
-.. revision: 57c2d4b5a
+.. revision: e3cc3def0805855858d8e4387edb6148344c85ba

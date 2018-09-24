@@ -335,9 +335,9 @@ The translator service is accessible in PHP templates through the
 
 .. code-block:: html+php
 
-    <?php echo $view['translator']->trans('Symfony is great') ?>
+    <?= $view['translator']->trans('Symfony is great') ?>
 
-    <?php echo $view['translator']->transChoice(
+    <?= $view['translator']->transChoice(
         '{0} There are no apples|{1} There is one apple|]1,Inf[ There are %count% apples',
         10,
         array('%count%' => 10)
@@ -558,4 +558,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: 24955902d
+.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
