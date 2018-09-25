@@ -1,0 +1,14 @@
+.. index::
+   single: Bundle; Inheritance
+
+How to Use Bundle Inheritance to Override Parts of a Bundle
+===========================================================
+
+.. caution::
+
+    Bundle inheritance was removed in Symfony 4.0, but you can
+    :doc:`override any part of a bundle </bundles/override>` without
+    using bundle inheritance.
+
+.. ready: no
+.. revision: 02660464b189383e47e1f5f608ba8a8a44813fbd
