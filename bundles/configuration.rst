@@ -175,10 +175,9 @@ The ``Configuration`` class to handle the sample configuration looks like::
     {
         public function getConfigTreeBuilder()
         {
-            $treeBuilder = new TreeBuilder();
-            $rootNode = $treeBuilder->root('acme_social');
+            $treeBuilder = new TreeBuilder('acme_social');
 
-            $rootNode
+            $treeBuilder->getRootNode()
                 ->children()
                     ->arrayNode('twitter')
                         ->children()
@@ -192,6 +191,9 @@ The ``Configuration`` class to handle the sample configuration looks like::
             return $treeBuilder;
         }
     }
+
+.. versionadded:: 4.2
+    Not passing the root node name to ``TreeBuilder`` was deprecated in Symfony 4.2.
 
 .. seealso::
 
@@ -428,4 +430,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`XML schema`: https://en.wikipedia.org/wiki/XML_schema
 
 .. ready: no
-.. revision: 81943ab6a
+.. revision: d70a0a6cf1b881bb28adc67d087223f892dfd5e5
