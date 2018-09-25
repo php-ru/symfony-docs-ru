@@ -1,0 +1,9 @@
+How to Restrict Firewalls to a Specific Host
+============================================
+
+As of Symfony 2.5, more possibilities to restrict firewalls have been added.
+You can read everything about all the possibilities (including ``host``)
+in ":doc:`/security/firewall_restriction`".
+
+.. ready: no
+.. revision: fc9e35158989414879afa8d0812b6246d87b31a7
