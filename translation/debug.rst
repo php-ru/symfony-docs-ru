@@ -152,7 +152,7 @@ for the ``fr`` locale and run the command, you will get:
     ---------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
     ---------  ------------------  ----------------------  -------------------------------
-     missing    Symfony is great    J'aime Symfony          Symfony is great
+     missing    Symfony is great    Symfony is great        Symfony is great
     ---------  ------------------  ----------------------  -------------------------------
 
 The state indicates the message is missing because it is not translated in
@@ -171,7 +171,7 @@ translation file in the ``fr`` locale and run the command, you will get:
     ----------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
     ----------  ------------------  ----------------------  -------------------------------
-     fallback    Symfony is great    J'aime Symfony          Symfony is great
+     fallback    Symfony is great    Symfony is great        Symfony is great
     ----------  ------------------  ----------------------  -------------------------------
 
 You can see that the translations of the message are identical in the ``fr``
@@ -195,4 +195,4 @@ switches:
     $ php bin/console debug:translation en AcmeDemoBundle --only-missing
 
 .. ready: no
-.. revision: 90b4408a24741c9040fd7b545b1cacbe4eb9bd38
+.. revision: 03d561e8f08a77f6491c429bde84cd3a63c636ca

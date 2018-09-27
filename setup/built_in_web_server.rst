@@ -89,7 +89,7 @@ can change the socket passing an IP address and a port as a command-line argumen
 
         $ php bin/console server:status 192.168.0.1:8080
 
-    The first command shows if your Symfony application will be server through
+    The first command shows if your Symfony application will be served through
     ``localhost:8000``, the second one does the same for ``192.168.0.1:8080``.
 
 .. tip::
@@ -158,4 +158,4 @@ when the web server listens to another IP address or to another port:
 .. _`php.net`: https://php.net/manual/en/features.commandline.webserver.php#example-411
 
 .. ready: no
-.. revision: 745555748d6c97ef2f62e36f36763b5bc45399fc
+.. revision: 03d561e8f08a77f6491c429bde84cd3a63c636ca
