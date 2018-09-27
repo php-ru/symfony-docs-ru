@@ -41,6 +41,7 @@ Tag Name                                  Usage
 `translation.dumper`_                     Register a custom service that dumps translation messages
 `twig.extension`_                         Register a custom Twig Extension
 `twig.loader`_                            Register a custom service that loads Twig templates
+`twig.runtime`_                           Register a lazy-loaded Twig Extension
 `validator.constraint_validator`_         Create your own custom validation constraint
 `validator.initializer`_                  Register a service that initializes objects before validation
 ========================================  ========================================================================
@@ -1175,6 +1176,51 @@ also register it manually:
     The ``priority`` value is optional and defaults to ``0``.
     The higher priority loaders are tried first.
 
+.. _reference-dic-tags-twig-runtime:
+
+twig.runtime
+------------
+
+**Purpose**: To register a custom Lazy-Loaded Twig Extension
+
+:ref:`Lazy-Loaded Twig Extensions <lazy-loaded-twig-extensions>` are defined as
+regular services but the need to be tagged with ``twig.runtime``. If you're using the
+:ref:`default services.yaml configuration <service-container-services-load-example>`,
+the service is auto-registered and auto-tagged. But, you can also register it manually:
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        services:
+            App\Twig\AppExtension:
+                tags: [twig.runtime]
+
+    .. code-block:: xml
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services
+                http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+            <services>
+                <service id="App\Twig\AppExtension">
+                    <tag name="twig.runtime" />
+                </service>
+            </services>
+        </container>
+
+    .. code-block:: php
+
+        use App\Twig\AppExtension;
+        use App\Twig\AnotherExtension;
+
+        $container
+            ->register(AppExtension::class)
+            ->addTag('twig.runtime')
+        ;
+
 validator.constraint_validator
 ------------------------------
 
@@ -1209,4 +1255,4 @@ Bridge.
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: 2ba4c7370
+.. revision: 085eab562774a0335fbe3b8e25730dbad6e61b2d

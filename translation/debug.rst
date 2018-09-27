@@ -143,7 +143,7 @@ for the ``fr`` locale and run the command, you will get:
     ---------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
     ---------  ------------------  ----------------------  -------------------------------
-     missing    Symfony is great    J'aime Symfony          Symfony is great
+     missing    Symfony is great    Symfony is great        Symfony is great
     ---------  ------------------  ----------------------  -------------------------------
 
 The state indicates the message is missing because it is not translated in
@@ -162,7 +162,7 @@ translation file in the ``fr`` locale and run the command, you will get:
     ----------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
     ----------  ------------------  ----------------------  -------------------------------
-     fallback    Symfony is great    J'aime Symfony          Symfony is great
+     fallback    Symfony is great    Symfony is great        Symfony is great
     ----------  ------------------  ----------------------  -------------------------------
 
 You can see that the translations of the message are identical in the ``fr``
@@ -186,4 +186,4 @@ unused or only the missing messages, by using the ``--only-unused`` or
     $ php bin/console debug:translation en --only-missing
 
 .. ready: no
-.. revision: 382c1253e08c308443d7b9f08b6fa7c6258f122e
+.. revision: 3cf74d41f3bc5d71acbadabf4251efa0d019b88e

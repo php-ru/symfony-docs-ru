@@ -13,7 +13,7 @@ Installation
 
 .. code-block:: terminal
 
-    $ composer require symfony/dotenv
+    $ composer require --dev symfony/dotenv
 
 Alternatively, you can clone the `<https://github.com/symfony/dotenv>`_ repository.
 
@@ -114,4 +114,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 302206aeb
+.. revision: d4b2c99ee6c0a88c3c29af8c3ce76a677b5c4d8a

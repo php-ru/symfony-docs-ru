@@ -7,7 +7,9 @@ Community
     releases
     review-comments
     reviews
+    mentoring
+    speaker-mentoring
     other
 
 .. ready: no
-.. revision: 991b00ef8
+.. revision: 26813d561ae19f6dd9d1cc8d1ac9fc619cec4e7b
