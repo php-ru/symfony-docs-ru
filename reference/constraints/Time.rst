@@ -78,6 +78,8 @@ of the day when the event starts:
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -91,4 +93,4 @@ This message is shown if the underlying data is not a valid time.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: d65ac5c1265cdfd02e80133d023aba97eaa0603f
+.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a

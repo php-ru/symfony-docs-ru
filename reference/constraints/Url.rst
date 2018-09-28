@@ -77,6 +77,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -459,4 +461,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: cc440d966325c802ed3591150e85ce2a31d453f9
+.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a

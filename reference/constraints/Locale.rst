@@ -84,6 +84,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -113,4 +115,4 @@ the validity of the given locale (e.g. ``FR-fr.utf8`` is transformed into ``fr_F
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: cf9833c7d046594667d9d0636d9f8d0e44b2c5e3
+.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a

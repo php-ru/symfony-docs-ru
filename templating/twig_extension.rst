@@ -72,6 +72,8 @@ you're done! Symfony will automatically know about your new service and add the 
 
 You can now start using your filter in any Twig template.
 
+.. _lazy-loaded-twig-extensions:
+
 Creating Lazy-Loaded Twig Extensions
 ------------------------------------
 
@@ -147,4 +149,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: ad416679acd1f6571e0c81062427eb6f93c3f337
+.. revision: 46fd93077ad8b438d77efffe24e546b00b37f433
