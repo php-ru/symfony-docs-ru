@@ -94,6 +94,8 @@ on an object that will contain an ISBN.
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Available Options
 -----------------
 
@@ -142,4 +144,4 @@ value does not pass any of the ISBN checks.
 .. _`International Standard Book Number (ISBN)`: https://en.wikipedia.org/wiki/Isbn
 
 .. ready: no
-.. revision: 0c5329865157a67a64a92b4e6fb9ea49b109d12f
+.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f

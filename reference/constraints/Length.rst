@@ -110,6 +110,8 @@ and "50", you might add the following:
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -170,4 +172,4 @@ value's length is not exactly this value.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 72a61ae9fdf26b91259c28a24caa4f43b2bf24e2
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

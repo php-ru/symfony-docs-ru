@@ -74,6 +74,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -87,4 +89,4 @@ This message is shown if the string is not a valid language code.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 043fea41c6dc62dd49c3d7caeca4213e829d0d1c
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

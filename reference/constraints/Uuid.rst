@@ -78,6 +78,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -124,4 +126,4 @@ All five versions are allowed by default.
 .. _`UUID versions`: http://en.wikipedia.org/wiki/Universally_unique_identifier#Variants_and_versions
 
 .. ready: no
-.. revision: 63517b920f9d10e5abe3ebcbcda6805803780518
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

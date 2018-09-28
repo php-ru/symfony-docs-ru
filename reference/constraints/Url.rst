@@ -76,6 +76,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -372,4 +374,4 @@ DNS check failed.
         }
 
 .. ready: no
-.. revision: 599d556defdaef003f1cc22bf669e2c1228aa80c
+.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f

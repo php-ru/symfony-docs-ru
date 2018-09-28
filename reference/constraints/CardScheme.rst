@@ -96,6 +96,8 @@ on an object that will contain a credit card number.
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Available Options
 -----------------
 
@@ -134,4 +136,4 @@ The message shown when the value does not pass the ``CardScheme`` check.
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: de952930f48f45cce179650b0e7dff3e43f91975
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

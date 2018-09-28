@@ -161,6 +161,8 @@ it a custom message:
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -280,4 +282,4 @@ This is the message that will be shown if this validator fails.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 6971a77d26b66df39e7893edee9dd7c28f6fe790
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

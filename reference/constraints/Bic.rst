@@ -80,6 +80,8 @@ will contain a Business Identifier Code (BIC).
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Available Options
 -----------------
 
@@ -95,4 +97,4 @@ The default message supplied when the value does not pass the BIC check.
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f

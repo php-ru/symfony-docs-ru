@@ -76,6 +76,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -97,4 +99,4 @@ This message is shown if the underlying data is not a valid datetime.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: e2cf9d70c5e1c6b0bd824f5b7cf9cb24416faaa8
+.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f

@@ -76,6 +76,8 @@ a valid currency, you could do the following:
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -91,4 +93,4 @@ This is the message that will be shown if the value is not a valid currency.
 .. _`3-letter ISO 4217`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f

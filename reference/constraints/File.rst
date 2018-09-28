@@ -150,6 +150,8 @@ The ``bioFile`` property is validated to guarantee that it is a real file.
 Its size and mime type are also validated because the appropriate options
 have been specified.
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -274,4 +276,4 @@ written to disk.
 .. _`Wikipedia: Binary prefix`: http://en.wikipedia.org/wiki/Binary_prefix
 
 .. ready: no
-.. revision: 1c962a674a56c8588659fa48f835b8d1f0dcd189
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

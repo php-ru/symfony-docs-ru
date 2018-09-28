@@ -85,6 +85,8 @@ will contain a credit card number.
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Available Options
 -----------------
 
@@ -100,4 +102,4 @@ The default message supplied when the value does not pass the Luhn check.
 .. _`Luhn algorithm`: https://en.wikipedia.org/wiki/Luhn_algorithm
 
 .. ready: no
-.. revision: 6283116728a901e9f0c54423693458a3ba616b35
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5

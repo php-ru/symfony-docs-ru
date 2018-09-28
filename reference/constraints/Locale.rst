@@ -78,6 +78,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -94,4 +96,4 @@ This message is shown if the string is not a valid locale.
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: e5a33b2972252e2eeffdaca6959f0494796f5001
+.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5
