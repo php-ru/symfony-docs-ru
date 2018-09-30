@@ -88,6 +88,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -150,4 +152,4 @@ of the given email.
 .. _HTML5 email input element: https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail
 
 .. ready: no
-.. revision: 07d4bf92a
+.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a

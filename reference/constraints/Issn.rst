@@ -76,6 +76,8 @@ Basic Usage
             }
         }
 
+.. include:: /reference/constraints/_empty-values-are-valid.rst.inc
+
 Options
 -------
 
@@ -107,4 +109,4 @@ this to ``true``, the validator requires a hyphenated ISSN value.
 .. _`International Standard Serial Number (ISSN)`: https://en.wikipedia.org/wiki/Issn
 
 .. ready: no
-.. revision: d65ac5c12
+.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a

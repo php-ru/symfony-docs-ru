@@ -79,6 +79,8 @@ successfully registered:
 
 You can now start using your filter in any Twig template.
 
+.. _lazy-loaded-twig-extensions:
+
 Creating Lazy-Loaded Twig Extensions
 ------------------------------------
 
@@ -154,4 +156,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: 40f19617d
+.. revision: 06dbeb56a5cc9cdd0c814b5a41daea5a37212b6c
