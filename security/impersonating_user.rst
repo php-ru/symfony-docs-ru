@@ -93,8 +93,6 @@ In some cases you may need to get the object that represents the impersonator
 user rather than the impersonated user. Use the following snippet to iterate
 over the user's roles until you find one that is a ``SwitchUserRole`` object::
 
-    use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-    use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
     use Symfony\Component\Security\Core\Role\SwitchUserRole;
     use Symfony\Component\Security\Core\Security;
     // ...
@@ -227,4 +225,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: 37aef5227532dfd36097d679628b79649bf00cd4
+.. revision: 98c22b326e28f6d372a82779448b34330407362d
