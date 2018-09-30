@@ -75,9 +75,9 @@ See `browserslist`_ for more details on the syntax.
 .. _`PostCSS`: http://postcss.org/
 .. _`autoprefixing`: https://github.com/postcss/autoprefixer
 .. _`linting`: https://stylelint.io/
-.. _`browserslist`: https://github.com/ai/browserslist
-.. _`babel-preset-env`: https://github.com/babel/babel-preset-env
+.. _`browserslist`: https://github.com/browserslist/browserslist
+.. _`babel-preset-env`: https://github.com/babel/babel/tree/master/packages/babel-preset-env
 .. _`postcss-loader`: https://github.com/postcss/postcss-loader
 
 .. ready: no
-.. revision: 58b5596c2ff11a0edac40efc637cde754934d236
+.. revision: d96bae1cf703adc68cefdc5e763077bcfcc5c437
