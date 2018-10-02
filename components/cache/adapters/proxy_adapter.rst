@@ -36,4 +36,4 @@ and optionally a namespace and default cache lifetime as its second and third pa
 .. _`cache item pool interface`: http://www.php-fig.org/psr/psr-6/#cacheitempoolinterface
 
 .. ready: no
-.. revision: c49d42713
+.. revision: c49d42713a2ce8802b5fcd315aa981259d7c7964

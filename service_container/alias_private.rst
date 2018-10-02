@@ -288,4 +288,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: 7368651d4
+.. revision: 7368651d4bbcba458cf0d82663e6adbb8a973dd6

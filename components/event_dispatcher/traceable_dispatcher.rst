@@ -53,4 +53,4 @@ method returns an array of event listeners that have not been called::
     $notCalledListeners = $traceableEventDispatcher->getNotCalledListeners();
 
 .. ready: no
-.. revision: 219b7f887
+.. revision: 219b7f88713f162934ae238c09c26986e23db457

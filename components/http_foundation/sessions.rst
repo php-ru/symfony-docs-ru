@@ -342,4 +342,4 @@ Compact method to process display all flashes at once::
     }
 
 .. ready: no
-.. revision: 22206d4e1
+.. revision: 22206d4e12baa2ef68aa913a138d7316830e76fb

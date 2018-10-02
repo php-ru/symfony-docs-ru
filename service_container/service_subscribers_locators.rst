@@ -477,4 +477,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: 5ae667010
+.. revision: 5ae6670108a26cd6b2b6ed67defba2321793d0c2

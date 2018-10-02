@@ -98,4 +98,4 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     and the token, and ``token`` will be empty.
 
 .. ready: no
-.. revision: 81943ab6a
+.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0

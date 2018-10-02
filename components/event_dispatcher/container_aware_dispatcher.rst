@@ -10,4 +10,4 @@ The Container Aware Event Dispatcher
     ``EventDispatcher`` with closure-proxy injection instead.
 
 .. ready: no
-.. revision: 02660464b
+.. revision: 02660464b189383e47e1f5f608ba8a8a44813fbd

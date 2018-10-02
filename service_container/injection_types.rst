@@ -250,4 +250,4 @@ especially if you are working with code that is out of your control, such
 as in a third party library, which uses public properties for its dependencies.
 
 .. ready: no
-.. revision: 65d6754d9
+.. revision: 65d6754d9aa12e7b56b3611276ce8ea4c40c0239

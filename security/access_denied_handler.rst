@@ -73,4 +73,4 @@ That's it! Any ``AccessDeniedException`` thrown by code under the ``main`` firew
 will now be handled by your service.
 
 .. ready: no
-.. revision: b2426d42b
+.. revision: b2426d42b10d3422178eb799f928dc20783cd936

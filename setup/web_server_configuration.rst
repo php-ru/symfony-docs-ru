@@ -354,4 +354,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: ec4e53d7d
+.. revision: ec4e53d7d91388900eb849d10680060cc415767d

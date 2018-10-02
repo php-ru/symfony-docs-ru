@@ -56,4 +56,4 @@ your code.
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
 
 .. ready: no
-.. revision: f8da309f9
+.. revision: f8da309f938f99da8d2112f74f81df8cee13c02d

@@ -8,4 +8,4 @@ choice is selected. In the checkbox and the radio type, the value of ``empty_dat
 is overriden by the value returned by the data transformer (see :doc:`/form/data_transformers`).
 
 .. ready: no
-.. revision: 91805f121
+.. revision: 91805f1212ce1d0bf244b65fc4e0d8cd23adfe89

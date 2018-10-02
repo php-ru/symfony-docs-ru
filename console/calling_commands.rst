@@ -58,4 +58,4 @@ returns the returned code from the command (return value from command's
     output is optimized for the console and not to be passed to other commands.
 
 .. ready: no
-.. revision: e44f62290
+.. revision: e44f62290b8917366e88faf86de2adb616877590

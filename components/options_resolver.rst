@@ -736,4 +736,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: b50c5adb6
+.. revision: b50c5adb66165478d78a01e713359a55a60965f7

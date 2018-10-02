@@ -171,4 +171,4 @@ An example WSDL is below.
 .. _`Zend SOAP`: http://framework.zend.com/manual/current/en/modules/zend.soap.server.html
 
 .. ready: no
-.. revision: 0775f0a6e
+.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97

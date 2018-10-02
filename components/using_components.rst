@@ -68,4 +68,4 @@ And have fun!
 .. _Install Composer: https://getcomposer.org/download/
 
 .. ready: no
-.. revision: dcd9ded0c
+.. revision: dcd9ded0c2b6dd6aefa4785a7cbb4bf756d583e6

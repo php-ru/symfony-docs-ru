@@ -29,4 +29,4 @@ PHP version allowed for the dependencies (set it to the server's PHP version).
 .. _`platform`: https://getcomposer.org/doc/06-config.md#platform
 
 .. ready: no
-.. revision: 898fb68e5
+.. revision: 898fb68e5611a7281f627e3d961ef7e94379ec40

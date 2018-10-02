@@ -294,4 +294,4 @@ timestamp and the lifetime.
 .. _`php.net/memcached.setoption`: https://php.net/memcached.setoption
 
 .. ready: no
-.. revision: 202c9396b
+.. revision: 202c9396b6b3479763fa904a4517dabfd96a3694

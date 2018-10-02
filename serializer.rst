@@ -221,4 +221,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: ae558f41d
+.. revision: ae558f41df2ef5082a4e15d35b144832f7236346

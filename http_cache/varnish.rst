@@ -246,4 +246,4 @@ proxy before it has expired, it adds complexity to your caching setup.
 .. _`User Context`: http://foshttpcachebundle.readthedocs.org/en/latest/features/user-context.html
 
 .. ready: no
-.. revision: 9173ac90d
+.. revision: 9173ac90df1e9401a491ed02bbac38f89d42b214

@@ -256,4 +256,4 @@ Have fun!
 .. _`Application`: https://github.com/silexphp/Silex/blob/master/src/Silex/Application.php
 
 .. ready: no
-.. revision: 7918d933b
+.. revision: 7918d933b63dddd16248d29575f5aad2fdb52342

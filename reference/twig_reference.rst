@@ -804,4 +804,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: bddcf31a5
+.. revision: bddcf31a52f38064eaeb4957bdd4c05f56b206c7

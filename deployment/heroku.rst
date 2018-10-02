@@ -12,4 +12,4 @@ To deploy to Heroku, see their official documentation:
 .. _`Getting Started with Symfony on Heroku`: https://devcenter.heroku.com/articles/getting-started-with-symfony
 
 .. ready: no
-.. revision: 5b6ef2a9c
+.. revision: 5b6ef2a9cbe2eded17c7c2c3e441605d8a7b6591

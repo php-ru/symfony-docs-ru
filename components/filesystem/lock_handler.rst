@@ -9,4 +9,4 @@ LockHandler
     :doc:`Lock component </components/lock>` instead.
 
 .. ready: no
-.. revision: 90bf0fe36
+.. revision: 90bf0fe36abffabcdca38a0f4dedd0dfd892ec9a

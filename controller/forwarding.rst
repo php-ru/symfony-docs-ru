@@ -35,4 +35,4 @@ Just like when creating a controller for a route, the order of the arguments
 of the ``fancy()`` method doesn't matter: the matching is done by name.
 
 .. ready: no
-.. revision: 80c3c2922
+.. revision: 80c3c29223c5a54888151b8985233b206565617e

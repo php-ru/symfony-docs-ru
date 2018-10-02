@@ -207,4 +207,4 @@ released today, and 2.2 had recently reached its end-of-maintenance, the 2.2
 .. _`supported languages`: http://pygments.org/languages/
 
 .. ready: no
-.. revision: 6e2302488
+.. revision: 6e23024888f89775bf804d36a6330572e5720eb1

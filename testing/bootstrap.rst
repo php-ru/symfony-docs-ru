@@ -52,4 +52,4 @@ This now becomes an environment variable (i.e. ``$_ENV``) that's available
 in the custom bootstrap file (``tests/bootstrap.php``).
 
 .. ready: no
-.. revision: 99234ea38
+.. revision: 99234ea381c408f78aa246c42aef7b1aa467d13c

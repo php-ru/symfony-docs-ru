@@ -323,4 +323,4 @@ the ``switch_user`` firewall listener.
 .. _`BasePasswordEncoder::checkPasswordLength`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php
 
 .. ready: no
-.. revision: 22fd27b9c
+.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774

@@ -130,4 +130,4 @@ Learn more
 .. _`third-party bundles`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: b762d3703
+.. revision: b762d37035b00318b3bef66721fdc49f6cc365d4

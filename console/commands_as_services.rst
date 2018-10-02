@@ -138,4 +138,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: 4143835f9
+.. revision: 4143835f9da826a1c006ff56b2506826f8848bdc

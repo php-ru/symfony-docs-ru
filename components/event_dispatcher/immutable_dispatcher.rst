@@ -37,4 +37,4 @@ If you are trying to execute one of the methods which modifies the dispatcher
 (e.g. ``addListener()``), a ``BadMethodCallException`` is thrown.
 
 .. ready: no
-.. revision: 7ce9cfedb
+.. revision: 7ce9cfedb7e3a365144507df1481d9e4d4e16f95

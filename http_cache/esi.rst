@@ -255,4 +255,4 @@ The ``render_esi`` helper supports two other useful options:
 .. _`ESI`: http://www.w3.org/TR/esi-lang
 
 .. ready: no
-.. revision: c7226d449
+.. revision: c7226d4496007990fdf9f2d276e65dd1f63f1932

@@ -307,4 +307,4 @@ comparison value.
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: c311f5fb5
+.. revision: c311f5fb564e2d968829adca54f3da9b88c17f62

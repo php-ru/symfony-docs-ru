@@ -714,4 +714,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 146899407
+.. revision: 14689940701ca62196ab153837437ab48d83a052

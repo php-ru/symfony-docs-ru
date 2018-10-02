@@ -107,4 +107,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/workflow
 
 .. ready: no
-.. revision: e82895aab
+.. revision: e82895aab3643452799f5428addde0d881132ae7

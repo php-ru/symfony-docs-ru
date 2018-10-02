@@ -525,4 +525,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/event-dispatcher
 
 .. ready: no
-.. revision: fb5c50fb2
+.. revision: fb5c50fb2ebaa414624560633dc4e9205c2f81df

@@ -23,4 +23,4 @@ To ease upgrading projects using experimental features, the changelog must
 explain backward incompatible changes and explain how to upgrade code.
 
 .. ready: no
-.. revision: f2a40f74c
+.. revision: f2a40f74ca511c264b9026ac463c0be2755c675b

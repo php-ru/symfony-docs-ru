@@ -55,4 +55,4 @@ If set to ``false``, all the tag labels will be discarded for radio or checkbox
 inputs. You can also return ``false`` from the callable to discard certain labels.
 
 .. ready: no
-.. revision: 823970b61
+.. revision: 823970b611d4868d6a2bf8e36b32fb511ae050ba

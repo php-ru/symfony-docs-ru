@@ -59,4 +59,4 @@ and cache root path as constructor parameters::
 .. _`RAM disk solutions`: https://en.wikipedia.org/wiki/List_of_RAM_drive_software
 
 .. ready: no
-.. revision: 049096cab
+.. revision: 049096cab0c1ac64e33af3ba1875add5d8572304

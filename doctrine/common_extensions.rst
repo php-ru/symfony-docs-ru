@@ -33,4 +33,4 @@ To do this, you have two options:
 .. _`Install Gedmo Doctrine2 extensions in Symfony2`: https://github.com/Atlantic18/DoctrineExtensions/blob/master/doc/symfony2.md
 
 .. ready: no
-.. revision: 507f29ee4
+.. revision: 507f29ee428e50b7fd83c81375b383f7cfeb1d16

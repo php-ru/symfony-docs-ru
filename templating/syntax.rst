@@ -19,4 +19,4 @@ console command:
     $ php bin/console lint:twig templates/
 
 .. ready: no
-.. revision: d0ede9911
+.. revision: d0ede9911e75cc5a6e967cb202322a7c49cc5649

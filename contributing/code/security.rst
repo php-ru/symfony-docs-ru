@@ -111,4 +111,4 @@ vulnerabilities that were fixed in Symfony releases, starting from Symfony
 .. _`Security Advisories`: https://symfony.com/blog/category/security-advisories
 
 .. ready: no
-.. revision: 13ae5bd61
+.. revision: 13ae5bd61fdb62b2c349bffdee73045169d0a28c

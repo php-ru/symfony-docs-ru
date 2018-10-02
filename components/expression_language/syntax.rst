@@ -310,4 +310,4 @@ Ternary Operators
 * ``foo ? 'yes'`` (equal to ``foo ? 'yes' : ''``)
 
 .. ready: no
-.. revision: 219b7f887
+.. revision: 219b7f88713f162934ae238c09c26986e23db457

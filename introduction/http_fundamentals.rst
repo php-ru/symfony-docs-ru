@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 6f7010f1b
+.. revision: 6f7010f1b512de4c870f9166b58d4c44c8603111

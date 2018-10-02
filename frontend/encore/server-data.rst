@@ -42,4 +42,4 @@ method that returns an array, you could do the following:
 .. _`accessing data attributes from JavaScript`: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 .. ready: no
-.. revision: 4e8d394c6
+.. revision: 4e8d394c6faf22d13d54326af3970901d3f08321

@@ -34,4 +34,4 @@ For more information on valid formats, see `Date/Time Format Syntax`_::
 .. _`RFC 3339`: https://tools.ietf.org/html/rfc3339
 
 .. ready: no
-.. revision: f70883afc
+.. revision: f70883afcff85808317d433950885346341536f6

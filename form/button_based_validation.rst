@@ -39,4 +39,4 @@ large or whether you tried to submit text in a number field.
     read the :doc:`/form/validation_group_service_resolver` article.
 
 .. ready: no
-.. revision: 6d25dbbf7
+.. revision: 6d25dbbf76843fff0363154a2aae1302cd7eb048

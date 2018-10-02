@@ -19,4 +19,4 @@ Official Symfony Best Practices
 .. include:: /best_practices/map.rst.inc
 
 .. ready: no
-.. revision: facea46d9
+.. revision: facea46d9dfbf5d56b008806572d89e181b40305

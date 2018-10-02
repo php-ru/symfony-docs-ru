@@ -443,4 +443,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: 9638d1268
+.. revision: 9638d12681ab1bde192eea804ea3065e15e9e304

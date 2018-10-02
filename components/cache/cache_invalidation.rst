@@ -100,4 +100,4 @@ lifetime or their expiration date with the PSR-6 interface, as explained in the
 :doc:`/components/cache/cache_items` article.
 
 .. ready: no
-.. revision: ca653aadf
+.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a

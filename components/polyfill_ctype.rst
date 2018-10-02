@@ -45,4 +45,4 @@ Provided Functions
 .. _`PHP Ctype extension`: https://secure.php.net/manual/en/book.ctype.php
 
 .. ready: no
-.. revision: 8c048985e
+.. revision: 8c048985ec3357154cc28b7e919897629dea4336

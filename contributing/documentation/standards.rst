@@ -183,4 +183,4 @@ In addition, documentation follows these rules:
 .. _`nosism`: https://en.wikipedia.org/wiki/Nosism
 
 .. ready: no
-.. revision: f52e13880
+.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f

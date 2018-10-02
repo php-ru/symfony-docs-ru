@@ -104,4 +104,4 @@ the example below:
 For more details, see :doc:`/components/http_foundation/session_php_bridge`.
 
 .. ready: no
-.. revision: c4707d1f4
+.. revision: c4707d1f4b53f513116cada2f49521a740155cb0

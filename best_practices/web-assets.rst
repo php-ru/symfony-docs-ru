@@ -34,4 +34,4 @@ Next: :doc:`/best_practices/tests`
 .. _`official Webpack Encore documentation`: https://symfony.com/doc/current/frontend.html
 
 .. ready: no
-.. revision: 63eb6d673
+.. revision: 63eb6d6731419e14e672bc3338c910bbcd3837ea

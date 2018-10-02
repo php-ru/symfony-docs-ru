@@ -19,4 +19,4 @@
         return $loader;
 
 .. ready: no
-.. revision: 1ce3a43b4
+.. revision: 1ce3a43b41cac12ff229d5585db2f5c858246652

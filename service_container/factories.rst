@@ -218,4 +218,4 @@ example takes the ``templating`` service as an argument:
             ));
 
 .. ready: no
-.. revision: 8ba6ec234
+.. revision: 8ba6ec2347d1eaaba58bb68b91e69316dea8a2e9

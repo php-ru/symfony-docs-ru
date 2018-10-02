@@ -280,4 +280,4 @@ The position of each panel in the toolbar is determined by the collector priorit
 (the higher the priority, the earlier the panel is displayed in the toolbar).
 
 .. ready: no
-.. revision: 8cfaffcad
+.. revision: 8cfaffcadd5e81a9a6235ca6f02578be0dd39fa3

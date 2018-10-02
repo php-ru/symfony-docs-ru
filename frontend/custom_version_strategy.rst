@@ -201,4 +201,4 @@ the :ref:`version_strategy <reference-assets-version-strategy>` option:
 .. _`gulp-buster`: https://www.npmjs.com/package/gulp-buster
 
 .. ready: no
-.. revision: d551fe595
+.. revision: d551fe595b6aaad85b22ff046c633ad1d3c80b28

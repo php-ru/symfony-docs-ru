@@ -11,4 +11,4 @@ How to Use Bundle Inheritance to Override Parts of a Bundle
     using bundle inheritance.
 
 .. ready: no
-.. revision: 02660464b
+.. revision: 02660464b189383e47e1f5f608ba8a8a44813fbd

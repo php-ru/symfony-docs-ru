@@ -499,4 +499,4 @@ multiple firewalls, the "context" could actually be shared:
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 96d302359
+.. revision: 96d3023590c6490f0410236c41bbc4ee006bf78f

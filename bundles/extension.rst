@@ -152,4 +152,4 @@ the full classmap executing the ``dump-autoload`` command of Composer.
     these classes from the ``classes.php`` file.
 
 .. ready: no
-.. revision: 1a6ed635c
+.. revision: 1a6ed635c0ab9da47f965caabf27dab4152ec8dc

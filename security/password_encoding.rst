@@ -45,4 +45,4 @@ as the second argument.
 .. _`cryptographic hash functions`: https://en.wikipedia.org/wiki/Cryptographic_hash_function
 
 .. ready: no
-.. revision: a66855879
+.. revision: a668558795b9d3b8cc08479e36a0c1c1683189d1

@@ -74,4 +74,4 @@ The default value is ``''`` (the empty string).
 .. _`its documentation`: https://symfony.com/doc/current/bundles/IvoryCKEditorBundle/index.html
 
 .. ready: no
-.. revision: 5bdf70895
+.. revision: 5bdf708956c07b5938b85f99527aef529af598d9

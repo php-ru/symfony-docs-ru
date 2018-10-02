@@ -21,4 +21,4 @@ More about Sessions
 * :doc:`/doctrine/pdo_session_storage`
 
 .. ready: no
-.. revision: 26fcadc2c
+.. revision: 26fcadc2c366fa90cd24aea4820c8aeb105dd30f

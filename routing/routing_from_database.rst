@@ -41,4 +41,4 @@ The DynamicRouter is explained in the `Symfony CMF documentation`_.
 .. _`Symfony CMF documentation`: https://symfony.com/doc/master/cmf/book/routing.html
 
 .. ready: no
-.. revision: 507f29ee4
+.. revision: 507f29ee428e50b7fd83c81375b383f7cfeb1d16

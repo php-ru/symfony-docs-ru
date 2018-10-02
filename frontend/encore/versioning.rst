@@ -65,4 +65,4 @@ Learn more
 * :doc:`/components/asset`
 
 .. ready: no
-.. revision: 1ab5a027d
+.. revision: 1ab5a027d19f022e2ace2530f264700ffb08b79a

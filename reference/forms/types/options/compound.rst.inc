@@ -24,4 +24,4 @@ and is rendered as a ``<select>`` tag. With ``expanded=true`` the ``ChoiceType``
 compound form and is rendered as a set of radios or checkboxes.
 
 .. ready: no
-.. revision: 977dfb99a
+.. revision: 977dfb99a19bf98e70f8a0e3b48f4daa122eeefb

@@ -14,4 +14,4 @@ documentation and paste it into the form on the Google Translate site.
 .. _`Google Translate`: https://translate.google.com
 
 .. ready: no
-.. revision: d6b0de4b8
+.. revision: d6b0de4b8abc827feedd51e1963839ab669236f5

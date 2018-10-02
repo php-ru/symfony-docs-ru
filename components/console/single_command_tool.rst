@@ -51,4 +51,4 @@ Of course, you can still register a command as usual::
   $application->run();
 
 .. ready: no
-.. revision: beb3f7b0c
+.. revision: beb3f7b0c14fbd44d3fb6b6885c932ed5e9be84c

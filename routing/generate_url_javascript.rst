@@ -24,4 +24,4 @@ the `FOSJsRoutingBundle`_. It makes the following possible:
 .. _`FOSJsRoutingBundle`: https://github.com/FriendsOfSymfony/FOSJsRoutingBundle
 
 .. ready: no
-.. revision: f33473fd4
+.. revision: f33473fd488447315c7fee33ab0dc46692a85525

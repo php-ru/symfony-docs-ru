@@ -117,4 +117,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: e7f591e44
+.. revision: e7f591e44eb36032e077c5f4c229de9a5fb38c2f

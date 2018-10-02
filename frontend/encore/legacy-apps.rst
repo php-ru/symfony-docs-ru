@@ -85,4 +85,4 @@ loaded on every page with the following content:
     In other words, use ``global``.
 
 .. ready: no
-.. revision: fbc906634
+.. revision: fbc90663499e993674ca39a30c8a427f6e141796

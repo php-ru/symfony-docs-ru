@@ -9,4 +9,4 @@ The Quick Tour
    the_architecture
 
 .. ready: no
-.. revision: b0d46e5ec
+.. revision: b0d46e5eca6a18762bd5aa632f55369d1fd956db

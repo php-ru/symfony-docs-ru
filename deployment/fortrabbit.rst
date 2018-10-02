@@ -12,4 +12,4 @@ For details on deploying to fortrabbit, see their official documentation:
 .. _`Install Symfony`: https://help.fortrabbit.com/install-symfony-3-uni
 
 .. ready: no
-.. revision: 5b6ef2a9c
+.. revision: 5b6ef2a9cbe2eded17c7c2c3e441605d8a7b6591

@@ -206,4 +206,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: d92599ac2
+.. revision: d92599ac2cb5f781bc2e57a06c0ad68852fca54b

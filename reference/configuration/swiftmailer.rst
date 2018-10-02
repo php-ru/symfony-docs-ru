@@ -394,4 +394,4 @@ alternatives based on the :ref:`service binding <services-binding>` feature:
         ;
 
 .. ready: no
-.. revision: 1351077c2
+.. revision: 1351077c2813736b78e9d00826fc693b9ef20f8d

@@ -802,4 +802,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: 37aef5227
+.. revision: 37aef5227532dfd36097d679628b79649bf00cd4

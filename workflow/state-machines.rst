@@ -218,4 +218,4 @@ you can get this state machine by injecting the Workflow registry service::
 .. _Petri net: https://en.wikipedia.org/wiki/Petri_net
 
 .. ready: no
-.. revision: 81fac0446
+.. revision: 81fac0446e4ecd24dd9dc671600d301cbe072255

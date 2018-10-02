@@ -183,4 +183,4 @@ create a``<your-project>/translations/FOSUserBundle.es.yml`` file.
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 2ba4c7370
+.. revision: 2ba4c73705d00dd8391af9b9de1dbcc7db56cb2b

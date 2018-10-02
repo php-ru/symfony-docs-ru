@@ -153,4 +153,4 @@ the same key, the bundle that is registered **first** will take priority:
 next bundles won't override this specific config setting.
 
 .. ready: no
-.. revision: 39cc38e71
+.. revision: 39cc38e719c981a30755c9d2ebc006ba0d469bcd

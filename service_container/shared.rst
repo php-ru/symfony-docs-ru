@@ -41,4 +41,4 @@ Now, whenever you request the ``App\SomeNonSharedService`` from the container,
 you will be passed a new instance.
 
 .. ready: no
-.. revision: d18e99500
+.. revision: d18e99500772dcf3a9e497b8d656c4f9d6b14db1

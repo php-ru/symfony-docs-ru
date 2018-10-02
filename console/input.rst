@@ -270,4 +270,4 @@ Now check the value of the option and keep in mind that ``false !== null``::
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: 04e1b02bf
+.. revision: 04e1b02bfb1dafecb4587957b8fcb15ddac6d433

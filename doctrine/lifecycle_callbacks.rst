@@ -96,4 +96,4 @@ Doctrine's `Lifecycle Events documentation`_.
 .. _`Lifecycle Events documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html#lifecycle-events
 
 .. ready: no
-.. revision: 2b0236f32
+.. revision: 2b0236f329c9d44bfa83b5e53e2d4abeabf1d4a2

@@ -57,4 +57,4 @@ An example ``.babelrc`` file might look like this:
 .. _`Babel`: http://babeljs.io/
 
 .. ready: no
-.. revision: 29f2d400c
+.. revision: 29f2d400cab12ef68497192f8eb3aef5add03f04

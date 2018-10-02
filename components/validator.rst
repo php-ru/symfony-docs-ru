@@ -97,4 +97,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: 9919dcc2e
+.. revision: 9919dcc2e5cd9c29a463fbf065b8fb938abd9e2f

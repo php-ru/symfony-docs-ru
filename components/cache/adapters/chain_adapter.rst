@@ -69,4 +69,4 @@ incompatible adapters are silently ignored::
     calling its ``prune()`` method.
 
 .. ready: no
-.. revision: fbc906634
+.. revision: fbc90663499e993674ca39a30c8a427f6e141796

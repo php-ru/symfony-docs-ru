@@ -66,4 +66,4 @@ create an alias pointing to the existing ``profiler`` service:
         $container->setAlias(Profiler::class, 'profiler');
 
 .. ready: no
-.. revision: 315da6d81
+.. revision: 315da6d81543ec387c69c6250f563bbfbfe85175

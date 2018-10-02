@@ -331,4 +331,4 @@ The following YAML features are not supported by the Symfony Yaml component:
 .. _`YAML specification`: http://www.yaml.org/spec/1.2/spec.html
 
 .. ready: no
-.. revision: cfce3d9f0
+.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a

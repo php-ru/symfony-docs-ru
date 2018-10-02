@@ -349,4 +349,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: 44a33a415
+.. revision: 44a33a415639fcbd1e6d5c5522bb16b171bffe80

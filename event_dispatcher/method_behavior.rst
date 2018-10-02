@@ -139,4 +139,4 @@ That's it! Your subscriber should be called automatically (or read more about
 :ref:`event subscriber configuration <ref-event-subscriber-configuration>`).
 
 .. ready: no
-.. revision: 8cd3a84f8
+.. revision: 8cd3a84f8e5935f86c2cf41c15fb2800023f3a93

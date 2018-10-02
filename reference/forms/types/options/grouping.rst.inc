@@ -10,4 +10,4 @@ be grouped with a comma or period (depending on your locale): ``12345.123``
 would display as ``12,345.123``.
 
 .. ready: no
-.. revision: 03fdc5b4d
+.. revision: 03fdc5b4d23d724425239249d9b2d283e61fe592

@@ -7,4 +7,4 @@
     set ``error_bubbling`` to ``false``.
 
 .. ready: no
-.. revision: a0fc78fcc
+.. revision: a0fc78fcc3598fdd2198c74ace532e244ae7da45

@@ -439,4 +439,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: 0e22affe2
+.. revision: 0e22affe24d5054a0ca8b5d7bb5a006ee905c594

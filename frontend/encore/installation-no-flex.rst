@@ -100,4 +100,4 @@ You'll customize and learn more about these file in :doc:`/frontend/encore/simpl
 .. _`npm`: https://www.npmjs.com/
 
 .. ready: no
-.. revision: 088e65976
+.. revision: 088e65976dd42800cdb91009307d2721cebabbb0

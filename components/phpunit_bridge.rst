@@ -635,4 +635,4 @@ not find the SUT:
 .. _`@covers`: https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.covers
 
 .. ready: no
-.. revision: 87737b130
+.. revision: 87737b1308104f1c3ae6f85b65a66a3b0b8d4e48

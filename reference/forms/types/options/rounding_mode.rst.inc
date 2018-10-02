@@ -32,4 +32,4 @@ option is a constant on the :class:`Symfony\\Component\\Form\\Extension\\Core\\D
   ``2.5`` to ``3``, ``1.6`` and ``1.5`` to ``2`` and ``1.4`` to ``1``.
 
 .. ready: no
-.. revision: 2cf1cff95
+.. revision: 2cf1cff9515a1bc985c8c9d8587a17640feebda2

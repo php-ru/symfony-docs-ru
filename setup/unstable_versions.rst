@@ -77,4 +77,4 @@ Symfony version has deprecated some of its features.
         $ git branch -D testing_new_symfony
 
 .. ready: no
-.. revision: ce10e679c
+.. revision: ce10e679cb547851a346b4099aa872e0fb489216

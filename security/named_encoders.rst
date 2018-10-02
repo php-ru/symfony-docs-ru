@@ -185,4 +185,4 @@ This creates an encoder named ``app_encoder`` from a service with the ID
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: aee4f137b
+.. revision: aee4f137b0d5f09a62f42a3b8d214f45add8bcca

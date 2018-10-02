@@ -81,4 +81,4 @@ until you can reproduce the bug.
 .. _`new repository`: https://github.com/new
 
 .. ready: no
-.. revision: 24955902d
+.. revision: 24955902da90768a985bc4439e2cba0bae25025f

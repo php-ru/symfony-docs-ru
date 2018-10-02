@@ -100,4 +100,4 @@ Next: :doc:`/best_practices/configuration`
 .. _`Symfony Skeleton`: https://github.com/symfony/skeleton
 
 .. ready: no
-.. revision: cb132fd08
+.. revision: cb132fd080bc7def6f26df3127a08627e94dc824

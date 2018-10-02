@@ -42,4 +42,4 @@ FriendsOfPHP organization.
 .. _`Security Checker repository`: https://github.com/sensiolabs/security-checker
 
 .. ready: no
-.. revision: 24955902d
+.. revision: 24955902da90768a985bc4439e2cba0bae25025f

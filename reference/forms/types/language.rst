@@ -128,4 +128,4 @@ The actual default value of this option depends on other field options:
 .. _`International Components for Unicode`: http://site.icu-project.org
 
 .. ready: no
-.. revision: bf10fd2de
+.. revision: bf10fd2de614bf35ceb7628e7b5bc45e53f48e33

@@ -66,4 +66,4 @@ This plugin requires that you have a `tsconfig.json`_ file that is setup correct
 .. _`tsconfig.json`: https://www.npmjs.com/package/fork-ts-checker-webpack-plugin#modules-resolution
 
 .. ready: no
-.. revision: e2cf45cee
+.. revision: e2cf45cee4fe0160bc18b1a182c3979b62364ecc

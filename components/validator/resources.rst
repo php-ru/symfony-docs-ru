@@ -196,4 +196,4 @@ You can set this custom implementation using
 .. _`Packagist`: https://packagist.org
 
 .. ready: no
-.. revision: b6a689776
+.. revision: b6a689776e4aad6c3c8526110e97b9e296973a07

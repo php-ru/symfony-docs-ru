@@ -80,4 +80,4 @@ Like this, executing the ``app:foo`` command will load the ``FooCommand`` servic
 by calling ``$containerBuilder->get(FooCommand::class)``.
 
 .. ready: no
-.. revision: 76395566a
+.. revision: 76395566a8deee22bf1a477a98d64dfb7faded23

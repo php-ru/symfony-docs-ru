@@ -7,4 +7,4 @@ Whether or not to include minutes in the input. This will result in an additiona
 input to capture minutes.
 
 .. ready: no
-.. revision: 660a7e1a4
+.. revision: 660a7e1a4f339b470ae01c09415d30f99c87a4cd

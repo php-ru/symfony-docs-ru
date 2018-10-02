@@ -82,4 +82,4 @@ If the current user does not have the ``ROLE_NEWSLETTER_ADMIN``, they will
 be prompted to log in.
 
 .. ready: no
-.. revision: 113f19b0a
+.. revision: 113f19b0a2b741f86b0dbfa6bc892207d07c19b3

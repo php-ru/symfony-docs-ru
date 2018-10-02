@@ -22,4 +22,4 @@ always safe to upgrade to the latest "minor" version.
 .. include:: /setup/_update_all_packages.rst.inc
 
 .. ready: no
-.. revision: 8e86049ca
+.. revision: 8e86049cae087bf2ecc6fd16677374d5f58df88f

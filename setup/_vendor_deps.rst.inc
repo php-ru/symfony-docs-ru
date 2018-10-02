@@ -59,4 +59,4 @@ script to ensure that all of the needed vendor libraries are downloaded.
 .. _GetComposer.org: https://getcomposer.org/
 
 .. ready: no
-.. revision: 185509c75
+.. revision: 185509c7506e4f2235883aa2e1069a24b6e13b51

@@ -137,4 +137,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: c34138114
+.. revision: c34138114d78d0ad8f5dcf0b15de68082e5a6864

@@ -19,4 +19,4 @@ this safely by running:
 .. _`version constraints`: https://getcomposer.org/doc/01-basic-usage.md#package-versions
 
 .. ready: no
-.. revision: ecf5d1663
+.. revision: ecf5d16632c6d565ef0793d19a9f1f201649624b

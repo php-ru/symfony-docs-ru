@@ -125,4 +125,4 @@ finish. It's easy to achieve if you embed the token in the error message::
     to learn more about their interfaces.
 
 .. ready: no
-.. revision: f52e13880
+.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f

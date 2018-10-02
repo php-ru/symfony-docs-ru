@@ -47,4 +47,4 @@ file includes the full CDN URL:
     <script src="{{ asset('build/dashboard.js') }}"></script>
 
 .. ready: no
-.. revision: d551fe595
+.. revision: d551fe595b6aaad85b22ff046c633ad1d3c80b28

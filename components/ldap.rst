@@ -176,4 +176,4 @@ operation type.
 .. _Packagist: https://packagist.org/packages/symfony/ldap
 
 .. ready: no
-.. revision: bb0806526
+.. revision: bb080652693b8cfd14ff9eaa7260414d2916e374

@@ -42,4 +42,4 @@ adding ``--show-notes=github-comments`` to the ``git show`` command:
     $ git show HEAD --show-notes=github-comments
 
 .. ready: no
-.. revision: ecf5d1663
+.. revision: ecf5d16632c6d565ef0793d19a9f1f201649624b

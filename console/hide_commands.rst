@@ -36,4 +36,4 @@ in command listings, so end-users are not aware of their existence.
     Hidden commands are still available using the JSON or XML descriptor.
 
 .. ready: no
-.. revision: 9e5cd17b0
+.. revision: 9e5cd17b075e9cdc659ace8acac065c78f0c2d4c

@@ -180,4 +180,4 @@ can choose one of these or even create your own custom way of organizing the
 files. For even more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: 39cc38e71
+.. revision: 39cc38e719c981a30755c9d2ebc006ba0d469bcd

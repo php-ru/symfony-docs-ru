@@ -205,4 +205,4 @@ adding a ``setDefined()`` method. The recommended check in this case would be::
 .. _`Symfony Upgrade Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: efa9bddc9
+.. revision: efa9bddc916f2f8f577cfe67438d070eb97fee8a

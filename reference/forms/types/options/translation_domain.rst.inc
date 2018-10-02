@@ -9,4 +9,4 @@ of the parent form (or the default domain of the translator for the root
 form). Use ``false`` to disable translations.
 
 .. ready: no
-.. revision: 5905e69d9
+.. revision: 5905e69d9a70925e36e933125544e8dd1cce1454

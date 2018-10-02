@@ -382,4 +382,4 @@ for more details.
 .. _`FOSUserBundle`: https://github.com/FriendsOfSymfony/FOSUserBundle
 
 .. ready: no
-.. revision: 0775f0a6e
+.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97

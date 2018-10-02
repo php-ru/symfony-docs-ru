@@ -338,4 +338,4 @@ with_years    ``Boolean``  The value of the `with_years`_ option.
 .. _`ISO 8601`: https://en.wikipedia.org/wiki/ISO_8601
 
 .. ready: no
-.. revision: 5bdf70895
+.. revision: 5bdf708956c07b5938b85f99527aef529af598d9

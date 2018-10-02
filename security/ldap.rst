@@ -511,4 +511,4 @@ Configuration example for form login and query_string
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 48063cef2
+.. revision: 48063cef2d4dc51f8404e01fc8de4e9b16f3aecc

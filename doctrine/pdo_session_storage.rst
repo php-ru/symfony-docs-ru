@@ -276,4 +276,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: e10609073
+.. revision: e106090735320916d8f7314c0662c0e21507e415

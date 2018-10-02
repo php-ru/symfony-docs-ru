@@ -174,4 +174,4 @@ inject this service into others, you must update the service configuration to
 :ref:`choose the specific service to inject <services-wire-specific-service>`.
 
 .. ready: no
-.. revision: 6f3ef4df8
+.. revision: 6f3ef4df8042a608ff2c8fba99d53ab0d0d2decc

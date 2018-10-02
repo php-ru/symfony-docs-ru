@@ -56,4 +56,4 @@ See :doc:`/frontend/encore/dev-server` for more details.
 .. _`vue-loader options`: https://vue-loader.vuejs.org/options.html
 
 .. ready: no
-.. revision: c48e4b4d4
+.. revision: c48e4b4d4579095b7c193c7c5e8b3b32e8c1913b

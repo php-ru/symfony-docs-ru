@@ -121,4 +121,4 @@ is the service id of your user checker:
     the ``user_checker`` option under each firewall to choose the one you want.
 
 .. ready: no
-.. revision: b2426d42b
+.. revision: b2426d42b10d3422178eb799f928dc20783cd936

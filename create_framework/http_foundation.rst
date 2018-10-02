@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 8286e9258
+.. revision: 8286e92584fb7fa3c8a6f925b78bebc61e836c8f

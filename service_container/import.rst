@@ -126,4 +126,4 @@ extension of its related  bundle - e.g. ``FrameworkBundle`` or ``TwigBundle`` -
 and used to configure those services further.
 
 .. ready: no
-.. revision: 65d6754d9
+.. revision: 65d6754d9aa12e7b56b3611276ce8ea4c40c0239

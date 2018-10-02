@@ -369,4 +369,4 @@ and the non-existing values are replaced by ``null``.
 .. _`the optimizer extension`: https://twig.symfony.com/doc/2.x/api.html#optimizer-extension
 
 .. ready: no
-.. revision: 7918d933b
+.. revision: 7918d933b63dddd16248d29575f5aad2fdb52342

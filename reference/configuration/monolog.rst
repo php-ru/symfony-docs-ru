@@ -36,4 +36,4 @@ in your application configuration.
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php
 
 .. ready: no
-.. revision: fb5c50fb2
+.. revision: fb5c50fb2ebaa414624560633dc4e9205c2f81df

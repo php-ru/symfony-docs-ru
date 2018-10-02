@@ -113,4 +113,4 @@ If you don't want to use suffix at all, just pass an empty string::
        because length of the "test..." string is shorter than 10 */
 
 .. ready: no
-.. revision: e2cf9d70c
+.. revision: e2cf9d70c5e1c6b0bd824f5b7cf9cb24416faaa8

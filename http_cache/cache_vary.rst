@@ -45,4 +45,4 @@ The ``setVary()`` method takes a header name or an array of header names for
 which the response varies.
 
 .. ready: no
-.. revision: a439f6351
+.. revision: a439f6351a4e1a14d84e9076029a3b963ffe3995

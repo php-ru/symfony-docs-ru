@@ -137,4 +137,4 @@ To do this, you can override the value of the ``DATABASE_URL`` env var in the
 .. _`DoctrineTestBundle`: https://github.com/dmaicher/doctrine-test-bundle
 
 .. ready: no
-.. revision: f52e13880
+.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f

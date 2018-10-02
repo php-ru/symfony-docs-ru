@@ -200,4 +200,4 @@ That's it! When requesting the ``App\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: 5e33d7819
+.. revision: 5e33d78197ed2c9284886b541d599b9b445fdabf

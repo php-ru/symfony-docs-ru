@@ -447,4 +447,4 @@ is corrupted.
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: d65ac5c12
+.. revision: d65ac5c1265cdfd02e80133d023aba97eaa0603f

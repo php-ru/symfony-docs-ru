@@ -530,4 +530,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: 09db304a3
+.. revision: 09db304a3eb5157be1360e06b478cb6d2208a3c4

@@ -52,4 +52,4 @@ If your problem definitely looks like a bug, report it using the official bug
 .. _<details> HTML tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 
 .. ready: no
-.. revision: 22e432a99
+.. revision: 22e432a993a0c49396cbbfd124805241d83024a6

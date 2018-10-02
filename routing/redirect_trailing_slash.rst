@@ -12,4 +12,4 @@ Redirect URLs with a Trailing Slash
     no longer needed.
 
 .. ready: no
-.. revision: 49cfb4842
+.. revision: 49cfb484242d38eda8198933c07a37bb11291f06

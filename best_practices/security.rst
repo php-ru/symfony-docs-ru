@@ -404,4 +404,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 5e6031b34
+.. revision: 5e6031b34694e9b981c7b662cd878ad906af9f63

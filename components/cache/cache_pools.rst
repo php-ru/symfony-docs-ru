@@ -217,4 +217,4 @@ silently ignored)::
         $ php bin/console cache:pool:prune
 
 .. ready: no
-.. revision: a5ab6386a
+.. revision: a5ab6386a78c3f9bcc6f6d52866b95b1117ed940

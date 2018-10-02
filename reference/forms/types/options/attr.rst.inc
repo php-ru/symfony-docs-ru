@@ -12,4 +12,4 @@ as keys. This can be useful when you need to set a custom class for some widget:
     ));
 
 .. ready: no
-.. revision: f8b080d71
+.. revision: f8b080d713baed6232f11039ae79cb7611b56d95

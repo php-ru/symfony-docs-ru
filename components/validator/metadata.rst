@@ -97,4 +97,4 @@ Then, add the Validator component configuration to the class::
     }
 
 .. ready: no
-.. revision: fd752308a
+.. revision: fd752308a876954d92143383c6ceb2f1a2fa71cb

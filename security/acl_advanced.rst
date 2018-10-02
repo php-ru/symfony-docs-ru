@@ -15,4 +15,4 @@ How to Use advanced ACL Concepts
 .. _`Symfony ACL bundle`: https://github.com/symfony/acl-bundle
 
 .. ready: no
-.. revision: 6e8f7630a
+.. revision: 6e8f7630af24126bd08bde5282df8b387cee5a7b

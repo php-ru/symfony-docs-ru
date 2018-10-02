@@ -60,4 +60,4 @@ for styles anywhere at this time.
 .. _`HMR`: https://webpack.js.org/concepts/hot-module-replacement/
 
 .. ready: no
-.. revision: 46baeade8
+.. revision: 46baeade8b9276be9dbd266fff7843c1feceead8

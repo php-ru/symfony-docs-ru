@@ -93,4 +93,4 @@ Input                           ``bar``            ``cat``      ``arg``
 .. _docopt: http://docopt.org/
 
 .. ready: no
-.. revision: ae79eef9d
+.. revision: ae79eef9dc8bb1a48d0e9a0d04baca49c1aeea37

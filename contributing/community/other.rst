@@ -15,4 +15,4 @@ these additional resources:
 .. _bundles:               https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: 8b2fc5043
+.. revision: 8b2fc5043d8d51d109338588491cd37e602e9db7

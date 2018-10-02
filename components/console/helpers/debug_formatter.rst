@@ -142,4 +142,4 @@ same time. Information about different programs will be shown in different
 colors, to make it clear which output belongs to which command.
 
 .. ready: no
-.. revision: 8204b4f39
+.. revision: 8204b4f390f6a054afbc373ff72af2319a487a5d

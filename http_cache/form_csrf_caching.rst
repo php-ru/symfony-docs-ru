@@ -43,4 +43,4 @@ for a nice solution.
 .. _`Security CSRF Component`: https://github.com/symfony/security-csrf
 
 .. ready: no
-.. revision: a2ba00be6
+.. revision: a2ba00be6fa864d0e4c5b56c2fae50345a102c6f

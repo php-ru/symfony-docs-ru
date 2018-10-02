@@ -299,4 +299,4 @@ to check its validity::
 .. _`Login CSRF attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: 80c3c2922
+.. revision: 80c3c29223c5a54888151b8985233b206565617e

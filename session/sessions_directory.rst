@@ -54,4 +54,4 @@ session save handlers. There are also articles about storing sessions in a
 or a :doc:`NoSQL database </doctrine/mongodb_session_storage>`.
 
 .. ready: no
-.. revision: 78289f124
+.. revision: 78289f12401a74a0feede62890e1e9cd0fe12bf5

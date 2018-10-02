@@ -31,4 +31,4 @@ may want to add an index to improve garbage collection performance. From the
 .. _MongoDB shell: http://docs.mongodb.org/v2.2/tutorial/getting-started-with-the-mongo-shell/
 
 .. ready: no
-.. revision: 2b0236f32
+.. revision: 2b0236f329c9d44bfa83b5e53e2d4abeabf1d4a2

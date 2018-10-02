@@ -27,4 +27,4 @@ toggles serialization as its second parameter::
     );
 
 .. ready: no
-.. revision: c49d42713
+.. revision: c49d42713a2ce8802b5fcd315aa981259d7c7964

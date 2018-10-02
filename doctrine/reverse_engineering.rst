@@ -98,4 +98,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`doctrine/doctrine#729`: https://github.com/doctrine/DoctrineBundle/issues/729
 
 .. ready: no
-.. revision: 61bdd260b
+.. revision: 61bdd260b772e93732e7cc801f3707de20cecba1

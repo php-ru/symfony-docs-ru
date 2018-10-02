@@ -96,4 +96,4 @@ bundle then by convention, tag names consist of the name of the bundle
 in your AcmeMailerBundle, you should call it ``acme_mailer.transport``.
 
 .. ready: no
-.. revision: 6f3ef4df8
+.. revision: 6f3ef4df8042a608ff2c8fba99d53ab0d0d2decc

@@ -88,4 +88,4 @@ plugins in a similar way:
     require('bootstrap-star-rating/themes/krajee-svg/theme.css');
 
 .. ready: no
-.. revision: ce63c8c36
+.. revision: ce63c8c363701d77e57dab1ea94f41073e321c19

@@ -117,4 +117,4 @@ introduce the HttpFoundation Component and see what it brings us.
 .. _`Composer`: http://packagist.org/about-composer
 
 .. ready: no
-.. revision: e48c89b83
+.. revision: e48c89b83ac90b884ba5cc23ad59c54a1f84549d

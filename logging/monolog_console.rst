@@ -126,4 +126,4 @@ By default (normal verbosity level), warnings and higher will be shown. But in
 .. _MonologBridge: https://github.com/symfony/MonologBridge
 
 .. ready: no
-.. revision: adc4df535
+.. revision: adc4df535742b223a773056dda18cb3ed346042b

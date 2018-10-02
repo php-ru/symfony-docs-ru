@@ -269,4 +269,4 @@ see :doc:`/security/securing_services`.
 .. _`SensioFrameworkExtraBundle`: http://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 
 .. ready: no
-.. revision: 90c2b72bd
+.. revision: 90c2b72bd19a66d92e1679ac3179dd1adba4112d

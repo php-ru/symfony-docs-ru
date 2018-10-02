@@ -146,4 +146,4 @@ configuration.
 .. _decorate: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: fa22d22c5
+.. revision: fa22d22c55572f764d17a9ef721efd62dcb558ec

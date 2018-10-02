@@ -19,4 +19,4 @@ was writable. But that is no longer true! In Symfony 4, everything works automat
     Just be aware that your logs are readable by any user on your production system.
 
 .. ready: no
-.. revision: 80951e523
+.. revision: 80951e523b6bba756d4a15663f990b1276aa02ce

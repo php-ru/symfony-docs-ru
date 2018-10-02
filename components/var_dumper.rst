@@ -369,4 +369,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: 3924e1866
+.. revision: 3924e1866c146461e8fd241aa1d86ae06d86ae32

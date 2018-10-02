@@ -101,4 +101,4 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
         ));
 
 .. ready: no
-.. revision: 4e0f567e5
+.. revision: 4e0f567e57ff4f8a896f93f7a1b98716a4cf0574

@@ -181,4 +181,4 @@ probably all you need to create simple websites like those fancy one-page
 .. _`websites`: https://kottke.org/08/02/single-serving-sites
 
 .. ready: no
-.. revision: 219b7f887
+.. revision: 219b7f88713f162934ae238c09c26986e23db457

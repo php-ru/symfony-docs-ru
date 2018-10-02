@@ -159,4 +159,4 @@ so that the severity is added as an additional HTML class:
     For more information on customizing form rendering, see :doc:`/form/form_customization`.
 
 .. ready: no
-.. revision: 1bfa4cff1
+.. revision: 1bfa4cff19ee88879626c11680c239fee527a77c

@@ -130,4 +130,4 @@ The actual default value of this option depends on other field options:
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: bf10fd2de
+.. revision: bf10fd2de614bf35ceb7628e7b5bc45e53f48e33

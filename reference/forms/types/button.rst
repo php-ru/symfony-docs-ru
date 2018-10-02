@@ -51,4 +51,4 @@ as a key. This can be useful when you need to set a custom class for the button:
 .. include:: /reference/forms/types/options/button_translation_domain.rst.inc
 
 .. ready: no
-.. revision: 9eca70c48
+.. revision: 9eca70c486260ec91ea8f538aea8b7c18b9c6c37

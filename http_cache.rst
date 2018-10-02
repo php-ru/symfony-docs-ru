@@ -413,4 +413,4 @@ Learn more
 .. _`they can be cached`: https://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-20#section-2.3.4
 
 .. ready: no
-.. revision: 202c9396b
+.. revision: 202c9396b6b3479763fa904a4517dabfd96a3694

@@ -289,4 +289,4 @@ The generated code will be the following::
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: e353f66a2
+.. revision: e353f66a27239398a79b5241f84a3baf6c78bbbb

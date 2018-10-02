@@ -155,4 +155,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: 48063cef2
+.. revision: 48063cef2d4dc51f8404e01fc8de4e9b16f3aecc

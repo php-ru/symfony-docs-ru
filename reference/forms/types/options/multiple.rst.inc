@@ -9,4 +9,4 @@ option, this will render either a select tag or checkboxes if true and
 a select tag or radio buttons if false. The returned value will be an array.
 
 .. ready: no
-.. revision: fd52cd3fe
+.. revision: fd52cd3fe8f5c18afd9a0235541bd62b85dcaad1

@@ -10,4 +10,4 @@ with regard to the ``$startDate`` property of the same object, use
 ``propertyPath="startDate"`` in the comparison constraint of ``$endDate``.
 
 .. ready: no
-.. revision: f856772c4
+.. revision: f856772c4cd79e4e38df415efd342853eb522575

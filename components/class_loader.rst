@@ -12,4 +12,4 @@ The ClassLoader Component
 .. _`class loading optimizations`: https://getcomposer.org/doc/articles/autoloader-optimization.md
 
 .. ready: no
-.. revision: c34b0bf42
+.. revision: c34b0bf4235996e9d55df1e1fab73b70ce3f5a2e

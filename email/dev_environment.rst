@@ -252,4 +252,4 @@ the report with details of the sent emails.
 .. _`MailHog`: https://github.com/mailhog/MailHog
 
 .. ready: no
-.. revision: be2a77736
+.. revision: be2a7773641606dfdc825ea0cc34bb62097f5e45

@@ -319,4 +319,4 @@ Whenever something wrong happens, an exception implementing
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: e5040d007
+.. revision: e5040d0074997244df4517a21a46eb3e0431b7c4

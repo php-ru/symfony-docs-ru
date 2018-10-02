@@ -85,4 +85,4 @@ redirected page and the email won't be accessible.
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 951cb8790
+.. revision: 951cb8790953f1c21efae2586de87741ae001b30

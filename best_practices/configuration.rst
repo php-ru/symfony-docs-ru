@@ -186,4 +186,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: 43addfabe
+.. revision: 43addfabe482e3bd2437d19075a7f2570dac13b1

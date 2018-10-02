@@ -15,4 +15,4 @@ form, so you can use it for any form field type which requires an object::
     ));
 
 .. ready: no
-.. revision: cfce3d9f0
+.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a

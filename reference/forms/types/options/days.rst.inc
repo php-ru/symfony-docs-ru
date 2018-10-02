@@ -9,4 +9,4 @@ when the ``widget`` option is set to ``choice``::
     'days' => range(1,31)
 
 .. ready: no
-.. revision: 84d43ac15
+.. revision: 84d43ac157a8860f667bc6b40278197203b4c333

@@ -319,4 +319,4 @@ globally to define form output.
 .. _`view on GitHub`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form
 
 .. ready: no
-.. revision: da8025cef
+.. revision: da8025cef9f13c47e61b46c3012246f1402e4af8

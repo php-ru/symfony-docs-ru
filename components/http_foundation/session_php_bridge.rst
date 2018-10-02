@@ -49,4 +49,4 @@ of your application to Symfony sessions.
 
 
 .. ready: no
-.. revision: 6b7d536a2
+.. revision: 6b7d536a2fdfdc02c9c88225ee9c4f773af24d1d

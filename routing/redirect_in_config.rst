@@ -268,4 +268,4 @@ permanent redirects use ``308`` code instead of ``301``:
         return $collection;
 
 .. ready: no
-.. revision: 95faa8eca
+.. revision: 95faa8ecacf2a6f865ef4bc34e26aacb3583d923

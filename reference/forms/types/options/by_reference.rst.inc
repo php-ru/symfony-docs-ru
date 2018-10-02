@@ -51,4 +51,4 @@ if you need the adder and remover (e.g. ``addAuthor()`` and ``removeAuthor()``)
 to be called.
 
 .. ready: no
-.. revision: da83ca406
+.. revision: da83ca406a20f5558306630051b14d8ed532bad4

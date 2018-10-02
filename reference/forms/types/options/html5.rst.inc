@@ -10,4 +10,4 @@ This is useful when you want to use a custom JavaScript datepicker, which
 often requires a text type instead of an HTML5 type.
 
 .. ready: no
-.. revision: da51bc4f4
+.. revision: da51bc4f40f35718e3e9b21783979e04d81fc078

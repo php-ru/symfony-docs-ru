@@ -120,4 +120,4 @@ method and specifying the id of the section to be reopened::
 .. _Packagist: https://packagist.org/packages/symfony/stopwatch
 
 .. ready: no
-.. revision: f89867f9d
+.. revision: f89867f9d52ea24b87889de7abc7c90d643ca577

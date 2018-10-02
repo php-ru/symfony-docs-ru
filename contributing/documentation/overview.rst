@@ -334,4 +334,4 @@ definitely don't want you to waste your time!
 .. _`Sphinx Extensions for PHP and Symfony`: https://github.com/fabpot/sphinx-php
 
 .. ready: no
-.. revision: 7c3768740
+.. revision: 7c3768740045ecc84f2d0648343d606aff03b53f

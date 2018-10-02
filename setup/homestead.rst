@@ -79,4 +79,4 @@ developing your Symfony application!
 .. _this blog post: https://www.whitewashing.de/2013/08/19/speedup_symfony2_on_vagrant_boxes.html
 
 .. ready: no
-.. revision: 28287958b
+.. revision: 28287958b6fc337fdfcfe9a6851cfcb5c026709b

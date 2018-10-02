@@ -126,4 +126,4 @@ adding a ``setLogger()`` method::
         }
 
 .. ready: no
-.. revision: 6853f614c
+.. revision: 6853f614c3320fdd01e12e70d6f42e251574fd04

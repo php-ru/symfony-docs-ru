@@ -476,4 +476,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: f9e4f9de2
+.. revision: f9e4f9de25842887067cfbf438d6db34ca3bb98c

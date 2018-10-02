@@ -65,4 +65,4 @@ logging these HTTP codes based on the MonologBundle configuration:
         ));
 
 .. ready: no
-.. revision: 30cc7d42a
+.. revision: 30cc7d42abdb9aeaa176689d3536237422304fe9

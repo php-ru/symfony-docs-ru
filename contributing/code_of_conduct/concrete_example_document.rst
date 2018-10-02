@@ -30,4 +30,4 @@ confirmed by experiences from PHPWomen.
 .. _geek feminism: https://geekfeminism.org/about/code-of-conduct
 
 .. ready: no
-.. revision: cccf86945
+.. revision: cccf8694575d6265bcf1e888c1ad4315fa7c4d9c

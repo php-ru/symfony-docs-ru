@@ -147,4 +147,4 @@ money_pattern  ``string``  The format to use to display the money, including the
 .. _`3 letter ISO 4217 code`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: ec8990ee4
+.. revision: ec8990ee43d2faec62358dd74796973d5ee169d9

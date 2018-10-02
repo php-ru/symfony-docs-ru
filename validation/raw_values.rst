@@ -72,4 +72,4 @@ is a :class:`Symfony\\Component\\Validator\\ConstraintViolation` object,
 which holds the error message on its ``getMessage()`` method.
 
 .. ready: no
-.. revision: 81943ab6a
+.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0

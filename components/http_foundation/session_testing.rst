@@ -58,4 +58,4 @@ separate PHP processes, simply change the storage engine to
     $session = new Session(new MockFileSessionStorage());
 
 .. ready: no
-.. revision: a858888fe
+.. revision: a858888fee5fe106b641cd05b30e1f1ea837738c

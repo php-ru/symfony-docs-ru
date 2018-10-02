@@ -233,4 +233,4 @@ headers that must not be present for ``304`` responses (see
 .. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: 0775f0a6e
+.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97

@@ -471,4 +471,4 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: 55017bfac
+.. revision: 55017bfac5f8102cfb99e9d93c5fb88f63b308d0

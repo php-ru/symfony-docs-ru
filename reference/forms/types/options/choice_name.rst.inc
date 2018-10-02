@@ -11,4 +11,4 @@ This can be a callable or a property path. See `choice_label`_ for similar usage
 If ``null`` is used, an incrementing integer is used as the name.
 
 .. ready: no
-.. revision: f8b560d92
+.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e

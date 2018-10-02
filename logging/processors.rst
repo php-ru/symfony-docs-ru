@@ -300,4 +300,4 @@ the ``monolog.processor`` tag:
             ->addTag('monolog.processor', array('channel' => 'main'));
 
 .. ready: no
-.. revision: dc2bda4f7
+.. revision: dc2bda4f7a38bf7c3baccb6d331e145d1105aeeb

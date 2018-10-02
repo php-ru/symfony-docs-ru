@@ -9,4 +9,4 @@ placeholder ``{{ extra_fields }}`` can be used to display a comma separated
 list of the submitted extra field names.
 
 .. ready: no
-.. revision: dd6c0a765
+.. revision: dd6c0a765cc7ab3a93363f48ad59fac67bee82cb

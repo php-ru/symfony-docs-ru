@@ -71,4 +71,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/console
 
 .. ready: no
-.. revision: 4185aa851
+.. revision: 4185aa85186e84d16082cd863c0a070a5fb920ee

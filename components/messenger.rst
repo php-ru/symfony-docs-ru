@@ -266,4 +266,4 @@ middleware will know it should not route these messages again to a transport.
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: 92b68a4da
+.. revision: 92b68a4da960acbf7f24436c0f4c433d9401515e

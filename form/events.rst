@@ -408,4 +408,4 @@ To register the event subscriber, use the ``addEventSubscriber()`` method::
     // ...
 
 .. ready: no
-.. revision: a6d2938f5
+.. revision: a6d2938f5cdef11e02829f53a0a9994c284161f5

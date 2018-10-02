@@ -178,4 +178,4 @@ you *will* lose credibility and respect from other developers.
 *Do unto others as you would have them do unto you.*
 
 .. ready: no
-.. revision: 2310c385f
+.. revision: 2310c385f108ca2e7c4210450cfcd1e2e1835d51

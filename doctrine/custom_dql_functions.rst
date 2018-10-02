@@ -151,4 +151,4 @@ In Symfony, you can register your custom DQL functions as follows:
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: 39cc38e71
+.. revision: 39cc38e719c981a30755c9d2ebc006ba0d469bcd

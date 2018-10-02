@@ -407,4 +407,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: f3e8f0e4c
+.. revision: f3e8f0e4cf045a275390a35c793c5bb7068322d7

@@ -60,4 +60,4 @@ not in debug mode, the cache is considered to be "fresh" as soon as it exists,
 and therefore no ``.meta`` file will be generated.
 
 .. ready: no
-.. revision: a4db8b8d4
+.. revision: a4db8b8d47a0a4bfbc5ac03befe349a39b9e7226

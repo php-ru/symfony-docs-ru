@@ -240,4 +240,4 @@ And by storing a value in the request's "attributes" bag, the ``onKernelResponse
 method knows to add the extra header. Have fun!
 
 .. ready: no
-.. revision: 0775f0a6e
+.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97

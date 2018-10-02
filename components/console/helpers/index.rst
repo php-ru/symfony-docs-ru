@@ -20,4 +20,4 @@ function to ease some common tasks.
 .. include:: map.rst.inc
 
 .. ready: no
-.. revision: 5828b2f3c
+.. revision: 5828b2f3ccfe9ff6e8365c68dde1b044d15a3e57

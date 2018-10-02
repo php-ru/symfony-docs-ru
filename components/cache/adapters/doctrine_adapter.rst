@@ -37,4 +37,4 @@ third parameters::
 .. _`Doctrine Cache`: https://github.com/doctrine/cache
 
 .. ready: no
-.. revision: 51ddf416e
+.. revision: 51ddf416eeac3f880f4019852517dbf224c9a9ac

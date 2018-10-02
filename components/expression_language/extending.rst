@@ -136,4 +136,4 @@ or by using the second argument of the constructor::
 
 
 .. ready: no
-.. revision: 608be0660
+.. revision: 608be0660c74100059e86f9c747f00fe4132078b

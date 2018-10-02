@@ -100,4 +100,4 @@ prefer to build configs separately, pass the ``--config-name`` option:
 .. _`array of configurations`: https://github.com/webpack/docs/wiki/configuration#multiple-configurations
 
 .. ready: no
-.. revision: 72ef1904b
+.. revision: 72ef1904bbef92ebfad62623f23764ccd6904870

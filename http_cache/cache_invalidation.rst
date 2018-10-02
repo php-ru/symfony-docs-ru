@@ -107,4 +107,4 @@ different URLs. More flexible concepts exist for those cases:
 .. _`FOSHttpCacheBundle`: http://foshttpcachebundle.readthedocs.org/
 
 .. ready: no
-.. revision: e9b0a123d
+.. revision: e9b0a123d4b91a31f3fc950ffece21a89371f3af

@@ -65,4 +65,4 @@ Now you'll be able to serialize and deserialize YAML!
 .. _tracker: https://github.com/symfony/symfony/issues
 
 .. ready: no
-.. revision: e6d3f776c
+.. revision: e6d3f776cc24d55e48bd320cec7d2dfa30000686

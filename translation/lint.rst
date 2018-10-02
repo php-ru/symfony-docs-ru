@@ -37,4 +37,4 @@ The linter results can be exported to JSON using the ``--format`` option:
     $ ./bin/console lint:xliff translations/ --format=json
 
 .. ready: no
-.. revision: e4494bda5
+.. revision: e4494bda5efe08555b55936595b91ef3c57e6a5c

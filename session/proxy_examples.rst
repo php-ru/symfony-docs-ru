@@ -144,4 +144,4 @@ can intercept the session before it is written::
 .. _`php-encryption`: https://github.com/defuse/php-encryption
 
 .. ready: no
-.. revision: 113f19b0a
+.. revision: 113f19b0a2b741f86b0dbfa6bc892207d07c19b3

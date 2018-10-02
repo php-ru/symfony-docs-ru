@@ -501,4 +501,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _ROT13: https://en.wikipedia.org/wiki/ROT13
 
 .. ready: no
-.. revision: e091d3c97
+.. revision: e091d3c9716e6f189380a5a74cf0012c6abd7b45

@@ -713,4 +713,4 @@ A good selection of `Symfony community tools`_ can be found on GitHub.
 .. _`Symfony community tools`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: 0775f0a6e
+.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97

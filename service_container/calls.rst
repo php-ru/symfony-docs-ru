@@ -73,4 +73,4 @@ To configure the container to call the ``setLogger`` method, use the ``calls`` k
             ->addMethodCall('setLogger', array(new Reference('logger')));
 
 .. ready: no
-.. revision: 6853f614c
+.. revision: 6853f614c3320fdd01e12e70d6f42e251574fd04

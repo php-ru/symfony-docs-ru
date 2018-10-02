@@ -77,4 +77,4 @@ options to ``less-loader``:
     ;
 
 .. ready: no
-.. revision: d740e1cd2
+.. revision: d740e1cd225d554a37f39347b02acdeee6cb4098

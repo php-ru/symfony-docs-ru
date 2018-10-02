@@ -46,4 +46,4 @@ look for tokens based on some criteria::
     $tokens = $profiler->find('', '', 10, '', '4 days ago', '2 days ago');
 
 .. ready: no
-.. revision: b6a689776
+.. revision: b6a689776e4aad6c3c8526110e97b9e296973a07

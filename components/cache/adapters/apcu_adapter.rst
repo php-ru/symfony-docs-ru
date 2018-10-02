@@ -50,4 +50,4 @@ and cache items version string as constructor arguments::
 .. _`APCu extension`: https://pecl.php.net/package/APCu
 
 .. ready: no
-.. revision: eb70a365e
+.. revision: eb70a365ee34aa47997694da9aedf615a5c443bd

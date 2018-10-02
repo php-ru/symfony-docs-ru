@@ -6,4 +6,4 @@
 * :doc:`/components/console/helpers/debug_formatter`
 
 .. ready: no
-.. revision: f8b560d92
+.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e

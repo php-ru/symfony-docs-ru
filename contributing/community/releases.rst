@@ -120,4 +120,4 @@ version is published every two years and there is a year to upgrade.
 .. _`professional Symfony support`: https://sensiolabs.com/
 
 .. ready: no
-.. revision: b578e710d
+.. revision: b578e710dcb00a145d6cf1a3082d1e7080259944

@@ -98,4 +98,4 @@ This returns the path to the log directory. To change it, override the
 ":ref:`override-logs-dir`" for more information.
 
 .. ready: no
-.. revision: da6710574
+.. revision: da6710574bc893502d573960f55e5ec53d985878

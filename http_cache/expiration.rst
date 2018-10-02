@@ -96,4 +96,4 @@ servers should not send ``Expires`` dates more than one year in the future."
 .. _`RFC 7234 - Caching`: https://tools.ietf.org/html/rfc7234#section-4.2.1
 
 .. ready: no
-.. revision: a439f6351
+.. revision: a439f6351a4e1a14d84e9076029a3b963ffe3995

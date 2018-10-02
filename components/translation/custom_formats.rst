@@ -125,4 +125,4 @@ YAML file are dumped into a text file with the custom format::
     $dumper->dump($translations, array('path' => __DIR__.'/dumps'));
 
 .. ready: no
-.. revision: 81943ab6a
+.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0

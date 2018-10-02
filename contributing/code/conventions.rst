@@ -132,4 +132,4 @@ between the namespace and the use declarations, like in this example from
 .. _`ArrayParserCache`: https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/ExpressionLanguage/ParserCache/ArrayParserCache.php
 
 .. ready: no
-.. revision: aaa1f48bf
+.. revision: aaa1f48bf86d651aa3d0c45c8a7a5da885e8f57d

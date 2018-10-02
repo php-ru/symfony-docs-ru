@@ -41,4 +41,4 @@ check the requirements automatically. There's no need to execute any command; if
 there is any issue, you'll see them in the console output.
 
 .. ready: no
-.. revision: 51ea313e6
+.. revision: 51ea313e6524d2b0412e62d1a7c16eb364f317c7

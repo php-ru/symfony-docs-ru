@@ -66,4 +66,4 @@ to use the `IgnorePlugin`_ (see `moment/moment#2373`_):
 .. _`moment/moment#2373`: https://github.com/moment/moment/issues/2373
 
 .. ready: no
-.. revision: 29f2d400c
+.. revision: 29f2d400cab12ef68497192f8eb3aef5add03f04

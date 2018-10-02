@@ -92,4 +92,4 @@ the resource::
     $delegatingLoader->load(__DIR__.'/users.yaml');
 
 .. ready: no
-.. revision: f7b6f3a3d
+.. revision: f7b6f3a3df88b4a64d1a258b5914edf2d05576a6

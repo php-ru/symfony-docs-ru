@@ -100,4 +100,4 @@ in the `documentation of ProxyManager`_.
 .. _`ocramius/proxy-manager`: https://github.com/Ocramius/ProxyManager
 
 .. ready: no
-.. revision: 47895a438
+.. revision: 47895a438e8483db4143ef52b0f2ed938f343095

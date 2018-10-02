@@ -16,4 +16,4 @@ encouraged to `install Composer`_ as explained in the official Composer document
 .. _`install Composer`: https://getcomposer.org/download/
 
 .. ready: no
-.. revision: adb72ec5c
+.. revision: adb72ec5c81a4a961603ae12938ff2577835c8a1

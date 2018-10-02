@@ -86,4 +86,4 @@ this use-case::
     $githubApiClient = new GitHubApiClient($psr16Cache);
 
 .. ready: no
-.. revision: 21e3daa48
+.. revision: 21e3daa48fc83030a00dd1c7219f373bbecf06a7

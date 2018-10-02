@@ -45,4 +45,4 @@ both ``app.js`` and ``checkout.js`` on the checkout page.
     the Webpack bootstrap logic and any shared modules.
 
 .. ready: no
-.. revision: c67f07f67
+.. revision: c67f07f6752f5bfd6855c7c35aef09cac2c5a2bd

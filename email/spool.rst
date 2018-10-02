@@ -164,4 +164,4 @@ at a regular interval.
     ``swiftmailer`` service without the ``lazy`` option (see :doc:`/service_container/lazy_services`).
 
 .. ready: no
-.. revision: aee4f137b
+.. revision: aee4f137b0d5f09a62f42a3b8d214f45add8bcca
