@@ -155,7 +155,7 @@ Symfony provides a handy way to declare localized routes without duplication.
 
     .. code-block:: php-annotations
 
-        // src/Controller/BlogController.php
+        // src/Controller/CompanyController.php
         namespace App\Controller;
 
         use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -944,4 +944,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 2a21457e3
+.. revision: cd0a4df7a6d72ebed6d58259b2a07373985d5631

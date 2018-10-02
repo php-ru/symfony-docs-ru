@@ -261,8 +261,8 @@ ide
 Symfony turns file paths seen in variable dumps and exception messages into
 links that open those files right inside your browser. If you prefer to open
 those files in your favorite IDE or text editor, set this option to any of the
-following values: ``phpstorm``, ``sublime``, ``textmate``, ``macvim``, ``emacs``
-and ``atom``.
+following values: ``phpstorm``, ``sublime``, ``textmate``, ``macvim``, ``emacs``,
+``atom`` and ``vscode``.
 
 .. note::
 
@@ -2061,4 +2061,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1
+.. revision: 0fdbdbbd1c4134ded0db599928117878d91bd66b
