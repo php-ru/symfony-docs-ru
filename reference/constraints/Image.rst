@@ -318,7 +318,7 @@ allowSquare
 **type**: ``Boolean`` **default**: ``true``
 
 If this option is false, the image cannot be a square. If you want to force
-a square image, then set leave this option as its default ``true`` value
+a square image, then leave this option as its default ``true`` value
 and set `allowLandscape`_ and `allowPortrait`_ both to ``false``.
 
 allowLandscape
@@ -459,4 +459,4 @@ is corrupted.
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: 716ad551563a250249e4c1bd89b0197fb3ddc60a
+.. revision: 543bfb4945321930313617f05f0d8f805add09a0
