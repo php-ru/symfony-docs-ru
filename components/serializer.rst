@@ -754,6 +754,25 @@ This encoder requires the :doc:`Yaml Component </components/yaml>` and
 transforms from and to Yaml.
 
 
+Skipping ``null`` Values
+------------------------
+
+By default, the Serializer will preserve properties containing a ``null`` value.
+You can change this behavior by setting the ``skip_null_values`` context option
+to ``true``::
+
+    $dummy = new class {
+        public $foo;
+        public $bar = 'notNull';
+    };
+
+    $normalizer = new ObjectNormalizer();
+    $result = $normalizer->normalize($dummy, 'json', ['skip_null_values' => true]);
+    // ['bar' => 'notNull']
+
+.. versionadded:: 4.2
+    The ``skip_null_values`` option was introduced in Symfony 4.2.
+
 .. _component-serializer-handling-circular-references:
 
 Handling Circular References
@@ -1379,4 +1398,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1
+.. revision: 6349bd31e0077d522be8dceab7fe7e4baca2bb7e
