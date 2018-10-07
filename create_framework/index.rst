@@ -16,5 +16,5 @@
     http_kernel_httpkernel_class
     dependency_injection
 
-.. ready: no
+.. ready: yes
 .. revision: 613d6bc8438abfd98d91813491595f7bd2c345f0
