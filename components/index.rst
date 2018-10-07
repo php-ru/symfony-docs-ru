@@ -1,5 +1,5 @@
-The Components
-==============
+Компоненты
+==========
 
 .. toctree::
     :maxdepth: 1
