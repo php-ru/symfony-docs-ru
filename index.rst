@@ -1,12 +1,12 @@
 .. _symfony2-documentation:
 
-Symfony Documentation
-=====================
+Документация по Symfony
+=======================
 
-Quick Tour
-----------
+Быстрый старт
+-------------
 
-Get started fast with the Symfony :doc:`Quick Tour <quick_tour/index>`:
+Начните с :doc:`Быстрого старта <quick_tour/index>` Symfony:
 
 .. toctree::
     :hidden:
@@ -17,16 +17,16 @@ Get started fast with the Symfony :doc:`Quick Tour <quick_tour/index>`:
 * :doc:`quick_tour/flex_recipes`
 * :doc:`quick_tour/the_architecture`
 
-Getting Started
----------------
+Начало работы
+--------------
 
 .. toctree::
     :maxdepth: 2
 
     getting_started/index
 
-Topics
-------
+Разделы
+-------
 
 .. toctree::
     :maxdepth: 1
@@ -55,17 +55,17 @@ Topics
     validation
     workflow
 
-Best Practices
---------------
+Лучшие практики
+---------------
 
 .. toctree::
     :hidden:
 
     best_practices/index
 
-Read the :doc:`Official Best Practices </best_practices/index>`.
+Читайте :doc:`официальные лучшие практики </best_practices/index>`.
 
-Components
+Компоненты
 ----------
 
 .. toctree::
@@ -73,12 +73,12 @@ Components
 
     components/index
 
-Read the :doc:`Components </components/index>` documentation.
+Читайте документацию по :doc:`компонентам </components/index>`.
 
-Reference Documents
--------------------
+Справочные документы
+--------------------
 
-Get answers quickly with reference documents:
+Получите ответы на вопросы, ознакомившись со следующими справочными документами:
 
 .. toctree::
     :hidden:
@@ -87,10 +87,10 @@ Get answers quickly with reference documents:
 
 .. include:: /reference/map.rst.inc
 
-Contributing
-------------
+Участие в проекте
+-----------------
 
-Contribute to Symfony:
+Сделайте вклад в Symfony:
 
 .. toctree::
     :hidden:
@@ -99,10 +99,10 @@ Contribute to Symfony:
 
 .. include:: /contributing/map.rst.inc
 
-Create your Own Framework
--------------------------
+Создайте собственный фреймворк
+------------------------------
 
-Want to create your own framework based on Symfony?
+Хотите создать свой фреймворк, основанный на Symfony?
 
 .. toctree::
     :hidden:
@@ -111,5 +111,5 @@ Want to create your own framework based on Symfony?
 
 .. include:: /create_framework/map.rst.inc
 
-.. ready: no
+.. ready: yes
 .. revision: fb88abce74ae90b158f3b93912a368efd0c8e966
