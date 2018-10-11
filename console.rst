@@ -335,10 +335,8 @@ console::
     {
         public function testExecute()
         {
-            $kernel = self::bootKernel();
+            $kernel = static::createKernel();
             $application = new Application($kernel);
-
-            $application->add(new CreateUserCommand());
 
             $command = $application->find('app:create-user');
             $commandTester = new CommandTester($command);
@@ -371,38 +369,6 @@ console::
     :class:`Symfony\\Component\\Console\\Application <Symfony\\Component\\Console\\Application>`
     and extend the normal ``\PHPUnit\Framework\TestCase``.
 
-To be able to use the fully set up service container for your console tests
-you can extend your test from
-:class:`Symfony\\Bundle\\FrameworkBundle\\Test\\KernelTestCase`::
-
-    // ...
-    use Symfony\Component\Console\Tester\CommandTester;
-    use Symfony\Bundle\FrameworkBundle\Console\Application;
-    use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-
-    class CreateUserCommandTest extends KernelTestCase
-    {
-        public function testExecute()
-        {
-            $kernel = static::createKernel();
-            $kernel->boot();
-
-            $application = new Application($kernel);
-
-            $command = $application->find('app:create-user');
-            $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
-                'command'  => $command->getName(),
-                'username' => 'Wouter',
-            ));
-
-            $output = $commandTester->getDisplay();
-            $this->assertContains('Username: Wouter', $output);
-
-            // ...
-        }
-    }
-
 Learn More
 ----------
 
@@ -421,4 +387,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 1855faf1a0acc571d4491bae987663c8df8496a1
+.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e

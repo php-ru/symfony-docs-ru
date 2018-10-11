@@ -10,7 +10,7 @@ Validation Groups
 If your object takes advantage of :doc:`validation groups </validation/groups>`,
 you'll need to specify which validation group(s) your form should use::
 
-    $form = $this->createFormBuilder($users, array(
+    $form = $this->createFormBuilder($user, array(
         'validation_groups' => array('registration'),
     ))->add(...);
 
@@ -28,7 +28,10 @@ method::
     }
 
 In both of these cases, *only* the ``registration`` validation group will
-be used to validate the underlying object.
+be used to validate the underlying object. To apply the ``registration``
+group *and* all constraints that are not in a group, use::
+
+    'validation_groups' => array('Default', 'registration')
 
 .. ready: no
-.. revision: be33b869cfb0b08cbc9fbc73f4972c2650868180
+.. revision: 088f93aa2fa9aefc1dcd77f7d4a431607b32a2d2

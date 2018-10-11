@@ -5,7 +5,7 @@ Want to use `TypeScript`_? No problem! First, install the dependencies:
 
 .. code-block:: terminal
 
-    $ yarn add --dev typescript ts-loader
+    $ yarn add --dev typescript ts-loader@^3.0
 
 Then, activate the ``ts-loader`` in ``webpack.config.js``:
 
@@ -66,4 +66,4 @@ This plugin requires that you have a `tsconfig.json`_ file that is setup correct
 .. _`tsconfig.json`: https://www.npmjs.com/package/fork-ts-checker-webpack-plugin#modules-resolution
 
 .. ready: no
-.. revision: e2cf45cee4fe0160bc18b1a182c3979b62364ecc
+.. revision: 96c0c81c51428e413a0a0142f225c0ddd5d76d76

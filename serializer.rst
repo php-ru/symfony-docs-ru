@@ -52,6 +52,8 @@ Encoders supporting the following formats are enabled:
 
 * JSON: :class:`Symfony\\Component\\Serializer\\Encoder\\JsonEncoder`
 * XML: :class:`Symfony\\Component\\Serializer\\Encoder\\XmlEncoder`
+* CSV: :class:`Symfony\\Component\\Serializer\\Encoder\\CsvEncoder`
+* YAML: :class:`Symfony\\Component\\Serializer\\Encoder\\YamlEncoder`
 
 As well as the following normalizers:
 
@@ -137,6 +139,8 @@ In addition to the ``@Groups`` annotation, the Serializer component also
 supports YAML or XML files. These files are automatically loaded when being
 stored in one of the following locations:
 
+* All ``*.yaml`` and ``*.xml`` files in the ``config/serializer/``
+  directory.
 * The ``serialization.yaml`` or ``serialization.xml`` file in
   the ``Resources/config/`` directory of a bundle;
 * All ``*.yaml`` and ``*.xml`` files in the ``Resources/config/serialization/``
@@ -214,4 +218,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 1019797ec9b57afa433a61fe7aab19a621ec77c6

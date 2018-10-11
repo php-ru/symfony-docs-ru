@@ -56,7 +56,7 @@ table fields.
 
 .. code-block:: terminal
 
-    $ php bin/console doctrine:mapping:import App\\Entity annotation --path=src/Entity
+    $ php bin/console doctrine:mapping:import 'App\Entity' annotation --path=src/Entity
 
 This command line tool asks Doctrine to introspect the database and generate
 new PHP classes with annotation metadata into ``src/Entity``. This generates two
@@ -68,7 +68,7 @@ files: ``BlogPost.php`` and ``BlogComment.php``.
 
     .. code-block:: terminal
 
-        $ php bin/console doctrine:mapping:import App\\Entity xml --path=config/doctrine
+        $ php bin/console doctrine:mapping:import 'App\Entity' xml --path=config/doctrine
 
 Generating the Getters & Setters or PHP Classes
 -----------------------------------------------
@@ -98,4 +98,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`doctrine/doctrine#729`: https://github.com/doctrine/DoctrineBundle/issues/729
 
 .. ready: no
-.. revision: 61bdd260b772e93732e7cc801f3707de20cecba1
+.. revision: 26ccc3b225c289339b1c09fce3f2afa78c9ad8ce

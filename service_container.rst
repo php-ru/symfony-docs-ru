@@ -50,16 +50,16 @@ What other services are available? Find out by running:
     $ php bin/console debug:autowiring
 
     # this is just a *small* sample of the output...
-    =============================================================== =====================================
-    Class/Interface Type                                            Alias Service ID
-    =============================================================== =====================================
-    ``Psr\Cache\CacheItemPoolInterface``                            alias for "cache.app.recorder"
-    ``Psr\Log\LoggerInterface``                                     alias for "monolog.logger"
-    ``Symfony\Component\EventDispatcher\EventDispatcherInterface``  alias for "debug.event_dispatcher"
-    ``Symfony\Component\HttpFoundation\RequestStack``               alias for "request_stack"
-    ``Symfony\Component\HttpFoundation\Session\SessionInterface``   alias for "session"
-    ``Symfony\Component\Routing\RouterInterface``                   alias for "router.default"
-    =============================================================== =====================================
+    ==========================================================  ==================================
+    Class/Interface Type                                        Alias Service ID
+    ==========================================================  ==================================
+    Psr\Cache\CacheItemPoolInterface                            alias for "cache.app.recorder"
+    Psr\Log\LoggerInterface                                     alias for "monolog.logger"
+    Symfony\Component\EventDispatcher\EventDispatcherInterface  alias for "debug.event_dispatcher"
+    Symfony\Component\HttpFoundation\RequestStack               alias for "request_stack"
+    Symfony\Component\HttpFoundation\Session\SessionInterface   alias for "session"
+    Symfony\Component\Routing\RouterInterface                   alias for "router.default"
+    ==========================================================  ==================================
 
 When you use these type-hints in your controller methods or inside your
 :ref:`own services <service-container-creating-service>`, Symfony will automatically
@@ -1072,4 +1072,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony-fundamentals
 
 .. ready: no
-.. revision: 1a6ed635c0ab9da47f965caabf27dab4152ec8dc
+.. revision: 60eaca3896e7790337d75f804683e4c1acfd707a
