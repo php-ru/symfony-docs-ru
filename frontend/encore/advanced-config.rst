@@ -53,7 +53,7 @@ state of the current configuration to build a new one:
     Encore
         .setOutputPath('web/build/')
         .setPublicPath('/build')
-        .addEntry('app', './assets/js/main.js')
+        .addEntry('app', './assets/js/app.js')
         .addStyleEntry('global', './assets/css/global.scss')
         .enableSassLoader()
         .autoProvidejQuery()
@@ -100,4 +100,4 @@ prefer to build configs separately, pass the ``--config-name`` option:
 .. _`array of configurations`: https://github.com/webpack/docs/wiki/configuration#multiple-configurations
 
 .. ready: no
-.. revision: 9b53860f962b5fdbf2cf41a9f86380551848fb73
+.. revision: 9c657523b3f7a1a5536cde26e3a01c74a9faad0f

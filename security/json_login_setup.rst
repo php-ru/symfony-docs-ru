@@ -80,6 +80,12 @@ path:
              */
             public function loginAction(Request $request)
             {
+                $user = $this->getUser();
+
+                return $this->json(array(
+                    'username' => $user->getUsername(),
+                    'roles' => $user->getRoles(),
+                ));
             }
         }
 
@@ -117,11 +123,11 @@ path:
 
         return $routes;
 
-Don't let this empty controller confuse you. When you submit a ``POST`` request
-to the ``/login`` URL with the following JSON document as the body, the security
-system intercepts the requests. It takes care of authenticating the user with
-the submitted username and password or triggers an error in case the authentication
-process fails:
+When you submit a ``POST`` request to the ``/login`` URL with the following JSON
+document as the body, the security system intercepts the requests.
+It takes care of authenticating the user with the submitted username and password
+or triggers an error in case the authentication process fails.
+If the authentication is successful, the controller defined earlier will be executed.
 
 .. code-block:: json
 
@@ -201,4 +207,4 @@ The security configuration should be:
         ));
 
 .. ready: no
-.. revision: 51ddf416eeac3f880f4019852517dbf224c9a9ac
+.. revision: 18002e4c5717a596862e0722d6229419d40b4030

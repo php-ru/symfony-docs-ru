@@ -68,29 +68,23 @@ the user::
                 }
             }
 
-            if ($isPasswordValid) {
-                $currentHour = date('G');
-                if ($currentHour < 14 || $currentHour > 16) {
-                    // CAUTION: this message will be returned to the client
-                    // (so don't put any un-trusted messages / error strings here)
-                    throw new CustomUserMessageAuthenticationException(
-                        'You can only log in between 2 and 4!',
-                        array(), // Message Data
-                        412 // HTTP 412 Precondition Failed
-                    );
-                }
-
-                return new UsernamePasswordToken(
-                    $user,
-                    $user->getPassword(),
-                    $providerKey,
-                    $user->getRoles()
+            $currentHour = date('G');
+            if ($currentHour < 14 || $currentHour > 16) {
+                // CAUTION: this message will be returned to the client
+                // (so don't put any un-trusted messages / error strings here)
+                throw new CustomUserMessageAuthenticationException(
+                    'You can only log in between 2 and 4!',
+                    array(), // Message Data
+                    412 // HTTP 412 Precondition Failed
                 );
             }
 
-            // CAUTION: this message will be returned to the client
-            // (so don't put any un-trusted messages / error strings here)
-            throw new CustomUserMessageAuthenticationException('Invalid username or password');
+            return new UsernamePasswordToken(
+                $user,
+                $user->getPassword(),
+                $providerKey,
+                $user->getRoles()
+            );
         }
 
         public function supportsToken(TokenInterface $token, $providerKey)
@@ -233,4 +227,4 @@ If creating a login form in general is new to you or you don't understand
 the ``check_path`` or ``login_path`` options, see :doc:`/security/form_login`.
 
 .. ready: no
-.. revision: 451d44b3d4d92a5ef1fdee7719353ccff90855b1
+.. revision: 2b1e5b5f28927d5a7f1c78a8a803c42caf7779cf

@@ -93,6 +93,8 @@ Encoders supporting the following formats are enabled:
 
 * JSON: :class:`Symfony\\Component\\Serializer\\Encoder\\JsonEncoder`
 * XML: :class:`Symfony\\Component\\Serializer\\Encoder\\XmlEncoder`
+* CSV: :class:`Symfony\\Component\\Serializer\\Encoder\\CsvEncoder`
+* YAML: :class:`Symfony\\Component\\Serializer\\Encoder\\YamlEncoder`
 
 As well as the following normalizers:
 
@@ -296,4 +298,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: b65d15a9b8b040b94dcd4a69240be0b46d637b54
+.. revision: f4cf54a861a29fab7528309c09ccf976827f7a28
