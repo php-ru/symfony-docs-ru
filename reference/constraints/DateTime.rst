@@ -1,9 +1,8 @@
 DateTime
 ========
 
-Validates that a value is a valid "datetime", meaning either a ``DateTime``
-object or a string (or an object that can be cast into a string) that follows
-a specific format.
+Validates that a value is a valid "datetime", meaning a string (or an object
+that can be cast into a string) that follows a specific format.
 
 +----------------+------------------------------------------------------------------------+
 | Applies to     | :ref:`property or method <validation-property-target>`                 |
@@ -33,6 +32,7 @@ Basic Usage
         {
             /**
              * @Assert\DateTime()
+             * @var string A "Y-m-d H:i:s" formatted value
              */
              protected $createdAt;
         }
@@ -70,6 +70,11 @@ Basic Usage
 
         class Author
         {
+           /**
+            * @var string A "Y-m-d H:i:s" formatted value
+            */
+            protected $createdAt;
+
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('createdAt', new Assert\DateTime());
@@ -99,4 +104,4 @@ This message is shown if the underlying data is not a valid datetime.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a
+.. revision: f324a71026110ccc3d42a92bc41791bf6582f3cd

@@ -13,8 +13,8 @@ Update your code to use ``createSharedEntry()``:
 
     Encore
         // ...
-    -     .addEntry('app', 'assets/js/app.js')
-    +     .createSharedEntry('app', 'assets/js/app.js')
+    -     .addEntry('app', './assets/js/app.js')
+    +     .createSharedEntry('app', './assets/js/app.js')
         .addEntry('homepage', './assets/js/homepage.js')
         .addEntry('blog', './assets/js/blog.js')
         .addEntry('store', './assets/js/store.js')
@@ -57,4 +57,4 @@ these shared modules.
     is generally quite large).
 
 .. ready: no
-.. revision: d4be4cdc3da5301d989a2ac04ff63caade38008d
+.. revision: 9c657523b3f7a1a5536cde26e3a01c74a9faad0f

@@ -100,5 +100,7 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
            'dump_destination' => 'php://stderr',
         ));
 
+Configure it to ``"tcp://%env(VAR_DUMPER_SERVER)%"`` in order to use the :ref:`ServerDumper feature <var-dumper-dump-server>`.
+
 .. ready: no
-.. revision: 4e0f567e57ff4f8a896f93f7a1b98716a4cf0574
+.. revision: c668d1ef6f07c4a4e8fbe78330ebedb4a3da21c6

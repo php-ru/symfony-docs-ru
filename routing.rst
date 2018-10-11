@@ -238,8 +238,7 @@ with a locale. This can be done by defining a different prefix for each locale
             type: annotation
             prefix:
                 en: '' # don't prefix URLs for English, the default locale
-                fr: '/fr'
-                es: '/es'
+                nl: '/nl'
 
 .. _routing-requirements:
 
@@ -944,4 +943,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: cd0a4df7a6d72ebed6d58259b2a07373985d5631
+.. revision: a243b64d2de77c81d7dc670f10002faf340b0546

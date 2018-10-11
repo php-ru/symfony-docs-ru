@@ -137,6 +137,11 @@ checkMX
 If true, then the :phpfunction:`checkdnsrr` PHP function will be used to
 check the validity of the MX record of the host of the given email.
 
+.. caution::
+
+    This option is not reliable because it depends on the network conditions
+    and some valid servers refuse to respond to those requests.
+
 checkHost
 ~~~~~~~~~
 
@@ -152,4 +157,4 @@ of the given email.
 .. _HTML5 email input element: https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail
 
 .. ready: no
-.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a
+.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e
