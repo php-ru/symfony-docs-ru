@@ -402,9 +402,13 @@ Forms
 ~~~~~
 
 Special treatment is also given to forms. A ``selectButton()`` method is
-available on the Crawler which returns another Crawler that matches a button
-(``input[type=submit]``, ``input[type=image]``, or a ``button``) with the
-given text. This method is especially useful because you can use it to return
+available on the Crawler which returns another Crawler that matches ``<button>``
+or ``<input type="submit">`` or ``<input type="button">`` elements (or an
+``<img>`` element inside them). The string given as argument is looked for in
+the ``id``, ``alt``, ``name``, and ``value`` attributes and the text content of
+those elements.
+
+This method is especially useful because you can use it to return
 a :class:`Symfony\\Component\\DomCrawler\\Form` object that represents the
 form that the button lives in::
 
@@ -561,4 +565,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: cbb057fed39c76501b9a8645cd0c45ba58fdaf0a
+.. revision: 7f19b26a366289fc0c1c08afaf41e0c74c32fa20

@@ -330,8 +330,8 @@ instead::
 Process Timeout
 ---------------
 
-You can limit the amount of time a process takes to complete by setting a
-timeout (in seconds)::
+By default processes have a timeout of 60 seconds, but you can change it passing
+a different timeout (in seconds) to the ``setTimeout()`` method::
 
     use Symfony\Component\Process\Process;
 
@@ -464,4 +464,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38

@@ -168,7 +168,7 @@ Make sure you clear and warm-up your Symfony cache:
 
 .. code-block:: terminal
 
-    $ php bin/console cache:clear --env=prod --no-debug
+    $ APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear
 
 E) Other Things!
 ~~~~~~~~~~~~~~~~
@@ -255,4 +255,4 @@ Learn More
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: 37aef5227532dfd36097d679628b79649bf00cd4
+.. revision: 77e3522194bbc2f0a1925d7460455752e024a3a7

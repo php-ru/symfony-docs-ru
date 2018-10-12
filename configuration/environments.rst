@@ -178,19 +178,23 @@ Selecting the Environment for Console Commands
 
 By default, Symfony commands are executed in whatever environment is defined by
 the ``APP_ENV`` environment variable (usually configured in your ``.env`` file).
+In previous Symfony versions you could use the ``--env`` (and ``--no-debug``)
+command line options to override this value. However, those options were
+deprecated in Symfony 4.2.
 
-Use the ``--env`` and ``--no-debug`` options to modify this behavior:
+Use the ``APP_ENV`` (and ``APP_DEBUG``) environment variables to change the
+environment and the debug behavior of the commands:
 
 .. code-block:: terminal
 
-    # 'dev' environment and debug enabled
+    # Symfony's default: 'dev' environment and debug enabled
     $ php bin/console command_name
 
     # 'prod' environment (debug is always disabled for 'prod')
-    $ php bin/console command_name --env=prod
+    $ APP_ENV=prod php bin/console command_name
 
     # 'test' environment and debug disabled
-    $ php bin/console command_name --env=test --no-debug
+    $ APP_ENV=test APP_DEBUG=0 php bin/console command_name
 
 .. index::
    single: Environments; Creating a new environment
@@ -364,4 +368,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: 8299066fe8515b18c8e71e08a42802faa158f38c
