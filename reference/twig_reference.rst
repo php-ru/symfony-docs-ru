@@ -298,15 +298,19 @@ is_granted
     {{ is_granted(role, object = null, field = null) }}
 
 ``role``
-    **type**: ``string``
+    **type**: ``string``, ``string[]``
 ``object`` *(optional)*
     **type**: ``object``
 ``field`` *(optional)*
     **type**: ``string``
 
-Returns ``true`` if the current user has the required role. Optionally,
-an object can be pasted to be used by the voter. More information can be
-found in :ref:`security-template`.
+Returns ``true`` if the current user has the given role. If several roles are
+passed in an array, returns ``true`` if the user has all of them or at least one
+of them, depending on the value of this option:
+:ref:`security.access_decision_manager.strategy <security-voters-change-strategy>`.
+
+Optionally, an object can be passed to be used by the voter. More information
+can be found in :ref:`security-template`.
 
 logout_path
 ~~~~~~~~~~~
@@ -780,4 +784,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: 1855faf1a0acc571d4491bae987663c8df8496a1
+.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38
