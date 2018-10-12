@@ -19,7 +19,7 @@ An Autowiring Example
 ---------------------
 
 Imagine you're building an API to publish statuses on a Twitter feed, obfuscated
-with `ROT13`_... a fun encoder that shifts all characters 13 letters forward in
+with `ROT13`_, a fun encoder that shifts all characters 13 letters forward in
 the alphabet.
 
 Start by creating a ROT13 transformer class::
@@ -509,4 +509,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _ROT13: https://en.wikipedia.org/wiki/ROT13
 
 .. ready: no
-.. revision: 795febe01d7cadf6a0bbf14fb404daa54d692fb0
+.. revision: 1d1f8ece8d5525cc8beec961d99160633a8cc861
