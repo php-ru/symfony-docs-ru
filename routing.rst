@@ -224,7 +224,7 @@ with a locale. This can be done by defining a different prefix for each locale
 
         # config/routes/annotations.yaml
         controllers:
-            resource: '../src/Controller/'
+            resource: '../../src/Controller/'
             type: annotation
             prefix:
                 en: '' # don't prefix URLs for English, the default locale
@@ -933,4 +933,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 712477556bf763fe486a2d9891f902ef9b643ed1
+.. revision: 5215a33beb155bae4fc851c5f5f026eaecb9bd30

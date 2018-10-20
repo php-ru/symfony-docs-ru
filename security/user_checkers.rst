@@ -25,6 +25,7 @@ are not met, an exception should be thrown which extends the
     use App\Exception\AccountDeletedException;
     use App\Security\User as AppUser;
     use Symfony\Component\Security\Core\Exception\AccountExpiredException;
+    use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
     use Symfony\Component\Security\Core\User\UserCheckerInterface;
     use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -39,6 +40,11 @@ are not met, an exception should be thrown which extends the
             // user is deleted, show a generic Account Not Found message.
             if ($user->isDeleted()) {
                 throw new AccountDeletedException('...');
+
+                // or to customize the message shown
+                throw new CustomUserMessageAuthenticationException(
+                    'Your account was deleted. Sorry about that!'
+                );
             }
         }
 
@@ -115,10 +121,5 @@ is the service id of your user checker:
             ),
         ));
 
-.. tip::
-
-    It's also possible to have a different user checker for each firewall. Use
-    the ``user_checker`` option under each firewall to choose the one you want.
-
 .. ready: no
-.. revision: b2426d42b10d3422178eb799f928dc20783cd936
+.. revision: 3e63a6ce9687559810e780b2842a4e0590db8b48

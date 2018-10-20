@@ -49,7 +49,9 @@ message handler. It's a class with an ``__invoke`` method::
     // src/MessageHandler/MyMessageHandler.php
     namespace App\MessageHandler;
 
-    class MyMessageHandler
+    use Symfony\Component\Messenger\Handler;
+
+    class MyMessageHandler implements MessageHandlerInterface
     {
         public function __invoke(MyMessage $message)
         {
@@ -57,7 +59,12 @@ message handler. It's a class with an ``__invoke`` method::
         }
     }
 
-Once you've created your handler, you need to register it:
+Message handlers must be registered as services and :doc:`tagged </service_container/tags>`
+with the ``messenger.message_handler`` tag. If you're using the
+:ref:`default services.yaml configuration <service-container-services-load-example>`,
+this is already done for you, thanks to :ref:`autoconfiguration <services-autoconfigure>`.
+
+If you're not using service autoconfiguration, then you need to add this config:
 
 .. configuration-block::
 
@@ -448,6 +455,12 @@ this:
 
 This will generate the ``messenger.bus.commands`` and ``messenger.bus.events`` services
 that you can inject in your services.
+
+.. note::
+
+    To register a handler only for a specific bus, add a ``bus`` attribute to
+    the handler's service tag (``messenger.message_handler``) and use the bus
+    name as its value.
 
 Type-hints and Auto-wiring
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -926,4 +939,4 @@ will give you access to the following services:
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: 9b91634ce26a495a061014e588386cd81684dea9
+.. revision: 1c413880c3f5d9abd78f96b4b8ad4013ad1d03ed

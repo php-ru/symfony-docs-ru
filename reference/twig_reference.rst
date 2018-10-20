@@ -430,7 +430,7 @@ expression
 ~~~~~~~~~~
 
 Creates an :class:`Symfony\\Component\\ExpressionLanguage\\Expression` in
-Twig. See ":ref:`Template Expressions <security-template-expression>`".
+Twig.
 
 .. _reference-twig-filters:
 
@@ -784,4 +784,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38
+.. revision: ed3dd653dd8a18e78de7f3db38690b57479da2a4

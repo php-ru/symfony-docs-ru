@@ -48,8 +48,7 @@ is set to ``true``) when they try to access a protected resource but isn't
 fully authenticated.
 
 This path **must** be accessible by a normal, un-authenticated user, else
-you may create a redirect loop. For details, see
-":ref:`Avoid Common Pitfalls <security-common-pitfalls>`".
+you may create a redirect loop.
 
 check_path
 ..........
@@ -491,9 +490,18 @@ multiple firewalls, the "context" could actually be shared:
     ignored and you won't be able to authenticate on multiple firewalls at the
     same time.
 
+User Checkers
+-------------
+
+During the authentication of a user, additional checks might be required to
+verify if the identified user is allowed to log in. Each firewall can include
+a ``user_checker`` option to define the service used to perform those checks.
+
+Learn more about user checkers in :doc:`/security/user_checkers`.
+
 .. _`PBKDF2`: https://en.wikipedia.org/wiki/PBKDF2
 .. _`ircmaxell/password-compat`: https://packagist.org/packages/ircmaxell/password-compat
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: a758f2969aeda5b7f91101e5b8092f7749851f08
+.. revision: df3dd4aeb37b363ff5b31bfee04a24c755df569b

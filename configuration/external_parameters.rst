@@ -194,7 +194,7 @@ Symfony provides the following env var processors:
             parameters:
                 env(SECRET): 'some_secret'
             framework:
-               secret: '%env(string:SECRET)%'
+                secret: '%env(string:SECRET)%'
 
         .. code-block:: xml
 
@@ -234,7 +234,7 @@ Symfony provides the following env var processors:
             parameters:
                 env(HTTP_METHOD_OVERRIDE): 'true'
             framework:
-               http_method_override: '%env(bool:HTTP_METHOD_OVERRIDE)%'
+                http_method_override: '%env(bool:HTTP_METHOD_OVERRIDE)%'
 
         .. code-block:: xml
 
@@ -280,8 +280,8 @@ Symfony provides the following env var processors:
             parameters:
                 env(HEALTH_CHECK_METHOD): 'Symfony\Component\HttpFoundation\Request::METHOD_HEAD'
             security:
-               access_control:
-                 - { path: '^/health-check$', methods: '%env(const:HEALTH_CHECK_METHOD)%' }
+                access_control:
+                    - { path: '^/health-check$', methods: '%env(const:HEALTH_CHECK_METHOD)%' }
 
         .. code-block:: xml
 
@@ -330,7 +330,7 @@ Symfony provides the following env var processors:
             parameters:
                 env(TRUSTED_HOSTS): '["10.0.0.1", "10.0.0.2"]'
             framework:
-               trusted_hosts: '%env(json:TRUSTED_HOSTS)%'
+                trusted_hosts: '%env(json:TRUSTED_HOSTS)%'
 
         .. code-block:: xml
 
@@ -525,4 +525,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: e5040d0074997244df4517a21a46eb3e0431b7c4
+.. revision: d717c8f542d5c49e0c918837d7d0f8fbed44145f
