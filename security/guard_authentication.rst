@@ -553,10 +553,8 @@ can ignore this. Here is an example of good and bad behavior::
 
     public function supports(Request $request)
     {
-        // GOOD behavior: only authenticate on a specific route
-        if ($request->attributes->get('_route') !== 'login_route' || !$request->isMethod('POST')) {
-            return true;
-        }
+        // GOOD behavior: only authenticate (i.e. return true) on a specific route
+        return 'login_route' === $request->attributes->get('_route') && $request->isMethod('POST');
 
         // e.g. your login system authenticates by the user's IP address
         // BAD behavior: So, you decide to *always* return true so that
@@ -630,4 +628,4 @@ Frequently Asked Questions
 .. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: 39120630b21fb338079f42e57c68c39a8de27fa9
+.. revision: 684caaa07f980590ceb4b242a27604b5e9eafa76

@@ -82,7 +82,7 @@ your layout. In Symfony, use the ``asset()`` helper:
 
 .. code-block:: twig
 
-    {# templates/base.html.twig #}
+    {# app/Resources/views/base.html.twig #}
     <!DOCTYPE html>
     <html>
         <head>
@@ -249,4 +249,4 @@ Keep Going!
 Go back to the :ref:`List of Encore Articles <encore-toc>` to learn more and add new features.
 
 .. ready: no
-.. revision: 048c7060a1dd64fee4111b12900242ee6d78e503
+.. revision: b572928d10b07a307b8bcf2a0325218c8703cab1
