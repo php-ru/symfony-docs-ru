@@ -28,6 +28,7 @@ photos).
 |             | - `error_bubbling`_                                                         |
 |             | - `error_mapping`_                                                          |
 |             | - `help`_                                                                   |
+|             | - `help_attr`_                                                              |
 |             | - `label`_                                                                  |
 |             | - `label_attr`_                                                             |
 |             | - `label_format`_                                                           |
@@ -422,6 +423,8 @@ error_bubbling
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -443,4 +446,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: 9638d12681ab1bde192eea804ea3065e15e9e304
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

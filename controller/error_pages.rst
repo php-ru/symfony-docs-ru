@@ -60,7 +60,7 @@ logic to determine the template filename:
    a generic template for the given format (like ``error.json.twig`` or
    ``error.xml.twig``);
 
-#. If none of the previous template exist, fall back to the generic HTML template
+#. If none of the previous templates exist, fall back to the generic HTML template
    (``error.html.twig``).
 
 .. _overriding-or-adding-templates:
@@ -69,7 +69,7 @@ To override these templates, rely on the standard Symfony method for
 :ref:`overriding templates that live inside a bundle <override-templates>` and
 put them in the ``templates/bundles/TwigBundle/Exception/`` directory.
 
-A typical project that returns HTML and JSON pages, might look like this:
+A typical project that returns HTML and JSON pages might look like this:
 
 .. code-block:: text
 
@@ -121,6 +121,13 @@ store the HTTP status code and message respectively.
     in the same way as error pages. Create a new ``exception.html.twig`` template
     for the standard HTML exception page or ``exception.json.twig`` for the JSON
     exception page.
+
+Security & 404 Pages
+--------------------
+
+Due to the order of how routing and security are loaded, security information will
+*not* be available on your 404 pages. This means that it will appear as if your
+user is logged out on the 404 page (it will work while testing, but not on production).
 
 .. _testing-error-pages:
 
@@ -349,4 +356,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: 44a33a415639fcbd1e6d5c5522bb16b171bffe80
+.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6

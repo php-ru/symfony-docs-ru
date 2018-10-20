@@ -20,6 +20,7 @@ on all types for which ``FormType`` is the parent.
 |           | - `error_mapping`_                                                 |
 |           | - `extra_fields_message`_                                          |
 |           | - `help`_                                                          |
+|           | - `help_attr`_                                                     |
 |           | - `inherit_data`_                                                  |
 |           | - `invalid_message`_                                               |
 |           | - `invalid_message_parameters`_                                    |
@@ -103,6 +104,8 @@ The actual default value of this option depends on other field options:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/inherit_data.rst.inc
 
 .. include:: /reference/forms/types/options/invalid_message.rst.inc
@@ -155,4 +158,4 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 .. include:: /reference/forms/types/options/translation_domain.rst.inc
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

@@ -33,6 +33,12 @@ file similar to the following::
     handles file includes, this adapter has the potential to be much faster than other
     filesystem-based caches.
 
+.. caution::
+
+    If you have configured OPcache to
+    :ref:`not check the file timestamps <performance-dont-check-timestamps>`
+    the cached items will not not be invalidated unless you clear OPcache.
+
 The PhpFilesAdapter can optionally be provided a namespace, default cache lifetime, and cache
 directory path as constructor arguments::
 
@@ -63,4 +69,4 @@ directory path as constructor arguments::
 .. _`OPcache`: http://php.net/manual/en/book.opcache.php
 
 .. ready: no
-.. revision: ea292523155f720611e952c82eb93e690fec522c
+.. revision: 99122937252af226b3d395c1130ec3c3483ce4fe

@@ -233,6 +233,26 @@ in the output and its type::
         }
     });
 
+Instead of waiting until the process has finished, you can use the
+:method:`Symfony\\Component\\Process\\Process::waitUntil` method to keep or stop
+waiting based on some PHP logic. The following example starts a long running
+process and checks its output to wait until its fully initialized::
+
+    $process = new Process(array('/usr/bin/php', 'slow-starting-server.php'));
+    $process->start();
+
+    // ... do other things
+
+    // waits until the given anonymous function returns true
+    $process->waitUntil(function ($type, $output) {
+        return $output === 'Ready. Waiting for commands...';
+    });
+
+    // ... do things after the process is ready
+
+.. versionadded:: 4.2
+    The ``waitUntil()`` method was introduced in Symfony 4.2.
+
 Streaming to the Standard Input of a Process
 --------------------------------------------
 
@@ -464,4 +484,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38
+.. revision: 28958d5d4c2e9a5619d2a6c6617f7f0eec1bb41f

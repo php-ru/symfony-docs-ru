@@ -45,6 +45,8 @@ It enables and disables the toolbar entirely. Usually you set this to ``true``
 in the ``dev`` and ``test`` environments and to ``false`` in the ``prod``
 environment.
 
+.. _intercept_redirects:
+
 intercept_redirects
 ~~~~~~~~~~~~~~~~~~~
 
@@ -70,4 +72,4 @@ is useful when the application makes lots of Ajax requests or they are heavy and
 you want to exclude some of them.
 
 .. ready: no
-.. revision: f7538d1f6623fd33644bdb6cc393e8aaa32e6aed
+.. revision: 066794f922a04d43c5007c1da479efe3f5400936

@@ -16,6 +16,7 @@ The TextType field represents the most basic input text field.
 |             | - `error_bubbling`_                                                |
 |             | - `error_mapping`_                                                 |
 |             | - `help`_                                                          |
+|             | - `help_attr`_                                                     |
 |             | - `label`_                                                         |
 |             | - `label_attr`_                                                    |
 |             | - `label_format`_                                                  |
@@ -56,6 +57,8 @@ The default value is ``''`` (the empty string).
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -74,4 +77,4 @@ Overridden Options
 .. include:: /reference/forms/types/options/compound_type.rst.inc
 
 .. ready: no
-.. revision: 0746f65175638d989f3c6d555d07967a7e1b662e
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

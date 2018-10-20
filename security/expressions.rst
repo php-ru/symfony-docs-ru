@@ -69,7 +69,7 @@ Additionally, you have access to a number of functions inside the expression:
 
 .. sidebar:: ``is_remember_me`` is different than checking ``IS_AUTHENTICATED_REMEMBERED``
 
-    The ``is_remember_me()`` and ``is_authenticated_fully()`` functions are *similar*
+    The ``is_remember_me()`` and ``is_fully_authenticated()`` functions are *similar*
     to using ``IS_AUTHENTICATED_REMEMBERED`` and ``IS_AUTHENTICATED_FULLY``
     with the ``isGranted()`` function - but they are **not** the same. The
     following controller snippet shows the difference::
@@ -101,4 +101,4 @@ Learn more
 * :doc:`/reference/constraints/Expression`
 
 .. ready: no
-.. revision: 88ff52bee23fee777453b368628e523aa588e432
+.. revision: e56793b28d127cf38e6443c64df4f5f23085d13b

@@ -19,6 +19,7 @@ The ``FileType`` represents a file input in your form.
 | options     | - `error_bubbling`_                                                 |
 |             | - `error_mapping`_                                                  |
 |             | - `help`_                                                           |
+|             | - `help_attr`_                                                      |
 |             | - `label`_                                                          |
 |             | - `label_attr`_                                                     |
 |             | - `label_format`_                                                   |
@@ -127,6 +128,8 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -147,4 +150,4 @@ type      ``string``  The type variable is set to ``file``, in order to render a
 ========  ==========  ===============================================================================
 
 .. ready: no
-.. revision: ec8990ee43d2faec62358dd74796973d5ee169d9
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

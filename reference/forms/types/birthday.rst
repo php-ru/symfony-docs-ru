@@ -39,6 +39,7 @@ option defaults to 120 years ago to the current year.
 |                      | - `data`_                                                                     |
 |                      | - `disabled`_                                                                 |
 |                      | - `help`_                                                                     |
+|                      | - `help_attr`_                                                                |
 |                      | - `inherit_data`_                                                             |
 |                      | - `invalid_message`_                                                          |
 |                      | - `invalid_message_parameters`_                                               |
@@ -111,6 +112,8 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/inherit_data.rst.inc
 
 .. include:: /reference/forms/types/options/invalid_message.rst.inc
@@ -120,4 +123,4 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 .. include:: /reference/forms/types/options/mapped.rst.inc
 
 .. ready: no
-.. revision: 5bdf708956c07b5938b85f99527aef529af598d9
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

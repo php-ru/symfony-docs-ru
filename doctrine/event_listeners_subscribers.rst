@@ -205,5 +205,59 @@ whenever possible.
 .. _`The Event System`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html
 .. _`the Doctrine Documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
+Priorities for Event Listeners
+------------------------------
+
+In case you have multiple listeners for the same event you can control the order
+in which they are invoked using the ``priority`` attribute on the tag.
+Listeners with a higher priority are invoked first.
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # config/services.yaml
+        services:
+            App\EventListener\MyHighPriorityListener:
+                tags:
+                    - { name: doctrine.event_listener, event: postPersist, priority: 10 }
+
+            App\EventListener\MyLowPriorityListener:
+                tags:
+                    - { name: doctrine.event_listener, event: postPersist, priority: 1 }
+
+    .. code-block:: xml
+
+        <!-- config/services.xml -->
+        <?xml version="1.0" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:doctrine="http://symfony.com/schema/dic/doctrine">
+
+            <services>
+                <service id="App\EventListener\MyHighPriorityListener" autowire="true">
+                    <tag name="doctrine.event_listener" event="postPersist" priority="10" />
+                </service>
+                <service id="App\EventListener\MyLowPriorityListener" autowire="true">
+                    <tag name="doctrine.event_listener" event="postPersist" priority="1" />
+                </service>
+            </services>
+        </container>
+
+    .. code-block:: php
+
+        // config/services.php
+        use AppBundle\EventListener\MyHighPriorityListener;
+        use AppBundle\EventListener\MyLowPriorityListener;
+
+        $container
+            ->autowire(MyHighPriorityListener::class)
+            ->addTag('doctrine.event_listener', array('event' => 'postPersist', 'priority' => 10))
+        ;
+
+        $container
+            ->autowire(MyLowPriorityListener::class)
+            ->addTag('doctrine.event_listener', array('event' => 'postPersist', 'priority' => 1))
+        ;
+
 .. ready: no
-.. revision: 14689940701ca62196ab153837437ab48d83a052
+.. revision: e56793b28d127cf38e6443c64df4f5f23085d13b

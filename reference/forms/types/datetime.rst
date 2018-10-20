@@ -45,6 +45,7 @@ the data can be a ``DateTime`` object, a string, a timestamp or an array.
 | Inherited            | - `data`_                                                                   |
 | options              | - `disabled`_                                                               |
 |                      | - `help`_                                                                   |
+|                      | - `help_attr`_                                                              |
 |                      | - `inherit_data`_                                                           |
 |                      | - `invalid_message`_                                                        |
 |                      | - `invalid_message_parameters`_                                             |
@@ -234,6 +235,8 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/inherit_data.rst.inc
 
 .. include:: /reference/forms/types/options/invalid_message.rst.inc
@@ -258,4 +261,4 @@ Field Variables
 .. _`Date/Time Format Syntax`: http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax
 
 .. ready: no
-.. revision: a22bfc45fdb157e85b985bbb9a11c5521a6da6fa
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

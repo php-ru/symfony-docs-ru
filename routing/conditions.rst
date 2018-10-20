@@ -17,6 +17,8 @@ define arbitrary matching logic, use the ``conditions`` routing option:
             path:       /contact
             controller: 'App\Controller\DefaultController::contact'
             condition:  "context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'"
+            # expressions can also include config parameters 
+            # condition: "request.headers.get('User-Agent') matches '%app.allowed_browsers%'"
 
     .. code-block:: xml
 
@@ -30,6 +32,8 @@ define arbitrary matching logic, use the ``conditions`` routing option:
             <route id="contact" path="/contact">
                 <default key="_controller">App\Controller\DefaultController::contact</default>
                 <condition>context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'</condition>
+                <!-- expressions can also include config parameters -->
+                <!-- <condition>request.headers.get('User-Agent') matches '%app.allowed_browsers%'</condition> -->
             </route>
         </routes>
 
@@ -50,6 +54,8 @@ define arbitrary matching logic, use the ``conditions`` routing option:
             array(),
             array(),
             'context.getMethod() in ["GET", "HEAD"] and request.headers.get("User-Agent") matches "/firefox/i"'
+            // expressions can also include config parameters
+            // 'request.headers.get("User-Agent") matches "%app.allowed_browsers%"'
         ));
 
         return $collection;
@@ -89,4 +95,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: b506c94da93274e7c282d9f53ab6886954cb3a40

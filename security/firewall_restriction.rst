@@ -1,11 +1,11 @@
 .. index::
    single: Security; Restrict Security Firewalls to a Request
 
-How to Restrict Firewalls to a Specific Request
-===============================================
+How to Restrict Firewalls to a Request
+======================================
 
 When using the Security component, you can create firewalls that match certain request options.
-In most cases, matching against the URL is sufficient, but in special cases you can further
+In most cases, matching against the URL is sufficient, but in special cases, you can further
 restrict the initialization of a firewall against other options of the request.
 
 .. note::
@@ -185,4 +185,4 @@ allowed methods, the firewall will not be activated and subsequent firewalls wil
 have the opportunity to be matched for this request.
 
 .. ready: no
-.. revision: b2426d42b10d3422178eb799f928dc20783cd936
+.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6

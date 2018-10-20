@@ -36,6 +36,7 @@ To use this field, you must specify *either* ``choices`` or ``choice_loader`` op
 |             | - `disabled`_                                                                |
 |             | - `error_mapping`_                                                           |
 |             | - `help`_                                                                    |
+|             | - `help_attr`_                                                               |
 |             | - `inherit_data`_                                                            |
 |             | - `label`_                                                                   |
 |             | - `label_attr`_                                                              |
@@ -270,6 +271,8 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/inherit_data.rst.inc
 
 .. include:: /reference/forms/types/options/label.rst.inc
@@ -320,4 +323,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

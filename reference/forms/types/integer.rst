@@ -28,6 +28,7 @@ integers. By default, all non-integer values (e.g. 6.78) will round down
 |             | - `error_bubbling`_                                                   |
 |             | - `error_mapping`_                                                    |
 |             | - `help`_                                                             |
+|             | - `help_attr`_                                                        |
 |             | - `invalid_message`_                                                  |
 |             | - `invalid_message_parameters`_                                       |
 |             | - `label`_                                                            |
@@ -113,6 +114,8 @@ The default value is ``''`` (the empty string).
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/invalid_message.rst.inc
 
 .. include:: /reference/forms/types/options/invalid_message_parameters.rst.inc
@@ -128,4 +131,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: ec8990ee43d2faec62358dd74796973d5ee169d9
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

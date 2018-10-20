@@ -42,6 +42,7 @@ objects from the database.
 |             | - `error_bubbling`_                                              |
 |             | - `error_mapping`_                                               |
 |             | - `help`_                                                        |
+|             | - `help_attr`_                                                   |
 |             | - `label`_                                                       |
 |             | - `label_attr`_                                                  |
 |             | - `label_format`_                                                |
@@ -330,6 +331,8 @@ The actual default value of this option depends on other field options:
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -341,4 +344,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 1eb9a9d35aa2c0abe5025e792507752cc4cb643b
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a

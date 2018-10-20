@@ -19,6 +19,7 @@ have a protocol.
 |             | - `error_bubbling`_                                               |
 |             | - `error_mapping`_                                                |
 |             | - `help`_                                                         |
+|             | - `help_attr`_                                                    |
 |             | - `label`_                                                        |
 |             | - `label_attr`_                                                   |
 |             | - `label_format`_                                                 |
@@ -66,6 +67,8 @@ The default value is ``''`` (the empty string).
 
 .. include:: /reference/forms/types/options/help.rst.inc
 
+.. include:: /reference/forms/types/options/help_attr.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -79,4 +82,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: 5bdf708956c07b5938b85f99527aef529af598d9
+.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
