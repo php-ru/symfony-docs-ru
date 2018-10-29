@@ -5,7 +5,7 @@ How to Override Symfony's default Directory Structure
 =====================================================
 
 Symfony automatically ships with a default directory structure. You can
-easily override this directory structure to create your own. The default
+override this directory structure to create your own. The default
 directory structure is:
 
 .. code-block:: text
@@ -235,4 +235,4 @@ option in your ``composer.json`` file like this:
     Vagrant/VirtualBox in a guest operating system.
 
 .. ready: no
-.. revision: bca8d000cc4a34021ccf26798a3657f32ee54dd3
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

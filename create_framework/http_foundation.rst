@@ -201,7 +201,7 @@ You can also simulate a request::
 
     $request = Request::create('/index.php?name=Fabien');
 
-With the ``Response`` class, you can easily tweak the response::
+With the ``Response`` class, you can tweak the response::
 
     $response = new Response();
 
@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 8286e92584fb7fa3c8a6f925b78bebc61e836c8f
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

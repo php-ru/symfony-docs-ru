@@ -42,7 +42,7 @@ Built-in Command Loaders
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The :class:`Symfony\\Component\\Console\\CommandLoader\\FactoryCommandLoader`
-class provides a simple way of getting commands lazily loaded as it takes an
+class provides a way of getting commands lazily loaded as it takes an
 array of ``Command`` factories as its only constructor argument::
 
     use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
@@ -80,4 +80,4 @@ Like this, executing the ``app:foo`` command will load the ``FooCommand`` servic
 by calling ``$containerBuilder->get(FooCommand::class)``.
 
 .. ready: no
-.. revision: 76395566a8deee22bf1a477a98d64dfb7faded23
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

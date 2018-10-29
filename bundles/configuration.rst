@@ -296,7 +296,7 @@ In your extension, you can load this and dynamically set its arguments::
 .. sidebar:: Processing the Configuration yourself
 
     Using the Config component is fully optional. The ``load()`` method gets an
-    array of configuration values. You can simply parse these arrays yourself
+    array of configuration values. You can instead parse these arrays yourself
     (e.g. by overriding configurations and using :phpfunction:`isset` to check
     for the existence of a value). Be aware that it'll be very hard to support XML.
 
@@ -434,4 +434,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`snake case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 3cf74d41f3bc5d71acbadabf4251efa0d019b88e
+.. revision: a1741d7a8024cc940b4d41288b93f027df03b41d

@@ -336,7 +336,7 @@ effect after removing the explicit rules:
     '{0} There are no apples|[20,Inf[ There are many apples|There is one apple|a_few: There are %count% apples'
 
 For example, for ``1`` apple, the standard rule ``There is one apple`` will
-be used. For ``2-19`` apples, the second standard rule 
+be used. For ``2-19`` apples, the second standard rule
 ``There are %count% apples`` will be selected.
 
 An :class:`Symfony\\Component\\Translation\\Interval` can represent a finite set
@@ -398,7 +398,7 @@ Retrieving the Message Catalogue
 
 In case you want to use the same translation catalogue outside your application
 (e.g. use translation on the client side), it's possible to fetch raw translation
-messages. Just specify the required locale::
+messages. Specify the required locale::
 
     $catalogue = $translator->getCatalogue('fr_FR');
     $messages = $catalogue->all();
@@ -476,4 +476,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: f9e4f9de25842887067cfbf438d6db34ca3bb98c
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

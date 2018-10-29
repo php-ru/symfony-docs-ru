@@ -24,7 +24,7 @@ Switching a Channel to a different Handler
 ------------------------------------------
 
 Now, suppose you want to log the ``security`` channel to a different file.
-To do this, just create a new handler and configure it to log only messages
+To do this, create a new handler and configure it to log only messages
 from the ``security`` channel:
 
 .. configuration-block::
@@ -174,4 +174,4 @@ inject this service into others, you must update the service configuration to
 :ref:`choose the specific service to inject <services-wire-specific-service>`.
 
 .. ready: no
-.. revision: 6f3ef4df8042a608ff2c8fba99d53ab0d0d2decc
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

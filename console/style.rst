@@ -336,7 +336,7 @@ Defining your Own Styles
 ------------------------
 
 If you don't like the design of the commands that use the Symfony Style, you can
-define your own set of console styles. Just create a class that implements the
+define your own set of console styles. Create a class that implements the
 :class:`Symfony\\Component\\Console\\Style\\StyleInterface`::
 
     namespace App\Console;
@@ -406,4 +406,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: 76395566a8deee22bf1a477a98d64dfb7faded23
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

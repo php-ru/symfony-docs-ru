@@ -109,7 +109,7 @@ correctly::
     public function index($request)
 
 More interesting, ``getArguments()`` is also able to inject any Request
-attribute; the argument just needs to have the same name as the corresponding
+attribute; if the argument has the same name as the corresponding
 attribute::
 
     public function index($year)
@@ -127,7 +127,7 @@ optional attribute of the Request::
 
     public function index($year = 2012)
 
-Let's just inject the ``$year`` request attribute for our controller::
+Let's inject the ``$year`` request attribute for our controller::
 
     class LeapYearController
     {
@@ -206,4 +206,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: d92599ac2cb5f781bc2e57a06c0ad68852fca54b
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

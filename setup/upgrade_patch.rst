@@ -6,7 +6,7 @@ Upgrading a Patch Version (e.g. 4.1.0 to 4.1.1)
 
 When a new patch version is released (only the last number changed), it is a
 release that only contains bug fixes. This means that upgrading to a new patch
-version is *really* easy.
+version should not cause any problems.
 
 To upgrade to a new "patch" release, read the
 :doc:`Upgrading a Minor Version </setup/upgrade_minor>` article. Thanks to
@@ -22,4 +22,4 @@ always safe to upgrade to the latest "minor" version.
 .. include:: /setup/_update_all_packages.rst.inc
 
 .. ready: no
-.. revision: 8e86049cae087bf2ecc6fd16677374d5f58df88f
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

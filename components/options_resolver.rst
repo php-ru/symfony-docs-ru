@@ -689,11 +689,11 @@ method ``clearOptionsConfig()`` and call it periodically::
         // ...
     }
 
-That's it! You now have all the tools and knowledge needed to easily process
+That's it! You now have all the tools and knowledge needed to process
 options in your code.
 
 .. _Packagist: https://packagist.org/packages/symfony/options-resolver
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: f89867f9d52ea24b87889de7abc7c90d643ca577
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

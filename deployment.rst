@@ -53,7 +53,7 @@ Using Source Control
 
 If you're using source control (e.g. Git or SVN), you can simplify by having
 your live installation also be a copy of your repository. When you're ready to
-upgrade it is as simple as fetching the latest updates from your source control
+upgrade, fetch the latest updates from your source control
 system. When using Git, a common approach is to create a tag for each release
 and check out the appropriate tag on deployment (see `Git Tagging`_).
 
@@ -78,7 +78,7 @@ There are also tools to help ease the pain of deployment. Some of them have been
 specifically tailored to the requirements of Symfony.
 
 `EasyDeployBundle`_
-    A Symfony bundle that adds easy deploy tools to your application.
+    A Symfony bundle that adds deploy tools to your application.
 
 `Deployer`_
     This is another native PHP rewrite of Capistrano, with some ready recipes for
@@ -104,7 +104,7 @@ specifically tailored to the requirements of Symfony.
     Helps you build a native Debian package for your Symfony project.
 
 Basic scripting
-    You can of course use shell, `Ant`_ or any other build tool to script
+    You can use a shell script, `Ant`_ or any other build tool to script
     the deploying of your project.
 
 Common Post-Deployment Tasks
@@ -125,23 +125,34 @@ B) Configure your Environment Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most Symfony applications read their configuration from environment variables.
-While developing locally, you'll usually store these in a ``.env`` file. But on
-production, instead of creating this file, you should set *real* environment variables.
+While developing locally, you'll usually store these in a ``.env`` file. On production,
+you have two options:
 
-How you set environment variables, depends on your setup: they can be set at the
-command line, in your Nginx configuration, or via other methods provided by your
-hosting service.
+1. Create "real" environment variables. How you set environment variables, depends
+   on your setup: they can be set at the command line, in your Nginx configuration,
+   or via other methods provided by your hosting service.
 
-At the very least you need to define the ``APP_ENV=prod`` environment variable
-to run the application in ``prod`` mode, but depending on your application you
-may need to define other env vars too.
+2. Or, create a ``.env`` file just like your local development (see note below)
+
+There is no significant advantage to either of the two options: use whatever is
+most natural in your hosting environment.
+
+.. note::
+
+    If you use the ``.env`` file on production, you may need to move your
+    ``symfony/dotenv`` dependency from ``require-dev`` to ``require`` in ``composer.json``:
+
+    .. code-block:: terminal
+
+        $ composer remove symfony/dotenv
+        $ composer require symfony/dotenv
 
 C) Install/Update your Vendors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Your vendors can be updated before transferring your source code (i.e.
 update the ``vendor/`` directory, then transfer that with your source
-code) or afterwards on the server. Either way, just update your vendors
+code) or afterwards on the server. Either way, update your vendors
 as you normally do:
 
 .. code-block:: terminal
@@ -255,4 +266,4 @@ Learn More
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: 37aef5227532dfd36097d679628b79649bf00cd4
+.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227

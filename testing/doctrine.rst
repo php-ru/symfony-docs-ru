@@ -15,8 +15,8 @@ Functional Testing
 ------------------
 
 If you need to actually execute a query, you will need to boot the kernel
-to get a valid connection. In this case, you'll extend the ``KernelTestCase``,
-which makes all of this quite easy::
+to get a valid connection. In this case, you'll extend the ``KernelTestCase``
+to have the Symfony environment available::
 
     // tests/Repository/ProductRepositoryTest.php
     namespace App\Tests\Repository;
@@ -66,4 +66,4 @@ which makes all of this quite easy::
     }
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

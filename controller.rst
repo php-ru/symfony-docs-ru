@@ -192,7 +192,7 @@ Symfony comes *packed* with a lot of useful objects, called :doc:`services </ser
 These are used for rendering templates, sending emails, querying the database and
 any other "work" you can think of.
 
-If you need a service in a controller, just type-hint an argument with its class
+If you need a service in a controller, type-hint an argument with its class
 (or interface) name. Symfony will automatically pass you the service you need::
 
     use Psr\Log\LoggerInterface
@@ -273,7 +273,7 @@ the argument by its name:
             ))
         ;
 
-You can of course also use normal :ref:`constructor injection <services-constructor-injection>`
+Like with all services, you can also use regular :ref:`constructor injection <services-constructor-injection>`
 in your controllers.
 
 .. versionadded:: 4.1
@@ -358,7 +358,7 @@ The Request object as a Controller Argument
 
 What if you need to read query parameters, grab a request header or get access
 to an uploaded file? All of that information is stored in Symfony's ``Request``
-object. To get it in your controller, just add it as an argument and
+object. To get it in your controller, add it as an argument and
 **type-hint it with the Request class**::
 
     use Symfony\Component\HttpFoundation\Request;
@@ -639,4 +639,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: c95ae396c715a9ac26b2fa818b6807f54c1d5478
+.. revision: 7c0a3a1237d5eb6df96212aaf1b2f170a916c33e

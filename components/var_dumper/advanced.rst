@@ -104,7 +104,7 @@ This component comes with an :class:`Symfony\\Component\\VarDumper\\Dumper\\Html
 for HTML output and a :class:`Symfony\\Component\\VarDumper\\Dumper\\CliDumper`
 for optionally colored command line output.
 
-For example, if you want to dump some ``$variable``, just do::
+For example, if you want to dump some ``$variable``, do::
 
     use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
@@ -255,7 +255,7 @@ similar to PHP's short array notation:
     //   0 => "test"
     // ]
 
-If you would like to use both options, then you can just    combine them by
+If you would like to use both options, then you can combine them by
 using a the logical OR operator ``|``:
 
 .. code-block:: php
@@ -397,4 +397,4 @@ that holds a file name or a URL, you can wrap them in a ``LinkStub`` to tell
     }
 
 .. ready: no
-.. revision: e06565d75f3f73298e8ce95cee58ff3afe61dbc0
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

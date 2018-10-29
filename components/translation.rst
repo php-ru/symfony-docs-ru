@@ -138,7 +138,7 @@ file as the second argument, instead of an array::
 The Translation Process
 -----------------------
 
-To actually translate the message, the Translator uses a simple process:
+To actually translate the message, the Translator uses the following process:
 
 * A catalog of translated messages is loaded from translation resources defined
   for the ``locale`` (e.g. ``fr_FR``). Messages from the
@@ -234,4 +234,4 @@ Learn More
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 .. ready: no
-.. revision: 62992db06696adaf6873860519515c1edb215db4
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

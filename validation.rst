@@ -122,7 +122,7 @@ Using the ``validator`` Service
 
 Next, to actually validate an ``Author`` object, use the ``validate()`` method
 on the ``validator`` service (class :class:`Symfony\\Component\\Validator\\Validator`).
-The job of the ``validator`` is easy: to read the constraints (i.e. rules)
+The job of the ``validator`` is to read the constraints (i.e. rules)
 of a class and verify if the data on the object satisfies those
 constraints. If validation fails, a non-empty list of errors
 (class :class:`Symfony\\Component\\Validator\\ConstraintViolationList`) is
@@ -727,4 +727,4 @@ Learn more
 .. _JSR303 Bean Validation specification: http://jcp.org/en/jsr/detail?id=303
 
 .. ready: no
-.. revision: 89610c75bc8737506214cd13e039d63ab40b679e
+.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227

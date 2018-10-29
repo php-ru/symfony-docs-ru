@@ -32,7 +32,7 @@ Basic Usage
     independent component in any PHP application. Read the :doc:`/service_container`
     article to learn about how to use it in Symfony applications.
 
-You might have a simple class like the following ``Mailer`` that
+You might have a class like the following ``Mailer`` that
 you want to make available as a service::
 
     class Mailer
@@ -316,4 +316,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/dependency-injection
 
 .. ready: no
-.. revision: 62992db06696adaf6873860519515c1edb215db4
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

@@ -248,8 +248,8 @@ issue: the knowledge of the priorities is "hardcoded" in the front controller,
 instead of being in the listeners themselves. For each application, you have
 to remember to set the appropriate priorities. Moreover, the listener method
 names are also exposed here, which means that refactoring our listeners would
-mean changing all the applications that rely on those listeners. Of course,
-there is a solution: use subscribers instead of listeners::
+mean changing all the applications that rely on those listeners. The solution
+to this dilemma is to use subscribers instead of listeners::
 
     $dispatcher = new EventDispatcher();
     $dispatcher->addSubscriber(new Simplex\ContentLengthListener());
@@ -305,4 +305,4 @@ needs. Stop whenever you see fit, and further evolve the code from there.
 .. _`Rack`: http://rack.rubyforge.org/
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

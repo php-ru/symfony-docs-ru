@@ -141,7 +141,7 @@ You can also set the time limit in seconds:
 
     $ php bin/console swiftmailer:spool:send --time-limit=10 --env=prod
 
-Of course you will not want to run this manually in reality. Instead, the
+You will most likely not want to run this command manually in reality. Instead, the
 console command should be triggered by a cron job or scheduled task and run
 at a regular interval.
 
@@ -164,4 +164,4 @@ at a regular interval.
     ``swiftmailer`` service without the ``lazy`` option (see :doc:`/service_container/lazy_services`).
 
 .. ready: no
-.. revision: aee4f137b0d5f09a62f42a3b8d214f45add8bcca
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

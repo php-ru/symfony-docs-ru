@@ -104,8 +104,8 @@ The error controller reads as follows::
         }
     }
 
-Voilà! Clean and customizable error management without efforts. And of course,
-if your controller throws an exception, HttpKernel will handle it nicely.
+Voilà! Clean and customizable error management without efforts. And
+if your ``ErrorController`` throws an exception, HttpKernel will handle it nicely.
 
 In chapter two, we talked about the ``Response::prepare()`` method, which
 ensures that a Response is compliant with the HTTP specification. It is
@@ -115,8 +115,7 @@ client; that's what the ``ResponseListener`` does::
     $dispatcher->addSubscriber(new HttpKernel\EventListener\ResponseListener('UTF-8'));
 
 This one was easy too! Let's take another one: do you want out of the box
-support for streamed responses? Just subscribe to
-``StreamedResponseListener``::
+support for streamed responses? Subscribe to ``StreamedResponseListener``::
 
     $dispatcher->addSubscriber(new HttpKernel\EventListener\StreamedResponseListener());
 
@@ -204,4 +203,4 @@ many websites; a code that has been audited for security issues and that has
 proven to scale well.
 
 .. ready: no
-.. revision: 7918d933b63dddd16248d29575f5aad2fdb52342
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

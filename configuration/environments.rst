@@ -199,7 +199,7 @@ Creating a new Environment
 --------------------------
 
 Since an environment is nothing more than a string that corresponds to a set of
-configuration, creating a new environment is quite easy.
+configuration, you can also create your own environments for specific purposes.
 
 Suppose, for example, that before deployment, you need to benchmark your
 application. One way to benchmark the application is to use near-production
@@ -263,7 +263,7 @@ environment through your browser:
 
     You can achieve this by using a special ``imports`` key:
 
-    .. configuration-block:
+    .. configuration-block::
 
         .. code-block:: yaml
 
@@ -355,7 +355,7 @@ includes the following:
 
 .. note::
 
-    You can easily change the directory location and name. For more information
+    You can change the directory location and name. For more information
     read the article :doc:`/configuration/override_dir_structure`.
 
 Going further
@@ -364,4 +364,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: 27578d2e10a41f5d6b59290afa0388b72bfd7952

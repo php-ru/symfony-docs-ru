@@ -70,7 +70,7 @@ Example::
         ])),
     ]);
 
-    $result = $bus->dispatch(new MyMessage(/* ... */));
+    $bus->dispatch(new MyMessage(/* ... */));
 
 .. note::
 
@@ -160,7 +160,7 @@ transport will be responsible for communicating with your message broker or 3rd 
 Your own Sender
 ~~~~~~~~~~~~~~~
 
-Using the ``SenderInterface``, you can easily create your own message sender.
+Using the ``SenderInterface``, you can create your own message sender.
 Imagine that you already have an ``ImportantAction`` message going through the
 message bus and being handled by a handler. Now, you also want to send this
 message as an email.
@@ -175,8 +175,8 @@ First, create your sender::
 
     class ImportantActionToEmailSender implements SenderInterface
     {
-       private $toEmail;
        private $mailer;
+       private $toEmail;
 
        public function __construct(\Swift_Mailer $mailer, string $toEmail)
        {
@@ -266,4 +266,4 @@ middleware will know it should not route these messages again to a transport.
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: 92b68a4da960acbf7f24436c0f4c433d9401515e
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

@@ -12,9 +12,9 @@ entity manager that connects to another database might handle the rest.
 
 .. note::
 
-    Using multiple entity managers is pretty easy, but more advanced and not
-    usually required. Be sure you actually need multiple entity managers before
-    adding in this layer of complexity.
+    Using multiple entity managers is not complicated to configure, but more
+    advanced and not usually required. Be sure you actually need multiple
+    entity managers before adding in this layer of complexity.
 
 .. caution::
 
@@ -272,4 +272,4 @@ The same applies to repository calls::
     }
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

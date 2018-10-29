@@ -44,7 +44,7 @@ in your browser, these notices are shown in the web dev toolbar:
    :align: center
    :class: with-browser
 
-Of course ultimately, you want to stop using the deprecated functionality.
+Ultimately, you should aim to stop using the deprecated functionality.
 Sometimes, this is easy: the warning might tell you exactly what to change.
 
 But other times, the warning might be unclear: a setting somewhere might
@@ -163,4 +163,4 @@ This takes some work, but is optional. For details, see :ref:`upgrade-to-flex`.
 .. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: 202c9396b6b3479763fa904a4517dabfd96a3694
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

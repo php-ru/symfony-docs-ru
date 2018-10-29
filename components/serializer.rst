@@ -8,8 +8,7 @@ The Serializer Component
     The Serializer component is meant to be used to turn objects into a
     specific format (XML, JSON, YAML, ...) and the other way around.
 
-In order to do so, the Serializer component follows the following
-simple schema.
+In order to do so, the Serializer component follows the following schema.
 
 .. image:: /_images/components/serializer/serializer_workflow.png
 
@@ -44,9 +43,9 @@ Usage
     component in any PHP application. Read the :doc:`/serializer` article to
     learn about how to use it in Symfony applications.
 
-Using the Serializer component is really simple. You just need to set up
-the :class:`Symfony\\Component\\Serializer\\Serializer` specifying
-which encoders and normalizer are going to be available::
+To use the Serializer component, set up the
+:class:`Symfony\\Component\\Serializer\\Serializer` specifying which encoders
+and normalizer are going to be available::
 
     use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Encoder\XmlEncoder;
@@ -1357,4 +1356,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: ee8fa8e6c678e8ee3a712c9c37e59ea9d1991ae1
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

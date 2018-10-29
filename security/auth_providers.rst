@@ -179,7 +179,7 @@ A lot of authentication modules, like ``auth_kerb`` for Apache, provide the user
 using the ``REMOTE_USER`` environment variable. This variable can be trusted by
 the application since the authentication happened before the request reached it.
 
-To configure Symfony using the ``REMOTE_USER`` environment variable, simply enable the
+To configure Symfony using the ``REMOTE_USER`` environment variable, enable the
 corresponding firewall in your security configuration:
 
 .. configuration-block::
@@ -234,4 +234,4 @@ key in the ``remote_user`` firewall configuration.
 .. _`HTTP Basic authentication`: https://en.wikipedia.org/wiki/Basic_access_authentication
 
 .. ready: no
-.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

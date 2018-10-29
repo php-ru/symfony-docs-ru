@@ -172,6 +172,11 @@ is the item's label and the array value is the item's value::
         'choices' => array('In Stock' => true, 'Out of Stock' => false),
     ));
 
+If there are choice values that are not scalar or the stringified
+representation is not unique Symfony will use incrementing integers
+as values. When the form gets submitted the correct values with the
+correct types will be assigned to the model.
+
 .. include:: /reference/forms/types/options/choice_attr.rst.inc
 
 .. _reference-form-choice-label:
@@ -320,4 +325,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: 41355ed57827f2e5ab66f39c26fe722b9b0c2e20

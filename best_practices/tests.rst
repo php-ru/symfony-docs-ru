@@ -27,8 +27,8 @@ functional tests, you can quickly spot any big errors before you deploy them:
     Define a functional test that at least checks if your application pages
     are successfully loading.
 
-A functional test like this is simple to implement thanks to
-:ref:`PHPUnit data providers <testing-data-providers>`::
+:ref:`PHPUnit data providers <testing-data-providers>` help you implement
+functional tests::
 
     // tests/ApplicationAvailabilityFunctionalTest.php
     namespace App\Tests;
@@ -124,4 +124,4 @@ your test fixtures using `Faker`_ and `Alice`_.
 .. _`Alice`: https://github.com/nelmio/alice
 
 .. ready: no
-.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a
+.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1

@@ -141,6 +141,7 @@ Configuration
   * `cookie_lifetime`_
   * `cookie_path`_
   * `cookie_secure`_
+  * :ref:`enabled <reference-session-enabled>`
   * `gc_divisor`_
   * `gc_maxlifetime`_
   * `gc_probability`_
@@ -910,6 +911,49 @@ session persists.
 
 Starting in Symfony 3.4, session data is *only* written when the session data has
 changed. Previously, you needed to set this option to avoid that behavior.
+
+.. _reference-session-enabled:
+
+enabled
+.......
+
+**type**: ``boolean`` **default**: ``true``
+
+Whether to enable the session support in the framework.
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # config/packages/framework.yaml
+        framework:
+            session:
+                enabled: true
+
+    .. code-block:: xml
+
+        <!-- config/packages/framework.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:framework="http://symfony.com/schema/dic/symfony"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services
+                http://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+            <framework:config>
+                <framework:session enabled="true" />
+            </framework:config>
+        </container>
+
+    .. code-block:: php
+
+        // config/packages/framework.php
+        $container->loadFromExtension('framework', array(
+            'session' => array(
+                'enabled' => true,
+            ),
+        ));
 
 assets
 ~~~~~~
@@ -2068,4 +2112,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`error_reporting PHP option`: https://secure.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting
 
 .. ready: no
-.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e
+.. revision: 90c2b622c54b187111ec2359aa6d0241a06575ce

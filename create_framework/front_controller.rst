@@ -61,7 +61,7 @@ which name is exposed to the end user via the URL
 (``http://127.0.0.1:4321/bye.php``): there is a direct mapping between the PHP
 script name and the client URL. This is because the dispatching of the request
 is done by the web server directly. It might be a good idea to move this
-dispatching to our code for better flexibility. This can be easily achieved by
+dispatching to our code for better flexibility. This can be achieved by
 routing all client requests to a single PHP script.
 
 .. tip::
@@ -231,4 +231,4 @@ variable.
     extracting the URL map to a configuration file.
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

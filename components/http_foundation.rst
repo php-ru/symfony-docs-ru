@@ -284,7 +284,7 @@ this complexity and defines some methods for the most common tasks::
 Accessing ``Accept-*`` Headers Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can easily access basic data extracted from ``Accept-*`` headers
+You can access basic data extracted from ``Accept-*`` headers
 by using the following methods:
 
 :method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableContentTypes`
@@ -415,7 +415,7 @@ incompatibility with the HTTP specification (e.g. a wrong ``Content-Type`` heade
 
     $response->prepare($request);
 
-Sending the response to the client is then as simple as calling
+Sending the response to the client is done by calling the method
 :method:`Symfony\\Component\\HttpFoundation\\Response::send`::
 
     $response->send();
@@ -545,8 +545,8 @@ Serving Files
 ~~~~~~~~~~~~~
 
 When sending a file, you must add a ``Content-Disposition`` header to your
-response. While creating this header for basic file downloads is easy, using
-non-ASCII filenames is more involving. The
+response. While creating this header for basic file downloads is straightforward,
+using non-ASCII filenames is more involving. The
 :method:`Symfony\\Component\\HttpFoundation\\ResponseHeaderBag::makeDisposition`
 abstracts the hard work behind a simple API::
 
@@ -699,4 +699,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: bb1b55a64f64c7455a165e0d5ddda3e5189ba2f5
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

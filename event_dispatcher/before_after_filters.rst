@@ -87,7 +87,7 @@ implement it::
         // ...
     }
 
-A controller that implements this interface simply looks like this::
+A controller that implements this interface looks like this::
 
     namespace App\Controller;
 
@@ -181,7 +181,7 @@ all responses that have passed this token authentication.
 
 Another core Symfony event - called ``kernel.response`` (aka ``KernelEvents::RESPONSE``) -
 is notified on every request, but after the controller returns a Response object.
-Creating an "after" listener is as easy as creating a listener class and registering
+To create an "after" listener, create a listener class and register
 it as a service on this event.
 
 For example, take the ``TokenSubscriber`` from the previous example and first
@@ -240,4 +240,4 @@ And by storing a value in the request's "attributes" bag, the ``onKernelResponse
 method knows to add the extra header. Have fun!
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

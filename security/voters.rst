@@ -220,7 +220,7 @@ with ``ROLE_SUPER_ADMIN``::
     {
         // ...
 
-        private $decisionManager;
+        private $security;
 
         public function __construct(Security $security)
         {
@@ -312,4 +312,4 @@ security configuration:
         ));
 
 .. ready: no
-.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6
+.. revision: 8d877ca8351aec1c326a74a63a877e7a69e631c1

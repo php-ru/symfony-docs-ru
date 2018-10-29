@@ -9,7 +9,7 @@ and store their data on the properties of that object. This is exactly what
 you've seen so far in this article with the ``Task`` class.
 
 But sometimes, you may just want to use a form without a class, and get back
-an array of the submitted data. This is actually really easy::
+an array of the submitted data. The ``getData()`` method allows you to do exactly that::
 
     // make sure you've imported the Request namespace above the class
     use Symfony\Component\HttpFoundation\Request;
@@ -112,4 +112,4 @@ but here's a short example::
     constraint, unless you :doc:`disable validation </form/disabling_validation>`.
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

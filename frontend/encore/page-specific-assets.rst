@@ -21,7 +21,7 @@ a new ``checkout`` entry:
     +     .addEntry('checkout', './assets/js/checkout.js')
     ;
 
-Inside ``checkout.js``, add or require the JavaScript and CSS you need. Then, just
+Inside ``checkout.js``, add or require the JavaScript and CSS you need. Then,
 include a ``script`` tag for ``checkout.js`` on the checkout page (and a ``link``
 tag for ``checkout.css`` if you import any CSS).
 
@@ -45,4 +45,4 @@ both ``app.js`` and ``checkout.js`` on the checkout page.
     the Webpack bootstrap logic and any shared modules.
 
 .. ready: no
-.. revision: 9c657523b3f7a1a5536cde26e3a01c74a9faad0f
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

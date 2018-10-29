@@ -155,7 +155,7 @@ corresponding output file:
         "...": "..."
     }
 
-In those cases, use the 
+In those cases, use the
 :class:`Symfony\\Component\\Asset\\VersionStrategy\\JsonManifestVersionStrategy`::
 
     use Symfony\Component\Asset\Package;
@@ -282,8 +282,8 @@ You can also pass a schema-agnostic URL::
     // result: //static.example.com/images/logo.png?v1
 
 This is useful because assets will automatically be requested via HTTPS if
-a visitor is viewing your site in https. Just make sure that your CDN host
-supports https.
+a visitor is viewing your site in https. If you want to use this, make sure
+that your CDN host supports HTTPS.
 
 In case you serve assets from more than one domain to improve application
 performance, pass an array of URLs as the first argument to the ``UrlPackage``
@@ -379,4 +379,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 5287c077eb87a63e75164505c33902fb84b7a493
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

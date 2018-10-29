@@ -41,8 +41,9 @@ use the logger in a controller, add a new argument type-hinted with ``LoggerInte
         }
     }
 
-That's it! The new log message will be written to ``var/log/dev.log``. Of course, this
-can be configured by updating one of the config files added by the recipe.
+That's it! The new log message will be written to ``var/log/dev.log``. The log
+file path or even a different method of logging can be configured by updating
+one of the config files added by the recipe.
 
 Services & Autowiring
 ---------------------
@@ -158,7 +159,7 @@ Twig Extension & Autoconfiguration
 
 Thanks to Symfony's service handling, you can *extend* Symfony in many ways, like
 by creating an event subscriber or a security voter for complex authorization
-rules. Let's add a new filter to Twig called ``greet``. How? Just create a class
+rules. Let's add a new filter to Twig called ``greet``. How? Create a class
 that extends ``AbstractExtension``::
 
     // src/Twig/GreetExtension.php
@@ -202,7 +203,7 @@ After creating just *one* file, you can use this immediately:
 
 How does this work? Symfony notices that your class extends ``AbstractExtension``
 and so *automatically* registers it as a Twig extension. This is called autoconfiguration,
-and it works for *many* many things. Just create a class and then extend a base class
+and it works for *many* many things. Create a class and then extend a base class
 (or implement an interface). Symfony takes care of the rest.
 
 Blazing Speed: The Cached Container
@@ -340,4 +341,4 @@ to the official :doc:`/index` and pick any guide you want.
 .. _`Monolog`: https://github.com/Seldaek/monolog
 
 .. ready: no
-.. revision: e4f50dc94a6d9cef25173acc3f8782cedd3b43ef
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

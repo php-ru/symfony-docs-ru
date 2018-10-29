@@ -13,7 +13,7 @@ class.
 Generating the Login Form
 -------------------------
 
-Creating a powerful login form is easy thanks to the ``make:auth`` command from
+Creating a powerful login form can be bootstrapped with the ``make:auth`` command from
 `MakerBundle`_. Depending on your setup, you may be asked different questions
 and your generated code may be slightly different:
 
@@ -318,4 +318,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://github.com/symfony/maker-bundle
 
 .. ready: no
-.. revision: 3ed0548081bf3747293a844d8e0837d55f5cc806
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

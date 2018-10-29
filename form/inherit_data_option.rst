@@ -115,7 +115,7 @@ The location form has an interesting option set, namely ``inherit_data``. This
 option lets the form inherit its data from its parent form. If embedded in
 the company form, the fields of the location form will access the properties of
 the ``Company`` instance. If embedded in the customer form, the fields will
-access the properties of the ``Customer`` instance instead. Easy, eh?
+access the properties of the ``Customer`` instance instead. Convenient, eh?
 
 .. note::
 
@@ -161,4 +161,4 @@ location form that you can reuse wherever you need it.
     Forms with the ``inherit_data`` option set cannot have ``*_SET_DATA`` event listeners.
 
 .. ready: no
-.. revision: aee4f137b0d5f09a62f42a3b8d214f45add8bcca
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

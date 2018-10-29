@@ -540,7 +540,7 @@ See :doc:`/security/access_control`.
 Securing Controllers and other Code
 ...................................
 
-You can easily deny access from inside a controller::
+You can deny access from inside a controller::
 
     // src/Controller/AdminController.php
     // ...
@@ -1012,4 +1012,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://github.com/symfony/maker-bundle
 
 .. ready: no
-.. revision: 9cdd4ad3cf92b9850152a0a1932307c0276adcfd
+.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227

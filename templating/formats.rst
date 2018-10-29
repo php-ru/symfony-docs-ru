@@ -9,7 +9,7 @@ most cases you'll use templates to render HTML content, a template can just
 as easily generate JavaScript, CSS, XML or any other format you can dream of.
 
 For example, the same "resource" is often rendered in several formats.
-To render an article index page in XML, simply include the format in the
+To render an article index page in XML, include the format in the
 template name:
 
 * *XML template name*: ``article/show.xml.twig``
@@ -81,4 +81,4 @@ format:
 .. _Request Format Listener: http://symfony.com/doc/current/bundles/FOSRestBundle/3-listener-support.html#format-listener
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

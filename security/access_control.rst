@@ -318,7 +318,7 @@ For a list of the other functions and variables, see
 Forcing a Channel (http, https)
 -------------------------------
 
-You can also require a user to access a URL via SSL; just use the
+You can also require a user to access a URL via SSL; use the
 ``requires_channel`` argument in any ``access_control`` entries. If this
 ``access_control`` is matched and the request is using the ``http`` channel,
 the user will be redirected to ``https``:
@@ -363,4 +363,4 @@ the user will be redirected to ``https``:
         ));
 
 .. ready: no
-.. revision: 066794f922a04d43c5007c1da479efe3f5400936
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
