@@ -821,7 +821,7 @@ As a best practice, you should only create *private* services, which will happen
 automatically. And also, you should *not* use the ``$container->get()`` method to
 fetch public services.
 
-But, if you *do* need to make a service public, just override the ``public`` setting:
+But, if you *do* need to make a service public, override the ``public`` setting:
 
 .. configuration-block::
 
@@ -1090,4 +1090,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony-fundamentals
 
 .. ready: no
-.. revision: 71f96f1c0dfb4e2f70da2e4ffb3305dd136674f0
+.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14

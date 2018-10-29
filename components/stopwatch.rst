@@ -23,7 +23,7 @@ Usage
 
 The Stopwatch component provides an easy and consistent way to measure execution
 time of certain parts of code so that you don't constantly have to parse
-microtime by yourself. Instead, use the simple
+microtime by yourself. Instead, use the
 :class:`Symfony\\Component\\Stopwatch\\Stopwatch` class::
 
     use Symfony\Component\Stopwatch\Stopwatch;
@@ -120,4 +120,4 @@ method and specifying the id of the section to be reopened::
 .. _Packagist: https://packagist.org/packages/symfony/stopwatch
 
 .. ready: no
-.. revision: f89867f9d52ea24b87889de7abc7c90d643ca577
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

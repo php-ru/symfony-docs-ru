@@ -33,7 +33,7 @@ method::
         // ...
     }
 
-Now, just inject the ``request_stack``, which behaves like any normal service.
+Now, inject the ``request_stack``, which behaves like any normal service.
 If you're using the :ref:`default services.yaml configuration <service-container-services-load-example>`,
 this will happen automatically via autowiring.
 
@@ -44,4 +44,4 @@ this will happen automatically via autowiring.
     details.
 
 .. ready: no
-.. revision: 9e5cd17b075e9cdc659ace8acac065c78f0c2d4c
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

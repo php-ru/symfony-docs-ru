@@ -375,7 +375,7 @@ will share identical locators amongst all the services referencing them::
             'logger' => new Reference('logger'),
         );
 
-        $myService->addArgument(ServiceLocatorTagPass::register($locateableServices));
+        $myService->addArgument(ServiceLocatorTagPass::register($container, $locateableServices));
     }
 
 .. _`Command pattern`: https://en.wikipedia.org/wiki/Command_pattern
@@ -477,4 +477,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: 5ae6670108a26cd6b2b6ed67defba2321793d0c2
+.. revision: 568852aca4a714408dde2aaaf0937acc42700a4c

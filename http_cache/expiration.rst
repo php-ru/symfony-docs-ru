@@ -14,8 +14,8 @@ HTTP headers: ``Expires`` or ``Cache-Control``.
 
 .. sidebar:: Expiration and Validation
 
-    You can of course use both validation and expiration within the same ``Response``.
-    As expiration wins over validation, you can easily benefit from the best of
+    You can use both validation and expiration within the same ``Response``.
+    As expiration wins over validation, you can benefit from the best of
     both worlds. In other words, by using both expiration and validation, you
     can instruct the cache to serve the cached content, while checking back
     at some interval (the expiration) to verify that the content is still valid.
@@ -96,4 +96,4 @@ servers should not send ``Expires`` dates more than one year in the future."
 .. _`RFC 7234 - Caching`: https://tools.ietf.org/html/rfc7234#section-4.2.1
 
 .. ready: no
-.. revision: a439f6351a4e1a14d84e9076029a3b963ffe3995
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

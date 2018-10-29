@@ -75,7 +75,7 @@ Invokable Controllers
 ---------------------
 
 If your controller implements the ``__invoke()`` method - popular with the
-Action-Domain-Response (ADR) pattern, you can simply refer to the service id
+Action-Domain-Response (ADR) pattern, you can refer to the service id
 without the method (``App\Controller\HelloController`` for example).
 
 Alternatives to base Controller Methods
@@ -137,4 +137,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: c34138114d78d0ad8f5dcf0b15de68082e5a6864
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

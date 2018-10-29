@@ -120,7 +120,7 @@ In most cases it is easier to extend from
 
 The sample loader below supports loading routing resources with a type of
 ``extra``. The type name should not clash with other loaders that might
-support the same type of resource. Just make up a name specific to what
+support the same type of resource. Make up any name specific to what
 you do. The resource name itself is not actually used in the example::
 
     // src/Routing/ExtraLoader.php
@@ -287,7 +287,7 @@ can also make use of the provided resolver, an instance of
 :class:`Symfony\\Component\\Config\\Loader\\LoaderResolver`, to load secondary
 routing resources.
 
-Of course you still need to implement
+You still need to implement
 :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::supports`
 and :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::load`.
 Whenever you want to load another resource - for instance a YAML routing
@@ -342,4 +342,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

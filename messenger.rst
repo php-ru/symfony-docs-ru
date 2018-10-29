@@ -49,7 +49,7 @@ message handler. It's a class with an ``__invoke`` method::
     // src/MessageHandler/MyMessageHandler.php
     namespace App\MessageHandler;
 
-    use Symfony\Component\Messenger\Handler;
+    use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
     class MyMessageHandler implements MessageHandlerInterface
     {
@@ -939,4 +939,4 @@ will give you access to the following services:
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: 1c413880c3f5d9abd78f96b4b8ad4013ad1d03ed
+.. revision: d303258fd69fb930689a64df6b6e1885153eebf4

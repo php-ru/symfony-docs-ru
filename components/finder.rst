@@ -192,6 +192,14 @@ You can also define your own sorting algorithm with ``sort()`` method::
         return strcmp($a->getRealPath(), $b->getRealPath());
     });
 
+You can reverse any sorting by using the ``reverseSorting()`` method::
+
+    // results will be sorted "Z to A" instead of the default "A to Z"
+    $finder->sortByName()->reverseSorting();
+
+.. versionadded:: 4.2
+    The ``reverseSorting()`` method was introduced in Symfony 4.2.
+
 .. note::
 
     Notice that the ``sort*`` methods need to get all matching elements to do
@@ -413,4 +421,4 @@ The contents of returned files can be read with
 .. _`natural sort order`: https://en.wikipedia.org/wiki/Natural_sort_order
 
 .. ready: no
-.. revision: 34e2cd2579f2d3adae1e4f78437944af0e1c9a0a
+.. revision: 7c6922c1de95566322678e22bf263a0b72d4ad6b

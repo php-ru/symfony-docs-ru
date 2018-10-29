@@ -258,6 +258,11 @@ paths
 
 **type**: ``array`` **default**: ``null``
 
+.. versionadded:: 4.2
+    Using the ``src/Resources/views/`` directory to store templates was
+    deprecated in Symfony 4.2. Use instead the directory defined in the
+    ``default_path`` option (which is ``templates/`` by default).
+
 This option defines the directories where Symfony will look for Twig templates
 in addition to the default locations. Symfony looks for the templates in the
 following order:
@@ -369,4 +374,4 @@ and the non-existing values are replaced by ``null``.
 .. _`the optimizer extension`: https://twig.symfony.com/doc/2.x/api.html#optimizer-extension
 
 .. ready: no
-.. revision: 7918d933b63dddd16248d29575f5aad2fdb52342
+.. revision: 4665f42069758da8c27c4c7f434345a379cd1a7d

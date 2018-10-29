@@ -85,7 +85,7 @@ yourself by referencing common configuration bits.
 Using the Symfony YAML Component
 --------------------------------
 
-The Symfony Yaml component is very simple and consists of two main classes:
+The Symfony Yaml component consists of two main classes:
 one parses YAML strings (:class:`Symfony\\Component\\Yaml\\Parser`), and the
 other dumps a PHP array to a YAML string
 (:class:`Symfony\\Component\\Yaml\\Dumper`).
@@ -454,4 +454,4 @@ Learn More
 .. _ISO-8601: http://www.iso.org/iso/iso8601
 
 .. ready: no
-.. revision: 23f64654b70013032e7c4d8d816bec6ec68f8d2c
+.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14

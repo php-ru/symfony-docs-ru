@@ -155,7 +155,7 @@ corresponding output file:
         "...": "..."
     }
 
-In those cases, use the 
+In those cases, use the
 :class:`Symfony\\Component\\Asset\\VersionStrategy\\JsonManifestVersionStrategy`::
 
     use Symfony\Component\Asset\Package;
@@ -282,8 +282,8 @@ You can also pass a schema-agnostic URL::
     // result: //static.example.com/images/logo.png?v1
 
 This is useful because assets will automatically be requested via HTTPS if
-a visitor is viewing your site in https. Just make sure that your CDN host
-supports https.
+a visitor is viewing your site in https. If you want to use this, make sure
+that your CDN host supports HTTPS.
 
 In case you serve assets from more than one domain to improve application
 performance, pass an array of URLs as the first argument to the ``UrlPackage``
@@ -372,6 +372,35 @@ document inside a template::
     echo $packages->getUrl('resume.pdf', 'doc');
     // result: /somewhere/deep/for/documents/resume.pdf?v1
 
+Local Files and Other Protocols
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 4.2
+    The support for other protocols was introduced in Symfony 4.2.
+
+In addition to HTTP this component supports other protocols (such as ``file://``
+and ``ftp://``). This allows for example to serve local files in order to
+improve performance::
+
+    use Symfony\Component\Asset\UrlPackage;
+    // ...
+
+    $localPackage = new UrlPackage(
+        'file:///path/to/images/',
+        new EmptyVersionStrategy()
+    );
+
+    $ftpPackage = new UrlPackage(
+        'ftp://example.com/images/',
+        new EmptyVersionStrategy()
+    );
+
+    echo $localPackage->getUrl('/logo.png');
+    // result: file:///path/to/images/logo.png
+
+    echo $ftpPackage->getUrl('/logo.png');
+    // result: ftp://example.com/images/logo.png
+
 Learn more
 ----------
 
@@ -379,4 +408,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 5287c077eb87a63e75164505c33902fb84b7a493
+.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14

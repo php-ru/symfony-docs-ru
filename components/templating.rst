@@ -144,9 +144,9 @@ escaper using the
 Helpers
 -------
 
-The Templating component can be easily extended via helpers. Helpers are PHP objects that
-provide features useful in a template context. The component has
-one built-in helper:
+The Templating component can be extended via helpers. Helpers are PHP objects
+that provide features useful in a template context. The component has one
+built-in helper:
 
 * :doc:`/components/templating/slotshelper`
 
@@ -219,4 +219,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/templating
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

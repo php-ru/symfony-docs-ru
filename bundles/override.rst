@@ -68,7 +68,7 @@ the routes from any bundle, then they must be manually imported from somewhere
 in your application (e.g. ``config/routes.yaml``).
 
 The easiest way to "override" a bundle's routing is to never import it at
-all. Instead of importing a third-party bundle's routing, simply copy
+all. Instead of importing a third-party bundle's routing, copy
 that routing file into your application, modify it, and import it instead.
 
 Controllers
@@ -183,4 +183,4 @@ create a``<your-project>/translations/FOSUserBundle.es.yml`` file.
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 2ba4c73705d00dd8391af9b9de1dbcc7db56cb2b
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

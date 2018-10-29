@@ -124,7 +124,7 @@ According to the above code, this config will live in one or multiple files
 stored in ``config/api/`` and ``config/api/ENVIRONMENT_NAME/`` directories.
 
 The new configuration files can be created from scratch when you load just a few
-bundles, because it will be very simple. Otherwise, duplicate the existing
+bundles, because it will be small. Otherwise, duplicate the existing
 config files in ``config/packages/`` or better, import them and override the
 needed options.
 
@@ -225,4 +225,4 @@ the default ``src/`` directory:
         └─ index.php
 
 .. ready: no
-.. revision: 0c4b6881f03e9b4e5e6b65a9fbb7a922de1fdd22
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

@@ -70,6 +70,9 @@ regions
 
 **type**: ``int`` **default**: ``\DateTimeZone::ALL``
 
+.. versionadded:: 4.2
+    This option was deprecated in Symfony 4.2.
+
 The available regions in the timezone choice list. For example: ``DateTimeZone::AMERICA | DateTimeZone::EUROPE``
 
 Overridden Options
@@ -140,4 +143,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: 8ac17be5a7acebdf0ac0f20c8e5012188267ee01

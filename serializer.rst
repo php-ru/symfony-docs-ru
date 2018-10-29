@@ -216,7 +216,9 @@ take a look at how this bundle works.
 .. toctree::
     :maxdepth: 1
 
+    serializer/normalizers
     serializer/custom_encoders
+    serializer/custom_normalizer
 
 .. _`APCu`: https://github.com/krakjoe/apcu
 .. _`ApiPlatform`: https://github.com/api-platform/core
@@ -225,4 +227,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: 48e887290c4dd4ab2e6dff3cd476a81f2ad475a9
+.. revision: 46b6c9fd043ee9554f750fff53583a88117769ef

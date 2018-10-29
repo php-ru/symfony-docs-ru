@@ -59,7 +59,7 @@ My App Lives under a Subdirectory
 ---------------------------------
 
 If your app does not live at the root of your web server (i.e. it lives under a subdirectory,
-like ``/myAppSubdir``), you just need to configure that when calling ``Encore.setPublicPrefix()``:
+like ``/myAppSubdir``), you need to configure that when calling ``Encore.setPublicPrefix()``:
 
 .. code-block:: diff
 
@@ -136,4 +136,4 @@ this via:
 .. _`rsync`: https://rsync.samba.org/
 
 .. ready: no
-.. revision: 3cf74d41f3bc5d71acbadabf4251efa0d019b88e
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

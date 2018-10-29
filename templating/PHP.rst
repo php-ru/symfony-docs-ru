@@ -246,7 +246,7 @@ That's very useful when working with Ajax, or when the embedded template needs
 some variable not available in the main template.
 
 If you create a ``fancy`` action, and want to include it into the
-``index.html.php`` template, simply use the following code:
+``index.html.php`` template, use the following code:
 
 .. code-block:: html+php
 
@@ -271,7 +271,7 @@ you more about those.
 Using Template Helpers
 ----------------------
 
-The Symfony templating system can be easily extended via helpers. Helpers are
+The Symfony templating system can be extended via helpers. Helpers are
 PHP objects that provide features useful in a template context. ``actions`` and
 ``slots`` are two of the built-in Symfony helpers.
 
@@ -280,7 +280,7 @@ Creating Links between Pages
 
 Speaking of web applications, creating links between pages is a must. Instead
 of hardcoding URLs in templates, the ``router`` helper knows how to generate
-URLs based on the routing configuration. That way, all your URLs can be easily
+URLs based on the routing configuration. That way, all your URLs can be
 updated by changing the configuration:
 
 .. code-block:: html+php
@@ -305,7 +305,7 @@ Using Assets: Images, JavaScripts and Stylesheets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What would the Internet be without images, JavaScripts, and stylesheets?
-Symfony provides the ``assets`` tag to deal with them easily:
+Symfony provides the ``assets`` tag to deal with them:
 
 .. code-block:: html+php
 
@@ -566,4 +566,4 @@ original template:
 .. _`@Template`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

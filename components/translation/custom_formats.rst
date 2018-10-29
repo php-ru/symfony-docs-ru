@@ -5,7 +5,7 @@ Adding Custom Format Support
 ============================
 
 Sometimes, you need to deal with custom formats for translation files. The
-Translation component is flexible enough to support this. Just create a
+Translation component is flexible enough to support this. Create a
 loader (to load translations) and, optionally, a dumper (to dump translations).
 
 Imagine that you have a custom format where translation messages are defined
@@ -125,4 +125,4 @@ YAML file are dumped into a text file with the custom format::
     $dumper->dump($translations, array('path' => __DIR__.'/dumps'));
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

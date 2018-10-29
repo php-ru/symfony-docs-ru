@@ -6,7 +6,7 @@
 How to Configure Monolog to Exclude Specific HTTP Codes from the Log
 ====================================================================
 
-..versionadded:: 4.1
+.. versionadded:: 4.1
     The ability to exclude log messages based on their status codes was
     introduced in Symfony 4.1 and MonologBundle 3.3.
 
@@ -65,4 +65,4 @@ logging these HTTP codes based on the MonologBundle configuration:
         ));
 
 .. ready: no
-.. revision: 30cc7d42abdb9aeaa176689d3536237422304fe9
+.. revision: 8450cf198601c9f99730d1e221b9fdc630d6f4a9

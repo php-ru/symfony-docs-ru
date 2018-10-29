@@ -96,8 +96,8 @@ To help explain this process, this document looks at each step of the process
 and talks about how one specific implementation of the HttpKernel - the Symfony
 Framework - works.
 
-Initially, using the :class:`Symfony\\Component\\HttpKernel\\HttpKernel`
-is really simple and involves creating an
+Initially, using the :class:`Symfony\\Component\\HttpKernel\\HttpKernel` does
+not take many steps. You create an
 :doc:`event dispatcher </components/event_dispatcher>` and a
 :ref:`controller and argument resolver <component-http-kernel-resolve-controller>`
 (explained below). To complete your working kernel, you'll add more event
@@ -361,7 +361,7 @@ of arguments that should be passed when executing that callable.
 5) Calling the Controller
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The next step is simple! ``HttpKernel::handle()`` executes the controller.
+The next step ``HttpKernel::handle()`` does is executing the controller.
 
 The job of the controller is to build the response for the given resource.
 This could be an HTML page, a JSON string or anything else. Unlike every
@@ -770,4 +770,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: 62992db06696adaf6873860519515c1edb215db4
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

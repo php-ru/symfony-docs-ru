@@ -137,8 +137,9 @@ use them later to :ref:`generate URLs <routing-generate>`.
 .. sidebar:: Routing in Other Formats
 
     The ``@Route`` above each method is called an *annotation*. If you'd rather
-    configure your routes in YAML, XML or PHP, that's no problem! Just create a
-    new routing file (e.g. ``routes.xml``) and Symfony will automatically use it.
+    configure your routes in YAML, XML or PHP, that's no problem! Create a new
+    routing file (e.g. ``routes.xml``) in the ``config/`` directory and Symfony
+    will automatically use it.
 
 .. _i18n-routing:
 
@@ -239,6 +240,35 @@ with a locale. This can be done by defining a different prefix for each locale
             prefix:
                 en: '' # don't prefix URLs for English, the default locale
                 nl: '/nl'
+
+    .. code-block:: xml
+
+        <!-- config/routes/annotations.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <routes xmlns="http://symfony.com/schema/routing"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/routing
+                http://symfony.com/schema/routing/routing-1.0.xsd">
+
+            <import resource="../src/Controller/" type="annotation">
+                <!-- don't prefix URLs for English, the default locale -->
+                <prefix locale="en"></prefix>
+                <prefix locale="nl">/nl</prefix>
+            </import>
+        </routes>
+
+    .. code-block:: php
+
+        // config/routes/annotations.php
+        use Symfony\Component\Routing\RouteCollection;
+
+        $routes = $loader->import('../src/Controller/', 'annotation');
+
+        // don't prefix URLs for English, the default locale
+        $app->addPrefix('/', array('_locale' => 'en'));
+        $app->addPrefix('/nl', array('_locale' => 'nl'));
+
+        return $routes;
 
 .. _routing-requirements:
 
@@ -769,12 +799,12 @@ Route path  If the requested URL is ``/foo``          If the requested URL is ``
 Controller Naming Pattern
 -------------------------
 
-The ``controller`` value in your routes has a very simple format ``CONTROLLER_CLASS::METHOD``.
+The ``controller`` value in your routes has the format ``CONTROLLER_CLASS::METHOD``.
 
 .. tip::
 
     To refer to an action that is implemented as the ``__invoke()`` method of a controller class,
-    you do not have to pass the method name, but can just use the fully qualified class name (e.g.
+    you do not have to pass the method name, you can also use the fully qualified class name (e.g.
     ``App\Controller\BlogController``).
 
 .. index::
@@ -790,7 +820,7 @@ system: mapping the URL to a controller and also a route back to a URL.
 
 To generate a URL, you need to specify the name of the route (e.g. ``blog_show``)
 and any wildcards (e.g. ``slug = my-blog-post``) used in the path for that
-route. With this information, any URL can easily be generated::
+route. With this information, an URL can be generated in a controller::
 
     class MainController extends AbstractController
     {
@@ -943,4 +973,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: e56793b28d127cf38e6443c64df4f5f23085d13b
+.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14

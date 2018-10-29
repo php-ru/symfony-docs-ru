@@ -305,9 +305,8 @@ is_granted
     **type**: ``string``
 
 Returns ``true`` if the current user has the given role. If several roles are
-passed in an array, returns ``true`` if the user has all of them or at least one
-of them, depending on the value of this option:
-:ref:`security.access_decision_manager.strategy <security-voters-change-strategy>`.
+passed in an array, ``true`` is returned if the user has at least one of
+them.
 
 Optionally, an object can be passed to be used by the voter. More information
 can be found in :ref:`security-template`.
@@ -612,7 +611,7 @@ format_file
 
 Generates the file path inside an ``<a>`` element. If the path is inside
 the kernel root directory, the kernel root directory path is replaced by
-``kernel.root_dir`` (showing the full path in a tooltip on hover).
+``kernel.project_dir`` (showing the full path in a tooltip on hover).
 
 format_file_from_text
 ~~~~~~~~~~~~~~~~~~~~~
@@ -808,4 +807,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: d3c31d78aa1099760f7f71dd273d92b5889acd16
+.. revision: 568852aca4a714408dde2aaaf0937acc42700a4c

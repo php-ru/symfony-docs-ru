@@ -179,9 +179,9 @@ as the third argument to the ``validate()`` method::
 If no groups are specified, all constraints that belong to the group ``Default``
 will be applied.
 
-Of course, you'll usually work with validation indirectly through the form
+In a full stack Symfony project, you'll usually work with validation indirectly through the form
 library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: 0195c2205a92dda93a2108485d335959680461fd
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

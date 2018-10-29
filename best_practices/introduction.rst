@@ -49,8 +49,8 @@ It's also a moving target that will continue to improve.
 
 Keep in mind that these are **optional recommendations** that you and your
 team may or may not follow to develop Symfony applications. If you want to
-continue using your own best practices and methodologies, you can of course
-do it. Symfony is flexible enough to adapt to your needs. That will never
+continue using your own best practices and methodologies, you can still do
+that. Symfony is flexible enough to adapt to your needs. That will never
 change.
 
 Who this Book Is for (Hint: It's not a Tutorial)
@@ -106,4 +106,4 @@ Next: :doc:`/best_practices/creating-the-project`
 .. _`Symfony Demo`: https://github.com/symfony/demo
 
 .. ready: no
-.. revision: 123999bcd4eebe8ae5f605db37292909cef9bc78
+.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1

@@ -5,7 +5,7 @@ Monolog allows you to process the record before logging it to add some
 extra data. A processor can be applied for the whole handler stack or
 only for a specific handler.
 
-A processor is simply a callable receiving the record as its first argument.
+A processor is a callable receiving the record as its first argument.
 Processors are configured using the ``monolog.processor`` DIC tag. See the
 :ref:`reference about it <dic_tags-monolog-processor>`.
 
@@ -300,4 +300,4 @@ the ``monolog.processor`` tag:
             ->addTag('monolog.processor', array('channel' => 'main'));
 
 .. ready: no
-.. revision: dc2bda4f7a38bf7c3baccb6d331e145d1105aeeb
+.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c

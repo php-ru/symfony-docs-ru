@@ -161,7 +161,7 @@ role::
 
 .. note::
 
-    When you make your own voter, you may of course use its constructor
+    When you make your own voter, you can use its constructor
     to inject any dependencies it needs to come to a decision.
 
 Roles
@@ -242,4 +242,4 @@ decision manager::
 
 
 .. ready: no
-.. revision: c410eb0e20600812aa78ba763c574437736aba03
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

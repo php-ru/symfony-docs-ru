@@ -14,8 +14,8 @@ is easy and natural with the Form component.
 Embedding a Single Object
 -------------------------
 
-Suppose that each ``Task`` belongs to a simple ``Category`` object. Start,
-of course, by creating the ``Category`` object::
+Suppose that each ``Task`` belongs to a simple ``Category`` object. Start by
+creating the ``Category`` object::
 
     // src/Entity/Category.php
     namespace App\Entity;
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: e7f591e44eb36032e077c5f4c229de9a5fb38c2f
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

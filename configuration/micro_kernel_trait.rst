@@ -5,8 +5,8 @@ The default ``Kernel`` class included in Symfony applications uses a
 :class:`Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait` to configure
 the bundles, the routes and the service container in the same class.
 
-This micro-kernel approach is so flexible that let you control your application
-structure and features quite easily.
+This micro-kernel approach is flexible, allowing you to control your application
+structure and features.
 
 A Single-File Symfony Application
 ---------------------------------
@@ -333,4 +333,4 @@ Then see webpage in browser:
     http://localhost:8000/random/10
 
 .. ready: no
-.. revision: d0b1f61e5b993c994dcedc5fe3b3f7093827b842
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

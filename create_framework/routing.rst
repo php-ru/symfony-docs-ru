@@ -189,7 +189,8 @@ more flexible than the previous one. Enjoy!
 Using the Routing component has one big additional benefit: the ability to
 generate URLs based on Route definitions. When using both URL matching and URL
 generation in your code, changing the URL patterns should have no other
-impact. Want to know how to use the generator? Insanely easy::
+impact. Want to know how to use the generator? Calling the ``generate`` method
+is all it takes::
 
     use Symfony\Component\Routing;
 
@@ -221,4 +222,4 @@ generate absolute URLs::
         echo $dumper->dump();
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

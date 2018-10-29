@@ -29,7 +29,7 @@ access the flash messages:
 
 .. code-block:: html+twig
 
-    {% if app.request.method == 'POST' %}
+    {% if app.request.hasPreviousSession %}
         {% for message in app.flashes('notice') %}
             <div class="flash-notice">
                 {{ message }}
@@ -38,4 +38,4 @@ access the flash messages:
     {% endif %}
 
 .. ready: no
-.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e
+.. revision: 41355ed57827f2e5ab66f39c26fe722b9b0c2e20

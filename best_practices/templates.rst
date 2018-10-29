@@ -58,7 +58,7 @@ Twig Extensions
 
 Our application needs a custom ``md2html`` Twig filter so that we can transform
 the Markdown contents of each post into HTML. To do this, create a new
-``Markdown`` class that will be used later by the Twig extension. It just needs
+``Markdown`` class that will be used later by the Twig extension. It needs
 to define one single method to transform Markdown content into HTML::
 
     namespace App\Utils;
@@ -122,4 +122,4 @@ Next: :doc:`/best_practices/forms`
 .. _`Parsedown`: http://parsedown.org/
 
 .. ready: no
-.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f
+.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1

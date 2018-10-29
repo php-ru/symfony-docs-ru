@@ -33,8 +33,8 @@ whatever component you want.
 
     `Install Composer`_ if you don't have it already present on your system.
     Depending on how you install, you may end up with a ``composer.phar``
-    file in your directory. In that case, no worries! Just run
-    ``php composer.phar require symfony/finder``.
+    file in your directory. In that case, no worries! Your command line in that
+    case is ``php composer.phar require symfony/finder``.
 
 **3.** Write your code!
 
@@ -68,4 +68,4 @@ And have fun!
 .. _Install Composer: https://getcomposer.org/download/
 
 .. ready: no
-.. revision: dcd9ded0c2b6dd6aefa4785a7cbb4bf756d583e6
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

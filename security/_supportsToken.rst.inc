@@ -5,9 +5,9 @@ to be used for the same firewall (that way, you can for instance first try
 to authenticate the user via a certificate or an API key and fall back to
 a form login).
 
-Mostly, you just need to make sure that this method returns ``true`` for a
+Essentially, you need to make sure that this method returns ``true`` for a
 token that has been created by ``createToken()``. Your logic should probably
 look exactly like this example.
 
 .. ready: no
-.. revision: bf31485095adf07b317cf4853edc9e577c74e2a9
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

@@ -48,7 +48,7 @@ for the ``handler_id``:
             ),
         ));
 
-Otherwise, if the problem is simply that you cannot avoid the application
+Otherwise, if the problem is only that you cannot avoid the application
 starting the session with ``session_start()``, you can still make use of
 a Symfony based session save handler by specifying the save handler as in
 the example below:
@@ -104,4 +104,4 @@ the example below:
 For more details, see :doc:`/components/http_foundation/session_php_bridge`.
 
 .. ready: no
-.. revision: c4707d1f4b53f513116cada2f49521a740155cb0
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

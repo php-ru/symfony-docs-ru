@@ -2,7 +2,7 @@ Bootstrap 4 Form Theme
 ======================
 
 Symfony provides several ways of integrating Bootstrap into your application. The
-most straightforward way is to just add the required ``<link>`` and ``<script>``
+most straightforward way is to add the required ``<link>`` and ``<script>``
 elements in your templates (usually you only include them in the main layout
 template which other templates extend from):
 
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: c3731bae2bcea5975726e34d0b6a4c49a09bbd96
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

@@ -10,7 +10,7 @@ Pull Requests
 Whenever a pull request is merged, all the information contained in the pull
 request (including comments) is saved in the repository.
 
-You can easily spot pull request merges as the commit message always follows
+You can identify pull request merges as the commit message always follows
 this pattern:
 
 .. code-block:: text
@@ -42,4 +42,4 @@ adding ``--show-notes=github-comments`` to the ``git show`` command:
     $ git show HEAD --show-notes=github-comments
 
 .. ready: no
-.. revision: ecf5d16632c6d565ef0793d19a9f1f201649624b
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

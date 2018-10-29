@@ -277,7 +277,7 @@ Linux command to rotate log files before they become too large.
 
 Another option is to have Monolog rotate the files for you by using the
 ``rotating_file`` handler. This handler creates a new log file every day
-and can also remove old files automatically. To use it, just set the ``type``
+and can also remove old files automatically. To use it, set the ``type``
 option of your handler to ``rotating_file``:
 
 .. configuration-block::
@@ -378,4 +378,4 @@ Learn more
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php#L25
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227

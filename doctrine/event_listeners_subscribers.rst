@@ -23,7 +23,7 @@ The Doctrine website also explains all existing events that can be listened to.
 Configuring the Listener/Subscriber
 -----------------------------------
 
-To register a service to act as an event listener or subscriber you just have
+To register a service to act as an event listener or subscriber you have
 to :doc:`tag </service_container/tags>` it with the appropriate name. Depending
 on your use-case, you can hook a listener into every DBAL connection and ORM
 entity manager or just into one specific DBAL connection and all the entity
@@ -260,4 +260,4 @@ Listeners with a higher priority are invoked first.
         ;
 
 .. ready: no
-.. revision: e56793b28d127cf38e6443c64df4f5f23085d13b
+.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c

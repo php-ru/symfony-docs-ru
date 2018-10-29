@@ -177,7 +177,7 @@ the message inside your :ref:`templates <translation-tags>`.
 The Translation Process
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To actually translate the message, Symfony uses a simple process:
+To actually translate the message, Symfony uses the following process:
 
 * The ``locale`` of the current user, which is stored on the request is determined;
 
@@ -383,6 +383,11 @@ Symfony looks for message files (i.e. translations) in the following default loc
 
 * the ``Resources/translations/`` directory inside of any bundle.
 
+.. versionadded:: 4.2
+    Using the ``src/Resources/<bundle name>/translations/`` directory to store
+    translations was deprecated in Symfony 4.2. Use instead the directory
+    defined in the ``default_path`` option (which is ``translations/`` by default).
+
 The locations are listed here with the highest priority first. That is, you can
 override the translation messages of a bundle in any of the top two directories.
 
@@ -525,8 +530,7 @@ Summary
 -------
 
 With the Symfony Translation component, creating an internationalized application
-no longer needs to be a painful process and boils down to just a few basic
-steps:
+no longer needs to be a painful process and boils down to these steps:
 
 * Abstract messages in your application by wrapping each in either the
   :method:`Symfony\\Component\\Translation\\Translator::trans` or
@@ -558,4 +562,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: b0bccfec041216f39732c7faceaf980dc1915b9a

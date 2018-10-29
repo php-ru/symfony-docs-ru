@@ -130,7 +130,7 @@ link for details), create a ``shipping_widget`` block to handle this:
                 {% endfor %}
                 </ul>
             {% else %}
-                {# just let the choice widget render the select tag #}
+                {# let the choice widget render the select tag #}
                 {{ block('choice_widget') }}
             {% endif %}
         {% endspaceless %}
@@ -242,7 +242,7 @@ link for details), create a ``shipping_widget`` block to handle this:
 Using the Field Type
 --------------------
 
-You can now use your custom field type immediately, simply by creating a
+You can now use your custom field type immediately, by creating a
 new instance of the type in one of your forms::
 
     // src/Form/Type/OrderType.php
@@ -308,4 +308,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: ac2ea07f6ee28ccccaca6a8315c4fa5fd03c0387
+.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c

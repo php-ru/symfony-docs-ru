@@ -160,14 +160,14 @@ the current firewall and not the other ones.
 logout_on_user_change
 ~~~~~~~~~~~~~~~~~~~~~
 
-**type**: ``boolean`` **default**: ``false``
+**type**: ``boolean`` **default**: ``true``
 
-.. versionadded:: 3.4
-    The ``logout_on_user_change`` option was introduced in Symfony 3.4.
+.. versionadded:: 4.1
+    The ``logout_on_user_change`` option was deprecated in Symfony 4.1.
 
-If ``true`` this option makes Symfony to trigger a logout when the user has
-changed. Not doing that is deprecated, so this option should be set to ``true``
-to avoid getting deprecation messages.
+If ``false`` this option makes Symfony to not trigger a logout when the user has
+changed. Doing that is deprecated, so this option should set to ``true`` or
+unset to avoid getting deprecation messages.
 
 The user is considered to have changed when the user class implements
 :class:`Symfony\\Component\\Security\\Core\\User\\EquatableInterface` and the
@@ -507,4 +507,4 @@ Learn more about user checkers in :doc:`/security/user_checkers`.
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 707956b37b687e7240618e424794463510a77509
+.. revision: de52062a84a41201c11b0db2117cf8c986ed11cb

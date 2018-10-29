@@ -81,7 +81,7 @@ The ``TypeGuess`` constructor requires three options:
   ``VERY_HIGH_CONFIDENCE``. After all type guessers have been executed, the
   type with the highest confidence is used.
 
-With this knowledge, you can easily implement the ``guessType()`` method of the
+With this knowledge, you can implement the ``guessType()`` method of the
 ``PHPDocTypeGuesser``::
 
     namespace App\Form\TypeGuesser;
@@ -234,4 +234,4 @@ and tag it with ``form.type_guesser``:
         // ...
 
 .. ready: no
-.. revision: 02660464b189383e47e1f5f608ba8a8a44813fbd
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

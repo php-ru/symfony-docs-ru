@@ -7,7 +7,7 @@ How to Use Doctrine DBAL
 .. note::
 
     This article is about the Doctrine DBAL. Typically, you'll work with
-    the higher level Doctrine ORM layer, which simply uses the DBAL behind
+    the higher level Doctrine ORM layer, which uses the DBAL behind
     the scenes to actually communicate with the database. To read more about
     the Doctrine ORM, see ":doc:`/doctrine`".
 
@@ -164,4 +164,4 @@ mapping type:
 .. _`Custom Mapping Types`: http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#custom-mapping-types
 
 .. ready: no
-.. revision: 04104d4d8352b2c56d94364396f59407c8e8f48c
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

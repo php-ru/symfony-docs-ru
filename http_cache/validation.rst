@@ -23,16 +23,16 @@ page again (see below for an implementation example).
 
     The 304 status code means "Not Modified". It's important because with
     this status code the response does *not* contain the actual content being
-    requested. Instead, the response is simply a light-weight set of directions that
-    tells the cache that it should use its stored version.
+    requested. Instead, the response only consists of the response headers that
+    tells the cache that it can use its stored version of the content.
 
 Like with expiration, there are two different HTTP headers that can be used
 to implement the validation model: ``ETag`` and ``Last-Modified``.
 
 .. sidebar:: Expiration and Validation
 
-    You can of course use both validation and expiration within the same ``Response``.
-    As expiration wins over validation, you can easily benefit from the best of
+    You can use both validation and expiration within the same ``Response``.
+    As expiration wins over validation, you can benefit from the best of
     both worlds. In other words, by using both expiration and validation, you
     can instruct the cache to serve the cached content, while checking back
     at some interval (the expiration) to verify that the content is still valid.
@@ -233,4 +233,4 @@ headers that must not be present for ``304`` responses (see
 .. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

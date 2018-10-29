@@ -101,10 +101,10 @@ Custom Suffix
 ~~~~~~~~~~~~~
 
 By default, the ``...`` suffix is used. If you wish to use a different suffix,
-simply pass it as the third argument to the method.
+pass it as the third argument to the method.
 The suffix is always appended, unless truncate length is longer than a message
 and a suffix length.
-If you don't want to use suffix at all, just pass an empty string::
+If you don't want to use suffix at all, pass an empty string::
 
     $truncatedMessage = $formatter->truncate($message, 7, '!!'); // result: This is!!
     $truncatedMessage = $formatter->truncate($message, 7, '');   // result: This is
@@ -113,4 +113,4 @@ If you don't want to use suffix at all, just pass an empty string::
        because length of the "test..." string is shorter than 10 */
 
 .. ready: no
-.. revision: e2cf9d70c5e1c6b0bd824f5b7cf9cb24416faaa8
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

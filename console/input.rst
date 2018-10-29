@@ -71,7 +71,7 @@ to greet all your friends). Only the last argument can be a list::
             'Who do you want to greet (separate multiple names with a space)?'
         );
 
-To use this, just specify as many names as you want:
+To use this, specify as many names as you want:
 
 .. code-block:: terminal
 
@@ -270,4 +270,4 @@ Now check the value of the option and keep in mind that ``false !== null``::
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: 04e1b02bfb1dafecb4587957b8fcb15ddac6d433
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d

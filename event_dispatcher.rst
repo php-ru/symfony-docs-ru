@@ -67,7 +67,7 @@ The most common way to listen to an event is to register an **event listener**::
     Check out the :doc:`Symfony events reference </reference/events>` to see
     what type of object each event provides.
 
-Now that the class is created, you just need to register it as a service and
+Now that the class is created, you need to register it as a service and
 notify Symfony that it is a "listener" on the ``kernel.exception`` event by
 using a special "tag":
 
@@ -273,4 +273,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: d4750f78f668e36922fb4c82a62f9af4a109159c
+.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227

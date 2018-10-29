@@ -8,8 +8,7 @@ The Serializer Component
     The Serializer component is meant to be used to turn objects into a
     specific format (XML, JSON, YAML, ...) and the other way around.
 
-In order to do so, the Serializer component follows the following
-simple schema.
+In order to do so, the Serializer component follows the following schema.
 
 .. image:: /_images/components/serializer/serializer_workflow.png
 
@@ -44,9 +43,9 @@ Usage
     component in any PHP application. Read the :doc:`/serializer` article to
     learn about how to use it in Symfony applications.
 
-Using the Serializer component is really simple. You just need to set up
-the :class:`Symfony\\Component\\Serializer\\Serializer` specifying
-which encoders and normalizer are going to be available::
+To use the Serializer component, set up the
+:class:`Symfony\\Component\\Serializer\\Serializer` specifying which encoders
+and normalizer are going to be available::
 
     use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Encoder\XmlEncoder;
@@ -483,7 +482,7 @@ and :class:`Symfony\\Component\\Serializer\\Normalizer\\PropertyNormalizer`::
 
 .. note::
 
-    You can also implement 
+    You can also implement
     :class:`Symfony\\Component\\Serializer\\NameConverter\\AdvancedNameConverterInterface`
     to access to the current class name, format and context.
 
@@ -531,6 +530,80 @@ processes::
     $anne = $normalizer->denormalize(array('first_name' => 'Anne'), 'Person');
     // Person object with firstName: 'Anne'
 
+Configure name conversion using metadata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When using this component inside a Symfony application and the class metadata
+factory is enabled as explained in the :ref:`Attributes Groups section <component-serializer-attributes-groups>`,
+this is already set up and you only need to provide the configuration. Otherwise::
+
+    // ...
+    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+    use Symfony\Component\Serializer\NameConverter\MetadataAwareNameConverter;
+    use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
+
+    $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
+
+    $metadataAwareNameConverter = new MetadataAwareNameConverter($classMetadataFactory);
+
+    $serializer = new Serializer(
+        array(new ObjectNormalizer($classMetadataFactory, $metadataAwareNameConverter)),
+        array('json' => new JsonEncoder())
+    );
+
+Now configure your name conversion mapping. Consider an application that
+defines a ``Person`` entity with a ``firstName`` property:
+
+.. configuration-block::
+
+    .. code-block:: php-annotations
+
+        namespace App\Entity;
+
+        use Symfony\Component\Serializer\Annotation\SerializedName;
+
+        class Person
+        {
+            /**
+             * @SerializedName("customer_name")
+             */
+            private $firstName;
+
+            public function __construct($firstName)
+            {
+                $this->firstName = $firstName;
+            }
+
+            // ...
+        }
+
+    .. code-block:: yaml
+
+        App\Entity\Person:
+            attributes:
+                firstName:
+                    serialized_name: customer_name
+
+    .. code-block:: xml
+
+        <?xml version="1.0" ?>
+        <serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
+                http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+        >
+            <class name="App\Entity\Person">
+                <attribute name="firstName" serialized-name="customer_name" />
+            </class>
+        </serializer>
+
+This custom mapping is used to convert property names when serializing and
+deserializing objects::
+
+    $serialized = $serializer->serialize(new Person("Kévin"));
+    // {"customer_name": "Kévin"}
+
 Serializing Boolean Attributes
 ------------------------------
 
@@ -556,7 +629,7 @@ When serializing, you can set a callback to format a specific object property::
 
     // all callback parameters are optional (you can omit the ones you don't use)
     $callback = function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = array()) {
-        return $dateTime instanceof \DateTime ? $dateTime->format(\DateTime::ISO8601) : '';
+        return $innerObject instanceof \DateTime ? $innerObject->format(\DateTime::ISO8601) : '';
     };
 
     $normalizer->setCallbacks(array('createdAt' => $callback));
@@ -1398,4 +1471,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 6349bd31e0077d522be8dceab7fe7e4baca2bb7e
+.. revision: 48b1fec2b84edbf22f6fdd203d4e40998d898024

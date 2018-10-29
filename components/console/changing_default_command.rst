@@ -5,7 +5,7 @@ Changing the Default Command
 ============================
 
 The Console component will always run the ``ListCommand`` when no command name is
-passed. In order to change the default command you just need to pass the command
+passed. In order to change the default command you need to pass the command
 name to the ``setDefaultCommand()`` method::
 
     namespace Acme\Console\Command;
@@ -64,4 +64,4 @@ Learn More!
 * :doc:`/components/console/single_command_tool`
 
 .. ready: no
-.. revision: ff7c62a6e21b7774afc780b648fb32e8021a6d2e
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

@@ -139,7 +139,7 @@ commands, then you can run ``help`` like this:
 
     $ php application.php h
 
-If you have commands using ``:`` to namespace commands then you just have
+If you have commands using ``:`` to namespace commands then you only need
 to type the shortest unambiguous text for each part. If you have created the
 ``demo:greet`` as shown in :doc:`/components/console` then you
 can run it with:
@@ -158,4 +158,4 @@ command that match), then no command will be run and some suggestions of
 the possible commands to choose from will be output.
 
 .. ready: no
-.. revision: 02660464b189383e47e1f5f608ba8a8a44813fbd
+.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd

@@ -171,7 +171,7 @@ Instead, add the route *right above* the controller method:
     }
 
 This works just like before! But by using annotations, the route and controller
-live right next to each other. Need another page? Just add another route and method
+live right next to each other. Need another page? Add another route and method
 in ``DefaultController``::
 
     // src/Controller/DefaultController.php
@@ -201,4 +201,4 @@ Keep reading with :doc:`/quick_tour/flex_recipes`.
 .. _`Composer`: https://getcomposer.org/
 
 .. ready: no
-.. revision: ba79bfde0c600584c2b6948d0e51df5540dcc933
+.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
