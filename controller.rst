@@ -147,10 +147,12 @@ and many others that you'll learn about next.
 .. tip::
 
     You can extend either ``Controller`` or ``AbstractController``. The difference
-    is that when you extend ``AbstractController``, you can't access services directly
-    via ``$this->get()`` or ``$this->container->get()``. This forces you to write
-    more robust code to access services. But if you *do* need direct access to the
-    container, using ``Controller`` is fine.
+    is that when you extend ``AbstractController``, you can't access to your services
+    via ``$this->get()`` or ``$this->container->get()``, only to a set of common
+    Symfony services. This forces you to write more robust code to access services.
+
+    Moreover, in Symfony 4.2 ``Controller`` was deprecated in favor of
+    ``AbstractController``, so using the latter will make your apps future-proof.
 
 .. versionadded:: 3.3
     The ``AbstractController`` class was added in Symfony 3.3.
@@ -733,4 +735,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 2d5e4afb41e30c179734b958c42f8a14700e10cb
+.. revision: 5bee7d9d13934891c896a5e80124f08ae5f7bec6

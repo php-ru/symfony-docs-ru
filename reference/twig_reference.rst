@@ -293,9 +293,8 @@ is_granted
     **type**: ``string``
 
 Returns ``true`` if the current user has the given role. If several roles are
-passed in an array, returns ``true`` if the user has all of them or at least one
-of them, depending on the value of this option:
-:ref:`security.access_decision_manager.strategy <security-voters-change-strategy>`.
+passed in an array, ``true`` is returned if the user has at least one of
+them.
 
 Optionally, an object can be passed to be used by the voter. More information
 can be found in :ref:`security-template`.
@@ -777,4 +776,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: a92d44b84a07f16f74e92740c67ae4791435c8b8
+.. revision: ec537cdd2e9d9c2cf2634c299dc63a2be1f0bcad

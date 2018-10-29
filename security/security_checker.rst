@@ -22,7 +22,8 @@ FriendsOfPHP organization.
 
     The ``security:check`` command terminates with a non-zero exit code if
     any of your dependencies is affected by a known security vulnerability.
-    Therefore, you can easily integrate it in your build process.
+    This allows you to add it to your project build process and your continuous
+    integration workflows.
 
 .. note::
 
@@ -40,4 +41,4 @@ FriendsOfPHP organization.
 .. _`Security Checker repository`: https://github.com/sensiolabs/security-checker
 
 .. ready: no
-.. revision: 9bbe97784579cbbc3d0bb27267047188bdddea68
+.. revision: 10671c8d263d61b1821cb7b35fb02180c72444c8

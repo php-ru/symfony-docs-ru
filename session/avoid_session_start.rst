@@ -29,7 +29,7 @@ access the flash messages:
 
 .. code-block:: html+twig
 
-    {% if app.request.method == 'POST' %}
+    {% if app.request.hasPreviousSession %}
         {% for message in app.flashes('notice') %}
             <div class="flash-notice">
                 {{ message }}
@@ -42,4 +42,4 @@ access the flash messages:
     you had to use ``app.session.flashBag()``.
 
 .. ready: no
-.. revision: e6ce2f4b3d64dd3b8ae55556026034b4f160aa8e
+.. revision: f96118b5401b31ce023c124236f5c87b9a011f14

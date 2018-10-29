@@ -590,7 +590,7 @@ are two possible fixes:
         public function supports(Request $request)
         {
     +         // if there is already an authenticated user (likely due to the session)
-    +         // then return null and skip authentication: there is no need.
+    +         // then return false and skip authentication: there is no need.
     +         if ($this->security->getUser()) {
     +             return false;
     +         }
@@ -628,4 +628,4 @@ Frequently Asked Questions
 .. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: 684caaa07f980590ceb4b242a27604b5e9eafa76
+.. revision: 4052f6a93a116718c380905d1dc6520a61e0d78f
