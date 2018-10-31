@@ -109,6 +109,14 @@ message
 
 This message is shown if the underlying data is not a valid email address.
 
+You can use the following parameters in this message:
+
++------------------+------------------------------------------------+
+| Parameter        | Description                                    |
++==================+================================================+
+| ``{{ value }}``  | The current (invalid) value                    |
++------------------+------------------------------------------------+
+
 checkMX
 ~~~~~~~
 
@@ -136,4 +144,4 @@ of the given email.
 .. _egulias/email-validator: https://packagist.org/packages/egulias/email-validator
 
 .. ready: no
-.. revision: 7910bf4b9d49c94ef32e4817144a2c9e0df1c5ef
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

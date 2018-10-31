@@ -108,7 +108,9 @@ message
 This is the message that's displayed when the underlying string does *not*
 match the current user's password.
 
+This message has no parameters.
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 8b28f02cd6e507594a2738d5910cfc78aa983928
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

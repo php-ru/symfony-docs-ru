@@ -90,7 +90,15 @@ message
 
 This message is shown if the underlying data is not a valid time.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f
+.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09

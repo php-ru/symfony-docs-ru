@@ -341,6 +341,16 @@ minMessage
 The message that will be shown if the underlying value is less than the
 `min`_ option.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+| ``{{ limit }}`` | The lower limit             |
++-----------------+-----------------------------+
+
 maxMessage
 ~~~~~~~~~~
 
@@ -348,6 +358,16 @@ maxMessage
 
 The message that will be shown if the underlying value is more than the
 `max`_ option.
+
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+| ``{{ limit }}`` | The upper limit             |
++-----------------+-----------------------------+
 
 invalidMessage
 ~~~~~~~~~~~~~~
@@ -357,10 +377,18 @@ invalidMessage
 The message that will be shown if the underlying value is not a number (per
 the `is_numeric`_ PHP function).
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`is_numeric`: https://php.net/manual/en/function.is-numeric.php
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: df24d340d3b5f107d401d40393b5803c8b3991f5
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

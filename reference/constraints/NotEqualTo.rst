@@ -120,9 +120,21 @@ message
 
 This is the message that will be shown if the value is equal.
 
+You can use the following parameters in this message:
+
++-------------------------------+-----------------------------+
+| Parameter                     | Description                 |
++===============================+=============================+
+| ``{{ value }}``               | The current (invalid) value |
++-------------------------------+-----------------------------+
+| ``{{ compared_value }}``      | The expected value          |
++-------------------------------+-----------------------------+
+| ``{{ compared_value_type }}`` | The expected value type     |
++-------------------------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
 .. ready: no
-.. revision: f856772c4cd79e4e38df415efd342853eb522575
+.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09

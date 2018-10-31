@@ -90,7 +90,15 @@ message
 
 This is the message that will be shown if the value is not ``null``.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 7ef7ba77ac794ceed838b11b9d12bb91f6b8b78b
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

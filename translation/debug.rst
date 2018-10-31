@@ -131,7 +131,7 @@ output:
 
 .. code-block:: terminal
 
-    $ php app/console debug:translation fr AcmeDemoBundle
+    $ php bin/console debug:translation fr AcmeDemoBundle
 
     ---------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
@@ -147,7 +147,7 @@ for the ``fr`` locale and run the command, you will get:
 
 .. code-block:: terminal
 
-    $ php app/console debug:translation fr AcmeDemoBundle
+    $ php bin/console debug:translation fr AcmeDemoBundle
 
     ---------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
@@ -166,7 +166,7 @@ translation file in the ``fr`` locale and run the command, you will get:
 
 .. code-block:: terminal
 
-    $ php app/console debug:translation fr AcmeDemoBundle
+    $ php bin/console debug:translation fr AcmeDemoBundle
 
     ----------  ------------------  ----------------------  -------------------------------
      State      Id                  Message Preview (fr)    Fallback Message Preview (en)
@@ -195,4 +195,4 @@ switches:
     $ php bin/console debug:translation en AcmeDemoBundle --only-missing
 
 .. ready: no
-.. revision: 03d561e8f08a77f6491c429bde84cd3a63c636ca
+.. revision: ad72eb3123627d5aaa63d8b4f41a8539f5a2baad

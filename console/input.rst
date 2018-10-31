@@ -183,7 +183,7 @@ separation at all (e.g. ``-i 5`` or ``-i5``).
 
     While it is possible to separate an option from its value with a white space,
     using this form leads to an ambiguity should the option appear before the
-    command name. For example, ``php app/console --iterations 5 app:greet Fabien``
+    command name. For example, ``php bin/console --iterations 5 app:greet Fabien``
     is ambiguous; Symfony would interpret ``5`` as the command name. To avoid
     this situation, always place options after the command name, or avoid using
     a space to separate the option name from its value.
@@ -261,13 +261,7 @@ Now check the value of the option and keep in mind that ``false !== null``::
     $yell = ($optionValue !== false);
     $yellLouder = ($optionValue === 'louder');
 
-.. caution::
-
-    Due to a PHP limitation, passing an empty string is indistinguishable from
-    not passing any value at all. In ``command --prefix`` and ``command --prefix=''``
-    cases, the value of the ``prefix`` option will be ``null``.
-
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: 04e1b02bfb1dafecb4587957b8fcb15ddac6d433
+.. revision: c882fe79916a202cb32c65f8127964d7f37a9a65

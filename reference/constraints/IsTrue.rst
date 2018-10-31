@@ -126,7 +126,15 @@ message
 
 This message is shown if the underlying data is not true.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 6283116728a901e9f0c54423693458a3ba616b35
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

@@ -34,11 +34,11 @@ Create a class that extends ``AbstractExtension`` and fill in the logic::
         public function getFilters()
         {
             return array(
-                new TwigFilter('price', array($this, 'priceFilter')),
+                new TwigFilter('price', array($this, 'formatPrice')),
             );
         }
 
-        public function priceFilter($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
+        public function formatPrice($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
         {
             $price = number_format($number, $decimals, $decPoint, $thousandsSep);
             $price = '$'.$price;
@@ -55,9 +55,32 @@ Create a class that extends ``AbstractExtension`` and fill in the logic::
     versions before 1.26, include this method which is omitted in the example
     above.
 
+Here's how to create a custom **function**::
+
+    // src/AppBundle/Twig/AppExtension.php
+    namespace AppBundle\Twig;
+
+    use Twig\Extension\AbstractExtension;
+    use Twig\TwigFunction;
+
+    class AppExtension extends AbstractExtension
+    {
+        public function getFunctions()
+        {
+            return array(
+                new TwigFunction('area', array($this, 'calculateArea')),
+            );
+        }
+
+        public function calculateArea(int $width, int $length)
+        {
+            return $width * $length;
+        }
+    }
+
 .. tip::
 
-    Along with custom filters, you can also add custom `functions`_ and register
+    Along with custom filters and functions, you can also register
     `global variables`_.
 
 Register an Extension as a Service
@@ -146,4 +169,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: 04560be72e7e9bec86f88546abf25e20dda31584
+.. revision: cdb5ee0589e066c9f2fae9d10ab80bbfb922bf69

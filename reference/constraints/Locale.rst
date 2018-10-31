@@ -90,10 +90,18 @@ message
 
 This message is shown if the string is not a valid locale.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: 24ed17e4dfc18e8a1c4f7b818eaa9934fc1779b5
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab

@@ -353,6 +353,8 @@ If the system is unable to determine the size of the image, this error will
 be displayed. This will only occur when at least one of the size constraint
 options has been set.
 
+This message has no parameters.
+
 maxWidthMessage
 ~~~~~~~~~~~~~~~
 
@@ -360,6 +362,16 @@ maxWidthMessage
 Allowed maximum width is {{ max_width }}px.``
 
 The error message if the width of the image exceeds `maxWidth`_.
+
+You can use the following parameters in this message:
+
++---------------------+-----------------------------+
+| Parameter           | Description                 |
++=====================+=============================+
+| ``{{ width }}``     | The current (invalid) width |
++---------------------+-----------------------------+
+| ``{{ max_width }}`` | The maximum allowed width   |
++---------------------+-----------------------------+
 
 minWidthMessage
 ~~~~~~~~~~~~~~~
@@ -369,6 +381,16 @@ Minimum width expected is {{ min_width }}px.``
 
 The error message if the width of the image is less than `minWidth`_.
 
+You can use the following parameters in this message:
+
++---------------------+-----------------------------+
+| Parameter           | Description                 |
++=====================+=============================+
+| ``{{ width }}``     | The current (invalid) width |
++---------------------+-----------------------------+
+| ``{{ min_width }}`` | The minimum required width  |
++---------------------+-----------------------------+
+
 maxHeightMessage
 ~~~~~~~~~~~~~~~~
 
@@ -377,6 +399,16 @@ Allowed maximum height is {{ max_height }}px.``
 
 The error message if the height of the image exceeds `maxHeight`_.
 
+You can use the following parameters in this message:
+
++----------------------+------------------------------+
+| Parameter            | Description                  |
++======================+==============================+
+| ``{{ height }}``     | The current (invalid) height |
++----------------------+------------------------------+
+| ``{{ max_height }}`` | The maximum allowed height   |
++----------------------+------------------------------+
+
 minHeightMessage
 ~~~~~~~~~~~~~~~~
 
@@ -384,6 +416,16 @@ minHeightMessage
 Minimum height expected is {{ min_height }}px.``
 
 The error message if the height of the image is less than `minHeight`_.
+
+You can use the following parameters in this message:
+
++----------------------+------------------------------+
+| Parameter            | Description                  |
++======================+==============================+
+| ``{{ height }}``     | The current (invalid) height |
++----------------------+------------------------------+
+| ``{{ min_height }}`` | The minimum required height  |
++----------------------+------------------------------+
 
 maxPixelsMessage
 ~~~~~~~~~~~~~~~~
@@ -396,16 +438,44 @@ Maximum amount expected is {{ max_pixels }} pixels.``
 
 The error message if the amount of pixels of the image exceeds `maxPixels`_.
 
+You can use the following parameters in this message:
+
++----------------------+---------------------------------------+
+| Parameter            | Description                           |
++======================+=======================================+
+| ``{{ pixels }}``     | The current amount of pixels          |
++----------------------+---------------------------------------+
+| ``{{ max_pixels }}`` | The maximum allowed amount of pixels  |
++----------------------+---------------------------------------+
+| ``{{ height }}``     | The current image height              |
++----------------------+---------------------------------------+
+| ``{{ width }}``      | The current image width               |
++----------------------+---------------------------------------+
+
 minPixelsMessage
 ~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.4
     The ``minPixelsMessage`` option has been introduced in Symfony 3.4.
 
-**type**: ``string`` **default**: ``The image has to few pixels ({{ pixels }} pixels).
+**type**: ``string`` **default**: ``The image has too few pixels ({{ pixels }} pixels).
 Minimum amount expected is {{ min_pixels }} pixels.``
 
 The error message if the amount of pixels of the image is less than `minPixels`_.
+
+You can use the following parameters in this message:
+
++----------------------+---------------------------------------+
+| Parameter            | Description                           |
++======================+=======================================+
+| ``{{ pixels }}``     | The current amount of pixels          |
++----------------------+---------------------------------------+
+| ``{{ min_pixels }}`` | The minimum required amount of pixels |
++----------------------+---------------------------------------+
+| ``{{ height }}``     | The current image height              |
++----------------------+---------------------------------------+
+| ``{{ width }}``      | The current image width               |
++----------------------+---------------------------------------+
 
 maxRatioMessage
 ~~~~~~~~~~~~~~~
@@ -415,6 +485,16 @@ Allowed maximum ratio is {{ max_ratio }}``
 
 The error message if the aspect ratio of the image exceeds `maxRatio`_.
 
+You can use the following parameters in this message:
+
++---------------------+-----------------------------+
+| Parameter           | Description                 |
++=====================+=============================+
+| ``{{ ratio }}``     | The current (invalid) ratio |
++---------------------+-----------------------------+
+| ``{{ max_ratio }}`` | The maximum allowed ratio   |
++---------------------+-----------------------------+
+
 minRatioMessage
 ~~~~~~~~~~~~~~~
 
@@ -422,6 +502,16 @@ minRatioMessage
 Minimum ratio expected is {{ min_ratio }}``
 
 The error message if the aspect ratio of the image is less than `minRatio`_.
+
+You can use the following parameters in this message:
+
++---------------------+-----------------------------+
+| Parameter           | Description                 |
++=====================+=============================+
+| ``{{ ratio }}``     | The current (invalid) ratio |
++---------------------+-----------------------------+
+| ``{{ min_ratio }}`` | The minimum required ratio  |
++---------------------+-----------------------------+
 
 allowSquareMessage
 ~~~~~~~~~~~~~~~~~~
@@ -431,6 +521,16 @@ Square images are not allowed``
 
 The error message if the image is square and you set `allowSquare`_ to ``false``.
 
+You can use the following parameters in this message:
+
++------------------+--------------------+
+| Parameter        | Description        |
++==================+====================+
+| ``{{ width }}``  | The current width  |
++------------------+--------------------+
+| ``{{ height }}`` | The current height |
++------------------+--------------------+
+
 allowLandscapeMessage
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -438,6 +538,16 @@ allowLandscapeMessage
 Landscape oriented images are not allowed``
 
 The error message if the image is landscape oriented and you set `allowLandscape`_ to ``false``.
+
+You can use the following parameters in this message:
+
++------------------+--------------------+
+| Parameter        | Description        |
++==================+====================+
+| ``{{ width }}``  | The current width  |
++------------------+--------------------+
+| ``{{ height }}`` | The current height |
++------------------+--------------------+
 
 allowPortraitMessage
 ~~~~~~~~~~~~~~~~~~~~
@@ -447,6 +557,16 @@ Portrait oriented images are not allowed``
 
 The error message if the image is portrait oriented and you set `allowPortrait`_ to ``false``.
 
+You can use the following parameters in this message:
+
++------------------+--------------------+
+| Parameter        | Description        |
++==================+====================+
+| ``{{ width }}``  | The current width  |
++------------------+--------------------+
+| ``{{ height }}`` | The current height |
++------------------+--------------------+
+
 corruptedMessage
 ~~~~~~~~~~~~~~~~
 
@@ -455,8 +575,10 @@ corruptedMessage
 The error message when the `detectCorrupted`_ option is enabled and the image
 is corrupted.
 
+This message has no parameters.
+
 .. _`IANA website`: http://www.iana.org/assignments/media-types/image/index.html
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: 543bfb4945321930313617f05f0d8f805add09a0
+.. revision: 0c760570b4212ec25222116f099d754f8248dd40

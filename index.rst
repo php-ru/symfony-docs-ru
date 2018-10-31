@@ -54,6 +54,7 @@ Topics
     testing
     translation
     validation
+    weblink
     workflow
 
 Best Practices
@@ -113,4 +114,4 @@ Want to create your own framework based on Symfony?
 .. include:: /create_framework/map.rst.inc
 
 .. ready: no
-.. revision: 7ae9c9547b4528b3397186fed3456208975bdbbb
+.. revision: 6beb4eb338103654a0132e3415f93a79688f000e

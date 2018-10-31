@@ -88,6 +88,14 @@ message
 
 This message is shown if the URL is invalid.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. configuration-block::
 
     .. code-block:: php-annotations
@@ -374,4 +382,4 @@ DNS check failed.
         }
 
 .. ready: no
-.. revision: dba62b4838ba998a592c7ab036fc477e5b474c5f
+.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09

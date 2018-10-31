@@ -252,7 +252,15 @@ message
 
 The default message supplied when the expression evaluates to false.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 0c9f83571f84f31599f443277bea085d136588b8
+.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
