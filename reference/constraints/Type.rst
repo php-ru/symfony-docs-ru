@@ -160,10 +160,20 @@ message
 
 The message if the underlying data is not of the given type.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+| ``{{ type }}``  | The expected type           |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _built-in PHP extension: https://php.net/book.ctype.php
 .. _a list of ctype functions: https://php.net/ref.ctype.php
 
 .. ready: no
-.. revision: 242bedde437bc4eddcadc5e86cff640b7d2623a2
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

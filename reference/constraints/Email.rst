@@ -129,6 +129,14 @@ message
 
 This message is shown if the underlying data is not a valid email address.
 
+You can use the following parameters in this message:
+
++------------------+------------------------------------------------+
+| Parameter        | Description                                    |
++==================+================================================+
+| ``{{ value }}``  | The current (invalid) value                    |
++------------------+------------------------------------------------+
+
 checkMX
 ~~~~~~~
 
@@ -157,4 +165,4 @@ of the given email.
 .. _HTML5 email input element: https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail
 
 .. ready: no
-.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

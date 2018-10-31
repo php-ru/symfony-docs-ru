@@ -89,6 +89,14 @@ message
 
 This message is shown if the URL is invalid.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. configuration-block::
 
     .. code-block:: php-annotations
@@ -461,4 +469,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

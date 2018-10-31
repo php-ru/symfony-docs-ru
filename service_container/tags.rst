@@ -64,7 +64,7 @@ container sees that your class extends ``AbstractExtension`` (or more accurately
 that it implements ``ExtensionInterface``) and adds the tag for you.
 
 If you want to apply tags automatically for your own services, use the
-``_instanceof`` option::
+``_instanceof`` option:
 
 .. configuration-block::
 
@@ -566,4 +566,4 @@ application handlers.
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: 4765b7d26d69b7f5d4cd5d6eaef0d1c3c18ed44e
+.. revision: 89074e636a988fac42b70e70feb1b6ce9c381521

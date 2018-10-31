@@ -29,6 +29,11 @@ form field.
 |                | - `notReadableMessage`_                                             |
 |                | - `uploadIniSizeErrorMessage`_                                      |
 |                | - `uploadFormSizeErrorMessage`_                                     |
+|                | - `uploadPartialErrorMessage`_                                      |
+|                | - `uploadNoFileErrorMessage`_                                       |
+|                | - `uploadNoTmpDirErrorMessage`_                                     |
+|                | - `uploadCantWriteErrorMessage`_                                    |
+|                | - `uploadExtensionErrorMessage`_                                    |
 |                | - `uploadErrorMessage`_                                             |
 |                | - `payload`_                                                        |
 +----------------+---------------------------------------------------------------------+
@@ -387,4 +392,4 @@ This message has no parameters.
 .. _`Wikipedia: Binary prefix`: http://en.wikipedia.org/wiki/Binary_prefix
 
 .. ready: no
-.. revision: 41355ed57827f2e5ab66f39c26fe722b9b0c2e20
+.. revision: c35b930687874cf9140b6936ddfc41ed04d06530

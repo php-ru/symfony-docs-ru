@@ -148,6 +148,14 @@ representation of the invalid entity. If the entity doesn't define the
 ``__toString()`` method, the following generic value will be used: *"Object of
 class __CLASS__ identified by <comma separated IDs>"*
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 em
 ~~
 
@@ -291,4 +299,4 @@ also has a ``null`` value, validation would fail.
 .. _`race conditions`: https://en.wikipedia.org/wiki/Race_condition
 
 .. ready: no
-.. revision: 6f3ef4df8042a608ff2c8fba99d53ab0d0d2decc
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
