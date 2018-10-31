@@ -122,6 +122,7 @@ Configuration
   * `resource`_
   * `strict_requirements`_
   * `type`_
+  * `utf8`_
 
 * `secret`_
 * `serializer`_
@@ -742,6 +743,20 @@ The value can be one of:
 
 ``true`` is recommended in the development environment, while ``false``
 or ``null`` might be preferred in production.
+
+utf8
+....
+
+**type**: ``boolean`` **default**: ``false``
+
+.. versionadded:: 4.2
+  The ``framework.router.utf8`` option was introduced in Symfony 4.2.
+
+When this option is set to ``true``, route patterns can include UTF-8 characters.
+If the charset of your application is UTF-8 (as defined in the
+:ref:`getCharset() method <configuration-kernel-charset>` of your kernel) it's
+recommended to set it to ``true``. This will make non-UTF8 URLs to generate 404
+errors.
 
 .. _config-framework-session:
 
@@ -2162,4 +2177,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 91c0c227255149c9a1f4102cc7e49b1a8d77b75f
+.. revision: e8b0c11cc6b265f12f24280cc5ab8c78b3f2dda6

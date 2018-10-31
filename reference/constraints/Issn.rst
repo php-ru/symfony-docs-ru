@@ -88,6 +88,14 @@ message
 
 The message shown if the given value is not a valid ISSN.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 caseSensitive
 ~~~~~~~~~~~~~
 
@@ -109,4 +117,4 @@ this to ``true``, the validator requires a hyphenated ISSN value.
 .. _`International Standard Serial Number (ISSN)`: https://en.wikipedia.org/wiki/Issn
 
 .. ready: no
-.. revision: a7263b5ce4c5030f8bee2e16536cabb445fb973a
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

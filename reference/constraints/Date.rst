@@ -92,7 +92,15 @@ message
 
 This message is shown if the underlying data is not a valid date.
 
+You can use the following parameters in this message:
+
++------------------+------------------------------------------------+
+| Parameter        | Description                                    |
++==================+================================================+
+| ``{{ value }}``  | The current (invalid) value                    |
++------------------+------------------------------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f324a71026110ccc3d42a92bc41791bf6582f3cd
+.. revision: 4fc5a88f2ecef8cc53a5fd756466964843c6d72b

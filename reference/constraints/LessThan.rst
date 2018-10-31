@@ -299,6 +299,18 @@ message
 This is the message that will be shown if the value is not less than the
 comparison value.
 
+You can use the following parameters in this message:
+
++-------------------------------+-----------------------------+
+| Parameter                     | Description                 |
++===============================+=============================+
+| ``{{ value }}``               | The current (invalid) value |
++-------------------------------+-----------------------------+
+| ``{{ compared_value }}``      | The upper limit             |
++-------------------------------+-----------------------------+
+| ``{{ compared_value_type }}`` | The expected value type     |
++-------------------------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
@@ -306,4 +318,4 @@ comparison value.
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: c311f5fb564e2d968829adca54f3da9b88c17f62
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

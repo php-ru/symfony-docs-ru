@@ -17,6 +17,8 @@ Configuration
 * `Cache Directory`_
 * `Log Directory`_
 
+.. _configuration-kernel-charset:
+
 Charset
 ~~~~~~~
 
@@ -103,4 +105,4 @@ This returns the path to the log directory. To change it, override the
 ":ref:`override-logs-dir`" for more information.
 
 .. ready: no
-.. revision: a1fdcc84ff0f2db61e17c2f8877c53f37f8f796b
+.. revision: e8b0c11cc6b265f12f24280cc5ab8c78b3f2dda6

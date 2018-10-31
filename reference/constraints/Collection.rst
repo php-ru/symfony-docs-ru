@@ -315,6 +315,14 @@ extraFieldsMessage
 The message shown if `allowExtraFields`_ is false and an extra field is
 detected.
 
+You can use the following parameters in this message:
+
++------------------+------------------------------------------------+
+| Parameter        | Description                                    |
++==================+================================================+
+| ``{{ field }}``  | The key of the extra field detected            |
++------------------+------------------------------------------------+
+
 allowMissingFields
 ~~~~~~~~~~~~~~~~~~
 
@@ -333,7 +341,15 @@ missingFieldsMessage
 The message shown if `allowMissingFields`_ is false and one or more fields
 are missing from the underlying collection.
 
+You can use the following parameters in this message:
+
++------------------+----------------------------------------------------+
+| Parameter        | Description                                        |
++==================+====================================================+
+| ``{{ field }}``  | The key of the missing field defined in ``fields`` |
++------------------+----------------------------------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: a2ba00be6fa864d0e4c5b56c2fae50345a102c6f
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976

@@ -94,7 +94,15 @@ message
 
 This is the message that will be shown if the value is blank.
 
+You can use the following parameters in this message:
+
++-----------------+-----------------------------+
+| Parameter       | Description                 |
++=================+=============================+
+| ``{{ value }}`` | The current (invalid) value |
++-----------------+-----------------------------+
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 7f5a99f4f0bac41006ac857e3b2341346148659a
+.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
