@@ -1,25 +1,25 @@
 .. index::
-   single: Bundles
+   single: Пакеты
 
 .. _page-creation-bundles:
 
-The Bundle System
-=================
+Система пакетов
+===============
 
 .. caution::
 
-    In Symfony versions prior to 4.0, it was recommended to organize your own
-    application code using bundles. This is no longer recommended and bundles
-    should only be used to share code and features between multiple applications.
+    В версиях Symfony до 4.0 было рекомендовано упорядочивать ваш код c помощью
+    пакетов. Так больше не рекомендуется делать, поэтому пакеты должны
+    использоваться только для совместного использования кодом и функциональных
+    возможностей между несколькими приложениями.
 
-A bundle is similar to a plugin in other software, but even better. The core
-features of Symfony framework are implemented with bundles (FrameworkBundle,
-SecurityBundle, DebugBundle, etc.) They are also used to add new features in
-your application via `third-party bundles`_.
+Пакет похож на плагин в других программах, но ещё лучше. Основные возможности
+фреймворка Symfony реализуются с помощью пакетов (FrameworkBundle,
+SecurityBundle, DebugBundle и т.д.). Они также используются для добавления новых
+возможностей в ваше приложение через `сторонние пакеты`_.
 
-Bundles used in your applications must be enabled per
-:doc:`environment </configuration/environments>` in the ``config/bundles.php``
-file::
+Пакеты, используемые в вашем приложении, должны быть подключены для каждого
+:doc:`окружения </configuration/environments>` в файле ``config/bundles.php``:
 
     // config/bundles.php
     return [
@@ -37,20 +37,22 @@ file::
 
 .. tip::
 
-    In a default Symfony application that uses :doc:`Symfony Flex </setup/flex>`,
-    bundles are enabled/disabled automatically for you when installing/removing
-    them, so you don't need to look at or edit this ``bundles.php`` file.
+    В приложении Symfony по умолчанию, которое использует :doc:`Symfony Flex
+    </setup/flex>`, пакеты подключаются и отключаются автоматически при
+    установке или удалении, поэтому вам не нужно искать или редактировать файл
+    ``bundles.php``.
 
-Creating a Bundle
------------------
+Создание пакета
+---------------
 
-This section creates and enables a new bundle to show there are only a few steps required.
-The new bundle is called AcmeTestBundle, where the ``Acme`` portion is just a
-dummy name that should be replaced by some "vendor" name that represents you or
-your organization (e.g. ABCTestBundle for some company named ``ABC``).
+Этот раздел создаёт и включает новый пакет для демонстрации того, как это можно
+сделать всего за несколько шагов. Новый пакет называется AcmeTestBundle, где
+часть ``Acme`` - часть фиктивного имени, которое нужно каким-либо именем
+"поставщика" (разработчика пакета), который представляет вас или вашу
+организацию (например, ABCTestBundle для компании ``ABC``).
 
-Start by creating a ``src/Acme/TestBundle/`` directory and adding a new file
-called ``AcmeTestBundle.php``::
+Начните с создания директории ``src/Acme/TestBundle/`` и добавьте в него новый
+файл под названием ``AcmeTestBundle.php``::
 
     // src/Acme/TestBundle/AcmeTestBundle.php
     namespace App\Acme\TestBundle;
@@ -63,14 +65,11 @@ called ``AcmeTestBundle.php``::
 
 .. tip::
 
-    The name AcmeTestBundle follows the standard
-    :ref:`Bundle naming conventions <bundles-naming-conventions>`. You could
-    also choose to shorten the name of the bundle to simply TestBundle by naming
-    this class TestBundle (and naming the file ``TestBundle.php``).
+    Имя AcmeTestBundle следует стандартным :ref:`соглашениям по именованию
+    пакетов <bundles-naming-conventions>`. Вы также можете решить укоротить имя пакета до TestBundle, назвав
+    этот класс TestBundle (и соответственно файл как ``TestBundle.php``).
 
-This empty class is the only piece you need to create the new bundle. Though
-commonly empty, this class is powerful and can be used to customize the behavior
-of the bundle. Now that you've created the bundle, enable it::
+Этот пустой класс – единственное, что вам понадобится для создания нового пакета. Несмотря на то, что чаще всего он будет пустым, этот класс мощный по своим возможностям и может быть использован для настройки поведения пакета. Теперь, когда вы создали пакет, подключите его::
 
     // config/bundles.php
     return [
@@ -78,48 +77,41 @@ of the bundle. Now that you've created the bundle, enable it::
         App\Acme\TestBundle\AcmeTestBundle::class => ['all' => true],
     ];
 
-And while it doesn't do anything yet, AcmeTestBundle is now ready to be used.
+И хотя он пока ничего не делает, AcmeTestBundle готов к использованию.
 
-Bundle Directory Structure
---------------------------
+Структура директорий пакета
+---------------------------
 
-The directory structure of a bundle is meant to help to keep code consistent
-between all Symfony bundles. It follows a set of conventions, but is flexible
-to be adjusted if needed. Take a look at AcmeDemoBundle, as it contains some
-of the most common elements of a bundle:
+Структура директорий пакета предназначена для поддержания совместимости между всеми пакетами Symfony. 
+Она следует набору соглашений, которые при необходимости гибко настраиваются.
+Посмотрите на AcmeDemoBundle, поскольку он содержит наиболее распространенные элементы пакета: 
 
 ``Controller/``
-    Contains the controllers of the bundle (e.g. ``RandomController.php``).
+    Содержит контроллеры пакета (например, ``RandomController.php``).
 
 ``DependencyInjection/``
-    Holds certain Dependency Injection Extension classes, which may import service
-    configuration, register compiler passes or more (this directory is not
-    necessary).
+    Содержит некоторые классы расширения внедрения зависимости, которые могут
+    импортировать конфигурацию сервиса, регистрировать пропуски компилятора (compiler passes ???) и
+    многое другое (эта необязательная директория).
 
 ``Resources/config/``
-    Houses configuration, including routing configuration (e.g. ``routing.yaml``).
+    Содержит конфигурацию, включая конфигурацию маршрутов (например, ``routing.yaml``).
 
 ``Resources/views/``
-    Holds templates organized by controller name (e.g. ``Random/index.html.twig``).
+    Содержит шаблоны, расположенные в алфавитном порядке по имени контроллера (например, ``Random/index.html.twig``).
 
 ``Resources/public/``
-    Contains web assets (images, stylesheets, etc) and is copied or symbolically
-    linked into the project ``public/`` directory via the ``assets:install`` console
-    command.
+    Содержит веб-ресурсы (изображения, файлы стилей и т.д.); он копируется или символически привязывается к директории проекта ``public/`` с помощью консольной команды ``assets:install``.
 
 ``Tests/``
-    Holds all tests for the bundle.
+   Содержит все тесты пакета.
 
-A bundle can be as small or large as the feature it implements. It contains
-only the files you need and nothing else.
+Пакет может быть как большим, так и маленьким, в зависимости от реализуемого функционала. Он содержит только те файлы, которые вам нужны, и ничего больше.
 
-As you move through the guides, you'll learn how to persist objects to a
-database, create and validate forms, create translations for your application,
-write tests and much more. Each of these has their own place and role within
-the bundle.
+По ходу прочтения руководства, вы узнаете, как сохранять объекты в базе данных, создавать и проверять формы, делать локализацию приложения, писать тесты и многое другое. Каждая такая возможность имеет свое место и роль внутри пакета.
 
-Learn more
-----------
+Читайте дальше
+--------------
 
 * :doc:`/bundles/override`
 * :doc:`/bundles/best_practices`
@@ -127,7 +119,7 @@ Learn more
 * :doc:`/bundles/extension`
 * :doc:`/bundles/prepend_extension`
 
-.. _`third-party bundles`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
+.. _`сторонние пакеты`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
-.. ready: no
+.. ready: yes
 .. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227
