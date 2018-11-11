@@ -35,7 +35,7 @@ The following example shows the component in action::
 
    echo 'Hello';
 
-Read the full :doc:`WebLink documentation </weblink>` to learn about all the
+Read the full :doc:`WebLink documentation </web_link>` to learn about all the
 features of the component and its integration with the Symfony framework.
 
 .. _`Web Linking`: https://tools.ietf.org/html/rfc5988
@@ -43,4 +43,4 @@ features of the component and its integration with the Symfony framework.
 .. _`Resource Hints`: https://www.w3.org/TR/resource-hints/
 
 .. ready: no
-.. revision: 5e9f0ff65f0c2949b797cd0bcc62f8f0edb9cf95
+.. revision: fecef29699d92dbedec8e2f67c6461f53c3ebd01

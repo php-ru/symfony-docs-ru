@@ -95,7 +95,7 @@ First, to use ESI, be sure to enable it in your application configuration:
 
 Now, suppose you have a page that is relatively static, except for a news
 ticker at the bottom of the content. With ESI, you can cache the news ticker
-independent of the rest of the page::
+independently of the rest of the page::
 
     // src/AppBundle/Controller/DefaultController.php
 
@@ -158,7 +158,7 @@ used ``render()``.
     specification that is supported out of the box by the Symfony reverse
     proxy.
 
-The embedded action can now specify its own caching rules, entirely independent
+The embedded action can now specify its own caching rules entirely independently
 of the master page::
 
     // src/AppBundle/Controller/NewsController.php
@@ -255,4 +255,4 @@ The ``render_esi`` helper supports two other useful options:
 .. _`ESI`: http://www.w3.org/TR/esi-lang
 
 .. ready: no
-.. revision: 88c21633e96f6d6f7d8d9d73d030c881cfb825fc
+.. revision: b3566c24ab2317e344c0cae1c13355c0d0349534

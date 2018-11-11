@@ -173,6 +173,14 @@ The user is considered to have changed when the user class implements
 required by the :class:`Symfony\\Component\\Security\\Core\\User\\UserInterface`
 (like the username, password or salt) changes.
 
+success_handler
+~~~~~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``'security.logout.success_handler'``
+
+The service ID used for handling a successful logout. The service must implement
+:class:`Symfony\\Component\\Security\\Http\\Logout\\LogoutSuccessHandlerInterface`.
+
 .. _reference-security-ldap:
 
 LDAP functionality
@@ -545,4 +553,4 @@ To use HTTP-Digest authentication you need to provide a realm and a secret:
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: db4847922f05bf59b4abe4071e9adc8a97b24420
+.. revision: b5d3340048cc970a4fff2a347935b311742f84bc

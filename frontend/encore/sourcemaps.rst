@@ -6,9 +6,7 @@ asset (e.g. the Sass code that was compiled to CSS or the TypeScript code that
 was compiled to JavaScript). Source maps are useful for debugging purposes but
 unnecessary when executing the application in production.
 
-Encore inlines source maps in the compiled assets only in the development
-environment, but you can control this behavior with the ``enableSourceMaps()``
-method:
+Encore's default ``webpack.config.js`` file enables sourcemaps in the ``dev`` build:
 
 .. code-block:: javascript
 
@@ -18,13 +16,10 @@ method:
     Encore
         // ...
 
-        // this is the default behavior...
         .enableSourceMaps(!Encore.isProduction())
-        // ... but you can override it by passing a boolean value
-        .enableSourceMaps(true)
     ;
 
 .. _`Source maps`: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 
 .. ready: no
-.. revision: c67f07f6752f5bfd6855c7c35aef09cac2c5a2bd
+.. revision: c2b36a281ba6cfc92c8e94712a7ba60fe69d822e

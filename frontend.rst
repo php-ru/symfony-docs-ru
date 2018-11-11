@@ -48,6 +48,7 @@ Adding more Features
 * :doc:`PostCSS and autoprefixing </frontend/encore/postcss>`
 * :doc:`Enabling React.js </frontend/encore/reactjs>`
 * :doc:`Enabling Vue.js (vue-loader) </frontend/encore/vuejs>`
+* :doc:`/frontend/encore/copy-files`
 * :doc:`Configuring Babel </frontend/encore/babel>`
 * :doc:`Source maps </frontend/encore/sourcemaps>`
 * :doc:`Enabling TypeScript (ts-loader) </frontend/encore/typescript>`
@@ -55,8 +56,10 @@ Adding more Features
 Optimizing
 ..........
 
-* :doc:`Versioning (and the manifest.json file) </frontend/encore/versioning>`
+* :doc:`Versioning (and the entrypoints.json/manifest.json files) </frontend/encore/versioning>`
 * :doc:`Using a CDN </frontend/encore/cdn>`
+* :doc:`/frontend/encore/code-splitting`
+* :doc:`/frontend/encore/split-chunks`
 * :doc:`Creating a "Shared" entry for re-used modules </frontend/encore/shared-entry>`
 * :doc:`/frontend/encore/url-loader`
 
@@ -117,4 +120,4 @@ Other Front-End Articles
 .. _`Webpack Encore screencast series`: https://symfonycasts.com/screencast/webpack-encore
 
 .. ready: no
-.. revision: ecced684f39e76574274c8de7d54bf0250a8a5d4
+.. revision: 12ca7d9b70f6269aec1c69354136b00d4690b924
