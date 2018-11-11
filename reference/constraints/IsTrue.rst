@@ -13,9 +13,9 @@ Also see :doc:`IsFalse <IsFalse>`.
 | Options        | - `message`_                                                        |
 |                | - `payload`_                                                        |
 +----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\True`           |
+| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\IsTrue`         |
 +----------------+---------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\TrueValidator`  |
+| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\IsTrueValidator`|
 +----------------+---------------------------------------------------------------------+
 
 Basic Usage
@@ -137,4 +137,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: c3c7bfdc7cee6996598516957a03fda4a5dfbc70

@@ -290,21 +290,6 @@ by using the following methods:
 :method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableContentTypes`
     Returns the list of accepted content types ordered by descending quality.
 
-:method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableFormats`
-    Returns the list of accepted client formats associated with the request.
-
-Note that
-:method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableFormats`
-will use the data from
-:method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableContentTypes`
-and return the client acceptable formats::
-
-    $request->getAcceptableContentTypes();
-    // returns ['text/html', 'application/xhtml+xml', 'application/xml', '*/*']
-
-    $request->getAcceptableFormats();
-    // returns ['html', 'xml']
-
 :method:`Symfony\\Component\\HttpFoundation\\Request::getLanguages`
     Returns the list of accepted languages ordered by descending quality.
 
@@ -718,4 +703,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14
+.. revision: 27967c2394e7cf0ceae9a2c4fca8eb9c51995da2

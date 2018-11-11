@@ -124,8 +124,8 @@ command will pre-configure this for you:
             encoders:
                 # use your user class name here
                 App\Entity\User:
-                    # bcrypt or argon21 are recommended
-                    # argon21 is more secure, but requires PHP 7.2 or the Sodium extension
+                    # bcrypt or argon2i are recommended
+                    # argon2i is more secure, but requires PHP 7.2 or the Sodium extension
                     algorithm: bcrypt
                     cost: 12
 
@@ -1012,4 +1012,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://github.com/symfony/maker-bundle
 
 .. ready: no
-.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227
+.. revision: f9d7c7547b78f7fcf9d308b5ef833213de34cdb9

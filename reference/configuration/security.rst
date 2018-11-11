@@ -175,6 +175,14 @@ The user is considered to have changed when the user class implements
 required by the :class:`Symfony\\Component\\Security\\Core\\User\\UserInterface`
 (like the username, password or salt) changes.
 
+success_handler
+~~~~~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``'security.logout.success_handler'``
+
+The service ID used for handling a successful logout. The service must implement
+:class:`Symfony\\Component\\Security\\Http\\Logout\\LogoutSuccessHandlerInterface`.
+
 .. _reference-security-ldap:
 
 LDAP functionality
@@ -507,4 +515,4 @@ Learn more about user checkers in :doc:`/security/user_checkers`.
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: de52062a84a41201c11b0db2117cf8c986ed11cb
+.. revision: bc2d5334312ef343a366c0bebdf1600c31b75b68

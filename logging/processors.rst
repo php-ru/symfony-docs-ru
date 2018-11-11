@@ -165,7 +165,7 @@ handler level or at the channel level instead of registering it globally
         The autoconfiguration of Monolog processors was introduced in Symfony 4.2.
 
     If you're using the :ref:`default services.yaml configuration <service-container-services-load-example>`,
-    processors implementing :class:`Symfony\\Bridge\\Monolog\\Processor\\ProcessorInterface`
+    processors implementing :class:`Monolog\\Processor\\ProcessorInterface`
     are automatically registered as services and tagged with ``monolog.processor``,
     so you can use them without adding any configuration. The same applies to the
     built-in :class:`Symfony\\Bridge\\Monolog\\Processor\\TokenProcessor` and
@@ -300,4 +300,4 @@ the ``monolog.processor`` tag:
             ->addTag('monolog.processor', array('channel' => 'main'));
 
 .. ready: no
-.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c
+.. revision: bc88b0a17d74878cf95b7f8ea6af2cc3c330e831

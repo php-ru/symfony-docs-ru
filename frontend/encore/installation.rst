@@ -10,7 +10,7 @@ run:
 
 .. code-block:: terminal
 
-    $ composer require symfony/webpack-encore-pack
+    $ composer require encore
     $ yarn install
 
 This will create a ``webpack.config.js`` file, add the ``assets/`` directory, and
@@ -22,4 +22,4 @@ Nice work! Write your first JavaScript and CSS by reading :doc:`/frontend/encore
 .. _`Yarn package manager`: https://yarnpkg.com/lang/en/docs/install/
 
 .. ready: no
-.. revision: 1e9863c95cc2007579f1a05268f3f83b8fcf8bc9
+.. revision: c2b36a281ba6cfc92c8e94712a7ba60fe69d822e

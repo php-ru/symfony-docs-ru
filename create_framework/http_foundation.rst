@@ -264,7 +264,7 @@ explicitly trust your reverse proxies by calling ``setTrustedProxies()``::
 
 So, the ``getClientIp()`` method works securely in all circumstances. You can
 use it in all your projects, whatever the configuration is, it will behave
-correctly and safely. That's one of the goal of using a framework. If you were
+correctly and safely. That's one of the goals of using a framework. If you were
 to write a framework from scratch, you would have to think about all these
 cases by yourself. Why not using a technology that already works?
 
@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: b013b36627e44c1b208e9947e7e1f11a61ec6404
