@@ -235,7 +235,7 @@ discretion of the **Project Leader**.
 .. _Workflow: https://github.com/symfony/workflow
 .. _Yaml: https://github.com/symfony/yaml
 .. _WebProfilerBundle: https://github.com/symfony/web-profiler-bundle
-.. _WebLink: https://github.com/symfony/weblink
+.. _WebLink: https://github.com/symfony/web-link
 .. _`symfony-docs repository`: https://github.com/symfony/symfony-docs
 .. _`fabpot`: https://github.com/fabpot/
 .. _`webmozart`: https://github.com/webmozart/
@@ -261,4 +261,4 @@ discretion of the **Project Leader**.
 .. _`HeahDude`: https://github.com/HeahDude
 
 .. ready: no
-.. revision: b89f81b5b6fc7e1e7d637d1821b248b30d19c2b5
+.. revision: e4f244188bf86667c25961bd1d43afd6f46e63e7

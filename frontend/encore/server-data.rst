@@ -19,6 +19,9 @@ Fetch this in JavaScript:
     document.addEventListener('DOMContentLoaded', function() {
         var userRating = document.querySelector('.js-user-rating');
         var isAuthenticated = userRating.dataset.isAuthenticated;
+
+        // or with jQuery
+        //var isAuthenticated = $('.js-user-rating').data('isAuthenticated');
     });
 
 .. note::
@@ -42,4 +45,4 @@ method that returns an array, you could do the following:
 .. _`accessing data attributes from JavaScript`: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 
 .. ready: no
-.. revision: 4e8d394c6faf22d13d54326af3970901d3f08321
+.. revision: 6833bb62232ff68eea0b9b3464312c7a32516f17

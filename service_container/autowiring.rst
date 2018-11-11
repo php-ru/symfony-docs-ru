@@ -341,6 +341,12 @@ Thanks to the ``App\Util\TransformerInterface`` alias, the autowiring subsystem
 knows that the ``App\Util\Rot13Transformer`` service should be injected when
 dealing with the ``TransformerInterface``.
 
+.. tip::
+
+    As long as there is only one class implementing the interface and that class
+    is part of the same namespace configuring the alias is not mandatory and Symfony
+    will automatically create one.
+
 Dealing with Multiple Implementations of the Same Type
 ------------------------------------------------------
 
@@ -501,4 +507,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _ROT13: https://en.wikipedia.org/wiki/ROT13
 
 .. ready: no
-.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38
+.. revision: 42d8fb19742c614f2d40e20f0bb0e9188c7e2a97
