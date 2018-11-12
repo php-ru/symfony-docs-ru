@@ -192,7 +192,7 @@ fingertips thanks to a nice and simple API::
 
     // retrieve an HTTP request header, with normalized, lowercase keys
     $request->headers->get('host');
-    $request->headers->get('content_type');
+    $request->headers->get('content-type');
 
     $request->getMethod();    // GET, POST, PUT, DELETE, HEAD
     $request->getLanguages(); // an array of languages the client accepts
@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 6a9821ec95457833c7b49fbb08e6b3a2a375a820
+.. revision: 9feaac04a0853c12895442bd4d8f388de51f8616

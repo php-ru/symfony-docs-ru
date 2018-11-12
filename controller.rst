@@ -602,7 +602,7 @@ the ``Request`` class::
 
         // retrieves an HTTP request header, with normalized, lowercase keys
         $request->headers->get('host');
-        $request->headers->get('content_type');
+        $request->headers->get('content-type');
     }
 
 The ``Request`` class has several public properties and methods that return any
@@ -735,4 +735,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 5bee7d9d13934891c896a5e80124f08ae5f7bec6
+.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a

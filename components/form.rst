@@ -154,6 +154,13 @@ the CSRF generator and validated when binding the form.
         $csrfStorage = new NativeSessionTokenStorage();
         // ...
 
+You can disable CSRF protection per form using the ``csrf_protection`` option::
+
+    use Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType
+
+    $form = $formFactory->createBuilder(FormType::class, null, ['csrf_protection' => false])
+        ->getForm();
+
 Twig Templating
 ~~~~~~~~~~~~~~~
 
@@ -761,4 +768,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a

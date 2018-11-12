@@ -231,7 +231,7 @@ have all the request information at your fingertips::
 
     // retrieves an HTTP request header, with normalized, lowercase keys
     $request->headers->get('host');
-    $request->headers->get('content_type');
+    $request->headers->get('content-type');
 
     $request->getMethod();    // e.g. GET, POST, PUT, DELETE or HEAD
     $request->getLanguages(); // an array of languages the client accepts
@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 6f7010f1b512de4c870f9166b58d4c44c8603111
+.. revision: 9feaac04a0853c12895442bd4d8f388de51f8616

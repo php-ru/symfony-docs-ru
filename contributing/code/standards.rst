@@ -194,7 +194,10 @@ Structure
 
 * Do not use spaces around ``[`` offset accessor and before ``]`` offset accessor;
 
-* Add a ``use`` statement for every class that is not part of the global namespace.
+* Add a ``use`` statement for every class that is not part of the global namespace;
+
+* When PHPDoc tags like ``@param`` or ``@return`` include ``null`` and other
+  types, always place ``null`` at the end of the list of types.
 
 Naming Conventions
 ~~~~~~~~~~~~~~~~~~
@@ -289,4 +292,4 @@ License
 .. _`snake_case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 543bfb4945321930313617f05f0d8f805add09a0
+.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a

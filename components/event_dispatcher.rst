@@ -147,11 +147,10 @@ The ``addListener()`` method takes up to three arguments:
 
 #. The event name (string) that this listener wants to listen to;
 #. A PHP callable that will be executed when the specified event is dispatched;
-#. An optional priority integer (higher equals more important and therefore
-   that the listener will be triggered earlier) that determines when a listener
-   is triggered versus other listeners (defaults to ``0``). If two listeners
-   have the same priority, they are executed in the order that they were
-   added to the dispatcher.
+#. An optional priority, defined as a positive or negative integer (defaults to
+   ``0``). The higher the priority, the earlier the listener is called. If two 
+   listeners have the same priority, they are executed in the order that they
+   were added to the dispatcher.
 
 .. note::
 
@@ -525,4 +524,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/event-dispatcher
 
 .. ready: no
-.. revision: fb5c50fb2ebaa414624560633dc4e9205c2f81df
+.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a
