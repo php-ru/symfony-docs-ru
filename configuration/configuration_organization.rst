@@ -49,18 +49,18 @@ this structure:
 
     your-project/
     ├─ config/
-    │  └─ packages/
-    │     ├─ dev/
-    |     │  ├─ framework.yaml
-    │     │  └─ ...
-    │     ├─ prod/
-    │     │  └─ ...
-    │     ├─ test/
-    │     │  └─ ...
-    |     ├─ framework.yaml
-    │     └─ ...
-    │     ├─ services.yaml
-    │     └─ services_dev.yaml
+    │  ├─ packages/
+    │  │  ├─ dev/
+    │  │  │  ├─ framework.yaml
+    │  │  │  └─ ...
+    │  │  ├─ prod/
+    │  │  │  └─ ...
+    │  │  ├─ test/
+    │  │  │  └─ ...
+    │  │  ├─ framework.yaml
+    │  │  └─ ...
+    │  ├─ services.yaml
+    │  └─ services_dev.yaml
     ├─ ...
 
 This default structure was chosen for its simplicity — one file per package and
@@ -180,4 +180,4 @@ can choose one of these or even create your own custom way of organizing the
 files. For even more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 94b368468d9657feaae6288a7e98b726c4b187f2
