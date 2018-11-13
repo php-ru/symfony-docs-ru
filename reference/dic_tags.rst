@@ -389,8 +389,9 @@ can also register it manually:
 
 .. note::
 
-    The ``priority`` value is optional and defaults to 0. The higher the
-    priority, the sooner it gets executed.
+    The ``priority`` is optional and its value is a positive or negative integer
+    that defaults to ``0``. The higher the number, the earlier that warmers are
+    executed.
 
 .. caution::
 
@@ -1173,8 +1174,8 @@ also register it manually:
 
 .. note::
 
-    The ``priority`` value is optional and defaults to ``0``.
-    The higher priority loaders are tried first.
+    The ``priority`` is optional and its value is a positive or negative integer
+    that defaults to ``0``. Loaders with higher numbers are tried first.
 
 .. _reference-dic-tags-twig-runtime:
 
@@ -1255,4 +1256,4 @@ Bridge.
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: 085eab562774a0335fbe3b8e25730dbad6e61b2d
+.. revision: ccbf9d52105ab856682280927ed8c25273641728
