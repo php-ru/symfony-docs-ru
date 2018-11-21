@@ -144,14 +144,15 @@ interface and have an event method for each event it subscribes to::
     // for Doctrine < 2.4: use Doctrine\ORM\Event\LifecycleEventArgs;
     use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
     use App\Entity\Product;
+    use Doctrine\ORM\Events;
 
     class SearchIndexerSubscriber implements EventSubscriber
     {
         public function getSubscribedEvents()
         {
             return array(
-                'postPersist',
-                'postUpdate',
+                Events::postPersist,
+                Events::postUpdate,
             );
         }
 
@@ -298,4 +299,4 @@ numbers mean that listeners are invoked earlier.
         ;
 
 .. ready: no
-.. revision: ccbf9d52105ab856682280927ed8c25273641728
+.. revision: 552c48865ad924b44c1ab3204f1e0c1e7e8587fc

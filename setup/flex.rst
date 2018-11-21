@@ -206,7 +206,7 @@ manual steps:
 
    .. code-block:: terminal
 
-       $ rm -fr vendor/*
+       $ rm -rf vendor/*
        $ composer install
 
 #. No matter which of the previous steps you followed. At this point, you'll have
@@ -282,4 +282,4 @@ manual steps:
 .. _`Symfony Requirements Checker`: https://github.com/symfony/requirements-checker
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 9545e2adc2bd5fd5e5f1dd616f4e14213d4bca2d

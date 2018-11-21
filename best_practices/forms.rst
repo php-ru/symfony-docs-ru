@@ -161,7 +161,7 @@ blank, add the following in the ``Post`` object::
     class Post
     {
         /**
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          */
         public $title;
     }
@@ -221,4 +221,4 @@ submit. Both those actions will be almost identical. So it's much simpler to let
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: e7946d9619c9980039be5af7a5b6ced0df468ae5
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c

@@ -33,7 +33,7 @@ Basic Usage
         class Author
         {
             /**
-             * @Assert\Url()
+             * @Assert\Url
              */
              protected $bioUrl;
         }
@@ -469,4 +469,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c

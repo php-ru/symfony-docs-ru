@@ -29,7 +29,6 @@ Symfony application:
 
     quick_tour/
     ├─ .env
-    ├─ .env.dist
     ├─ bin/console
     ├─ composer.json
     ├─ composer.lock
@@ -201,4 +200,4 @@ Keep reading with :doc:`/quick_tour/flex_recipes`.
 .. _`Composer`: https://getcomposer.org/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

@@ -31,7 +31,7 @@ Then configure the ``DATABASE_URL`` environment variable in ``.env``:
 
 .. code-block:: text
 
-    # .env
+    # .env (or override DATABASE_URL in .env.local to avoid committing your changes)
 
     # customize this line!
     DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name"
@@ -164,4 +164,4 @@ mapping type:
 .. _`Custom Mapping Types`: http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#custom-mapping-types
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

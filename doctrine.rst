@@ -39,7 +39,7 @@ The database connection information is stored as an environment variable called
 
 .. code-block:: text
 
-    # .env
+    # .env (or override DATABASE_URL in .env.local to avoid committing your changes)
 
     # customize this line!
     DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name"
@@ -812,4 +812,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony-doctrine
 
 .. ready: no
-.. revision: 56b6d3063c8b4c66bb2c63d85c18a24da73eb8ba
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

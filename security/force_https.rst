@@ -80,7 +80,7 @@ access control:
 
 To make life easier while developing, you can also use an environment variable,
 like ``requires_channel: '%env(SECURE_SCHEME)%'``. In your ``.env`` file, set
-``SECURE_SCHEME`` to ``http`` locally, but ``https`` on production.
+``SECURE_SCHEME`` to ``http`` by default, but override it to ``https`` on production.
 
 See :doc:`/security/access_control` for more details about ``access_control``
 in general.
@@ -95,4 +95,4 @@ see :doc:`/routing/scheme` for more details.
     for more details.
 
 .. ready: no
-.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

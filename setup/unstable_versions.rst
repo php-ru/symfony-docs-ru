@@ -14,11 +14,8 @@ execute the following command:
 
 .. code-block:: terminal
 
-    # Download the latest beta version
-    $ composer create-project symfony/skeleton my_project "4.0.*" -s beta
-
     # Download the absolute latest commit
-    $ composer create-project symfony/skeleton my_project "4.0.*" -s dev
+    $ composer create-project symfony/skeleton my_project -s dev
 
 Once the command finishes its execution, you'll have a new Symfony project created
 in the ``my_project/`` directory.
@@ -77,4 +74,4 @@ Symfony version has deprecated some of its features.
         $ git branch -D testing_new_symfony
 
 .. ready: no
-.. revision: ce10e679cb547851a346b4099aa872e0fb489216
+.. revision: 43e6621d65f36d7e7f8a4cd12c8a99e419c51102

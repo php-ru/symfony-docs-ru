@@ -186,7 +186,7 @@ changes and push the new changes:
 
 **Step 10.** After your pull request is eventually accepted and merged in the
 Symfony documentation, you will be included in the `Symfony Documentation
-Contributors`_ list. Moreover, if you happen to have a `SensioLabsConnect`_
+Contributors`_ list. Moreover, if you happen to have a `SymfonyConnect`_
 profile, you will get a cool `Symfony Documentation Badge`_.
 
 Your Next Documentation Contributions
@@ -323,8 +323,8 @@ definitely don't want you to waste your time!
 .. _`GitHub`: https://github.com/
 .. _`fork the repository`: https://help.github.com/articles/fork-a-repo
 .. _`Symfony Documentation Contributors`: https://symfony.com/contributors/doc
-.. _`SensioLabsConnect`: https://connect.sensiolabs.com/
-.. _`Symfony Documentation Badge`: https://connect.sensiolabs.com/badge/36/symfony-documentation-contributor
+.. _`SymfonyConnect`: https://connect.symfony.com/
+.. _`Symfony Documentation Badge`: https://connect.symfony.com/badge/36/symfony-documentation-contributor
 .. _`sync your fork`: https://help.github.com/articles/syncing-a-fork
 .. _`Platform.sh`: https://platform.sh
 .. _`roadmap`: https://symfony.com/roadmap
@@ -334,4 +334,4 @@ definitely don't want you to waste your time!
 .. _`Sphinx Extensions for PHP and Symfony`: https://github.com/fabpot/sphinx-php
 
 .. ready: no
-.. revision: 7c3768740045ecc84f2d0648343d606aff03b53f
+.. revision: dde1a385ab17bbb6e8ac872f773f5aa26f635558

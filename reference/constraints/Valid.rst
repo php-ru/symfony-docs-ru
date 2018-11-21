@@ -56,7 +56,7 @@ stores an ``Address`` instance in the ``$address`` property::
         class Address
         {
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              */
             protected $street;
 
@@ -268,4 +268,4 @@ set to ``true``.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
