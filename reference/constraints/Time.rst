@@ -34,7 +34,7 @@ of the day when the event starts:
         class Event
         {
             /**
-             * @Assert\Time()
+             * @Assert\Time
              */
              protected $startsAt;
         }
@@ -101,4 +101,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

@@ -25,7 +25,7 @@ of course, by creating the ``Category`` object::
     class Category
     {
         /**
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          */
         public $name;
     }
@@ -40,7 +40,7 @@ Next, add a new ``category`` property to the ``Task`` class::
 
         /**
          * @Assert\Type(type="AppBundle\Entity\Category")
-         * @Assert\Valid()
+         * @Assert\Valid
          */
         protected $category;
 
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: 88c21633e96f6d6f7d8d9d73d030c881cfb825fc
+.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a

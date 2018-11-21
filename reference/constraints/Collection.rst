@@ -69,7 +69,7 @@ following:
              *     fields = {
              *         "personal_email" = @Assert\Email,
              *         "short_bio" = {
-             *             @Assert\NotBlank(),
+             *             @Assert\NotBlank,
              *             @Assert\Length(
              *                 max = 100,
              *                 maxMessage = "Your short bio is too long!"
@@ -352,4 +352,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: 0950d8daad0e067df12a2e708640add435d33193

@@ -32,7 +32,7 @@ Basic Usage
         class Author
         {
             /**
-             * @Assert\Url()
+             * @Assert\Url
              */
              protected $bioUrl;
         }
@@ -382,4 +382,4 @@ DNS check failed.
         }
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

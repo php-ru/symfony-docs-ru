@@ -170,7 +170,7 @@ blank, add the following in the ``Post`` object::
     class Post
     {
         /**
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          */
         public $title;
     }
@@ -238,4 +238,4 @@ is deprecated since version 3.2 and will throw an exception in 4.0.
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: 2d5e4afb41e30c179734b958c42f8a14700e10cb
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

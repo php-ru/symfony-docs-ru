@@ -178,7 +178,7 @@ entity and a new constraint group called ``Premium``:
         class User
         {
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              */
             private $name;
 
@@ -353,4 +353,4 @@ provides a sequence of groups to be validated:
         }
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

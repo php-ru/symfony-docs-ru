@@ -100,7 +100,7 @@ prefixed classes included in doc block comments (``/** ... */``). For example::
     class User
     {
         /**
-        * @Assert\NotBlank()
+        * @Assert\NotBlank
         */
         protected $name;
     }
@@ -196,4 +196,4 @@ You can set this custom implementation using
 .. _`Packagist`: https://packagist.org
 
 .. ready: no
-.. revision: d8fcd1c6e7b87e22f08fbb994d5734251ce84a69
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

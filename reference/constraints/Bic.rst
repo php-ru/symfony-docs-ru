@@ -34,7 +34,7 @@ will contain a Business Identifier Code (BIC).
         class Transaction
         {
             /**
-             * @Assert\Bic()
+             * @Assert\Bic
              */
             protected $businessIdentifierCode;
         }
@@ -105,4 +105,4 @@ You can use the following parameters in this message:
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

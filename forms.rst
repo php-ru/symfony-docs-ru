@@ -320,12 +320,12 @@ object.
         class Task
         {
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              */
             public $task;
 
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              * @Assert\Type("\DateTime")
              */
             protected $dueDate;
@@ -707,4 +707,4 @@ Learn more
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony3-forms
 
 .. ready: no
-.. revision: ecced684f39e76574274c8de7d54bf0250a8a5d4
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

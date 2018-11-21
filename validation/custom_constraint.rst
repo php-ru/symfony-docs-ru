@@ -65,6 +65,10 @@ The validator class is also simple, and only has one required method ``validate(
     {
         public function validate($value, Constraint $constraint)
         {
+            if (!$constraint instanceof ContainsAlphanumeric) {
+               throw new UnexpectedTypeException($constraint, ContainsAlphanumeric::class);
+            }
+            
             // custom constraints should ignore null and empty values to allow
             // other constraints (NotBlank, NotNull, etc.) take care of that
             if (null === $value || '' === $value) {
@@ -232,4 +236,4 @@ not to the property:
         </class>
 
 .. ready: no
-.. revision: 7883901621d0b1a362af62add66aba36f14e4cfe
+.. revision: 8265c4d947bd8f8e766357ba791bca9f9e32258f

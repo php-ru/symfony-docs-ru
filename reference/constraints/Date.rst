@@ -31,7 +31,7 @@ Basic Usage
         class Author
         {
             /**
-             * @Assert\Date()
+             * @Assert\Date
              */
              protected $birthday;
         }
@@ -98,4 +98,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a

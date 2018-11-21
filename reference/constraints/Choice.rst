@@ -210,7 +210,7 @@ constraint.
             }
         }
 
-If the callback is stored in a different class and is static, for example ``Util``,
+If the callback is stored in a different class and is static, for example ``AppBundle\Entity\Genre``,
 you can pass the class name and the method as an array.
 
 .. configuration-block::
@@ -225,7 +225,7 @@ you can pass the class name and the method as an array.
         class Author
         {
             /**
-             * @Assert\Choice(callback={"Util", "getGenres"})
+             * @Assert\Choice(callback={"AppBundle\Entity\Genre", "getGenres"})
              */
             protected $genre;
         }
@@ -236,7 +236,7 @@ you can pass the class name and the method as an array.
         AppBundle\Entity\Author:
             properties:
                 genre:
-                    - Choice: { callback: [Util, getGenres] }
+                    - Choice: { callback: [AppBundle\Entity\Genre, getGenres] }
 
     .. code-block:: xml
 
@@ -250,7 +250,7 @@ you can pass the class name and the method as an array.
                 <property name="genre">
                     <constraint name="Choice">
                         <option name="callback">
-                            <value>Util</value>
+                            <value>AppBundle\Entity\Genre</value>
                             <value>getGenres</value>
                         </option>
                     </constraint>
@@ -263,6 +263,7 @@ you can pass the class name and the method as an array.
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
+        use AppBundle\Entity\Genre;
         use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
 
@@ -273,7 +274,7 @@ you can pass the class name and the method as an array.
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('genre', new Assert\Choice(array(
-                    'callback' => array('Util', 'getGenres'),
+                    'callback' => array(Genre::class, 'getGenres'),
                 )));
             }
         }
@@ -412,4 +413,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: 91a9140e5652430b4a9f669c6896dd07ec1e1350

@@ -63,19 +63,19 @@ With some validation added, your class may look something like this::
 
         /**
          * @ORM\Column(type="string", length=255, unique=true)
-         * @Assert\NotBlank()
-         * @Assert\Email()
+         * @Assert\NotBlank
+         * @Assert\Email
          */
         private $email;
 
         /**
          * @ORM\Column(type="string", length=255, unique=true)
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          */
         private $username;
 
         /**
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          * @Assert\Length(max=4096)
          */
         private $plainPassword;
@@ -458,4 +458,4 @@ us to add validation, even though there is no ``termsAccepted`` property on ``Us
 .. _`bcrypt`: https://en.wikipedia.org/wiki/Bcrypt
 
 .. ready: no
-.. revision: 6a5a17a7611369f71646c4f37c6ba1d2ab55ef0b
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

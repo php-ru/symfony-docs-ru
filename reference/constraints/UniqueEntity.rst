@@ -53,7 +53,7 @@ your user table:
              * @var string $email
              *
              * @ORM\Column(name="email", type="string", length=255, unique=true)
-             * @Assert\Email()
+             * @Assert\Email
              */
             protected $email;
 
@@ -303,4 +303,4 @@ also has a ``null`` value, validation would fail.
 .. _`race conditions`: https://en.wikipedia.org/wiki/Race_condition
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde

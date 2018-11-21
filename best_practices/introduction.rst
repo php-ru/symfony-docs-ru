@@ -102,8 +102,8 @@ practices**. The reasons for not doing it are various:
 
 Next: :doc:`/best_practices/creating-the-project`
 
-.. _`Fabien Potencier`: https://connect.sensiolabs.com/profile/fabpot
+.. _`Fabien Potencier`: https://connect.symfony.com/profile/fabpot
 .. _`download and install`: https://symfony.com/download
 
 .. ready: no
-.. revision: 54d87af0b9e7e6a417ab12c5bc4837ce9e36ab4a
+.. revision: 8265c4d947bd8f8e766357ba791bca9f9e32258f

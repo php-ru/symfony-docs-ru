@@ -34,7 +34,7 @@ Basic Usage
         class User
         {
             /**
-             * @Assert\Locale()
+             * @Assert\Locale
              */
              protected $locale;
         }
@@ -104,4 +104,4 @@ You can use the following parameters in this message:
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a
