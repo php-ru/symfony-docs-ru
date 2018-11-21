@@ -20,7 +20,7 @@ clicked a link:
         const player = new VideoPlayer('some-element');
     });
 
-In this example, the VidePlayer module and everything it imports will be packaged
+In this example, the VideoPlayer module and everything it imports will be packaged
 into the final, built JavaScript file, even though it may not be very common for
 someone to actually need it. A better solution is to use `dynamic imports`_: load
 the code via AJAX when it's needed:
@@ -64,4 +64,4 @@ documentation.
 .. _`dynamic imports`: https://webpack.js.org/guides/code-splitting/#dynamic-imports
 
 .. ready: no
-.. revision: 12ca7d9b70f6269aec1c69354136b00d4690b924
+.. revision: 65fb552b0c0764e45c1c7cc9e793798504471af2

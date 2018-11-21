@@ -47,7 +47,7 @@ to a post record thanks to a foreign key constraint.
     ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 Before diving into the recipe, be sure your database connection parameters are
-correctly setup in the ``.env`` file.
+correctly setup in the ``.env`` file (or ``.env.local`` override file).
 
 The first step towards building entity classes from an existing database
 is to ask Doctrine to introspect the database and generate the corresponding
@@ -98,4 +98,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`doctrine/doctrine#729`: https://github.com/doctrine/DoctrineBundle/issues/729
 
 .. ready: no
-.. revision: 26ccc3b225c289339b1c09fce3f2afa78c9ad8ce
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

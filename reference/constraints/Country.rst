@@ -29,7 +29,7 @@ Basic Usage
         class User
         {
             /**
-             * @Assert\Country()
+             * @Assert\Country
              */
              protected $country;
         }
@@ -98,4 +98,4 @@ You can use the following parameters in this message:
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c

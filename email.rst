@@ -34,6 +34,8 @@ environment variable in the ``.env`` file:
 
 .. code-block:: bash
 
+    # .env (or override MAILER_URL in .env.local to avoid committing your changes)
+
     # use this to disable email delivery
     MAILER_URL=null://localhost
 
@@ -171,4 +173,4 @@ Learn more
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227
+.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97

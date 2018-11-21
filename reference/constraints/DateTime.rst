@@ -31,7 +31,7 @@ Basic Usage
         class Author
         {
             /**
-             * @Assert\DateTime()
+             * @Assert\DateTime
              * @var string A "Y-m-d H:i:s" formatted value
              */
              protected $createdAt;
@@ -112,4 +112,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 4fc5a88f2ecef8cc53a5fd756466964843c6d72b
+.. revision: 2ebb3d5057c8024355ce173f6d0e0ea215053c71

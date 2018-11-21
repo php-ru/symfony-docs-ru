@@ -64,19 +64,19 @@ With some validation added, your class may look something like this::
 
         /**
          * @ORM\Column(type="string", length=255, unique=true)
-         * @Assert\NotBlank()
-         * @Assert\Email()
+         * @Assert\NotBlank
+         * @Assert\Email
          */
         private $email;
 
         /**
          * @ORM\Column(type="string", length=255, unique=true)
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          */
         private $username;
 
         /**
-         * @Assert\NotBlank()
+         * @Assert\NotBlank
          * @Assert\Length(max=4096)
          */
         private $plainPassword;
@@ -425,4 +425,4 @@ after registration is successful.
 .. _`bcrypt`: https://en.wikipedia.org/wiki/Bcrypt
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c

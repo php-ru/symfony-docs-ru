@@ -25,19 +25,19 @@ also contact all of them at once by emailing **coc@symfony.com**:
 
   * *E-mail*: emilie.lorenzo [at] symfony.com
   * *Twitter*: `@EmilieLorenzo <https://twitter.com/EmilieLorenzo>`_
-  * *SensioConnect*: `emilielorenzo <https://connect.sensiolabs.com/profile/emilielorenzo>`_
+  * *SymfonyConnect*: `emilielorenzo <https://connect.symfony.com/profile/emilielorenzo>`_
 
 * **Michelle Sanver**
 
   * *E-mail*: hello [at] michellesanver.com
   * *Twitter*: `@michellesanver <https://twitter.com/michellesanver>`_
-  * *SensioConnect*: `michellesanver <https://connect.sensiolabs.com/profile/michellesanver>`_
+  * *SymfonyConnect*: `michellesanver <https://connect.symfony.com/profile/michellesanver>`_
 
 * **Tobias Nyholm**
 
   * *E-mail*: tobias.nyholm [at] gmail.com
   * *Twitter*: `@tobiasnyholm <https://twitter.com/tobiasnyholm>`_
-  * *SensioConnect*: `tobias <https://connect.sensiolabs.com/profile/tobias>`_
+  * *SymfonyConnect*: `tobias <https://connect.symfony.com/profile/tobias>`_
 
 About the CARE Team
 -------------------
@@ -48,4 +48,4 @@ team with candidates they see fit. The CARE team will consist of at least
 ideally from different employers.
 
 .. ready: no
-.. revision: f38851d9f4b07f34be7d9761b5b1df87d703e38e
+.. revision: dde1a385ab17bbb6e8ac872f773f5aa26f635558

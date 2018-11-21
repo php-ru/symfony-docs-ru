@@ -42,7 +42,7 @@ of an ``Author`` class were blank, you could do the following:
         class Author
         {
             /**
-             * @Assert\Blank()
+             * @Assert\Blank
              */
             protected $firstName;
         }
@@ -107,4 +107,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c

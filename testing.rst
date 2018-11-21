@@ -179,18 +179,7 @@ As an example, a test could look like this::
     To run your functional tests, the ``WebTestCase`` class needs to know which
     is the application kernel to bootstrap it. The kernel class is usually
     defined in the ``KERNEL_CLASS`` environment variable (included in the
-    default ``phpunit.xml.dist`` file provided by Symfony):
-
-    .. code-block:: xml
-
-        <?xml version="1.0" charset="utf-8" ?>
-        <phpunit>
-            <php>
-                <!-- the value is the FQCN of the application kernel -->
-                <env name="KERNEL_CLASS" value="App\Kernel" />
-            </php>
-            <!-- ... -->
-        </phpunit>
+    default ``.env.test`` file provided by Symfony):
 
     If your use case is more complex, you can also override the
     ``createKernel()`` or ``getKernelClass()`` methods of your functional test,
@@ -939,6 +928,33 @@ method::
         'debug'       => false,
     ));
 
+Customizing Database URL / Environment Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need to customize some environment variables for your tests (e.g. the
+``DATABASE_URL`` used by Doctrine), you can do that by overriding anything you
+need in your ``.env.test`` file:
+
+.. code-block:: text
+
+    # .env.test
+    DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name_test"
+
+    # use SQLITE
+    # DATABASE_URL="sqlite:///%kernel.project_dir%/var/app.db"
+
+This file is automatically read in the ``test`` environment: any keys here override
+the defaults in ``.env``.
+
+.. caution::
+
+    Applications created before November 2018 had a slightly different system,
+    involving a ``.env.dist`` file. For information about upgrading, see:
+    :doc:`configuration/dot-env-changes`.
+
+Sending Custom Headers
+~~~~~~~~~~~~~~~~~~~~~~
+
 If your application behaves according to some HTTP headers, pass them as the
 second argument of ``createClient()``::
 
@@ -1052,4 +1068,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14
+.. revision: 1a678d61c6c489188a0d0130cf32b55085021c35

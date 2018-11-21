@@ -102,8 +102,8 @@ for not doing it are various:
 
 Next: :doc:`/best_practices/creating-the-project`
 
-.. _`Fabien Potencier`: https://connect.sensiolabs.com/profile/fabpot
+.. _`Fabien Potencier`: https://connect.symfony.com/profile/fabpot
 .. _`Symfony Demo`: https://github.com/symfony/demo
 
 .. ready: no
-.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1
+.. revision: a1d6bbb360cf77dd4d82f86a9097702bd1438f2a

@@ -62,7 +62,7 @@ following:
         class Author
         {
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              */
             public $name;
         }
@@ -541,7 +541,7 @@ class to have at least 3 characters.
         class Author
         {
             /**
-             * @Assert\NotBlank()
+             * @Assert\NotBlank
              * @Assert\Length(min=3)
              */
             private $firstName;
@@ -727,4 +727,4 @@ Learn more
 .. _JSR303 Bean Validation specification: http://jcp.org/en/jsr/detail?id=303
 
 .. ready: no
-.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227
+.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
