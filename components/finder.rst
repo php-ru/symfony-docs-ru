@@ -51,9 +51,9 @@ the Finder instance.
 
 .. tip::
 
-    A Finder instance is a PHP :phpclass:`Iterator`. So, in addition to iterating over the
+    A Finder instance is a PHP :phpclass:`IteratorAggregate`. So, in addition to iterating over the
     Finder with ``foreach``, you can also convert it to an array with the
-    :phpfunction:`iterator_to_array` method, or get the number of items with
+    :phpfunction:`iterator_to_array` function, or get the number of items with
     :phpfunction:`iterator_count`.
 
 .. caution::
@@ -338,4 +338,4 @@ The contents of returned files can be read with
 .. _Packagist:    https://packagist.org/packages/symfony/finder
 
 .. ready: no
-.. revision: 451d44b3d4d92a5ef1fdee7719353ccff90855b1
+.. revision: f380e04a6821f21029da6a980d4dff392c9c5212
