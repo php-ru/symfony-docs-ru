@@ -51,9 +51,9 @@ the Finder instance.
 
 .. tip::
 
-    A Finder instance is a PHP :phpclass:`Iterator`. So, in addition to iterating over the
+    A Finder instance is a PHP :phpclass:`IteratorAggregate`. So, in addition to iterating over the
     Finder with ``foreach``, you can also convert it to an array with the
-    :phpfunction:`iterator_to_array` method, or get the number of items with
+    :phpfunction:`iterator_to_array` function, or get the number of items with
     :phpfunction:`iterator_count`.
 
 .. caution::
@@ -346,4 +346,4 @@ The contents of returned files can be read with
 .. _`natural sort order`: https://en.wikipedia.org/wiki/Natural_sort_order
 
 .. ready: no
-.. revision: 28287958b6fc337fdfcfe9a6851cfcb5c026709b
+.. revision: 4a747e803f7e6f9870fb674329d69be46e34d421
