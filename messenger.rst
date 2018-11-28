@@ -658,8 +658,8 @@ within the buses to add some extra capabilities like this:
             ),
         ));
 
-Note that if the service is abstract, a different instance of service will be
-created per bus.
+Note that if the service is abstract, a different instance of the service will
+be created per bus.
 
 Using Middleware Factories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -683,9 +683,9 @@ This middleware can be configured to define the entity manager to use:
                     command_bus:
                         middleware:
                             # Using the default configured entity manager name
-                            - doctrine_transaction_middleware
+                            - doctrine_transaction
                             # Using another entity manager
-                            - doctrine_transaction_middleware: ['custom']
+                            - doctrine_transaction: ['custom']
 
     .. code-block:: xml
 
@@ -703,9 +703,9 @@ This middleware can be configured to define the entity manager to use:
                 <framework:messenger>
                     <framework:bus name="command_bus">
                         <!-- Using the default configured entity manager name -->
-                        <framework:middleware id="doctrine_transaction_middleware" />
+                        <framework:middleware id="doctrine_transaction" />
                         <!-- Using another entity manager -->
-                        <framework:middleware id="doctrine_transaction_middleware">
+                        <framework:middleware id="doctrine_transaction">
                             <framework:argument>custom</framework:argument>
                         </framework:middleware>
                     </framework:bus>
@@ -722,9 +722,9 @@ This middleware can be configured to define the entity manager to use:
                     'command_bus' => array(
                         'middleware' => array(
                             // Using the default configured entity manager name
-                            'doctrine_transaction_middleware',
+                            'doctrine_transaction',
                             // Using another entity manager
-                            array('id' => 'doctrine_transaction_middleware', 'arguments' => array('custom')),
+                            array('id' => 'doctrine_transaction', 'arguments' => array('custom')),
                         ),
                     ),
                 ),
@@ -931,4 +931,4 @@ will give you access to the following services:
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: 64bda4bca74e39678d844c3a61bef55df0373cfd
+.. revision: fbc4925a2a7e49d95a09a454bb449781ad6a49c5

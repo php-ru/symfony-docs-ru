@@ -198,7 +198,7 @@ looking for mapping information::
 
         /**
          * @ORM\OneToMany(
-         *      targetEntity="Comment",
+         *      targetEntity="App\Entity\Comment",
          *      mappedBy="post",
          *      orphanRemoval=true
          * )
@@ -274,4 +274,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1
+.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7

@@ -241,7 +241,7 @@ logic to a separate service::
             $fileName = md5(uniqid()).'.'.$file->guessExtension();
 
             try {
-                $file->move($this->getTargetDir(), $fileName);
+                $file->move($this->getTargetDirectory(), $fileName);
             } catch (FileException $e) {
                 // ... handle exception if something happens during file upload
             }
@@ -481,4 +481,4 @@ controller.
 .. _`VichUploaderBundle`: https://github.com/dustin10/VichUploaderBundle
 
 .. ready: no
-.. revision: 1ea6d88c4cb0c72918e102a46f4c0277141912f2
+.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7

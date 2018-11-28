@@ -43,6 +43,28 @@ Concepts
 
 **Handler**:
    Responsible for handling messages using the business logic applicable to the messages.
+   Handlers are called by the ``HandleMessageMiddleware`` middleware.
+
+**Middleware**:
+   Middleware can access the message and its wrapper (the envelope) while it is
+   dispatched through the bus.
+   Literally *"the software in the middle"*, those are not about core concerns
+   (business logic) of an application. Instead, they are cross cutting concerns
+   applicable throughout the application and affecting the entire message bus.
+   For instance: logging, validating a message, starting a transaction, ...
+   They are also responsible for calling the next middleware in the chain,
+   which means they can tweak the envelope, by adding stamps to it or even
+   replacing it, as well as interrupt the middleware chain.
+
+**Envelope**
+   Messenger specific concept, it gives full flexibility inside the message bus,
+   by wrapping the messages into it, allowing to add useful information inside
+   through *envelope stamps*.
+
+**Envelope Stamps**
+   Piece of information you need to attach to your message: serializer context
+   to use for transport, markers identifying a received message or any sort of
+   metadata your middleware or transport layer may use.
 
 Bus
 ---
@@ -53,9 +75,9 @@ middleware stack. The component comes with a set of middleware that you can use.
 When using the message bus with Symfony's FrameworkBundle, the following middleware
 are configured for you:
 
-#. ``LoggingMiddleware`` (logs the processing of your messages)
-#. ``SendMessageMiddleware`` (enables asynchronous processing)
-#. ``HandleMessageMiddleware`` (calls the registered handler)
+#. :class:`Symfony\\Component\\Messenger\\Middleware\\LoggingMiddleware` (logs the processing of your messages)
+#. :class:`Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware` (enables asynchronous processing)
+#. :class:`Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware` (calls the registered handler(s))
 
 Example::
 
@@ -74,7 +96,7 @@ Example::
 
 .. note::
 
-    Every middleware needs to implement the ``MiddlewareInterface``.
+    Every middleware needs to implement the :class:`Symfony\\Component\\Messenger\\Middleware\\MiddlewareInterface`.
 
 Handlers
 --------
@@ -144,7 +166,7 @@ Hence you can inspect the envelope content and its stamps, or add any::
             if (null !== $envelope->get(ReceivedStamp::class)) {
                 // Message just has been received...
 
-                // You could for example add another item.
+                // You could for example add another stamp.
                 $envelope = $envelope->with(new AnotherStamp(/* ... */));
             }
 
@@ -154,7 +176,13 @@ Hence you can inspect the envelope content and its stamps, or add any::
 
 The above example will forward the message to the next middleware with an additional
 stamp *if* the message has just been received (i.e. has the `ReceivedStamp` stamp).
-You can create your own items by implementing :class:`Symfony\\Component\\Messenger\\Stamp\\StampInterface`.
+You can create your own stamps by implementing :class:`Symfony\\Component\\Messenger\\Stamp\\StampInterface`.
+
+.. note::
+
+    Any stamp must be serializable using the Symfony Serializer component
+    if going through transport using the :class:`Symfony\\Component\\Messenger\\Transport\\Serialization\\Serializer`
+    base serializer.
 
 Transports
 ----------
@@ -165,7 +193,8 @@ transport will be responsible for communicating with your message broker or 3rd 
 Your own Sender
 ~~~~~~~~~~~~~~~
 
-Using the ``SenderInterface``, you can create your own message sender.
+Using the :class:`Symfony\\Component\\Messenger\\Transport\\Sender\\SenderInterface`,
+you can create your own message sender.
 Imagine that you already have an ``ImportantAction`` message going through the
 message bus and being handled by a handler. Now, you also want to send this
 message as an email.
@@ -273,4 +302,4 @@ middleware will know it should not route these messages again to a transport.
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: dcc498cfba2cd9fb92c5781995354806e6372c29
+.. revision: fbc4925a2a7e49d95a09a454bb449781ad6a49c5
