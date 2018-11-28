@@ -21,6 +21,16 @@ Install UglifyJS
 UglifyJS is available as a `Node.js`_ module. First, you need to `install Node.js`_
 and then, decide the installation method: global or local.
 
+.. caution::
+
+    Some Linux distributions rename the Node.js binary from ``node`` to ``nodejs``.
+    This may result in errors like *"/usr/bin/env: node: No such file or
+    directory"*. You can solve this problem with a symlink:
+
+    .. code-block:: terminal
+
+        $ ln -s /usr/bin/nodejs /usr/bin/node
+
 Global Installation
 ~~~~~~~~~~~~~~~~~~~
 
@@ -300,4 +310,4 @@ not in debug mode.
 .. _`package.json`: http://browsenpm.org/package.json
 
 .. ready: no
-.. revision: c02b5cc4272e9297d5a8314a1186c08f5064c074
+.. revision: 89cf0f15133eff404ccd0d113c4c515aed680424

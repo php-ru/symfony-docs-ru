@@ -381,11 +381,7 @@ following method to the ``ProductRepository`` class::
             WHERE p.id = :id'
         )->setParameter('id', $productId);
 
-        try {
-            return $query->getSingleResult();
-        } catch (\Doctrine\ORM\NoResultException $exception) {
-            return null;
-        }
+        return $query->getOneOrNullResult();
     }
 
 Now, you can use this method in your controller to query for a ``Product``
@@ -422,4 +418,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/symfony3-doctrine-relations
 
 .. ready: no
-.. revision: ecced684f39e76574274c8de7d54bf0250a8a5d4
+.. revision: 6bfddaca45425359f54225ee58da1dab5f4949fe

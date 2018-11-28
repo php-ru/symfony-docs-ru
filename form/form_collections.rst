@@ -469,7 +469,7 @@ you will learn about next!).
             // ...
 
             /**
-             * @ORM\ManyToMany(targetEntity="Tag", cascade={"persist"})
+             * @ORM\ManyToMany(targetEntity="App\Entity\Tag", cascade={"persist"})
              */
             protected $tags;
 
@@ -481,7 +481,7 @@ you will learn about next!).
                 # ...
                 oneToMany:
                     tags:
-                        targetEntity: Tag
+                        targetEntity: App\Entity\Tag
                         cascade:      [persist]
 
         .. code-block:: xml
@@ -721,4 +721,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: 6f7010f1b512de4c870f9166b58d4c44c8603111
+.. revision: 1633ff06cded515dbe7b9de04c6d2f7c50b51419
