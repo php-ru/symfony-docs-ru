@@ -218,7 +218,7 @@ Consider this example:
         class Service
         {
             /**
-             * @ORM\ManyToOne(targetEntity="Host")
+             * @ORM\ManyToOne(targetEntity="App\Entity\Host")
              */
             public $host;
 
@@ -299,4 +299,4 @@ also has a ``null`` value, validation would fail.
 .. _`race conditions`: https://en.wikipedia.org/wiki/Race_condition
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7

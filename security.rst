@@ -177,18 +177,18 @@ create dummy database users:
     $ php bin/console make:fixtures
 
     The class name of the fixtures to create (e.g. AppFixtures):
-    > UserFixture
+    > UserFixtures
 
 Use this service to encode the passwords:
 
 .. code-block:: diff
 
-    // src/DataFixtures/UserFixture.php
+    // src/DataFixtures/UserFixtures.php
 
     + use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
     // ...
 
-    class UserFixture extends Fixture
+    class UserFixtures extends Fixture
     {
     +     private $passwordEncoder;
 
@@ -1012,4 +1012,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://github.com/symfony/maker-bundle
 
 .. ready: no
-.. revision: f9d7c7547b78f7fcf9d308b5ef833213de34cdb9
+.. revision: 3e765e0d9d0941e44de39dfa540fe7ffb709841c
