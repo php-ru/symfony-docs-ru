@@ -2026,7 +2026,7 @@ settings from the base pool as defaults.
 
 .. note::
 
-    Your service MUST implement the ``Psr\\Cache\\CacheItemPoolInterface`` interface.
+    Your service MUST implement the ``Psr\Cache\CacheItemPoolInterface`` interface.
 
 public
 """"""
@@ -2112,4 +2112,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`error_reporting PHP option`: https://secure.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting
 
 .. ready: no
-.. revision: 90c2b622c54b187111ec2359aa6d0241a06575ce
+.. revision: 4e24dbc77b5665516e5ddfac9355a636c2fdeba4

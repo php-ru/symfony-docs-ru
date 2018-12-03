@@ -61,6 +61,12 @@ You can also provide a category name to an event::
 You can consider categories as a way of tagging events. For example, the
 Symfony Profiler tool uses categories to nicely color-code different events.
 
+.. tip::
+
+    When you want to show events in the Symfony profiler, autowire
+    ``Symfony\Component\Stopwatch\Stopwatch`` into your service. Each category
+    is shown on a separate line.
+
 Periods
 -------
 
@@ -120,4 +126,4 @@ method and specifying the id of the section to be reopened::
 .. _Packagist: https://packagist.org/packages/symfony/stopwatch
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 5d33840ac2c96fd455e4c2823541fab0af27d79f

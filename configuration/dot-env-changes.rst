@@ -30,6 +30,10 @@ important changes:
   other environments. You can also create a ``.env.test`` file for test-environment
   overrides.
 
+* E) If you pass the ``--env=`` flag when running ``bin/console``, this value will
+  override your ``APP_ENV`` environment variable (if set). And so, if you pass
+  ``--env=prod``, the DotEnv component *will* try to load your ``.env*`` files.
+
 There are a few other improvements, but these are the most important. To take advantage
 of these, you *will* need to modify a few files in your existing app.
 
@@ -52,29 +56,29 @@ changes can be made to any Symfony 3.4 or higher app:
 
 #. Update ``.gitignore``:
 
-    .. code-block:: diff
+   .. code-block:: diff
 
-        # .gitignore
-        # ...
+       # .gitignore
+       # ...
 
-        ###> symfony/framework-bundle ###
-        - /.env
-        + /.env.local
-        + /.env.*.local
+       ###> symfony/framework-bundle ###
+       - /.env
+       + /.env.local
+       + /.env.*.local
     
-        # ...
+       # ...
 
 #. Rename ``.env`` to ``.env.local`` and ``.env.dist`` to ``.env``:
 
-    .. code-block:: terminal
+   .. code-block:: terminal
 
-        # Unix
-        $ mv .env .env.local
-        $ git mv .env.dist .env
+       # Unix
+       $ mv .env .env.local
+       $ git mv .env.dist .env
 
-        # Windows
-        $ mv .env .env.local
-        $ git mv .env.dist .env
+       # Windows
+       $ mv .env .env.local
+       $ git mv .env.dist .env
 
     You can also update the `comment on the top of .env`_ to reflect the new changes.
 
@@ -92,4 +96,4 @@ changes can be made to any Symfony 3.4 or higher app:
 .. _`phpunit.xml.dist file`: https://github.com/symfony/recipes/blob/master/symfony/phpunit-bridge/3.3/phpunit.xml.dist
 
 .. ready: no
-.. revision: 6b30ba1c2810ac57b907939f2626bc110bb0c61c
+.. revision: 48594b413745a711caeaa0380d7a8ec89dc00338

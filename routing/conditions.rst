@@ -10,6 +10,32 @@ define arbitrary matching logic, use the ``conditions`` routing option:
 
 .. configuration-block::
 
+    .. code-block:: php-annotations
+
+        // src/Controller/DefaultController.php
+        namespace App\Controller;
+
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+        use Symfony\Component\Routing\Annotation\Route;
+
+        class DefaultController extends AbstractController
+        {
+            /**
+             * @Route(
+             *     "/contact",
+             *     name="contact",
+             *     condition="context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'"
+             * )
+             *
+             * expressions can also include config parameters 
+             * condition: "request.headers.get('User-Agent') matches '%app.allowed_browsers%'"
+             */
+            public function contact()
+            {
+                // ...
+            }
+        }
+
     .. code-block:: yaml
 
         # config/routes.yaml
@@ -95,4 +121,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: b506c94da93274e7c282d9f53ab6886954cb3a40
+.. revision: d781027e910bc7864bdc82ff7556b63982091a04
