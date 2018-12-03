@@ -119,7 +119,7 @@ to your ``composer.json`` autoload section:
         }
     }
 
-Then, run ``composer install`` to dump your new autoload config.
+Then, run ``composer dump-autoload`` to dump your new autoload config.
 
 Step 3) Define the Kernel Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -241,4 +241,4 @@ the default ``app/`` directory:
         └─ api_dev.php
 
 .. ready: no
-.. revision: a2dbf2b51d0d9d1c4f5f9408456494aca8812085
+.. revision: 5cd7a3ae00c4de13efec009dc7b8547a0002261a

@@ -431,7 +431,7 @@ The following example shows these functions in action:
     {% endfor %}
 
     {# Check if the object is in some specific place #}
-    {% if workflow_has_marked_place(post, 'to_review') %}
+    {% if workflow_has_marked_place(post, 'review') %}
         <p>This post is ready for review.</p>
     {% endif %}
 
@@ -441,4 +441,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: 466e40f90b569cbe21f1dba2bee97745ce9846ea
+.. revision: cd32577f7efffe1f4e6556472d5d7653456310ac

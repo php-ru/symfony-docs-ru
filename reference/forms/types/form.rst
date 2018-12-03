@@ -30,6 +30,7 @@ on all types for which ``FormType`` is the parent.
 |           | - `property_path`_                                                 |
 |           | - `required`_                                                      |
 |           | - `trim`_                                                          |
+|           | - `validation_groups`_                                             |
 +-----------+--------------------------------------------------------------------+
 | Inherited | - `attr`_                                                          |
 | options   | - `auto_initialize`_                                               |
@@ -130,6 +131,8 @@ The actual default value of this option depends on other field options:
 
 .. include:: /reference/forms/types/options/trim.rst.inc
 
+.. include:: /reference/forms/types/options/validation_groups.rst.inc
+
 Inherited Options
 -----------------
 
@@ -152,4 +155,4 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 .. include:: /reference/forms/types/options/translation_domain.rst.inc
 
 .. ready: no
-.. revision: 2d5e4afb41e30c179734b958c42f8a14700e10cb
+.. revision: 7d3fe7251921d1675601e2d9897ca4d9323fb6ed

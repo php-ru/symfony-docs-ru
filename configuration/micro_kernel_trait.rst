@@ -126,6 +126,8 @@ your ``composer.json`` file to load from there:
         }
     }
 
+Then, run ``composer dump-autoload`` to dump your new autoload config.
+    
 Now, suppose you want to use Twig and load routes via annotations. Instead of
 putting *everything* in ``index.php``, create a new ``app/AppKernel.php`` to
 hold the kernel. Now it looks like this::
@@ -350,4 +352,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features quite easily.
 
 .. ready: no
-.. revision: 509e05fecef09561d3928bb9612222b0ad8b07f4
+.. revision: 9827feab2089cfbbfb9077b45791a9bb17db4e46

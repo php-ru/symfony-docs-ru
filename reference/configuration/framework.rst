@@ -2072,7 +2072,7 @@ settings from the base pool as defaults.
 
 .. note::
 
-    Your service MUST implement the ``Psr\\Cache\\CacheItemPoolInterface`` interface.
+    Your service MUST implement the ``Psr\Cache\CacheItemPoolInterface`` interface.
 
 public
 """"""
@@ -2148,4 +2148,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`webpack-manifest-plugin`: https://www.npmjs.com/package/webpack-manifest-plugin
 
 .. ready: no
-.. revision: 370b86dd5f812ef061f81aae615085941918fc96
+.. revision: 4beae619e157e1ad0ff5e88994ed4e1d93681b68
