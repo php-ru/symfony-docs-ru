@@ -239,9 +239,9 @@ the ``decoration_priority`` option. Its value is an integer that defaults to
 
 The generated code will be the following::
 
-    $this->services[Foo:class] = new Baz(new Bar(new Foo()));
+    $this->services[Foo::class] = new Baz(new Bar(new Foo()));
 
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a
+.. revision: 1fcf7543084de66c0a978b7239df4dde71a36da9
