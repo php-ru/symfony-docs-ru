@@ -64,7 +64,7 @@ A registry will also help you to decide if a workflow supports the object you
 are trying to use it with::
 
     use Symfony\Component\Workflow\Registry;
-    use Symfony\Component\Workflow\WorkflowInterface\InstanceOfSupportStrategy;
+    use Symfony\Component\Workflow\SupportStrategy\InstanceOfSupportStrategy;
     use Acme\Entity\BlogPost;
     use Acme\Entity\Newsletter;
 
@@ -107,4 +107,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/workflow
 
 .. ready: no
-.. revision: e82895aab3643452799f5428addde0d881132ae7
+.. revision: c5733659f44849523f9dc5c646c17da1eb5b045f
