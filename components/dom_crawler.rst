@@ -214,12 +214,16 @@ Extract attribute and/or node values from the list of nodes::
 
     $attributes = $crawler
         ->filterXpath('//body/p')
-        ->extract(array('_text', 'class'))
+        ->extract(array('_name', '_text', 'class'))
     ;
 
 .. note::
 
-    Special attribute ``_text`` represents a node value.
+    Special attribute ``_text`` represents a node value, while ``_name``
+    represents the element name (the HTML tag name).
+
+    .. versionadded:: 4.3
+        The special attribute ``_name`` was introduced in Symfony 4.3.
 
 Call an anonymous function on each node of the list::
 
@@ -565,4 +569,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14
+.. revision: 1310e0dc917f676f75662d6fe1053b3adaa695b6

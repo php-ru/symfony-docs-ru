@@ -6,7 +6,7 @@
 Requirements for Running Symfony
 ================================
 
-Symfony 4.0 requires **PHP 7.1.3** or higher to run, in addition to other minor
+Symfony 4 requires **PHP 7.1.3** or higher to run, in addition to other minor
 requirements. To make things simple, Symfony provides a tool to quickly check if
 your system meets all those requirements. Run this command to install the tool:
 
@@ -41,4 +41,4 @@ check the requirements automatically. There's no need to execute any command; if
 there is any issue, you'll see them in the console output.
 
 .. ready: no
-.. revision: 51ea313e6524d2b0412e62d1a7c16eb364f317c7
+.. revision: 56de0779dc743c702437305d6faa25c3d219dde8

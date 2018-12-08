@@ -2090,7 +2090,7 @@ settings from the base pool as defaults.
 
 .. note::
 
-    Your service MUST implement the ``Psr\\Cache\\CacheItemPoolInterface`` interface.
+    Your service MUST implement the ``Psr\Cache\CacheItemPoolInterface`` interface.
 
 public
 """"""
@@ -2177,4 +2177,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: e8b0c11cc6b265f12f24280cc5ab8c78b3f2dda6
+.. revision: bd21549fd64292ca3864e2979c7e1900bc9da2ed

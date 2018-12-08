@@ -111,7 +111,7 @@ Symfony application by executing the following command:
 
 .. code-block:: terminal
 
-    $ composer create-project symfony/skeleton:4.1.* my-project
+    $ composer create-project symfony/skeleton my-project
 
 .. note::
 
@@ -282,4 +282,4 @@ manual steps:
 .. _`Symfony Requirements Checker`: https://github.com/symfony/requirements-checker
 
 .. ready: no
-.. revision: 9545e2adc2bd5fd5e5f1dd616f4e14213d4bca2d
+.. revision: 2804543a478b56350c64d5c5f8ad8dfa474f6a9c

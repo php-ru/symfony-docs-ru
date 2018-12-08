@@ -48,7 +48,8 @@ Structuring the Application
 ---------------------------
 
 After creating the application, enter the ``blog/`` directory and you'll see a
-number of files and directories generated automatically:
+number of files and directories generated automatically. These are the most
+important ones:
 
 .. code-block:: text
 
@@ -100,4 +101,4 @@ Next: :doc:`/best_practices/configuration`
 .. _`Symfony Skeleton`: https://github.com/symfony/skeleton
 
 .. ready: no
-.. revision: cb132fd080bc7def6f26df3127a08627e94dc824
+.. revision: a7637586f23d8dbfebd30b712a3614dac1a545a5

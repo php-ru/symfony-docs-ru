@@ -83,12 +83,12 @@ Example::
 
     use App\Message\MyMessage;
     use Symfony\Component\Messenger\MessageBus;
-    use Symfony\Component\Messenger\Handler\Locator\HandlerLocator;
+    use Symfony\Component\Messenger\Handler\HandlersLocator;
     use Symfony\Component\Messenger\Middleware\HandleMessageMiddleware;
 
     $bus = new MessageBus([
-        new HandleMessageMiddleware(new HandlerLocator([
-            MyMessage::class => $handler,
+        new HandleMessageMiddleware(new HandlersLocator([
+            MyMessage::class => ['dummy' => $handler],
         ])),
     ]);
 
@@ -146,7 +146,7 @@ At the moment, the Symfony Messenger has the following built-in envelope stamps:
    a stamp that marks the message as sent by a specific sender.
    Allows accessing the sender FQCN and the alias if available from the
    :class:`Symfony\\Component\\Messenger\\Transport\\Sender\\SendersLocator`.
-#. :class:`Symfony\\Component\\Messenger\\Stamp\\ReceivedStamp`,
+#. :class:`Symfony\\Component\\Messenger\\Stamp\\HandledStamp`,
    a stamp that marks the message as handled by a specific handler.
    Allows accessing the handler returned value, the handler callable name
    and its alias if available from the :class:`Symfony\\Component\\Messenger\\Handler\\HandlersLocator`.
@@ -163,7 +163,7 @@ Hence you can inspect the envelope content and its stamps, or add any::
     {
         public function handle(Envelope $envelope, StackInterface $stack): Envelope
         {
-            if (null !== $envelope->get(ReceivedStamp::class)) {
+            if (null !== $envelope->last(ReceivedStamp::class)) {
                 // Message just has been received...
 
                 // You could for example add another stamp.
@@ -302,4 +302,4 @@ middleware will know it should not route these messages again to a transport.
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: fbc4925a2a7e49d95a09a454bb449781ad6a49c5
+.. revision: 9ddc7137b2bc6975966c4fc0aa62cc169a5280ac

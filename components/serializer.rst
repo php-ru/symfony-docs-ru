@@ -777,6 +777,9 @@ always as a collection.
 .. versionadded:: 4.1
     The ``as_collection`` option was introduced in Symfony 4.1.
 
+.. versionadded:: 4.2
+    Relying on the default value ``false`` is deprecated since Symfony 4.2.
+
 The ``XmlEncoder``
 ~~~~~~~~~~~~~~~~~~
 
@@ -795,14 +798,16 @@ The ``XmlEncoder`` will encode this object like that::
         <bar>1</bar>
     </response>
 
-Be aware that this encoder will consider keys beginning with ``@`` as attributes::
+Be aware that this encoder will consider keys beginning with ``@`` as attributes, and will use
+the key  ``#comment`` for encoding XML comments::
 
     $encoder = new XmlEncoder();
-    $encoder->encode(array('foo' => array('@bar' => 'value')));
+    $encoder->encode(array('foo' => array('@bar' => 'value'), 'qux' => array('#comment' => 'A comment));
     // will return:
     // <?xml version="1.0"?>
     // <response>
     //     <foo bar="value" />
+    //     <qux><!-- A comment --!><qux>
     // </response>
 
 You can pass the context key ``as_collection`` in order to have the results
@@ -814,8 +819,12 @@ always as a collection.
 .. tip::
 
     XML comments are ignored by default when decoding contents, but this
-    behavior can be changed with the optional ``$ignoredNodeTypes`` argument of
+    behavior can be changed with the optional ``$decoderIgnoredNodeTypes`` argument of
     the ``XmlEncoder`` class constructor.
+
+    Data with ``#comment`` keys are encoded to XML comments by default. This can be
+    changed with the optional ``$encoderIgnoredNodeTypes`` argument of the
+    ``XmlEncoder`` class constructor.
 
     .. versionadded:: 4.1
         XML comments are ignored by default starting from Symfony 4.1.
@@ -1471,4 +1480,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 48b1fec2b84edbf22f6fdd203d4e40998d898024
+.. revision: 9e3910a9865a1e74c703108846c6dddc9a6ff18f

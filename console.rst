@@ -35,6 +35,9 @@ want a command to create a user::
 
     class CreateUserCommand extends Command
     {
+        // the name of the command (the part after "bin/console")
+        protected static $defaultName = 'app:create-user';
+        
         protected function configure()
         {
             // ...
@@ -57,9 +60,6 @@ method. Then you can optionally define a help message and the
     protected function configure()
     {
         $this
-            // the name of the command (the part after "bin/console")
-            ->setName('app:create-user')
-
             // the short description shown while running "php bin/console list"
             ->setDescription('Creates a new user.')
 
@@ -387,4 +387,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 691c082c579b9f4503811ab1e73ed33f3b51b37e
+.. revision: d781027e910bc7864bdc82ff7556b63982091a04

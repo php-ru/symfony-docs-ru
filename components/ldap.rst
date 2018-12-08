@@ -155,10 +155,10 @@ method to update multiple attributes at once::
 
     $entryManager = $ldap->getEntryManager();
 
-    // Adding multiple email adresses at once
+    // Adding multiple email addresses at once
     $entryManager->applyOperations($entry->getDn(), array(
-        new UpdateOpteration(LDAP_MODIFY_BATCH_ADD, 'mail', 'new1@example.com'),
-        new UpdateOpteration(LDAP_MODIFY_BATCH_ADD, 'mail', 'new2@example.com'),
+        new UpdateOperation(LDAP_MODIFY_BATCH_ADD, 'mail', 'new1@example.com'),
+        new UpdateOperation(LDAP_MODIFY_BATCH_ADD, 'mail', 'new2@example.com'),
     ));
 
 Possible operation types are ``LDAP_MODIFY_BATCH_ADD``, ``LDAP_MODIFY_BATCH_REMOVE``,
@@ -176,4 +176,4 @@ operation type.
 .. _Packagist: https://packagist.org/packages/symfony/ldap
 
 .. ready: no
-.. revision: bb080652693b8cfd14ff9eaa7260414d2916e374
+.. revision: f5f92b53b53c803d96672880977dbe25327cea6a

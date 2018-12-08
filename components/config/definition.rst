@@ -568,7 +568,7 @@ tree with ``append()``::
     {
         $treeBuilder = new TreeBuilder('parameters');
 
-        $treeBuilder->getRootNode()
+        $node = $treeBuilder->getRootNode()
             ->isRequired()
             ->requiresAtLeastOneElement()
             ->useAttributeAsKey('name')
@@ -861,4 +861,4 @@ Otherwise the result is a clean array of configuration values::
     );
 
 .. ready: no
-.. revision: d70a0a6cf1b881bb28adc67d087223f892dfd5e5
+.. revision: e0260f81db13c22f0a2d65ee318a5d92188c5e3c

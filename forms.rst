@@ -711,15 +711,14 @@ Learn more
     :maxdepth: 1
     :glob:
 
-    form/*
-
-* :doc:`/controller/upload_file`
-* :doc:`/reference/forms/types`
-* :doc:`/http_cache/form_csrf_caching`
+    /form/*
+    /controller/upload_file
+    /reference/forms/types
+    /http_cache/form_csrf_caching
 
 .. _`Symfony Form component`: https://github.com/symfony/form
 .. _`DateTime`: https://php.net/manual/en/class.datetime.php
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony-forms
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: 4e24dbc77b5665516e5ddfac9355a636c2fdeba4
