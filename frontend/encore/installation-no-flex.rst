@@ -94,7 +94,7 @@ And the new ``assets/css/app.css`` file:
 
 .. code-block:: css
 
-    // assets/css/app.css
+    /* assets/css/app.css */
     body {
         background-color: lightgray;
     }
@@ -113,4 +113,4 @@ You'll customize and learn more about these file in :doc:`/frontend/encore/simpl
 .. _WebpackEncoreBundle: https://github.com/symfony/webpack-encore-bundle
 
 .. ready: no
-.. revision: 53f9ffeb254cf44688da7f13d16a12437647c6ca
+.. revision: c45250c36e4bef49c006a4654d698b809f422943

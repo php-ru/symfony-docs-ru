@@ -265,7 +265,7 @@ container for any services with the ``app.mail_transport`` tag::
             $taggedServices = $container->findTaggedServiceIds('app.mail_transport');
 
             foreach ($taggedServices as $id => $tags) {
-                // add the transport service to the ChainTransport service
+                // add the transport service to the TransportChain service
                 $definition->addMethodCall('addTransport', array(new Reference($id)));
             }
         }
@@ -560,4 +560,4 @@ application handlers.
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: a717bef6c0e7325f9f03024e5866d6b41fb538ad
+.. revision: 4e4eecc24e52e79988d02297352d1550d4f4aa22
