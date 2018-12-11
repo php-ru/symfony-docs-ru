@@ -62,8 +62,7 @@ If you're using the :ref:`default services.yaml configuration <service-container
 This means you can use them immediately without *any* configuration.
 
 However, to understand autowiring better, the following examples explicitly configure
-both services. Also, to keep things simple, configure ``TwitterClient`` to be a
-:ref:`public <container-public>` service:
+both services:
 
 .. configuration-block::
 
@@ -80,8 +79,6 @@ both services. Also, to keep things simple, configure ``TwitterClient`` to be a
             App\Service\TwitterClient:
                 # redundant thanks to _defaults, but value is overridable on each service
                 autowire: true
-                # not required, will help in our example
-                public: true
 
             App\Util\Rot13Transformer:
                 autowire: true
@@ -98,7 +95,7 @@ both services. Also, to keep things simple, configure ``TwitterClient`` to be a
                 <defaults autowire="true" autoconfigure="true" public="false" />
                 <!-- ... -->
 
-                <service id="App\Service\TwitterClient" autowire="true" public="true" />
+                <service id="App\Service\TwitterClient" autowire="true" />
 
                 <service id="App\Util\Rot13Transformer" autowire="true" />
             </services>
@@ -114,8 +111,7 @@ both services. Also, to keep things simple, configure ``TwitterClient`` to be a
 
         // the autowire method is new in Symfony 3.3
         // in earlier versions, use register() and then call setAutowired(true)
-        $container->autowire(TwitterClient::class)
-            ->setPublic(true);
+        $container->autowire(TwitterClient::class);
 
         $container->autowire(Rot13Transformer::class)
             ->setPublic(false);
@@ -133,11 +129,10 @@ Now, you can use the ``TwitterClient`` service immediately in a controller::
         /**
          * @Route("/tweet", methods={"POST"})
          */
-        public function tweet()
+        public function tweet(TwitterClient $twitterClient)
         {
             // fetch $user, $key, $status from the POST'ed data
 
-            $twitterClient = $this->container->get(TwitterClient::class);
             $twitterClient->tweet($user, $key, $status);
 
             // ...
@@ -507,4 +502,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _ROT13: https://en.wikipedia.org/wiki/ROT13
 
 .. ready: no
-.. revision: 42d8fb19742c614f2d40e20f0bb0e9188c7e2a97
+.. revision: cba024568624947dcd6860adddca38cd41f3d44d
