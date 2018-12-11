@@ -675,7 +675,7 @@ In addition to the query builder, you can also query with `Doctrine Query Langua
             FROM App\Entity\Product p
             WHERE p.price > :price
             ORDER BY p.price ASC'
-        )->setParameter('price', 1000);
+        )->setParameter('price', $price);
 
         // returns an array of Product objects
         return $query->execute();
@@ -696,7 +696,7 @@ Or directly with SQL if you need to::
             ORDER BY p.price ASC
             ';
         $stmt = $conn->prepare($sql);
-        $stmt->execute(['price' => 1000]);
+        $stmt->execute(['price' => $price]);
 
         // returns an array of arrays (i.e. a raw data set)
         return $stmt->fetchAll();
@@ -812,4 +812,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony-doctrine
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: 16e5b3e4563603f3a2a09ddd55184ba47a87d5ba
