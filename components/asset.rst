@@ -215,7 +215,7 @@ that path over and over again::
     // result: /static/images/logo.png?v1
 
     // Base path is ignored when using absolute paths
-    echo $package->getUrl('/logo.png');
+    echo $pathPackage->getUrl('/logo.png');
     // result: /logo.png?v1
 
 Request Context Aware Assets
@@ -239,7 +239,7 @@ class can take into account the context of the current request::
     // result: /somewhere/static/images/logo.png?v1
 
     // Both "base path" and "base url" are ignored when using absolute path for asset
-    echo $package->getUrl('/logo.png');
+    echo $pathPackage->getUrl('/logo.png');
     // result: /logo.png?v1
 
 Now that the request context is set, the ``PathPackage`` will prepend the
@@ -379,4 +379,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 5287c077eb87a63e75164505c33902fb84b7a493
+.. revision: f21f37d1c05f5a48eb850bef7e658bba3a5efee1
