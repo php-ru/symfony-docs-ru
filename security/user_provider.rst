@@ -14,7 +14,7 @@ that has two jobs:
 **Load the User for some Feature**
     Some features, like ``switch_user``, ``remember_me`` and many of the built-in
     :doc:`authentication providers </security/auth_providers>`, use the user provider
-    to load a User object via is "username" (or email, or whatever field you want).
+    to load a User object via its "username" (or email, or whatever field you want).
 
 Symfony comes with several built-in user providers:
 
@@ -184,4 +184,4 @@ Then, your ``isEqualTo()`` method will be called when comparing users.
 
 
 .. ready: no
-.. revision: 3e63a6ce9687559810e780b2842a4e0590db8b48
+.. revision: 5e61762014cc3a9b879d12229936816de831182a

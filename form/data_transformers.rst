@@ -13,8 +13,14 @@ to render the form, and then back into a ``DateTime`` object on submit.
 
 .. caution::
 
-    When a form field has the ``inherit_data`` option set, Data Transformers
-    won't be applied to that field.
+    When a form field has the ``inherit_data`` option set to ``true``, data transformers
+    are not applied to that field.
+
+.. seealso::
+
+    If, instead of transforming the representation of a value, you need to map
+    values to a form field and back, you should use a data mapper. Check out
+    :doc:`/form/data_mappers`.
 
 .. _simple-example-sanitizing-html-on-user-input:
 
@@ -459,4 +465,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 10fe12db817679dea227ea97dc6c5cdbca0a011c

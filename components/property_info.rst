@@ -59,10 +59,11 @@ provide it with a set of information extractors.
     // list of PropertyDescriptionExtractorInterface (any iterable)
     $descriptionExtractors = array($phpDocExtractor);
 
+    // list of PropertyAccessExtractorInterface (any iterable)
+    $accessExtractors = array($reflectionExtractor);
+
     // list of PropertyInitializableExtractorInterface (any iterable)
     $propertyInitializableExtractors = array($reflectionExtractor);
-
-    // list of PropertyAccessExtractorInterface (any iterable)
 
     $propertyInfo = new PropertyInfoExtractor(
         $listExtractors,
@@ -530,4 +531,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: 09db304a3eb5157be1360e06b478cb6d2208a3c4
+.. revision: 417ff90e5f9b82a59762408c488fdde55fba9ed4
