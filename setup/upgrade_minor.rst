@@ -46,7 +46,7 @@ Next, use Composer to download new versions of the libraries:
 
 .. code-block:: terminal
 
-    $ composer update "symfony/*" --with-all-dependencies
+    $ composer update "symfony/*"
 
 .. include:: /setup/_update_dep_errors.rst.inc
 
@@ -73,4 +73,4 @@ These documents can also be found in the `Symfony Repository`_.
 .. _`UPGRADE-4.1.md`: https://github.com/symfony/symfony/blob/4.1/UPGRADE-4.1.md
 
 .. ready: no
-.. revision: cef13f87c284359c4ca14c713b02bea1daccc6b8
+.. revision: b9033aac8958712b0a349e343cb8ebb36111b788
