@@ -82,18 +82,22 @@ but here's a short example::
     use Symfony\Component\Validator\Constraints\Length;
     use Symfony\Component\Validator\Constraints\NotBlank;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
-    $builder
-       ->add('firstName', TextType::class, array(
-           'constraints' => new Length(array('min' => 3)),
-       ))
-       ->add('lastName', TextType::class, array(
-           'constraints' => array(
-               new NotBlank(),
-               new Length(array('min' => 3)),
-           ),
-       ))
-    ;
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder
+           ->add('firstName', TextType::class, array(
+               'constraints' => new Length(array('min' => 3)),
+           ))
+           ->add('lastName', TextType::class, array(
+               'constraints' => array(
+                   new NotBlank(),
+                   new Length(array('min' => 3)),
+               ),
+           ))
+        ;
+    }
 
 .. tip::
 
@@ -112,4 +116,4 @@ but here's a short example::
     constraint, unless you :doc:`disable validation </form/disabling_validation>`.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 7e836ea7aaddb01dd14f81df6ce9027b053f849d
