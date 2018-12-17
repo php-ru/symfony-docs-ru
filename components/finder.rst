@@ -343,7 +343,7 @@ Restrict files by last modified dates with the
 
 Restrict by a date range by chaining calls or passing an array::
 
-    $finder->date('>= 2018-01-01')->size('<= 2018-12-31');
+    $finder->date('>= 2018-01-01')->date('<= 2018-12-31');
 
     // same as above
     $finder->date(array('>= 2018-01-01', '<= 2018-12-31'));
@@ -421,4 +421,4 @@ The contents of returned files can be read with
 .. _`natural sort order`: https://en.wikipedia.org/wiki/Natural_sort_order
 
 .. ready: no
-.. revision: 19fe2103fbd1bc012bf7e8aa48d846e5f7129179
+.. revision: 0d9c7c2b79da3d5c5b7e84b8862e5ae1ff35b4af
