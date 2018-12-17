@@ -84,7 +84,7 @@ available in the ``configure()`` method::
         {
             $this
                 // ...
-                ->addArgument('password', $this->requirePassword ? InputArgument::OPTIONAL : InputArgument::REQUIRED, 'User password')
+                ->addArgument('password', $this->requirePassword ? InputArgument::REQUIRED : InputArgument::OPTIONAL, 'User password')
             ;
         }
     }
@@ -328,4 +328,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 4706701528c6278107b5cea4e895f057279d6278
+.. revision: 9298445df9ca9e0e3782f771267a45ec00eff25a
