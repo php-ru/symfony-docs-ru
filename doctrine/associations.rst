@@ -136,7 +136,7 @@ not sure of the answer, don't worry! You can always change the settings later:
     >
     (press enter again to finish)
 
-This made changes to *two* changes. First, added a new ``category`` property to
+This made changes to *two* entities. First, it added a new ``category`` property to
 the ``Product`` entity (and getter & setter methods):
 
 .. configuration-block::
@@ -597,4 +597,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/doctrine-relations
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f982b42679d06c14d320d3a3ce4a7e92cfb81927
