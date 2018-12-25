@@ -159,58 +159,6 @@ If you use several handlers, you can also register a processor at the
 handler level or at the channel level instead of registering it globally
 (see the following sections).
 
-.. tip::
-
-    .. versionadded:: 2.4
-        The autoconfiguration of Monolog processors was introduced in Monolog bundle 2.4.
-
-    If you're using the :ref:`default services.yaml configuration <service-container-services-load-example>`,
-    processors implementing :class:`Monolog\\Processor\\ProcessorInterface`
-    are automatically registered as services and tagged with ``monolog.processor``,
-    so you can use them without adding any configuration. The same applies to the
-    built-in :class:`Symfony\\Bridge\\Monolog\\Processor\\TokenProcessor` and
-    :class:`Symfony\\Bridge\\Monolog\\Processor\\WebProcessor` processors, which
-    can be enabled as follows:
-
-    .. configuration-block::
-
-        .. code-block:: yaml
-
-            # config/services.yaml
-            services:
-                # Adds the current security token to log entries
-                Symfony\Bridge\Monolog\Processor\TokenProcessor: ~
-                # Adds the real client IP to log entries
-                Symfony\Bridge\Monolog\Processor\WebProcessor: ~
-
-        .. code-block:: xml
-
-            <!-- config/services.xml -->
-            <?xml version="1.0" encoding="UTF-8" ?>
-            <container xmlns="http://symfony.com/schema/dic/services"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
-
-                <services>
-                    <!-- Adds the current security token to log entries -->
-                    <service id="Symfony\Bridge\Monolog\Processor\TokenProcessor" />
-                    <!-- Adds the real client IP to log entries -->
-                    <service id="Symfony\Bridge\Monolog\Processor\WebProcessor" />
-                </services>
-            </container>
-
-        .. code-block:: php
-
-            // config/services.php
-            use Symfony\Bridge\Monolog\Processor\TokenProcessor;
-            use Symfony\Bridge\Monolog\Processor\WebProcessor;
-
-            // Adds the current security token to log entries
-            $container->register(TokenProcessor::class);
-            // Adds the real client IP to log entries
-            $container->register(WebProcessor::class);
-
 Registering Processors per Handler
 ----------------------------------
 
@@ -300,4 +248,4 @@ the ``monolog.processor`` tag:
             ->addTag('monolog.processor', array('channel' => 'main'));
 
 .. ready: no
-.. revision: e5631f0cb8a844c8b063a5f4a18ddf8a24a3f119
+.. revision: 78123c8c25a67e8aa8e53ff5bb33252c79bdabae

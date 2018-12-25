@@ -60,6 +60,7 @@ The validator class is also simple, and only has one required method ``validate(
     use Symfony\Component\Validator\Constraint;
     use Symfony\Component\Validator\ConstraintValidator;
     use Symfony\Component\Validator\Exception\UnexpectedTypeException;
+    use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
     class ContainsAlphanumericValidator extends ConstraintValidator
     {
@@ -243,4 +244,4 @@ not to the property:
         </class>
 
 .. ready: no
-.. revision: 643afc88b6a1e5abcf62f7df8e7399200b369dfb
+.. revision: d98467ef3885695e79114d3a331979cadf2b55fe
