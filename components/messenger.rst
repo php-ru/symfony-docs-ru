@@ -291,8 +291,17 @@ loop, the message bus will add a :class:`Symfony\\Component\\Messenger\\Asynchro
 envelope item to the message envelopes and the :class:`Symfony\\Component\\Messenger\\Asynchronous\\Middleware\\SendMessageMiddleware`
 middleware will know it should not route these messages again to a transport.
 
+Learn more
+----------
+.. toctree::
+    :maxdepth: 1
+    :glob:
+
+    /messenger
+    /messenger/*
+
 .. _blog posts about command buses: https://matthiasnoback.nl/tags/command%20bus/
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: a3691a1b2f637b874d1a09206c987ef5b3960f8b
+.. revision: 4a3f754e43e5f41f3dab74666760a484a9b1f868

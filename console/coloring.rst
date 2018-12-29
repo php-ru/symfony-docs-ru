@@ -9,9 +9,9 @@ output (e.g. important messages, titles, comments, etc.).
     By default, the Windows command console doesn't support output coloring. The
     Console component disables output coloring for Windows systems, but if your
     commands invoke other scripts which emit color sequences, they will be
-    wrongly displayed as raw escape characters. Install the `Cmder`_, `ConEmu`_, `ANSICON`_
-    ,`Mintty`_ (used by default in GitBash and Cygwin) or `Hyper`_ free applications
-    to add coloring support to your Windows command console.
+    wrongly displayed as raw escape characters. Install the `Cmder`_, `ConEmu`_,
+    `ANSICON`_, `Mintty`_ (used by default in GitBash and Cygwin) or `Hyper`_
+    free applications to add coloring support to your Windows command console.
 
 Using Color Styles
 ------------------
@@ -81,4 +81,4 @@ You can also set these colors and options directly inside the tag name::
 .. _Hyper: https://hyper.is/
 
 .. ready: no
-.. revision: 1a325bc24470ac8ce01645c15d23f43e21f41fdd
+.. revision: 70300b314a4f156bee424c645f27ed4accbd6564
