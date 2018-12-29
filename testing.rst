@@ -749,6 +749,10 @@ their type::
     // uploads a file
     $form['photo']->upload('/path/to/lucas.jpg');
 
+    // In the case of a multiple file upload
+    $form['my_form[field][O]']->upload('/path/to/lucas.jpg');
+    $form['my_form[field][1]']->upload('/path/to/lisa.jpg');
+
 .. tip::
 
     If you purposefully want to select "invalid" select/radio values, see
@@ -980,4 +984,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 4029897e95655270e6e90b6c84efb29633e1e1e9
+.. revision: 0fb4a46f9f5af04e18157dc2d39b72e0eca9c3b0

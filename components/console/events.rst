@@ -97,13 +97,24 @@ Whenever an exception is thrown by a command, the ``ConsoleEvents::EXCEPTION``
 event is dispatched. A listener can wrap or change the exception or do
 anything useful before the exception is thrown by the application.
 
-Listeners receive a
-:class:`Symfony\\Component\\Console\\Event\\ConsoleExceptionEvent` event::
+The ``ConsoleEvents::ERROR`` Event
+----------------------------------
 
-    use Symfony\Component\Console\Event\ConsoleExceptionEvent;
+**Typical Purposes**: Handle exceptions thrown during the execution of a
+command.
+
+Whenever an exception is thrown by a command, including those triggered from
+event listeners, the ``ConsoleEvents::ERROR`` event is dispatched. A listener
+can wrap or change the exception or do anything useful before the exception is
+thrown by the application.
+
+Listeners receive a
+:class:`Symfony\\Component\\Console\\Event\\ConsoleErrorEvent` event::
+
+    use Symfony\Component\Console\Event\ConsoleErrorEvent;
     use Symfony\Component\Console\ConsoleEvents;
 
-    $dispatcher->addListener(ConsoleEvents::EXCEPTION, function (ConsoleExceptionEvent $event) {
+    $dispatcher->addListener(ConsoleEvents::ERROR, function (ConsoleErrorEvent $event) {
         $output = $event->getOutput();
 
         $command = $event->getCommand();
@@ -114,21 +125,8 @@ Listeners receive a
         $exitCode = $event->getExitCode();
 
         // changes the exception to another one
-        $event->setException(new \LogicException('Caught exception', $exitCode, $event->getException()));
+        $event->setError(new \LogicException('Caught exception', $exitCode, $event->getError()));
     });
-
-The ``ConsoleEvents::ERROR`` Event
-----------------------------------
-
-.. versionadded:: 3.3
-    The ``ConsoleEvents::ERROR`` event was introduced in Symfony 3.3.
-
-**Typical Purposes**: Handle exceptions thrown during the execution of a
-command.
-
-This event is an improved version of the ``ConsoleEvents::EXCEPTION`` event,
-because it can handle every exception thrown during the execution of a command,
-including those triggered from event listeners.
 
 The ``ConsoleEvents::TERMINATE`` Event
 --------------------------------------
@@ -171,4 +169,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: e7c2e1af9566d2101156e6939f03940eda7d7e4b
+.. revision: d9a5c2a75193d42c4e7a9c2a786e8f6b5272cef6
