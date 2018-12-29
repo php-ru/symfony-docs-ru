@@ -474,7 +474,7 @@ you will learn about next!).
 
         .. code-block:: yaml
 
-            # src/Resources/config/doctrine/Task.orm.yml
+            # src/Resources/config/doctrine/Task.orm.yaml
             App\Entity\Task:
                 type: entity
                 # ...
@@ -716,4 +716,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7
+.. revision: 19462dbb0cc371ef55e61444e377b87911b9db80

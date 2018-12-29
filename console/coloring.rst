@@ -9,9 +9,9 @@ output (e.g. important messages, titles, comments, etc.).
     By default, the Windows command console doesn't support output coloring. The
     Console component disables output coloring for Windows systems, but if your
     commands invoke other scripts which emit color sequences, they will be
-    wrongly displayed as raw escape characters. Install the `Cmder`_, `ConEmu`_, `ANSICON`_
-    ,`Mintty`_ (used by default in GitBash and Cygwin) or `Hyper`_ free applications
-    to add coloring support to your Windows command console.
+    wrongly displayed as raw escape characters. Install the `Cmder`_, `ConEmu`_,
+    `ANSICON`_, `Mintty`_ (used by default in GitBash and Cygwin) or `Hyper`_
+    free applications to add coloring support to your Windows command console.
 
 Using Color Styles
 ------------------
@@ -74,11 +74,28 @@ You can also set these colors and options directly inside the tag name::
     or use the :method:`Symfony\\Component\\Console\\Formatter\\OutputFormatter::escape`
     method to escape all the tags included in the given string.
 
+Displaying Clickable Links
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 4.3
+    The feature to display clickable links was introduced in Symfony 4.3.
+
+Commands can use the special ``<href>`` tag to display links similar to the
+``<a>`` elements of web pages::
+
+    $output->writeln('<href=https://symfony.com>Symfony Homepage</>');
+
+If your terminal belongs to the `list of terminal emulators that support links`_
+you can click on the *"Symfony Homepage"* text to open its URL in your default
+browser. Otherwise, you'll see *"Symfony Homepage"* as regular text and the URL
+will be lost.
+
 .. _Cmder: http://cmder.net/
 .. _ConEmu: https://conemu.github.io/
 .. _ANSICON: https://github.com/adoxa/ansicon/releases
 .. _Mintty: https://mintty.github.io/
 .. _Hyper: https://hyper.is/
+.. _`list of terminal emulators that support links`: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
 
 .. ready: no
-.. revision: 1a325bc24470ac8ce01645c15d23f43e21f41fdd
+.. revision: bf99c176fd80b0c19e856b931a9cb038adb0bfb3
