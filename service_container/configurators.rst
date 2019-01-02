@@ -185,6 +185,7 @@ all the classes are already loaded as services. All you need to do is specify th
             ->setConfigurator(array(new Reference(EmailConfigurator::class), 'configure'));
 
 .. versionadded:: 3.2
+
     The ``service_id:method_name`` syntax for the YAML configuration format
     was introduced in Symfony 3.2.
 
@@ -204,4 +205,4 @@ That's it! When requesting the ``AppBundle\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: 29f2d400cab12ef68497192f8eb3aef5add03f04
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

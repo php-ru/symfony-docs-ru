@@ -139,6 +139,7 @@ Available Options
     connection attempt times out.
 
 .. note::
+
     When using the `Predis`_ library some additional Predis-specific options are available.
     Reference the `Predis Connection Parameters`_ documentation for more information.
 
@@ -151,4 +152,4 @@ Available Options
 .. _`Predis Connection Parameters`: https://github.com/nrk/predis/wiki/Connection-Parameters#list-of-connection-parameters
 
 .. ready: no
-.. revision: e76cf183474940be3a078ca2f66568d077a30479
+.. revision: f7cf992fa9720b8cdad7156fe4f6ada4c9855b59

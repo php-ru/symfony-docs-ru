@@ -2,6 +2,7 @@ How to Make Commands Lazily Loaded
 ==================================
 
 .. versionadded:: 3.4
+
     Support for command lazy loading was introduced in Symfony 3.4.
 
 .. note::
@@ -83,4 +84,4 @@ Like this, executing the ``app:foo`` command will load the ``FooCommand`` servic
 by calling ``$containerBuilder->get(FooCommand::class)``.
 
 .. ready: no
-.. revision: da8f6ea65fd24b8a2357ec245e0d079f54fce96c
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

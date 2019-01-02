@@ -289,6 +289,7 @@ Using a callable is particularly useful in case of compound form types, which
 may define complex conditions for considering them empty.
 
 .. versionadded:: 3.4
+
     Support for using a callable for the ``delete_empty`` option was introduced
     in Symfony 3.4.
 
@@ -442,4 +443,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: 2f1cc8d0837046f83262afc3d00ad1e53c9f0f65
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

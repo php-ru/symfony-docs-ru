@@ -14,6 +14,7 @@ Environment Variables
 ---------------------
 
 .. versionadded:: 3.2
+
     ``env()`` parameters were introduced in Symfony 3.2.
 
 You can reference environment variables by using special parameters named after
@@ -123,6 +124,7 @@ of the following:
 .. tip::
 
     .. versionadded:: 3.3
+
         The support of the special ``SYMFONY__`` environment variables was
         deprecated in Symfony 3.3 and it will be removed in 4.0. Instead of
         using those variables, define regular environment variables and get
@@ -143,6 +145,7 @@ Environment Variable Processors
 -------------------------------
 
 .. versionadded:: 3.4
+
     Environment variable processors were introduced in Symfony 3.4.
 
 The values of environment variables are considered strings by default.
@@ -549,4 +552,4 @@ the Symfony service container::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 7b6b0b6d36cd16ce4d0e1421f4b809cd4fa56fdf
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

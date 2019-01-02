@@ -220,8 +220,9 @@ and :method:`Symfony\\Component\\Form\\Test\\FormIntegrationTestCase::getTypeGue
 methods.
 
 .. versionadded:: 3.3
+
     The ``getTypes()``, ``getTypeExtensions()`` and ``getTypeGuessers()``
     methods were introduced in Symfony 3.3.
 
 .. ready: no
-.. revision: 3fb163c0792f695e85bbdbe1dbdc138db58f8e5e
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

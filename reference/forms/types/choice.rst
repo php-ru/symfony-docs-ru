@@ -193,6 +193,7 @@ a fully-loaded list is not necessary. This is only needed in advanced cases and
 would replace the ``choices`` option.
 
 .. versionadded:: 3.2
+
     The :class:`Symfony\\Component\\Form\\ChoiceList\\Loader\\CallbackChoiceLoader`
     was introduced in Symfony 3.2.
 
@@ -333,4 +334,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: 5da60eb40c1d0b0e1f7cee08dcf1a2a21281e8ae
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

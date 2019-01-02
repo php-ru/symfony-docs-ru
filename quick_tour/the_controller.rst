@@ -334,6 +334,7 @@ And you can display the flash message in the template like this:
     {% endfor %}
 
 .. versionadded:: 3.3
+
     The ``app.flashes()`` Twig function was introduced in Symfony 3.3. Prior,
     you had to use ``app.session.flashBag()``.
 
@@ -347,4 +348,4 @@ But thanks to bundles, everything in Symfony can be extended or replaced.
 That's the topic of the :doc:`next part of this tutorial <the_architecture>`.
 
 .. ready: no
-.. revision: 795febe01d7cadf6a0bbf14fb404daa54d692fb0
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

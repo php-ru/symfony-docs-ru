@@ -77,6 +77,7 @@ Lazy Loading
 ------------
 
 .. versionadded:: 3.4
+
     Support for command lazy loading was introduced in Symfony 3.4.
 
 To make your command lazily loaded, either define its ``$defaultName`` static property::
@@ -146,4 +147,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: f16b6dad83cca1346ebbb8986de22de6708fa234
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

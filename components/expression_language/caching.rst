@@ -38,6 +38,7 @@ ones and injecting this using the constructor::
     $expressionLanguage = new ExpressionLanguage($cache);
 
 .. versionadded:: 3.2
+
     PSR-6 caching support was introduced in Symfony 3.2. Prior to version 3.2,
     a
     :class:`Symfony\\Component\\ExpressionLanguage\\ParserCache\\ParserCacheInterface`
@@ -76,4 +77,4 @@ Both ``evaluate()`` and ``compile()`` can handle ``ParsedExpression`` and
 .. _`CacheItemPoolInterface`: https://github.com/php-fig/cache/blob/master/src/CacheItemPoolInterface.php
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

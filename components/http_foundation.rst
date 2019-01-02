@@ -391,6 +391,7 @@ Note you can create a
 value using :method:`Symfony\\Component\\HttpFoundation\\Cookie::fromString`.
 
 .. versionadded:: 3.3
+
     The ``Cookie::fromString()`` method was introduced in Symfony 3.3.
 
 Managing the HTTP Cache
@@ -539,6 +540,7 @@ It is possible to delete the file after the request is sent with the
 Please note that this will not work when the ``X-Sendfile`` header is set.
 
 .. versionadded:: 3.3
+
     The ``Stream`` class was introduced in Symfony 3.3.
 
 If the size of the served file is unknown (e.g. because it's being generated on the fly,
@@ -593,6 +595,7 @@ class, which can make this even easier::
     $response = JsonResponse::fromJsonString('{ "data": 123 }');
 
 .. versionadded:: 3.2
+
     The :method:`Symfony\\Component\\HttpFoundation\\JsonResponse::fromJsonString`
     method was added in Symfony 3.2.
 
@@ -650,4 +653,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 5287c077eb87a63e75164505c33902fb84b7a493
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

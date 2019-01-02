@@ -249,6 +249,7 @@ default_path
 **type**: ``string`` **default**: ``'%kernel.project_dir%/templates'``
 
 .. versionadded:: 3.4
+
     The ``default_path`` option was introduced in Symfony 3.4.
 
 The default directory where Symfony will look for Twig templates.
@@ -371,4 +372,4 @@ and the non-existing values are replaced by ``null``.
 .. _`the optimizer extension`: https://twig.symfony.com/doc/2.x/api.html#optimizer-extension
 
 .. ready: no
-.. revision: e48c89b83ac90b884ba5cc23ad59c54a1f84549d
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

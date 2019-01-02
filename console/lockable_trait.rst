@@ -2,6 +2,7 @@ Prevent Multiple Executions of a Console Command
 ================================================
 
 .. versionadded:: 3.2
+
     The ``LockableTrait`` was introduced in Symfony 3.2.
 
 A simple but effective way to prevent multiple executions of the same command in
@@ -14,7 +15,10 @@ In addition, the Console component provides a PHP trait called ``LockableTrait``
 that adds two convenient methods to lock and release commands::
 
     // ...
+    use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Command\LockableTrait;
+    use Symfony\Component\Console\Input\InputInterface;
+    use Symfony\Component\Console\Output\OutputInterface;
 
     class UpdateContentsCommand extends Command
     {
@@ -44,4 +48,4 @@ that adds two convenient methods to lock and release commands::
 .. _`locks`: https://en.wikipedia.org/wiki/Lock_(computer_science)
 
 .. ready: no
-.. revision: f5739603fa3e55acb72d93d01168dd10ebc4cc92
+.. revision: bb557d4c2c73cb60ce728aef58117c2d999d4d6e

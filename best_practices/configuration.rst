@@ -209,6 +209,7 @@ through environment variables:
             password: "%env(DB_PASSWORD)%"
 
 .. versionadded:: 3.2
+
     Support for runtime environment variables via the ``%env(...)%`` syntax
     was added in Symfony 3.2. Prior to version 3.2, you needed to use the
     :doc:`special SYMFONY__ variables </configuration/external_parameters>`.
@@ -221,4 +222,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -406,7 +406,8 @@ remove this variable, it's better to use the
     // $targetPath = $request->getSession()->get('_security.'.$providerKey.'.target_path');
 
 .. versionadded:: 3.1
+
     The ``TargetPathTrait`` was introduced in Symfony 3.1.
 
 .. ready: no
-.. revision: e48c89b83ac90b884ba5cc23ad59c54a1f84549d
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

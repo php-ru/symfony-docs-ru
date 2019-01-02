@@ -1,7 +1,7 @@
 Range
 =====
 
-Validates that a given number is *between* some minimum and maximum number.
+Validates that a given number or ``DateTime`` object is *between* some minimum and maximum.
 
 +----------------+---------------------------------------------------------------------+
 | Applies to     | :ref:`property or method <validation-property-target>`              |
@@ -320,7 +320,7 @@ Options
 min
 ~~~
 
-**type**: ``integer``
+**type**: ``int`` or ``string`` (date format)
 
 This required option is the "min" value. Validation will fail if the given
 value is **less** than this min value.
@@ -328,7 +328,7 @@ value is **less** than this min value.
 max
 ~~~
 
-**type**: ``integer``
+**type**: ``int`` or ``string`` (date format)
 
 This required option is the "max" value. Validation will fail if the given
 value is **greater** than this max value.
@@ -391,4 +391,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: 560a96fb896500e844e513e2b32085cdffc935b1

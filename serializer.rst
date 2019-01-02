@@ -158,6 +158,7 @@ properties and setters (``setXxx()``) to change properties:
         ;
 
 .. versionadded:: 3.4
+
     Support for hasser methods (``hasXxx()``) in ``GetSetMethodNormalizer`` was
     introduced in Symfony 3.4. In previous Symfony versions only getters (``getXxx()``)
     and issers (``isXxx()``) were supported.
@@ -298,4 +299,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: f4cf54a861a29fab7528309c09ccf976827f7a28
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -142,6 +142,7 @@ Configuration of the service container then looks like this:
 
         use AppBundle\Email\NewsletterManager;
         use AppBundle\Email\NewsletterManagerFactory;
+        use Symfony\Component\DependencyInjection\Reference;
         // ...
 
         $container->register(NewsletterManagerFactory::class);
@@ -235,4 +236,4 @@ example takes the ``templating`` service as an argument:
             ));
 
 .. ready: no
-.. revision: 4a492b8aedd4816a7853c9376f253cfc7f0849b0
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

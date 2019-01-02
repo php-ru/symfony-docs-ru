@@ -114,6 +114,7 @@ option. Read more about this and other options in
 .. tip::
 
     .. versionadded:: 3.3
+
         The local search box was introduced in Symfony 3.3.
 
     If the dumped contents are complex, consider using the local search box to
@@ -303,4 +304,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: 4a88e711fb756f01c06d44852a6dea70eaa3be85
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

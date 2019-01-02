@@ -107,6 +107,7 @@ Errors
 ------
 
 .. versionadded:: 3.2
+
     The ``hasErrored()`` method was introduced in Symfony 3.2.
 
 The Console logger includes a ``hasErrored()`` method which returns ``true`` as
@@ -117,4 +118,4 @@ the command.
 .. _PSR-3: https://www.php-fig.org/psr/psr-3/
 
 .. ready: no
-.. revision: c2a12fa4b27da708ec0a9c97550e3ce03317d445
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

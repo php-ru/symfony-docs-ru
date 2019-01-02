@@ -141,6 +141,7 @@ when all items are successfully deleted)::
         $ php bin/console cache:pool:clear cache.validation cache.app
 
     .. versionadded:: 3.4
+
         Starting from Symfony 3.4, the ``cache:clear`` command no longer clears
         the cache pools, so you must use the ``cache:pool:clear`` command to
         delete them.
@@ -212,4 +213,4 @@ silently ignored)::
         $ php bin/console cache:pool:prune
 
 .. ready: no
-.. revision: d8d881dc14d02bc2abf2a8ef887a97330898017b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

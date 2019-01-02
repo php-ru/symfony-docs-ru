@@ -15,6 +15,7 @@ The Cache Component
     from/to `Doctrine Cache`_.
 
 .. versionadded:: 3.3
+
     The PSR-16 "Simple Cache" implementation was introduced in Symfony 3.3.
 
 Installation
@@ -196,4 +197,4 @@ Advanced Usage (PSR-6)
 .. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
 
 .. ready: no
-.. revision: d8d881dc14d02bc2abf2a8ef887a97330898017b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -203,6 +203,7 @@ hold the kernel. Now it looks like this::
     }
 
 .. versionadded:: 3.4
+
     Support for annotation routing without an external bundle was added in
     Symfony 3.4. Prior to version 3.4, you needed to install the
     SensioFrameworkExtraBundle.
@@ -352,4 +353,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features quite easily.
 
 .. ready: no
-.. revision: 9827feab2089cfbbfb9077b45791a9bb17db4e46
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

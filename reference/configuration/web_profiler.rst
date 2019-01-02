@@ -51,6 +51,7 @@ position
 ~~~~~~~~
 
 .. versionadded:: 3.4
+
     The ``position`` option was deprecated in Symfony 3.4 and it will be removed
     in Symfony 4.0, where the toolbar is always displayed in the ``bottom`` position.
 
@@ -92,4 +93,4 @@ This option is **deprecated** and has no effect on the toolbar or the profiler,
 so you can safely remove it from your configuration.
 
 .. ready: no
-.. revision: 0eb6ca95ccc8fe31700a16dc5284c35b171ed30b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

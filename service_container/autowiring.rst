@@ -432,6 +432,7 @@ But, you can also manually wire the *other* service by specifying the argument
 under the arguments key.
 
 .. versionadded:: 3.3
+
     Using FQCN aliases to fix autowiring ambiguities was introduced in Symfony
     3.3. Prior to version 3.3, you needed to use the ``autowiring_types`` key.
 
@@ -504,4 +505,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _ROT13: https://en.wikipedia.org/wiki/ROT13
 
 .. ready: no
-.. revision: c7b3111039ed8f73090356b80b6c6211441ff75b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

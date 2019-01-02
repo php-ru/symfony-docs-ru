@@ -155,6 +155,7 @@ and many others that you'll learn about next.
     ``AbstractController``, so using the latter will make your apps future-proof.
 
 .. versionadded:: 3.3
+
     The ``AbstractController`` class was added in Symfony 3.3.
 
 .. index::
@@ -248,6 +249,7 @@ Fetching Services as Controller Arguments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.3
+
     The ability to type-hint a controller argument in order to receive a service
     was added in Symfony 3.3.
 
@@ -348,6 +350,7 @@ For more information about services, see the :doc:`/service_container` article.
 .. _controller-service-arguments-tag:
 
 .. note::
+
     If this isn't working, make sure your controller is registered as a service,
     is :ref:`autoconfigured <services-autoconfigure>` and extends either
     :class:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller` or
@@ -463,6 +466,7 @@ about the user between requests. By default, Symfony stores the token in a
 cookie and writes the attributes to a file by using native PHP sessions.
 
 .. versionadded:: 3.3
+
     The ability to request a ``Session`` instance in controllers was introduced
     in Symfony 3.3.
 
@@ -552,6 +556,7 @@ read any flash messages from the session using ``app.flashes()``:
     {% endfor %}
 
 .. versionadded:: 3.3
+
     The ``app.flashes()`` Twig function was introduced in Symfony 3.3. Prior,
     you had to use ``app.session.flashBag()``.
 
@@ -667,6 +672,7 @@ File helper
 ~~~~~~~~~~~
 
 .. versionadded:: 3.2
+
     The ``file()`` helper was introduced in Symfony 3.2.
 
 You can use the :method:`Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller::file`
@@ -735,4 +741,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a
+.. revision: fbc158a3bf023e2205d7835352a74d69c19e91c3

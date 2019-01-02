@@ -9,6 +9,7 @@ The Dotenv Component
     stored in them accessible via ``getenv()``, ``$_ENV`` or ``$_SERVER``.
 
 .. versionadded:: 3.3
+
     The Dotenv component was introduced in Symfony 3.3.
 
 Installation
@@ -112,4 +113,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 2e13c8bda3c944ac149c7457cad868e5c26ae6d8
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

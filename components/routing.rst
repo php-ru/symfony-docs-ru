@@ -384,6 +384,7 @@ Unicode Routing Support
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.2
+
     UTF-8 support for route paths and requirements was introduced in
     Symfony 3.2.
 
@@ -570,4 +571,4 @@ Learn more
 .. _PCRE Unicode properties: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: 6b3dda5b5783e4993f90a77c17ea2d79246142fc
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -93,6 +93,7 @@ provider will, in turn, try to load the user from both the ``in_memory`` and
 ``user_db`` providers.
 
 .. versionadded:: 3.4
+
     In previous Symfony versions, firewalls that didn't define their user provider
     explicitly, used the first existing provider (``chain_provider`` in this
     example). However, auto-selecting the first user provider has been deprecated
@@ -186,4 +187,4 @@ For more information about user provider and firewall configuration, see
 the :doc:`/reference/configuration/security`.
 
 .. ready: no
-.. revision: 0e669339d6fbce6cd1c3c8c99a830bd1c63db566
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

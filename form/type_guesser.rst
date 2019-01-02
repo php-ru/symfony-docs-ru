@@ -217,6 +217,7 @@ and tag it with ``form.type_guesser``:
         ;
 
 .. versionadded:: 3.3
+
     Prior to Symfony 3.3, you needed to define type guesser services as ``public``.
     Starting from Symfony 3.3, you can also define them as ``private``.
 
@@ -238,4 +239,4 @@ and tag it with ``form.type_guesser``:
         // ...
 
 .. ready: no
-.. revision: 53c1e20cf8e1db7a32bfd8ffd0177bd1c1e57fe3
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

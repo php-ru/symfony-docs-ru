@@ -161,6 +161,7 @@ logout_on_user_change
 **type**: ``boolean`` **default**: ``false``
 
 .. versionadded:: 3.4
+
     The ``logout_on_user_change`` option was introduced in Symfony 3.4.
 
 If ``true`` this option makes Symfony to trigger a logout when the user has
@@ -500,6 +501,7 @@ HTTP-Digest Authentication
 --------------------------
 
 .. versionadded:: 3.4
+
     HTTP-Digest Authentication was deprecated in Symfony 3.4 and it will be
     removed in Symfony 4.0.
 
@@ -553,4 +555,4 @@ To use HTTP-Digest authentication you need to provide a realm and a secret:
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: b5d3340048cc970a4fff2a347935b311742f84bc
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

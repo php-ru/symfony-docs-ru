@@ -63,6 +63,7 @@ Loading Routes with a Custom Service
 ------------------------------------
 
 .. versionadded:: 2.8
+
     The option to load routes using Symfony services was introduced in Symfony 2.8.
 
 Using a regular Symfony service is the simplest way to load routes in a
@@ -343,4 +344,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: efc7e32df01e3693af83a1a6ed05ad7a263763e6
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

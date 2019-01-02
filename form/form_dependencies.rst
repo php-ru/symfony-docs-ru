@@ -140,6 +140,7 @@ manually and tag it with ``form.type``:
         ;
 
 .. versionadded:: 3.3
+
     Prior to Symfony 3.3, you needed to define form type services as ``public``.
     Starting from Symfony 3.3, you can also define them as ``private``.
 
@@ -149,4 +150,4 @@ at all: Symfony is smart enough to load the ``TaskType`` from the container.
 Read :ref:`form-field-service` for more information.
 
 .. ready: no
-.. revision: 51ddf416eeac3f880f4019852517dbf224c9a9ac
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

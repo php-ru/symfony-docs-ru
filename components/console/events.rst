@@ -87,6 +87,7 @@ The ``ConsoleEvents::EXCEPTION`` Event
 --------------------------------------
 
 .. versionadded:: 3.3
+
     The ``ConsoleEvents::EXCEPTION`` event was deprecated in Symfony 3.3. Use
     the ``ConsoleEvents::ERROR`` event instead.
 
@@ -169,4 +170,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: d9a5c2a75193d42c4e7a9c2a786e8f6b5272cef6
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -437,6 +437,7 @@ Adding Notes to Translation Contents
 ------------------------------------
 
 .. versionadded:: 3.4
+
     The feature to load and dump translation notes was introduced in Symfony 3.4.
 
 Sometimes translators need additional context to better decide how to translate
@@ -494,4 +495,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: d45c101de5add720d50da84d15d4b0cb8727db7b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

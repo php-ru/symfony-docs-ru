@@ -151,6 +151,7 @@ Prefixing the Names of Imported Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.4
+
     The feature to prefix route names was introduced in Symfony 3.4.
 
 You also have the possibility to prefix all route names defined in a controller
@@ -189,4 +190,4 @@ You can set the host regex on imported routes. For more information, see
 :ref:`component-routing-host-imported`.
 
 .. ready: no
-.. revision: bfeb6007cf20d77bdd260cc5bf6e88d06aa1d4ad
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

@@ -5,6 +5,7 @@ How to Use advanced ACL Concepts
 ================================
 
 .. versionadded:: 3.4
+
     ACL support was deprecated in Symfony 3.4 and will be removed in 4.0. Install
     the `Symfony ACL bundle`_ if you want to keep using ACL.
 
@@ -203,4 +204,4 @@ parent ACL exists, an exception will be thrown.
 .. _JMSSecurityExtraBundle: https://github.com/schmittjoh/JMSSecurityExtraBundle
 
 .. ready: no
-.. revision: b163adc62ccc8846f1c4239c6819acacc577e5e7
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

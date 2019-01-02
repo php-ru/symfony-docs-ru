@@ -158,9 +158,10 @@ command that match), then no command will be run and some suggestions of
 the possible commands to choose from will be output.
 
 .. versionadded:: 3.4
+
     Case-insensitivity of command shortcuts was introduced in Symfony 3.4. In
     previous Symfony versions, shortcuts had to match the case of the original
     command name (e.g. ``d:g`` was not the same shortcut as ``D:G``).
 
 .. ready: no
-.. revision: 6af99daa6f133b5ec0644f12924e1c0071972127
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

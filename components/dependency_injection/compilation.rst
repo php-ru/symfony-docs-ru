@@ -424,6 +424,7 @@ been run, use::
     );
 
 .. versionadded:: 3.2
+
     The option to prioritize compiler passes was added in Symfony 3.2.
 
 You can also control the order in which compiler passes are run for each
@@ -577,4 +578,4 @@ have the cache will be considered stale.
     is taken care of for you.
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

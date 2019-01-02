@@ -45,6 +45,7 @@ scale
 ~~~~~
 
 .. versionadded:: 2.7
+
     The ``scale`` option was introduced in Symfony 2.7. Prior to Symfony 2.7,
     it was known as ``precision``.
 
@@ -125,4 +126,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 3ef5c401bf3a476a68fed7e46e14a2a30f949755
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

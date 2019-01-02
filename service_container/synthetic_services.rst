@@ -11,6 +11,9 @@ For instance, the ``kernel`` service in Symfony is injected into the container
 from within the ``Kernel`` class::
 
     // ...
+    use Symfony\Component\HttpKernel\KernelInterface;
+    use Symfony\Component\HttpKernel\TerminableInterface;
+
     abstract class Kernel implements KernelInterface, TerminableInterface
     {
         // ...
@@ -72,4 +75,4 @@ Now, you can inject the instance in the container using
     $container->set('app.synthetic_service', $theService);
 
 .. ready: no
-.. revision: 86ab47aaff52878deef6d395d86293434a9f6ca1
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

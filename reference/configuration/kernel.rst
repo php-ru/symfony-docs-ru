@@ -57,6 +57,7 @@ Root Directory
 ~~~~~~~~~~~~~~
 
 .. versionadded:: 3.3
+
     The ``getRootDir()`` method is deprecated since Symfony 3.3. Use the new
     ``getProjectDir()`` method instead.
 
@@ -85,6 +86,7 @@ Project Directory
 ~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.3
+
     The ``getProjectDir()`` method was introduced in Symfony 3.3.
 
 **type**: ``string`` **default**: the directory of the project ``composer.json``
@@ -128,4 +130,4 @@ This returns the path to the log directory. To change it, override the
 ":ref:`override-logs-dir`" for more information.
 
 .. ready: no
-.. revision: 51c25d891a077926a99abfd9cac0268e16fab039
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

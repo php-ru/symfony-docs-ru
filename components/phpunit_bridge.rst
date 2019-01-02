@@ -541,6 +541,7 @@ Modified PHPUnit script
 -----------------------
 
 .. versionadded:: 3.2
+
     This modified PHPUnit script was introduced in the 3.2 version of
     this component.
 
@@ -697,4 +698,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: a320038cd3a116267d96877385e5d65db0eb46d5
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

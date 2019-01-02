@@ -27,6 +27,7 @@ translation file using the ``lint:yaml`` and ``lint:xliff`` commands:
     $ ./bin/console lint:xliff @AppBundle
 
 .. versionadded:: 3.3
+
     The ``lint:xliff`` command was introduced in Symfony 3.3.
 
 The linter results can be exported to JSON using the ``--format`` option:
@@ -38,4 +39,4 @@ The linter results can be exported to JSON using the ``--format`` option:
     $ ./bin/console lint:xliff app/Resources/translations --format=json
 
 .. ready: no
-.. revision: 1ccc224ec5c198e06d0b81f3822c45977b277081
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

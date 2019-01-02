@@ -21,6 +21,8 @@ Getting and Setting Service Definitions
 
 There are some helpful methods for working with the service definitions::
 
+    use Symfony\Component\DependencyInjection\Definition;
+
     // finds out if there is an "app.mailer" definition
     $container->hasDefinition('app.mailer');
     // finds out if there is an "app.mailer" definition or alias
@@ -144,4 +146,4 @@ Notice that Symfony will internally call the PHP statement ``require_once``,
 which means that your file will be included only once per request.
 
 .. ready: no
-.. revision: 49051902030e1af24f1f626052aecbcc723042a0
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

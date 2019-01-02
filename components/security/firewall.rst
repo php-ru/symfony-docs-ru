@@ -92,6 +92,7 @@ Firewall Config
 ~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.2
+
     The ``FirewallConfig`` class was introduced in Symfony 3.2.
 
 The information about a given firewall, such as its name, provider, context,
@@ -167,4 +168,4 @@ Read the next articles to find out more about :doc:`/components/security/authent
 and :doc:`/components/security/authorization`.
 
 .. ready: no
-.. revision: 26493f342f87e605e03eea9372ea20124a59ae1d
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

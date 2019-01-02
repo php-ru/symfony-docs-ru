@@ -485,6 +485,7 @@ that are special: each adds a unique piece of functionality inside your applicat
     starts with a ``#`` character and is used to identify a portion of a document.
 
     .. versionadded:: 3.2
+
         The ``_fragment`` parameter was introduced in Symfony 3.2.
 
 ``_locale``
@@ -784,4 +785,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 26493f342f87e605e03eea9372ea20124a59ae1d
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

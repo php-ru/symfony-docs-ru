@@ -9,6 +9,7 @@ The Lock Component
     exclusive access to a shared resource.
 
 .. versionadded:: 3.4
+
     The Lock component was introduced in Symfony 3.4.
 
 Installation
@@ -492,4 +493,4 @@ are still running.
 .. _`PHP semaphore functions`: http://php.net/manual/en/book.sem.php
 
 .. ready: no
-.. revision: f569614c99ea61ea6c055e5164c4e26024ad2c14
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

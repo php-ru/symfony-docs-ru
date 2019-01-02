@@ -38,8 +38,9 @@ access the flash messages:
     {% endif %}
 
 .. versionadded:: 3.3
+
     The ``app.flashes()`` Twig function was introduced in Symfony 3.3. Prior,
     you had to use ``app.session.flashBag()``.
 
 .. ready: no
-.. revision: f96118b5401b31ce023c124236f5c87b9a011f14
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

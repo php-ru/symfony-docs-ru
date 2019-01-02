@@ -96,6 +96,7 @@ Creating Lazy-Loaded Twig Extensions
 ------------------------------------
 
 .. versionadded:: 1.26
+
     Support for lazy-loaded extensions was introduced in Twig 1.26.
 
 Including the code of the custom filters/functions in the Twig extension class
@@ -158,6 +159,7 @@ previous ``priceFilter()`` method::
     }
 
 .. versionadded:: 3.4
+
     The ``RuntimeExtensionInterface`` was introduced in Symfony 3.4.
 
 If you're using the default ``services.yaml`` configuration, this will already
@@ -169,4 +171,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: cdb5ee0589e066c9f2fae9d10ab80bbfb922bf69
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

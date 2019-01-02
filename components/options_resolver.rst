@@ -337,6 +337,7 @@ using ``instanceof``). Additionally, you can validate all items in an array
 recursively by suffixing the type with ``[]``.
 
 .. versionadded:: 3.4
+
     Validating types of array items recursively was introduced in Symfony 3.4.
     Prior to Symfony 3.4, only scalar values could be validated.
 
@@ -700,4 +701,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: fdaf1898ea53a249a62e6780e939910f12026b4e
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

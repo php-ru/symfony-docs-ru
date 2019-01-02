@@ -16,6 +16,7 @@ Functionality Shipped with the HttpKernel
 -----------------------------------------
 
 .. versionadded:: 3.3
+
     The ``SessionValueResolver`` and ``ServiceValueResolver`` were both added in Symfony 3.3.
 
 Symfony ships with five value resolvers in the HttpKernel component:
@@ -243,4 +244,4 @@ subrequests.
 .. _`yield`: http://php.net/manual/en/language.generators.syntax.php
 
 .. ready: no
-.. revision: 5c2f4d596a0df5272b321bcac3bc33e421e560eb
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

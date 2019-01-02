@@ -467,6 +467,7 @@ The Client supports many operations that can be done in a real browser::
     $client->restart();
 
 .. versionadded:: 3.4
+
     Starting from Symfony 3.4, the ``back()`` and ``forward()`` methods skip the
     redirects that may have occurred when requesting a URL, as normal browsers
     do. In previous Symfony versions they weren't skipped.
@@ -560,6 +561,7 @@ Reporting Exceptions
 ~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.4
+
     The ``catchExceptions()`` method was introduced in Symfony 3.4.
 
 Debugging exceptions in functional tests may be difficult because by default
@@ -984,4 +986,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 0fb4a46f9f5af04e18157dc2d39b72e0eca9c3b0
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

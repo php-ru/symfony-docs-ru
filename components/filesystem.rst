@@ -213,6 +213,7 @@ readlink
 ~~~~~~~~
 
 .. versionadded:: 3.2
+
     The :method:`Symfony\\Component\\Filesystem\\Filesystem::readlink` method was introduced in Symfony 3.2.
 
 :method:`Symfony\\Component\\Filesystem\\Filesystem::readlink` read links targets.
@@ -299,6 +300,7 @@ appendToFile
 ~~~~~~~~~~~~
 
 .. versionadded:: 3.3
+
     The :method:`Symfony\\Component\\Filesystem\\Filesystem::appendToFile`
     method was introduced in Symfony 3.3.
 
@@ -335,4 +337,4 @@ Learn More
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: 414b1ba214b03237754fc48fa765a4badea047a1
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

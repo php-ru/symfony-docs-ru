@@ -142,8 +142,9 @@ that group are valid, the second group, ``Strict``, will be validated.
 
 You can also define a group sequence in the ``validation_groups`` form option::
 
-    use Symfony\Component\Validator\Constraints\GroupSequence;
     use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
+    use Symfony\Component\Validator\Constraints\GroupSequence;
     // ...
 
     class MyType extends AbstractType
@@ -289,6 +290,7 @@ method, which should return an array of groups to use::
     }
 
 .. versionadded:: 3.2
+
     The feature to return a nested array to get violations from all groups was
     introduced in Symfony 3.2.
 
@@ -353,4 +355,4 @@ provides a sequence of groups to be validated:
         }
 
 .. ready: no
-.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde
+.. revision: bb557d4c2c73cb60ce728aef58117c2d999d4d6e

@@ -69,6 +69,7 @@ helper method allows creating and configuring a `Memcached`_ class instance usin
     ));
 
 .. versionadded:: 3.4
+
     The feature to pass configuration options in the memcached DSN was
     introduced in Symfony 3.4.
 
@@ -286,6 +287,7 @@ Available Options
     are valid and fit within the design of the protocol being used.
 
 .. tip::
+
     Reference the `Memcached`_ extension's `predefined constants`_ documentation
     for additional information about the available options.
 
@@ -301,4 +303,4 @@ Available Options
 .. _`Domain Name System (DNS)`: https://en.wikipedia.org/wiki/Domain_Name_System
 
 .. ready: no
-.. revision: 2fe1f7e52a6d4ffe98b9ce3af0a3cc6040bff90f
+.. revision: fbc158a3bf023e2205d7835352a74d69c19e91c3

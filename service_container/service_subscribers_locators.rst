@@ -5,6 +5,7 @@ Service Subscribers & Locators
 ==============================
 
 .. versionadded:: 3.3
+
     Service subscribers and locators were introduced in Symfony 3.3.
 
 Sometimes, a service needs access to several other services without being sure
@@ -368,4 +369,4 @@ will share identical locators amongst all the services referencing them::
 .. _`Command pattern`: https://en.wikipedia.org/wiki/Command_pattern
 
 .. ready: no
-.. revision: 574128ffc1809b2a4e8fc48567e3cb816be78491
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

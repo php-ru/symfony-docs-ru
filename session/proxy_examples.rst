@@ -108,7 +108,6 @@ can intercept the session before it is written::
     // src/AppBundle/Session/ReadOnlySessionProxy.php
     namespace AppBundle\Session;
 
-    use AppBundle\Entity\User;
     use Symfony\Component\HttpFoundation\Session\Storage\Proxy\SessionHandlerProxy;
     use Symfony\Component\Security\Core\Security;
 
@@ -144,4 +143,4 @@ can intercept the session before it is written::
 .. _`php-encryption`: https://github.com/defuse/php-encryption
 
 .. ready: no
-.. revision: df21fd8ecc6e7cbe2972c4e6395381e2bcddae27
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

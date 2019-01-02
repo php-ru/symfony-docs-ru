@@ -81,6 +81,7 @@ There are lots of ways to filter and sort your results. You can also use the
 there's any file or directory matching the search criteria.
 
 .. versionadded:: 3.4
+
     The ``hasResults()`` method was introduced in Symfony 3.4.
 
 Location
@@ -338,4 +339,4 @@ The contents of returned files can be read with
 .. _Packagist:    https://packagist.org/packages/symfony/finder
 
 .. ready: no
-.. revision: f380e04a6821f21029da6a980d4dff392c9c5212
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

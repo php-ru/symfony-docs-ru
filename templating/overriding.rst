@@ -36,6 +36,7 @@ extend from the original template, not from the overridden one:
     {% endblock %}
 
 .. versionadded:: 3.4
+
     The special ``!`` template prefix was introduced in Symfony 3.4.
 
 .. caution::
@@ -68,4 +69,4 @@ to, you guessed it, the ``app/Resources/TwigBundle/views/Exception`` directory.
 .. _`KnpBundles.com`: http://knpbundles.com
 
 .. ready: no
-.. revision: 420b2235a067fdc055e0e41585a78b7a2ddcf073
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

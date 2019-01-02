@@ -143,6 +143,7 @@ form element::
     }
 
 .. versionadded:: 3.2
+
     As of Symfony 3.2 the callback no longer needs to be static.
 
 You can pass the name of this method to the `callback`_ option of the ``Choice``
@@ -413,4 +414,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 91a9140e5652430b4a9f669c6896dd07ec1e1350
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

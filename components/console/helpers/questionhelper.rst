@@ -25,6 +25,7 @@ Suppose you want to confirm an action before actually executing it. Add
 the following to your command::
 
     // ...
+    use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Output\OutputInterface;
     use Symfony\Component\Console\Question\ConfirmationQuestion;
@@ -230,6 +231,7 @@ convenient for passwords::
         }
 
     .. versionadded:: 3.3
+
         The ``QuestionHelper::disableStty()`` method was introduced in Symfony 3.3.
 
 Normalizing the Answer
@@ -369,6 +371,7 @@ from the command line, you need to set the inputs that the command expects::
     }
 
 .. versionadded:: 3.2
+
     The ``CommandTester::setInputs()`` method was introduced in Symfony 3.2.
 
 By calling :method:`Symfony\\Component\\Console\\Tester\\CommandTester::setInputs`,
@@ -390,4 +393,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: 177c84a675320427dbe6e4aadfd7010199ec4129
+.. revision: bb557d4c2c73cb60ce728aef58117c2d999d4d6e

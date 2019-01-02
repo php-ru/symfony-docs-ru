@@ -15,6 +15,8 @@ spent in the framework, etc. But before writing assertions, enable the profiler
 and check that the profiler is indeed available (it is enabled by default in
 the ``test`` environment)::
 
+    use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
     class LuckyControllerTest extends WebTestCase
     {
         public function testNumberAction()
@@ -120,4 +122,4 @@ to false:
 In this way only tests that call ``$client->enableProfiler()`` will collect data.
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

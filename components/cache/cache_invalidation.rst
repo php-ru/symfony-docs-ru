@@ -21,6 +21,7 @@ Using Cache Tags
 ----------------
 
 .. versionadded:: 3.2
+
     Tags-based invalidation was introduced in Symfony 3.2.
 
 To benefit from tags-based invalidation, you need to attach the proper tags to
@@ -103,4 +104,4 @@ lifetime or their expiration date with the PSR-6 interface, as explained in the
 :doc:`/components/cache/cache_items` article.
 
 .. ready: no
-.. revision: d8d881dc14d02bc2abf2a8ef887a97330898017b
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

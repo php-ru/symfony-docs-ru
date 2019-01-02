@@ -180,6 +180,7 @@ entityClass
 ~~~~~~~~~~~
 
 .. versionadded:: 3.2
+
     The ``entityClass`` option was introduced in Symfony 3.2.
 
 **type**: ``string``
@@ -303,4 +304,4 @@ also has a ``null`` value, validation would fail.
 .. _`race conditions`: https://en.wikipedia.org/wiki/Race_condition
 
 .. ready: no
-.. revision: 6bfddaca45425359f54225ee58da1dab5f4949fe
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

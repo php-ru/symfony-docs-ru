@@ -96,6 +96,7 @@ fragment needed to render every part of a form:
   styles.
 
 .. versionadded:: 3.4
+
     The Bootstrap 4 form themes were introduced in Symfony 3.4.
 
 .. caution::
@@ -862,4 +863,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: c3731bae2bcea5975726e34d0b6a4c49a09bbd96
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

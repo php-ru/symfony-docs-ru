@@ -170,6 +170,7 @@ like this:
     generate detailed log messages for the workflow activity.
 
     .. versionadded:: 3.3
+
         The ``audit_trail`` option was introduced in Symfony 3.3.
 
 With this workflow named ``blog_publishing``, you can get help to decide
@@ -375,6 +376,7 @@ This means that each event has access to the following information:
     Returns a string with the name of the workflow that triggered the event.
 
     .. versionadded:: 3.3
+
         The ``getWorkflowName()`` method was introduced in Symfony 3.3.
 
 For Guard Events, there is an extended class :class:`Symfony\\Component\\Workflow\\Event\\GuardEvent`.
@@ -405,6 +407,7 @@ of domain logic in your templates:
     Returns ``true`` if the marking of the given object has the given state.
 
 .. versionadded:: 3.3
+
     The ``workflow_marked_places()`` and ``workflow_has_marked_place()``
     functions were introduced in Symfony 3.3.
 
@@ -441,4 +444,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: cd32577f7efffe1f4e6556472d5d7653456310ac
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
