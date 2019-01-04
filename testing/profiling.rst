@@ -69,6 +69,8 @@ The data collected by the Symfony Profiler can be used to check the number of
 database calls, the time spent in the framework, etc. All this information is
 provided by the collectors obtained through the ``$client->getProfile()`` call::
 
+    use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+
     class LuckyControllerTest extends WebTestCase
     {
         public function testRandomNumber()
@@ -125,4 +127,4 @@ finish. It's easy to achieve if you embed the token in the error message::
     to learn more about their interfaces.
 
 .. ready: no
-.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

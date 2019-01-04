@@ -113,6 +113,7 @@ with a non-zero code)::
 .. tip::
 
     .. versionadded:: 3.3
+
         The ability to define commands as arrays of arguments was introduced in
         Symfony 3.3.
 
@@ -464,4 +465,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: c3f8c85310134975a42791ae8d5ff304ea4cdb38
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

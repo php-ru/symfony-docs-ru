@@ -154,6 +154,7 @@ Anonymous Services
     Anonymous services are only supported by the XML and YAML configuration formats.
 
 .. versionadded:: 3.3
+
     The feature to configure anonymous services in YAML was introduced in Symfony 3.3.
 
 In some cases, you may want to prevent a service being used as a dependency of
@@ -288,4 +289,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: 7368651d4bbcba458cf0d82663e6adbb8a973dd6
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

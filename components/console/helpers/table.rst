@@ -20,7 +20,10 @@ When building a console application it may be useful to display tabular data:
 To display a table, use :class:`Symfony\\Component\\Console\\Helper\\Table`,
 set the headers, set the rows and then render the table::
 
+    use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Helper\Table;
+    use Symfony\Component\Console\Input\InputInterface;
+    use Symfony\Component\Console\Output\OutputInterface;
     // ...
 
     class SomeCommand extends Command
@@ -370,4 +373,4 @@ This will display the following table in the terminal:
     +---------+
 
 .. ready: no
-.. revision: 769571ab6fd603b58ce50c2005b039248cae69b4
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

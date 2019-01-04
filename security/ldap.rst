@@ -110,7 +110,6 @@ An LDAP client can be configured using the built-in
         // config/services.php
         use Symfony\Component\Ldap\Ldap;
         use Symfony\Component\Ldap\Adapter\ExtLdap\Adapter;
-        use Symfony\Component\DependencyInjection\Definition;
 
         $container->register(Ldap::class)
             ->addArgument(new Reference(Adapter::class);
@@ -511,4 +510,4 @@ Configuration example for form login and query_string
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

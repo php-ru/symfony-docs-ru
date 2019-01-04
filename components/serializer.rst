@@ -165,6 +165,7 @@ needs three parameters:
 #. The encoder used to convert that information into an array
 
 .. versionadded:: 3.3
+
     Support for the ``allow_extra_attributes`` key in the context was introduced
     in Symfony 3.3.
 
@@ -631,6 +632,7 @@ There are several types of normalizers available:
     into a list of errors according to the `RFC 7807`_ standard.
 
     .. versionadded:: 4.1
+
         The ``ConstraintViolationListNormalizer`` was introduced in Symfony 4.1.
 
 .. _component-serializer-encoders:
@@ -712,7 +714,7 @@ The ``XmlEncoder`` will encode this object like that::
 Be aware that this encoder will consider keys beginning with ``@`` as attributes::
 
     $encoder = new XmlEncoder();
-    $encoder->encode(array('foo' => array('@bar' => 'value')));
+    $encoder->encode(array('foo' => array('@bar' => 'value')), 'xml');
     // will return:
     // <?xml version="1.0"?>
     // <response>
@@ -739,7 +741,6 @@ The ``YamlEncoder``
 
 This encoder requires the :doc:`Yaml Component </components/yaml>` and
 transforms from and to Yaml.
-
 
 .. _component-serializer-handling-circular-references:
 
@@ -1356,4 +1357,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 56114b99976d4f769d47c527be938d188278e07b

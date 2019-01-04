@@ -1592,6 +1592,7 @@ default_path
 ............
 
 .. versionadded:: 3.4
+
     The ``default_path`` option was introduced in Symfony 3.4.
 
 **type**: ``string`` **default**: ``%kernel.project_dir%/translations``
@@ -2112,4 +2113,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`error_reporting PHP option`: https://secure.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting
 
 .. ready: no
-.. revision: 4e24dbc77b5665516e5ddfac9355a636c2fdeba4
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

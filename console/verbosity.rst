@@ -41,6 +41,10 @@ It is possible to print a message in a command for only a specific verbosity
 level. For example::
 
     // ...
+    use Symfony\Component\Console\Command\Command;
+    use Symfony\Component\Console\Input\InputInterface;
+    use Symfony\Component\Console\Output\OutputInterface;
+
     class CreateUserCommand extends Command
     {
         // ...
@@ -84,4 +88,4 @@ without actually printing.
     level or above is used.
 
 .. ready: no
-.. revision: 98b223234f9513ef83258627b75c9d8860dc5617
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

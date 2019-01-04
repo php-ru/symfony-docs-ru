@@ -138,6 +138,7 @@ Environment Variable Processors
 -------------------------------
 
 .. versionadded:: 3.4
+
     Environment variable processors were introduced in Symfony 3.4.
 
 The values of environment variables are considered strings by default.
@@ -525,4 +526,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 69f84e29a44e8e11e27ebfbd95c869d6b33f3154
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

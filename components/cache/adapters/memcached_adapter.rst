@@ -278,6 +278,7 @@ Available Options
     are valid and fit within the design of the protocol being used.
 
 .. tip::
+
     Reference the `Memcached`_ extension's `predefined constants`_ documentation
     for additional information about the available options.
 
@@ -293,4 +294,4 @@ Available Options
 .. _`Domain Name System (DNS)`: https://en.wikipedia.org/wiki/Domain_Name_System
 
 .. ready: no
-.. revision: d6b29968b27fb1034d35159fb434dfc90c9e1680
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

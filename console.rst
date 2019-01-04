@@ -74,6 +74,10 @@ constructor. If your command defines its own constructor, set the properties
 first and then call to the parent constructor, to make those properties
 available in the ``configure()`` method::
 
+    // ...
+    use Symfony\Component\Console\Command\Command;
+    use Symfony\Component\Console\Input\InputArgument;
+
     class CreateUserCommand extends Command
     {
         // ...
@@ -387,4 +391,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 1c07dcac06eb7c0390dfea96c08d02ee12e5e498
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

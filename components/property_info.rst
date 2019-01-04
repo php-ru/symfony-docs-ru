@@ -241,6 +241,7 @@ to determine if it's accessible. This based on how the :doc:`PropertyAccess </co
 works.
 
 .. versionadded:: 4.1
+
     The support of hasser methods in the ``ReflectionExtractor`` class was
     introduced in Symfony 4.1.
 
@@ -493,4 +494,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: ab04c65e6e071d0c04169dfe73202341ee3a5c6e
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

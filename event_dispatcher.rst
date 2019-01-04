@@ -212,8 +212,6 @@ or a "sub request"::
     namespace App\EventListener;
 
     use Symfony\Component\HttpKernel\Event\GetResponseEvent;
-    use Symfony\Component\HttpKernel\HttpKernel;
-    use Symfony\Component\HttpKernel\HttpKernelInterface;
 
     class RequestListener
     {
@@ -273,4 +271,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: ccbf9d52105ab856682280927ed8c25273641728
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

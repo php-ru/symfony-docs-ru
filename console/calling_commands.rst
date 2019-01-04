@@ -11,6 +11,8 @@ generating Doctrine2 proxies, dumping web assets, ...).
 Calling a command from another one is straightforward::
 
     use Symfony\Component\Console\Input\ArrayInput;
+    use Symfony\Component\Console\Input\InputInterface;
+    use Symfony\Component\Console\Output\OutputInterface;
     // ...
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -58,4 +60,4 @@ returns the returned code from the command (return value from command's
     output is optimized for the console and not to be passed to other commands.
 
 .. ready: no
-.. revision: e44f62290b8917366e88faf86de2adb616877590
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

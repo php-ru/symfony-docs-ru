@@ -164,7 +164,6 @@ This requires you to implement several methods::
         }
     }
 
-
 Nice work! Each method is explained below: :ref:`The Guard Authenticator Methods<guard-auth-methods>`.
 
 Step 3) Configure the Authenticator
@@ -515,4 +514,4 @@ Frequently Asked Questions
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 
 .. ready: no
-.. revision: 6cafe2e43bbec3bc2fb8df9df18698348aed3f9c
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

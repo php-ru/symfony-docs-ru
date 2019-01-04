@@ -163,6 +163,7 @@ logout_on_user_change
 **type**: ``boolean`` **default**: ``true``
 
 .. versionadded:: 4.1
+
     The ``logout_on_user_change`` option was deprecated in Symfony 4.1.
 
 If ``false`` this option makes Symfony to not trigger a logout when the user has
@@ -512,4 +513,4 @@ Learn more about user checkers in :doc:`/security/user_checkers`.
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: c3c7bfdc7cee6996598516957a03fda4a5dfbc70
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

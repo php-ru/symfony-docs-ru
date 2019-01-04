@@ -604,6 +604,7 @@ Reporting Exceptions
 ~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.4
+
     The ``catchExceptions()`` method was introduced in Symfony 3.4.
 
 Debugging exceptions in functional tests may be difficult because by default
@@ -1065,4 +1066,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: a3644f69cb2573dd6f255aa1dd85125254c8d301
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

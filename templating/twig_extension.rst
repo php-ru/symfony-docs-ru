@@ -102,6 +102,7 @@ Creating Lazy-Loaded Twig Extensions
 ------------------------------------
 
 .. versionadded:: 1.26
+
     Support for lazy-loaded extensions was introduced in Twig 1.26.
 
 Including the code of the custom filters/functions in the Twig extension class
@@ -173,4 +174,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: 8d000a5075c1e09864bcca7df08fa4867a50ee74
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

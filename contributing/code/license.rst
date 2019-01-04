@@ -5,7 +5,7 @@ Symfony Code License
 
 Symfony code is released under `the MIT license`_:
 
-Copyright (c) 2004-2018 Fabien Potencier
+Copyright (c) 2004-2019 Fabien Potencier
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -35,4 +35,4 @@ and other `Symfony licenses and trademarks`_.
 .. _`Symfony licenses and trademarks`: https://symfony.com/license
 
 .. ready: no
-.. revision: acc39097a0f9d282c301718f7989c7d35c38a459
+.. revision: da25abdeb0d1247d7424870997efe5bac01adfe7

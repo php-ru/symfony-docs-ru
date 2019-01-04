@@ -515,7 +515,7 @@ namespaces in the ``phpunit.xml`` file, as done for example in the
             </listener>
         </listeners>
     </phpunit>
-    
+
 Under the hood, a PHPUnit listener injects the mocked functions in the tested
 classes' namespace. In order to work as expected, the listener has to run before
 the tested class ever runs. By default, the mocked functions are created when the
@@ -699,4 +699,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 5d33840ac2c96fd455e4c2823541fab0af27d79f
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

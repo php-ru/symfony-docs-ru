@@ -119,7 +119,6 @@ of text (called a *message*), use the
 for example, that you're translating a simple message from inside a controller::
 
     // ...
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator)
@@ -198,7 +197,6 @@ Message Placeholders
 
 Sometimes, a message containing a variable needs to be translated::
 
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator, $name)
@@ -354,10 +352,10 @@ with these tasks:
 .. code-block:: terminal
 
     # updates the French translation file with the missing strings found in app/Resources/ templates
-    $ ./bin/console translation:update --dump-messages --force fr
+    $ php bin/console translation:update --dump-messages --force fr
 
     # updates the English translation file with the missing strings found in AppBundle
-    $ ./bin/console translation:update --dump-messages --force en AppBundle
+    $ php bin/console translation:update --dump-messages --force en AppBundle
 
 .. note::
 
@@ -557,4 +555,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: 1f4ce3bd7867591c446838ae7d0c031e5eaac227
+.. revision: f1e1bd0ea1f9855404535785344362b401777148

@@ -224,6 +224,7 @@ to bootstrap or access Twig and add the :class:`Symfony\\Bridge\\Twig\\Extension
         ->getFormFactory();
 
 .. versionadded:: 1.30
+
     The ``Twig\\RuntimeLoader\\FactoryRuntimeLoader`` was introduced in Twig 1.30.
 
 The exact details of your `Twig Configuration`_ will vary, but the goal is
@@ -768,4 +769,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: b9768c7ac6e6d277fee7e4aeeeef7b254ac4c2fe
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
