@@ -123,9 +123,6 @@ be injected with this parameter via the extension as follows::
         }
     }
 
-.. versionadded:: 4.2
-    Not passing the root node name to ``TreeBuilder`` was deprecated in Symfony 4.2.
-
 And set it in the constructor of ``Configuration`` via the ``Extension`` class::
 
     namespace App\DependencyInjection;
@@ -150,4 +147,4 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
     the default parameter value is set by the Extension class.
 
 .. ready: no
-.. revision: d70a0a6cf1b881bb28adc67d087223f892dfd5e5
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

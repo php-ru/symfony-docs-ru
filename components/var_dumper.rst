@@ -70,9 +70,6 @@ current PHP SAPI:
     ``VAR_DUMPER_FORMAT`` environment variable and setting its value to either
     ``html`` or ``cli``.
 
-    .. versionadded:: 4.2
-        The ``VAR_DUMPER_FORMAT`` env var was introduced in Symfony 4.2.
-
 .. note::
 
     If you want to catch the dump output as a string, please read the
@@ -97,16 +94,10 @@ current PHP SAPI:
     function. This function dumps the variables using ``dump()`` and
     immediately ends the execution of the script (using :phpfunction:`exit`).
 
-    .. versionadded:: 4.1
-        The ``dd()`` helper method was introduced in Symfony 4.1.
-
 .. _var-dumper-dump-server:
 
 The Dump Server
 ---------------
-
-.. versionadded:: 4.1
-    The dump server was introduced in Symfony 4.1.
 
 The ``dump()`` function outputs its contents in the same browser window or
 console terminal as your own application. Sometimes mixing the real output
@@ -280,10 +271,6 @@ Example::
         }
     }
 
-.. versionadded:: 4.1
-    The possibility of passing non-string variables as the first argument of
-    ``assertDumpEquals()`` was introduced in Symfony 4.1.
-
 Dump Examples and Output
 ------------------------
 
@@ -424,4 +411,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: b313c78024ca7be9caefb3a0e8fd0cd49329c216
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

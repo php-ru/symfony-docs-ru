@@ -421,9 +421,6 @@ These methods are the best way to browse your application as it takes care
 of a lot of things for you, like detecting the HTTP method from a form and
 giving you a nice API for uploading files.
 
-.. versionadded:: 4.2
-    The ``clickLink()`` and ``submitForm()`` methods were introduced in Symfony 4.2.
-
 The ``request()`` method can also be used to simulate form submissions directly
 or perform more complex requests. Some useful examples::
 
@@ -481,9 +478,6 @@ shortcut to make AJAX requests::
     // the required HTTP_X_REQUESTED_WITH header is added automatically
     $client->xmlHttpRequest('POST', '/submit', array('name' => 'Fabien'));
 
-.. versionadded:: 4.1
-    The ``xmlHttpRequest()`` method was introduced in Symfony 4.1.
-
 Browsing
 ~~~~~~~~
 
@@ -528,9 +522,6 @@ You can also get the objects related to the latest request::
 
 Accessing the Container
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 4.1
-    The ``self::$container`` property was introduced in Symfony 4.1.
 
 It's highly recommended that a functional test only tests the response. But
 under certain very rare circumstances, you might want to access some services
@@ -600,6 +591,7 @@ Reporting Exceptions
 ~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 3.4
+
     The ``catchExceptions()`` method was introduced in Symfony 3.4.
 
 Debugging exceptions in functional tests may be difficult because by default
@@ -817,9 +809,6 @@ their type::
 
         $client->submit($form, array(), array('HTTP_ACCEPT_LANGUAGE' => 'es'));
         $client->submitForm($button, array(), 'POST', array('HTTP_ACCEPT_LANGUAGE' => 'es'));
-
-    .. versionadded:: 4.1
-        The feature to add custom HTTP headers was introduced in Symfony 4.1.
 
 Adding and Removing Forms to a Collection
 .........................................
@@ -1065,4 +1054,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: f8649e1dfbdf5c235526d8d92abfbb8f5d5aebef
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

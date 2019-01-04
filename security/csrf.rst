@@ -112,10 +112,6 @@ CSRF attacks.
 CSRF Protection in HTML Forms
 -----------------------------
 
-.. versionadded:: 4.1
-    In Symfony versions prior to 4.1, CSRF support required installing the
-    Symfony Form component even if you didn't use it.
-
 It's also possible to add CSRF protection to regular HTML forms not managed by
 the Symfony Form component, for example the simple forms used to delete items.
 First, use the ``csrf_token()`` function in the Twig template to generate a CSRF
@@ -150,4 +146,4 @@ to check its validity::
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 066794f922a04d43c5007c1da479efe3f5400936
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

@@ -158,9 +158,6 @@ You can also add links to the HTTP response directly from controllers and servic
         }
     }
 
-.. versionadded:: 4.2
-    The ``addLink()`` shortcut was introduced in Symfony 4.2.
-
 .. seealso::
 
     WebLink can be used :doc:`as a standalone PHP library </components/web_link>`
@@ -179,4 +176,4 @@ You can also add links to the HTTP response directly from controllers and servic
 .. _`PSR-13`: http://www.php-fig.org/psr/psr-13/
 
 .. ready: no
-.. revision: c587a669de30c1df4a49b603873a347c29b2309c
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

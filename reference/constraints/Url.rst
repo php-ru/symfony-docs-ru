@@ -243,6 +243,7 @@ checkDNS
 **type**: ``boolean`` **default**: ``false``
 
 .. versionadded:: 4.1
+
     This option was deprecated in Symfony 4.1 and will be removed in Symfony 5.0,
     because checking the DNS records is not reliable enough to validate the
     existence of the host. Use the :phpfunction:`checkdnsrr` PHP function if you
@@ -324,6 +325,7 @@ dnsMessage
 **type**: ``string`` **default**: ``The host could not be resolved.``
 
 .. versionadded:: 4.1
+
     This option was deprecated in Symfony 4.1 and will be removed in Symfony 5.0,
     because checking the DNS records is not reliable enough to validate the
     existence of the host. Use the :phpfunction:`checkdnsrr` PHP function if you
@@ -399,9 +401,6 @@ relativeProtocol
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.1
-    The ``relativeProtocol`` option was introduced in Symfony 4.1.
-
 If ``true``, the protocol is considered optional when validating the syntax of
 the given URL. This means that both ``http://`` and ``https://`` are valid but
 also relative URLs that contain no protocol (e.g. ``//example.com``).
@@ -469,4 +468,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

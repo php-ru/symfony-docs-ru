@@ -5,6 +5,7 @@ Service Subscribers & Locators
 ==============================
 
 .. versionadded:: 3.3
+
     Service subscribers and locators were introduced in Symfony 3.3.
 
 Sometimes, a service needs access to several other services without being sure
@@ -309,11 +310,6 @@ include as many services as needed in it.
             // ->addTag('container.service_locator')
         ;
 
-.. versionadded:: 4.1
-    The service locator autoconfiguration was introduced in Symfony 4.1. In
-    previous Symfony versions you always needed to add the
-    ``container.service_locator`` tag explicitly.
-
 .. note::
 
     The services defined in the service locator argument must include keys,
@@ -382,10 +378,6 @@ will share identical locators amongst all the services referencing them::
 
 Service Subscriber Trait
 ------------------------
-
-.. versionadded:: 4.2
-    The :class:`Symfony\\Component\\DependencyInjection\\ServiceSubscriberTrait`
-    was introduced in Symfony 4.2.
 
 The :class:`Symfony\\Component\\DependencyInjection\\ServiceSubscriberTrait`
 provides an implementation for
@@ -477,4 +469,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: 568852aca4a714408dde2aaaf0937acc42700a4c
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

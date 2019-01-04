@@ -165,6 +165,7 @@ needs three parameters:
 #. The encoder used to convert that information into an array
 
 .. versionadded:: 3.3
+
     Support for the ``allow_extra_attributes`` key in the context was introduced
     in Symfony 3.3.
 
@@ -486,9 +487,6 @@ and :class:`Symfony\\Component\\Serializer\\Normalizer\\PropertyNormalizer`::
     :class:`Symfony\\Component\\Serializer\\NameConverter\\AdvancedNameConverterInterface`
     to access to the current class name, format and context.
 
-    .. versionadded:: 4.2
-        The ``AdvancedNameConverterInterface`` interface was introduced in Symfony 4.2.
-
 .. _using-camelized-method-names-for-underscored-attributes:
 
 CamelCase to snake_case
@@ -644,10 +642,6 @@ When serializing, you can set a callback to format a specific object property::
     $serializer->serialize($person, 'json');
     // Output: {"name":"cordoval", "age": 34, "createdAt": "2014-03-22T09:43:12-0500"}
 
-.. versionadded:: 4.2
-    The ``$outerObject``, ``$attributeName``, ``$format`` and ``$context``
-    parameters of the callback were introduced in Symfony 4.2.
-
 .. _component-serializer-normalizers:
 
 Normalizers
@@ -716,9 +710,6 @@ There are several types of normalizers available:
     :class:`Symfony\\Component\\Validator\\ConstraintViolationListInterface`
     into a list of errors according to the `RFC 7807`_ standard.
 
-    .. versionadded:: 4.1
-        The ``ConstraintViolationListNormalizer`` was introduced in Symfony 4.1.
-
 .. _component-serializer-encoders:
 
 Encoders
@@ -774,10 +765,8 @@ The ``CsvEncoder`` encodes to and decodes from CSV.
 You can pass the context key ``as_collection`` in order to have the results
 always as a collection.
 
-.. versionadded:: 4.1
-    The ``as_collection`` option was introduced in Symfony 4.1.
-
 .. versionadded:: 4.2
+
     Relying on the default value ``false`` is deprecated since Symfony 4.2.
 
 The ``XmlEncoder``
@@ -802,7 +791,10 @@ Be aware that this encoder will consider keys beginning with ``@`` as attributes
 the key  ``#comment`` for encoding XML comments::
 
     $encoder = new XmlEncoder();
-    $encoder->encode(array('foo' => array('@bar' => 'value'), 'qux' => array('#comment' => 'A comment));
+    $encoder->encode(array(
+        'foo' => array('@bar' => 'value'),
+        'qux' => array('#comment' => 'A comment'),
+    ), 'xml');
     // will return:
     // <?xml version="1.0"?>
     // <response>
@@ -812,9 +804,6 @@ the key  ``#comment`` for encoding XML comments::
 
 You can pass the context key ``as_collection`` in order to have the results
 always as a collection.
-
-.. versionadded:: 4.1
-    The ``as_collection`` option was introduced in Symfony 4.1.
 
 .. tip::
 
@@ -826,15 +815,11 @@ always as a collection.
     changed with the optional ``$encoderIgnoredNodeTypes`` argument of the
     ``XmlEncoder`` class constructor.
 
-    .. versionadded:: 4.1
-        XML comments are ignored by default starting from Symfony 4.1.
-
 The ``YamlEncoder``
 ~~~~~~~~~~~~~~~~~~~
 
 This encoder requires the :doc:`Yaml Component </components/yaml>` and
 transforms from and to Yaml.
-
 
 Skipping ``null`` Values
 ------------------------
@@ -851,9 +836,6 @@ to ``true``::
     $normalizer = new ObjectNormalizer();
     $result = $normalizer->normalize($dummy, 'json', ['skip_null_values' => true]);
     // ['bar' => 'notNull']
-
-.. versionadded:: 4.2
-    The ``skip_null_values`` option was introduced in Symfony 4.2.
 
 .. _component-serializer-handling-circular-references:
 
@@ -949,10 +931,6 @@ having unique identifiers::
     $serializer = new Serializer(array($normalizer), array($encoder));
     var_dump($serializer->serialize($org, 'json'));
     // {"name":"Les-Tilleuls.coop","members":[{"name":"K\u00e9vin", organization: "Les-Tilleuls.coop"}]}
-
-.. versionadded:: 4.2
-    The ``$format`` and ``$context`` parameters of ``setCircularReferenceHandler()``
-    were introduced in Symfony 4.2.
 
 Handling Serialization Depth
 ----------------------------
@@ -1100,13 +1078,6 @@ having unique identifiers::
     );
     */
 
-.. versionadded:: 4.1
-    The ``setMaxDepthHandler()`` method was introduced in Symfony 4.1.
-
-.. versionadded:: 4.2
-    The ``$outerObject``, ``$attributeName``, ``$format`` and ``$context``
-    parameters of ``setMaxDepthHandler()`` were introduced in Symfony 4.2.
-
 Handling Arrays
 ---------------
 
@@ -1222,9 +1193,6 @@ These are the options available:
 
 Handling Constructor Arguments
 ------------------------------
-
-.. versionadded:: 4.1
-    The ``default_constructor_arguments`` option was introduced in Symfony 4.1.
 
 If the class constructor defines arguments, as usually happens with
 `Value Objects`_, the serializer won't be able to create the object if some
@@ -1480,4 +1448,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 9e3910a9865a1e74c703108846c6dddc9a6ff18f
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

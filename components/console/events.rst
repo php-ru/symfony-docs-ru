@@ -94,17 +94,6 @@ event listeners, the ``ConsoleEvents::ERROR`` event is dispatched. A listener
 can wrap or change the exception or do anything useful before the exception is
 thrown by the application.
 
-The ``ConsoleEvents::ERROR`` Event
-----------------------------------
-
-**Typical Purposes**: Handle exceptions thrown during the execution of a
-command.
-
-Whenever an exception is thrown by a command, including those triggered from
-event listeners, the ``ConsoleEvents::ERROR`` event is dispatched. A listener
-can wrap or change the exception or do anything useful before the exception is
-thrown by the application.
-
 Listeners receive a
 :class:`Symfony\\Component\\Console\\Event\\ConsoleErrorEvent` event::
 
@@ -166,4 +155,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: c39cc36330d6a808b78584d0b895adc425375975
+.. revision: 75a5348e7f400a3d7390047366f8910a44774f62

@@ -100,9 +100,6 @@ with a non-zero code)::
 Using Features From the OS Shell
 --------------------------------
 
-.. versionadded:: 4.2
-    The ``fromShellCommandline()`` static method was introduced in Symfony 4.2.
-
 Using array of arguments is the recommended way to define commands. This
 saves you from any escaping and allows sending signals seamlessly
 (e.g. to stop processes before completion)::
@@ -238,9 +235,6 @@ process and checks its output to wait until its fully initialized::
     });
 
     // ... do things after the process is ready
-
-.. versionadded:: 4.2
-    The ``waitUntil()`` method was introduced in Symfony 4.2.
 
 Streaming to the Standard Input of a Process
 --------------------------------------------
@@ -460,9 +454,6 @@ whether `TTY`_ is supported on the current operating system::
 
     $process = (new Process())->setTty(Process::isTtySupported());
 
-.. versionadded:: 4.1
-    The ``isTtySupported()`` method was introduced in Symfony 4.1.
-
 .. _`Symfony Issue#5759`: https://github.com/symfony/symfony/issues/5759
 .. _`PHP Bug#39992`: https://bugs.php.net/bug.php?id=39992
 .. _`exec`: https://en.wikipedia.org/wiki/Exec_(operating_system)
@@ -473,4 +464,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: f6a3bcabd2a18accc33af9167b271513f6a2b3e6
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

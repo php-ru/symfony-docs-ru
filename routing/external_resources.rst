@@ -191,9 +191,6 @@ be prefixed with the string ``/site``.
             $app->addPrefix('/site', false);
             // ...
 
-    .. versionadded:: 4.1
-        The ``trailing_slash_on_root`` option was introduced in Symfony 4.1.
-
 Prefixing the Names of Imported Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -266,11 +263,6 @@ a controller class or imported from a configuration file:
 
 In this example, the names of the routes will be ``blog_index`` and ``blog_post``.
 
-.. versionadded:: 4.1
-    The option to prefix route names in YAML, XML and PHP files was introduced
-    in Symfony 4.1. Previously only the ``@Route()`` annotation supported this
-    feature.
-
 Adding a Host Requirement to Imported Routes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -278,4 +270,4 @@ You can set the host regex on imported routes. For more information, see
 :ref:`component-routing-host-imported`.
 
 .. ready: no
-.. revision: 0775f0a6eb0778b9fa4a96d8da06ce2baaa70c97
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

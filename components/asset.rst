@@ -375,9 +375,6 @@ document inside a template::
 Local Files and Other Protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 4.2
-    The support for other protocols was introduced in Symfony 4.2.
-
 In addition to HTTP this component supports other protocols (such as ``file://``
 and ``ftp://``). This allows for example to serve local files in order to
 improve performance::
@@ -408,4 +405,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 24742a18ce1f4d11ac6c32ea73902bd9cf72679a
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

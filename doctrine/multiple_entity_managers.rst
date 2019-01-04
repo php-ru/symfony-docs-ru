@@ -186,11 +186,24 @@ and ``customer``. The ``default`` entity manager manages entities in the
 entities in ``src/Entity/Customer``. You've also defined two connections, one
 for each entity manager.
 
-.. note::
+.. caution::
 
     When working with multiple connections and entity managers, you should be
     explicit about which configuration you want. If you *do* omit the name of
     the connection or entity manager, the default (i.e. ``default``) is used.
+
+    If you use a different name than ``default`` for the default entity manager,
+    you will need to redefine the default entity manager in ``prod`` environment
+    configuration too:
+
+    .. code-block:: yaml
+
+        # config/packages/prod/doctrine.yaml
+        doctrine:
+            orm:
+                default_entity_manager: 'your default entity manager name'
+
+        # ...
 
 When working with multiple connections to create your databases:
 
@@ -272,4 +285,4 @@ The same applies to repository calls::
     }
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 1d75482cb17abb2ad412f3003d94d1c22bfd0f74

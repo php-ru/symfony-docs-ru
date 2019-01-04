@@ -47,6 +47,7 @@ Kernel Name
 the kernel class)
 
 .. versionadded:: 4.2
+
     The ``kernel.name`` parameter and the ``Kernel::getName()`` method were
     deprecated in Symfony 4.2. If you need a unique ID for your kernels use the
     ``kernel.container_class`` parameter or the ``Kernel::getContainerClass()`` method.
@@ -105,4 +106,4 @@ This returns the path to the log directory. To change it, override the
 ":ref:`override-logs-dir`" for more information.
 
 .. ready: no
-.. revision: e8b0c11cc6b265f12f24280cc5ab8c78b3f2dda6
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

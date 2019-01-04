@@ -643,9 +643,6 @@ a preconfigured scheme.
 file_relative
 ~~~~~~~~~~~~~
 
-.. versionadded:: 4.2
-    The ``file_relative`` filter was introduced in Symfony 4.2.
-
 .. code-block:: twig
 
     {{ file|file_relative }}
@@ -807,4 +804,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: 568852aca4a714408dde2aaaf0937acc42700a4c
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

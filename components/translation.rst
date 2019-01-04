@@ -177,9 +177,6 @@ example, assume you're trying to translate into the ``es_AR`` locale:
 #. If the translation still isn't found, the translator uses the one or more
    fallback locales set explicitly on the translator.
 
-.. versionadded:: 4.2
-    The use of parent locales was introduced in Symfony 4.2.
-
 For (3), the fallback locales can be set by calling
 :method:`Symfony\\Component\\Translation\\Translator::setFallbackLocales`::
 
@@ -242,4 +239,4 @@ Learn More
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 .. ready: no
-.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

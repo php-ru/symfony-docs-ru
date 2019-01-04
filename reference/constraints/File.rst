@@ -233,9 +233,6 @@ You can use the following parameters in this message:
 | ``{{ name }}``   | Base file name                                 |
 +------------------+------------------------------------------------+
 
-.. versionadded:: 4.2
-    The ``{{ name }}`` parameter was introduced in Symfony 4.2.
-
 mimeTypesMessage
 ~~~~~~~~~~~~~~~~
 
@@ -258,9 +255,6 @@ You can use the following parameters in this message:
 | ``{{ name }}``  | Base file name                         |
 +-----------------+----------------------------------------+
 
-.. versionadded:: 4.2
-    The ``{{ name }}`` parameter was introduced in Symfony 4.2.
-
 disallowEmptyMessage
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -278,9 +272,6 @@ You can use the following parameters in this message:
 +----------------+--------------------+
 | ``{{ name }}`` | Base file name     |
 +----------------+--------------------+
-
-.. versionadded:: 4.2
-    The ``{{ name }}`` parameter was introduced in Symfony 4.2.
 
 notFoundMessage
 ~~~~~~~~~~~~~~~
@@ -407,4 +398,4 @@ This message has no parameters.
 .. _`Wikipedia: Binary prefix`: http://en.wikipedia.org/wiki/Binary_prefix
 
 .. ready: no
-.. revision: 6bd0f0fb57763a0f6dd21cc9569703c1184c644e
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

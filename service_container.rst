@@ -198,10 +198,6 @@ each time you ask for it.
         `glob pattern`_. The value of the ``exclude`` option can also be an
         array of glob patterns.
 
-        .. versionadded:: 4.2
-            The feature to pass arrays of glob patterns to the ``exclude``
-            option was introduced in Symfony 4.2.
-
     Thanks to this configuration, you can automatically use any classes from the
     ``src/`` directory as a service, without needing to manually configure
     it. Later, you'll learn more about this in :ref:`service-psr4-loader`.
@@ -718,17 +714,11 @@ argument for *any* service defined in this file! You can bind arguments by name
 (e.g. ``$adminEmail``), by type (e.g. ``Psr\Log\LoggerInterface``) or both
 (e.g. ``Psr\Log\LoggerInterface $requestLogger``).
 
-.. versionadded:: 4.2
-    The feature to bind arguments by name and type was introduced in Symfony 4.2.
-
 The ``bind`` config can also be applied to specific services or when loading many
 services at once (i.e. :ref:`service-psr4-loader`).
 
 Getting Container Parameters as a Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 4.1
-    The feature to get container parameters as a service was introduced in Symfony 4.1.
 
 If some service or controller needs lots of container parameters, there's an
 easier alternative to binding all of them with the ``services._defaults.bind``
@@ -1090,4 +1080,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony-fundamentals
 
 .. ready: no
-.. revision: e350b3efcfadbb26ab51768e5f6a2bcb07d9dc14
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

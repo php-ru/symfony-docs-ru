@@ -149,6 +149,7 @@ Available Options
     connection attempt times out.
 
 .. note::
+
     When using the `Predis`_ library some additional Predis-specific options are available.
     Reference the `Predis Connection Parameters`_ documentation for more information.
 
@@ -162,4 +163,4 @@ Available Options
 .. _`TCP-keepalive`: https://redis.io/topics/clients#tcp-keepalive
 
 .. ready: no
-.. revision: 9f39fd773f0c39917639a255c5ca9eee4974c1e1
+.. revision: c19f2794f85b3475a15ee84923703912eba80493

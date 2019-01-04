@@ -138,6 +138,7 @@ Environment Variable Processors
 -------------------------------
 
 .. versionadded:: 3.4
+
     Environment variable processors were introduced in Symfony 3.4.
 
 The values of environment variables are considered strings by default.
@@ -410,9 +411,6 @@ Symfony provides the following env var processors:
         framework:
            trusted_hosts: '%env(csv:TRUSTED_HOSTS)%'
 
-    .. versionadded:: 4.1
-        The ``csv`` processor was introduced in Symfony 4.1.
-
 ``env(file:FOO)``
     Returns the contents of a file whose path is the value of the ``FOO`` env var:
 
@@ -491,9 +489,6 @@ Symfony provides the following env var processors:
             $container->setParameter('env(SECRETS_FILE)', '/opt/application/.secrets.json');
             $container->setParameter('database_password', '%env(key:database_password:json:file:SECRETS_FILE)%');
 
-    .. versionadded:: 4.2
-        The ``key`` processor was introduced in Symfony 4.2.
-
 It is also possible to combine any number of processors:
 
 .. code-block:: yaml
@@ -566,4 +561,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: d05697073310e4dd43e8011a685b05084ce37701
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

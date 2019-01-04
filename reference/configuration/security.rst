@@ -22,9 +22,6 @@ key in your application configuration.
     namespace and the related XSD schema is available at:
     ``http://symfony.com/schema/dic/services/services-1.0.xsd``
 
-.. versionadded:: 4.1
-    The ``providers`` option is optional starting from Symfony 4.1.
-
 .. _reference-security-firewall-form-login:
 
 Form Login Configuration
@@ -163,6 +160,7 @@ logout_on_user_change
 **type**: ``boolean`` **default**: ``true``
 
 .. versionadded:: 4.1
+
     The ``logout_on_user_change`` option was deprecated in Symfony 4.1.
 
 If ``false`` this option makes Symfony to not trigger a logout when the user has
@@ -201,9 +199,6 @@ You can authenticate to an LDAP server using the LDAP variants of the
 ``form_login``, ``http_basic`` and ``json_login`` authentication providers. Simply use
 ``form_login_ldap``, ``http_basic_ldap`` and ``json_login_ldap``, which will attempt to
 ``bind`` against a LDAP server instead of using password comparison.
-
-.. versionadded:: 4.2
-    The ``json_login_ldap`` authentication provider was introduced in Symfony 4.2.
 
 Both authentication providers have the same arguments as their normal
 counterparts, with the addition of two configuration keys:
@@ -515,4 +510,4 @@ Learn more about user checkers in :doc:`/security/user_checkers`.
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: bc2d5334312ef343a366c0bebdf1600c31b75b68
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

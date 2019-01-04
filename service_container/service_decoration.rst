@@ -104,9 +104,6 @@ service replaces the ``App\Mailer`` service. If you're using the
 the decorated service is automatically injected when the constructor of the
 decorating service has one argument type-hinted with the decorated service class.
 
-.. versionadded:: 4.1
-    The autowiring of the decorated service was introduced in Symfony 4.1.
-
 If you are not using autowiring or the decorating service has more than one
 constructor argument type-hinted with the decorated service class, you must
 inject the decorated service explicitly (the ID of the decorated service is
@@ -290,4 +287,4 @@ The generated code will be the following::
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: 366a653dc6ac382b84d1e8415f9474dfaff9ed4a
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

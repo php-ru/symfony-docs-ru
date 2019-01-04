@@ -119,7 +119,6 @@ of text (called a *message*), use the
 for example, that you're translating a simple message from inside a controller::
 
     // ...
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator)
@@ -198,7 +197,6 @@ Message Placeholders
 
 Sometimes, a message containing a variable needs to be translated::
 
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator, $name)
@@ -354,10 +352,10 @@ with these tasks:
 .. code-block:: terminal
 
     # updates the French translation file with the missing strings found in app/Resources/ templates
-    $ ./bin/console translation:update --dump-messages --force fr
+    $ php bin/console translation:update --dump-messages --force fr
 
     # updates the English translation file with the missing strings found in AppBundle
-    $ ./bin/console translation:update --dump-messages --force en AppBundle
+    $ php bin/console translation:update --dump-messages --force en AppBundle
 
 .. note::
 
@@ -384,6 +382,7 @@ Symfony looks for message files (i.e. translations) in the following default loc
 * the ``Resources/translations/`` directory inside of any bundle.
 
 .. versionadded:: 4.2
+
     Using the ``src/Resources/<bundle name>/translations/`` directory to store
     translations was deprecated in Symfony 4.2. Use instead the directory
     defined in the ``default_path`` option (which is ``translations/`` by default).
@@ -562,4 +561,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: b0bccfec041216f39732c7faceaf980dc1915b9a
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

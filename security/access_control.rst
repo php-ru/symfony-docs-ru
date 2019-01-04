@@ -322,10 +322,6 @@ For a list of the other functions and variables, see
     The ``allow_if`` expressions can also contain custom functions registered
     with :ref:`expression providers <components-expression-language-provider>`.
 
-    .. versionadded:: 4.1
-        The feature to use custom functions inside ``allow_if`` expressions was
-        introduced in Symfony 4.1.
-
 Restrict to a port
 ------------------
 
@@ -420,4 +416,4 @@ the user will be redirected to ``https``:
         ));
 
 .. ready: no
-.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

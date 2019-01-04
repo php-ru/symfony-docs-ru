@@ -25,6 +25,7 @@ Suppose you want to confirm an action before actually executing it. Add
 the following to your command::
 
     // ...
+    use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Output\OutputInterface;
     use Symfony\Component\Console\Question\ConfirmationQuestion;
@@ -384,4 +385,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: 242bedde437bc4eddcadc5e86cff640b7d2623a2
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

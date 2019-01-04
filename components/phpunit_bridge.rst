@@ -248,9 +248,6 @@ class autoloading time. This can be disabled with the ``debug-class-loader`` opt
         </listener>
     </listeners>
 
-.. versionadded:: 4.2
-    The ``DebugClassLoader`` integration was introduced in Symfony 4.2.
-
 Write Assertions about Deprecations
 -----------------------------------
 
@@ -543,7 +540,7 @@ namespaces in the ``phpunit.xml`` file, as done for example in the
             </listener>
         </listeners>
     </phpunit>
-    
+
 Under the hood, a PHPUnit listener injects the mocked functions in the tested
 classes' namespace. In order to work as expected, the listener has to run before
 the tested class ever runs. By default, the mocked functions are created when the
@@ -727,4 +724,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 51a39244cb137d54df813558d51d4be727744217
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

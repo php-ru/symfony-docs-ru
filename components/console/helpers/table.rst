@@ -20,7 +20,10 @@ When building a console application it may be useful to display tabular data:
 To display a table, use :class:`Symfony\\Component\\Console\\Helper\\Table`,
 set the headers, set the rows and then render the table::
 
+    use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Helper\Table;
+    use Symfony\Component\Console\Input\InputInterface;
+    use Symfony\Component\Console\Output\OutputInterface;
     // ...
 
     class SomeCommand extends Command
@@ -85,10 +88,6 @@ You can optionally display titles at the top and the bottom of the table::
     | 80-902734-1-6 | And Then There Were None | Agatha Christie  |
     +---------------+--------- Page 1/2 -------+------------------+
 
-.. versionadded:: 4.2
-    The ``setHeaderTitle()`` and ``setFooterTitle()`` methods were introduced
-    in Symfony 4.2.
-
 By default the width of the columns is calculated automatically based on their
 contents. Use the :method:`Symfony\\Component\\Console\\Helper\\Table::setColumnWidths`
 method to set the column widths explicitly::
@@ -151,9 +150,6 @@ The output of this command will be:
     |                (the rest of rows...)                |
     +-------+------------+--------------------------------+
 
-.. versionadded:: 4.2
-    The ``setColumnMaxWidth()`` method was introduced in Symfony 4.2.
-
 The table style can be changed to any built-in styles via
 :method:`Symfony\\Component\\Console\\Helper\\Table::setStyle`::
 
@@ -210,9 +206,6 @@ which outputs:
     │ 80-902734-1-6 │ And Then There Were None │ Agatha Christie  │
     └───────────────┴──────────────────────────┴──────────────────┘
 
-.. versionadded:: 4.1
-    The ``box`` style was introduced in Symfony 4.1.
-
 You can also set the style to ``box-double``::
 
     $table->setStyle('box-double');
@@ -230,9 +223,6 @@ which outputs:
     ║ 960-425-059-0 │ The Lord of the Rings    │ J. R. R. Tolkien ║
     ║ 80-902734-1-6 │ And Then There Were None │ Agatha Christie  ║
     ╚═══════════════╧══════════════════════════╧══════════════════╝
-
-.. versionadded:: 4.1
-    The ``box-double`` style was introduced in Symfony 4.1.
 
 If the built-in styles do not fit your need, define your own::
 
@@ -262,17 +252,6 @@ Here is a full list of things you can customize:
 *  :method:`Symfony\\Component\\Console\\Helper\\TableStyle::setCellRowFormat`
 *  :method:`Symfony\\Component\\Console\\Helper\\TableStyle::setBorderFormat`
 *  :method:`Symfony\\Component\\Console\\Helper\\TableStyle::setPadType`
-
-.. versionadded:: 4.1
-    The ``setDefaultCrossingChars`` method was introduced in Symfony 4.1.
-    It replaces the deprecated ``setHorizontalBorderChar`` method.
-
-    Also, the ``setVerticalBorderChars`` method was introduced. Use this instead
-    of the deprecated ``setVerticalBorderChar`` method.
-
-    The ``setCrossingChars()`` and ``setDefaultCrossingChar()`` methods are also
-    new. Previously you could only use the now deprecated ``setCrossingChar()``
-    method.
 
 .. tip::
 
@@ -379,9 +358,6 @@ you to create any table layout you may wish.
 Modifying Rendered Tables
 -------------------------
 
-.. versionadded:: 4.1
-    The feature to modify rendered tables was introduced in Symfony 4.1.
-
 The ``render()`` method requires passing the entire table contents. However,
 sometimes that information is not available beforehand because it's generated
 dynamically. In those cases, use the
@@ -419,4 +395,4 @@ This will display the following table in the terminal:
     +---------+
 
 .. ready: no
-.. revision: b911d1558202e299b8ba9e44bb70978af0f168a1
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

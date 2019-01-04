@@ -65,6 +65,7 @@ If you have lots of validation errors, you can filter them by error code::
     }
 
 .. versionadded:: 3.3
+
     The ``findByCodes()`` method was introduced in Symfony 3.3.
 
 Retrieving a Validator Instance
@@ -97,4 +98,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: 9919dcc2e5cd9c29a463fbf065b8fb938abd9e2f
+.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4

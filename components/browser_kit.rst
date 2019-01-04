@@ -91,9 +91,6 @@ make AJAX requests::
     // the required HTTP_X_REQUESTED_WITH header is added automatically
     $crawler = $client->xmlHttpRequest('GET', '/');
 
-.. versionadded:: 4.1
-    The ``xmlHttpRequest()`` method was introduced in Symfony 4.1.
-
 Clicking Links
 ~~~~~~~~~~~~~~
 
@@ -107,9 +104,6 @@ simulate the link click::
     $client->request('GET', '/product/123');
 
     $crawler = $client->clickLink('Go elsewhere...');
-
-.. versionadded:: 4.2
-    The ``clickLink()`` method was introduced in Symfony 4.2.
 
 If you need the :class:`Symfony\\Component\\DomCrawler\\Link` object that
 provides access to the link properties (e.g. ``$link->getMethod()``,
@@ -153,9 +147,6 @@ field values, etc.) before submitting it::
         // override some $_SERVER parameters (e.g. HTTP headers)
         array('HTTP_ACCEPT_LANGUAGE' => 'es')
     );
-
-.. versionadded:: 4.2
-    The ``submitForm()`` method was introduced in Symfony 4.2.
 
 If you need the :class:`Symfony\\Component\\DomCrawler\\Form` object that
 provides access to the form properties (e.g. ``$form->getUri()``,
@@ -301,4 +292,4 @@ Learn more
 .. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
 
 .. ready: no
-.. revision: 0668cccedb8373e6f8d4f32cba9b1967ca4ce6d3
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

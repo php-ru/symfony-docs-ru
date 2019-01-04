@@ -112,8 +112,9 @@ canonicalize
 **type**: ``boolean`` **default**: ``false``
 
 .. versionadded:: 4.1
+
     Using this option with value ``false`` was deprecated in Symfony 4.1 and it
-    will throw an exception in Symfony 5.0. Use ``true`` instead.
+    will throw an exception in Symfony 5.0. Use ``true`` instead.
 
 If ``true``, the :phpmethod:`Locale::canonicalize` method will be applied before checking
 the validity of the given locale (e.g. ``FR-fr.utf8`` is transformed into ``fr_FR``).
@@ -123,4 +124,4 @@ the validity of the given locale (e.g. ``FR-fr.utf8`` is transformed into ``fr_F
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

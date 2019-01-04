@@ -190,6 +190,7 @@ There are some important things to consider in the code of the above controller:
    method to let Symfony guess the right extension according to the file MIME type;
 
 .. versionadded:: 4.1
+
     The :method:`Symfony\\Component\\HttpFoundation\\File\\UploadedFile::getClientSize`
     method was deprecated in Symfony 4.1 and will be removed in Symfony 5.0.
     Use ``getSize()`` instead.
@@ -266,9 +267,6 @@ logic to a separate service::
     :class:`Symfony\\Component\\HttpFoundation\\File\\Exception\\NoFileException`,
     :class:`Symfony\\Component\\HttpFoundation\\File\\Exception\\NoTmpDirFileException`,
     and :class:`Symfony\\Component\\HttpFoundation\\File\\Exception\\PartialFileException`.
-
-    .. versionadded:: 4.1
-        The detailed exception classes were introduced in Symfony 4.1.
 
 Then, define a service for this class:
 
@@ -481,4 +479,4 @@ controller.
 .. _`VichUploaderBundle`: https://github.com/dustin10/VichUploaderBundle
 
 .. ready: no
-.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

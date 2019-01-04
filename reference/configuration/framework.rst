@@ -749,9 +749,6 @@ utf8
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.2
-  The ``framework.router.utf8`` option was introduced in Symfony 4.2.
-
 When this option is set to ``true``, route patterns can include UTF-8 characters.
 If the charset of your application is UTF-8 (as defined in the
 :ref:`getCharset() method <configuration-kernel-charset>` of your kernel) it's
@@ -831,9 +828,6 @@ cookie_samesite
 
 **type**: ``string`` or ``null`` **default**: ``null``
 
-. versionadded:: 4.2
-    The ``cookie_samesite`` option was introduced in Symfony 4.2.
-
 It controls they way cookies are sent when the HTTP request was not originated
 from the same domain the cookies are associated to. Setting this option is
 recommended to mitigate `CSRF security attacks`_.
@@ -868,9 +862,6 @@ cookie_secure
 This determines whether cookies should only be sent over secure connections. The
 default value is ``auto``, which means ``true`` for HTTPS requests and ``false``
 for HTTP requests.
-
-.. versionadded:: 4.2
-    The ``auto`` value was introduced in Symfony 4.2.
 
 cookie_httponly
 ...............
@@ -1648,6 +1639,7 @@ default_path
 ............
 
 .. versionadded:: 3.4
+
     The ``default_path`` option was introduced in Symfony 3.4.
 
 **type**: ``string`` **default**: ``%kernel.project_dir%/translations``
@@ -1736,6 +1728,7 @@ strict_email
 **type**: ``Boolean`` **default**: ``false``
 
 .. versionadded:: 4.1
+
     The ``strict_email`` option was deprecated in Symfony 4.1. Use the new
     ``email_validation_mode`` option instead.
 
@@ -1747,9 +1740,6 @@ email_validation_mode
 .....................
 
 **type**: ``string`` **default**: ``loose``
-
-.. versionadded:: 4.1
-    The ``email_validation_mode`` option was introduced in Symfony 4.1.
 
 It controls the way email addresses are validated by the
 :doc:`/reference/constraints/Email` validator. The possible values are:
@@ -1903,9 +1893,6 @@ Use the application logger instead of the PHP logger for logging PHP errors.
 When an integer value is used, it also sets the log level. Those integer
 values must be the same used in the `error_reporting PHP option`_.
 
-.. versionadded:: 4.1
-    The support for integers in the ``log`` option was introduced in Symfony 4.1.
-
 throw
 .....
 
@@ -1934,9 +1921,6 @@ ships with multiple adapters: ``cache.adapter.apcu``, ``cache.adapter.doctrine``
 There's also a special adapter called ``cache.adapter.array`` which stores
 contents in memory using a PHP array and it's used to disable caching (mostly on
 the ``dev`` environment).
-
-.. versionadded:: 4.1
-    The ``cache.adapter.array`` adapter was introduced in Symfony 4.1.
 
 .. tip::
 
@@ -2104,9 +2088,6 @@ tags
 
 **type**: ``boolean`` | ``string`` **default**: ``null``
 
-.. versionadded:: 4.2
-    The ``tags`` option was introduced in Symfony 4.2.
-
 Whether your service should be able to handle tags or not.
 Can also be the service id of another cache pool where tags will be stored.
 
@@ -2177,4 +2158,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: bd21549fd64292ca3864e2979c7e1900bc9da2ed
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

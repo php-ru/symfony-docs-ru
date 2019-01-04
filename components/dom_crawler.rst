@@ -186,9 +186,6 @@ Get all the direct child nodes matching a CSS selector::
 
     $crawler->filter('body')->children('p.lorem');
 
-.. versionadded:: 4.2
-    The optional selector in ``children($selector)`` method was introduced in Symfony 4.2.
-
 .. note::
 
     All the traversal methods return a new :class:`Symfony\\Component\\DomCrawler\\Crawler`
@@ -569,4 +566,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: 1310e0dc917f676f75662d6fe1053b3adaa695b6
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

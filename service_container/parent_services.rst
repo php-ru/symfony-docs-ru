@@ -12,6 +12,9 @@ you may have multiple repository classes which need the
     // src/Repository/BaseDoctrineRepository.php
     namespace App\Repository;
 
+    use Doctrine\Common\Persistence\ObjectManager;
+    use Psr\Log\LoggerInterface;
+
     // ...
     abstract class BaseDoctrineRepository
     {
@@ -248,4 +251,4 @@ in the child class:
         $container->setDefinition(DoctrinePostRepository::class, $definition);
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

@@ -138,9 +138,6 @@ to your class and choose which groups to use when serializing::
 .. tip::
 
     The value of the ``groups`` key can be a single string, or an array of strings.
-    
-    .. versionadded:: 4.2
-        The option to pass a single string to ``groups`` was introduced in Symfony 4.2.
 
 In addition to the ``@Groups`` annotation, the Serializer component also
 supports YAML or XML files. These files are automatically loaded when being
@@ -227,4 +224,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: 46b6c9fd043ee9554f750fff53583a88117769ef
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

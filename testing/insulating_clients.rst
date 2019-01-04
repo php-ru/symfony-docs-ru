@@ -8,6 +8,7 @@ If you need to simulate an interaction between different clients (think of a
 chat for instance), create several clients::
 
     // ...
+    use Symfony\Component\HttpFoundation\Response;
 
     $harry = static::createClient();
     $sally = static::createClient();
@@ -23,6 +24,7 @@ a third-party library that has some kind of global state. In such a case, you
 can insulate your clients::
 
     // ...
+    use Symfony\Component\HttpFoundation\Response;
 
     $harry = static::createClient();
     $sally = static::createClient();
@@ -53,4 +55,4 @@ clean PHP process, thus avoiding any side-effects.
     the only solution is to disable insulation for those tests.
 
 .. ready: no
-.. revision: eacd84406e72a636bd40b581589e1d75ff4e1e83
+.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c

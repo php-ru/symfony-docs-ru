@@ -91,9 +91,6 @@ Example usage::
 Migrating Between Save Handlers
 -------------------------------
 
-.. versionadded:: 4.1
-    The ``MigratingSessionHandler`` class was introduced in Symfony 4.1.
-
 If your application changes the way sessions are stored, use the
 :class:`Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\MigratingSessionHandler`
 to migrate between old and new save handlers without losing session data.
@@ -294,4 +291,4 @@ timestamp and the lifetime.
 .. _`php.net/memcached.setoption`: https://php.net/memcached.setoption
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

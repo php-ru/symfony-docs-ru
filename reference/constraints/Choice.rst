@@ -370,11 +370,17 @@ too few choices per the `min`_ option.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ limit }}``  | The lower limit of choices                     |
-+------------------+------------------------------------------------+
++--------------------+-------------------------------------------------------+
+| Parameter          | Description                                           |
++====================+=======================================================+
+| ``{{ value }}``    | The current (invalid) value                           |
++--------------------+-------------------------------------------------------+
+| ``{{ choices }}``  | A comma-separated list of available choices           |
++--------------------+-------------------------------------------------------+
+
+.. versionadded:: 4.3
+
+    The ``{{ choices }}`` parameter was introduced in Symfony 4.3.
 
 maxMessage
 ~~~~~~~~~~
@@ -386,13 +392,19 @@ too many options per the `max`_ option.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ limit }}``  | The upper limit of choices                     |
-+------------------+------------------------------------------------+
++--------------------+-------------------------------------------------------+
+| Parameter          | Description                                           |
++====================+=======================================================+
+| ``{{ value }}``    | The current (invalid) value                           |
++--------------------+-------------------------------------------------------+
+| ``{{ choices }}``  | A comma-separated list of available choices           |
++--------------------+-------------------------------------------------------+
+
+.. versionadded:: 4.3
+
+    The ``{{ choices }}`` parameter was introduced in Symfony 4.3.
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 547069c7f48b7af4214ce6204145cbc47f8013e0
+.. revision: 40a3e42922efc9be115ee0d591a93741f651eb8e

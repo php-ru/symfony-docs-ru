@@ -64,9 +64,6 @@ The ``load()`` method never overwrites existing environment variables. Use the
     // ...
     $dotenv->overload(__DIR__.'/.env');
 
-.. versionadded:: 4.2
-    The ``Dotenv::overload()`` method was introduced in Symfony 4.2.
-
 You should never store a ``.env`` file in your code repository as it might
 contain sensitive information; create a ``.env.dist`` file with sensible
 defaults instead.
@@ -114,4 +111,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: d4b2c99ee6c0a88c3c29af8c3ce76a677b5c4d8a
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

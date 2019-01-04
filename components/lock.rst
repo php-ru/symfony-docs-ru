@@ -157,10 +157,6 @@ to reset the TTL to its original value::
         // refresh the lock for 600 seconds (next refresh() call will be 30 seconds again)
         $lock->refresh(600);
 
-    .. versionadded:: 4.1
-        The feature to pass a custom TTL as an argument of the ``refresh()``
-        method was introduced in Symfony 4.1.
-
 Available Stores
 ----------------
 
@@ -223,9 +219,6 @@ support blocking, and expects a TTL to avoid stalled locks::
 
 PdoStore
 ~~~~~~~~
-
-.. versionadded:: 4.2
-    The PdoStore was introduced Symfony 4.2.
 
 The PdoStore saves locks in an SQL database. It requires a `PDO`_ connection, a
 `Doctrine DBAL Connection`_, or a `Data Source Name (DSN)`_. This store does not
@@ -329,9 +322,6 @@ the stores.
 
 ZookeeperStore
 ~~~~~~~~~~~~~~
-
-.. versionadded:: 4.2
-    The ZookeeperStore was introduced in Symfony 4.2.
 
 The ZookeeperStore saves locks on a `ZooKeeper`_ server. It requires a ZooKeeper
 connection implementing the ``\Zookeeper`` class. This store does not
@@ -630,4 +620,4 @@ are still running.
 .. _`ZooKeeper`: https://zookeeper.apache.org/
 
 .. ready: no
-.. revision: 79a29c88229cea1318b6060cfbd171fd1a2679be
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

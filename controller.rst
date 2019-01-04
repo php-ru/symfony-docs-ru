@@ -276,10 +276,6 @@ the argument by its name:
 Like with all services, you can also use regular :ref:`constructor injection <services-constructor-injection>`
 in your controllers.
 
-.. versionadded:: 4.1
-    The ability to bind scalar values to controller arguments was introduced in
-    Symfony 4.1. Previously you could only bind services.
-
 For more information about services, see the :doc:`/service_container` article.
 
 Generating Controllers
@@ -639,4 +635,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: b9768c7ac6e6d277fee7e4aeeeef7b254ac4c2fe
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

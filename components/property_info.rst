@@ -77,10 +77,6 @@ provide it with a set of information extractors.
     $class = YourAwesomeCoolClass::class;
     $properties = $propertyInfo->getProperties($class);
 
-.. versionadded:: 4.2
-    :class:`Symfony\\Component\\PropertyInfo\\PropertyInitializableExtractorInterface`
-    was introduced in Symfony 4.2.
-
 Extractor Ordering
 ~~~~~~~~~~~~~~~~~~
 
@@ -248,10 +244,6 @@ The :class:`Symfony\\Component\\PropertyInfo\\Extractor\\ReflectionExtractor` lo
 for getter/isser/setter/hasser method in addition to whether or not a property is public
 to determine if it's accessible. This based on how the :doc:`PropertyAccess </components/property_access>`
 works.
-
-.. versionadded:: 4.1
-    The support of hasser methods in the ``ReflectionExtractor`` class was
-    introduced in Symfony 4.1.
 
 .. _property-info-initializable:
 
@@ -494,11 +486,6 @@ with the ``property_info`` service in the Symfony Framework.
     // Type information.
     $doctrineExtractor->getTypes($class, $property);
 
-.. versionadded:: 4.2
-    The option to pass Doctrine's EntityManager to ``DoctrineExtractor`` was
-    introduced in Symfony 4.2. Previously you needed to pass the class metadata
-    factory associated to the EntityManager.
-
 .. _`components-property-information-extractors-creation`:
 
 Creating Your Own Extractors
@@ -531,4 +518,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: 417ff90e5f9b82a59762408c488fdde55fba9ed4
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

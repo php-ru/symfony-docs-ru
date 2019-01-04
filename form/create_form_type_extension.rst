@@ -47,9 +47,6 @@ First, create the form type extension class extending from
 The only method you **must** implement is ``getExtendedTypes()``, which is used
 to configure *which* field types you want to modify.
 
-.. versionadded:: 4.2
-    The ``getExtendedTypes()`` method was introduced in Symfony 4.2.
-
 Depending on your use case, you may need to override some of the following methods:
 
 * ``buildForm()``
@@ -259,9 +256,5 @@ method to extend all of them::
         }
     }
 
-.. versionadded:: 4.2
-    The feature to extend multiple form types using a single extension class
-    was introduced in Symfony 4.2.
-
 .. ready: no
-.. revision: 21baaa5e1016c74f60439a937bbd489a3a41be02
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

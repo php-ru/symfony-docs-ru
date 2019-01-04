@@ -242,17 +242,8 @@ the
 method tells you if the request contains a session which was started in one of
 the previous requests.
 
-.. versionadded:: 4.1
-    Using :method:`Symfony\\Component\\HttpFoundation\\Request::getSession`
-    when no session has been set was deprecated in Symfony 4.1. It will throw
-    an exception in Symfony 5.0 when the session is ``null``. Check for an existing session
-    first by calling :method:`Symfony\\Component\\HttpFoundation\\Request::hasSession`.
-
 Processing HTTP Headers
 ~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 4.1
-    The ``HeaderUtils`` class was introduced in Symfony 4.1.
 
 Processing HTTP headers is not a trivial task because of the escaping and white
 space handling of their contents. Symfony provides a
@@ -324,10 +315,6 @@ are also supported::
 
     $quality = $accept->get('text/xml')->getQuality(); // $quality = 0.8
     $quality = $accept->get('application/xml')->getQuality(); // $quality = 0.3
-
-.. versionadded:: 4.1
-    The support of default values in the ``Accept-*`` headers was introduced in
-    Symfony 4.1.
 
 Accessing other Data
 ~~~~~~~~~~~~~~~~~~~~
@@ -564,9 +551,6 @@ abstracts the hard work behind a simple API::
 
     $response->headers->set('Content-Disposition', $disposition);
 
-.. versionadded:: 4.2
-    The static ``HeaderUtils::makeDisposition()`` method was introduced in Symfony 4.2.
-
 Alternatively, if you are serving a static file, you can use a
 :class:`Symfony\\Component\\HttpFoundation\\BinaryFileResponse`::
 
@@ -703,4 +687,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: db4139e2f55545d56da60139f935de9ef56db01d
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

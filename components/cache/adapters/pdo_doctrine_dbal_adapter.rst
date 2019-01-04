@@ -31,9 +31,6 @@ third, and forth parameters::
         $options = array()
     );
 
-.. versionadded:: 4.2
-    Automatic table creation was introduced in Symfony 4.2.
-
 The table where values are stored is created automatically on the first call to
 the :method:`Symfony\\Component\\Cache\\Adapter\\PdoAdapter::save` method.
 You can also create this table explicitly by calling the
@@ -56,4 +53,4 @@ your code.
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
 
 .. ready: no
-.. revision: f8da309f938f99da8d2112f74f81df8cee13c02d
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

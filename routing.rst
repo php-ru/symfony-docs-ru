@@ -146,9 +146,6 @@ use them later to :ref:`generate URLs <routing-generate>`.
 Localized Routing (i18n)
 ------------------------
 
-.. versionadded:: 4.1
-    The feature to localize routes was introduced in Symfony 4.1.
-
 Routes can be localized to provide unique paths per :doc:`locale </translation/locale>`.
 Symfony provides a handy way to declare localized routes without duplication.
 
@@ -221,9 +218,6 @@ caused by definition inconsistency.
     ``fr_BE``), you can use the language part only in your routes (e.g. ``fr``).
     This prevents having to define multiple paths when you want to use the same
     route path for locales that share the same language.
-
-.. versionadded:: 4.2
-    The feature to fall back on the language part only was introduced in Symfony 4.2.
 
 A common requirement for internationalized applications is to prefix all routes
 with a locale. This can be done by defining a different prefix for each locale
@@ -435,9 +429,6 @@ concise, but it can decrease route readability when requirements are complex:
 
         return $routes;
 
-.. versionadded:: 4.1
-    The feature to inline requirements was introduced in Symfony 4.1.
-
 To learn about other route requirements - like HTTP method, hostname and dynamic
 expressions - see :doc:`/routing/requirements`.
 
@@ -607,9 +598,6 @@ placeholder:
 
     To give a ``null`` default value to any placeholder, add nothing after the
     ``?`` character (e.g. ``/blog/{page?}``).
-
-.. versionadded:: 4.1
-    The feature to inline default values was introduced in Symfony 4.1.
 
 Listing all of your Routes
 --------------------------
@@ -794,10 +782,6 @@ Route path  If the requested URL is ``/foo``          If the requested URL is ``
     ``/foo/``) this automatic redirection doesn't take place and the right
     route is always matched.
 
-.. versionadded:: 4.1
-    The automatic ``301`` redirection from ``/foo/`` to ``/foo`` was introduced
-    in Symfony 4.1. In previous Symfony versions this results in a ``404`` response.
-
 .. index::
    single: Routing; Controllers
    single: Controller; String naming format
@@ -981,4 +965,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 1e7d0eae8fd131d24bf01376a7d80d220390b0dc
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

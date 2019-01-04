@@ -37,7 +37,7 @@ want a command to create a user::
     {
         // the name of the command (the part after "bin/console")
         protected static $defaultName = 'app:create-user';
-        
+
         protected function configure()
         {
             // ...
@@ -73,6 +73,10 @@ The ``configure()`` method is called automatically at the end of the command
 constructor. If your command defines its own constructor, set the properties
 first and then call to the parent constructor, to make those properties
 available in the ``configure()`` method::
+
+    // ...
+    use Symfony\Component\Console\Command\Command;
+    use Symfony\Component\Console\Input\InputArgument;
 
     class CreateUserCommand extends Command
     {
@@ -145,10 +149,6 @@ the console::
         $output->write('create a user.');
     }
 
-.. versionadded:: 4.1
-    The support of PHP iterators in the ``write()`` and ``writeln()`` methods
-    was introduced in Symfony 4.1.
-
 Now, try executing the command:
 
 .. code-block:: terminal
@@ -164,9 +164,6 @@ Now, try executing the command:
 
 Output Sections
 ~~~~~~~~~~~~~~~
-
-.. versionadded:: 4.1
-    Output sections were introduced in Symfony 4.1.
 
 The regular console output can be divided into multiple independent regions
 called "output sections". Create one or more of these sections when you need to
@@ -387,4 +384,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 1c07dcac06eb7c0390dfea96c08d02ee12e5e498
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

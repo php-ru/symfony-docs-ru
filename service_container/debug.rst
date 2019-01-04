@@ -15,9 +15,6 @@ console. To show all services (public and private) and their PHP classes, run:
     # add this option to display "hidden services" too (those whose ID starts with a dot)
     $ php bin/console debug:container --show-hidden
 
-.. versionadded:: 4.1
-    Hidden services and the ``--show-hidden`` option were introduced in Symfony 4.1.
-
 To see a list of all of the available types that can be used for autowiring, run:
 
 .. code-block:: terminal
@@ -38,4 +35,4 @@ its id:
     $ php bin/console debug:container 'App\Service\Mailer' --show-arguments
 
 .. ready: no
-.. revision: 8010808754b2c0f1e5c2a7c4ae764af927da04b9
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

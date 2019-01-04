@@ -119,7 +119,12 @@ Valid values are:
 * ``LASER``
 * ``MAESTRO``
 * ``MASTERCARD``
+* ``UATP``
 * ``VISA``
+
+.. versionadded:: 4.3
+
+    The ``UATP`` number scheme was introduced in Symfony 4.3.
 
 For more information about the used schemes, see
 `Wikipedia: Issuer identification number (IIN)`_.
@@ -144,4 +149,4 @@ You can use the following parameters in this message:
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 33474e602919f6b05deb83c2ad77a366493b95e3

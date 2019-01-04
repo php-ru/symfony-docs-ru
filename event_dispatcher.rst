@@ -119,10 +119,6 @@ listener class:
    method (which makes event listeners invokable);
 #. If the ``_invoke()`` method is not defined either, throw an exception.
 
-.. versionadded:: 4.1
-    The support of the ``__invoke()`` method to create invokable event listeners
-    was introduced in Symfony 4.1.
-
 .. note::
 
     There is an optional attribute for the ``kernel.event_listener`` tag called
@@ -212,8 +208,6 @@ or a "sub request"::
     namespace App\EventListener;
 
     use Symfony\Component\HttpKernel\Event\GetResponseEvent;
-    use Symfony\Component\HttpKernel\HttpKernel;
-    use Symfony\Component\HttpKernel\HttpKernelInterface;
 
     class RequestListener
     {
@@ -273,4 +267,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: ccbf9d52105ab856682280927ed8c25273641728
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

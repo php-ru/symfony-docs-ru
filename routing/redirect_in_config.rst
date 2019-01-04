@@ -159,9 +159,6 @@ action:
 
         return $routes;
 
-.. versionadded:: 4.1
-    The ``keepQueryParams`` option was introduced in Symfony 4.1.
-
 .. caution::
 
     Because you are redirecting to a route instead of a path, the required
@@ -170,10 +167,6 @@ action:
 
 Keeping the Request Method when Redirecting
 -------------------------------------------
-
-.. versionadded:: 4.1
-    The feature to keep the request method when redirecting was introduced in
-    Symfony 4.1.
 
 The redirections performed in the previous examples use the ``301`` and ``302``
 HTTP status codes. For legacy reasons, these HTTP redirections change the method
@@ -268,4 +261,4 @@ permanent redirects use ``308`` code instead of ``301``:
         return $collection;
 
 .. ready: no
-.. revision: 95faa8ecacf2a6f865ef4bc34e26aacb3583d923
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

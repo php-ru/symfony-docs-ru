@@ -64,9 +64,6 @@ value and then call the ``setMaxSteps()`` method to update it as needed::
     // a complex task has just been created: increase the progressbar to 200 units
     $progressBar->setMaxSteps(200);
 
-.. versionadded:: 4.1
-    The ``setMaxSteps()`` method was introduced in Symfony 4.1.
-
 Another solution is to omit the steps argument when creating the
 :class:`Symfony\\Component\\Console\\Helper\\ProgressBar` instance::
 
@@ -348,10 +345,6 @@ of the custom placeholders::
 Displaying Multiple Progress Bars
 ---------------------------------
 
-.. versionadded:: 4.1
-    The feature to display multiple progress bars using output sections was
-    introduced in Symfony 4.1.
-
 When using :ref:`Console output sections <console-output-sections>` it's
 possible to display multiple progress bars at the same time and change their
 progress independently::
@@ -384,4 +377,4 @@ After a couple of iterations, the output in the terminal will look like this:
     68/100 [===================>--------]  68%
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18

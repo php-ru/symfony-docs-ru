@@ -21,6 +21,10 @@ Ideally this header should only be set during development and not for
 production. This can be accomplished by setting the header in a
 :ref:`kernel.response <component-http-kernel-kernel-response>` event listener::
 
+    use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+
+    // ...
+
     public function onKernelResponse(FilterResponseEvent $event)
     {
         $response = $event->getResponse();
@@ -41,4 +45,4 @@ If you are using Symfony Flex, you should define your event listener service in 
     :doc:`creating dev only services </configuration/configuration_organization>`.
 
 .. ready: no
-.. revision: bd6f4d30362867c0e47b36b3b4dcef4e1a51885c
+.. revision: f1e1bd0ea1f9855404535785344362b401777148

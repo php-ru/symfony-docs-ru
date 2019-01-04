@@ -143,6 +143,7 @@ checkMX
 **type**: ``boolean`` **default**: ``false``
 
 .. versionadded:: 4.2
+
     This option was deprecated in Symfony 4.2.
 
 If true, then the :phpfunction:`checkdnsrr` PHP function will be used to
@@ -159,6 +160,7 @@ checkHost
 **type**: ``boolean`` **default**: ``false``
 
 .. versionadded:: 4.2
+
     This option was deprecated in Symfony 4.2.
 
 If true, then the :phpfunction:`checkdnsrr` PHP function will be used to
@@ -171,4 +173,4 @@ of the given email.
 .. _HTML5 email input element: https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail
 
 .. ready: no
-.. revision: 4fc5a88f2ecef8cc53a5fd756466964843c6d72b
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

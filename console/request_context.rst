@@ -66,6 +66,7 @@ will override the defaults.
         $container->setParameter('asset.request_context.secure', true);
 
 .. versionadded:: 3.4
+
     The ``asset.request_context.*`` parameters were introduced in Symfony 3.4.
 
 Configuring the Request Context per Command
@@ -102,4 +103,4 @@ router service and override its settings::
     }
 
 .. ready: no
-.. revision: 0d1696c81b3c1719826192afbad96bda387068b1
+.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb

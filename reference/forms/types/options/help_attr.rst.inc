@@ -3,9 +3,6 @@ help_attr
 
 **type**: ``array`` **default**: ``array()``
 
-.. versionadded:: 4.2
-    The ``help_attr`` option was introduced in Symfony 4.2.
-
 Sets the HTML attributes for the element used to display the help message of the
 form field. Its value is an associative array with HTML attribute names as keys.
 These attributes can also be set in the template:
@@ -17,4 +14,4 @@ These attributes can also be set in the template:
     }) }}
 
 .. ready: no
-.. revision: a97dc74631efc126f47957146b28d2618241f790
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

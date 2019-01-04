@@ -69,6 +69,7 @@ implements the :class:`Symfony\\Component\\Config\\Definition\\ConfigurationInte
     }
 
 .. versionadded:: 4.2
+
     Not passing the root node name to ``TreeBuilder`` was deprecated in Symfony 4.2.
 
 Adding Node Definitions to the Tree
@@ -791,9 +792,6 @@ for the node, instead of the node's original value.
 Configuring the Node Path Separator
 -----------------------------------
 
-.. versionadded:: 4.1
-    The option to configure the node path separator was introduced in Symfony 4.1.
-
 Consider the following config builder example::
 
     $treeBuilder = new TreeBuilder('database');
@@ -861,4 +859,4 @@ Otherwise the result is a clean array of configuration values::
     );
 
 .. ready: no
-.. revision: e0260f81db13c22f0a2d65ee318a5d92188c5e3c
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb

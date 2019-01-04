@@ -224,6 +224,7 @@ to bootstrap or access Twig and add the :class:`Symfony\\Bridge\\Twig\\Extension
         ->getFormFactory();
 
 .. versionadded:: 1.30
+
     The ``Twig\\RuntimeLoader\\FactoryRuntimeLoader`` was introduced in Twig 1.30.
 
 The exact details of your `Twig Configuration`_ will vary, but the goal is
@@ -757,9 +758,6 @@ method to access the list of errors. It returns a
 Clearing Form Errors
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 4.2
-    The ``clearErrors()`` method was introduced in Symfony 4.2.
-
 Any errors can be manually cleared using the
 :method:`Symfony\\Component\\Form\\ClearableErrorsInterface::clearErrors`
 method. This is useful when you'd like to validate the form without showing
@@ -783,4 +781,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: 64bda4bca74e39678d844c3a61bef55df0373cfd
+.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
