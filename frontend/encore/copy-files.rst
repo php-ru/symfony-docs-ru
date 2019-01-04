@@ -44,6 +44,9 @@ files into your final output directory.
     +         // optional target path, relative to the output dir
     +         //to: 'images/[path][name].[ext]',
     +
+    +         // if versioning is enabled, add the file hash too
+    +         //to: 'images/[path][name].[hash:8].[ext]',
+    +
     +         // only copy files matching this pattern
     +         //pattern: /\.(png|jpg|jpeg)$/
     +     })
@@ -57,10 +60,10 @@ To render inside Twig, use the ``asset()`` function:
 .. code-block:: html+twig
 
     {# assets/images/logo.png was copied to web/build/logo.png #}
-    <img src="{{ asset('build/logo.png') }}"
+    <img src="{{ asset('build/logo.png') }}">
 
     {# assets/images/subdir/logo.png was copied to web/build/subdir/logo.png #}
-    <img src="{{ asset('build/subdir/logo.png') }}"
+    <img src="{{ asset('build/subdir/logo.png') }}">
 
 Make sure you've enabled the :ref:`json_manifest_path <load-manifest-files>` option,
 which tells the ``asset()`` function to read the final paths from the ``manifest.json``
@@ -68,4 +71,4 @@ file. If you're not sure what path argument to pass to the ``asset()`` function,
 find the file in ``manifest.json`` and use the *key* as the argument.
 
 .. ready: no
-.. revision: a98e0d85a37e9aa35a834ea272e096c26a985243
+.. revision: 50aa694689749915925ab5a654194bb9761e653f

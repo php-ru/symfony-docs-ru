@@ -107,14 +107,14 @@ via the ``config:dump-reference`` command:
 
 .. code-block:: terminal
 
-    $ bin/console config:dump-reference AsseticBundle
+    $ php bin/console config:dump-reference AsseticBundle
 
 Instead of the full bundle name, you can also pass the short name used as the root
 of the bundle's configuration:
 
 .. code-block:: terminal
 
-    $ bin/console config:dump-reference assetic
+    $ php bin/console config:dump-reference assetic
 
 The output will look like this:
 
@@ -140,7 +140,7 @@ The output will look like this:
 
     .. code-block:: terminal
 
-        $ bin/console config:dump-reference AsseticBundle use_controller
+        $ php bin/console config:dump-reference AsseticBundle use_controller
 
         # Default configuration for "AsseticBundle" at path "use_controller"
         use_controller:
@@ -160,4 +160,4 @@ what to do next. Have fun!
 .. _`symfony-bundle topic on GitHub`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: ab9e665a24b4d97a1bba895500f2afa72bccd187
+.. revision: 26f8db35928a7f5a5cff81d2acf2e1d1e7d2c3db

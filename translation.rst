@@ -337,10 +337,10 @@ with these tasks:
 .. code-block:: terminal
 
     # updates the French translation file with the missing strings found in app/Resources/ templates
-    $ ./bin/console translation:update --dump-messages --force fr
+    $ php bin/console translation:update --dump-messages --force fr
 
     # updates the English translation file with the missing strings found in AppBundle
-    $ ./bin/console translation:update --dump-messages --force en AppBundle
+    $ php bin/console translation:update --dump-messages --force en AppBundle
 
 .. note::
 
@@ -542,4 +542,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: 26f8db35928a7f5a5cff81d2acf2e1d1e7d2c3db
