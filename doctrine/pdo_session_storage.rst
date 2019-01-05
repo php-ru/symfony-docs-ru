@@ -24,7 +24,7 @@ To use it, first register a new handler service:
             Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
                 public:    false
                 arguments:
-                    - 'mysql:dbname=mydatabase, host=myhost'
+                    - 'mysql:dbname=mydatabase; host=myhost; port=myport'
                     - { db_username: myuser, db_password: mypassword }
 
     .. code-block:: xml
@@ -56,7 +56,7 @@ To use it, first register a new handler service:
 
         $storageDefinition = $container->register(PdoSessionHandler::class)
             ->setArguments(array(
-                'mysql:dbname=mydatabase, host=myhost',
+                'mysql:dbname=mydatabase; host=myhost; port=myport',
                 array('db_username' => 'myuser', 'db_password' => 'mypassword'),
             ))
         ;
@@ -119,7 +119,7 @@ a second array argument to ``PdoSessionHandler``:
             Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
                 public:    false
                 arguments:
-                    - 'mysql:dbname=mydatabase, host=myhost'
+                    - 'mysql:dbname=mydatabase; host=myhost; port=myport'
                     - { db_table: 'sessions', db_username: 'myuser', db_password: 'mypassword' }
 
     .. code-block:: xml
@@ -152,7 +152,7 @@ a second array argument to ``PdoSessionHandler``:
 
         $container->register(PdoSessionHandler::class)
             ->setArguments(array(
-                'mysql:dbname=mydatabase, host=myhost',
+                'mysql:dbname=mydatabase; host=myhost; port=myport',
                 array('db_table' => 'sessions', 'db_username' => 'myuser', 'db_password' => 'mypassword')
             ))
         ;
@@ -312,4 +312,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: d49d8a7c3c05dacdfd45cfdf860a052547c9a470
+.. revision: 963429cac04499af41af3efafe132f6963dcce55
