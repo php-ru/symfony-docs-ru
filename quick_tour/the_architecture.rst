@@ -288,9 +288,8 @@ as *environment* variables. This means that Symfony works *perfectly* with
 Platform as a Service (PaaS) deployment systems as well as Docker.
 
 But setting environment variables while developing can be a pain. That's why your
-app automatically loads a ``.env`` file, if the ``APP_ENV`` environment variable
-isn't set in the environment. The keys in this file then become environment variables
-and are read by your app:
+app automatically loads a ``.env`` file. The keys in this file then become environment
+variables and are read by your app:
 
 .. code-block:: bash
 
@@ -341,4 +340,4 @@ to the official :doc:`/index` and pick any guide you want.
 .. _`Monolog`: https://github.com/Seldaek/monolog
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 203d93a2f2cf2009a4a411dbb60c5219b503310f
