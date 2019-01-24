@@ -32,15 +32,15 @@ request::
     {
         public function collect(Request $request, Response $response, \Exception $exception = null)
         {
-            $this->data = array(
+            $this->data = [
                 'method' => $request->getMethod(),
                 'acceptable_content_types' => $request->getAcceptableContentTypes(),
-            );
+            ];
         }
 
         public function reset()
         {
-            $this->data = array();
+            $this->data = [];
         }
 
         public function getName()
@@ -269,11 +269,11 @@ to specify a tag that contains the template:
         $container
             ->autowire(RequestCollector::class)
             ->setPublic(false)
-            ->addTag('data_collector', array(
+            ->addTag('data_collector', [
                 'template' => 'data_collector/template.html.twig',
                 'id'       => 'app.request_collector',
                 // 'priority' => 300,
-            ))
+            ])
         ;
 
 The position of each panel in the toolbar is determined by the collector priority.
@@ -282,4 +282,4 @@ Most built-in collectors use ``255`` as their priority. If you want your collect
 to be displayed before them, use a higher value (like 300).
 
 .. ready: no
-.. revision: ccbf9d52105ab856682280927ed8c25273641728
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

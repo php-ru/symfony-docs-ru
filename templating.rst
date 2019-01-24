@@ -125,7 +125,7 @@ Throughout this article, template examples will be shown in both Twig and PHP.
     Twig can also do things that PHP can't, such as whitespace control,
     sandboxing, automatic HTML escaping, manual contextual output escaping,
     and the inclusion of custom functions and filters that only affect templates.
-    Twig contains little features that make writing templates easier and more concise.
+    Twig contains a lot of features that make writing templates easier and more concise.
     Take the following example, which combines a loop with a logical ``if``
     statement:
 
@@ -531,9 +531,9 @@ configuration:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('welcome', new Route('/', array(
+        $routes->add('welcome', new Route('/', [
             '_controller' => 'App\Controller\WelcomeController::index',
-        )));
+        ]));
 
         return $routes;
 
@@ -594,9 +594,9 @@ route:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('article_show', new Route('/article/{slug}', array(
+        $routes->add('article_show', new Route('/article/{slug}', [
             '_controller' => 'App\Controller\ArticleController::show',
-        )));
+        ]));
 
         return $routes;
 
@@ -818,4 +818,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: 7c0a3a1237d5eb6df96212aaf1b2f170a916c33e
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

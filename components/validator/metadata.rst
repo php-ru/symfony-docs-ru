@@ -27,7 +27,7 @@ the ``Author`` class has at least 3 characters::
             $metadata->addPropertyConstraint('firstName', new Assert\NotBlank());
             $metadata->addPropertyConstraint(
                 'firstName',
-                new Assert\Length(array("min" => 3))
+                new Assert\Length(["min" => 3])
             );
         }
     }
@@ -58,9 +58,9 @@ Then, add the Validator component configuration to the class::
     {
         public static function loadValidatorMetadata(ClassMetadata $metadata)
         {
-            $metadata->addGetterConstraint('passwordSafe', new Assert\IsTrue(array(
+            $metadata->addGetterConstraint('passwordSafe', new Assert\IsTrue([
                 'message' => 'The password cannot match your first name',
-            )));
+            ]));
         }
     }
 
@@ -97,4 +97,4 @@ Then, add the Validator component configuration to the class::
     }
 
 .. ready: no
-.. revision: fd752308a876954d92143383c6ceb2f1a2fa71cb
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

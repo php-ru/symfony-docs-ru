@@ -43,15 +43,15 @@ to apply to all instances of a specific class:
         // config/packages/security.php
         use App\Entity\User;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
-            'encoders' => array(
-                User::class => array(
+            'encoders' => [
+                User::class => [
                     'algorithm' => 'bcrypt',
                     'cost' => 12,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 Another option is to use a "named" encoder and then select which encoder
 you want to use dynamically.
@@ -95,15 +95,15 @@ be done with named encoders:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
-            'encoders' => array(
-                'harsh' => array(
+            'encoders' => [
+                'harsh' => [
                     'algorithm' => 'bcrypt',
                     'cost'      => '15',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. note::
 
@@ -174,14 +174,14 @@ you must register a service for it in order to use it as a named encoder:
         // ...
         use App\Security\Encoder\MyCustomPasswordEncoder;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
-            'encoders' => array(
-                'app_encoder' => array(
+            'encoders' => [
+                'app_encoder' => [
                     'id' => MyCustomPasswordEncoder::class,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 This creates an encoder named ``app_encoder`` from a service with the ID
 ``App\Security\Encoder\MyCustomPasswordEncoder``.
@@ -189,4 +189,4 @@ This creates an encoder named ``app_encoder`` from a service with the ID
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

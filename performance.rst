@@ -138,7 +138,6 @@ Learn more
 ----------
 
 * :doc:`/http_cache/varnish`
-* :doc:`/http_cache/form_csrf_caching`
 
 .. _`byte code caches`: https://en.wikipedia.org/wiki/List_of_PHP_accelerators
 .. _`OPcache`: https://php.net/manual/en/book.opcache.php
@@ -151,4 +150,4 @@ Learn more
 .. _`open_basedir`: https://php.net/manual/ini.core.php#ini.open-basedir
 
 .. ready: no
-.. revision: a3644f69cb2573dd6f255aa1dd85125254c8d301
+.. revision: ecb5e623edcfeb3238cffbfe584b0fc715ac2bd5

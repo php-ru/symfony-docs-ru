@@ -56,11 +56,11 @@ First, register a namespace for this directory:
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/vendor/acme/foo-bar/templates' => 'foo_bar',
-            ),
-        ));
+            ],
+        ]);
 
 The registered namespace is called ``foo_bar``, but you must prefix the ``@``
 character when using it in templates (that's how Twig can differentiate
@@ -112,13 +112,13 @@ specific template doesn't exist.
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/vendor/acme/themes/theme1' => 'theme',
                 '%kernel.project_dir%/vendor/acme/themes/theme2' => 'theme',
                 '%kernel.project_dir%/vendor/acme/themes/common' => 'theme',
-            ),
-        ));
+            ],
+        ]);
 
 Now, you can use the same ``@theme`` namespace to refer to any template located
 in the previous three directories:
@@ -128,4 +128,4 @@ in the previous three directories:
     {{ include('@theme/header.twig') }}
 
 .. ready: no
-.. revision: d0ede9911e75cc5a6e967cb202322a7c49cc5649
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -87,12 +87,12 @@ on an object that will contain a credit card number.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('cardNumber', new Assert\CardScheme(array(
-                    'schemes' => array(
+                $metadata->addPropertyConstraint('cardNumber', new Assert\CardScheme([
+                    'schemes' => [
                         'VISA',
-                    ),
+                    ],
                     'message' => 'Your credit card number is invalid.',
-                )));
+                ]));
             }
         }
 
@@ -144,4 +144,4 @@ You can use the following parameters in this message:
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

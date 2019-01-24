@@ -92,7 +92,7 @@ Search in several locations by chaining calls to
 :method:`Symfony\\Component\\Finder\\Finder::in`::
 
     // search inside *both* directories
-    $finder->in(array(__DIR__, '/elsewhere'));
+    $finder->in([__DIR__, '/elsewhere']);
 
     // same as above
     $finder->in(__DIR__)->in('/elsewhere');
@@ -346,4 +346,4 @@ The contents of returned files can be read with
 .. _`natural sort order`: https://en.wikipedia.org/wiki/Natural_sort_order
 
 .. ready: no
-.. revision: 4a747e803f7e6f9870fb674329d69be46e34d421
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

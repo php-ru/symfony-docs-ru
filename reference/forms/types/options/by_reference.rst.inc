@@ -19,7 +19,7 @@ To explain this further, here's a simple example::
     $builder
         ->add('title', TextType::class)
         ->add(
-            $builder->create('author', FormType::class, array('by_reference' => ?))
+            $builder->create('author', FormType::class, ['by_reference' => ?])
                 ->add('name', TextType::class)
                 ->add('email', EmailType::class)
         )
@@ -49,3 +49,6 @@ field where your underlying collection data is an object (like with
 Doctrine's ``ArrayCollection``), then ``by_reference`` must be set to ``false``
 if you need the adder and remover (e.g. ``addAuthor()`` and ``removeAuthor()``)
 to be called.
+
+.. ready: no
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

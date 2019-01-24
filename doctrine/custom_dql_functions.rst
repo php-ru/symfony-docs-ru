@@ -58,23 +58,23 @@ In Symfony, you can register your custom DQL functions as follows:
         use App\DQL\NumericFunction;
         use App\DQL\DatetimeFunction;
 
-        $container->loadFromExtension('doctrine', array(
-            'orm' => array(
+        $container->loadFromExtension('doctrine', [
+            'orm' => [
                 // ...
-                'dql' => array(
-                    'string_functions' => array(
+                'dql' => [
+                    'string_functions' => [
                         'test_string'   => StringFunction::class,
                         'second_string' => SecondStringFunction::class,
-                    ),
-                    'numeric_functions' => array(
+                    ],
+                    'numeric_functions' => [
                         'test_numeric' => NumericFunction::class,
-                    ),
-                    'datetime_functions' => array(
+                    ],
+                    'datetime_functions' => [
                         'test_datetime' => DatetimeFunction::class,
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. note::
 
@@ -130,25 +130,25 @@ In Symfony, you can register your custom DQL functions as follows:
             // config/packages/doctrine.php
             use App\DQL\DatetimeFunction;
 
-            $container->loadFromExtension('doctrine', array(
-                'doctrine' => array(
-                    'orm' => array(
+            $container->loadFromExtension('doctrine', [
+                'doctrine' => [
+                    'orm' => [
                         // ...
-                        'entity_managers' => array(
-                            'example_manager' => array(
+                        'entity_managers' => [
+                            'example_manager' => [
                                 // place your functions here
-                                'dql' => array(
-                                    'datetime_functions' => array(
+                                'dql' => [
+                                    'datetime_functions' => [
                                         'test_datetime' => DatetimeFunction::class,
-                                    ),
-                                ),
-                            ),
-                        ),
-                    ),
-                ),
-            ));
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
+            ]);
 
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: 39cc38e719c981a30755c9d2ebc006ba0d469bcd
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

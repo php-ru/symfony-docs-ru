@@ -22,9 +22,9 @@ class::
 
 Update the route definition accordingly::
 
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
-        '_controller' => array(new LeapYearController(), 'index'),
+        '_controller' => [new LeapYearController(), 'index'],
     )));
 
 The move is pretty straightforward and makes a lot of sense as soon as you
@@ -62,10 +62,10 @@ controller associated with the Request. Besides the built-in PHP callbacks,
 ``getController()`` also supports strings composed of a class name followed by
 two colons and a method name as a valid callback, like 'class::method'::
 
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
         '_controller' => 'LeapYearController::index',
-    )));
+    ]));
 
 To make this code work, modify the framework code to use the controller
 resolver from HttpKernel::
@@ -206,4 +206,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -433,7 +433,7 @@ constraint to test the validity of the email domain::
         public function testEmail()
         {
             $validator = ...
-            $constraint = new Email(array('checkMX' => true));
+            $constraint = new Email(['checkMX' => true]);
 
             $result = $validator->validate('foo@example.com', $constraint);
 
@@ -454,10 +454,10 @@ the data you expect to get for the given hosts::
     {
         public function testEmails()
         {
-            DnsMock::withMockedHosts(array('example.com' => array(array('type' => 'MX'))));
+            DnsMock::withMockedHosts(['example.com' => [['type' => 'MX']]]);
 
             $validator = ...
-            $constraint = new Email(array('checkMX' => true));
+            $constraint = new Email(['checkMX' => true]);
 
             $result = $validator->validate('foo@example.com', $constraint);
 
@@ -469,18 +469,18 @@ are the mocked hosts and the values are arrays of DNS records in the same format
 returned by :phpfunction:`dns_get_record`, so you can simulate diverse network
 conditions::
 
-    DnsMock::withMockedHosts(array(
-        'example.com' => array(
-            array(
+    DnsMock::withMockedHosts([
+        'example.com' => [
+            [
                 'type' => 'A',
                 'ip' => '1.2.3.4',
-            ),
-            array(
+            ],
+            [
                 'type' => 'AAAA',
                 'ipv6' => '::12',
-            ),
-        ),
-    ));
+            ],
+        ],
+    ]);
 
 Troubleshooting
 ---------------
@@ -699,4 +699,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

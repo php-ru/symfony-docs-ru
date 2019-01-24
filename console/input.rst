@@ -220,7 +220,7 @@ You can combine ``VALUE_IS_ARRAY`` with ``VALUE_REQUIRED`` or
             null,
             InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY,
             'Which colors do you like?',
-            array('blue', 'red')
+            ['blue', 'red']
         );
 
 Options with optional arguments
@@ -269,4 +269,4 @@ Now check the value of the option and keep in mind that ``false !== null``::
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

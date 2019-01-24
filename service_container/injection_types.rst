@@ -60,7 +60,7 @@ service container configuration:
             <services>
                 <!-- ... -->
 
-                <service id="app.newsletter_manager" class="App\Mail\NewsletterManager">
+                <service id="App\Mail\NewsletterManager">
                     <argument type="service" id="mailer"/>
                 </service>
             </services>
@@ -73,7 +73,7 @@ service container configuration:
         use Symfony\Component\DependencyInjection\Reference;
 
         // ...
-        $container->register('app.newsletter_manager', NewsletterManager::class)
+        $container->register(NewsletterManager::class)
             ->addArgument(new Reference('mailer'));
 
 .. tip::
@@ -160,7 +160,7 @@ that accepts the dependency::
 
         // ...
         $container->register('app.newsletter_manager', NewsletterManager::class)
-            ->addMethodCall('setMailer', array(new Reference('mailer')));
+            ->addMethodCall('setMailer', [new Reference('mailer')]);
 
 This time the advantages are:
 
@@ -250,4 +250,4 @@ especially if you are working with code that is out of your control, such
 as in a third party library, which uses public properties for its dependencies.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

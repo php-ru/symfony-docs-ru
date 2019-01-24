@@ -119,13 +119,13 @@ abstracts the most frequently used caching strategies into a single array::
 
     $date = date_create_from_format('Y-m-d H:i:s', '2005-10-15 10:00:00');
 
-    $response->setCache(array(
+    $response->setCache([
         'public'        => true,
         'etag'          => 'abcde',
         'last_modified' => $date,
         'max_age'       => 10,
         's_maxage'      => 10,
-    ));
+    ]);
 
     // it is equivalent to the following code
     $response->setPublic();
@@ -186,7 +186,7 @@ ease debugging, you can enable the debug mode::
         $framework,
         new HttpKernel\HttpCache\Store(__DIR__.'/../cache'),
         new HttpKernel\HttpCache\Esi(),
-        array('debug' => true)
+        ['debug' => true]
     );
 
 The debug mode adds a ``X-Symfony-Cache`` header to each response that
@@ -211,4 +211,4 @@ one of them but an important one as it can make your applications fly!
 .. _`Varnish`: https://www.varnish-cache.org/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

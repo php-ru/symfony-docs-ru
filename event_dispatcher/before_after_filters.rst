@@ -65,10 +65,10 @@ First, define some token configuration as parameters:
     .. code-block:: php
 
         // config/services.php
-        $container->setParameter('tokens', array(
+        $container->setParameter('tokens', [
             'client1' => 'pass1',
             'client2' => 'pass2',
-        ));
+        ]);
 
 Tag Controllers to Be Checked
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,9 +106,9 @@ A controller that implements this interface looks like this::
 Creating an Event Subscriber
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Next, you'll need to create an event listener, which will hold the logic
+Next, you'll need to create an event subscriber, which will hold the logic
 that you want to be executed before your controllers. If you're not familiar with
-event listeners, you can learn more about them at :doc:`/event_dispatcher`::
+event subscribers, you can learn more about them at :doc:`/event_dispatcher`::
 
     // src/EventSubscriber/TokenSubscriber.php
     namespace App\EventSubscriber;
@@ -151,9 +151,9 @@ event listeners, you can learn more about them at :doc:`/event_dispatcher`::
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 KernelEvents::CONTROLLER => 'onKernelController',
-            );
+            ];
         }
     }
 
@@ -226,10 +226,10 @@ header on the response if it's found::
 
     public static function getSubscribedEvents()
     {
-        return array(
+        return [
             KernelEvents::CONTROLLER => 'onKernelController',
             KernelEvents::RESPONSE => 'onKernelResponse',
-        );
+        ];
     }
 
 That's it! The ``TokenSubscriber`` is now notified before every controller is
@@ -240,4 +240,4 @@ And by storing a value in the request's "attributes" bag, the ``onKernelResponse
 method knows to add the extra header. Have fun!
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

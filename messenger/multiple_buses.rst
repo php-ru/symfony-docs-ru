@@ -71,31 +71,31 @@ an **event bus**. The event bus could have zero or more subscribers.
     .. code-block:: php
 
         // config/packages/messenger.php
-        $container->loadFromExtension('framework', array(
-            'messenger' => array(
+        $container->loadFromExtension('framework', [
+            'messenger' => [
                 // The bus that is going to be injected when injecting MessageBusInterface
                 'default_bus' => 'messenger.bus.commands',
-                'buses' => array(
-                    'messenger.bus.commands' => array(
-                        'middleware' => array(
+                'buses' => [
+                    'messenger.bus.commands' => [
+                        'middleware' => [
                             'validation',
                             'doctrine_transaction',
-                        ),
-                    ),
-                    'messenger.bus.queries' => array(
-                        'middleware' => array(
+                        ],
+                    ],
+                    'messenger.bus.queries' => [
+                        'middleware' => [
                             'validation',
-                        ),
-                    ),
-                    'messenger.bus.events' => array(
-                        'middleware' => array(
+                        ],
+                    ],
+                    'messenger.bus.events' => [
+                        'middleware' => [
                             'validation',
                             'allow_no_handler',
-                        ),
-                    ),
-                ),
-            ),
-        ));
+                        ],
+                    ],
+                ],
+            ],
+        ]);
 
 This will generate the ``messenger.bus.commands``, ``messenger.bus.queries``
 and ``messenger.bus.events`` services that you can inject in your services.
@@ -292,4 +292,4 @@ You can also restrict the list to a specific bus by providing its name as argume
 .. _article about CQRS: https://martinfowler.com/bliki/CQRS.html
 
 .. ready: no
-.. revision: 4a3f754e43e5f41f3dab74666760a484a9b1f868
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

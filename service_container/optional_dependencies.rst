@@ -66,8 +66,7 @@ call if the service exists and remove the method call if it does not:
 
         # config/services.yaml
         services:
-            app.newsletter_manager:
-                class: App\Newsletter\NewsletterManager
+            App\Newsletter\NewsletterManager:
                 calls:
                     - [setLogger, ['@?logger']]
 
@@ -81,10 +80,6 @@ call if the service exists and remove the method call if it does not:
                 http://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="app.mailer">
-                <!-- ... -->
-                </service>
-
                 <service id="App\Newsletter\NewsletterManager">
                     <call method="setLogger">
                         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -102,12 +97,12 @@ call if the service exists and remove the method call if it does not:
 
         $container
             ->register(NewsletterManager::class)
-            ->addMethodCall('setLogger', array(
+            ->addMethodCall('setLogger', [
                 new Reference(
                     'logger',
                     ContainerInterface::IGNORE_ON_INVALID_REFERENCE
                 ),
-            ))
+            ])
         ;
 
 .. note::
@@ -126,4 +121,4 @@ adding a ``setLogger()`` method::
         }
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

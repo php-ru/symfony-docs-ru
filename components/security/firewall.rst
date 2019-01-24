@@ -61,7 +61,7 @@ the user::
     $requestMatcher = new RequestMatcher('^/secured-area/');
 
     // instances of Symfony\Component\Security\Http\Firewall\ListenerInterface
-    $listeners = array(...);
+    $listeners = [...];
 
     $exceptionListener = new ExceptionListener(...);
 
@@ -80,7 +80,7 @@ with the event dispatcher that is used by the :class:`Symfony\\Component\\HttpKe
 
     $dispatcher->addListener(
         KernelEvents::REQUEST,
-        array($firewall, 'onKernelRequest')
+        [$firewall, 'onKernelRequest']
     );
 
 The firewall is registered to listen to the ``kernel.request`` event that
@@ -164,4 +164,4 @@ Read the next articles to find out more about :doc:`/components/security/authent
 and :doc:`/components/security/authorization`.
 
 .. ready: no
-.. revision: 555a5fbb754492f6b0dfa8055dda6953cf938019
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

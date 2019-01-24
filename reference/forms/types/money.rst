@@ -70,9 +70,9 @@ For example::
     use Symfony\Component\Form\Extension\Core\Type\MoneyType;
     // ...
 
-    $builder->add('price', MoneyType::class, array(
+    $builder->add('price', MoneyType::class, [
         'divisor' => 100,
-    ));
+    ]);
 
 In this case, if the ``price`` field is set to ``9900``, then the value
 ``99`` will actually be rendered to the user. When the user submits the
@@ -147,4 +147,4 @@ money_pattern  ``string``  The format to use to display the money, including the
 .. _`3 letter ISO 4217 code`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: ec8990ee43d2faec62358dd74796973d5ee169d9
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

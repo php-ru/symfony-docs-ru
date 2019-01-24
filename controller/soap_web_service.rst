@@ -101,7 +101,7 @@ the route ``/soap``::
 
     $soapClient = new \SoapClient('http://example.com/index.php/soap?wsdl');
 
-    $result = $soapClient->call('hello', array('name' => 'Scott'));
+    $result = $soapClient->call('hello', ['name' => 'Scott']);
 
 An example WSDL is below.
 
@@ -171,4 +171,4 @@ An example WSDL is below.
 .. _`Zend SOAP`: http://framework.zend.com/manual/current/en/modules/zend.soap.server.html
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

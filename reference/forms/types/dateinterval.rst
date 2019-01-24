@@ -59,7 +59,7 @@ options are `input`_ and `widget`_.
 You can configure *a lot* of different options, including exactly *which* range
 options to show (e.g. don't show "months", but *do* show "days")::
 
-    $builder->add('remindEvery', DateIntervalType::class, array(
+    $builder->add('remindEvery', DateIntervalType::class, [
         'widget'      => 'integer', // render a text field for each part
         // 'input'    => 'string',  // if you want the field to return a ISO 8601 string back to you
 
@@ -68,7 +68,7 @@ options to show (e.g. don't show "months", but *do* show "days")::
         'with_months' => false,
         'with_days'   => true,
         'with_hours'  => true,
-    ));
+    ]);
 
 Field Options
 -------------
@@ -92,15 +92,15 @@ If your widget option is set to ``choice``, then this field will be represented
 as a series of ``select`` boxes. The ``placeholder`` option can be used to
 add a "blank" entry to the top of each select box::
 
-    $builder->add('remindEvery', DateIntervalType::class, array(
+    $builder->add('remindEvery', DateIntervalType::class, [
         'placeholder' => '',
-    ));
+    ]);
 
 Alternatively, you can specify a string to be displayed for the "blank" value::
 
-    $builder->add('remindEvery', DateIntervalType::class, array(
-        'placeholder' => array('years' => 'Years', 'months' => 'Months', 'days' => 'Days')
-    ));
+    $builder->add('remindEvery', DateIntervalType::class, [
+        'placeholder' => ['years' => 'Years', 'months' => 'Months', 'days' => 'Days']
+    ]);
 
 hours
 ~~~~~
@@ -122,7 +122,7 @@ your underlying object. Valid values are:
 
 * ``string`` (a string formatted with `ISO 8601`_ standard, e.g. ``P7Y6M5DT12H15M30S``)
 * ``dateinterval`` (a ``DateInterval`` object)
-* ``array`` (e.g. ``array('days' => '1', 'hours' => '12',)``)
+* ``array`` (e.g. ``['days' => '1', 'hours' => '12',]``)
 
 The value that comes back from the form will also be normalized back into
 this format.
@@ -136,7 +136,7 @@ The labels displayed for each of the elements of this type. The default values
 are ``null``, so they display the "humanized version" of the child names (``Invert``,
 ``Years``, etc.)::
 
-    'labels' => array(
+    'labels' => [
         'invert' => null,
         'years' => null,
         'months' => null,
@@ -144,7 +144,7 @@ are ``null``, so they display the "humanized version" of the child names (``Inve
         'hours' => null,
         'minutes' => null,
         'seconds' => null,
-    )
+    ]
 
 minutes
 ~~~~~~~
@@ -338,4 +338,4 @@ with_years    ``Boolean``  The value of the `with_years`_ option.
 .. _`ISO 8601`: https://en.wikipedia.org/wiki/ISO_8601
 
 .. ready: no
-.. revision: 5bdf708956c07b5938b85f99527aef529af598d9
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

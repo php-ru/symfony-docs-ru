@@ -164,10 +164,10 @@ the environment variable is passed to the kernel::
 
         .. code-block:: php
 
-            $container->loadFromExtension('twig', array(
+            $container->loadFromExtension('twig', [
                 'debug' => '%kernel.debug%',
                 // ...
-            ));
+            ]);
 
 Selecting the Environment for Console Commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -235,9 +235,9 @@ configuration file:
     .. code-block:: php
 
         // config/packages/benchmark/web_profiler.php
-        $container->loadFromExtension('framework', array(
-            'profiler' => array('only_exceptions' => false),
-        ));
+        $container->loadFromExtension('framework', [
+            'profiler' => ['only_exceptions' => false],
+        ]);
 
 And... you're finished! The application now supports a new environment called
 ``benchmark``.
@@ -360,4 +360,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

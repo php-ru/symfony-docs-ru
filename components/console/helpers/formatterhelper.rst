@@ -50,7 +50,7 @@ notice that the background is only as long as each individual line. Use the
 :method:`Symfony\\Component\\Console\\Helper\\FormatterHelper::formatBlock`
 to generate a block output::
 
-    $errorMessages = array('Error!', 'Something went wrong');
+    $errorMessages = ['Error!', 'Something went wrong'];
     $formattedBlock = $formatter->formatBlock($errorMessages, 'error');
     $output->writeln($formattedBlock);
 
@@ -113,4 +113,4 @@ If you don't want to use suffix at all, pass an empty string::
        because length of the "test..." string is shorter than 10 */
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

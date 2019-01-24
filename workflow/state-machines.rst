@@ -141,54 +141,54 @@ Below is the configuration for the pull request state machine.
 
     .. code-block:: php
 
-        // # config/packages/workflow.php
-        $container->loadFromExtension('framework', array(
+        // config/packages/workflow.php
+        $container->loadFromExtension('framework', [
             // ...
-            'workflows' => array(
-                'pull_request' => array(
+            'workflows' => [
+                'pull_request' => [
                   'type' => 'state_machine',
-                  'supports' => array('App\Entity\PullRequest'),
-                  'places' => array(
+                  'supports' => ['App\Entity\PullRequest'],
+                  'places' => [
                     'start',
                     'coding',
                     'travis',
                     'review',
                     'merged',
                     'closed',
-                  ),
-                  'transitions' => array(
-                    'submit'=> array(
+                  ],
+                  'transitions' => [
+                    'submit'=> [
                       'from' => 'start',
                       'to' => 'travis',
-                    ),
-                    'update'=> array(
-                      'from' => array('coding','travis','review'),
+                    ],
+                    'update'=> [
+                      'from' => ['coding','travis','review'],
                       'to' => 'travis',
-                    ),
-                    'wait_for_review'=> array(
+                    ],
+                    'wait_for_review'=> [
                       'from' => 'travis',
                       'to' => 'review',
-                    ),
-                    'request_change'=> array(
+                    ],
+                    'request_change'=> [
                       'from' => 'review',
                       'to' => 'coding',
-                    ),
-                    'accept'=> array(
+                    ],
+                    'accept'=> [
                       'from' => 'review',
                       'to' => 'merged',
-                    ),
-                    'reject'=> array(
+                    ],
+                    'reject'=> [
                       'from' => 'review',
                       'to' => 'closed',
-                    ),
-                    'reopen'=> array(
+                    ],
+                    'reopen'=> [
                       'from' => 'start',
                       'to' => 'review',
-                    ),
-                  ),
-                ),
-            ),
-        ));
+                    ],
+                  ],
+                ],
+            ],
+        ]);
 
 In a Symfony application using the
 :ref:`default services.yaml configuration <service-container-services-load-example>`,
@@ -218,4 +218,4 @@ you can get this state machine by injecting the Workflow registry service::
 .. _Petri net: https://en.wikipedia.org/wiki/Petri_net
 
 .. ready: no
-.. revision: 81fac0446e4ecd24dd9dc671600d301cbe072255
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

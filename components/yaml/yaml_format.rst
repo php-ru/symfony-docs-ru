@@ -179,7 +179,7 @@ Sequences use a dash followed by a space:
 
 The previous YAML file is equivalent to the following PHP code::
 
-    array('PHP', 'Perl', 'Python');
+    ['PHP', 'Perl', 'Python'];
 
 Mappings use a colon followed by a space (``:`` ) to mark each key/value pair:
 
@@ -191,7 +191,7 @@ Mappings use a colon followed by a space (``:`` ) to mark each key/value pair:
 
 which is equivalent to this PHP code::
 
-    array('PHP' => 5.2, 'MySQL' => 5.1, 'Apache' => '2.2.20');
+    ['PHP' => 5.2, 'MySQL' => 5.1, 'Apache' => '2.2.20'];
 
 .. note::
 
@@ -218,16 +218,16 @@ YAML uses indentation with one or more spaces to describe nested collections:
 
 The above YAML is equivalent to the following PHP code::
 
-    array(
-        'symfony 1.0' => array(
+    [
+        'symfony 1.0' => [
             'PHP'    => 5.0,
             'Propel' => 1.2,
-        ),
-        'symfony 1.2' => array(
+        ],
+        'symfony 1.2' => [
             'PHP'    => 5.2,
             'Propel' => 1.3,
-        ),
-    );
+        ],
+    ];
 
 There is one important thing you need to remember when using indentation in a
 YAML file: *Indentation must be done with one or more spaces, but never with
@@ -331,4 +331,4 @@ The following YAML features are not supported by the Symfony Yaml component:
 .. _`YAML specification`: http://www.yaml.org/spec/1.2/spec.html
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -53,16 +53,16 @@ firewall listener:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main'=> array(
+            'firewalls' => [
+                'main'=> [
                     // ...
                     'switch_user' => true,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 To switch to another user, add a query string with the ``_switch_user``
 parameter and the username (or whatever field our user provider uses to load users)
@@ -173,19 +173,19 @@ also adjust the query parameter name via the ``parameter`` setting:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main'=> array(
+            'firewalls' => [
+                'main'=> [
                     // ...
-                    'switch_user' => array(
+                    'switch_user' => [
                         'role' => 'ROLE_ADMIN',
                         'parameter' => '_want_to_be_this_user',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 Limiting User Switching
 -----------------------
@@ -288,10 +288,10 @@ you switch users, add an event subscriber on this event::
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 // constant for security.switch_user
                 SecurityEvents::SWITCH_USER => 'onSwitchUser',
-            );
+            ];
         }
     }
 
@@ -302,4 +302,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: 7853ec02008b2046ab704a300feaf8ef8f86855a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

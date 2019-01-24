@@ -101,9 +101,9 @@ between all of the constraints in your user table:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addConstraint(new UniqueEntity(array(
+                $metadata->addConstraint(new UniqueEntity([
                     'fields'  => 'email',
-                )));
+                ]));
 
                 $metadata->addPropertyConstraint('email', new Assert\Email());
             }
@@ -274,11 +274,11 @@ Consider this example:
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addConstraint(new UniqueEntity(array(
-                    'fields'    => array('host', 'port'),
+                $metadata->addConstraint(new UniqueEntity([
+                    'fields'    => ['host', 'port'],
                     'errorPath' => 'port',
                     'message'   => 'This port is already in use on that host.',
-                )));
+                ]));
             }
         }
 
@@ -299,4 +299,4 @@ also has a ``null`` value, validation would fail.
 .. _`race conditions`: https://en.wikipedia.org/wiki/Race_condition
 
 .. ready: no
-.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

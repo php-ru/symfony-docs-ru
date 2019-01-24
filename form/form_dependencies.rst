@@ -39,9 +39,9 @@ create your form::
         $entityManager = $this->getDoctrine()->getManager();
 
         $task = ...;
-        $form = $this->createForm(TaskType::class, $task, array(
+        $form = $this->createForm(TaskType::class, $task, [
             'entity_manager' => $entityManager,
-        ));
+        ]);
 
         // ...
     }
@@ -145,4 +145,4 @@ at all: Symfony is smart enough to load the ``TaskType`` from the container.
 Read :ref:`form-field-service` for more information.
 
 .. ready: no
-.. revision: 8cd3a84f8e5935f86c2cf41c15fb2800023f3a93
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

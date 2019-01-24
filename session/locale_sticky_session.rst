@@ -51,10 +51,10 @@ correct locale however you want::
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 // must be registered before (i.e. with a higher priority than) the default Locale listener
-                KernelEvents::REQUEST => array(array('onKernelRequest', 20)),
-            );
+                KernelEvents::REQUEST => [['onKernelRequest', 20]],
+            ];
         }
     }
 
@@ -174,9 +174,9 @@ event::
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 SecurityEvents::INTERACTIVE_LOGIN => 'onInteractiveLogin',
-            );
+            ];
         }
     }
 
@@ -187,4 +187,4 @@ event::
     the ``User`` entity.
 
 .. ready: no
-.. revision: 6cafe2e43bbec3bc2fb8df9df18698348aed3f9c
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

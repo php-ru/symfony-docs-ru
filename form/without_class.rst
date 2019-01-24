@@ -17,7 +17,7 @@ an array of the submitted data. The ``getData()`` method allows you to do exactl
 
     public function contact(Request $request)
     {
-        $defaultData = array('message' => 'Type your message here');
+        $defaultData = ['message' => 'Type your message here'];
         $form = $this->createFormBuilder($defaultData)
             ->add('name', TextType::class)
             ->add('email', EmailType::class)
@@ -87,15 +87,15 @@ but here's a short example::
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-           ->add('firstName', TextType::class, array(
-               'constraints' => new Length(array('min' => 3)),
-           ))
-           ->add('lastName', TextType::class, array(
-               'constraints' => array(
+           ->add('firstName', TextType::class, [
+               'constraints' => new Length(['min' => 3]),
+           ])
+           ->add('lastName', TextType::class, [
+               'constraints' => [
                    new NotBlank(),
-                   new Length(array('min' => 3)),
-               ),
-           ))
+                   new Length(['min' => 3]),
+               ],
+           ])
         ;
     }
 
@@ -107,7 +107,7 @@ but here's a short example::
 
     .. code-block:: php
 
-        new NotBlank(array('groups' => array('create', 'update')));
+        new NotBlank(['groups' => ['create', 'update']]);
 
 .. tip::
 
@@ -116,4 +116,4 @@ but here's a short example::
     constraint, unless you :doc:`disable validation </form/disabling_validation>`.
 
 .. ready: no
-.. revision: 7e836ea7aaddb01dd14f81df6ce9027b053f849d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

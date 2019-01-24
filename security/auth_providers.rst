@@ -71,17 +71,17 @@ To support HTTP Basic authentication, add the ``http_basic`` key to your firewal
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main' => array(
-                    'http_basic' => array(
+            'firewalls' => [
+                'main' => [
+                    'http_basic' => [
                         'realm' => 'Secured Area',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 That's it! Symfony will now be listening for any HTTP basic authentication data.
 To load user information, it will use your configured :doc:`user provider </security/user_provider>`.
@@ -138,18 +138,18 @@ Enable the x509 authentication for a particular firewall in the security configu
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main' => array(
+            'firewalls' => [
+                'main' => [
                     // ...
-                    'x509' => array(
+                    'x509' => [
                         'provider' => 'your_user_provider',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 By default, the firewall provides the ``SSL_CLIENT_S_DN_Email`` variable to
 the user provider, and sets the ``SSL_CLIENT_S_DN`` as credentials in the
@@ -211,15 +211,15 @@ corresponding firewall in your security configuration:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'main' => array(
-                    'remote_user' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'main' => [
+                    'remote_user' => [
                         'provider' => 'your_user_provider',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 The firewall will then provide the ``REMOTE_USER`` environment variable to
 your user provider. You can change the variable name used by setting the ``user``
@@ -234,4 +234,4 @@ key in the ``remote_user`` firewall configuration.
 .. _`HTTP Basic authentication`: https://en.wikipedia.org/wiki/Basic_access_authentication
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

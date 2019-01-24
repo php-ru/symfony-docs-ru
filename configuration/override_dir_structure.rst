@@ -123,11 +123,11 @@ own templates directory (or directories):
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/resources/views',
-            ),
-        ));
+            ],
+        ]);
 
 Override the Translations Directory
 -----------------------------------
@@ -169,13 +169,13 @@ configuration option to define your own translations directory (or directories):
     .. code-block:: php
 
         // config/packages/translation.php
-        $container->loadFromExtension('framework', array(
-            'translator' => array(
-                'paths' => array(
+        $container->loadFromExtension('framework', [
+            'translator' => [
+                'paths' => [
                     '%kernel.project_dir%/i18n',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. _override-web-dir:
 .. _override-the-web-directory:
@@ -235,4 +235,4 @@ option in your ``composer.json`` file like this:
     Vagrant/VirtualBox in a guest operating system.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 809c93c281b15f33a23f46eeed0ea855c0e56486

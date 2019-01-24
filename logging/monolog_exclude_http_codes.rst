@@ -53,16 +53,16 @@ logging these HTTP codes based on the MonologBundle configuration:
     .. code-block:: php
 
         // config/packages/prod/monolog.php
-        $container->loadFromExtension('monolog', array(
-            'handlers' => array(
-                'main' => array(
+        $container->loadFromExtension('monolog', [
+            'handlers' => [
+                'main' => [
                     // ...
                     'type'                => 'fingers_crossed',
                     'handler'             => ...,
-                    'excluded_http_codes' => array(403, 404),
-                ),
-            ),
-        ));
+                    'excluded_http_codes' => [403, 404],
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 8450cf198601c9f99730d1e221b9fdc630d6f4a9
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

@@ -75,7 +75,7 @@ and that the ``age`` is ``20``, you could do the following:
             <class name="App\Entity\Person">
                 <property name="firstName">
                     <constraint name="EqualTo">
-                        <value>Mary</value>
+                        Mary
                     </constraint>
                 </property>
                 <property name="age">
@@ -100,9 +100,9 @@ and that the ``age`` is ``20``, you could do the following:
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\EqualTo('Mary'));
 
-                $metadata->addPropertyConstraint('age', new Assert\EqualTo(array(
+                $metadata->addPropertyConstraint('age', new Assert\EqualTo([
                     'value' => 20,
-                )));
+                ]));
             }
         }
 
@@ -135,4 +135,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 1e104b5d3b3c862b6609f5d666595389492e2fce

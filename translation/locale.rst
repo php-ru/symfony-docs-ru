@@ -98,12 +98,12 @@ by the routing system using the special ``_locale`` parameter:
         $routes = new RouteCollection();
         $routes->add('contact', new Route(
             '/{_locale}/contact',
-            array(
-                '_controller' => array(ContactController::class, 'index']),
-            ),
-            array(
+            [
+                '_controller' => [ContactController::class, 'index'],
+            ],
+            [
                 '_locale' => 'en|fr|de',
-            )
+            ]
         ));
 
         return $routes;
@@ -160,9 +160,9 @@ the framework:
     .. code-block:: php
 
         // config/packages/translation.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             'default_locale' => 'en',
-        ));
+        ]);
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

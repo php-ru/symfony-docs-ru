@@ -38,7 +38,7 @@ entry in that array:
              *     @Assert\Length(min=5)
              * })
              */
-             protected $favoriteColors = array();
+             protected $favoriteColors = [];
         }
 
     .. code-block:: yaml
@@ -86,12 +86,12 @@ entry in that array:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('favoriteColors', new Assert\All(array(
-                    'constraints' => array(
+                $metadata->addPropertyConstraint('favoriteColors', new Assert\All([
+                    'constraints' => [
                         new Assert\NotBlank(),
-                        new Assert\Length(array('min' => 5)),
-                    ),
-                )));
+                        new Assert\Length(['min' => 5]),
+                    ],
+                ]));
             }
         }
 
@@ -112,4 +112,4 @@ to apply to each element of the underlying array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 48c1dca2f86aae3ef7696e24f0138169c2350300
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

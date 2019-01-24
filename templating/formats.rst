@@ -37,9 +37,9 @@ pattern is to do the following::
 
             $format = $request->getRequestFormat();
 
-            return $this->render('article/show.'.$format.'.twig', array(
+            return $this->render('article/show.'.$format.'.twig', [
                 'article' => $article,
-            ));
+            ]);
         }
     }
 
@@ -81,4 +81,4 @@ format:
 .. _Request Format Listener: http://symfony.com/doc/current/bundles/FOSRestBundle/3-listener-support.html#format-listener
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -24,9 +24,9 @@ so we set its ``validation_groups`` option to false::
 
     $form = $this->createFormBuilder($task)
         // ...
-        ->add('previousStep', SubmitType::class, array(
+        ->add('previousStep', SubmitType::class, [
             'validation_groups' => false,
-        ))
+        ])
         ->getForm();
 
 Now the form will skip your validation constraints. It will still validate
@@ -39,4 +39,4 @@ large or whether you tried to submit text in a number field.
     read the :doc:`/form/validation_group_service_resolver` article.
 
 .. ready: no
-.. revision: 6d25dbbf76843fff0363154a2aae1302cd7eb048
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

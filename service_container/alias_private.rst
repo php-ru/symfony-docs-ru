@@ -153,10 +153,6 @@ Anonymous Services
 
     Anonymous services are only supported by the XML and YAML configuration formats.
 
-.. versionadded:: 3.3
-
-    The feature to configure anonymous services in YAML was introduced in Symfony 3.3.
-
 In some cases, you may want to prevent a service being used as a dependency of
 other services. This can be achieved by creating an anonymous service. These
 services are like regular services but they don't define an ID and they are
@@ -168,7 +164,7 @@ The following example shows how to inject an anonymous service into another serv
 
     .. code-block:: yaml
 
-        # app/config/services.yaml
+        # config/services.yaml
         services:
             App\Foo:
                 arguments:
@@ -177,7 +173,7 @@ The following example shows how to inject an anonymous service into another serv
 
     .. code-block:: xml
 
-        <!-- app/config/services.xml -->
+        <!-- config/services.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -199,14 +195,14 @@ Using an anonymous service as a factory looks like this:
 
     .. code-block:: yaml
 
-        # app/config/services.yaml
+        # config/services.yaml
         services:
             App\Foo:
                 factory: [ !service { class: App\FooFactory }, 'constructFoo' ]
 
     .. code-block:: xml
 
-        <!-- app/config/services.xml -->
+        <!-- config/services.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -289,4 +285,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab

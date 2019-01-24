@@ -41,10 +41,10 @@ characters long::
     use Symfony\Component\Validator\Constraints\NotBlank;
 
     $validator = Validation::createValidator();
-    $violations = $validator->validate('Bernhard', array(
-        new Length(array('min' => 10)),
+    $violations = $validator->validate('Bernhard', [
+        new Length(['min' => 10]),
         new NotBlank(),
-    ));
+    ]);
 
     if (0 !== count($violations)) {
         // there are errors, now you can show them
@@ -63,10 +63,6 @@ If you have lots of validation errors, you can filter them by error code::
     if (0 !== count($violations->findByCodes(UniqueEntity::NOT_UNIQUE_ERROR))) {
         // handle this specific error (display some message, send an email, etc.)
     }
-
-.. versionadded:: 3.3
-
-    The ``findByCodes()`` method was introduced in Symfony 3.3.
 
 Retrieving a Validator Instance
 -------------------------------
@@ -98,4 +94,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab

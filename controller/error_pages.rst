@@ -231,10 +231,10 @@ configuration option to point to it:
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
+        $container->loadFromExtension('twig', [
             'exception_controller' => 'App\Controller\ExceptionController::showException',
             // ...
-        ));
+        ]);
 
 The :class:`Symfony\\Component\\HttpKernel\\EventListener\\ExceptionListener`
 class used by the TwigBundle as a listener of the ``kernel.exception`` event creates
@@ -356,4 +356,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

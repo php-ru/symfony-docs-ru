@@ -132,7 +132,7 @@ to your class and choose which groups to use when serializing::
 
     $json = $serializer->serialize(
         $someObject,
-        'json', array('groups' => array('group1'))
+        'json', ['groups' => ['group1']]
     );
 
 In addition to the ``@Groups`` annotation, the Serializer component also
@@ -188,12 +188,12 @@ value:
     .. code-block:: php
 
         // config/packages/framework.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'serializer' => array(
+            'serializer' => [
                 'name_converter' => 'serializer.name_converter.camel_case_to_snake_case',
-            ),
-        ));
+            ],
+        ]);
 
 Going Further with the Serializer
 ---------------------------------
@@ -220,4 +220,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: fbb493dc0dccb064d1c9ba677f28d7416edd9fd1
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

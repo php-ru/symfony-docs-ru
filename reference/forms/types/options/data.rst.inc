@@ -12,9 +12,9 @@ an individual field, you can set it in the data option::
     use Symfony\Component\Form\Extension\Core\Type\HiddenType;
     // ...
 
-    $builder->add('token', HiddenType::class, array(
+    $builder->add('token', HiddenType::class, [
         'data' => 'abcdef',
-    ));
+    ]);
 
 .. caution::
 
@@ -22,3 +22,6 @@ an individual field, you can set it in the data option::
     (object) when rendering. This means the object value is also overriden when
     the form edits an already persisted object, causing it to lose its
     persisted value when the form is submitted.
+
+.. ready: no
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

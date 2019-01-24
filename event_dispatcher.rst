@@ -104,7 +104,7 @@ using a special "tag":
 
         $container
             ->autowire(ExceptionListener::class)
-            ->addTag('kernel.event_listener', array('event' => 'kernel.exception'))
+            ->addTag('kernel.event_listener', ['event' => 'kernel.exception'])
         ;
 
 Symfony follows this logic to decide which method to execute inside the event
@@ -163,13 +163,13 @@ listen to the same ``kernel.exception`` event::
         public static function getSubscribedEvents()
         {
             // return the subscribed events, their methods and priorities
-            return array(
-               KernelEvents::EXCEPTION => array(
-                   array('processException', 10),
-                   array('logException', 0),
-                   array('notifyException', -10),
-               )
-            );
+            return [
+               KernelEvents::EXCEPTION => [
+                   ['processException', 10],
+                   ['logException', 0],
+                   ['notifyException', -10],
+               ]
+            ];
         }
 
         public function processException(GetResponseForExceptionEvent $event)
@@ -271,4 +271,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

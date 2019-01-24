@@ -232,7 +232,6 @@ Then, this bundle is enabled automatically, but only for the ``dev`` and
 ``test`` environments::
 
     // config/bundles.php
-
     return [
         // ...
         Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
@@ -274,4 +273,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: e6f65e0c5c17678a33a21ce4ebfdda649355d9c7
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

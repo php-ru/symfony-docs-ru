@@ -44,10 +44,10 @@ Example Usage
     use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
     // ...
 
-    $builder->add('public', CheckboxType::class, array(
+    $builder->add('public', CheckboxType::class, [
         'label'    => 'Show this entry publicly?',
         'required' => false,
-    ));
+    ]);
 
 Field Options
 -------------
@@ -55,7 +55,7 @@ Field Options
 false_values
 ~~~~~~~~~~~~
 
-**type**: ``array`` **default**: ``array(null)``
+**type**: ``array`` **default**: ``[null]``
 
 An array of values to be interpreted as ``false``.
 
@@ -99,4 +99,4 @@ Form Variables
 .. include:: /reference/forms/types/variables/check_or_radio_table.rst.inc
 
 .. ready: no
-.. revision: a0a88a2f7665591c55c597540c7a1d55904513c0
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

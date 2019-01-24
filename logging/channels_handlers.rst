@@ -76,23 +76,23 @@ from the ``security`` channel:
     .. code-block:: php
 
         // config/packages/prod/monolog.php
-        $container->loadFromExtension('monolog', array(
-            'handlers' => array(
-                'security' => array(
+        $container->loadFromExtension('monolog', [
+            'handlers' => [
+                'security' => [
                     'type'     => 'stream',
                     'path'     => '%kernel.logs_dir%/security.log',
-                    'channels' => array(
+                    'channels' => [
                         'security',
-                    ),
-                ),
-                'main'     => array(
+                    ],
+                ],
+                'main'     => [
                     // ...
-                    'channels' => array(
+                    'channels' => [
                         '!security',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. caution::
 
@@ -161,12 +161,12 @@ You can also configure additional channels without the need to tag your services
     .. code-block:: php
 
         // config/packages/prod/monolog.php
-        $container->loadFromExtension('monolog', array(
-            'channels' => array(
+        $container->loadFromExtension('monolog', [
+            'channels' => [
                 'foo',
                 'bar',
-            ),
-        ));
+            ],
+        ]);
 
 Symfony automatically registers one service per channel (in this example, the
 channel ``foo`` creates a service called ``monolog.logger.foo``). In order to
@@ -174,4 +174,4 @@ inject this service into others, you must update the service configuration to
 :ref:`choose the specific service to inject <services-wire-specific-service>`.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -317,10 +317,10 @@ following standardized instructions in your ``README.md`` file.
         {
             public function registerBundles()
             {
-                $bundles = array(
+                $bundles = [
                     // ...
                     new <vendor>\<bundle-name>\<bundle-long-name>(),
-                );
+                ];
 
                 // ...
             }
@@ -375,11 +375,11 @@ following standardized instructions in your ``README.md`` file.
             {
                 public function registerBundles()
                 {
-                    $bundles = array(
+                    $bundles = [
                         // ...
 
                         new <vendor>\<bundle-name>\<bundle-long-name>(),
-                    );
+                    ];
 
                     // ...
                 }
@@ -557,4 +557,4 @@ Learn more
 .. _`Travis Cron`: https://docs.travis-ci.com/user/cron-jobs/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

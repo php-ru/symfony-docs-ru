@@ -13,10 +13,10 @@ from *that* controller::
 
     public function index($name)
     {
-        $response = $this->forward('App\Controller\OtherController::fancy', array(
+        $response = $this->forward('App\Controller\OtherController::fancy', [
             'name'  => $name,
             'color' => 'green',
-        ));
+        ]);
 
         // ... further modify the response or return it directly
 
@@ -35,4 +35,4 @@ Just like when creating a controller for a route, the order of the arguments
 of the ``fancy()`` method doesn't matter: the matching is done by name.
 
 .. ready: no
-.. revision: 80c3c29223c5a54888151b8985233b206565617e
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

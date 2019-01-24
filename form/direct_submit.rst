@@ -24,9 +24,9 @@ submissions::
             return $this->redirectToRoute('task_success');
         }
 
-        return $this->render('product/new.html.twig', array(
+        return $this->render('product/new.html.twig', [
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
 .. tip::
@@ -63,9 +63,9 @@ method, pass the submitted data directly to
             }
         }
 
-        return $this->render('product/new.html.twig', array(
+        return $this->render('product/new.html.twig', [
             'form' => $form->createView(),
-        ));
+        ]);
     }
 
 .. tip::
@@ -92,4 +92,4 @@ method, pass the submitted data directly to
     manually, i.e. using the validator.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

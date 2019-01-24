@@ -116,7 +116,7 @@ Or set the ``command`` attribute on the ``console.command`` tag in your service 
 
         $container
             ->register(SunshineCommand::class)
-            ->addTag('console.command', array('command' => 'app:sunshine'))
+            ->addTag('console.command', ['command' => 'app:sunshine'])
         ;
 
 .. note::
@@ -137,4 +137,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: be2a7773641606dfdc825ea0cc34bb62097f5e45
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

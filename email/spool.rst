@@ -52,10 +52,10 @@ this spool, use the following configuration:
     .. code-block:: php
 
         // config/packages/swiftmailer.php
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
              // ...
-            'spool' => array('type' => 'memory'),
-        ));
+            'spool' => ['type' => 'memory'],
+        ]);
 
 .. _spool-using-a-file:
 
@@ -102,14 +102,14 @@ In order to use the spool with files, use the following configuration:
     .. code-block:: php
 
         // config/packages/swiftmailer.php
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
              // ...
 
-            'spool' => array(
+            'spool' => [
                 'type' => 'file',
                 'path' => '/path/to/spooldir',
-            ),
-        ));
+            ],
+        ]);
 
 .. tip::
 
@@ -164,4 +164,4 @@ at a regular interval.
     ``swiftmailer`` service without the ``lazy`` option (see :doc:`/service_container/lazy_services`).
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

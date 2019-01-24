@@ -63,9 +63,9 @@ you've already setup some translations for the ``fr`` locale:
     .. code-block:: php
 
         // translations/messages.fr.php
-        return array(
+        return [
             'Symfony is great' => 'J\'aime Symfony',
-        );
+        ];
 
 and for the ``en`` locale:
 
@@ -94,9 +94,9 @@ and for the ``en`` locale:
     .. code-block:: php
 
         // translations/messages.en.php
-        return array(
+        return [
             'Symfony is great' => 'Symfony is great',
-        );
+        ];
 
 To inspect all messages in the ``fr`` locale for the application, run:
 
@@ -186,4 +186,4 @@ unused or only the missing messages, by using the ``--only-unused`` or
     $ php bin/console debug:translation en --only-missing
 
 .. ready: no
-.. revision: 3cf74d41f3bc5d71acbadabf4251efa0d019b88e
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -85,20 +85,20 @@ Now you can create, retrieve, update and delete items using this object::
 
 You can also work with multiple items at once::
 
-    $cache->setMultiple(array(
+    $cache->setMultiple([
         'stats.products_count' => 4711,
         'stats.users_count' => 1356,
-    ));
+    ]);
 
-    $stats = $cache->getMultiple(array(
+    $stats = $cache->getMultiple([
         'stats.products_count',
         'stats.users_count',
-    ));
+    ]);
 
-    $cache->deleteMultiple(array(
+    $cache->deleteMultiple([
         'stats.products_count',
         'stats.users_count',
-    ));
+    ]);
 
 Available Simple Cache (PSR-16) Classes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,4 +193,4 @@ Advanced Usage (PSR-6)
 .. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
 
 .. ready: no
-.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

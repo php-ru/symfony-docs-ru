@@ -28,7 +28,7 @@ third, and forth parameters::
         $defaultLifetime = 0,
 
         // an array of options for configuring the database table and connection
-        $options = array()
+        $options = []
     );
 
 .. tip::
@@ -47,4 +47,4 @@ third, and forth parameters::
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
 
 .. ready: no
-.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

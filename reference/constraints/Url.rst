@@ -154,16 +154,16 @@ You can use the following parameters in this message:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url(array(
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
                     'message' => 'The url "{{ value }}" is not a valid url.',
-                )));
+                ]));
             }
         }
 
 protocols
 ~~~~~~~~~
 
-**type**: ``array`` **default**: ``array('http', 'https')``
+**type**: ``array`` **default**: ``['http', 'https']``
 
 The protocols considered to be valid for the URL. For example, if you also consider
 the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
@@ -229,9 +229,9 @@ the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url(array(
-                    'protocols' => array('http', 'https', 'ftp'),
-                )));
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
+                    'protocols' => ['http', 'https', 'ftp'],
+                ]));
             }
         }
 
@@ -309,9 +309,9 @@ option to the value of any of the ``CHECK_DNS_TYPE_*`` constants in the
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url(array(
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
                     'checkDNS'  => Assert\Url::CHECK_DNS_TYPE_ANY,
-                )));
+                ]));
             }
         }
 
@@ -388,9 +388,9 @@ DNS check failed.
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url(array(
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
                      'dnsMessage' => 'The host "{{ value }}" could not be resolved.',
-                )));
+                ]));
             }
         }
 
@@ -462,11 +462,11 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url(array(
-                    'relativeProtocol'  => true,
-                )));
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
+                    'relativeProtocol' => true,
+                ]));
             }
         }
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

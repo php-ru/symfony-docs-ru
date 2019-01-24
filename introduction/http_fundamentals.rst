@@ -337,7 +337,7 @@ A very simple front controller might look like this::
     $request = Request::createFromGlobals();
     $path = $request->getPathInfo(); // the URI path being requested
 
-    if (in_array($path, array('', '/'))) {
+    if (in_array($path, ['', '/'])) {
         $response = new Response('Welcome to the homepage.');
     } elseif ('/contact' === $path) {
         $response = new Response('Contact us');
@@ -361,12 +361,12 @@ to do:
 
 .. _request-flow-figure:
 
-.. figure:: /_images/http/request-flow.png
-   :align: center
-   :alt: Symfony request flow
+.. raw:: html
 
-   Incoming requests are interpreted by the :doc:`Routing component </routing>` and
-   passed to PHP functions that return ``Response`` objects.
+    <object data="../_images/http/request-flow.svg" type="image/svg+xml"></object>
+
+Incoming requests are interpreted by the :doc:`Routing component </routing>` and
+passed to PHP functions that return ``Response`` objects.
 
 This may not make sense yet, but as you keep reading, you'll learn about :doc:`routes </routing>`
 and :doc:`controllers </controller>`: the two fundamental parts to creating a page.
@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: b9768c7ac6e6d277fee7e4aeeeef7b254ac4c2fe
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -37,7 +37,7 @@ want a command to create a user::
     {
         // the name of the command (the part after "bin/console")
         protected static $defaultName = 'app:create-user';
-        
+
         protected function configure()
         {
             // ...
@@ -344,7 +344,7 @@ console::
 
             $command = $application->find('app:create-user');
             $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
+            $commandTester->execute([
                 'command'  => $command->getName(),
 
                 // pass arguments to the helper
@@ -352,7 +352,7 @@ console::
 
                 // prefix the key with two dashes when passing options,
                 // e.g: '--some-option' => 'option_value',
-            ));
+            ]);
 
             // the output of the command in the console
             $output = $commandTester->getDisplay();
@@ -373,6 +373,15 @@ console::
     :class:`Symfony\\Component\\Console\\Application <Symfony\\Component\\Console\\Application>`
     and extend the normal ``\PHPUnit\Framework\TestCase``.
 
+Logging Command Errors
+----------------------
+
+Whenever an exception is thrown while running commands, Symfony adds a log
+message for it including the entire failing command. In addition, Symfony
+registers an :doc:`event subscriber </event_dispatcher>` to listen to the
+:ref:`ConsoleEvents::TERMINATE event <console-events-terminate>` and adds a log
+message whenever a command doesn't finish with the ``0`` exit status.
+
 Learn More
 ----------
 
@@ -391,4 +400,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: a8bd75fef828cab11ad0fd2800291827501c523a

@@ -105,9 +105,9 @@ for that::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'inherit_data' => true,
-            ));
+            ]);
         }
     }
 
@@ -133,9 +133,9 @@ Finally, make this work by adding the location form to your two original forms::
     {
         // ...
 
-        $builder->add('foo', LocationType::class, array(
+        $builder->add('foo', LocationType::class, [
             'data_class' => Company::class,
-        ));
+        ]);
     }
 
 .. code-block:: php
@@ -148,9 +148,9 @@ Finally, make this work by adding the location form to your two original forms::
     {
         // ...
 
-        $builder->add('bar', LocationType::class, array(
+        $builder->add('bar', LocationType::class, [
             'data_class' => Customer::class,
-        ));
+        ]);
     }
 
 That's it! You have extracted duplicated field definitions to a separate
@@ -161,4 +161,4 @@ location form that you can reuse wherever you need it.
     Forms with the ``inherit_data`` option set cannot have ``*_SET_DATA`` event listeners.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

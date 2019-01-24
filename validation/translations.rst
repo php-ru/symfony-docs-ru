@@ -78,9 +78,9 @@ property is not empty, add the following:
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('name', new NotBlank(array(
+                $metadata->addPropertyConstraint('name', new NotBlank([
                     'message' => 'author.name.not_blank',
-                )));
+                ]));
             }
         }
 
@@ -111,12 +111,12 @@ Now, create a ``validators`` catalog file in the ``translations/`` directory:
     .. code-block:: php
 
         // translations/validators.en.php
-        return array(
+        return [
             'author.name.not_blank' => 'Please enter an author name.',
-        );
+        ];
 
 You may need to clear your cache (even in the dev environment) after creating this
 file for the first time.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -74,7 +74,7 @@ register::
     {
         public function getFunctions()
         {
-            return array(
+            return [
                 new ExpressionFunction('lowercase', function ($str) {
                     return sprintf('(is_string(%1$s) ? strtolower(%1$s) : %1$s)', $str);
                 }, function ($arguments, $str) {
@@ -84,7 +84,7 @@ register::
 
                     return strtolower($str);
                 }),
-            );
+            ];
         }
     }
 
@@ -107,10 +107,10 @@ or by using the second argument of the constructor::
     use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
     // using the constructor
-    $expressionLanguage = new ExpressionLanguage(null, array(
+    $expressionLanguage = new ExpressionLanguage(null, [
         new StringExpressionLanguageProvider(),
         // ...
-    ));
+    ]);
 
     // using registerProvider()
     $expressionLanguage->registerProvider(new StringExpressionLanguageProvider());
@@ -125,7 +125,7 @@ or by using the second argument of the constructor::
 
         class ExpressionLanguage extends BaseExpressionLanguage
         {
-            public function __construct(CacheItemPoolInterface $parser = null, array $providers = array())
+            public function __construct(CacheItemPoolInterface $parser = null, array $providers = [])
             {
                 // prepends the default provider to let users override it easily
                 array_unshift($providers, new StringExpressionLanguageProvider());
@@ -136,4 +136,4 @@ or by using the second argument of the constructor::
 
 
 .. ready: no
-.. revision: 608be0660c74100059e86f9c747f00fe4132078b
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

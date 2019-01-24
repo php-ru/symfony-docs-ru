@@ -332,14 +332,14 @@ directory instead:
 
     .. code-block:: php
 
-        $container->loadFromExtension('doctrine', array(
-            'orm' => array(
+        $container->loadFromExtension('doctrine', [
+            'orm' => [
                 'auto_mapping' => true,
-                'mappings' => array(
-                    'AppBundle' => array('dir' => 'SomeResources/config/doctrine', 'type' => 'xml'),
-                ),
-            ),
-        ));
+                'mappings' => [
+                    'AppBundle' => ['dir' => 'SomeResources/config/doctrine', 'type' => 'xml'],
+                ],
+            ],
+        ]);
 
 Mapping Entities Outside of a Bundle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -389,20 +389,20 @@ namespace in the ``src/Entity`` directory and gives them an ``App`` alias
 
     .. code-block:: php
 
-        $container->loadFromExtension('doctrine', array(
-            'orm' => array(
+        $container->loadFromExtension('doctrine', [
+            'orm' => [
                 'auto_mapping' => true,
-                'mappings' => array(
-                    'SomeEntityNamespace' => array(
+                'mappings' => [
+                    'SomeEntityNamespace' => [
                         'type'      => 'annotation',
                         'dir'       => '%kernel.project_dir%/src/Entity',
                         'is_bundle' => false,
                         'prefix'    => 'App\Entity',
                         'alias'     => 'App',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 Detecting a Mapping Configuration Format
 ........................................
@@ -439,4 +439,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: 0e22affe24d5054a0ca8b5d7bb5a006ee905c594
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

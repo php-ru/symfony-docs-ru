@@ -51,9 +51,25 @@ for more information):
     .. code-block:: php
 
         // config/packages/framework.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             'csrf_protection' => null,
-        ));
+        ]);
+
+The tokens used for CSRF protection are meant to be different for every user and
+they are stored in the session. That's why a session is started automatically as
+soon as you render a form with CSRF protection.
+
+.. _caching-pages-that-contain-csrf-protected-forms:
+
+Moreover, this means that you cannot fully cache pages that include CSRF
+protected forms. As an alternative, you can:
+
+* Embed the form inside an uncached :doc:`ESI fragment </http_cache/esi>` and
+  cache the rest of the page contents;
+* Cache the entire page and load the form via an uncached AJAX request;
+* Cache the entire page and use :doc:`hinclude.js </templating/hinclude>` to
+  load just the CSRF token with an uncached AJAX request and replace the form
+  field value with it.
 
 CSRF Protection in Symfony Forms
 --------------------------------
@@ -77,7 +93,7 @@ this can be customized on a form-by-form basis::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class'      => Task::class,
                 // enable/disable CSRF protection for this form
                 'csrf_protection' => true,
@@ -86,22 +102,11 @@ this can be customized on a form-by-form basis::
                 // an arbitrary string used to generate the value of the token
                 // using a different string for each form improves its security
                 'csrf_token_id'   => 'task_item',
-            ));
+            ]);
         }
 
         // ...
     }
-
-.. caution::
-
-    Since the token is stored in the session, a session is started automatically
-    as soon as you render a form with CSRF protection.
-
-.. caution::
-
-    CSRF tokens are meant to be different for every user. Beware of that when
-    caching pages that include forms containing CSRF tokens. For more
-    information, see :doc:`/http_cache/form_csrf_caching`.
 
 CSRF Protection in Login Forms
 ------------------------------
@@ -109,22 +114,28 @@ CSRF Protection in Login Forms
 See :doc:`/security/form_login_setup` for a login form that is protected from
 CSRF attacks.
 
-CSRF Protection in HTML Forms
------------------------------
+.. _csrf-protection-in-html-forms:
+
+Generating and Checking CSRF Tokens Manually
+--------------------------------------------
 
 .. versionadded:: 4.1
+
     In Symfony versions prior to 4.1, CSRF support required installing the
     Symfony Form component even if you didn't use it.
 
-It's also possible to add CSRF protection to regular HTML forms not managed by
-the Symfony Form component, for example the simple forms used to delete items.
-First, use the ``csrf_token()`` function in the Twig template to generate a CSRF
-token and store it as a hidden field of the form:
+Although Symfony Forms provide automatic CSRF protection by default, you may
+need to generate and check CSRF tokens manually for example when using regular
+HTML forms not managed by the Symfony Form component.
+
+Consider a simple HTML form created to allow deleting items. First, use the
+:ref:`csrf_token() Twig function <reference-twig-function-csrf-token>` to
+generate a CSRF token in the template and store it as a hidden form field:
 
 .. code-block:: twig
 
     <form action="{{ url('admin_post_delete', { id: post.id }) }}" method="post">
-        {# the argument of csrf_token() is an arbitrary value used to generate the token #}
+        {# the argument of csrf_token() is an arbitrary string used to generate the token #}
         <input type="hidden" name="token" value="{{ csrf_token('delete-item') }}" />
 
         <button type="submit">Delete item</button>
@@ -150,4 +161,4 @@ to check its validity::
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 066794f922a04d43c5007c1da479efe3f5400936
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

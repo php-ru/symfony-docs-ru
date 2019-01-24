@@ -36,12 +36,12 @@ Basic Usage
     use Symfony\Component\Form\Extension\Core\Type\RangeType;
     // ...
 
-    $builder->add('name', RangeType::class, array(
-        'attr' => array(
+    $builder->add('name', RangeType::class, [
+        'attr' => [
             'min' => 5,
             'max' => 50
-        )
-    ));
+        ]
+    ]);
 
 Inherited Options
 -----------------
@@ -79,4 +79,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: 5bdf708956c07b5938b85f99527aef529af598d9
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
