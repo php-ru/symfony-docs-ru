@@ -49,14 +49,14 @@ A functional test like this is simple to implement thanks to
 
         public function urlProvider()
         {
-            return array(
-                array('/'),
-                array('/posts'),
-                array('/post/fixture-post-1'),
-                array('/blog/category/fixture-category'),
-                array('/archives'),
+            return [
+                ['/'],
+                ['/posts'],
+                ['/post/fixture-post-1'],
+                ['/blog/category/fixture-category'],
+                ['/archives'],
                 // ...
-            );
+            ];
         }
     }
 
@@ -122,4 +122,4 @@ your test fixtures using `Faker`_ and `Alice`_.
 .. _`Alice`: https://github.com/nelmio/alice
 
 .. ready: no
-.. revision: 3fb163c0792f695e85bbdbe1dbdc138db58f8e5e
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

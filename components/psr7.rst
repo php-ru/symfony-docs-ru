@@ -42,7 +42,7 @@ to a ``Zend\Diactoros\ServerRequest`` class implementing the
     use Symfony\Bridge\PsrHttpMessage\Factory\DiactorosFactory;
     use Symfony\Component\HttpFoundation\Request;
 
-    $symfonyRequest = new Request(array(), array(), array(), array(), array(), array('HTTP_HOST' => 'dunglas.fr'), 'Content');
+    $symfonyRequest = new Request([], [], [], [], [], ['HTTP_HOST' => 'dunglas.fr'], 'Content');
     // The HTTP_HOST server key must be set to avoid an unexpected error
 
     $psr7Factory = new DiactorosFactory();
@@ -93,4 +93,4 @@ to a :class:`Symfony\\Component\\HttpFoundation\\Response` instance::
 .. _`symfony/psr-http-message-bridge on Packagist`: https://packagist.org/packages/symfony/psr-http-message-bridge
 
 .. ready: no
-.. revision: 03cb2687f4612502171935434496875441c3a40a
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

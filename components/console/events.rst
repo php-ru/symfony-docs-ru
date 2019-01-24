@@ -129,6 +129,8 @@ Listeners receive a
         $event->setError(new \LogicException('Caught exception', $exitCode, $event->getError()));
     });
 
+.. _console-events-terminate:
+
 The ``ConsoleEvents::TERMINATE`` Event
 --------------------------------------
 
@@ -170,4 +172,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: 23bd98c8c50c0d5865a126bc0d9eb68e56703b48

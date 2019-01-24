@@ -101,7 +101,7 @@ The actual default value of this option depends on other field options:
 
 * If ``multiple`` is ``false`` and ``expanded`` is ``false``, then ``''``
   (empty string);
-* Otherwise ``array()`` (empty array).
+* Otherwise ``[]`` (empty array).
 
 .. include:: /reference/forms/types/options/empty_data.rst.inc
     :start-after: DEFAULT_PLACEHOLDER
@@ -119,4 +119,4 @@ The actual default value of this option depends on other field options:
 .. _`International Components for Unicode`: http://site.icu-project.org
 
 .. ready: no
-.. revision: c2a12fa4b27da708ec0a9c97550e3ce03317d445
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

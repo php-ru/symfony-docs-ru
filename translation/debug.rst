@@ -72,9 +72,9 @@ you've already setup some translations for the ``fr`` locale inside an AcmeDemoB
     .. code-block:: php
 
         // src/Acme/AcmeDemoBundle/Resources/translations/messages.fr.php
-        return array(
+        return [
             'Symfony is great' => 'J\'aime Symfony',
-        );
+        ];
 
 and for the ``en`` locale:
 
@@ -103,9 +103,9 @@ and for the ``en`` locale:
     .. code-block:: php
 
         // src/Acme/AcmeDemoBundle/Resources/translations/messages.en.php
-        return array(
+        return [
             'Symfony is great' => 'Symfony is great',
-        );
+        ];
 
 To inspect all messages in the ``fr`` locale for the AcmeDemoBundle, run:
 
@@ -195,4 +195,4 @@ switches:
     $ php bin/console debug:translation en AcmeDemoBundle --only-missing
 
 .. ready: no
-.. revision: ad72eb3123627d5aaa63d8b4f41a8539f5a2baad
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

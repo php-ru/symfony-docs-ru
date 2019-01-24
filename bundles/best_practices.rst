@@ -232,10 +232,10 @@ following standardized instructions in your ``README.md`` file.
         {
             public function registerBundles()
             {
-                $bundles = array(
+                $bundles = [
                     // ...
                     new <vendor>\<bundle-name>\<bundle-long-name>(),
-                );
+                ];
 
                 // ...
             }
@@ -278,11 +278,11 @@ following standardized instructions in your ``README.md`` file.
             {
                 public function registerBundles()
                 {
-                    $bundles = array(
+                    $bundles = [
                         // ...
 
                         new <vendor>\<bundle-name>\<bundle-long-name>(),
-                    );
+                    ];
 
                     // ...
                 }
@@ -458,4 +458,4 @@ Learn more
 .. _`valid license identifier`: https://spdx.org/licenses/
 
 .. ready: no
-.. revision: 745555748d6c97ef2f62e36f36763b5bc45399fc
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

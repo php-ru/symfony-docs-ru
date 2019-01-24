@@ -39,10 +39,10 @@ header::
     $response->setVary('Accept-Encoding');
 
     // sets multiple vary headers
-    $response->setVary(array('Accept-Encoding', 'User-Agent'));
+    $response->setVary(['Accept-Encoding', 'User-Agent']);
 
 The ``setVary()`` method takes a header name or an array of header names for
 which the response varies.
 
 .. ready: no
-.. revision: a439f6351a4e1a14d84e9076029a3b963ffe3995
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

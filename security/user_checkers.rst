@@ -105,15 +105,15 @@ is the service id of your user checker:
         // ...
         use AppBundle\Security\UserChecker;
 
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'main' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'main' => [
                     'pattern' => '^/',
                     'user_checker' => UserChecker::class,
                     // ...
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. tip::
 
@@ -121,4 +121,4 @@ is the service id of your user checker:
     the ``user_checker`` option under each firewall to choose the one you want.
 
 .. ready: no
-.. revision: 1f7d4b51e2caceb3df1e45db91cf42fcac1f100d
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

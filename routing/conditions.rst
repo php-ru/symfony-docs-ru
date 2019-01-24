@@ -64,14 +64,14 @@ define arbitrary matching logic, use the ``conditions`` routing option:
 
         $routes = new RouteCollection();
         $routes->add('contact', new Route(
-            '/contact', array(
+            '/contact', [
                 '_controller' => 'AcmeDemoBundle:Main:contact',
-            ),
-            array(),
-            array(),
+            ],
+            [],
+            [],
             '',
-            array(),
-            array(),
+            [],
+            [],
             'context.getMethod() in ["GET", "HEAD"] and request.headers.get("User-Agent") matches "/firefox/i"'
         ));
 
@@ -102,7 +102,7 @@ variables that are passed into the expression:
     would generate the following PHP in the cache directory::
 
         if (rtrim($pathInfo, '/contact') === '' && (
-            in_array($context->getMethod(), array(0 => "GET", 1 => "HEAD"))
+            in_array($context->getMethod(), [0 => "GET", 1 => "HEAD"])
             && preg_match("/firefox/i", $request->headers->get("User-Agent"))
         )) {
             // ...
@@ -112,4 +112,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: e3a2fa4e74169f52cbce28bd694a213c5708d1b0
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -52,10 +52,10 @@ tags:
         .. code-block:: php
 
             // app/config/config.php
-            $container->loadFromExtension('framework', array(
+            $container->loadFromExtension('framework', [
                 // ...
-                'fragments' => array('path' => '/_fragment'),
-            ));
+                'fragments' => ['path' => '/_fragment'],
+            ]);
 
 Default content (while loading or if JavaScript is disabled) can be set globally
 in your application configuration:
@@ -90,14 +90,14 @@ in your application configuration:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'templating' => array(
-                'hinclude_default_template' => array(
+            'templating' => [
+                'hinclude_default_template' => [
                     'hinclude.html.twig',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 You can define default templates per ``render()`` function (which will override
 any global default template that is defined):
@@ -117,4 +117,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: 88c21633e96f6d6f7d8d9d73d030c881cfb825fc
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

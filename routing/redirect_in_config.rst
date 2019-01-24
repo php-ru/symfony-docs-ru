@@ -78,11 +78,11 @@ action to redirect to this new url:
         $routes->addCollection($appRoutes);
 
         // redirecting the root
-        $routes->add('root', new Route('/', array(
+        $routes->add('root', new Route('/', [
             '_controller' => 'FrameworkBundle:Redirect:urlRedirect',
             'path'        => '/app',
             'permanent'   => true,
-        )));
+        ]));
 
         return $routes;
 
@@ -145,11 +145,11 @@ action:
         // ...
 
         // redirecting the root
-        $routes->add('root', new Route('/wp-admin', array(
+        $routes->add('root', new Route('/wp-admin', [
             '_controller' => 'FrameworkBundle:Redirect:redirect',
             'route'       => 'sonata_admin_dashboard',
             'permanent'   => true,
-        )));
+        ]));
 
         return $routes;
 
@@ -160,4 +160,4 @@ action:
     in the ``urlRedirect()`` action.
 
 .. ready: no
-.. revision: 219b7f88713f162934ae238c09c26986e23db457
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

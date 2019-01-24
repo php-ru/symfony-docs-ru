@@ -43,10 +43,10 @@ can do this without creating a controller:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('acme_privacy', new Route('/privacy', array(
+        $routes->add('acme_privacy', new Route('/privacy', [
             '_controller' => 'FrameworkBundle:Template:template',
             'template'    => 'static/privacy.html.twig',
-        )));
+        ]));
 
         return $routes;
 
@@ -105,12 +105,12 @@ other variables in your route, you can control exactly how your page is cached:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('acme_privacy', new Route('/privacy', array(
+        $routes->add('acme_privacy', new Route('/privacy', [
             '_controller' => 'FrameworkBundle:Template:template',
             'template'    => 'static/privacy.html.twig',
             'maxAge'      => 86400,
             'sharedAge'   => 86400,
-        )));
+        ]));
 
         return $routes;
 
@@ -123,4 +123,4 @@ will be made public, as long as ``maxAge`` or ``sharedAge`` are passed.
 If set to ``true``, the Response will be marked as private.
 
 .. ready: no
-.. revision: 88c21633e96f6d6f7d8d9d73d030c881cfb825fc
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

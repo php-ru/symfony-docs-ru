@@ -64,9 +64,9 @@ syntax:
     .. code-block:: php
 
         // app/config/routing.php
-        $collection->add('hello', new Route('/hello', array(
+        $collection->add('hello', new Route('/hello', [
             '_controller' => 'app.hello_controller:indexAction',
-        )));
+        ]));
 
 .. note::
 
@@ -116,7 +116,7 @@ service and use it directly::
         {
             $content = $this->twig->render(
                 'hello/index.html.twig',
-                array('name' => $name)
+                ['name' => $name]
             );
 
             return new Response($content);
@@ -141,4 +141,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: ee8f1d067a6b6df7e81bba12369d51d100d4dcbe
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

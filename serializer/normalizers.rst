@@ -15,7 +15,7 @@ Normalizers are enabled in the serializer passing them as its first argument::
     use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-    $normalizers = array(new ObjectNormalizer());
+    $normalizers = [new ObjectNormalizer()];
     $serializer = new Serializer($normalizers);
 
 Built-in Normalizers
@@ -37,4 +37,4 @@ Symfony includes the following normalizers but you can also
 .. _`PHP reflection`: https://php.net/manual/en/book.reflection.php
 
 .. ready: no
-.. revision: 9cd5b2b07f8d12d72b5407148d6f5040303858ba
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

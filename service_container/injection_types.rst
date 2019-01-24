@@ -154,7 +154,7 @@ that accepts the dependency::
 
         // ...
         $container->register('app.newsletter_manager', NewsletterManager::class)
-            ->addMethodCall('setMailer', array(new Reference('mailer')));
+            ->addMethodCall('setMailer', [new Reference('mailer')]);
 
 This time the advantages are:
 
@@ -241,4 +241,4 @@ especially if you are working with code that is out of your control, such
 as in a third party library, which uses public properties for its dependencies.
 
 .. ready: no
-.. revision: 86ab47aaff52878deef6d395d86293434a9f6ca1
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

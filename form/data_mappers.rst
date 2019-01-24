@@ -159,17 +159,17 @@ method to configure the data mapper::
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
             $builder
-                ->add('red', IntegerType::class, array(
+                ->add('red', IntegerType::class, [
                     // enforce the strictness of the type to ensure the constructor
                     // of the Color class doesn't break
                     'empty_data' => '0',
-                ))
-                ->add('green', IntegerType::class, array(
+                ])
+                ->add('green', IntegerType::class, [
                     'empty_data' => '0',
-                ))
-                ->add('blue', IntegerType::class, array(
+                ])
+                ->add('blue', IntegerType::class, [
                     'empty_data' => '0',
-                ))
+                ])
                 ->setDataMapper(new ColorMapper())
             ;
         }
@@ -197,4 +197,4 @@ a new ``Color`` object now.
     ``$builder->setDataMapper($this)``.
 
 .. ready: no
-.. revision: 13e0629c11ab6b30baa4eb80bc07a2cbc31f2c7e
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

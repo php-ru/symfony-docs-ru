@@ -48,18 +48,18 @@ configuration:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('monolog', array(
-            'handlers' => array(
-                'main' => array(
+        $container->loadFromExtension('monolog', [
+            'handlers' => [
+                'main' => [
                     // ...
                     'type'          => 'fingers_crossed',
                     'handler'       => ...,
-                    'excluded_404s' => array(
+                    'excluded_404s' => [
                         '^/phpmyadmin',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 2bf7529f526a748f5fcf12eb26f9b29636269fea
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

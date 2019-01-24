@@ -33,9 +33,9 @@ Create a class that extends ``AbstractExtension`` and fill in the logic::
     {
         public function getFilters()
         {
-            return array(
-                new TwigFilter('price', array($this, 'formatPrice')),
-            );
+            return [
+                new TwigFilter('price', [$this, 'formatPrice']),
+            ];
         }
 
         public function formatPrice($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
@@ -67,9 +67,9 @@ Here's how to create a custom **function**::
     {
         public function getFunctions()
         {
-            return array(
-                new TwigFunction('area', array($this, 'calculateArea')),
-            );
+            return [
+                new TwigFunction('area', [$this, 'calculateArea']),
+            ];
         }
 
         public function calculateArea(int $width, int $length)
@@ -125,10 +125,10 @@ callable defined in ``getFilters()``::
     {
         public function getFilters()
         {
-            return array(
+            return [
                 // the logic of this filter is now implemented in a different class
-                new TwigFilter('price', array(AppRuntime::class, 'priceFilter')),
-            );
+                new TwigFilter('price', [AppRuntime::class, 'priceFilter']),
+            ];
         }
     }
 
@@ -171,4 +171,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

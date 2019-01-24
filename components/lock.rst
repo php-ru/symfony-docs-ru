@@ -110,7 +110,7 @@ with the ``release()`` method.
 
 The trickiest part when working with expiring locks is choosing the right TTL.
 If it's too short, other processes could acquire the lock before finishing the
-job; it it's too long and the process crashes before calling the ``release()``
+job; if it's too long and the process crashes before calling the ``release()``
 method, the resource will stay locked until the timeout::
 
     // ...
@@ -248,7 +248,7 @@ then the lock is considered as acquired; otherwise as not acquired::
     use Symfony\Component\Lock\Store\RedisStore;
 
     $stores = [];
-    foreach (array('server1', 'server2', 'server3') as $server) {
+    foreach (['server1', 'server2', 'server3'] as $server) {
         $redis = new \Redis();
         $redis->connect($server);
 
@@ -375,8 +375,8 @@ Some file systems (such as some types of NFS) do not support locking.
     always be locked on the same machine or to use a well configured shared file
     system.
 
-Files on file system can be removed during a maintenance operation. For instance
-to cleanup the ``/tmp`` directory or after a reboot of the machine when directory
+Files on the file system can be removed during a maintenance operation. For instance,
+to clean up the ``/tmp`` directory or after a reboot of the machine when a directory
 uses tmpfs. It's not an issue if the lock is released when the process ended, but
 it is in case of ``Lock`` reused between requests.
 
@@ -405,7 +405,7 @@ needs space to add new items.
 
 .. caution::
 
-    Number of items stored in the Memcached must be under control. If it's not
+    The number of items stored in Memcached must be under control. If it's not
     possible, LRU should be disabled and Lock should be stored in a dedicated
     Memcached service away from Cache.
 
@@ -493,4 +493,4 @@ are still running.
 .. _`PHP semaphore functions`: http://php.net/manual/en/book.sem.php
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: 2618c7d4827d6032ea99a3422d69045d767147fb

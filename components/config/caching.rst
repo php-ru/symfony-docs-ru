@@ -35,7 +35,7 @@ should be regenerated::
         // fill this with an array of 'users.yml' file paths
         $yamlUserFiles = ...;
 
-        $resources = array();
+        $resources = [];
 
         foreach ($yamlUserFiles as $yamlUserFile) {
             // see the article "Loading resources" to
@@ -60,4 +60,4 @@ not in debug mode, the cache is considered to be "fresh" as soon as it exists,
 and therefore no ``.meta`` file will be generated.
 
 .. ready: no
-.. revision: e803a345dac3b6da9cbe3f3e52f761fb9c4aa76d
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

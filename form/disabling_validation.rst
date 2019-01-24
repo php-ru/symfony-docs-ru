@@ -11,9 +11,9 @@ these cases you can set the ``validation_groups`` option to ``false``::
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'validation_groups' => false,
-        ));
+        ]);
     }
 
 Note that when you do that, the form will still run basic integrity checks,
@@ -26,4 +26,4 @@ the maximum upload file size should be handled via your PHP and web server
 configuration.
 
 .. ready: no
-.. revision: 456ce9f6f04491cac98b5ead6f06f3413cd16435
+.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e

@@ -64,15 +64,15 @@ configure your handler to use it:
         $container->register(JsonFormatter::class);
 
         // app/config/config_prod.php (or config_dev.php)
-        $container->loadFromExtension('monolog', array(
-            'handlers' => array(
-                'file' => array(
+        $container->loadFromExtension('monolog', [
+            'handlers' => [
+                'file' => [
                     'type'      => 'stream',
                     'level'     => 'debug',
                     'formatter' => JsonFormatter::class,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 4d00d47dc6e4fcf9cfa981e250e54026cb0cc730
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

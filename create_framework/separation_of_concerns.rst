@@ -136,10 +136,10 @@ And move the ``is_leap_year()`` function to its own class too::
 
 Don't forget to update the ``example.com/src/app.php`` file accordingly::
 
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
         '_controller' => 'Calendar\Controller\LeapYearController::indexAction',
-    )));
+    ]));
 
 To sum up, here is the new file layout:
 
@@ -180,4 +180,4 @@ a well defined goal:
 * ``src/app.php``: The application configuration/framework customization.
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

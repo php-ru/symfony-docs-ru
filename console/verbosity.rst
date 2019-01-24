@@ -53,10 +53,10 @@ level. For example::
         {
             $user = new User(...);
 
-            $output->writeln(array(
+            $output->writeln([
                 'Username: '.$input->getArgument('username'),
                 'Password: '.$input->getArgument('password'),
-            ));
+            ]);
 
             // available methods: ->isQuiet(), ->isVerbose(), ->isVeryVerbose(), ->isDebug()
             if ($output->isVerbose()) {
@@ -88,4 +88,4 @@ without actually printing.
     level or above is used.
 
 .. ready: no
-.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

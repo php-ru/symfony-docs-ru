@@ -40,7 +40,7 @@ It is possible to define your own styles using the
     use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 
     // ...
-    $outputStyle = new OutputFormatterStyle('red', 'yellow', array('bold', 'blink'));
+    $outputStyle = new OutputFormatterStyle('red', 'yellow', ['bold', 'blink']);
     $output->getFormatter()->setStyle('fire', $outputStyle);
 
     $output->writeln('<fire>foo</fire>');
@@ -81,4 +81,4 @@ You can also set these colors and options directly inside the tagname::
 .. _Hyper: https://hyper.is/
 
 .. ready: no
-.. revision: 65b158d9a26f6b055065ab1dc4a2059507718dad
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

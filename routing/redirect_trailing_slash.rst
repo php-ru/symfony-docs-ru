@@ -88,12 +88,12 @@ system, as explained below:
             'remove_trailing_slash',
             new Route(
                 '/{url}',
-                array(
+                [
                     '_controller' => 'AppBundle:Redirecting:removeTrailingSlash',
-                ),
-                array(
+                ],
+                [
                     'url' => '.*/$',
-                )
+                ]
             )
         );
 
@@ -105,4 +105,4 @@ system, as explained below:
     slash in their path.
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -312,11 +312,11 @@ Then, enable the bundle in ``AppKernel.php``, but only for the ``dev`` and
     {
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 // ...
-            );
+            ];
 
-            if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            if (in_array($this->getEnvironment(), ['dev', 'test'])) {
                 // ...
                 $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
             }
@@ -363,4 +363,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: 6bfddaca45425359f54225ee58da1dab5f4949fe
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

@@ -61,14 +61,14 @@ to redirect it to :phpfunction:`error_log`:
     .. code-block:: php
 
         // app/config/config_prod.php
-        $container->loadFromExtension('monolog', array(
+        $container->loadFromExtension('monolog', [
             // ...
-            'handlers' => array(
-                'nested' => array(
+            'handlers' => [
+                'nested' => [
                     'type' => 'error_log',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 Configuring Database Access & Session Handler
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,7 +98,7 @@ contents::
     // check if the Memcache component is present
     if (isset($secrets['MEMCACHE'])) {
         $memcache = $secrets['MEMCACHE'];
-        $handlers = array();
+        $handlers = [];
 
         foreach (range(1, $memcache['COUNT']) as $num) {
             $handlers[] = $memcache['HOST'.$num].':'.$memcache['PORT'.$num];
@@ -161,11 +161,11 @@ Make sure this file is imported into the main config file:
         $loader->import('config.php');
         $loader->import('config_prod_secrets.php');
 
-        $container->loadFromExtension('framework', array(
-            'session' => array(
+        $container->loadFromExtension('framework', [
+            'session' => [
                 'handler_id' => null,
-            ),
-        ));
+            ],
+        ]);
 
         // ...
 
@@ -284,4 +284,4 @@ documentation.
 .. _`Sign up`: https://dashboard.fortrabbit.com
 
 .. ready: no
-.. revision: 63517b920f9d10e5abe3ebcbcda6805803780518
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

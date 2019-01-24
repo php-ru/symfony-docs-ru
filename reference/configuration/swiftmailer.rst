@@ -295,17 +295,17 @@ key (the default mailer is identified by the ``default_mailer`` option):
 
     .. code-block:: php
 
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
             'default_mailer' => 'second_mailer',
-            'mailers' => array(
-                'first_mailer' => array(
+            'mailers' => [
+                'first_mailer' => [
                     // ...
-                ),
-                'second_mailer' => array(
+                ],
+                'second_mailer' => [
                     // ...
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 Each mailer is registered as a service::
 
@@ -327,4 +327,4 @@ Each mailer is registered as a service::
     ``swiftmailer`` key.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

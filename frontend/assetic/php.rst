@@ -106,14 +106,14 @@ First, configure a new ``scssphp`` Assetic filter:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('assetic', array(
-            'filters' => array(
-                 'scssphp' => array(
+        $container->loadFromExtension('assetic', [
+            'filters' => [
+                 'scssphp' => [
                      'formatter' => 'Leafo\ScssPhp\Formatter\Compressed',
-                 ),
+                 ],
                  // ...
-            ),
-        ));
+            ],
+        ]);
 
 The value of the ``formatter`` option is the fully qualified class name of the
 formatter used by the filter to produce the compiled CSS file. Using the
@@ -179,12 +179,12 @@ First, configure a new ``jsqueeze`` Assetic filter as follows:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('assetic', array(
-            'filters' => array(
+        $container->loadFromExtension('assetic', [
+            'filters' => [
                  'jsqueeze' => null,
                  // ...
-            ),
-        ));
+            ],
+        ]);
 
 Next, update the code of your Twig template to add the ``{% javascripts %}`` tag
 defined by Assetic:
@@ -213,4 +213,4 @@ apply the filter when *not* in ``debug`` mode. In practice, this means that you'
 see unminified files while developing and minimized files in the ``prod`` environment.
 
 .. ready: no
-.. revision: 8e9f7552ea5e2c6e675e98d5a7dbc7cbd7331ef8
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

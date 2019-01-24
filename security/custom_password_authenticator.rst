@@ -74,7 +74,7 @@ the user::
                 // (so don't put any un-trusted messages / error strings here)
                 throw new CustomUserMessageAuthenticationException(
                     'You can only log in between 2 and 4!',
-                    array(), // Message Data
+                    [], // Message Data
                     412 // HTTP 412 Precondition Failed
                 );
             }
@@ -205,19 +205,19 @@ using the ``simple_form`` key:
         // ...
         use AppBundle\Security\TimeAuthenticator;
 
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'secured_area'    => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'secured_area'    => [
                     'pattern'     => '^/admin',
-                    'simple_form' => array(
+                    'simple_form' => [
                         'provider'      => ...,
                         'authenticator' => AppBundle\Security\TimeAuthenticator::class,
                         'check_path'    => 'login_check',
                         'login_path'    => 'login',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 The ``simple_form`` key has the same options as the normal ``form_login``
 option, but with the additional ``authenticator`` key that points to the
@@ -227,4 +227,4 @@ If creating a login form in general is new to you or you don't understand
 the ``check_path`` or ``login_path`` options, see :doc:`/security/form_login`.
 
 .. ready: no
-.. revision: 2b1e5b5f28927d5a7f1c78a8a803c42caf7779cf
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

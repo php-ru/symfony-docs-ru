@@ -113,13 +113,13 @@ If your valid choice list is simple, you can pass them in directly via the
             {
                 $metadata->addPropertyConstraint(
                     'city',
-                     new Assert\Choice(array('New York', 'Berlin', 'Tokyo'))
-                 );
+                    new Assert\Choice(['New York', 'Berlin', 'Tokyo'])
+                );
 
-                $metadata->addPropertyConstraint('genre', new Assert\Choice(array(
-                    'choices' => array('fiction', 'non-fiction'),
+                $metadata->addPropertyConstraint('genre', new Assert\Choice([
+                    'choices' => ['fiction', 'non-fiction'],
                     'message' => 'Choose a valid genre.',
-                )));
+                ]));
             }
         }
 
@@ -138,7 +138,7 @@ form element::
     {
         public static function getGenres()
         {
-            return array('fiction', 'non-fiction');
+            return ['fiction', 'non-fiction'];
         }
     }
 
@@ -205,9 +205,9 @@ constraint.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('genre', new Assert\Choice(array(
+                $metadata->addPropertyConstraint('genre', new Assert\Choice([
                     'callback' => 'getGenres',
-                )));
+                ]));
             }
         }
 
@@ -274,9 +274,9 @@ you can pass the class name and the method as an array.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('genre', new Assert\Choice(array(
-                    'callback' => array(Genre::class, 'getGenres'),
-                )));
+                $metadata->addPropertyConstraint('genre', new Assert\Choice([
+                    'callback' => [Genre::class, 'getGenres'],
+                ]));
             }
         }
 
@@ -414,4 +414,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

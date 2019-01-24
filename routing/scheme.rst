@@ -58,9 +58,9 @@ the URI scheme via schemes:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('secure', new Route('/secure', array(
+        $routes->add('secure', new Route('/secure', [
             '_controller' => 'AppBundle:Main:secure',
-        ), array(), array(), '', array('https')));
+        ], [], [], '', ['https']));
 
         return $routes;
 
@@ -96,4 +96,4 @@ to always use ``http``.
     :doc:`/security/force_https` for more details).
 
 .. ready: no
-.. revision: b7470b971cedfad7b926d193a3e2131b898e5443
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

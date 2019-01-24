@@ -61,11 +61,11 @@ directory:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/vendor/acme/foo-bar/templates' => 'foo_bar',
-            ),
-        ));
+            ],
+        ]);
 
 The registered namespace is called ``foo_bar``, which refers to the
 ``vendor/acme/foo-bar/templates`` directory. Assuming there's a file
@@ -116,13 +116,13 @@ specific template doesn't exist.
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/vendor/acme/themes/theme1' => 'theme',
                 '%kernel.project_dir%/vendor/acme/themes/theme2' => 'theme',
                 '%kernel.project_dir%/vendor/acme/themes/common' => 'theme',
-            ),
-        ));
+            ],
+        ]);
 
 Now, you can use the same ``@theme`` namespace to refer to any template located
 in the previous three directories:
@@ -132,4 +132,4 @@ in the previous three directories:
     {{ include('@theme/header.twig') }}
 
 .. ready: no
-.. revision: da156dd992747a35da5b48bbb331e6078a1989fe
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

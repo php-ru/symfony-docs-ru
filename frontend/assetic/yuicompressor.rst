@@ -67,17 +67,17 @@ stylesheets:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('assetic', array(
+        $container->loadFromExtension('assetic', [
             // 'java' => '/usr/bin/java',
-            'filters' => array(
-                'yui_css' => array(
+            'filters' => [
+                'yui_css' => [
                     'jar' => '%kernel.project_dir%/app/Resources/java/yuicompressor.jar',
-                ),
-                'yui_js' => array(
+                ],
+                'yui_js' => [
                     'jar' => '%kernel.project_dir%/app/Resources/java/yuicompressor.jar',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. note::
 
@@ -147,4 +147,4 @@ apply this filter when debug mode is off.
 .. _`no longer maintained by Yahoo`: http://yuiblog.com/blog/2013/01/24/yui-compressor-has-a-new-owner/
 
 .. ready: no
-.. revision: a455e7a881b72c457e7bfd7f0cbb58a0492bf433
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

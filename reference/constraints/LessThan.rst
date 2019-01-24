@@ -74,7 +74,7 @@ The following constraints ensure that:
             <class name="AppBundle\Entity\Person">
                 <property name="siblings">
                     <constraint name="LessThan">
-                        <value>5</value>
+                        5
                     </constraint>
                 </property>
                 <property name="age">
@@ -99,9 +99,9 @@ The following constraints ensure that:
             {
                 $metadata->addPropertyConstraint('siblings', new Assert\LessThan(5));
 
-                $metadata->addPropertyConstraint('age', new Assert\LessThan(array(
+                $metadata->addPropertyConstraint('age', new Assert\LessThan([
                     'value' => 80,
-                )));
+                ]));
             }
         }
 
@@ -318,4 +318,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: c318f85684e2ee76217908e4a425516f8845ea2f

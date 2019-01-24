@@ -40,13 +40,13 @@ The CSRF token can be customized on a form-by-form basis. For example::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class'      => Task::class,
                 'csrf_protection' => true,
                 'csrf_field_name' => '_token',
                 // a unique key to help generate the secret token
                 'csrf_token_id'   => 'task_item',
-            ));
+            ]);
         }
 
         // ...
@@ -74,4 +74,4 @@ section.
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 3955a4b20b6ff694234f9e4746334f77e4f67497
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -89,10 +89,10 @@ options:
             {
                 // ...
 
-                $form = $this->createForm(TaskType::class, $task, array(
+                $form = $this->createForm(TaskType::class, $task, [
                     'action' => $this->generateUrl('target_route'),
                     'method' => 'GET',
-                ));
+                ]);
 
                 // ...
             }
@@ -109,10 +109,10 @@ options:
 
         $formFactory = $formFactoryBuilder->getFormFactory();
 
-        $form = $formFactory->create(TaskType::class, $task, array(
+        $form = $formFactory->create(TaskType::class, $task, [
             'action' => '...',
             'method' => 'GET',
-        ));
+        ]);
 
 Finally, you can override the action and method in the template by passing them
 to the ``form()`` or the ``form_start()`` helper functions:
@@ -132,4 +132,4 @@ to the ``form()`` or the ``form_start()`` helper functions:
     option.
 
 .. ready: no
-.. revision: e433a063302b00da21cd83c190c6cf07ad405082
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -79,28 +79,28 @@ need to change/add some parameters in the main configuration file:
         use Symfony\Component\DependencyInjection\Reference;
         use Symfony\Component\HttpFoundation\Session\Storage\Handler\MongoDbSessionHandler;
 
-        $container->loadFromExtension('framework', array(
-            'session' => array(
+        $container->loadFromExtension('framework', [
+            'session' => [
                 // ...
                 'handler_id'      => 'session.handler.mongo',
                 'cookie_lifetime' => 2592000, // optional, it is set to 30 days here
                 'gc_maxlifetime'  => 2592000, // optional, it is set to 30 days here
-            ),
-        ));
+            ],
+        ]);
 
         $container->register('mongo_client', \MongoClient::class)
-            ->setArguments(array(
+            ->setArguments([
                 // if using a username and password
-                array('mongodb://%mongodb_username%:%mongodb_password%@%mongodb_host%:27017'),
+                ['mongodb://%mongodb_username%:%mongodb_password%@%mongodb_host%:27017'],
                 // if not using a username and password
-                array('mongodb://%mongodb_host%:27017'),
-            ));
+                ['mongodb://%mongodb_host%:27017'],
+            ]);
 
         $container->register('session.handler.mongo', MongoDbSessionHandler::class)
-            ->setArguments(array(
+            ->setArguments([
                 new Reference('mongo_client'),
                 '%mongo.session.options%',
-            ));
+            ]);
 
 The parameters used above should be defined somewhere in your application, often in your main
 parameters configuration:
@@ -148,10 +148,10 @@ parameters configuration:
 
         use Symfony\Component\DependencyInjection\Reference;
 
-        $container->setParameter('mongo.session.options', array(
+        $container->setParameter('mongo.session.options', [
             'database'   => 'session_db', // your MongoDB database name
             'collection' => 'session',  // your MongoDB collection name
-        ));
+        ]);
         $container->setParameter('mongodb_host', '1.2.3.4'); // your MongoDB server's IP
         $container->setParameter('mongodb_username', 'my_username');
         $container->setParameter('mongodb_password', 'my_password');
@@ -172,4 +172,4 @@ From the `MongoDB shell`_:
 .. _MongoDB shell: http://docs.mongodb.org/v2.2/tutorial/getting-started-with-the-mongo-shell/
 
 .. ready: no
-.. revision: 879347c87a706e5aaa90c9b6283754faaa7e56c3
+.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254

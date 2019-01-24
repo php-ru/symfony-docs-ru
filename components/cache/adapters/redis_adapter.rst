@@ -95,14 +95,14 @@ array of ``key => value`` pairs representing option names and their respective v
         'redis://localhost:6379',
 
         // associative array of configuration options
-        array(
+        [
             'lazy' => false,
             'persistent' => 0,
             'persistent_id' => null,
             'timeout' => 30,
             'read_timeout' => 0,
             'retry_interval' => 0,
-         )
+        ]
 
     );
 
@@ -152,4 +152,4 @@ Available Options
 .. _`Predis Connection Parameters`: https://github.com/nrk/predis/wiki/Connection-Parameters#list-of-connection-parameters
 
 .. ready: no
-.. revision: f7cf992fa9720b8cdad7156fe4f6ada4c9855b59
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

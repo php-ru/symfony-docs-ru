@@ -55,10 +55,10 @@ controller... your choice.
 As a convention, for each route, the associated controller is configured via
 the ``_controller`` route attribute::
 
-    $routes->add('hello', new Routing\Route('/hello/{name}', array(
+    $routes->add('hello', new Routing\Route('/hello/{name}', [
         'name' => 'World',
         '_controller' => 'render_template',
-    )));
+    ]));
 
     try {
         $request->attributes->add($matcher->match($request->getPathInfo()));
@@ -72,17 +72,17 @@ the ``_controller`` route attribute::
 A route can now be associated with any controller and of course, within a
 controller, you can still use the ``render_template()`` to render a template::
 
-    $routes->add('hello', new Routing\Route('/hello/{name}', array(
+    $routes->add('hello', new Routing\Route('/hello/{name}', [
         'name' => 'World',
         '_controller' => function ($request) {
             return render_template($request);
         }
-    )));
+    ]));
 
 This is rather flexible as you can change the Response object afterwards and
 you can even pass additional arguments to the template::
 
-    $routes->add('hello', new Routing\Route('/hello/{name}', array(
+    $routes->add('hello', new Routing\Route('/hello/{name}', [
         'name' => 'World',
         '_controller' => function ($request) {
             // $foo will be available in the template
@@ -95,7 +95,7 @@ you can even pass additional arguments to the template::
 
             return $response;
         }
-    )));
+    ]));
 
 Here is the updated and improved version of our framework::
 
@@ -154,7 +154,7 @@ framework does not need to be modified in any way, just create a new
     }
 
     $routes = new Routing\RouteCollection();
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
         '_controller' => function ($request) {
             if (is_leap_year($request->attributes->get('year'))) {
@@ -163,7 +163,7 @@ framework does not need to be modified in any way, just create a new
 
             return new Response('Nope, this is not a leap year.');
         }
-    )));
+    ]));
 
     return $routes;
 
@@ -181,4 +181,4 @@ probably all you need to create simple websites like those fancy one-page
 .. _`websites`: https://kottke.org/08/02/single-serving-sites
 
 .. ready: no
-.. revision: 219b7f88713f162934ae238c09c26986e23db457
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

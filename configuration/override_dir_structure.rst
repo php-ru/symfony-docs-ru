@@ -127,11 +127,11 @@ define your own templates directory (or directories):
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'paths' => array(
+        $container->loadFromExtension('twig', [
+            'paths' => [
                 '%kernel.project_dir%/templates',
-            ),
-        ));
+            ],
+        ]);
 
 .. _override-web-dir:
 
@@ -206,10 +206,10 @@ You also need to change the ``extra.symfony-web-dir`` option in the
             // app/config/config.php
 
             // ...
-            $container->loadFromExtension('assetic', array(
+            $container->loadFromExtension('assetic', [
                 // ...
                 'read_from' => '%kernel.project_dir%/../public_html',
-            ));
+            ]);
 
     Now you just need to clear the cache and dump the assets again and your
     application should work:
@@ -250,4 +250,4 @@ Then, update the path to the ``autoload.php`` file in ``app/autoload.php``::
     Vagrant/VirtualBox in a guest operating system.
 
 .. ready: no
-.. revision: 6b401ab3b13cf1bdfd241281940aa38f8118c70d
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

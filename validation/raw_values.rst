@@ -51,20 +51,56 @@ Validation of arrays is possible using the ``Collection`` constraint::
 
     $validator = Validation::createValidator();
 
-    $constraint = new Assert\Collection(array(
-        // the keys correspond to the keys in the input array
-        'name' => new Assert\Collection(array(
-          'first_name' => new Assert\Length(array('min' => 101)),
-          'last_name' => new Assert\Length(array('min' => 1)),
-        )),
-        'email' => new Assert\Email(),
-        'simple' => new Assert\Length(array('min' => 102)),
-        'gender' => new Assert\Choice(array(3, 4)),
-        'file' => new Assert\File(),
-        'password' => new Assert\Length(array('min' => 60)),
-    ));
+    $input = [
+        'name' => [
+            'first_name' => 'Fabien',
+            'last_name' => 'Potencier',
+        ],
+        'email' => 'test@email.tld',
+        'simple' => 'hello',
+        'gender' => 3,
+        'file' => null,
+        'password' => 'test',
+        'tags' => [
+            [
+                'slug' => 'symfony_doc',
+                'label' => 'symfony doc',
+            ],
+        ],
+    ];
 
-    $violations = $validator->validate($input, $constraint);
+    $groups = new Assert\GroupSequence(['Default', 'custom']);
+
+    $constraint = new Assert\Collection([
+        // the keys correspond to the keys in the input array
+        'name' => new Assert\Collection([
+            'first_name' => new Assert\Length(['min' => 101]),
+            'last_name' => new Assert\Length(['min' => 1]),
+        ]),
+        'email' => new Assert\Email(),
+        'simple' => new Assert\Length(['min' => 102]),
+        'gender' => new Assert\Choice([3, 4]),
+        'file' => new Assert\File(),
+        'password' => new Assert\Length(['min' => 60]),
+        'tags' => new Assert\Optional([
+            new Assert\Type('array'),
+            new Assert\Count(['min' => 1]),
+            new Assert\All([
+                new Assert\Collection([
+                    'slug' => [
+                        new Assert\NotBlank(),
+                        new Assert\Type(['type' => 'string'])
+                    ],
+                    'label' => [
+                        new Assert\NotBlank(),
+                    ],
+                ]),
+                new CustomUniqueTagValidator(['groups' => 'custom']),
+            ]),
+        ]),
+    ]);
+
+    $violations = $validator->validate($input, $constraint, $groups);
 
 The ``validate()`` method returns a :class:`Symfony\\Component\\Validator\\ConstraintViolationList`
 object, which acts just like an array of errors. Each error in the collection
@@ -72,4 +108,4 @@ is a :class:`Symfony\\Component\\Validator\\ConstraintViolation` object,
 which holds the error message on its ``getMessage()`` method.
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

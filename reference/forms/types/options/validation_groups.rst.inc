@@ -13,14 +13,14 @@ validator as they are::
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'validation_groups' => 'Registration',
-        ));
+        ]);
     }
 
 This is equivalent to passing the group as array::
 
-    'validation_groups' => array('Registration'),
+    'validation_groups' => ['Registration'],
 
 The form's data will be :doc:`validated against all given groups </form/validation_groups>`.
 
@@ -33,13 +33,13 @@ the option. Symfony will then pass the form when calling it::
     // ...
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'validation_groups' => function (FormInterface $form) {
                 $entity = $form->getData();
 
-                return $entity->isUser() ? array('User') : array('Company');
+                return $entity->isUser() ? ['User'] : ['Company'];
             },
-        ));
+        ]);
     }
 
 .. seealso::
@@ -82,4 +82,4 @@ Here's an example::
     Read the article :doc:`/validation/sequence_provider` to find out more about this.
 
 .. ready: no
-.. revision: 93a2b20844fbf949339d94ab535c20034978d3ac
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

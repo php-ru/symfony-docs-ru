@@ -45,16 +45,16 @@ log generation. This is recommended for systems that generate a large number of 
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('monolog', array(
+        $container->loadFromExtension('monolog', [
             'use_microseconds' => false,
-            'handlers' => array(
-                'applog' => array(
+            'handlers' => [
+                'applog' => [
                     'type'  => 'stream',
                     'path'  => '/var/log/symfony.log',
                     'level' => 'error',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 42433467230047e9b6a1bae4db0b7858ccd64958
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

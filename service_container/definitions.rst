@@ -79,10 +79,10 @@ fetched from the container::
     use Symfony\Component\DependencyInjection\Definition;
     use Symfony\Component\DependencyInjection\Reference;
 
-    $definition = new Definition(DoctrineConfigManager::class, array(
+    $definition = new Definition(DoctrineConfigManager::class, [
         new Reference('doctrine'), // a reference to another service
         '%app.config_table_name%',  // will be resolved to the value of a container parameter
-    ));
+    ]);
 
     // gets all arguments configured for this definition
     $constructorArguments = $definition->getArguments();
@@ -115,7 +115,7 @@ any method calls in the definitions as well::
     $methodCalls = $definition->getMethodCalls();
 
     // configures a new method call
-    $definition->addMethodCall('setLogger', array(new Reference('logger')));
+    $definition->addMethodCall('setLogger', [new Reference('logger')]);
 
     // replaces all previously configured method calls with the passed array
     $definition->setMethodCalls($methodCalls);
@@ -146,4 +146,4 @@ Notice that Symfony will internally call the PHP statement ``require_once``,
 which means that your file will be included only once per request.
 
 .. ready: no
-.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

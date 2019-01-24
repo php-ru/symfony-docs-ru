@@ -104,7 +104,7 @@ using a special "tag":
 
         $container
             ->autowire(ExceptionListener::class)
-            ->addTag('kernel.event_listener', array('event' => 'kernel.exception'))
+            ->addTag('kernel.event_listener', ['event' => 'kernel.exception'])
         ;
 
 .. note::
@@ -151,13 +151,13 @@ listen to the same ``kernel.exception`` event::
         public static function getSubscribedEvents()
         {
             // return the subscribed events, their methods and priorities
-            return array(
-               KernelEvents::EXCEPTION => array(
-                   array('processException', 10),
-                   array('logException', 0),
-                   array('notifyException', -10),
-               )
-            );
+            return [
+               KernelEvents::EXCEPTION => [
+                   ['processException', 10],
+                   ['logException', 0],
+                   ['notifyException', -10],
+               ]
+            ];
         }
 
         public function processException(GetResponseForExceptionEvent $event)
@@ -259,4 +259,4 @@ Learn more
     event_dispatcher/*
 
 .. ready: no
-.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

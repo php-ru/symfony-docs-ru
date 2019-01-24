@@ -105,7 +105,7 @@ from a predefined list::
         $helper = $this->getHelper('question');
         $question = new ChoiceQuestion(
             'Please select your favorite color (defaults to red)',
-            array('red', 'blue', 'yellow'),
+            ['red', 'blue', 'yellow'],
             0
         );
         $question->setErrorMessage('Color %s is invalid.');
@@ -143,7 +143,7 @@ this use :method:`Symfony\\Component\\Console\\Question\\ChoiceQuestion::setMult
         $helper = $this->getHelper('question');
         $question = new ChoiceQuestion(
             'Please select your favorite colors (defaults to red and blue)',
-            array('red', 'blue', 'yellow'),
+            ['red', 'blue', 'yellow'],
             '0,1'
         );
         $question->setMultiselect(true);
@@ -172,7 +172,7 @@ will be autocompleted as the user types::
         // ...
         $helper = $this->getHelper('question');
 
-        $bundles = array('AcmeDemoBundle', 'AcmeBlogBundle', 'AcmeStoreBundle');
+        $bundles = ['AcmeDemoBundle', 'AcmeBlogBundle', 'AcmeStoreBundle'];
         $question = new Question('Please enter the name of a bundle', 'FooBundle');
         $question->setAutocompleterValues($bundles);
 
@@ -355,17 +355,17 @@ from the command line, you need to set the inputs that the command expects::
         $commandTester = new CommandTester($command);
 
         // Equals to a user inputting "Test" and hitting ENTER
-        $commandTester->setInputs(array('Test'));
+        $commandTester->setInputs(['Test']);
 
         // Equals to a user inputting "This", "That" and hitting ENTER
         // This can be used for answering two separated questions for instance
-        $commandTester->setInputs(array('This', 'That'));
+        $commandTester->setInputs(['This', 'That']);
 
         // For simulating a positive answer to a confirmation question, adding an
         // additional input saying "yes" will work
-        $commandTester->setInputs(array('yes'));
+        $commandTester->setInputs(['yes']);
 
-        $commandTester->execute(array('command' => $command->getName()));
+        $commandTester->execute(['command' => $command->getName()]);
 
         // $this->assertRegExp('/.../', $commandTester->getDisplay());
     }
@@ -393,4 +393,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: bb557d4c2c73cb60ce728aef58117c2d999d4d6e
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -87,10 +87,10 @@ on an object that will contain an ISBN.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('isbn', new Assert\Isbn(array(
+                $metadata->addPropertyConstraint('isbn', new Assert\Isbn([
                     'type'    => 'isbn10',
                     'message' => 'This value is not valid.',
-                )));
+                ]));
             }
         }
 
@@ -176,4 +176,4 @@ You can use the following parameters in this message:
 .. _`International Standard Book Number (ISBN)`: https://en.wikipedia.org/wiki/Isbn
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

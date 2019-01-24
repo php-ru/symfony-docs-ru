@@ -83,9 +83,9 @@ create a form class so that a ``Category`` object can be modified by the user::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class' => Category::class,
-            ));
+            ]);
         }
     }
 
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -37,7 +37,7 @@ create the catalog that will be returned::
     {
         public function load($resource, $locale, $domain = 'messages')
         {
-            $messages = array();
+            $messages = [];
             $lines = file($resource);
 
             foreach ($lines as $line) {
@@ -85,7 +85,7 @@ will save a few lines::
 
     class MyFormatDumper extends FileDumper
     {
-        public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = array())
+        public function formatCatalogue(MessageCatalogue $messages, $domain, array $options = [])
         {
             $output = '';
 
@@ -122,7 +122,7 @@ YAML file are dumped into a text file with the custom format::
     $translations = $loader->load(__DIR__ . '/translations/messages.fr_FR.yml' , 'fr_FR');
 
     $dumper = new MyFormatDumper();
-    $dumper->dump($translations, array('path' => __DIR__.'/dumps'));
+    $dumper->dump($translations, ['path' => __DIR__.'/dumps']);
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

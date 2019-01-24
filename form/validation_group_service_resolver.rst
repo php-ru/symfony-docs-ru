@@ -29,7 +29,7 @@ parameter::
          */
         public function __invoke(FormInterface $form)
         {
-            $groups = array();
+            $groups = [];
 
             // ... determine which groups to apply and return an array
 
@@ -58,9 +58,9 @@ Then in your form, inject the resolver and set it as the ``validation_groups``::
         // ...
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'validation_groups' => $this->groupResolver,
-            ));
+            ]);
         }
     }
 
@@ -68,4 +68,4 @@ This will result in the form validator invoking your group resolver to set the
 validation groups returned when validating.
 
 .. ready: no
-.. revision: d8faa3906b0e438ca4a347d8d19516c9ff21e07b
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

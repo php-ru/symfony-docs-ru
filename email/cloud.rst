@@ -65,14 +65,14 @@ and complete the configuration with the provided ``username`` and ``password``:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
             'transport'  => 'smtp',
             'host'       => 'email-smtp.us-east-1.amazonaws.com',
             'port'       => 587,
             'encryption' => 'tls',
             'username'   => 'AWS_SES_SMTP_USERNAME',
             'password'   => 'AWS_SES_SMTP_PASSWORD',
-        ));
+        ]);
 
 The ``port`` and ``encryption`` keys are not present in the Symfony Standard
 Edition configuration by default, but you can simply add them as needed.
@@ -120,4 +120,4 @@ And that's it, you're ready to start sending emails through the cloud!
 .. _`Amazon Web Services (AWS)`: http://aws.amazon.com
 
 .. ready: no
-.. revision: ca035f080e88e886ec221c515be72c261b4d25ac
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

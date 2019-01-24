@@ -98,9 +98,9 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('debug', array(
+        $container->loadFromExtension('debug', [
            'dump_destination' => 'php://stderr',
-        ));
+        ]);
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -102,12 +102,12 @@ and "50", you might add the following:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('firstName', new Assert\Length(array(
+                $metadata->addPropertyConstraint('firstName', new Assert\Length([
                     'min'        => 2,
                     'max'        => 50,
                     'minMessage' => 'Your first name must be at least {{ limit }} characters long',
                     'maxMessage' => 'Your first name cannot be longer than {{ limit }} characters',
-                )));
+                ]));
             }
         }
 
@@ -220,4 +220,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

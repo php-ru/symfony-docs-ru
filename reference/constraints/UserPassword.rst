@@ -90,9 +90,9 @@ the user's current password:
             {
                 $metadata->addPropertyConstraint(
                     'oldPassword',
-                    new SecurityAssert\UserPassword(array(
+                    new SecurityAssert\UserPassword([
                         'message' => 'Wrong value for your current password',
-                    ))
+                    ])
                 );
             }
         }
@@ -113,4 +113,4 @@ This message has no parameters.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

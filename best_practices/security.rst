@@ -285,7 +285,7 @@ the same ``getAuthorEmail()`` logic you used above::
 
         protected function supports($attribute, $subject)
         {
-            if (!in_array($attribute, array(self::CREATE, self::EDIT))) {
+            if (!in_array($attribute, [self::CREATE, self::EDIT])) {
                 return false;
             }
 
@@ -309,7 +309,7 @@ the same ``getAuthorEmail()`` logic you used above::
             switch ($attribute) {
                 case self::CREATE:
                     // if the user is an admin, allow them to create new posts
-                    if ($this->decisionManager->decide($token, array('ROLE_ADMIN'))) {
+                    if ($this->decisionManager->decide($token, ['ROLE_ADMIN'])) {
                         return true;
                     }
 
@@ -393,4 +393,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: d5542c97fdc9ae6aaef5cd98ac846cdbb587f0c8
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

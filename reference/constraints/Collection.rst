@@ -37,10 +37,10 @@ of a collection individually. Take the following example::
 
     class Author
     {
-        protected $profileData = array(
+        protected $profileData = [
             'personal_email' => '...',
             'short_bio' => '...',
-        );
+        ];
 
         public function setProfileData($key, $value)
         {
@@ -79,10 +79,10 @@ following:
              *     allowMissingFields = true
              * )
              */
-             protected $profileData = array(
+             protected $profileData = [
                  'personal_email' => '...',
                  'short_bio' => '...',
-             );
+             ];
         }
 
     .. code-block:: yaml
@@ -140,23 +140,23 @@ following:
 
         class Author
         {
-            private $options = array();
+            private $options = [];
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('profileData', new Assert\Collection(array(
-                    'fields' => array(
+                $metadata->addPropertyConstraint('profileData', new Assert\Collection([
+                    'fields' => [
                         'personal_email' => new Assert\Email(),
-                        'short_bio' => array(
+                        'short_bio' => [
                             new Assert\NotBlank(),
-                            new Assert\Length(array(
+                            new Assert\Length([
                                 'max' => 100,
                                 'maxMessage' => 'Your short bio is too long!',
-                            )),
-                        ),
-                    ),
+                            ]),
+                        ],
+                    ],
                     'allowMissingFields' => true,
-                )));
+                ]));
             }
         }
 
@@ -207,7 +207,7 @@ you can do the following:
              *     }
              * )
              */
-             protected $profileData = array('personal_email');
+             protected $profileData = ['personal_email'];
         }
 
     .. code-block:: yaml
@@ -265,18 +265,18 @@ you can do the following:
 
         class Author
         {
-            protected $profileData = array('personal_email');
+            protected $profileData = ['personal_email'];
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('profileData', new Assert\Collection(array(
-                    'fields' => array(
+                $metadata->addPropertyConstraint('profileData', new Assert\Collection([
+                    'fields' => [
                         'personal_email'  => new Assert\Required(
-                            array(new Assert\NotBlank(), new Assert\Email())
+                            [new Assert\NotBlank(), new Assert\Email()]
                         ),
                         'alternate_email' => new Assert\Optional(new Assert\Email()),
-                    ),
-                )));
+                    ],
+                ]));
             }
         }
 
@@ -352,4 +352,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 0950d8daad0e067df12a2e708640add435d33193
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

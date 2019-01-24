@@ -151,14 +151,14 @@ configuration:
     .. code-block:: php
 
         // app/config/config_test.php
-        $container->loadFromExtension('doctrine', array(
-            'dbal' => array(
+        $container->loadFromExtension('doctrine', [
+            'dbal' => [
                 'host'     => 'localhost',
                 'dbname'   => 'testdb',
                 'user'     => 'testdb',
                 'password' => 'testdb',
-            ),
-        ));
+            ],
+        ]);
 
 Make sure that your database runs on localhost and has the defined database and
 user credentials set up.
@@ -166,4 +166,4 @@ user credentials set up.
 .. _`DoctrineTestBundle`: https://github.com/dmaicher/doctrine-test-bundle
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

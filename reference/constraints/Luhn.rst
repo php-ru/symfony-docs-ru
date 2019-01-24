@@ -79,9 +79,9 @@ will contain a credit card number.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('cardNumber', new Assert\Luhn(array(
+                $metadata->addPropertyConstraint('cardNumber', new Assert\Luhn([
                     'message' => 'Please check your credit card number',
-                )));
+                ]));
             }
         }
 
@@ -110,4 +110,4 @@ You can use the following parameters in this message:
 .. _`Luhn algorithm`: https://en.wikipedia.org/wiki/Luhn_algorithm
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -19,11 +19,11 @@ bundle is only registered in the development environment::
     {
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 new Acme\DemoBundle\AcmeDemoBundle(),
-            );
+            ];
 
-            if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            if (in_array($this->getEnvironment(), ['dev', 'test'])) {
                 // comment or remove this line:
                 // $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
                 // ...
@@ -96,4 +96,4 @@ rely on the bundle you are about to remove.
     mentioned in the ``composer.json`` file included in the bundle directory.
 
 .. ready: no
-.. revision: bfb864a60ef49ff81e33955cb6a7447fd61beb28
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

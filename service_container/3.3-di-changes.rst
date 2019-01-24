@@ -221,7 +221,7 @@ service as an argument to another with the following config:
 
         $container->register('app.invoice_generator', InvoiceGenerator::class);
         $container->register('app.invoice_mailer', InvoiceMailer::class)
-            ->setArguments(array(new Reference('app.invoice_generator')));
+            ->setArguments([new Reference('app.invoice_generator')]);
 
 To pass the ``InvoiceGenerator`` as an argument to ``InvoiceMailer``, you needed
 to specify the service's *id* as an argument: ``app.invoice_generator``. Service
@@ -810,4 +810,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: 10c82f9c3f5309e4b28b06ef8814bf569565c36e
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

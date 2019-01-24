@@ -143,53 +143,53 @@ Below is the configuration for the pull request state machine.
 
         // app/config/config.php
 
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'workflows' => array(
-                'pull_request' => array(
-                  'type' => 'state_machine',
-                  'supports' => array('AppBundle\Entity\PullRequest'),
-                  'places' => array(
-                    'start',
-                    'coding',
-                    'travis',
-                    'review',
-                    'merged',
-                    'closed',
-                  ),
-                  'transitions' => array(
-                    'submit'=> array(
-                      'from' => 'start',
-                      'to' => 'travis',
-                    ),
-                    'update'=> array(
-                      'from' => array('coding','travis','review'),
-                      'to' => 'travis',
-                    ),
-                    'wait_for_review'=> array(
-                      'from' => 'travis',
-                      'to' => 'review',
-                    ),
-                    'request_change'=> array(
-                      'from' => 'review',
-                      'to' => 'coding',
-                    ),
-                    'accept'=> array(
-                      'from' => 'review',
-                      'to' => 'merged',
-                    ),
-                    'reject'=> array(
-                      'from' => 'review',
-                      'to' => 'closed',
-                    ),
-                    'reopen'=> array(
-                      'from' => 'start',
-                      'to' => 'review',
-                    ),
-                  ),
-                ),
-            ),
-        ));
+            'workflows' => [
+                'pull_request' => [
+                    'type' => 'state_machine',
+                    'supports' => ['AppBundle\Entity\PullRequest'],
+                    'places' => [
+                        'start',
+                        'coding',
+                        'travis',
+                        'review',
+                        'merged',
+                        'closed',
+                    ],
+                    'transitions' => [
+                        'submit'=> [
+                            'from' => 'start',
+                            'to' => 'travis',
+                        ],
+                        'update'=> [
+                            'from' => ['coding','travis','review'],
+                            'to' => 'travis',
+                        ],
+                        'wait_for_review'=> [
+                            'from' => 'travis',
+                            'to' => 'review',
+                        ],
+                        'request_change'=> [
+                            'from' => 'review',
+                            'to' => 'coding',
+                        ],
+                        'accept'=> [
+                            'from' => 'review',
+                            'to' => 'merged',
+                        ],
+                        'reject'=> [
+                            'from' => 'review',
+                            'to' => 'closed',
+                        ],
+                        'reopen'=> [
+                            'from' => 'start',
+                            'to' => 'review',
+                        ],
+                    ],
+                ],
+            ],
+        ]);
 
 You can now use this state machine by getting the ``state_machine.pull_request`` service::
 
@@ -198,4 +198,4 @@ You can now use this state machine by getting the ``state_machine.pull_request``
 .. _Petri net: https://en.wikipedia.org/wiki/Petri_net
 
 .. ready: no
-.. revision: 41e6965cd51a79a4c82ebc17eab36c8c795239e9
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

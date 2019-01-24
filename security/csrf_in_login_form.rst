@@ -48,9 +48,9 @@ file:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             'csrf_protection' => null,
-        ));
+        ]);
 
 Then, the security component needs a CSRF token provider. You can set this to
 use the default provider available in the security component:
@@ -93,19 +93,19 @@ use the default provider available in the security component:
     .. code-block:: php
 
         // app/config/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'secured_area' => array(
+            'firewalls' => [
+                'secured_area' => [
                     // ...
-                    'form_login' => array(
+                    'form_login' => [
                         // ...
                         'csrf_token_generator' => 'security.csrf.token_manager',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 The Security component can be configured further, but this is all information
 it needs to be able to use CSRF in the login form.
@@ -191,23 +191,23 @@ After this, you have protected your login form against CSRF attacks.
         .. code-block:: php
 
             // app/config/security.php
-            $container->loadFromExtension('security', array(
+            $container->loadFromExtension('security', [
                 // ...
 
-                'firewalls' => array(
-                    'secured_area' => array(
+                'firewalls' => [
+                    'secured_area' => [
                         // ...
-                        'form_login' => array(
+                        'form_login' => [
                             // ...
                             'csrf_parameter' => '_csrf_security_token',
                             'csrf_token_id'  => 'a_private_string',
-                        ),
-                    ),
-                ),
-            ));
+                        ],
+                    ],
+                ],
+            ]);
 
 .. _`Cross-site request forgery`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 .. _`Forging Login Requests`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: f33473fd488447315c7fee33ab0dc46692a85525
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

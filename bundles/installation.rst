@@ -61,10 +61,10 @@ The only thing you need to do now is register the bundle in ``AppKernel``::
 
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 // ...
                 new FOS\UserBundle\FOSUserBundle(),
-            );
+            ];
 
             // ...
         }
@@ -85,11 +85,11 @@ and ``test`` environments, register the bundle in this way::
 
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 // ...
-            );
+            ];
 
-            if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+            if (in_array($this->getEnvironment(), ['dev', 'test'])) {
                 $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
             }
 
@@ -160,4 +160,4 @@ what to do next. Have fun!
 .. _`symfony-bundle topic on GitHub`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: 26f8db35928a7f5a5cff81d2acf2e1d1e7d2c3db
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

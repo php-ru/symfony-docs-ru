@@ -47,11 +47,11 @@ inside your routing configuration:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('contact', new Route('/{_locale}/contact', array(
+        $routes->add('contact', new Route('/{_locale}/contact', [
             '_controller' => 'AppBundle:Main:contact',
-        ), array(
+        ], [
             '_locale' => '%app.locales%',
-        )));
+        ]));
 
         return $routes;
 
@@ -118,9 +118,9 @@ path):
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('some_route', new Route('/%app.route_prefix%/contact', array(
+        $routes->add('some_route', new Route('/%app.route_prefix%/contact', [
             '_controller' => 'AppBundle:Main:contact',
-        )));
+        ]));
 
         return $routes;
 
@@ -140,4 +140,4 @@ path):
     :doc:`/configuration/using_parameters_in_dic`.
 
 .. ready: no
-.. revision: 219b7f88713f162934ae238c09c26986e23db457
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

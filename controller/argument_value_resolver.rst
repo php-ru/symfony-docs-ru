@@ -104,12 +104,12 @@ type-hinted method arguments:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('sensio_framework_extra', array(
-            'request' => array(
+        $container->loadFromExtension('sensio_framework_extra', [
+            'request' => [
                 'converters' => true,
                 'auto_convert' => false,
-            ),
-        ));
+            ],
+        ]);
 
 Adding a new value resolver requires creating a class that implements
 :class:`Symfony\\Component\\HttpKernel\\Controller\\ArgumentValueResolverInterface`
@@ -219,7 +219,7 @@ and adding a priority.
         use AppBundle\ArgumentResolver\UserValueResolver;
 
         $container->autowire(UserValueResolver::class)
-            ->addTag('controller.argument_value_resolver', array('priority' => 50));
+            ->addTag('controller.argument_value_resolver', ['priority' => 50]);
 
 While adding a priority is optional, it's recommended to add one to make sure
 the expected value is injected. The ``RequestAttributeValueResolver`` has a
@@ -244,4 +244,4 @@ subrequests.
 .. _`yield`: http://php.net/manual/en/language.generators.syntax.php
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -62,10 +62,6 @@ containing :class:`Symfony\\Component\\Routing\\Route` objects.
 Loading Routes with a Custom Service
 ------------------------------------
 
-.. versionadded:: 2.8
-
-    The option to load routes using Symfony services was introduced in Symfony 2.8.
-
 Using a regular Symfony service is the simplest way to load routes in a
 customized way. It's much easier than creating a full custom route loader, so
 you should always consider this option first.
@@ -148,12 +144,12 @@ you do. The resource name itself is not actually used in the example::
 
             // prepare a new route
             $path = '/extra/{parameter}';
-            $defaults = array(
+            $defaults = [
                 '_controller' => 'AppBundle:Extra:extra',
-            );
-            $requirements = array(
+            ];
+            $requirements = [
                 'parameter' => '\d+',
-            );
+            ];
             $route = new Route($path, $defaults, $requirements);
 
             // add the new route to the route collection
@@ -344,4 +340,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: bee45aa468a8b823667f0be32f661fb38dbe874f

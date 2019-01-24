@@ -113,7 +113,7 @@ If a piece of code is in fact wrong, explain why:
 
     * I profiled this change and it hurts performance significantly (if you don't profile, it's an opinion, so we can ignore)
 
-    * Code doesn't match Symfony's CS rules (e.g. ``use array()`` instead of ``[]``)
+    * Code doesn't match Symfony's CS rules (e.g. use ``[]`` instead of ``array()``)
 
     * We only provide integration with very popular projects (e.g. we integrate Bootstrap but not your own CSS framework)
 
@@ -178,4 +178,4 @@ you *will* lose credibility and respect from other developers.
 *Do unto others as you would have them do unto you.*
 
 .. ready: no
-.. revision: 2310c385f108ca2e7c4210450cfcd1e2e1835d51
+.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254

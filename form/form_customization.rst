@@ -450,13 +450,13 @@ rendered.
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 'form/fields.html.twig',
-            ),
+            ],
 
             // ...
-        ));
+        ]);
 
 By default, Twig uses a *div* layout when rendering forms. Some people, however,
 may prefer to render forms in a *table* layout. Use the ``form_table_layout.html.twig``
@@ -493,13 +493,13 @@ resource to use such a layout:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 'form_table_layout.html.twig',
-            ),
+            ],
 
             // ...
-        ));
+        ]);
 
 If you only want to make the change in one template, add the following line to
 your template file rather than adding the template as a resource:
@@ -555,9 +555,9 @@ field whose *id* is ``product_name`` (and name is ``product[name]``).
         {
             // ...
 
-            $builder->add('name', TextType::class, array(
+            $builder->add('name', TextType::class, [
                 'block_name' => 'custom_name',
-            ));
+            ]);
         }
 
     Then the block name will be ``_product_custom_name_widget``.
@@ -863,4 +863,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -27,7 +27,7 @@ create your own encoder that uses the
 
     class YamlEncoder implements EncoderInterface, DecoderInterface
     {
-        public function encode($data, $format, array $context = array())
+        public function encode($data, $format, array $context = [])
         {
             return Yaml::dump($data);
         }
@@ -37,7 +37,7 @@ create your own encoder that uses the
             return 'yaml' === $format;
         }
 
-        public function decode($data, $format, array $context = array())
+        public function decode($data, $format, array $context = [])
         {
             return Yaml::parse($data);
         }
@@ -65,4 +65,4 @@ Now you'll be able to serialize and deserialize Yaml!
 .. _tracker: https://github.com/symfony/symfony/issues
 
 .. ready: no
-.. revision: 29f2d400cab12ef68497192f8eb3aef5add03f04
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

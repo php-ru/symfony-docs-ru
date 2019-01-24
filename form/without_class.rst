@@ -17,7 +17,7 @@ an array of the submitted data. This is actually really easy::
 
     public function contactAction(Request $request)
     {
-        $defaultData = array('message' => 'Type your message here');
+        $defaultData = ['message' => 'Type your message here'];
         $form = $this->createFormBuilder($defaultData)
             ->add('name', TextType::class)
             ->add('email', EmailType::class)
@@ -87,15 +87,15 @@ but here's a short example::
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-           ->add('firstName', TextType::class, array(
-               'constraints' => new Length(array('min' => 3)),
-           ))
-           ->add('lastName', TextType::class, array(
-               'constraints' => array(
+           ->add('firstName', TextType::class, [
+               'constraints' => new Length(['min' => 3]),
+           ])
+           ->add('lastName', TextType::class, [
+               'constraints' => [
                    new NotBlank(),
-                   new Length(array('min' => 3)),
-               ),
-           ))
+                   new Length(['min' => 3]),
+               ],
+           ])
         ;
     }
 
@@ -107,7 +107,7 @@ but here's a short example::
 
     .. code-block:: php
 
-        new NotBlank(array('groups' => array('create', 'update')));
+        new NotBlank(['groups' => ['create', 'update']]);
 
 .. tip::
 
@@ -116,4 +116,4 @@ but here's a short example::
     constraint, unless you :doc:`disable validation </form/disabling_validation>`.
 
 .. ready: no
-.. revision: 6abfc1265447425767d00e96a18ca227299c9733
+.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e

@@ -35,14 +35,14 @@ to customize the normalized data. To do that, leverage the ``ObjectNormalizer``:
             $this->normalizer = $normalizer;
         }
 
-        public function normalize($topic, $format = null, array $context = array())
+        public function normalize($topic, $format = null, array $context = [])
         {
             $data = $this->normalizer->normalize($topic, $format, $context);
 
             // Here, add, edit, or delete some data:
-            $data['href']['self'] = $this->router->generate('topic_show', array(
+            $data['href']['self'] = $this->router->generate('topic_show', [
                 'id' => $topic->getId(),
-            ), UrlGeneratorInterface::ABSOLUTE_URL);
+            ], UrlGeneratorInterface::ABSOLUTE_URL);
 
             return $data;
         }
@@ -62,4 +62,4 @@ If you're using the :ref:`default services.yml configuration <service-container-
 this is done automatically!
 
 .. ready: no
-.. revision: ab614c9833802929926a28d67b295bb513f1c3e8
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

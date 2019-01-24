@@ -567,7 +567,7 @@ below for more details).
     There are two main listeners to ``kernel.exception`` when using the
     Symfony Framework.
 
-    **ExceptionListener in HttpKernel**
+    **ExceptionListener in the HttpKernel Component**
 
     The first comes core to the HttpKernel component
     and is called :class:`Symfony\\Component\\HttpKernel\\EventListener\\ExceptionListener`.
@@ -596,7 +596,7 @@ below for more details).
        controller to render is passed as a constructor argument to this listener.
        This controller will return the final ``Response`` for this error page.
 
-    **ExceptionListener in Security**
+    **ExceptionListener in the Security Component**
 
     The other important listener is the
     :class:`Symfony\\Component\\Security\\Http\\Firewall\\ExceptionListener`.
@@ -661,12 +661,12 @@ else that can be used to create a working example::
     use Symfony\Component\Routing\RouteCollection;
 
     $routes = new RouteCollection();
-    $routes->add('hello', new Route('/hello/{name}', array(
+    $routes->add('hello', new Route('/hello/{name}', [
         '_controller' => function (Request $request) {
             return new Response(
                 sprintf("Hello %s", $request->get('name'))
             );
-        })
+        }]
     ));
 
     $request = Request::createFromGlobals();
@@ -787,4 +787,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: a23feff314f6835d3069728be09a71df3aaf84e9
+.. revision: 0f4eed59033bb2e42b63121a4a97f8aa984708dc

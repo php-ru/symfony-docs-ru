@@ -96,7 +96,7 @@ Search in several locations by chaining calls to
 :method:`Symfony\\Component\\Finder\\Finder::in`::
 
     // search inside *both* directories
-    $finder->in(array(__DIR__, '/elsewhere'));
+    $finder->in([__DIR__, '/elsewhere']);
 
     // same as above
     $finder->in(__DIR__)->in('/elsewhere');
@@ -339,4 +339,4 @@ The contents of returned files can be read with
 .. _Packagist:    https://packagist.org/packages/symfony/finder
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

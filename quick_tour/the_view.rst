@@ -54,9 +54,9 @@ To render a template in Symfony, use the ``render()`` method from within a
 controller. If the template needs variables to generate its contents, pass
 them as an array using the second optional argument::
 
-    $this->render('default/index.html.twig', array(
+    $this->render('default/index.html.twig', [
         'variable_name' => 'variable_value',
-    ));
+    ]);
 
 Variables passed to a template can be strings, arrays or even objects. Twig
 abstracts the difference between them and lets you access "attributes" of
@@ -67,24 +67,24 @@ on its type:
 .. code-block:: twig
 
     {# 1. Simple variables #}
-    {# $this->render('template.html.twig', array(
+    {# $this->render('template.html.twig', [
            'name' => 'Fabien',
-       )) #}
+       ]) #}
     {{ name }}
 
     {# 2. Arrays #}
-    {# $this->render('template.html.twig', array(
-           'user' => array('name' => 'Fabien'))
-       ) #}
+    {# $this->render('template.html.twig', [
+           'user' => ['name' => 'Fabien']
+       ]) #}
     {{ user.name }}
 
     {# alternative syntax for arrays #}
     {{ user['name'] }}
 
     {# 3. Objects #}
-    {# $this->render('template.html.twig', array(
-           'user' => new User('Fabien'))
-       ) #}
+    {# $this->render('template.html.twig', [
+           'user' => new User('Fabien')
+       ]) #}
     {{ user.name }}
     {{ user.getName }}
 
@@ -221,9 +221,9 @@ later)::
             // look for the most popular articles in the database
             $articles = ...;
 
-            return $this->render('default/top_articles.html.twig', array(
+            return $this->render('default/top_articles.html.twig', [
                 'articles' => $articles,
-            ));
+            ]);
         }
 
         // ...
@@ -291,4 +291,4 @@ controller and that's exactly the topic of the :doc:`next part of this tutorial
 .. _`Twig documentation`: https://twig.symfony.com/doc/2.x/
 
 .. ready: no
-.. revision: 18a42064f31f28edfcc4b48569de584d216ea668
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

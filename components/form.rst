@@ -56,8 +56,8 @@ support for very important features:
 The Symfony Form component relies on other libraries to solve these problems.
 Most of the time you will use Twig and the Symfony
 :doc:`HttpFoundation </components/http_foundation>`,
-Translation and Validator components, but you can replace any of these with
-a different library of your choice.
+:doc:`Translation </components/translation>` and :doc:`Validator </components/validator>`
+components, but you can replace any of these with a different library of your choice.
 
 The following sections explain how to plug these libraries into the form
 factory.
@@ -201,16 +201,16 @@ to bootstrap or access Twig and add the :class:`Symfony\\Bridge\\Twig\\Extension
     // the path to your other templates
     $viewsDirectory = realpath(__DIR__.'/../views');
 
-    $twig = new Environment(new FilesystemLoader(array(
+    $twig = new Environment(new FilesystemLoader([
         $viewsDirectory,
         $vendorTwigBridgeDirectory.'/Resources/views/Form',
-    )));
-    $formEngine = new TwigRendererEngine(array($defaultFormTheme), $twig);
-    $twig->addRuntimeLoader(new FactoryRuntimeLoader(array(
+    ]));
+    $formEngine = new TwigRendererEngine([$defaultFormTheme], $twig);
+    $twig->addRuntimeLoader(new FactoryRuntimeLoader([
         FormRenderer::class => function () use ($formEngine, $csrfManager) {
             return new FormRenderer($formEngine, $csrfManager);
         },
-    )));
+    ]));
 
     // ... (see the previous CSRF Protection section for more information)
 
@@ -405,9 +405,9 @@ is created from the form factory.
             ->add('dueDate', DateType::class)
             ->getForm();
 
-        var_dump($twig->render('new.html.twig', array(
+        var_dump($twig->render('new.html.twig', [
             'form' => $form->createView(),
-        )));
+        ]));
 
     .. code-block:: php-symfony
 
@@ -431,9 +431,9 @@ is created from the form factory.
                     ->add('dueDate', DateType::class)
                     ->getForm();
 
-                return $this->render('@AcmeTask/Default/new.html.twig', array(
+                return $this->render('@AcmeTask/Default/new.html.twig', [
                     'form' => $form->createView(),
-                ));
+                ]);
             }
         }
 
@@ -462,9 +462,9 @@ builder:
 
         // ...
 
-        $defaults = array(
+        $defaults = [
             'dueDate' => new \DateTime('tomorrow'),
-        );
+        ];
 
         $form = $formFactory->createBuilder(FormType::class, $defaults)
             ->add('task', TextType::class)
@@ -484,9 +484,9 @@ builder:
         {
             public function newAction(Request $request)
             {
-                $defaults = array(
+                $defaults = [
                     'dueDate' => new \DateTime('tomorrow'),
-                );
+                ];
 
                 $form = $this->createFormBuilder($defaults)
                     ->add('task', TextType::class)
@@ -546,10 +546,10 @@ by ``handleRequest()`` to determine whether a form has been submitted):
 
         // ...
 
-        $formBuilder = $formFactory->createBuilder(FormType::class, null, array(
+        $formBuilder = $formFactory->createBuilder(FormType::class, null, [
             'action' => '/search',
             'method' => 'GET',
-        ));
+        ]);
 
         // ...
 
@@ -565,10 +565,10 @@ by ``handleRequest()`` to determine whether a form has been submitted):
         {
             public function searchAction()
             {
-                $formBuilder = $this->createFormBuilder(null, array(
+                $formBuilder = $this->createFormBuilder(null, [
                     'action' => '/search',
                     'method' => 'GET',
-                ));
+                ]);
 
                 // ...
             }
@@ -680,15 +680,15 @@ option when building each field:
         use Symfony\Component\Form\Extension\Core\Type\DateType;
 
         $form = $formFactory->createBuilder()
-            ->add('task', TextType::class, array(
+            ->add('task', TextType::class, [
                 'constraints' => new NotBlank(),
-            ))
-            ->add('dueDate', DateType::class, array(
-                'constraints' => array(
+            ])
+            ->add('dueDate', DateType::class, [
+                'constraints' => [
                     new NotBlank(),
                     new Type(\DateTime::class),
-                )
-            ))
+                ]
+            ])
             ->getForm();
 
     .. code-block:: php-symfony
@@ -707,15 +707,15 @@ option when building each field:
             public function newAction(Request $request)
             {
                 $form = $this->createFormBuilder()
-                    ->add('task', TextType::class, array(
+                    ->add('task', TextType::class, [
                         'constraints' => new NotBlank(),
-                    ))
-                    ->add('dueDate', DateType::class, array(
-                        'constraints' => array(
+                    ])
+                    ->add('dueDate', DateType::class, [
+                        'constraints' => [
                             new NotBlank(),
                             new Type(\DateTime::class),
-                        )
-                    ))
+                        ]
+                    ])
                     ->getForm();
                 // ...
             }
@@ -769,4 +769,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: 057f279d9ff0ece0a4d3521d008b85bc1e2904b3

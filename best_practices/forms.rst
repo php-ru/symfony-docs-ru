@@ -42,9 +42,9 @@ form in its own PHP class::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class' => Post::class,
-            ));
+            ]);
         }
     }
 
@@ -96,7 +96,7 @@ scope of that form::
         {
             $builder
                 // ...
-                ->add('save', SubmitType::class, array('label' => 'Create Post'))
+                ->add('save', SubmitType::class, ['label' => 'Create Post'])
             ;
         }
 
@@ -123,10 +123,10 @@ some developers configure form buttons in the controller::
         {
             $post = new Post();
             $form = $this->createForm(PostType::class, $post);
-            $form->add('submit', SubmitType::class, array(
+            $form->add('submit', SubmitType::class, [
                 'label' => 'Create',
-                'attr'  => array('class' => 'btn btn-default pull-right'),
-            ));
+                'attr'  => ['class' => 'btn btn-default pull-right'],
+            ]);
 
             // ...
         }
@@ -215,7 +215,7 @@ Handling a form submit usually follows a similar template::
 
             return $this->redirect($this->generateUrl(
                 'admin_post_show',
-                array('id' => $post->getId())
+                ['id' => $post->getId()]
             ));
         }
 
@@ -238,4 +238,4 @@ is deprecated since version 3.2 and will throw an exception in 4.0.
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

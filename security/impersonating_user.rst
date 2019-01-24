@@ -55,16 +55,16 @@ firewall listener:
     .. code-block:: php
 
         // app/config/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main'=> array(
+            'firewalls' => [
+                'main'=> [
                     // ...
                     'switch_user' => true,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. tip::
 
@@ -167,19 +167,19 @@ setting:
     .. code-block:: php
 
         // app/config/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main'=> array(
+            'firewalls' => [
+                'main'=> [
                     // ...
-                    'switch_user' => array(
+                    'switch_user' => [
                         'role' => 'ROLE_ADMIN',
                         'parameter' => '_want_to_be_this_user',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 Events
 ------
@@ -212,10 +212,10 @@ you switch users, add an event subscriber on this event::
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 // constant for security.switch_user
                 SecurityEvents::SWITCH_USER => 'onSwitchUser',
-            );
+            ];
         }
     }
 
@@ -226,4 +226,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: 233174e71789570da50713ff87b5f1a8c921f29f
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

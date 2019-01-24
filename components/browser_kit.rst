@@ -207,7 +207,7 @@ into the client constructor::
     $cookieJar->set($cookie);
 
     // create a client and set the cookies
-    $client = new Client(array(), null, $cookieJar);
+    $client = new Client([], null, $cookieJar);
     // ...
 
 History
@@ -253,4 +253,4 @@ Learn more
 .. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
 
 .. ready: no
-.. revision: 8875c445ce64a63fbe023de88b22f8a7498e7a6a
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

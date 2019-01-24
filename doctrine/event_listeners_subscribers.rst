@@ -73,16 +73,16 @@ managers that use this connection.
         use AppBundle\EventListener\SearchIndexerSubscriber;
 
         $container->autowire(SearchIndexer::class)
-            ->addTag('doctrine.event_listener', array('event' => 'postPersist'))
+            ->addTag('doctrine.event_listener', ['event' => 'postPersist'])
         ;
         $container->autowire(SearchIndexer2::class)
-            ->addTag('doctrine.event_listener', array(
+            ->addTag('doctrine.event_listener', [
                 'event' => 'postPersist',
                 'connection' => 'default',
-            ))
+            ])
         ;
         $container->autowire(SearchIndexerSubscriber::class)
-            ->addTag('doctrine.event_subscriber', array('connection' => 'default'))
+            ->addTag('doctrine.event_subscriber', ['connection' => 'default'])
         ;
 
 Creating the Listener Class
@@ -129,7 +129,7 @@ entity), you should check for the entity's class type in your method
 
     In Doctrine 2.4, a feature called Entity Listeners was introduced.
     It is a lifecycle listener class used for an entity. You can read
-    about it in `the Doctrine Documentation`_.
+    about it in `the DoctrineBundle documentation`_.
 
 Creating the Subscriber Class
 -----------------------------
@@ -150,10 +150,10 @@ interface and have an event method for each event it subscribes to::
     {
         public function getSubscribedEvents()
         {
-            return array(
+            return [
                 Events::postPersist,
                 Events::postUpdate,
-            );
+            ];
         }
 
         public function postUpdate(LifecycleEventArgs $args)
@@ -233,16 +233,13 @@ to the tag like so:
 
         $container
             ->register('my.listener', SearchIndexer::class)
-            ->addTag('doctrine.event_listener', array('event' => 'postPersist', 'lazy' => 'true'))
+            ->addTag('doctrine.event_listener', ['event' => 'postPersist', 'lazy' => 'true'])
         ;
 
 .. note::
 
     Marking an event listener as ``lazy`` has nothing to do with lazy service
     definitions which are described :doc:`in their own article </service_container/lazy_services>`
-
-.. _`The Event System`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html
-.. _`the Doctrine Documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
 Priorities for Event Listeners
 ------------------------------
@@ -290,13 +287,16 @@ numbers mean that listeners are invoked earlier.
 
         $container
             ->register('my.listener.with_high_priority', MyHighPriorityListener::class)
-            ->addTag('doctrine.event_listener', array('event' => 'postPersist', 'priority' => 10))
+            ->addTag('doctrine.event_listener', ['event' => 'postPersist', 'priority' => 10])
         ;
 
         $container
             ->register('my.listener.with_low_priority', MyLowPriorityListener::class)
-            ->addTag('doctrine.event_listener', array('event' => 'postPersist', 'priority' => 1))
+            ->addTag('doctrine.event_listener', ['event' => 'postPersist', 'priority' => 1])
         ;
 
+.. _`The Event System`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html
+.. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
+
 .. ready: no
-.. revision: c9b77a77e355b915c6f8086d7cb7d3902e35b2d8
+.. revision: c9e6a7d7691b9b91103b3377dae4f02dc9204d00

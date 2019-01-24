@@ -204,13 +204,13 @@ file:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 '...',
                 'form/fields.html.twig',
-            ),
+            ],
             // ...
-        ));
+        ]);
 
 .. note::
 
@@ -297,16 +297,16 @@ file:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('framework', array(
-            'templating' => array(
-                'form' => array(
-                    'resources' => array(
+        $container->loadFromExtension('framework', [
+            'templating' => [
+                'form' => [
+                    'resources' => [
                         'form',
-                    ),
-                ),
-            ),
+                    ],
+                ],
+            ],
             // ...
-        ));
+        ]);
 
 Any fragments inside the ``app/Resources/views/form`` directory are now used
 globally to define form output.
@@ -316,4 +316,4 @@ globally to define form output.
 .. _`view on GitHub`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form
 
 .. ready: no
-.. revision: 0c624b58e1e380bafdfc25b8ad357e5c96b94274
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

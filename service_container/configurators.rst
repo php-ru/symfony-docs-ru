@@ -68,7 +68,7 @@ in the application::
         public function getEnabledFormatters()
         {
             // code to configure which formatters to use
-            $enabledFormatters = array(...);
+            $enabledFormatters = [...];
 
             // ...
 
@@ -179,10 +179,10 @@ all the classes are already loaded as services. All you need to do is specify th
         $this->registerClasses($definition, 'AppBundle\\', '../../src/AppBundle/*');
 
         $container->getDefinition(NewsletterManager::class)
-            ->setConfigurator(array(new Reference(EmailConfigurator::class), 'configure'));
+            ->setConfigurator([new Reference(EmailConfigurator::class), 'configure']);
 
         $container->getDefinition(GreetingCardManager::class)
-            ->setConfigurator(array(new Reference(EmailConfigurator::class), 'configure'));
+            ->setConfigurator([new Reference(EmailConfigurator::class), 'configure']);
 
 .. versionadded:: 3.2
 
@@ -205,4 +205,4 @@ That's it! When requesting the ``AppBundle\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

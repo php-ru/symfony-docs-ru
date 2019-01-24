@@ -36,9 +36,9 @@ Then, enable the bundle in the kernel of the application::
     {
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 // ...
-            );
+            ];
 
             if ('dev' === $this->getEnvironment()) {
                 // ...
@@ -146,4 +146,4 @@ command:
 .. _`php.net`: https://php.net/manual/en/features.commandline.webserver.php#example-411
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -37,12 +37,12 @@ this path, update the ``framework.session.save_path`` configuration key:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('framework', array(
-            'session' => array(
+        $container->loadFromExtension('framework', [
+            'session' => [
                 'handler_id' => 'session.handler.native_file',
                 'save_path' => '%kernel.project_dir%/var/sessions/%kernel.environment%'
-            ),
-        ));
+            ],
+        ]);
 
 Storing Sessions Elsewhere (e.g. database)
 ------------------------------------------
@@ -54,4 +54,4 @@ session save handlers. There are also articles about storing sessions in a
 or a :doc:`NoSQL database </doctrine/mongodb_session_storage>`.
 
 .. ready: no
-.. revision: 86ab47aaff52878deef6d395d86293434a9f6ca1
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

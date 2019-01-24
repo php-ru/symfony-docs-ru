@@ -58,14 +58,14 @@ configuration:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'profiler' => array(
-                'matcher' => array(
+            'profiler' => [
+                'matcher' => [
                     'ip' => '168.0.0.1',
-                )
-            ),
-        ));
+                ]
+            ],
+        ]);
 
 You can also set a ``path`` option to define the path on which the profiler
 should be enabled. For instance, setting it to ``^/admin/`` will enable the
@@ -153,14 +153,14 @@ profiler to use this service as the matcher:
         // app/config/config.php
         use AppBundle\Profiler\SuperAdminMatcher;
 
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'profiler' => array(
-                'matcher' => array(
+            'profiler' => [
+                'matcher' => [
                     'service' => SuperAdminMatcher::class,
-                )
-            ),
-        ));
+                ]
+            ],
+        ]);
 
 .. ready: no
-.. revision: df21fd8ecc6e7cbe2972c4e6395381e2bcddae27
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

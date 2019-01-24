@@ -82,13 +82,13 @@ First, you need to configure the connection the ACL system is supposed to use:
     .. code-block:: php
 
         // app/config/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'acl' => array(
+            'acl' => [
                 'connection' => 'default',
-            ),
-        ));
+            ],
+        ]);
 
 .. note::
 
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

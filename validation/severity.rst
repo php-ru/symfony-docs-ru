@@ -113,15 +113,15 @@ Use the ``payload`` option to configure the error level for each constraint:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('username', new Assert\NotBlank(array(
-                    'payload' => array('severity' => 'error'),
-                )));
-                $metadata->addPropertyConstraint('password', new Assert\NotBlank(array(
-                    'payload' => array('severity' => 'error'),
-                )));
-                $metadata->addPropertyConstraint('bankAccountNumber', new Assert\Iban(array(
-                    'payload' => array('severity' => 'warning'),
-                )));
+                $metadata->addPropertyConstraint('username', new Assert\NotBlank([
+                    'payload' => ['severity' => 'error'],
+                ]));
+                $metadata->addPropertyConstraint('password', new Assert\NotBlank([
+                    'payload' => ['severity' => 'error'],
+                ]));
+                $metadata->addPropertyConstraint('bankAccountNumber', new Assert\Iban([
+                    'payload' => ['severity' => 'warning'],
+                ]));
             }
         }
 
@@ -159,4 +159,4 @@ so that the severity is added as an additional HTML class:
     For more information on customizing form rendering, see :doc:`/form/form_customization`.
 
 .. ready: no
-.. revision: 92c8616263992a1b5e270ed6d882e599754adb79
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

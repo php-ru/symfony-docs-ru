@@ -13,10 +13,10 @@ from *that* controller::
 
     public function indexAction($name)
     {
-        $response = $this->forward('AppBundle:Something:fancy', array(
+        $response = $this->forward('AppBundle:Something:fancy', [
             'name'  => $name,
             'color' => 'green',
-        ));
+        ]);
 
         // ... further modify the response or return it directly
 
@@ -35,4 +35,4 @@ Just like when creating a controller for a route, the order of the arguments
 of ``fancyAction()`` doesn't matter: the matching is done by name.
 
 .. ready: no
-.. revision: 91805f1212ce1d0bf244b65fc4e0d8cd23adfe89
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -81,10 +81,10 @@ Basic Usage
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('email', new Assert\Email(array(
+                $metadata->addPropertyConstraint('email', new Assert\Email([
                     'message' => 'The email "{{ value }}" is not a valid email.',
                     'checkMX' => true,
-                )));
+                ]));
             }
         }
 
@@ -144,4 +144,4 @@ of the given email.
 .. _egulias/email-validator: https://packagist.org/packages/egulias/email-validator
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

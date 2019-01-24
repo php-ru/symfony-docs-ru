@@ -98,10 +98,10 @@ This will check if ``firstName`` is of type ``string`` and that ``age`` is an
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\Type('string'));
 
-                $metadata->addPropertyConstraint('age', new Assert\Type(array(
+                $metadata->addPropertyConstraint('age', new Assert\Type([
                     'type'    => 'integer',
                     'message' => 'The value {{ value }} is not a valid {{ type }}.',
-                )));
+                ]));
             }
         }
 
@@ -176,4 +176,4 @@ You can use the following parameters in this message:
 .. _a list of ctype functions: https://php.net/ref.ctype.php
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

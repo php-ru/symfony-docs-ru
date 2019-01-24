@@ -44,11 +44,11 @@ to your controller, and as attributes of the ``Request`` object:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('blog', new Route('/blog/{page}', array(
+        $routes->add('blog', new Route('/blog/{page}', [
             '_controller' => 'AppBundle:Blog:index',
             'page'        => 1,
             'title'       => 'Hello world!',
-        )));
+        ]));
 
         return $routes;
 
@@ -76,4 +76,4 @@ path, but you can still access its value from inside your controller, through
 the method's argument, or from the ``Request`` object's ``attributes`` bag.
 
 .. ready: no
-.. revision: 219b7f88713f162934ae238c09c26986e23db457
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

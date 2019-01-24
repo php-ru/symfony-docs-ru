@@ -118,7 +118,7 @@ would look like this::
         protected function supports($attribute, $subject)
         {
             // if the attribute isn't one we support, return false
-            if (!in_array($attribute, array(self::VIEW, self::EDIT))) {
+            if (!in_array($attribute, [self::VIEW, self::EDIT])) {
                 return false;
             }
 
@@ -235,7 +235,7 @@ with ``ROLE_SUPER_ADMIN``::
             // ...
 
             // ROLE_SUPER_ADMIN can do anything! The power!
-            if ($this->decisionManager->decide($token, array('ROLE_SUPER_ADMIN'))) {
+            if ($this->decisionManager->decide($token, ['ROLE_SUPER_ADMIN'])) {
                 return true;
             }
 
@@ -317,12 +317,12 @@ security configuration:
     .. code-block:: php
 
         // app/config/security.php
-        $container->loadFromExtension('security', array(
-            'access_decision_manager' => array(
+        $container->loadFromExtension('security', [
+            'access_decision_manager' => [
                 'strategy' => 'unanimous',
                 'allow_if_all_abstain' => false,
-            ),
-        ));
+            ],
+        ]);
 
 .. ready: no
-.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

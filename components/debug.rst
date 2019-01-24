@@ -37,8 +37,8 @@ tools.
 
 .. caution::
 
-    You should never enable the debug tools in a production environment as
-    they might disclose sensitive information to the user.
+    You should never enable the debug tools, except for the error handler, in a
+    production environment as they might disclose sensitive information to the user.
 
 Enabling the Error Handler
 --------------------------
@@ -51,6 +51,9 @@ fatal errors)::
     use Symfony\Component\Debug\ErrorHandler;
 
     ErrorHandler::register();
+
+This error handler is enabled by default in the production environment when the
+application uses the FrameworkBundle because it generates better error logs.
 
 Enabling the Exception Handler
 ------------------------------
@@ -90,4 +93,4 @@ Using the ``DebugClassLoader`` is as easy as calling its static
 .. _Packagist: https://packagist.org/packages/symfony/debug
 
 .. ready: no
-.. revision: fdaf1898ea53a249a62e6780e939910f12026b4e
+.. revision: 99a8323a48e848c21e45da4b186fde8c63cbdbfe

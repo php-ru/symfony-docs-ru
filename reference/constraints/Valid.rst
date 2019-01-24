@@ -159,7 +159,7 @@ stores an ``Address`` instance in the ``$address`` property::
             {
                 $metadata->addPropertyConstraint('street', new Assert\NotBlank());
                 $metadata->addPropertyConstraint('zipCode', new Assert\NotBlank());
-                $metadata->addPropertyConstraint('zipCode', new Assert\Length(array("max" => 5)));
+                $metadata->addPropertyConstraint('zipCode', new Assert\Length(["max" => 5]));
             }
         }
 
@@ -178,7 +178,7 @@ stores an ``Address`` instance in the ``$address`` property::
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\NotBlank());
-                $metadata->addPropertyConstraint('firstName', new Assert\Length(array("min" => 4)));
+                $metadata->addPropertyConstraint('firstName', new Assert\Length(["min" => 4]));
                 $metadata->addPropertyConstraint('lastName', new Assert\NotBlank());
             }
         }
@@ -268,4 +268,4 @@ set to ``true``.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -122,11 +122,11 @@ class in the constructor of the Twig extension::
 
         public function getFilters()
         {
-            return array(
+            return [
                 new TwigFilter(
                     'md2html',
-                    array($this, 'markdownToHtml'),
-                    array('is_safe' => array('html'), 'pre_escape' => 'html')
+                    [$this, 'markdownToHtml'],
+                    ['is_safe' => ['html'], 'pre_escape' => 'html']
                 ),
             );
         }
@@ -156,4 +156,4 @@ Next: :doc:`/best_practices/forms`
 .. _`Parsedown`: http://parsedown.org/
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254

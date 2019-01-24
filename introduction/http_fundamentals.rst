@@ -337,7 +337,7 @@ A very simple front controller might look like this::
     $request = Request::createFromGlobals();
     $path = $request->getPathInfo(); // the URI path being requested
 
-    if (in_array($path, array('', '/'))) {
+    if (in_array($path, ['', '/'])) {
         $response = new Response('Welcome to the homepage.');
     } elseif ('/contact' === $path) {
         $response = new Response('Contact us');
@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 9feaac04a0853c12895442bd4d8f388de51f8616
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

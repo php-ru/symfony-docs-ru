@@ -111,11 +111,11 @@ The following configuration code shows how you can configure two entity managers
 
     .. code-block:: php
 
-        $container->loadFromExtension('doctrine', array(
-            'dbal' => array(
+        $container->loadFromExtension('doctrine', [
+            'dbal' => [
                 'default_connection' => 'default',
-                'connections' => array(
-                    'default' => array(
+                'connections' => [
+                    'default' => [
                         'driver'   => 'pdo_mysql',
                         'host'     => '%database_host%',
                         'port'     => '%database_port%',
@@ -123,8 +123,8 @@ The following configuration code shows how you can configure two entity managers
                         'user'     => '%database_user%',
                         'password' => '%database_password%',
                         'charset'  => 'UTF8',
-                    ),
-                    'customer' => array(
+                    ],
+                    'customer' => [
                         'driver'   => 'pdo_mysql',
                         'host'     => '%database_host2%',
                         'port'     => '%database_port2%',
@@ -132,29 +132,29 @@ The following configuration code shows how you can configure two entity managers
                         'user'     => '%database_user2%',
                         'password' => '%database_password2%',
                         'charset'  => 'UTF8',
-                    ),
-                ),
-            ),
+                    ],
+                ],
+            ],
 
-            'orm' => array(
+            'orm' => [
                 'default_entity_manager' => 'default',
-                'entity_managers' => array(
-                    'default' => array(
+                'entity_managers' => [
+                    'default' => [
                         'connection' => 'default',
-                        'mappings'   => array(
+                        'mappings'   => [
                             'AppBundle'  => null,
                             'AcmeStoreBundle' => null,
-                        ),
-                    ),
-                    'customer' => array(
+                        ],
+                    ],
+                    'customer' => [
                         'connection' => 'customer',
-                        'mappings'   => array(
+                        'mappings'   => [
                             'AcmeCustomerBundle' => null,
-                        ),
-                    ),
-                ),
-            ),
-        ));
+                        ],
+                    ],
+                ],
+            ],
+        ]);
 
 In this case, you've defined two entity managers and called them ``default``
 and ``customer``. The ``default`` entity manager manages entities in the
@@ -243,4 +243,4 @@ The same applies to repository calls::
     }
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

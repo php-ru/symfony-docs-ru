@@ -83,10 +83,11 @@ constructor::
     use Psr\Log\LogLevel;
     // ...
 
-    $verbosityLevelMap = array(
+    $verbosityLevelMap = [
         LogLevel::NOTICE => OutputInterface::VERBOSITY_NORMAL,
         LogLevel::INFO   => OutputInterface::VERBOSITY_NORMAL,
-    );
+    ];
+
     $logger = new ConsoleLogger($output, $verbosityLevelMap);
 
 Color
@@ -97,11 +98,12 @@ level. This behavior is configurable through the third parameter of the
 constructor::
 
     // ...
-    $formatLevelMap = array(
+    $formatLevelMap = [
         LogLevel::CRITICAL => ConsoleLogger::ERROR,
         LogLevel::DEBUG    => ConsoleLogger::INFO,
-    );
-    $logger = new ConsoleLogger($output, array(), $formatLevelMap);
+    ];
+
+    $logger = new ConsoleLogger($output, [], $formatLevelMap);
 
 Errors
 ------
@@ -118,4 +120,4 @@ the command.
 .. _PSR-3: https://www.php-fig.org/psr/psr-3/
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

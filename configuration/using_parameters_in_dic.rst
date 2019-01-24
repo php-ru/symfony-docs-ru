@@ -70,19 +70,19 @@ Now, examine the results to see this closely:
 
     .. code-block:: php
 
-        $container->loadFromExtension('my_bundle', array(
+        $container->loadFromExtension('my_bundle', [
                 'logging' => true,
                 // true, as expected
             )
-        );
+        ];
 
-        $container->loadFromExtension('my_bundle', array(
+        $container->loadFromExtension('my_bundle', [
                 'logging' => "%kernel.debug%",
                 // true/false (depends on 2nd parameter of AppKernel),
                 // as expected, because %kernel.debug% inside configuration
                 // gets evaluated before being passed to the extension
             )
-        );
+        ];
 
         $container->loadFromExtension('my_bundle');
         // passes the string "%kernel.debug%".
@@ -156,4 +156,4 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
     ``%kernel.debug%`` but rather the new ``%assetic.debug%`` parameter.
 
 .. ready: no
-.. revision: 2bf7529f526a748f5fcf12eb26f9b29636269fea
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

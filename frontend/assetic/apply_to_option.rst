@@ -51,15 +51,15 @@ An example configuration might look like this:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('assetic', array(
-            'filters' => array(
-                'coffee' => array(
+        $container->loadFromExtension('assetic', [
+            'filters' => [
+                'coffee' => [
                     'bin'  => '/usr/bin/coffee',
                     'node' => '/usr/bin/node',
-                    'node_paths' => array('/usr/lib/node_modules/'),
-                ),
-            ),
-        ));
+                    'node_paths' => ['/usr/lib/node_modules/'],
+                ],
+            ],
+        ]);
 
 Filter a single File
 --------------------
@@ -147,16 +147,16 @@ In this case you can specify that the ``coffee`` filter is applied to all
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('assetic', array(
-            'filters' => array(
-                'coffee' => array(
+        $container->loadFromExtension('assetic', [
+            'filters' => [
+                'coffee' => [
                     'bin'        => '/usr/bin/coffee',
                     'node'       => '/usr/bin/node',
-                    'node_paths' => array('/usr/lib/node_modules/'),
+                    'node_paths' => ['/usr/lib/node_modules/'],
                     'apply_to'   => '\.coffee$',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 With this option, you no longer need to specify the ``coffee`` filter in the
 template. You can also list regular JavaScript files, all of which will be
@@ -174,4 +174,4 @@ files being run through the CoffeeScript filter):
 
 
 .. ready: no
-.. revision: c02b5cc4272e9297d5a8314a1186c08f5064c074
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

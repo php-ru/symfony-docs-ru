@@ -78,7 +78,7 @@ The following constraints ensure that:
             <class name="AppBundle\Entity\Person">
                 <property name="firstName">
                     <constraint name="IdenticalTo">
-                        <value>Mary</value>
+                        Mary
                     </constraint>
                 </property>
                 <property name="age">
@@ -103,9 +103,9 @@ The following constraints ensure that:
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\IdenticalTo('Mary'));
 
-                $metadata->addPropertyConstraint('age', new Assert\IdenticalTo(array(
+                $metadata->addPropertyConstraint('age', new Assert\IdenticalTo([
                     'value' => 20,
-                )));
+                ]));
             }
         }
 
@@ -138,4 +138,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
 .. ready: no
-.. revision: ad78e1b736bb6b6de72fdd9b276d1082873a7d3d
+.. revision: c318f85684e2ee76217908e4a425516f8845ea2f

@@ -85,7 +85,7 @@ The actual default value of this option depends on other field options:
 
 * If ``data_class`` is set and ``required`` is ``true``, then ``new $data_class()``;
 * If ``data_class`` is set and ``required`` is ``false``, then ``null``;
-* If ``data_class`` is not set and ``compound`` is ``true``, then ``array()``
+* If ``data_class`` is not set and ``compound`` is ``true``, then ``[]``
   (empty array);
 * If ``data_class`` is not set and ``compound`` is ``false``, then ``''``
   (empty string).
@@ -155,4 +155,4 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 .. include:: /reference/forms/types/options/translation_domain.rst.inc
 
 .. ready: no
-.. revision: 7d3fe7251921d1675601e2d9897ca4d9323fb6ed
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

@@ -533,9 +533,9 @@ configuration:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('welcome', new Route('/', array(
+        $routes->add('welcome', new Route('/', [
             '_controller' => 'AppBundle:Welcome:index',
-        )));
+        ]));
 
         return $routes;
 
@@ -596,9 +596,9 @@ route:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('article_show', new Route('/article/{slug}', array(
+        $routes->add('article_show', new Route('/article/{slug}', [
             '_controller' => 'AppBundle:Article:show',
-        )));
+        ]));
 
         return $routes;
 
@@ -811,4 +811,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

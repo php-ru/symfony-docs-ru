@@ -19,7 +19,7 @@ files. This can be done with the :class:`Symfony\\Component\\Config\\FileLocator
 
     use Symfony\Component\Config\FileLocator;
 
-    $configDirectories = array(__DIR__.'/app/config');
+    $configDirectories = [__DIR__.'/app/config'];
 
     $fileLocator = new FileLocator($configDirectories);
     $yamlUserFiles = $fileLocator->locate('users.yml', null, false);
@@ -84,7 +84,7 @@ the resource::
     use Symfony\Component\Config\Loader\LoaderResolver;
     use Symfony\Component\Config\Loader\DelegatingLoader;
 
-    $loaderResolver = new LoaderResolver(array(new YamlUserLoader($fileLocator)));
+    $loaderResolver = new LoaderResolver([new YamlUserLoader($fileLocator)]);
     $delegatingLoader = new DelegatingLoader($loaderResolver);
 
     // YamlUserLoader is used to load this resource because it supports
@@ -92,4 +92,4 @@ the resource::
     $delegatingLoader->load(__DIR__.'/users.yml');
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -129,9 +129,9 @@ could listen to the ``mailer.post_send`` event and change the method's return va
 
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'mailer.post_send' => 'onMailerPostSend'
-            );
+            ];
         }
     }
 
@@ -139,4 +139,4 @@ That's it! Your subscriber should be called automatically (or read more about
 :ref:`event subscriber configuration <ref-event-subscriber-configuration>`).
 
 .. ready: no
-.. revision: 51ddf416eeac3f880f4019852517dbf224c9a9ac
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

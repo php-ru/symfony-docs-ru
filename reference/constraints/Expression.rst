@@ -118,10 +118,10 @@ One way to accomplish this is with the Expression constraint:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addConstraint(new Assert\Expression(array(
+                $metadata->addConstraint(new Assert\Expression([
                     'expression' => 'this.getCategory() in ["php", "symfony"] or !this.isTechnicalPost()',
                     'message' => 'If this is a tech post, the category should be either php or symfony!',
-                )));
+                ]));
             }
 
             // ...
@@ -207,10 +207,10 @@ more about the expression language syntax, see
             {
                 public static function loadValidatorMetadata(ClassMetadata $metadata)
                 {
-                    $metadata->addPropertyConstraint('isTechnicalPost', new Assert\Expression(array(
+                    $metadata->addPropertyConstraint('isTechnicalPost', new Assert\Expression([
                         'expression' => 'this.getCategory() in ["php", "symfony"] or value == false',
                         'message' => 'If this is a tech post, the category should be either php or symfony!',
-                    )));
+                    ]));
                 }
 
                 // ...
@@ -263,4 +263,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

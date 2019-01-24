@@ -74,19 +74,19 @@ The main configuration file is called ``config.yml``:
         $this->import('security.yml');
         $this->import('services.yml');
 
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             'secret' => '%secret%',
-            'router' => array(
+            'router' => [
                 'resource' => '%kernel.project_dir%/app/config/routing.php',
-            ),
+            ],
             // ...
-        ));
+        ]);
 
         // Twig Configuration
-        $container->loadFromExtension('twig', array(
+        $container->loadFromExtension('twig', [
             'debug'            => '%kernel.debug%',
             'strict_variables' => '%kernel.debug%',
-        ));
+        ]);
 
         // ...
 
@@ -276,10 +276,10 @@ key:
 
         $container->setParameter('locale', 'en');
 
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             'default_locale' => '%locale%',
             // ...
-        ));
+        ]);
 
         // ...
 
@@ -349,15 +349,15 @@ configure DoctrineBundle and other parts of Symfony:
     .. code-block:: php
 
         // app/config/config.php
-        $container->loadFromExtension('doctrine', array(
-            'dbal' => array(
+        $container->loadFromExtension('doctrine', [
+            'dbal' => [
                 'driver'   => 'pdo_mysql',
                 // ...
 
                 'user'     => '%database_user%',
                 'password' => '%database_password%',
-            ),
-        ));
+            ],
+        ]);
 
 But the ``parameters.yml`` file *is* special: it defines the values that usually
 change on each server. For example, the database credentials on your local
@@ -430,4 +430,4 @@ Learn more
 .. _`Incenteev Parameter Handler`: https://github.com/Incenteev/ParameterHandler
 
 .. ready: no
-.. revision: b49da4a75f46e04e9b00b5f31cc2689b80faf7f0
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

@@ -77,18 +77,18 @@ If your widget option is set to ``choice``, then this field will be represented
 as a series of ``select`` boxes. When the placeholder value is a string,
 it will be used as the **blank value** of all select boxes::
 
-    $builder->add('birthdate', BirthdayType::class, array(
+    $builder->add('birthdate', BirthdayType::class, [
         'placeholder' => 'Select a value',
-    ));
+    ]);
 
 Alternatively, you can use an array that configures different placeholder
 values for the year, month and day fields::
 
-    $builder->add('birthdate', BirthdayType::class, array(
-        'placeholder' => array(
+    $builder->add('birthdate', BirthdayType::class, [
+        'placeholder' => [
             'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
-        )
-    ));
+        ]
+    ]);
 
 .. include:: /reference/forms/types/options/date_format.rst.inc
 
@@ -117,4 +117,4 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 .. include:: /reference/forms/types/options/mapped.rst.inc
 
 .. ready: no
-.. revision: b4625102cff9204437c977d72796f03f43b66b0c
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

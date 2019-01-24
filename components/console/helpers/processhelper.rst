@@ -14,7 +14,7 @@ a very verbose verbosity (e.g. -vv)::
     use Symfony\Component\Process\Process;
 
     $helper = $this->getHelper('process');
-    $process = new Process(array('figlet', 'Symfony'));
+    $process = new Process(['figlet', 'Symfony']);
 
     $helper->run($output, $process);
 
@@ -43,7 +43,7 @@ There are three ways to use the process helper:
 * An array of arguments::
 
     // ...
-    $helper->run($output, array('figlet', 'Symfony'));
+    $helper->run($output, ['figlet', 'Symfony']);
 
   .. note::
 
@@ -55,7 +55,7 @@ There are three ways to use the process helper:
     use Symfony\Component\Process\Process;
 
     // ...
-    $process = new Process(array('figlet', 'Symfony'));
+    $process = new Process(['figlet', 'Symfony']);
 
     $helper->run($output, $process);
 
@@ -81,4 +81,4 @@ A custom process callback can be passed as the fourth argument. Refer to the
     });
 
 .. ready: no
-.. revision: 9ea757d8fe773922f93fd54eaa7911fc33f7a1cb
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

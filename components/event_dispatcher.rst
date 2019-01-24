@@ -141,7 +141,7 @@ A call to the dispatcher's ``addListener()`` method associates any valid
 PHP callable to an event::
 
     $listener = new AcmeListener();
-    $dispatcher->addListener('acme.foo.action', array($listener, 'onFooAction'));
+    $dispatcher->addListener('acme.foo.action', [$listener, 'onFooAction']);
 
 The ``addListener()`` method takes up to three arguments:
 
@@ -214,10 +214,10 @@ determine which instance is passed.
 
         // registers an event listener
         $containerBuilder->register('listener_service_id', \AcmeListener::class)
-            ->addTag('kernel.event_listener', array(
+            ->addTag('kernel.event_listener', [
                 'event' => 'acme.foo.action',
                 'method' => 'onFooAction',
-            ));
+            ]);
 
         // registers an event subscriber
         $containerBuilder->register('subscriber_service_id', \AcmeSubscriber::class)
@@ -344,13 +344,13 @@ Take the following example of a subscriber that subscribes to the
     {
         public static function getSubscribedEvents()
         {
-            return array(
-                KernelEvents::RESPONSE => array(
-                    array('onKernelResponsePre', 10),
-                    array('onKernelResponsePost', -10),
-                ),
+            return [
+                KernelEvents::RESPONSE => [
+                    ['onKernelResponsePre', 10],
+                    ['onKernelResponsePost', -10],
+                ],
                 OrderPlacedEvent::NAME => 'onStoreOrder',
-            );
+            ];
         }
 
         public function onKernelResponsePre(FilterResponseEvent $event)
@@ -526,4 +526,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/event-dispatcher
 
 .. ready: no
-.. revision: a6fee575eab49873815a452070b564f873c99968
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

@@ -131,9 +131,9 @@ variable so we can render that::
         {
             $number = random_int(0, 100);
 
-            return $this->render('lucky/number.html.twig', array(
+            return $this->render('lucky/number.html.twig', [
                 'number' => $number,
-            ));
+            ]);
         }
     }
 
@@ -207,11 +207,11 @@ Bundles are registered in your ``app/AppKernel.php`` file (a rare PHP file in th
     {
         public function registerBundles()
         {
-            $bundles = array(
+            $bundles = [
                 new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
                 new Symfony\Bundle\TwigBundle\TwigBundle(),
                 // ...
-            );
+            ];
             // ...
 
             return $bundles;
@@ -269,4 +269,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Joyful Development with Symfony`: https://symfonycasts.com/screencast/symfony3
 
 .. ready: no
-.. revision: ecced684f39e76574274c8de7d54bf0250a8a5d4
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

@@ -108,9 +108,9 @@ for the homepage of our app::
                 ->getRepository(Post::class)
                 ->findLatest();
 
-            return $this->render('default/index.html.twig', array(
+            return $this->render('default/index.html.twig', [
                 'posts' => $posts,
-            ));
+            ]);
         }
     }
 
@@ -155,10 +155,10 @@ For example::
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('admin/post/show.html.twig', array(
+        return $this->render('admin/post/show.html.twig', [
             'post'        => $post,
             'delete_form' => $deleteForm->createView(),
-        ));
+        ]);
     }
 
 Normally, you'd expect a ``$id`` argument to ``showAction()``. Instead, by
@@ -182,7 +182,7 @@ manually. In our application, we have this situation in ``CommentController``::
     {
         $post = $this->getDoctrine()
             ->getRepository(Post::class)
-            ->findOneBy(array('slug' => $postSlug));
+            ->findOneBy(['slug' => $postSlug]);
 
         if (!$post) {
             throw $this->createNotFoundException();
@@ -226,4 +226,4 @@ Next: :doc:`/best_practices/templates`
 .. _`ParamConverter`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: d9de7f6d451f24346822f010278acdac3d4d6398
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

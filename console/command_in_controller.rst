@@ -41,13 +41,13 @@ Run this command from inside your controller via::
             $application = new Application($kernel);
             $application->setAutoExit(false);
 
-            $input = new ArrayInput(array(
+            $input = new ArrayInput([
                'command' => 'swiftmailer:spool:send',
                // (optional) define the value of command arguments
                'fooArgument' => 'barValue',
                // (optional) pass options to the command
                '--message-limit' => $messages,
-            ));
+            ]);
 
             // You can use NullOutput() if you don't need the output
             $output = new BufferedOutput();
@@ -111,4 +111,4 @@ and supports optional themes.
 .. _`as a Twig Extension`: https://github.com/sensiolabs/ansi-to-html#twig-integration
 
 .. ready: no
-.. revision: ab9e665a24b4d97a1bba895500f2afa72bccd187
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

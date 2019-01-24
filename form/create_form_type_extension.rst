@@ -99,9 +99,9 @@ your class as a service and using the  ``form.type_extension`` tag:
         use Symfony\Component\Form\Extension\Core\Type\FileType;
 
         $container->autowire(ImageTypeExtension::class)
-            ->addTag('form.type_extension', array(
+            ->addTag('form.type_extension', [
                 'extended_type' => FileType::class
-            ))
+            ])
         ;
 
 The ``extended_type`` key of the tag must match the class you're returning from
@@ -189,7 +189,7 @@ For example::
         public function configureOptions(OptionsResolver $resolver)
         {
             // makes it legal for FileType fields to have an image_property option
-            $resolver->setDefined(array('image_property'));
+            $resolver->setDefined(['image_property']);
         }
 
         public function buildView(FormView $view, FormInterface $form, array $options)
@@ -262,7 +262,7 @@ next to the file field. For example::
         {
             $builder
                 ->add('name', TextType::class)
-                ->add('file', FileType::class, array('image_property' => 'webPath'));
+                ->add('file', FileType::class, ['image_property' => 'webPath']);
         }
     }
 
@@ -286,4 +286,4 @@ it's possible that it does *not* extend ``FormType``, and so your form type exte
 may not be applied to it.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

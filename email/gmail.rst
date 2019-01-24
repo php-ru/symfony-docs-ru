@@ -44,11 +44,11 @@ In the development configuration file, change the ``transport`` setting to
     .. code-block:: php
 
         // app/config/config_dev.php
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
             'transport' => 'gmail',
             'username'  => 'your_gmail_username',
             'password'  => 'your_gmail_password',
-        ));
+        ]);
 
 .. tip::
 
@@ -96,11 +96,11 @@ In the development configuration file, change the ``transport`` setting to
         .. code-block:: php
 
             // app/config/config_dev.php
-            $container->loadFromExtension('swiftmailer', array(
+            $container->loadFromExtension('swiftmailer', [
                 'transport' => 'gmail',
                 'username'  => '%mailer_user%',
                 'password'  => '%mailer_password%',
-            ));
+            ]);
 
 Redefining the Default Configuration Parameters
 -----------------------------------------------
@@ -133,4 +133,4 @@ that you `allow less secure apps to access your Gmail account`_.
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: 7b98fdb52208724d73d16cf4e53c2bec468639cf
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

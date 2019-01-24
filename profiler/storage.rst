@@ -43,15 +43,15 @@ directory. If you want to use another location to store the profiles, define the
         // app/config/config.php
 
         // ...
-        $container->loadFromExtension('framework', array(
-            'profiler' => array(
+        $container->loadFromExtension('framework', [
+            'profiler' => [
                 'dsn' => 'file:/tmp/symfony/profiler',
-            ),
-        ));
+            ],
+        ]);
 
 You can also create your own profile storage service implementing the
 :class:`Symfony\\Component\\HttpKernel\\Profiler\\ProfilerStorageInterface` and
 overriding the ``profiler.storage`` service.
 
 .. ready: no
-.. revision: dee0adc83a6ba4ba424a9ba666bbb9b884e7ff57
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

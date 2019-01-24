@@ -222,15 +222,15 @@ to the list of providers in the "security" section. Choose a name for the user p
         // app/config/security.php
         use AppBundle\Security\User\WebserviceUserProvider;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'providers' => array(
-                'webservice' => array(
+            'providers' => [
+                'webservice' => [
                     'id' => WebserviceUserProvider::class,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 Symfony also needs to know how to encode passwords that are supplied by website
 users, e.g. by filling in a login form. You can do this by adding a line to the
@@ -270,14 +270,14 @@ users, e.g. by filling in a login form. You can do this by adding a line to the
         // app/config/security.php
         use AppBundle\Security\User\WebserviceUser;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'encoders' => array(
+            'encoders' => [
                 WebserviceUser::class => 'bcrypt',
-            ),
+            ],
             // ...
-        ));
+        ]);
 
 The value here should correspond with however the passwords were originally
 encoded when creating your users (however those users were created). When
@@ -341,18 +341,18 @@ is compared to the hashed password returned by your ``getPassword()`` method.
             // app/config/security.php
             use AppBundle\Security\User\WebserviceUser;
 
-            $container->loadFromExtension('security', array(
+            $container->loadFromExtension('security', [
                 // ...
 
-                'encoders' => array(
-                    WebserviceUser::class => array(
+                'encoders' => [
+                    WebserviceUser::class => [
                         'algorithm' => 'bcrypt',
                         'cost' => 12,
-                    ),
-                ),
-            ));
+                    ],
+                ],
+            ]);
 
 .. _MessageDigestPasswordEncoder: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php
 
 .. ready: no
-.. revision: 3fb163c0792f695e85bbdbe1dbdc138db58f8e5e
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

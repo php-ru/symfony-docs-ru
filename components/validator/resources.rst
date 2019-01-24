@@ -45,10 +45,10 @@ In this example, the validation metadata is retrieved executing the
         public static function loadValidatorMetadata(ClassMetadata $metadata)
         {
             $metadata->addPropertyConstraint('name', new Assert\NotBlank());
-            $metadata->addPropertyConstraint('name', new Assert\Length(array(
+            $metadata->addPropertyConstraint('name', new Assert\Length([
                 'min' => 5,
                 'max' => 20,
-            )));
+            ]));
         }
     }
 
@@ -196,4 +196,4 @@ You can set this custom implementation using
 .. _`Packagist`: https://packagist.org
 
 .. ready: no
-.. revision: defcdffc737b3fbc552946763aaa4217cbfe6bde
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

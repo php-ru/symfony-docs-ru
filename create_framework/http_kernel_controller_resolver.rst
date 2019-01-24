@@ -22,10 +22,10 @@ class::
 
 Update the route definition accordingly::
 
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
-        '_controller' => array(new LeapYearController(), 'indexAction'),
-    )));
+        '_controller' => [new LeapYearController(), 'indexAction'],
+    ]));
 
 The move is pretty straightforward and makes a lot of sense as soon as you
 create more pages but you might have noticed a non-desirable side-effect...
@@ -72,10 +72,10 @@ controller associated with the Request. Besides the built-in PHP callbacks,
 ``getController()`` also supports strings composed of a class name followed by
 two colons and a method name as a valid callback, like 'class::method'::
 
-    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', array(
+    $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
         '_controller' => 'LeapYearController::indexAction',
-    )));
+    ]));
 
 To make this code work, modify the framework code to use the controller
 resolver from HttpKernel::
@@ -207,4 +207,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: 22fd27b9c43ba18a132185fa7f32b6dbf3b8b774
+.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254

@@ -51,16 +51,16 @@ provide it with a set of information extractors.
     $reflectionExtractor = new ReflectionExtractor();
 
     // array of PropertyListExtractorInterface
-    $listExtractors = array($reflectionExtractor);
+    $listExtractors = [$reflectionExtractor];
 
     // array of PropertyTypeExtractorInterface
-    $typeExtractors = array($phpDocExtractor, $reflectionExtractor);
+    $typeExtractors = [$phpDocExtractor, $reflectionExtractor];
 
     // array of PropertyDescriptionExtractorInterface
-    $descriptionExtractors = array($phpDocExtractor);
+    $descriptionExtractors = [$phpDocExtractor];
 
     // array of PropertyAccessExtractorInterface
-    $accessExtractors = array($reflectionExtractor);
+    $accessExtractors = [$reflectionExtractor];
 
     $propertyInfo = new PropertyInfoExtractor(
         $listExtractors,
@@ -103,15 +103,15 @@ both provide list and type information it is probably better that:
 
     $propertyInfo = new PropertyInfoExtractor(
         // List extractors
-        array(
+        [
             $reflectionExtractor,
             $doctrineExtractor
-        ),
+        ],
         // Type extractors
-        array(
+        [
             $doctrineExtractor,
             $reflectionExtractor
-        )
+        ]
     );
 
 .. _`components-property-information-extractable-information`:
@@ -526,4 +526,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

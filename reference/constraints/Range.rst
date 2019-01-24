@@ -90,12 +90,12 @@ you might add the following:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('height', new Assert\Range(array(
+                $metadata->addPropertyConstraint('height', new Assert\Range([
                     'min'        => 120,
                     'max'        => 180,
                     'minMessage' => 'You must be at least {{ limit }}cm tall to enter',
                     'maxMessage' => 'You cannot be taller than {{ limit }}cm to enter',
-                )));
+                ]));
             }
         }
 
@@ -167,10 +167,10 @@ date must lie within the current year like this:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('startDate', new Assert\Range(array(
+                $metadata->addPropertyConstraint('startDate', new Assert\Range([
                     'min' => 'first day of January',
                     'max' => 'first day of January next year',
-                )));
+                ]));
             }
         }
 
@@ -237,10 +237,10 @@ dates. If you want to fix the timezone, append it to the date string:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('startDate', new Assert\Range(array(
+                $metadata->addPropertyConstraint('startDate', new Assert\Range([
                     'min' => 'first day of January UTC',
                     'max' => 'first day of January next year UTC',
-                )));
+                ]));
             }
         }
 
@@ -307,10 +307,10 @@ can check that a delivery date starts within the next five hours like this:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('deliveryDate', new Assert\Range(array(
+                $metadata->addPropertyConstraint('deliveryDate', new Assert\Range([
                     'min' => 'now',
                     'max' => '+5 hours',
-                )));
+                ]));
             }
         }
 
@@ -320,7 +320,7 @@ Options
 min
 ~~~
 
-**type**: ``int`` or ``string`` (date format)
+**type**: ``number`` or ``string`` (date format)
 
 This required option is the "min" value. Validation will fail if the given
 value is **less** than this min value.
@@ -328,7 +328,7 @@ value is **less** than this min value.
 max
 ~~~
 
-**type**: ``int`` or ``string`` (date format)
+**type**: ``number`` or ``string`` (date format)
 
 This required option is the "max" value. Validation will fail if the given
 value is **greater** than this max value.
@@ -391,4 +391,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 560a96fb896500e844e513e2b32085cdffc935b1
+.. revision: 18836b872ff538d00d81689e05ae9ec992597790

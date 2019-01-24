@@ -119,7 +119,7 @@ is the same as in the example above)::
     use Symfony\Component\ClassLoader\ClassMapGenerator;
 
     ClassMapGenerator::dump(
-        array(__DIR__.'/library/bar', __DIR__.'/library/foo'),
+        [__DIR__.'/library/bar', __DIR__.'/library/foo'],
         __DIR__.'/class_map.php'
     );
 
@@ -128,4 +128,4 @@ is the same as in the example above)::
 .. _`Composer`: https://getcomposer.org
 
 .. ready: no
-.. revision: df24d340d3b5f107d401d40393b5803c8b3991f5
+.. revision: a4440f903683700db6b3cbd281387684af93bc42
