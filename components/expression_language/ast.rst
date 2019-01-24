@@ -21,7 +21,7 @@ method after parsing any expression to get its AST::
     use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
     $ast = (new ExpressionLanguage())
-        ->parse('1 + 2', array())
+        ->parse('1 + 2', [])
         ->getNodes()
     ;
 
@@ -41,7 +41,7 @@ method to turn the AST into an array::
     // ...
 
     $astAsArray = (new ExpressionLanguage())
-        ->parse('1 + 2', array())
+        ->parse('1 + 2', [])
         ->getNodes()
         ->toArray()
     ;
@@ -49,4 +49,4 @@ method to turn the AST into an array::
 .. _`AST`: https://en.wikipedia.org/wiki/Abstract_syntax_tree
 
 .. ready: no
-.. revision: 551624d9820982081a33fa080f06df8954bcc93d
+.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401

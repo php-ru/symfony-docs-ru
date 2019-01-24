@@ -256,7 +256,7 @@ code in production without a proxy, it becomes trivially easy to abuse your
 system. That's not the case with the ``getClientIp()`` method as you must
 explicitly trust your reverse proxies by calling ``setTrustedProxies()``::
 
-    Request::setTrustedProxies(array('10.0.0.1'));
+    Request::setTrustedProxies(['10.0.0.1']);
 
     if ($myIp === $request->getClientIp()) {
         // the client is a known one, so give it some more privilege
@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: b9768c7ac6e6d277fee7e4aeeeef7b254ac4c2fe
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

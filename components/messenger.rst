@@ -31,7 +31,9 @@ Alternatively, you can clone the `<https://github.com/symfony/messenger>`_ repos
 Concepts
 --------
 
-.. image:: /_images/components/messenger/overview.png
+.. raw:: html
+
+    <object data="../_images/components/messenger/overview.svg" type="image/svg+xml"></object>
 
 **Sender**:
    Responsible for serializing and sending messages to *something*. This
@@ -317,4 +319,4 @@ Learn more
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: a4b6a8bc6b7c5e1ec000c0d3b6389fb43e1478c8
+.. revision: 93c94aa230ec0606c58c12b2a9b64b933df25e8a

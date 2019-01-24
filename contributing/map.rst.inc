@@ -34,5 +34,9 @@
   * :doc:`Community Reviews </contributing/community/reviews>`
   * :doc:`Other Resources </contributing/community/other>`
 
+* **Diversity**
+
+  * :doc:`Governance </contributing/diversity/governance>`
+
 .. ready: no
-.. revision: dad5cfb41574eaec1c8ee153114972867e9cd4c8
+.. revision: ac1eff521552dace056c23c32fae2f1cf9cc4b5e

@@ -31,6 +31,8 @@ The ``FileType`` represents a file input in your form.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\FileType`  |
 +-------------+---------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Basic Usage
 -----------
 
@@ -150,4 +152,4 @@ type      ``string``  The type variable is set to ``file``, in order to render a
 ========  ==========  ===============================================================================
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

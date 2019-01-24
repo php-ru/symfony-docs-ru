@@ -75,7 +75,7 @@ configure the service container to use the
 
         $container->register(NewsletterManager::class)
             // call the static method
-            ->setFactory(array(NewsletterManagerStaticFactory::class, 'createNewsletterManager'));
+            ->setFactory([NewsletterManagerStaticFactory::class, 'createNewsletterManager']);
 
 .. note::
 
@@ -138,10 +138,10 @@ Configuration of the service container then looks like this:
 
         $container->register(NewsletterManager::class)
             // call a method on the specified factory service
-            ->setFactory(array(
+            ->setFactory([
                 new Reference(NewsletterManagerFactory::class),
                 'createNewsletterManager',
-            ));
+            ]);
 
 .. note::
 
@@ -212,10 +212,10 @@ example takes the ``templating`` service as an argument:
         // ...
         $container->register(NewsletterManager::class)
             ->addArgument(new Reference('templating'))
-            ->setFactory(array(
+            ->setFactory([
                 new Reference(NewsletterManagerFactory::class),
                 'createNewsletterManager',
-            ));
+            ]);
 
 .. ready: no
-.. revision: 8ba6ec2347d1eaaba58bb68b91e69316dea8a2e9
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

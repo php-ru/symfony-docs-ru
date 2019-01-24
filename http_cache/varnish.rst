@@ -65,7 +65,7 @@ at least for some parts of the site, e.g. when using forms with
 :doc:`CSRF Protection </security/csrf>`. In this situation, make sure to
 :doc:`only start a session when actually needed </session/avoid_session_start>`
 and clear the session when it is no longer needed. Alternatively, you can look
-into :doc:`/http_cache/form_csrf_caching`.
+into :ref:`caching pages that contain CSRF protected forms <caching-pages-that-contain-csrf-protected-forms>`.
 
 Cookies created in JavaScript and used only in the frontend, e.g. when using
 Google Analytics, are nonetheless sent to the server. These cookies are not
@@ -246,4 +246,4 @@ proxy before it has expired, it adds complexity to your caching setup.
 .. _`User Context`: http://foshttpcachebundle.readthedocs.org/en/latest/features/user-context.html
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 7ab3ecaf73a149a4592a93c8e78baaafccd24a13

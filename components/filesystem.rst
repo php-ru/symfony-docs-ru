@@ -83,7 +83,7 @@ them is missing::
 
     // if rabbit.jpg exists and bottle.png does not exist, returns false
     // non-absolute paths are relative to the directory where the running PHP script is stored
-    $fileSystem->exists(array('rabbit.jpg', 'bottle.png'));
+    $fileSystem->exists(['rabbit.jpg', 'bottle.png']);
 
 .. note::
 
@@ -178,7 +178,7 @@ remove
 :method:`Symfony\\Component\\Filesystem\\Filesystem::remove` deletes files,
 directories and symlinks::
 
-    $fileSystem->remove(array('symlink', '/path/to/directory', 'activity.log'));
+    $fileSystem->remove(['symlink', '/path/to/directory', 'activity.log']);
 
 .. note::
 
@@ -319,4 +319,4 @@ Whenever something wrong happens, an exception implementing
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: e5040d0074997244df4517a21a46eb3e0431b7c4
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

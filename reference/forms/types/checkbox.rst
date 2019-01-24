@@ -37,6 +37,8 @@ if you want to handle submitted values like "0" or "false").
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\CheckboxType` |
 +-------------+------------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Example Usage
 -------------
 
@@ -45,10 +47,10 @@ Example Usage
     use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
     // ...
 
-    $builder->add('public', CheckboxType::class, array(
+    $builder->add('public', CheckboxType::class, [
         'label'    => 'Show this entry publicly?',
         'required' => false,
-    ));
+    ]);
 
 Field Options
 -------------
@@ -56,7 +58,7 @@ Field Options
 false_values
 ~~~~~~~~~~~~
 
-**type**: ``array`` **default**: ``array(null)``
+**type**: ``array`` **default**: ``[null]``
 
 An array of values to be interpreted as ``false``.
 
@@ -102,4 +104,4 @@ Form Variables
 .. include:: /reference/forms/types/variables/check_or_radio_table.rst.inc
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

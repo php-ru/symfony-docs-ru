@@ -84,9 +84,9 @@ will contain an International Bank Account Number.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bankAccountNumber', new Assert\Iban(array(
+                $metadata->addPropertyConstraint('bankAccountNumber', new Assert\Iban([
                     'message' => 'This is not a valid International Bank Account Number (IBAN).',
-                )));
+                ]));
             }
         }
 
@@ -115,4 +115,4 @@ You can use the following parameters in this message:
 .. _`International Bank Account Number (IBAN)`: https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

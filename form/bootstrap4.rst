@@ -55,13 +55,13 @@ configuration:
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 'bootstrap_4_layout.html.twig',
-            ),
+            ],
 
             // ...
-        ));
+        ]);
 
 If you prefer to apply the Bootstrap styles on a form to form basis, include the
 ``form_theme`` tag in the templates where those forms are used:
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

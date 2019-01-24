@@ -65,10 +65,6 @@ will override the defaults.
         $container->setParameter('asset.request_context.base_path', $container->getParameter('router.request_context.base_url'));
         $container->setParameter('asset.request_context.secure', true);
 
-.. versionadded:: 3.4
-
-    The ``asset.request_context.*`` parameters were introduced in Symfony 3.4.
-
 Configuring the Request Context per Command
 -------------------------------------------
 
@@ -86,7 +82,7 @@ router service and override its settings::
         public function __construct(RouterInterface $router)
         {
             parent::__construct();
-        
+
             $this->router = $router;
         }
 
@@ -97,10 +93,10 @@ router service and override its settings::
             $context->setScheme('https');
             $context->setBaseUrl('my/path');
 
-            $url = $this->router->generate('route-name', array('param-name' => 'param-value'));
+            $url = $this->router->generate('route-name', ['param-name' => 'param-value']);
             // ...
         }
     }
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab

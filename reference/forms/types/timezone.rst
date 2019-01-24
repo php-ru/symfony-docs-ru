@@ -51,6 +51,8 @@ manually, but then you should just use the ``ChoiceType`` directly.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\TimezoneType` |
 +-------------+------------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Field Options
 -------------
 
@@ -120,7 +122,7 @@ The actual default value of this option depends on other field options:
 
 * If ``multiple`` is ``false`` and ``expanded`` is ``false``, then ``''``
   (empty string);
-* Otherwise ``array()`` (empty array).
+* Otherwise ``[]`` (empty array).
 
 .. include:: /reference/forms/types/options/empty_data.rst.inc
     :start-after: DEFAULT_PLACEHOLDER
@@ -144,4 +146,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e

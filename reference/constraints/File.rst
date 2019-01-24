@@ -140,14 +140,14 @@ below a certain file size and a valid PDF, add the following:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('bioFile', new Assert\File(array(
+                $metadata->addPropertyConstraint('bioFile', new Assert\File([
                     'maxSize' => '1024k',
-                    'mimeTypes' => array(
+                    'mimeTypes' => [
                         'application/pdf',
                         'application/x-pdf',
-                    ),
+                    ],
                     'mimeTypesMessage' => 'Please upload a valid PDF',
-                )));
+                ]));
             }
         }
 
@@ -398,4 +398,4 @@ This message has no parameters.
 .. _`Wikipedia: Binary prefix`: http://en.wikipedia.org/wiki/Binary_prefix
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

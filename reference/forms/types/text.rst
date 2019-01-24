@@ -32,6 +32,8 @@ The TextType field represents the most basic input text field.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType` |
 +-------------+--------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Inherited Options
 -----------------
 
@@ -79,4 +81,4 @@ Overridden Options
 .. include:: /reference/forms/types/options/compound_type.rst.inc
 
 .. ready: no
-.. revision: 259b25469132905243f206ee7fac78522185922d
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

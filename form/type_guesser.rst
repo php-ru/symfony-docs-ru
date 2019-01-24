@@ -108,25 +108,25 @@ With this knowledge, you can implement the ``guessType()`` method of the
                 case 'string':
                     // there is a high confidence that the type is text when
                     // @var string is used
-                    return new TypeGuess(TextType::class, array(), Guess::HIGH_CONFIDENCE);
+                    return new TypeGuess(TextType::class, [], Guess::HIGH_CONFIDENCE);
 
                 case 'int':
                 case 'integer':
                     // integers can also be the id of an entity or a checkbox (0 or 1)
-                    return new TypeGuess(IntegerType::class, array(), Guess::MEDIUM_CONFIDENCE);
+                    return new TypeGuess(IntegerType::class, [], Guess::MEDIUM_CONFIDENCE);
 
                 case 'float':
                 case 'double':
                 case 'real':
-                    return new TypeGuess(NumberType::class, array(), Guess::MEDIUM_CONFIDENCE);
+                    return new TypeGuess(NumberType::class, [], Guess::MEDIUM_CONFIDENCE);
 
                 case 'boolean':
                 case 'bool':
-                    return new TypeGuess(CheckboxType::class, array(), Guess::HIGH_CONFIDENCE);
+                    return new TypeGuess(CheckboxType::class, [], Guess::HIGH_CONFIDENCE);
 
                 default:
                     // there is a very low confidence that this one is correct
-                    return new TypeGuess(TextType::class, array(), Guess::LOW_CONFIDENCE);
+                    return new TypeGuess(TextType::class, [], Guess::LOW_CONFIDENCE);
             }
         }
 
@@ -136,7 +136,7 @@ With this knowledge, you can implement the ``guessType()`` method of the
             $phpdoc = $reflectionProperty->getDocComment();
 
             // parse the $phpdoc into an array like:
-            // array('var' => 'string', 'since' => '1.0')
+            // ['var' => 'string', 'since' => '1.0']
             $phpdocTags = ...;
 
             return $phpdocTags;
@@ -233,5 +233,14 @@ and tag it with ``form.type_guesser``:
 
         // ...
 
+.. tip::
+
+    Run the following command to verify that the form type guesser was
+    successfully registered in the application:
+
+    .. code-block:: terminal
+
+        $ php bin/console debug:form
+
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 6811b4d3c8d425e4edf3dc6e706dc1085c3503e6

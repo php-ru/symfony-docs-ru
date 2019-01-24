@@ -51,19 +51,19 @@ provide it with a set of information extractors.
     $reflectionExtractor = new ReflectionExtractor();
 
     // list of PropertyListExtractorInterface (any iterable)
-    $listExtractors = array($reflectionExtractor);
+    $listExtractors = [$reflectionExtractor];
 
     // list of PropertyTypeExtractorInterface (any iterable)
-    $typeExtractors = array($phpDocExtractor, $reflectionExtractor);
+    $typeExtractors = [$phpDocExtractor, $reflectionExtractor];
 
     // list of PropertyDescriptionExtractorInterface (any iterable)
-    $descriptionExtractors = array($phpDocExtractor);
+    $descriptionExtractors = [$phpDocExtractor];
 
     // list of PropertyAccessExtractorInterface (any iterable)
-    $accessExtractors = array($reflectionExtractor);
+    $accessExtractors = [$reflectionExtractor];
 
     // list of PropertyInitializableExtractorInterface (any iterable)
-    $propertyInitializableExtractors = array($reflectionExtractor);
+    $propertyInitializableExtractors = [$reflectionExtractor];
 
     $propertyInfo = new PropertyInfoExtractor(
         $listExtractors,
@@ -107,15 +107,15 @@ both provide list and type information it is probably better that:
 
     $propertyInfo = new PropertyInfoExtractor(
         // List extractors
-        array(
+        [
             $reflectionExtractor,
             $doctrineExtractor
-        ),
+        ],
         // Type extractors
-        array(
+        [
             $doctrineExtractor,
             $reflectionExtractor
-        )
+        ]
     );
 
 .. _`components-property-information-extractable-information`:
@@ -518,4 +518,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

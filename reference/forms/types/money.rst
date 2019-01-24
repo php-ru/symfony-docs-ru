@@ -43,6 +43,8 @@ how the input and output of the data is handled.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\MoneyType` |
 +-------------+---------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Field Options
 -------------
 
@@ -71,9 +73,9 @@ For example::
     use Symfony\Component\Form\Extension\Core\Type\MoneyType;
     // ...
 
-    $builder->add('price', MoneyType::class, array(
+    $builder->add('price', MoneyType::class, [
         'divisor' => 100,
-    ));
+    ]);
 
 In this case, if the ``price`` field is set to ``9900``, then the value
 ``99`` will actually be rendered to the user. When the user submits the
@@ -150,4 +152,4 @@ money_pattern  ``string``  The format to use to display the money, including the
 .. _`3 letter ISO 4217 code`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

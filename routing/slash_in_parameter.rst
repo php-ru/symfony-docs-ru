@@ -70,11 +70,11 @@ a more permissive regular expression for it:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('share', new Route('/share/{token}', array(
+        $routes->add('share', new Route('/share/{token}', [
             '_controller' => 'App\Controller\DefaultController::share',
-        ), array(
+        ], [
             'token' => '.+',
-        )));
+        ]));
 
         return $routes;
 
@@ -98,4 +98,4 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     and the token, and ``token`` will be empty.
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

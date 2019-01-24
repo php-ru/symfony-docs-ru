@@ -64,11 +64,11 @@ This variable is referenced in the service container configuration using
     .. code-block:: php
 
         // config/packages/doctrine.php
-        $container->loadFromExtension('doctrine', array(
-            'dbal' => array(
+        $container->loadFromExtension('doctrine', [
+            'dbal' => [
                 'url' => '%env(DATABASE_URL)%',
-            )
-        ));
+            ]
+        ]);
 
 You can also give the ``env()`` parameters a default value: the default value
 will be used whenever the corresponding environment variable is *not* found:
@@ -137,10 +137,6 @@ the following:
 Environment Variable Processors
 -------------------------------
 
-.. versionadded:: 3.4
-
-    Environment variable processors were introduced in Symfony 3.4.
-
 The values of environment variables are considered strings by default.
 However, your code may expect other data types, like integers or booleans.
 Symfony solves this problem with *processors*, which modify the contents of the
@@ -176,11 +172,11 @@ turn the value of the ``HTTP_PORT`` env var into an integer:
     .. code-block:: php
 
         // config/packages/framework.php
-        $container->loadFromExtension('framework', array(
-            'router' => array(
+        $container->loadFromExtension('framework', [
+            'router' => [
                 'http_port' => '%env(int:HTTP_PORT)%',
-            ),
-        ));
+            ],
+        ]);
 
 Symfony provides the following env var processors:
 
@@ -220,9 +216,9 @@ Symfony provides the following env var processors:
 
             // config/packages/framework.php
             $container->setParameter('env(SECRET)', 'some_secret');
-            $container->loadFromExtension('framework', array(
+            $container->loadFromExtension('framework', [
                 'secret' => '%env(string:SECRET)%',
-            ));
+            ]);
 
 ``env(bool:FOO)``
     Casts ``FOO`` to a bool:
@@ -260,9 +256,9 @@ Symfony provides the following env var processors:
 
             // config/packages/framework.php
             $container->setParameter('env(HTTP_METHOD_OVERRIDE)', 'true');
-            $container->loadFromExtension('framework', array(
+            $container->loadFromExtension('framework', [
                 'http_method_override' => '%env(bool:HTTP_METHOD_OVERRIDE)%',
-            ));
+            ]);
 
 ``env(int:FOO)``
     Casts ``FOO`` to an int.
@@ -307,14 +303,14 @@ Symfony provides the following env var processors:
 
             // config/packages/security.php
             $container->setParameter('env(HEALTH_CHECK_METHOD)', 'Symfony\Component\HttpFoundation\Request::METHOD_HEAD');
-            $container->loadFromExtension('security', array(
-                'access_control' => array(
-                    array(
+            $container->loadFromExtension('security', [
+                'access_control' => [
+                    [
                         'path' => '^/health-check$',
                         'methods' => '%env(const:HEALTH_CHECK_METHOD)%',
-                    ),
-                ),
-            ));
+                    ],
+                ],
+            ]);
 
 ``env(base64:FOO)``
     Decodes the content of ``FOO``, which is a base64 encoded string.
@@ -356,9 +352,9 @@ Symfony provides the following env var processors:
 
             // config/packages/framework.php
             $container->setParameter('env(TRUSTED_HOSTS)', '["10.0.0.1", "10.0.0.2"]');
-            $container->loadFromExtension('framework', array(
+            $container->loadFromExtension('framework', [
                 'trusted_hosts' => '%env(json:TRUSTED_HOSTS)%',
-            ));
+            ]);
 
 ``env(resolve:FOO)``
     Replaces the string ``FOO`` by the value of a config parameter with the
@@ -397,9 +393,9 @@ Symfony provides the following env var processors:
             // config/packages/sentry.php
             $container->setParameter('env(HOST)', '10.0.0.1');
             $container->setParameter('env(SENTRY_DSN)', 'http://%env(HOST)%/project');
-            $container->loadFromExtension('sentry', array(
+            $container->loadFromExtension('sentry', [
                 'dsn' => '%env(resolve:SENTRY_DSN)%',
-            ));
+            ]);
 
 ``env(csv:FOO)``
     Decodes the content of ``FOO``, which is a CSV-encoded string:
@@ -447,9 +443,18 @@ Symfony provides the following env var processors:
 
             // config/packages/framework.php
             $container->setParameter('env(AUTH_FILE)', '../config/auth.json');
-            $container->loadFromExtension('google', array(
+            $container->loadFromExtension('google', [
                 'auth' => '%env(file:AUTH_FILE)%',
-            ));
+            ]);
+
+``env(trim:FOO)``
+    Trims the content of ``FOO`` env var, removing whitespaces from the beginning
+    and end of the string. This is especially useful in combination with the
+    ``file`` processor, as it'll remove newlines at the end of a file.
+
+    .. versionadded:: 4.3
+
+        The ``trim`` processor was introduced in Symfony 4.3.
 
 ``env(key:FOO:BAR)``
     Retrieves the value associated with the key ``FOO`` from the array whose
@@ -488,6 +493,51 @@ Symfony provides the following env var processors:
             // config/services.php
             $container->setParameter('env(SECRETS_FILE)', '/opt/application/.secrets.json');
             $container->setParameter('database_password', '%env(key:database_password:json:file:SECRETS_FILE)%');
+
+``env(default:fallback_param:BAR)``
+    Retrieves the value of the parameter ``fallback_param`` when the ``BAR`` env
+    var is not available:
+
+    .. configuration-block::
+
+        .. code-block:: yaml
+
+            # config/services.yaml
+            parameters:
+                # if PRIVATE_KEY is not a valid file path, the content of raw_key is returned
+                private_key: '%env(default:raw_key:file:PRIVATE_KEY)%'
+                raw_key: '%env(PRIVATE_KEY)%'
+
+        .. code-block:: xml
+
+            <!-- config/services.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:framework="http://symfony.com/schema/dic/symfony"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+                <parameters>
+                    <!-- if PRIVATE_KEY is not a valid file path, the content of raw_key is returned -->
+                    <parameter key="private_key">%env(default:raw_key:file:PRIVATE_KEY)%</parameter>
+                    <parameter key="raw_key">%env(PRIVATE_KEY)%</parameter>
+                </parameters>
+            </container>
+
+        .. code-block:: php
+
+            // config/services.php
+
+            // if PRIVATE_KEY is not a valid file path, the content of raw_key is returned
+            $container->setParameter('private_key', '%env(default:raw_key:file:PRIVATE_KEY)%');
+            $container->setParameter('raw_key', '%env(PRIVATE_KEY)%');
+
+    .. versionadded:: 4.3
+
+        The ``default`` processor was introduced in Symfony 4.3.
 
 It is also possible to combine any number of processors:
 
@@ -561,4 +611,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 8a5f6003193e0e1aa8516e71c89834a7b2c9c89a

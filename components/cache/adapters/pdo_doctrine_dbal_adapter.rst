@@ -28,7 +28,7 @@ third, and forth parameters::
         $defaultLifetime = 0,
 
         // an array of options for configuring the database table and connection
-        $options = array()
+        $options = []
     );
 
 The table where values are stored is created automatically on the first call to
@@ -53,4 +53,4 @@ your code.
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

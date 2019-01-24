@@ -65,9 +65,9 @@ a service like: ``App\Controller\HelloController::index``:
     .. code-block:: php
 
         // config/routes.php
-        $collection->add('hello', new Route('/hello', array(
+        $collection->add('hello', new Route('/hello', [
             '_controller' => 'App\Controller\HelloController::index',
-        )));
+        ]));
 
 .. _controller-service-invoke:
 
@@ -112,7 +112,7 @@ service and use it directly::
         {
             $content = $this->twig->render(
                 'hello/index.html.twig',
-                array('name' => $name)
+                ['name' => $name]
             );
 
             return new Response($content);
@@ -137,4 +137,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

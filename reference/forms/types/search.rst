@@ -30,6 +30,8 @@ Read about the input search field at `DiveIntoHTML5.info`_
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\SearchType` |
 +-------------+----------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Inherited Options
 -----------------
 
@@ -68,4 +70,4 @@ The default value is ``''`` (the empty string).
 .. _`DiveIntoHTML5.info`: http://diveintohtml5.info/forms.html#type-search
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

@@ -110,7 +110,13 @@ setup your project with the following commands:
     $ composer install
 
 You'll probably also need to customize your :ref:`.env <config-dot-env>` and do a
-few other project-specific tasks (e.g. creating database schema).
+few other project-specific tasks (e.g. creating database schema). When working
+on a existing Symfony app for the first time, it may be useful to run this
+command which displays information about the app:
+
+.. code-block:: terminal
+
+    $ php bin/console about
 
 Checking for Security Vulnerabilities
 -------------------------------------
@@ -158,4 +164,4 @@ Go Deeper with Setup
 .. _`symfony/symfony-demo`: https://github.com/symfony/demo
 
 .. ready: no
-.. revision: ba29ecbed59633914003ba606c1644a568908d14
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

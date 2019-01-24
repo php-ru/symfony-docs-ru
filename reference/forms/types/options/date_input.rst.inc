@@ -9,7 +9,7 @@ on your underlying object. Valid values are:
 * ``string`` (e.g. ``2011-06-05``)
 * ``datetime`` (a ``DateTime`` object)
 * ``datetime_immutable`` (a ``DateTimeImmutable`` object)
-* ``array`` (e.g. ``array('year' => 2011, 'month' => 06, 'day' => 05)``)
+* ``array`` (e.g. ``['year' => 2011, 'month' => 06, 'day' => 05]``)
 * ``timestamp`` (e.g. ``1307232000``)
 
 The value that comes back from the form will also be normalized back into
@@ -18,4 +18,4 @@ this format.
 .. include:: /reference/forms/types/options/_date_limitation.rst.inc
 
 .. ready: no
-.. revision: f6bf5f214030db8633e9bb6e312d96c7e54b1f49
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

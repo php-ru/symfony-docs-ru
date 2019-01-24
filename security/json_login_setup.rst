@@ -42,16 +42,16 @@ First, enable the JSON login under your firewall:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'main' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'main' => [
                     'anonymous'  => null,
-                    'json_login' => array(
+                    'json_login' => [
                         'check_path' => '/login',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. tip::
 
@@ -80,10 +80,10 @@ The next step is to configure a route in your app matching this path:
             {
                 $user = $this->getUser();
 
-                return $this->json(array(
+                return $this->json([
                     'username' => $user->getUsername(),
                     'roles' => $user->getRoles(),
-                ));
+                ]);
             }
         }
 
@@ -115,9 +115,9 @@ The next step is to configure a route in your app matching this path:
         use Symfony\Component\Routing\Route;
 
         $routes = new RouteCollection();
-        $routes->add('login', new Route('/login', array(
+        $routes->add('login', new Route('/login', [
             '_controller' => 'App\Controller\SecurityController::login',
-        )));
+        ]));
 
         return $routes;
 
@@ -193,18 +193,18 @@ The security configuration should be:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'main' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'main' => [
                     'anonymous'  => null,
-                    'json_login' => array(
+                    'json_login' => [
                         'check_path' => 'login',
                         'username_path' => 'security.credentials.login',
                         'password_path' => 'security.credentials.password',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

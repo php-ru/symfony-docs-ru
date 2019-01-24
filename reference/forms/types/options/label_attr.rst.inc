@@ -1,7 +1,7 @@
 label_attr
 ~~~~~~~~~~
 
-**type**: ``array`` **default**: ``array()``
+**type**: ``array`` **default**: ``[]``
 
 Sets the HTML attributes for the ``<label>`` element, which will be used
 when rendering the label for the field. It's an associative array with HTML
@@ -21,8 +21,8 @@ template:
         echo $view['form']->label(
             $form['name'],
             'Your name',
-            array('label_attr' => array('class' => 'CUSTOM_LABEL_CLASS'))
+            ['label_attr' => ['class' => 'CUSTOM_LABEL_CLASS']]
         );
 
 .. ready: no
-.. revision: 57c2d4b5a8daffa36127ea236be8d447e2d5e47b
+.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e

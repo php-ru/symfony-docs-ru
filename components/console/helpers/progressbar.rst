@@ -332,7 +332,7 @@ The ``setMessage()`` method accepts a second optional argument to set the value
 of the custom placeholders::
 
     // ...
-    // $files = array('client-001/invoices.xml', '...');
+    // $files = ['client-001/invoices.xml', '...'];
     foreach ($files as $filename) {
         $progressBar->setMessage('Importing invoices...');
         $progressBar->setMessage($filename, 'filename');
@@ -377,4 +377,4 @@ After a couple of iterations, the output in the terminal will look like this:
     68/100 [===================>--------]  68%
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

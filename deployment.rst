@@ -66,10 +66,12 @@ Using Platforms as a Service
 Using a Platform as a Service (PaaS) can be a great way to deploy your Symfony app
 quickly and easily. There are many PaaS - below are a few that work well with Symfony:
 
+* `Symfony Cloud`_
 * `Heroku`_
 * `Platform.sh`_
 * `Azure`_
 * `fortrabbit`_
+* `Clever Cloud`_
 
 Using Build Scripts and other Tools
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -264,6 +266,8 @@ Learn More
 .. _`Azure`: https://azure.microsoft.com/en-us/develop/php/
 .. _`fortrabbit`: https://help.fortrabbit.com/install-symfony
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
+.. _`Clever Cloud`: https://www.clever-cloud.com/doc/php/tutorial-symfony/
+.. _`Symfony Cloud`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: 1a678d61c6c489188a0d0130cf32b55085021c35
+.. revision: b7387dbe140d76e458fe290528200473d767a264

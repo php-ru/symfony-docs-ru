@@ -96,9 +96,9 @@ The following constraints ensure that:
             {
                 $metadata->addPropertyConstraint('weight', new Assert\DivisibleBy(0.25));
 
-                $metadata->addPropertyConstraint('quantity', new Assert\DivisibleBy(array(
+                $metadata->addPropertyConstraint('quantity', new Assert\DivisibleBy([
                     'value' => 5,
-                )));
+                ]));
             }
         }
 
@@ -129,4 +129,4 @@ with regard to the ``$increments`` property of the same object, use
 ``propertyPath="increments"`` in the comparison constraint of ``$value``.
 
 .. ready: no
-.. revision: 3270cca02d28dba7bd3c59856a04d8f1aba9ec49
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

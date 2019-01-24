@@ -144,12 +144,12 @@ you do. The resource name itself is not actually used in the example::
 
             // prepare a new route
             $path = '/extra/{parameter}';
-            $defaults = array(
+            $defaults = [
                 '_controller' => 'App\Controller\ExtraController::extra',
-            );
-            $requirements = array(
+            ];
+            $requirements = [
                 'parameter' => '\d+',
-            );
+            ];
             $route = new Route($path, $defaults, $requirements);
 
             // add the new route to the route collection
@@ -342,4 +342,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

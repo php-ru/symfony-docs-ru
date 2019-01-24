@@ -164,13 +164,13 @@ Response::
         $matcher
             ->expects($this->once())
             ->method('match')
-            ->will($this->returnValue(array(
+            ->will($this->returnValue([
                 '_route' => 'foo',
                 'name' => 'Fabien',
                 '_controller' => function ($name) {
                     return new Response('Hello '.$name);
                 }
-            )))
+            ]))
         ;
         $matcher
             ->expects($this->once())
@@ -222,4 +222,4 @@ safely think about the next batch of features we want to add to our framework.
 .. _`XDebug`: https://xdebug.org/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

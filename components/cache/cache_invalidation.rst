@@ -32,7 +32,7 @@ cache items, as returned by cache adapters::
     // ...
     // add one or more tags
     $item->tag('tag_1');
-    $item->tag(array('tag_2', 'tag_3'));
+    $item->tag(['tag_2', 'tag_3']);
     $cache->save($item);
 
 If ``$cache`` implements :class:`Symfony\\Component\\Cache\\Adapter\\TagAwareAdapterInterface`,
@@ -40,7 +40,7 @@ you can invalidate the cached items by calling
 :method:`Symfony\\Component\\Cache\\Adapter\\TagAwareAdapterInterface::invalidateTags`::
 
     // invalidate all items related to `tag_1` or `tag_3`
-    $cache->invalidateTags(array('tag_1', 'tag_3'));
+    $cache->invalidateTags(['tag_1', 'tag_3']);
 
     // if you know the cache key, you can also delete the item directly
     $cache->deleteItem('cache_key');
@@ -100,4 +100,4 @@ lifetime or their expiration date with the PSR-6 interface, as explained in the
 :doc:`/components/cache/cache_items` article.
 
 .. ready: no
-.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

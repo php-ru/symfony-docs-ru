@@ -86,12 +86,12 @@ short example containing most features described below:
          *
          * @throws \RuntimeException When an invalid option is provided
          */
-        private function transformText($dummy, array $options = array())
+        private function transformText($dummy, array $options = [])
         {
-            $defaultOptions = array(
+            $defaultOptions = [
                 'some_default' => 'values',
                 'another_default' => 'more values',
-            );
+            ];
 
             foreach ($options as $option) {
                 if (!in_array($option, $defaultOptions)) {
@@ -292,4 +292,4 @@ License
 .. _`snake_case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: d07a5b968beef1e7800ef538ee2a06064a96473a
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

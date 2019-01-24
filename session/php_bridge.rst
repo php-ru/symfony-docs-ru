@@ -41,12 +41,12 @@ for the ``handler_id``:
     .. code-block:: php
 
         // config/packages/framework.php
-        $container->loadFromExtension('framework', array(
-            'session' => array(
+        $container->loadFromExtension('framework', [
+            'session' => [
                 'storage_id' => 'session.storage.php_bridge',
                 'handler_id' => null,
-            ),
-        ));
+            ],
+        ]);
 
 Otherwise, if the problem is only that you cannot avoid the application
 starting the session with ``session_start()``, you can still make use of
@@ -83,12 +83,12 @@ the example below:
     .. code-block:: php
 
         // config/packages/framework.php
-        $container->loadFromExtension('framework', array(
-            'session' => array(
+        $container->loadFromExtension('framework', [
+            'session' => [
                 'storage_id' => 'session.storage.php_bridge',
                 'handler_id' => 'session.storage.native_file',
-            ),
-        ));
+            ],
+        ]);
 
 .. note::
 
@@ -104,4 +104,4 @@ the example below:
 For more details, see :doc:`/components/http_foundation/session_php_bridge`.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

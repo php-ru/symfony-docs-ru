@@ -28,7 +28,7 @@ you want to guarantee that some ``state`` property is *not* in a dynamic
 
     protected $state;
 
-    protected $invalidStates = array();
+    protected $invalidStates = [];
 
     public function isStateInvalid()
     {
@@ -123,4 +123,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

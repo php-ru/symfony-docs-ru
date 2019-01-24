@@ -55,14 +55,14 @@ matches the configured ``pattern``.
         // config/packages/security.php
 
         // ...
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'secured_area' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'secured_area' => [
                     'pattern' => '^/admin',
                     // ...
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 The ``pattern`` is a regular expression. In this example, the firewall will only be
 activated if the URL starts (due to the ``^`` regex character) with ``/admin``. If
@@ -112,14 +112,14 @@ only initialize if the host from the request matches against the configuration.
         // config/packages/security.php
 
         // ...
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'secured_area' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'secured_area' => [
                     'host' => '^admin\.example\.com$',
                     // ...
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 The ``host`` (like the ``pattern``) is a regular expression. In this example,
 the firewall will only be activated if the host is equal exactly (due to
@@ -170,14 +170,14 @@ the provided HTTP methods.
         // config/packages/security.php
 
         // ...
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'secured_area' => array(
-                    'methods' => array('GET', 'POST'),
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'secured_area' => [
+                    'methods' => ['GET', 'POST'],
                     // ...
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 In this example, the firewall will only be activated if the HTTP method of the
 request is either ``GET`` or ``POST``. If the method is not in the array of the
@@ -185,4 +185,4 @@ allowed methods, the firewall will not be activated and subsequent firewalls wil
 have the opportunity to be matched for this request.
 
 .. ready: no
-.. revision: 0c8d7c06a2803863c618e66e9fcc196b002019f6
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

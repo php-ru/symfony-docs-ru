@@ -103,9 +103,9 @@ Then you can constrain this method with ``IsTrue``.
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addGetterConstraint('tokenValid', new IsTrue(array(
+                $metadata->addGetterConstraint('tokenValid', new IsTrue([
                     'message' => 'The token is invalid.',
-                )));
+                ]));
             }
 
             public function isTokenValid()
@@ -137,4 +137,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c3c7bfdc7cee6996598516957a03fda4a5dfbc70
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

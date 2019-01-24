@@ -48,6 +48,8 @@ stored as a ``DateTime`` object, a string, a timestamp or an array.
 | Class                | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\TimeType`          |
 +----------------------+-----------------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Basic Usage
 -----------
 
@@ -61,10 +63,10 @@ field as two different choice fields::
     use Symfony\Component\Form\Extension\Core\Type\TimeType;
     // ...
 
-    $builder->add('startTime', TimeType::class, array(
+    $builder->add('startTime', TimeType::class, [
         'input'  => 'datetime',
         'widget' => 'choice',
-    ));
+    ]);
 
 The ``input`` option *must* be changed to match the type of the underlying
 date data. For example, if the ``startTime`` field's data were a unix timestamp,
@@ -73,10 +75,10 @@ you'd need to set ``input`` to ``timestamp``::
     use Symfony\Component\Form\Extension\Core\Type\TimeType;
     // ...
 
-    $builder->add('startTime', TimeType::class, array(
+    $builder->add('startTime', TimeType::class, [
         'input'  => 'timestamp',
         'widget' => 'choice',
-    ));
+    ]);
 
 The field also supports an ``array`` and ``string`` as valid ``input`` option
 values.
@@ -95,18 +97,18 @@ If your widget option is set to ``choice``, then this field will be represented
 as a series of ``select`` boxes. When the placeholder value is a string,
 it will be used as the **blank value** of all select boxes::
 
-    $builder->add('startTime', 'time', array(
+    $builder->add('startTime', 'time', [
         'placeholder' => 'Select a value',
-    ));
+    ]);
 
 Alternatively, you can use an array that configures different placeholder
 values for the hour, minute and second fields::
 
-    $builder->add('startTime', 'time', array(
-        'placeholder' => array(
+    $builder->add('startTime', 'time', [
+        'placeholder' => [
             'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
-        )
-    ));
+        ]
+    ]);
 
 .. include:: /reference/forms/types/options/hours.rst.inc
 
@@ -123,7 +125,7 @@ on your underlying object. Valid values are:
 * ``string`` (e.g. ``12:17:26``)
 * ``datetime`` (a ``DateTime`` object)
 * ``datetime_immutable`` (a ``DateTimeImmutable`` object)
-* ``array`` (e.g. ``array('hour' => 12, 'minute' => 17, 'second' => 26)``)
+* ``array`` (e.g. ``['hour' => 12, 'minute' => 17, 'second' => 26]``)
 * ``timestamp`` (e.g. ``1307232000``)
 
 The value that comes back from the form will also be normalized back into
@@ -224,4 +226,4 @@ Form Variables
 +--------------+-------------+----------------------------------------------------------------------+
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

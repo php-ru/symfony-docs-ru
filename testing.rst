@@ -59,7 +59,7 @@ want to test the overall behavior of your application, see the section about
 
 Writing Symfony unit tests is no different from writing standard PHPUnit
 unit tests. Suppose, for example, that you have an *incredibly* simple class
-called ``Calculator`` in the ``Util/`` directory of the app bundle::
+called ``Calculator`` in the ``src/Util/`` directory of the app::
 
     // src/Util/Calculator.php
     namespace App\Util;
@@ -349,12 +349,12 @@ to associate both methods::
 
     public function provideUrls()
     {
-        return array(
-            array('/'),
-            array('/blog'),
-            array('/contact'),
+        return [
+            ['/'],
+            ['/blog'],
+            ['/contact'],
             // ...
-        );
+        ];
     }
 
 .. index::
@@ -386,9 +386,9 @@ returns a ``Crawler`` instance.
         request(
             $method,
             $uri,
-            array $parameters = array(),
-            array $files = array(),
-            array $server = array(),
+            array $parameters = [],
+            array $files = [],
+            array $server = [],
             $content = null,
             $changeHistory = true
         )
@@ -401,12 +401,12 @@ returns a ``Crawler`` instance.
         $client->request(
             'GET',
             '/post/hello-world',
-            array(),
-            array(),
-            array(
+            [],
+            [],
+            [
                 'CONTENT_TYPE' => 'application/json',
                 'HTTP_REFERER' => '/foo/bar',
-            )
+            ]
         );
 
 Use the crawler to find DOM elements in the response. These elements can then
@@ -414,7 +414,7 @@ be used to click on links and submit forms::
 
     $crawler = $client->clickLink('Go elsewhere...');
 
-    $crawler = $client->submitForm('validate', array('name' => 'Fabien'));
+    $crawler = $client->submitForm('validate', ['name' => 'Fabien']);
 
 The ``clickLink()`` and ``submitForm()`` methods both return a ``Crawler`` object.
 These methods are the best way to browse your application as it takes care
@@ -425,15 +425,15 @@ The ``request()`` method can also be used to simulate form submissions directly
 or perform more complex requests. Some useful examples::
 
     // submits a form directly (but using the Crawler is easier!)
-    $client->request('POST', '/submit', array('name' => 'Fabien'));
+    $client->request('POST', '/submit', ['name' => 'Fabien']);
 
     // submits a raw JSON string in the request body
     $client->request(
         'POST',
         '/submit',
-        array(),
-        array(),
-        array('CONTENT_TYPE' => 'application/json'),
+        [],
+        [],
+        ['CONTENT_TYPE' => 'application/json'],
         '{"name":"Fabien"}'
     );
 
@@ -449,17 +449,17 @@ or perform more complex requests. Some useful examples::
     $client->request(
         'POST',
         '/submit',
-        array('name' => 'Fabien'),
-        array('photo' => $photo)
+        ['name' => 'Fabien'],
+        ['photo' => $photo]
     );
 
     // Perform a DELETE request and pass HTTP headers
     $client->request(
         'DELETE',
         '/post/12',
-        array(),
-        array(),
-        array('PHP_AUTH_USER' => 'username', 'PHP_AUTH_PW' => 'pa$$word')
+        [],
+        [],
+        ['PHP_AUTH_USER' => 'username', 'PHP_AUTH_PW' => 'pa$$word']
     );
 
 Last but not least, you can force each request to be executed in its own PHP
@@ -476,7 +476,7 @@ method, which has the same arguments as the ``request()`` method, and it's a
 shortcut to make AJAX requests::
 
     // the required HTTP_X_REQUESTED_WITH header is added automatically
-    $client->xmlHttpRequest('POST', '/submit', array('name' => 'Fabien'));
+    $client->xmlHttpRequest('POST', '/submit', ['name' => 'Fabien']);
 
 Browsing
 ~~~~~~~~
@@ -590,10 +590,6 @@ will no longer be followed::
 Reporting Exceptions
 ~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 3.4
-
-    The ``catchExceptions()`` method was introduced in Symfony 3.4.
-
 Debugging exceptions in functional tests may be difficult because by default
 they are caught and you need to look at the logs to see which exception was
 thrown. Disabling catching of exceptions in the test client allows the exception
@@ -683,7 +679,7 @@ The Crawler can extract information from the nodes::
     // (_text returns the node value)
     // returns an array for each element in crawler,
     // each with the value and href
-    $info = $crawler->extract(array('_text', 'href'));
+    $info = $crawler->extract(['_text', 'href']);
 
     // executes a lambda for each node and return an array of results
     $data = $crawler->each(function ($node, $i) {
@@ -719,9 +715,9 @@ Use the ``submitForm()`` method to submit the form that contains the given butto
     $client = static::createClient();
     $client->request('GET', '/post/hello-world');
 
-    $crawler = $client->submitForm('Add comment', array(
+    $crawler = $client->submitForm('Add comment', [
        'comment_form[content]' => '...',
-    ));
+    ]);
 
 The first argument of ``submitForm()`` is the text content, ``id``, ``value`` or
 ``name`` of any ``<button>`` or ``<input type="submit">`` included in the form.
@@ -746,13 +742,13 @@ that provides helpful methods specific to forms (such as ``getUri()``,
     $form = $buttonCrawlerNode->form();
 
     // you can also pass an array of field values that overrides the default ones
-    $form = $buttonCrawlerNode->form(array(
+    $form = $buttonCrawlerNode->form([
         'my_form[name]'    => 'Fabien',
         'my_form[subject]' => 'Symfony rocks!',
-    ));
+    ]);
 
     // you can pass a second argument to override the form HTTP method
-    $form = $buttonCrawlerNode->form(array(), 'DELETE');
+    $form = $buttonCrawlerNode->form([], 'DELETE');
 
     // submit the Form object
     $client->submit($form);
@@ -760,10 +756,10 @@ that provides helpful methods specific to forms (such as ``getUri()``,
 The field values can also be passed as a second argument of the ``submit()``
 method::
 
-    $client->submit($form, array(
+    $client->submit($form, [
         'my_form[name]'    => 'Fabien',
         'my_form[subject]' => 'Symfony rocks!',
-    ));
+    ]);
 
 For more complex situations, use the ``Form`` instance as an array to set the
 value of each field individually::
@@ -807,8 +803,8 @@ their type::
     The ``submit()`` and ``submitForm()`` methods define optional arguments to
     add custom server parameters and HTTP headers when submitting the form::
 
-        $client->submit($form, array(), array('HTTP_ACCEPT_LANGUAGE' => 'es'));
-        $client->submitForm($button, array(), 'POST', array('HTTP_ACCEPT_LANGUAGE' => 'es'));
+        $client->submit($form, [], ['HTTP_ACCEPT_LANGUAGE' => 'es']);
+        $client->submitForm($button, [], 'POST', ['HTTP_ACCEPT_LANGUAGE' => 'es']);
 
 Adding and Removing Forms to a Collection
 .........................................
@@ -901,18 +897,18 @@ configuration option:
         // config/packages/test/swiftmailer.php
 
         // ...
-        $container->loadFromExtension('swiftmailer', array(
+        $container->loadFromExtension('swiftmailer', [
             'disable_delivery' => true,
-        ));
+        ]);
 
 You can also use a different environment entirely, or override the default
 debug mode (``true``) by passing each as options to the ``createClient()``
 method::
 
-    $client = static::createClient(array(
+    $client = static::createClient([
         'environment' => 'my_test_env',
         'debug'       => false,
-    ));
+    ]);
 
 Customizing Database URL / Environment Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -944,17 +940,17 @@ Sending Custom Headers
 If your application behaves according to some HTTP headers, pass them as the
 second argument of ``createClient()``::
 
-    $client = static::createClient(array(), array(
+    $client = static::createClient([], [
         'HTTP_HOST'       => 'en.example.com',
         'HTTP_USER_AGENT' => 'MySuperBrowser/1.0',
-    ));
+    ]);
 
 You can also override HTTP headers on a per request basis::
 
-    $client->request('GET', '/', array(), array(), array(
+    $client->request('GET', '/', [], [], [
         'HTTP_HOST'       => 'en.example.com',
         'HTTP_USER_AGENT' => 'MySuperBrowser/1.0',
-    ));
+    ]);
 
 .. tip::
 
@@ -1054,4 +1050,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e

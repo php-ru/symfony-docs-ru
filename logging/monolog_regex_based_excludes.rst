@@ -54,18 +54,18 @@ configuration:
     .. code-block:: php
 
         // config/packages/prod/monolog.php
-        $container->loadFromExtension('monolog', array(
-            'handlers' => array(
-                'main' => array(
+        $container->loadFromExtension('monolog', [
+            'handlers' => [
+                'main' => [
                     // ...
                     'type'          => 'fingers_crossed',
                     'handler'       => ...,
-                    'excluded_404s' => array(
+                    'excluded_404s' => [
                         '^/phpmyadmin',
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 .. ready: no
-.. revision: 091695a2f1926a6cb9aa98d37e5969eca41b2ffa
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

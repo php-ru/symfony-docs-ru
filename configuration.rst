@@ -61,7 +61,7 @@ instance, the framework bundle is configured in ``config/packages/framework.yaml
 
     .. code-block:: php
 
-        # config/packages/framework.php
+        // config/packages/framework.php
         $container->loadFromExtension('framework', [
             'secret' => '%env(APP_SECRET)%',
             //'default_locale' => 'en',
@@ -194,12 +194,12 @@ This parameter is then referenced in the framework config in
     .. code-block:: php
 
         // config/packages/translation.php
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // any string surrounded by two % is replaced by that parameter value
             'default_locale' => '%locale%',
 
             // ...
-        ));
+        ]);
 
 You can define whatever parameter names you want under the ``parameters`` key of
 any configuration file. To reference a parameter, surround its name with two
@@ -256,7 +256,7 @@ sensible, non-secret *default* values for all of your environment variables and
 *should* be commited to your repository.
 
 To override these variables with machine-specific or sensitive values, create a
-``env.local`` file. This file is **not committed to the shared repository** and
+``.env.local`` file. This file is **not committed to the shared repository** and
 is only stored on your machine. In fact, the ``.gitignore`` file that comes with
 Symfony prevents it from being committed.
 
@@ -319,4 +319,4 @@ Learn more
 .. _`Incenteev Parameter Handler`: https://github.com/Incenteev/ParameterHandler
 
 .. ready: no
-.. revision: 203d93a2f2cf2009a4a411dbb60c5219b503310f
+.. revision: b0b38f2bf7ea372c1ae5dcc1f63156801cf8f086

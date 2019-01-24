@@ -29,6 +29,8 @@ Renders a ``textarea`` HTML element.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\TextareaType` |
 +-------------+------------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 .. tip::
 
     If you prefer to use an **advanced WYSIWYG editor** instead of a plain
@@ -77,4 +79,4 @@ The default value is ``''`` (the empty string).
 .. _`its documentation`: https://symfony.com/doc/current/bundles/IvoryCKEditorBundle/index.html
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

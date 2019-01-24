@@ -70,19 +70,19 @@ Now, examine the results to see this closely:
 
     .. code-block:: php
 
-        $container->loadFromExtension('my_bundle', array(
+        $container->loadFromExtension('my_bundle', [
                 'logging' => true,
                 // true, as expected
             )
-        );
+        ];
 
-        $container->loadFromExtension('my_bundle', array(
+        $container->loadFromExtension('my_bundle', [
                 'logging' => "%kernel.debug%",
                 // true/false (depends on 2nd parameter of Kernel),
                 // as expected, because %kernel.debug% inside configuration
                 // gets evaluated before being passed to the extension
             )
-        );
+        ];
 
         $container->loadFromExtension('my_bundle');
         // passes the string "%kernel.debug%".
@@ -147,4 +147,4 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
     the default parameter value is set by the Extension class.
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

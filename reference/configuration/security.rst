@@ -317,15 +317,15 @@ Using the BCrypt Password Encoder
         // app/config/security.php
         use Symfony\Component\Security\Core\User\User;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
-            'encoders' => array(
-                User::class => array(
+            'encoders' => [
+                User::class => [
                     'algorithm' => 'bcrypt',
                     'cost'      => 15,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 The ``cost`` can be in the range of ``4-31`` and determines how long a password
 will be encoded. Each increment of ``cost`` *doubles* the time it takes
@@ -400,17 +400,17 @@ Using the Argon2i Password Encoder
         // config/packages/security.php
         use Symfony\Component\Security\Core\User\User;
 
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
-            'encoders' => array(
-                User::class => array(
+            'encoders' => [
+                User::class => [
                     'algorithm' => 'argon2i',
                     'memory_cost' => 16384,
                     'time_cost' => 2,
                     'threads' => 4,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 A salt for each new password is generated automatically and need not be
 persisted. Since an encoded password contains the salt used to encode it,
@@ -476,18 +476,18 @@ multiple firewalls, the "context" could actually be shared:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
-            'firewalls' => array(
-                'somename' => array(
+        $container->loadFromExtension('security', [
+            'firewalls' => [
+                'somename' => [
                     // ...
                     'context' => 'my_context',
-                ),
-                'othername' => array(
+                ],
+                'othername' => [
                     // ...
                     'context' => 'my_context',
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 .. note::
 
@@ -510,4 +510,4 @@ Learn more about user checkers in :doc:`/security/user_checkers`.
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

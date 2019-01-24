@@ -63,7 +63,7 @@ in case a specific other bundle is not registered::
         // determine if AcmeGoodbyeBundle is registered
         if (!isset($bundles['AcmeGoodbyeBundle'])) {
             // disable AcmeGoodbyeBundle in bundles
-            $config = array('use_acme_goodbye' => false);
+            $config = ['use_acme_goodbye' => false];
             foreach ($container->getExtensions() as $name => $extension) {
                 switch ($name) {
                     case 'acme_something':
@@ -89,7 +89,7 @@ in case a specific other bundle is not registered::
         // check if entity_manager_name is set in the "acme_hello" configuration
         if (isset($config['entity_manager_name'])) {
             // prepend the acme_something settings with the entity_manager_name
-            $config = array('entity_manager_name' => $config['entity_manager_name']);
+            $config = ['entity_manager_name' => $config['entity_manager_name']];
             $container->prependExtensionConfig('acme_something', $config);
         }
     }
@@ -135,15 +135,15 @@ registered and the ``entity_manager_name`` setting for ``acme_hello`` is set to
     .. code-block:: php
 
         // config/packages/acme_something.php
-        $container->loadFromExtension('acme_something', array(
+        $container->loadFromExtension('acme_something', [
             // ...
             'use_acme_goodbye' => false,
             'entity_manager_name' => 'non_default',
-        ));
-        $container->loadFromExtension('acme_other', array(
+        ]);
+        $container->loadFromExtension('acme_other', [
             // ...
             'use_acme_goodbye' => false,
-        ));
+        ]);
 
 More than one Bundle using PrependExtensionInterface
 ----------------------------------------------------
@@ -153,4 +153,4 @@ the same key, the bundle that is registered **first** will take priority:
 next bundles won't override this specific config setting.
 
 .. ready: no
-.. revision: 39cc38e719c981a30755c9d2ebc006ba0d469bcd
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

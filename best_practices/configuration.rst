@@ -44,7 +44,7 @@ application doesn't care about the location of your database or the credentials
 to access to it, as long as the database is correctly configured.
 
 To override these variables with machine-specific or sensitive values, create a
-``env.local`` file. This file should not be added to version control.
+``.env.local`` file. This file should not be added to version control.
 
 .. caution::
 
@@ -194,4 +194,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: 369a11b5ba42142bac89249c7cb6daf873a3eca1

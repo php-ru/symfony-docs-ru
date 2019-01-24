@@ -51,7 +51,7 @@ Both ``evaluate()`` and ``compile()`` can handle ``ParsedExpression`` and
     // ...
 
     // the parse() method returns a ParsedExpression
-    $expression = $expressionLanguage->parse('1 + 4', array());
+    $expression = $expressionLanguage->parse('1 + 4', []);
 
     var_dump($expressionLanguage->evaluate($expression)); // prints 5
 
@@ -62,7 +62,7 @@ Both ``evaluate()`` and ``compile()`` can handle ``ParsedExpression`` and
 
     $expression = new SerializedParsedExpression(
         '1 + 4',
-        serialize($expressionLanguage->parse('1 + 4', array())->getNodes())
+        serialize($expressionLanguage->parse('1 + 4', [])->getNodes())
     );
 
     var_dump($expressionLanguage->evaluate($expression)); // prints 5
@@ -70,4 +70,4 @@ Both ``evaluate()`` and ``compile()`` can handle ``ParsedExpression`` and
 .. _`CacheItemPoolInterface`: https://github.com/php-fig/cache/blob/master/src/CacheItemPoolInterface.php
 
 .. ready: no
-.. revision: 81943ab6a4814d5fc4f877a6b2395660d89246e0
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

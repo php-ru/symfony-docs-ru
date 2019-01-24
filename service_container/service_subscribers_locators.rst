@@ -4,10 +4,6 @@
 Service Subscribers & Locators
 ==============================
 
-.. versionadded:: 3.3
-
-    Service subscribers and locators were introduced in Symfony 3.3.
-
 Sometimes, a service needs access to several other services without being sure
 that all of them will actually be used. In those cases, you may want the
 instantiation of the services to be lazy. However, that's not possible using
@@ -203,7 +199,7 @@ service type to a service.
 
     .. code-block:: yaml
 
-        // config/services.yaml
+        # config/services.yaml
         services:
             App\CommandBus:
                 tags:
@@ -235,7 +231,7 @@ service type to a service.
 
         $container
             ->register(CommandBus::class)
-            ->addTag('container.service_subscriber', array('key' => 'logger', 'id' => 'monolog.logger.event'))
+            ->addTag('container.service_subscriber', ['key' => 'logger', 'id' => 'monolog.logger.event'])
         ;
 
 .. tip::
@@ -301,10 +297,10 @@ include as many services as needed in it.
 
         $container
             ->register('app.command_handler_locator', ServiceLocator::class)
-            ->setArguments(array(array(
+            ->setArguments([[
                 'App\FooCommand' => new Reference('app.command_handler.foo'),
                 'App\BarCommand' => new Reference('app.command_handler.bar'),
-            )))
+            ]])
             // if you are not using the default service autoconfiguration,
             // add the following tag to the service definition:
             // ->addTag('container.service_locator')
@@ -351,7 +347,7 @@ Now you can use the service locator by injecting it in any other service:
 
         $container
             ->register(CommandBus::class)
-            ->setArguments(array(new Reference('app.command_handler_locator')))
+            ->setArguments([new Reference('app.command_handler_locator')])
         ;
 
 In :doc:`compiler passes </service_container/compiler_passes>` it's recommended
@@ -366,10 +362,10 @@ will share identical locators amongst all the services referencing them::
     {
         //...
 
-        $locateableServices = array(
+        $locateableServices = [
             //...
             'logger' => new Reference('logger'),
-        );
+        ];
 
         $myService->addArgument(ServiceLocatorTagPass::register($container, $locateableServices));
     }
@@ -469,4 +465,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 8a5f6003193e0e1aa8516e71c89834a7b2c9c89a

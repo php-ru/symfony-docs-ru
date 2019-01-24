@@ -68,7 +68,7 @@ in the application::
         public function getEnabledFormatters()
         {
             // code to configure which formatters to use
-            $enabledFormatters = array(...);
+            $enabledFormatters = [...];
 
             // ...
 
@@ -179,10 +179,10 @@ all the classes are already loaded as services. All you need to do is specify th
         $this->registerClasses($definition, 'App\\', '../src/*');
 
         $container->getDefinition(NewsletterManager::class)
-            ->setConfigurator(array(new Reference(EmailConfigurator::class), 'configure'));
+            ->setConfigurator([new Reference(EmailConfigurator::class), 'configure']);
 
         $container->getDefinition(GreetingCardManager::class)
-            ->setConfigurator(array(new Reference(EmailConfigurator::class), 'configure'));
+            ->setConfigurator([new Reference(EmailConfigurator::class), 'configure']);
 
 The traditional configurator syntax in YAML files used an array to define
 the service id and the method name:
@@ -200,4 +200,4 @@ That's it! When requesting the ``App\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: 5e33d78197ed2c9284886b541d599b9b445fdabf
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

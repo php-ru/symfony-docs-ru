@@ -45,7 +45,7 @@ Example usage::
     use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
     use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler;
 
-    $sessionStorage = new NativeSessionStorage(array(), new NativeFileSessionHandler());
+    $sessionStorage = new NativeSessionStorage([], new NativeFileSessionHandler());
     $session = new Session($sessionStorage);
 
 .. note::
@@ -85,7 +85,7 @@ Example usage::
     use Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler;
 
     $pdo = new \PDO(...);
-    $sessionStorage = new NativeSessionStorage(array(), new PdoSessionHandler($pdo));
+    $sessionStorage = new NativeSessionStorage([], new PdoSessionHandler($pdo));
     $session = new Session($sessionStorage);
 
 Migrating Between Save Handlers
@@ -199,7 +199,7 @@ calculated by adding the PHP runtime configuration value in
     using the ``migrate()`` or ``invalidate()`` methods of the ``Session`` class.
 
     The initial cookie lifetime can be set by configuring ``NativeSessionStorage``
-    using the ``setOptions(array('cookie_lifetime' => 1234))`` method.
+    using the ``setOptions(['cookie_lifetime' => 1234])`` method.
 
 .. note::
 
@@ -291,4 +291,4 @@ timestamp and the lifetime.
 .. _`php.net/memcached.setoption`: https://php.net/memcached.setoption
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

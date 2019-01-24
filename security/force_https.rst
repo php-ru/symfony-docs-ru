@@ -56,27 +56,27 @@ access control:
         .. code-block:: php
 
             // config/packages/security.php
-            $container->loadFromExtension('security', array(
+            $container->loadFromExtension('security', [
                 // ...
 
-                'access_control' => array(
-                    array(
+                'access_control' => [
+                    [
                         'path'             => '^/secure',
                         'role'             => 'ROLE_ADMIN',
                         'requires_channel' => 'https',
-                    ),
-                    array(
+                    ],
+                    [
                         'path'             => '^/login',
                         'role'             => 'IS_AUTHENTICATED_ANONYMOUSLY',
                         'requires_channel' => 'https',
-                    ),
-                    array(
+                    ],
+                    [
                         'path'             => '^/',
                         'role'             => 'IS_AUTHENTICATED_ANONYMOUSLY',
                         'requires_channel' => 'https',
-                    ),
-                ),
-            ));
+                    ],
+                ],
+            ]);
 
 To make life easier while developing, you can also use an environment variable,
 like ``requires_channel: '%env(SECURE_SCHEME)%'``. In your ``.env`` file, set
@@ -95,4 +95,4 @@ see :doc:`/routing/scheme` for more details.
     for more details.
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

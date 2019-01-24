@@ -79,9 +79,9 @@ more word characters at the beginning of your string:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('description', new Assert\Regex(array(
+                $metadata->addPropertyConstraint('description', new Assert\Regex([
                     'pattern' => '/^\w+/',
-                )));
+                ]));
             }
         }
 
@@ -153,11 +153,11 @@ it a custom message:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('firstName', new Assert\Regex(array(
+                $metadata->addPropertyConstraint('firstName', new Assert\Regex([
                     'pattern' => '/\d/',
                     'match'   => false,
                     'message' => 'Your name cannot contain a number',
-                )));
+                ]));
             }
         }
 
@@ -253,10 +253,10 @@ need to specify the HTML5 compatible pattern in the ``htmlPattern`` option:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('name', new Assert\Regex(array(
+                $metadata->addPropertyConstraint('name', new Assert\Regex([
                     'pattern'     => '/^[a-z]+$/i',
                     'htmlPattern' => '^[a-zA-Z]+$',
-                )));
+                ]));
             }
         }
 
@@ -290,4 +290,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

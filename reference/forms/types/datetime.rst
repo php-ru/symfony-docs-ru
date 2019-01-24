@@ -56,6 +56,8 @@ the data can be a ``DateTime`` object, a string, a timestamp or an array.
 | Class                | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\DateTimeType`      |
 +----------------------+-----------------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Field Options
 -------------
 
@@ -80,9 +82,9 @@ Sets the label that will be used when rendering the date widget. Setting it to
 
     use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-    $builder->add('startDateTime', DateTimeType::class, array(
+    $builder->add('startDateTime', DateTimeType::class, [
         'date_label' => 'Starts On',
-    ));
+    ]);
 
 date_widget
 ~~~~~~~~~~~
@@ -102,21 +104,21 @@ it will be used as the **blank value** of all select boxes::
 
     use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-    $builder->add('startDateTime', DateTimeType::class, array(
+    $builder->add('startDateTime', DateTimeType::class, [
         'placeholder' => 'Select a value',
-    ));
+    ]);
 
 Alternatively, you can use an array that configures different placeholder
 values for the year, month, day, hour, minute and second fields::
 
     use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-    $builder->add('startDateTime', DateTimeType::class, array(
-        'placeholder' => array(
+    $builder->add('startDateTime', DateTimeType::class, [
+        'placeholder' => [
             'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
             'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',
-        )
-    ));
+        ]
+    ]);
 
 format
 ~~~~~~
@@ -145,7 +147,7 @@ on your underlying object. Valid values are:
 * ``string`` (e.g. ``2011-06-05 12:15:00``)
 * ``datetime`` (a ``DateTime`` object)
 * ``datetime_immutable`` (a ``DateTimeImmutable`` object)
-* ``array`` (e.g. ``array(2011, 06, 05, 12, 15, 0)``)
+* ``array`` (e.g. ``[2011, 06, 05, 12, 15, 0]``)
 * ``timestamp`` (e.g. ``1307276100``)
 
 The value that comes back from the form will also be normalized back into
@@ -171,9 +173,9 @@ Sets the label that will be used when rendering the time widget. Setting it to
 
     use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-    $builder->add('startDateTime', DateTimeType::class, array(
+    $builder->add('startDateTime', DateTimeType::class, [
         'time_label' => 'Starts On',
-    ));
+    ]);
 
 time_widget
 ~~~~~~~~~~~
@@ -255,4 +257,4 @@ Field Variables
 .. _`Date/Time Format Syntax`: http://userguide.icu-project.org/formatparse/datetime#TOC-Date-Time-Format-Syntax
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e

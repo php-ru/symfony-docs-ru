@@ -29,11 +29,11 @@ Have a look at the following command that has three options::
                 ->setName('demo:args')
                 ->setDescription('Describe args behaviors')
                 ->setDefinition(
-                    new InputDefinition(array(
+                    new InputDefinition([
                         new InputOption('foo', 'f'),
                         new InputOption('bar', 'b', InputOption::VALUE_REQUIRED),
                         new InputOption('cat', 'c', InputOption::VALUE_OPTIONAL),
-                    ))
+                    ])
                 );
         }
 
@@ -69,10 +69,10 @@ argument::
 
     // ...
 
-    new InputDefinition(array(
+    new InputDefinition([
         // ...
         new InputArgument('arg', InputArgument::OPTIONAL),
-    ));
+    ]);
 
 You might have to use the special ``--`` separator to separate options from
 arguments. Have a look at the fifth example in the following table where it
@@ -93,4 +93,4 @@ Input                           ``bar``            ``cat``      ``arg``
 .. _docopt: http://docopt.org/
 
 .. ready: no
-.. revision: ae79eef9dc8bb1a48d0e9a0d04baca49c1aeea37
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

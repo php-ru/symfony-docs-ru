@@ -44,9 +44,9 @@ Create a class that extends ``AbstractExtension`` and fill in the logic::
     {
         public function getFilters()
         {
-            return array(
-                new TwigFilter('price', array($this, 'formatPrice')),
-            );
+            return [
+                new TwigFilter('price', [$this, 'formatPrice']),
+            ];
         }
 
         public function formatPrice($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
@@ -71,9 +71,9 @@ If you want to create a function instead of a filter, define the
     {
         public function getFunctions()
         {
-            return array(
-                new TwigFunction('area', array($this, 'calculateArea')),
-            );
+            return [
+                new TwigFunction('area', [$this, 'calculateArea']),
+            ];
         }
 
         public function calculateArea(int $width, int $length)
@@ -102,6 +102,15 @@ successfully registered:
     $ php bin/console debug:twig --filter=price
 
 You can now start using your filter in any Twig template.
+
+.. tip::
+
+    Run the following command to verify that the filters and functions created
+    by your extensions are successfully registered:
+
+    .. code-block:: terminal
+
+        $ php bin/console debug:twig
 
 .. _lazy-loaded-twig-extensions:
 
@@ -138,10 +147,10 @@ callable defined in ``getFilters()``::
     {
         public function getFilters()
         {
-            return array(
+            return [
                 // the logic of this filter is now implemented in a different class
-                new TwigFilter('price', array(AppRuntime::class, 'priceFilter')),
-            );
+                new TwigFilter('price', [AppRuntime::class, 'priceFilter']),
+            ];
         }
     }
 
@@ -181,4 +190,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: c19f2794f85b3475a15ee84923703912eba80493
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

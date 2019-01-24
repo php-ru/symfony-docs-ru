@@ -70,6 +70,23 @@ files: ``BlogPost.php`` and ``BlogComment.php``.
 
         $ php bin/console doctrine:mapping:import 'App\Entity' xml --path=config/doctrine
 
+    In this case, make sure to adapt your mapping configuration accordingly:
+
+    .. code-block:: yaml
+
+        # config/packages/doctrine.yaml
+        doctrine:
+            # ...
+            orm:
+                # ...
+                mappings:
+                    App:
+                        is_bundle: false
+                        type: yml # Set to xml in case of XML mapping
+                        dir: '%kernel.project_dir%/config/doctrine'
+                        prefix: 'App\Entity'
+                        alias: App
+
 Generating the Getters & Setters or PHP Classes
 -----------------------------------------------
 
@@ -98,4 +115,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`doctrine/doctrine#729`: https://github.com/doctrine/DoctrineBundle/issues/729
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: eb5cad398ef526a1c864ff2b49a05ab2ba84f759

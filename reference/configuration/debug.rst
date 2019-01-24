@@ -96,11 +96,11 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
     .. code-block:: php
 
         // config/packages/debug.php
-        $container->loadFromExtension('debug', array(
+        $container->loadFromExtension('debug', [
            'dump_destination' => 'php://stderr',
-        ));
+        ]);
 
 Configure it to ``"tcp://%env(VAR_DUMPER_SERVER)%"`` in order to use the :ref:`ServerDumper feature <var-dumper-dump-server>`.
 
 .. ready: no
-.. revision: c668d1ef6f07c4a4e8fbe78330ebedb4a3da21c6
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

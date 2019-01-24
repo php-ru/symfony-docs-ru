@@ -277,6 +277,8 @@ form_rest
 Renders all fields that have not yet been rendered, more information in
 :ref:`the Twig Form reference <reference-forms-twig-rest>`.
 
+.. _reference-twig-function-csrf-token:
+
 csrf_token
 ~~~~~~~~~~
 
@@ -285,10 +287,10 @@ csrf_token
     {{ csrf_token(intention) }}
 
 ``intention``
-    **type**: ``string``
+    **type**: ``string`` - an arbitrary string used to generate the token value.
 
-Renders a CSRF token. Use this function if you want CSRF protection without
-creating a form.
+Renders a CSRF token. Use this function if you want :doc:`CSRF protection </security/csrf>`
+in a regular HTML form not managed by the Symfony Form component.
 
 is_granted
 ~~~~~~~~~~
@@ -804,4 +806,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 81bcdbdce5412bd82820515a1a5c91c871dc5349

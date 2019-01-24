@@ -64,7 +64,7 @@ sending an email is pretty straightforward::
                 $this->renderView(
                     // templates/emails/registration.html.twig
                     'emails/registration.html.twig',
-                    array('name' => $name)
+                    ['name' => $name]
                 ),
                 'text/html'
             )
@@ -73,7 +73,7 @@ sending an email is pretty straightforward::
             ->addPart(
                 $this->renderView(
                     'emails/registration.txt.twig',
-                    array('name' => $name)
+                    ['name' => $name]
                 ),
                 'text/plain'
             )
@@ -173,4 +173,4 @@ Learn more
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

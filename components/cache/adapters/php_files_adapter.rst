@@ -10,22 +10,22 @@ Php Files Cache Adapter
 Similarly to :ref:`Filesystem Adapter <component-cache-filesystem-adapter>`, this cache
 implementation writes cache entries out to disk, but unlike the Filesystem cache adapter,
 the PHP Files cache adapter writes and reads back these cache files *as native PHP code*.
-For example, caching the value ``array('my', 'cached', 'array')`` will write out a cache
+For example, caching the value ``['my', 'cached', 'array']`` will write out a cache
 file similar to the following::
 
-    <?php return array(
+    <?php return [
 
         // the cache item expiration
         0 => 9223372036854775807,
 
         // the cache item contents
-        1 => array (
+        1 => [
             0 => 'my',
             1 => 'cached',
             2 => 'array',
-        ),
+        ],
 
-    );
+    ];
 
 .. note::
 
@@ -69,4 +69,4 @@ directory path as constructor arguments::
 .. _`OPcache`: http://php.net/manual/en/book.opcache.php
 
 .. ready: no
-.. revision: 99122937252af226b3d395c1130ec3c3483ce4fe
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

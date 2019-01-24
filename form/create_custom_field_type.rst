@@ -30,13 +30,13 @@ for form fields, which is ``App\Form\Type``. Make sure the field extends
     {
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
-                'choices' => array(
+            $resolver->setDefaults([
+                'choices' => [
                     'Standard Shipping' => 'standard',
                     'Expedited Shipping' => 'expedited',
                     'Priority Shipping' => 'priority',
-                ),
-            ));
+                ],
+            ]);
         }
 
         public function getParent()
@@ -86,6 +86,21 @@ important:
 The goal of this field was to extend the choice type to enable selection of the
 shipping type. This is achieved by fixing the ``choices`` to a list of available
 shipping options.
+
+.. tip::
+
+    If the purpose of this new form type was to customize the rendering of some
+    fields only, skip this step and use ``block_name`` or ``block_prefix`` option
+    instead. For more information, see :ref:`form-customization-form-themes`.
+
+.. tip::
+
+    Run the following command to verify that the form type was successfully
+    registered in the application:
+
+    .. code-block:: terminal
+
+        $ php bin/console debug:form
 
 Creating a Template for the Field
 ---------------------------------
@@ -188,11 +203,11 @@ link for details), create a ``shipping_widget`` block to handle this:
         .. code-block:: php
 
             // config/packages/twig.php
-            $container->loadFromExtension('twig', array(
-                'form_themes' => array(
+            $container->loadFromExtension('twig', [
+                'form_themes' => [
                     'form/fields.html.twig',
-                ),
-            ));
+                ],
+            ]);
 
     For the PHP templating engine, your configuration should look like this:
 
@@ -229,15 +244,15 @@ link for details), create a ``shipping_widget`` block to handle this:
         .. code-block:: php
 
             // config/packages/framework.php
-            $container->loadFromExtension('framework', array(
-                'templating' => array(
-                    'form' => array(
-                        'resources' => array(
+            $container->loadFromExtension('framework', [
+                'templating' => [
+                    'form' => [
+                        'resources' => [
                             ':form:fields.html.php',
-                        ),
-                    ),
-                ),
-            ));
+                        ],
+                    ],
+                ],
+            ]);
 
 Using the Field Type
 --------------------
@@ -256,9 +271,9 @@ new instance of the type in one of your forms::
     {
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
-            $builder->add('shipping_code', ShippingType::class, array(
+            $builder->add('shipping_code', ShippingType::class, [
                 'placeholder' => 'Choose a delivery option',
-            ));
+            ]);
         }
     }
 
@@ -308,4 +323,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: 73d241a910a52f1d7f32f351d841e6af6d6a7c0c
+.. revision: e0f44de5bb017dbf2c1ff777fe2f54474f5b2c15

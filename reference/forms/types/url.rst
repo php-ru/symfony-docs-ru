@@ -32,6 +32,8 @@ have a protocol.
 | Class       | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\UrlType` |
 +-------------+-------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Field Options
 -------------
 
@@ -82,4 +84,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

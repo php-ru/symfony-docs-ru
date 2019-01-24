@@ -17,9 +17,9 @@ which will be responsible for returning ``Command`` instances::
     use Symfony\Component\Console\Application;
     use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
 
-    $commandLoader = new FactoryCommandLoader(array(
+    $commandLoader = new FactoryCommandLoader([
         'app:heavy' => function () { return new HeavyCommand(); },
-    ));
+    ]);
 
     $application = new Application();
     $application->setCommandLoader($commandLoader);
@@ -47,10 +47,10 @@ array of ``Command`` factories as its only constructor argument::
 
     use Symfony\Component\Console\CommandLoader\FactoryCommandLoader;
 
-    $commandLoader = new FactoryCommandLoader(array(
+    $commandLoader = new FactoryCommandLoader([
         'app:foo' => function () { return new FooCommand(); },
-        'app:bar' => array(BarCommand::class, 'create'),
-    ));
+        'app:bar' => [BarCommand::class, 'create'],
+    ]);
 
 Factories can be any PHP callable and will be executed each time
 :method:`Symfony\\Component\\Console\\CommandLoader\\FactoryCommandLoader::get`
@@ -72,12 +72,12 @@ with command names as keys and service identifiers as values::
     $containerBuilder->register(FooCommand::class, FooCommand::class);
     $containerBuilder->compile();
 
-    $commandLoader = new ContainerCommandLoader($containerBuilder, array(
+    $commandLoader = new ContainerCommandLoader($containerBuilder, [
         'app:foo' => FooCommand::class,
-    ));
+    ]);
 
 Like this, executing the ``app:foo`` command will load the ``FooCommand`` service
 by calling ``$containerBuilder->get(FooCommand::class)``.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

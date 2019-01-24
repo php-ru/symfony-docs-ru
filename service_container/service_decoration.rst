@@ -271,12 +271,12 @@ the ``decoration_priority`` option. Its value is an integer that defaults to
         $container->register(Foo:class)
 
         $container->register(Bar:class)
-            ->addArgument(new Reference(Bar:class.'inner'))
+            ->addArgument(new Reference(Bar:class.'.inner'))
             ->setPublic(false)
             ->setDecoratedService(Foo:class, null, 5);
 
         $container->register(Baz:class)
-            ->addArgument(new Reference(Baz:class.'inner'))
+            ->addArgument(new Reference(Baz:class.'.inner'))
             ->setPublic(false)
             ->setDecoratedService(Foo:class, null, 1);
 
@@ -287,4 +287,4 @@ The generated code will be the following::
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 75ce70a6061d44b385e3a739ebdd05547589f28e

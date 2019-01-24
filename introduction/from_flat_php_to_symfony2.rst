@@ -91,7 +91,7 @@ the code that prepares the HTML "presentation"::
 
     $result = $connection->query('SELECT id, title FROM post');
 
-    $posts = array();
+    $posts = [];
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         $posts[] = $row;
     }
@@ -163,7 +163,7 @@ of the application are isolated in a new file called ``model.php``::
 
         $result = $connection->query('SELECT id, title FROM post');
 
-        $posts = array();
+        $posts = [];
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $posts[] = $row;
         }
@@ -181,7 +181,7 @@ of the application are isolated in a new file called ``model.php``::
     in this example, only a portion (or none) of the model is actually concerned
     with accessing a database.
 
-The controller (``index.php``) is now is just a few lines of code::
+The controller (``index.php``) is now just a few lines of code::
 
     // index.php
     require_once 'model.php';
@@ -262,7 +262,7 @@ an individual blog result based on a given id::
     {
         $connection = open_database_connection();
 
-        $query = 'SELECT created_at, title, body FROM post WHERE  id=:id';
+        $query = 'SELECT created_at, title, body FROM post WHERE id=:id';
         $statement = $connection->prepare($query);
         $statement->bindValue(':id', $id, PDO::PARAM_INT);
         $statement->execute();
@@ -486,7 +486,7 @@ incidentally, acts quite a bit like the Symfony templating engine::
     function list_action()
     {
         $posts = get_all_posts();
-        $html = render_template('templates/list.php', array('posts' => $posts));
+        $html = render_template('templates/list.php', ['posts' => $posts]);
 
         return new Response($html);
     }
@@ -494,7 +494,7 @@ incidentally, acts quite a bit like the Symfony templating engine::
     function show_action($id)
     {
         $post = get_post_by_id($id);
-        $html = render_template('templates/show.php', array('post' => $post));
+        $html = render_template('templates/show.php', ['post' => $post]);
 
         return new Response($html);
     }
@@ -533,7 +533,7 @@ a simple application. Along the way, you've made a simple routing
 system and a method using ``ob_start()`` and ``ob_get_clean()`` to render
 templates. If, for some reason, you needed to continue building this "framework"
 from scratch, you could at least use Symfony's standalone
-:doc:`Routing </components/routing>` and component and :doc:`Twig </templating>`,
+:doc:`Routing </components/routing>` component and :doc:`Twig </templating>`,
 which already solve these problems.
 
 Instead of re-solving common problems, you can let Symfony take care of
@@ -664,9 +664,9 @@ object are sent back to the client.
 
 It's a beautiful thing.
 
-.. figure:: /_images/http/request-flow.png
-   :align: center
-   :alt: Symfony request flow
+.. raw:: html
+
+    <object data="../_images/http/request-flow.svg" type="image/svg+xml"></object>
 
 Where Symfony Delivers
 ----------------------
@@ -713,4 +713,4 @@ A good selection of `Symfony community tools`_ can be found on GitHub.
 .. _`Symfony community tools`: https://github.com/search?q=topic%3Asymfony-bundle&type=Repositories
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

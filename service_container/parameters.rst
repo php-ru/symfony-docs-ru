@@ -236,11 +236,11 @@ for all parameters that are arrays.
     .. code-block:: php
 
         // config/services.php
-        $container->setParameter('my_mailer.gateways', array('mail1', 'mail2', 'mail3'));
-        $container->setParameter('my_multilang.language_fallback', array(
-            'en' => array('en', 'fr'),
-            'fr' => array('fr', 'en'),
-        ));
+        $container->setParameter('my_mailer.gateways', ['mail1', 'mail2', 'mail3']);
+        $container->setParameter('my_multilang.language_fallback', [
+            'en' => ['en', 'fr'],
+            'fr' => ['fr', 'en'],
+        ]);
 
 Environment Variables and Dynamic Values
 ----------------------------------------
@@ -351,4 +351,4 @@ To disable this behavior, use the ``string`` type:
     support for the PHP keywords.
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

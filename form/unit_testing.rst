@@ -42,10 +42,10 @@ The simplest ``TypeTestCase`` implementation looks like the following::
     {
         public function testSubmitValidData()
         {
-            $formData = array(
+            $formData = [
                 'test' => 'test',
                 'test2' => 'test2',
-            );
+            ];
 
             $objectToCompare = new TestObject();
             // $objectToCompare will retrieve data from the form submission; pass it as the second argument
@@ -150,10 +150,10 @@ make sure the ``FormRegistry`` uses the created instance::
             // create a type instance with the mocked dependencies
             $type = new TestedType($this->objectManager);
 
-            return array(
+            return [
                 // register the type instances with the PreloadedExtension
-                new PreloadedExtension(array($type), array()),
-            );
+                new PreloadedExtension([$type], []),
+            ];
         }
 
         public function testSubmitValidData()
@@ -205,9 +205,9 @@ allows you to return a list of extensions to register::
                 ->method('getMetadataFor')
                 ->will($this->returnValue(new ClassMetadata(Form::class)));
 
-            return array(
+            return [
                 new ValidatorExtension($this->validator),
-            );
+            ];
         }
 
         // ... your tests
@@ -220,4 +220,4 @@ and :method:`Symfony\\Component\\Form\\Test\\FormIntegrationTestCase::getTypeGue
 methods.
 
 .. ready: no
-.. revision: ca653aadff0540f4ed6392a076e4629e89a1009a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

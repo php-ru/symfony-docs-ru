@@ -61,13 +61,13 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
     .. code-block:: php
 
         // config/packages/security.php
-        $container->loadFromExtension('security', array(
+        $container->loadFromExtension('security', [
             // ...
 
-            'firewalls' => array(
-                'main' => array(
+            'firewalls' => [
+                'main' => [
                     // ...
-                    'remember_me' => array(
+                    'remember_me' => [
                         'secret'   => '%kernel.secret%',
                         'lifetime' => 604800, // 1 week in seconds
                         'path'     => '/',
@@ -75,10 +75,10 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
                         // checkbox in the login form (see below), uncomment
                         // the following line to always enable it.
                         //'always_remember_me' => true,
-                    ),
-                ),
-            ),
-        ));
+                    ],
+                ],
+            ],
+        ]);
 
 The ``remember_me`` firewall defines the following configuration options:
 
@@ -177,7 +177,7 @@ users to change their password. You can do this by leveraing a few special "role
 
     // src/Controller/AccountController.php
     // ...
-    
+
     public function accountInfo()
     {
         // allow any authenticated user - we don't care if they just
@@ -198,4 +198,4 @@ users to change their password. You can do this by leveraing a few special "role
     }
 
 .. ready: no
-.. revision: d3c31d78aa1099760f7f71dd273d92b5889acd16
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

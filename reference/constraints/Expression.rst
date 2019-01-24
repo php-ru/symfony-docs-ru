@@ -119,10 +119,10 @@ One way to accomplish this is with the Expression constraint:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addConstraint(new Assert\Expression(array(
+                $metadata->addConstraint(new Assert\Expression([
                     'expression' => 'this.getCategory() in ["php", "symfony"] or !this.isTechnicalPost()',
                     'message' => 'If this is a tech post, the category should be either php or symfony!',
-                )));
+                ]));
             }
 
             // ...
@@ -208,10 +208,10 @@ more about the expression language syntax, see
             {
                 public static function loadValidatorMetadata(ClassMetadata $metadata)
                 {
-                    $metadata->addPropertyConstraint('isTechnicalPost', new Assert\Expression(array(
+                    $metadata->addPropertyConstraint('isTechnicalPost', new Assert\Expression([
                         'expression' => 'this.getCategory() in ["php", "symfony"] or value == false',
                         'message' => 'If this is a tech post, the category should be either php or symfony!',
-                    )));
+                    ]));
                 }
 
                 // ...
@@ -338,14 +338,14 @@ type (numeric, boolean, strings, null, etc.)
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('metric', new Assert\Expression(array(
+                $metadata->addPropertyConstraint('metric', new Assert\Expression([
                     'expression' => 'value + error_margin < threshold',
-                    'values' => array('error_margin' => 0.25, 'threshold' => 1.5),
-                )));
+                    'values' => ['error_margin' => 0.25, 'threshold' => 1.5],
+                ]));
             }
 
             // ...
         }
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

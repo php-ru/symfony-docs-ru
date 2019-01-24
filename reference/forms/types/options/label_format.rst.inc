@@ -14,13 +14,13 @@ to a field. To avoid duplicated keyword messages, you can configure the label
 format to a static value, like::
 
     // ...
-    $profileFormBuilder->add('address', AddressType::class, array(
+    $profileFormBuilder->add('address', AddressType::class, [
         'label_format' => 'form.address.%name%',
-    ));
+    ]);
 
-    $invoiceFormBuilder->add('invoice', AddressType::class, array(
+    $invoiceFormBuilder->add('invoice', AddressType::class, [
         'label_format' => 'form.address.%name%',
-    ));
+    ]);
 
 This option is inherited by the child types. With the code above, the label of
 the ``street`` field of both forms will use the ``form.address.street`` keyword
@@ -44,4 +44,4 @@ The default value (``null``) results in a
     :doc:`customized form theming </form/form_customization>`.
 
 .. ready: no
-.. revision: 3b17629e07cdd885435e9f7b190afd6a7c62812b
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

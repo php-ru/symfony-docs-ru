@@ -98,7 +98,12 @@ it:
 
 Twig comes with a long list of `tags`_, `filters`_ and `functions`_ that are available
 by default. You can even add your own *custom* filters, functions (and more) via
-a :doc:`Twig Extension </templating/twig_extension>`.
+a :doc:`Twig Extension </templating/twig_extension>`. Run the following command
+to list them all:
+
+.. code-block:: terminal
+
+    $ php bin/console debug:twig
 
 Twig code will look similar to PHP code, with subtle, nice differences. The following
 example uses a standard ``for`` tag and the ``cycle()`` function to print ten div tags,
@@ -125,7 +130,7 @@ Throughout this article, template examples will be shown in both Twig and PHP.
     Twig can also do things that PHP can't, such as whitespace control,
     sandboxing, automatic HTML escaping, manual contextual output escaping,
     and the inclusion of custom functions and filters that only affect templates.
-    Twig contains little features that make writing templates easier and more concise.
+    Twig contains a lot of features that make writing templates easier and more concise.
     Take the following example, which combines a loop with a logical ``if``
     statement:
 
@@ -531,9 +536,9 @@ configuration:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('welcome', new Route('/', array(
+        $routes->add('welcome', new Route('/', [
             '_controller' => 'App\Controller\WelcomeController::index',
-        )));
+        ]));
 
         return $routes;
 
@@ -594,9 +599,9 @@ route:
         use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
-        $routes->add('article_show', new Route('/article/{slug}', array(
+        $routes->add('article_show', new Route('/article/{slug}', [
             '_controller' => 'App\Controller\ArticleController::show',
-        )));
+        ]));
 
         return $routes;
 
@@ -818,4 +823,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: 7c0a3a1237d5eb6df96212aaf1b2f170a916c33e
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

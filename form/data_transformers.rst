@@ -47,9 +47,9 @@ Suppose you have a Task form with a tags ``text`` type::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class' => Task::class,
-            ));
+            ]);
         }
 
         // ...
@@ -146,9 +146,9 @@ Start by setting up the text field like normal::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'data_class' => Task::class,
-            ));
+            ]);
         }
 
         // ...
@@ -277,10 +277,10 @@ and type-hint the new class::
         {
             $builder
                 ->add('description', TextareaType::class)
-                ->add('issue', TextType::class, array(
+                ->add('issue', TextType::class, [
                     // validation message if the data transformer fails
                     'invalid_message' => 'That is not a valid issue number',
-                ));
+                ]);
 
             // ...
 
@@ -363,9 +363,9 @@ First, create the custom field type class::
 
         public function configureOptions(OptionsResolver $resolver)
         {
-            $resolver->setDefaults(array(
+            $resolver->setDefaults([
                 'invalid_message' => 'The selected issue does not exist',
-            ));
+            ]);
         }
 
         public function getParent()
@@ -465,4 +465,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: 10fe12db817679dea227ea97dc6c5cdbca0a011c
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

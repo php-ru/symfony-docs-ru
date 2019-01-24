@@ -447,13 +447,13 @@ rendered.
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 'form/fields.html.twig',
-            ),
+            ],
 
             // ...
-        ));
+        ]);
 
 By default, Twig uses a *div* layout when rendering forms. Some people, however,
 may prefer to render forms in a *table* layout. Use the ``form_table_layout.html.twig``
@@ -490,13 +490,13 @@ resource to use such a layout:
     .. code-block:: php
 
         // config/packages/twig.php
-        $container->loadFromExtension('twig', array(
-            'form_themes' => array(
+        $container->loadFromExtension('twig', [
+            'form_themes' => [
                 'form_table_layout.html.twig',
-            ),
+            ],
 
             // ...
-        ));
+        ]);
 
 If you only want to make the change in one template, add the following line to
 your template file rather than adding the template as a resource:
@@ -552,9 +552,9 @@ field whose *id* is ``product_name`` (and name is ``product[name]``).
         {
             // ...
 
-            $builder->add('name', TextType::class, array(
+            $builder->add('name', TextType::class, [
                 'block_name' => 'custom_name',
-            ));
+            ]);
         }
 
     Then the block name will be ``_product_custom_name_widget``.
@@ -737,6 +737,36 @@ class to the ``div`` element around each row:
 
 .. tip::
 
+    If you want to customize some instances of the same form only (without
+    the need to create a new form type) you can set the ``block_prefix``
+    option in your form type::
+
+        use Symfony\Component\Form\Extension\Core\Type\TextType;
+        use Symfony\Component\Form\FormBuilderInterface;
+
+        public function buildForm(FormBuilderInterface $builder, array $options)
+        {
+            $builder->add('name', TextType::class, array(
+                'block_prefix' => 'wrapped_text',
+            ));
+        }
+
+    .. versionadded:: 4.3
+
+        The ``block_prefix`` option was introduced in Symfony 4.3.
+
+    Then the block name will be ``wrapped_text_row``.
+
+    .. code-block:: html+twig
+
+        {% block wrapped_text_row %}
+            <div class="wrapped">
+                {{ form_row(form) }}
+            </div>
+        {% endblock wrapped_text_row %}
+
+.. tip::
+
     See :ref:`form-theming-methods` for how to apply this customization.
 
 Adding a "Required" Asterisk to Field Labels
@@ -862,4 +892,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: e0f44de5bb017dbf2c1ff777fe2f54474f5b2c15

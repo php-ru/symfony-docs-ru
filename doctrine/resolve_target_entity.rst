@@ -146,14 +146,14 @@ about the replacement:
         use Acme\InvoiceBundle\Model\InvoiceSubjectInterface;
         use App\Entity\Customer;
 
-        $container->loadFromExtension('doctrine', array(
-            'orm' => array(
+        $container->loadFromExtension('doctrine', [
+            'orm' => [
                 // ...
-                'resolve_target_entities' => array(
+                'resolve_target_entities' => [
                     InvoiceSubjectInterface::class => Customer::class,
-                ),
-            ),
-        ));
+                ],
+            ],
+        ]);
 
 Final Thoughts
 --------------
@@ -164,4 +164,4 @@ define relationships between different objects. By using this method,
 your bundles will end up being easier to maintain independently.
 
 .. ready: no
-.. revision: 2b0236f329c9d44bfa83b5e53e2d4abeabf1d4a2
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

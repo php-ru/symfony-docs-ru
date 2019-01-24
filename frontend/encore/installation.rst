@@ -57,7 +57,7 @@ is the main config file for both Webpack and Webpack Encore:
 
     Encore
         // directory where compiled assets will be stored
-        .setOutputPath('web/build/')
+        .setOutputPath('public/build/')
         // public path used by the web server to access the output path
         .setPublicPath('/build')
         // only needed for CDN's or sub-directory deploy
@@ -133,4 +133,4 @@ You'll customize and learn more about these file in :doc:`/frontend/encore/simpl
 .. _`WebpackEncoreBundle`: https://github.com/symfony/webpack-encore-bundle
 
 .. ready: no
-.. revision: 4ef3922245a59d82c90f0bc2fe403e686437ab2a
+.. revision: e3889266cfc0f1b52a8fbbab7f67415133f67769

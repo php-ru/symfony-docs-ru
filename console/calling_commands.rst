@@ -19,11 +19,11 @@ Calling a command from another one is straightforward::
     {
         $command = $this->getApplication()->find('demo:greet');
 
-        $arguments = array(
+        $arguments = [
             'command' => 'demo:greet',
             'name'    => 'Fabien',
             '--yell'  => true,
-        );
+        ];
 
         $greetInput = new ArrayInput($arguments);
         $returnCode = $command->run($greetInput, $output);
@@ -60,4 +60,4 @@ returns the returned code from the command (return value from command's
     output is optimized for the console and not to be passed to other commands.
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

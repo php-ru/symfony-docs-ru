@@ -10,9 +10,9 @@ form, so you can use it for any form field type which requires an object::
     use App\Form\MediaType;
     // ...
 
-    $builder->add('media', MediaType::class, array(
+    $builder->add('media', MediaType::class, [
         'data_class' => Media::class,
-    ));
+    ]);
 
 .. ready: no
-.. revision: cfce3d9f04aed4a24ae8375ec420779d35c3e04a
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

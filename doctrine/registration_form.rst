@@ -152,7 +152,7 @@ saves the user::
         public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
         {
             $user = new User();
-            $form = $this->createForm(RegistrationFormType::class);
+            $form = $this->createForm(RegistrationFormType::class, $user);
             $form->handleRequest($request);
 
             if ($form->isSubmitted() && $form->isValid()) {
@@ -201,7 +201,6 @@ The template renders the form:
         {{ form_end(registrationForm) }}
     {% endblock %}
 
-
 Adding a "accept terms" Checkbox
 --------------------------------
 
@@ -226,10 +225,10 @@ To do this, add a ``termsAccepted`` field to your form, but set its
             $builder
                 ->add('email', EmailType::class);
                 // ...
-                ->add('termsAccepted', CheckboxType::class, array(
+                ->add('termsAccepted', CheckboxType::class, [
                     'mapped' => false,
                     'constraints' => new IsTrue(),
-                ))
+                ])
             );
         }
     }
@@ -247,4 +246,4 @@ controller to take advantage of this.
 .. _`CVE-2013-5750`: https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form
 
 .. ready: no
-.. revision: 4aef2e8f56567619ab86854491a99dd21210e45b
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

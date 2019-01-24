@@ -40,7 +40,7 @@ First, create the form type extension class extending from
         public static function getExtendedTypes(): iterable
         {
             // return FormType::class to modify (nearly) every field in the system
-            return array(FileType::class);
+            return [FileType::class];
         }
     }
 
@@ -77,6 +77,15 @@ this is already done for you, thanks to :ref:`autoconfiguration <services-autoco
 Once the extension is registered, any method that you've overridden (e.g.
 ``buildForm()``) will be called whenever *any* field of the given type
 (``FileType``) is built.
+
+.. tip::
+
+    Run the following command to verify that the form type extension was
+    successfully registered in the application:
+
+    .. code-block:: terminal
+
+        $ php bin/console debug:form
 
 Adding the extension Business Logic
 -----------------------------------
@@ -136,13 +145,13 @@ For example::
         public static function getExtendedTypes(): iterable
         {
             // return FormType::class to modify (nearly) every field in the system
-            return array(FileType::class);
+            return [FileType::class];
         }
 
         public function configureOptions(OptionsResolver $resolver)
         {
             // makes it legal for FileType fields to have an image_property option
-            $resolver->setDefined(array('image_property'));
+            $resolver->setDefined(['image_property']);
         }
 
         public function buildView(FormView $view, FormInterface $form, array $options)
@@ -215,7 +224,7 @@ next to the file field. For example::
         {
             $builder
                 ->add('name', TextType::class)
-                ->add('file', FileType::class, array('image_property' => 'webPath'));
+                ->add('file', FileType::class, ['image_property' => 'webPath']);
         }
     }
 
@@ -252,9 +261,9 @@ method to extend all of them::
 
         public static function getExtendedTypes(): iterable
         {
-            return array(DateTimeType::class, DateType::class, TimeType::class);
+            return [DateTimeType::class, DateType::class, TimeType::class];
         }
     }
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e

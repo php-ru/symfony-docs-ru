@@ -37,6 +37,7 @@ on all types for which ``FormType`` is the parent.
 | Inherited | - `attr`_                                                          |
 | options   | - `auto_initialize`_                                               |
 |           | - `block_name`_                                                    |
+|           | - `block_prefix`_                                                  |
 |           | - `disabled`_                                                      |
 |           | - `label`_                                                         |
 |           | - `translation_domain`_                                            |
@@ -45,6 +46,8 @@ on all types for which ``FormType`` is the parent.
 +-----------+--------------------------------------------------------------------+
 | Class     | :class:`Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType` |
 +-----------+--------------------------------------------------------------------+
+
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
 
 Field Options
 -------------
@@ -87,7 +90,7 @@ The actual default value of this option depends on other field options:
 
 * If ``data_class`` is set and ``required`` is ``true``, then ``new $data_class()``;
 * If ``data_class`` is set and ``required`` is ``false``, then ``null``;
-* If ``data_class`` is not set and ``compound`` is ``true``, then ``array()``
+* If ``data_class`` is not set and ``compound`` is ``true``, then ``[]``
   (empty array);
 * If ``data_class`` is not set and ``compound`` is ``false``, then ``''``
   (empty string).
@@ -154,6 +157,8 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 
 .. include:: /reference/forms/types/options/block_name.rst.inc
 
+.. include:: /reference/forms/types/options/block_prefix.rst.inc
+
 .. include:: /reference/forms/types/options/disabled.rst.inc
 
 .. include:: /reference/forms/types/options/label.rst.inc
@@ -161,4 +166,4 @@ of the form type tree (i.e. it cannot be used as a form type on its own).
 .. include:: /reference/forms/types/options/translation_domain.rst.inc
 
 .. ready: no
-.. revision: 2086b162ba7b8e310a38fb108468cab6dd0d18fa
+.. revision: e0f44de5bb017dbf2c1ff777fe2f54474f5b2c15

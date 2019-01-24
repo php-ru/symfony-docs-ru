@@ -80,7 +80,7 @@ Basic Usage
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('locale', new Assert\Locale(array('canonicalize' => true)));
+                $metadata->addPropertyConstraint('locale', new Assert\Locale(['canonicalize' => true]));
             }
         }
 
@@ -124,4 +124,4 @@ the validity of the given locale (e.g. ``FR-fr.utf8`` is transformed into ``fr_F
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

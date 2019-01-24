@@ -41,10 +41,10 @@ the data stored in the cache item::
     $cache->save($productsCount);
 
     // storing an array
-    $productsCount->set(array(
+    $productsCount->set([
         'category1' => 4711,
         'category2' => 2387,
-    ));
+    ]);
     $cache->save($productsCount);
 
 The key and the value of any given cache item can be obtained with the
@@ -114,4 +114,4 @@ for cache hits::
     }
 
 .. ready: no
-.. revision: 0e22affe24d5054a0ca8b5d7bb5a006ee905c594
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

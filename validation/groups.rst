@@ -110,21 +110,21 @@ user registers and when a user updates their contact information later:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('email', new Assert\Email(array(
-                    'groups' => array('registration'),
-                )));
+                $metadata->addPropertyConstraint('email', new Assert\Email([
+                    'groups' => ['registration'],
+                ]));
 
-                $metadata->addPropertyConstraint('password', new Assert\NotBlank(array(
-                    'groups' => array('registration'),
-                )));
-                $metadata->addPropertyConstraint('password', new Assert\Length(array(
+                $metadata->addPropertyConstraint('password', new Assert\NotBlank([
+                    'groups' => ['registration'],
+                ]));
+                $metadata->addPropertyConstraint('password', new Assert\Length([
                     'min'    => 7,
-                    'groups' => array('registration'),
-                )));
+                    'groups' => ['registration'],
+                ]));
 
-                $metadata->addPropertyConstraint('city', new Assert\Length(array(
+                $metadata->addPropertyConstraint('city', new Assert\Length([
                     "min" => 3,
-                )));
+                ]));
             }
         }
 
@@ -174,7 +174,7 @@ the class name or the string ``Default``.
 To tell the validator to use a specific group, pass one or more group names
 as the third argument to the ``validate()`` method::
 
-    $errors = $validator->validate($author, null, array('registration'));
+    $errors = $validator->validate($author, null, ['registration']);
 
 If no groups are specified, all constraints that belong to the group ``Default``
 will be applied.
@@ -184,4 +184,4 @@ library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

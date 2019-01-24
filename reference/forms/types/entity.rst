@@ -54,6 +54,8 @@ objects from the database.
 | Class       | :class:`Symfony\\Bridge\\Doctrine\\Form\\Type\\EntityType`       |
 +-------------+------------------------------------------------------------------+
 
+.. include:: /reference/forms/types/options/_debug_form.rst.inc
+
 Basic Usage
 -----------
 
@@ -64,7 +66,7 @@ be listed inside the choice field::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('users', EntityType::class, array(
+    $builder->add('users', EntityType::class, [
         // looks for choices from this entity
         'class' => User::class,
 
@@ -74,7 +76,7 @@ be listed inside the choice field::
         // used to render a select box, check boxes or radios
         // 'multiple' => true,
         // 'expanded' => true,
-    ));
+    ]);
 
 This will build a ``select`` drop-down containing *all* of the ``User`` objects
 in the database. To render radio buttons or checkboxes instead, change the
@@ -94,14 +96,14 @@ the `query_builder`_ option::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('users', EntityType::class, array(
+    $builder->add('users', EntityType::class, [
         'class' => User::class,
         'query_builder' => function (EntityRepository $er) {
             return $er->createQueryBuilder('u')
                 ->orderBy('u.username', 'ASC');
         },
         'choice_label' => 'username',
-    ));
+    ]);
 
 .. _reference-forms-entity-choices:
 
@@ -119,10 +121,10 @@ then you can supply the ``choices`` option directly::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('users', EntityType::class, array(
+    $builder->add('users', EntityType::class, [
         'class' => User::class,
         'choices' => $group->getUsers(),
-    ));
+    ]);
 
 .. include:: /reference/forms/types/options/select_how_rendered.rst.inc
 
@@ -141,10 +143,10 @@ the HTML element::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('category', EntityType::class, array(
+    $builder->add('category', EntityType::class, [
         'class' => Category::class,
         'choice_label' => 'displayName',
-    ));
+    ]);
 
 If left blank, the entity object will be cast to a string and so must have a ``__toString()``
 method. You can also pass a callback function for more control::
@@ -153,12 +155,12 @@ method. You can also pass a callback function for more control::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('category', EntityType::class, array(
+    $builder->add('category', EntityType::class, [
         'class' => Category::class,
         'choice_label' => function ($category) {
             return $category->getDisplayName();
         }
-    ));
+    ]);
 
 The method is called for each entity in the list and passed to the function. For
 more details, see the main :ref:`choice_label <reference-form-choice-label>` documentation.
@@ -175,10 +177,10 @@ more details, see the main :ref:`choice_label <reference-form-choice-label>` doc
         use Symfony\Bridge\Doctrine\Form\Type\EntityType;
         // ...
 
-        $builder->add('genre', EntityType::class, array(
+        $builder->add('genre', EntityType::class, [
            'class' => 'App\Entity\Genre',
            'choice_label' => 'translations[en].name',
-        ));
+        ]);
 
 class
 ~~~~~
@@ -277,7 +279,7 @@ These options inherit from the :doc:`ChoiceType </reference/forms/types/choice>`
 preferred_choices
 ~~~~~~~~~~~~~~~~~
 
-**type**: ``array`` or ``callable`` **default**: ``array()``
+**type**: ``array`` or ``callable`` **default**: ``[]``
 
 This option allows you to move certain choices to the top of your list with a visual
 separator between them and the rest of the options. This option expects an array
@@ -287,11 +289,11 @@ of entity objects::
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
-    $builder->add('users', EntityType::class, array(
+    $builder->add('users', EntityType::class, [
         'class' => User::class,
         // this method must return an array of User entities
         'preferred_choices' => $group->getPreferredUsers(),
-    ));
+    ]);
 
 The preferred choices are only meaningful when rendering a ``select`` element
 (i.e. ``expanded`` false). The preferred choices and normal choices are separated
@@ -320,7 +322,7 @@ The actual default value of this option depends on other field options:
 
 * If ``multiple`` is ``false`` and ``expanded`` is ``false``, then ``''``
   (empty string);
-* Otherwise ``array()`` (empty array).
+* Otherwise ``[]`` (empty array).
 
 .. include:: /reference/forms/types/options/empty_data.rst.inc
     :start-after: DEFAULT_PLACEHOLDER
@@ -344,4 +346,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: f6162bc4157c2e5b54c453593a35bb643f86fc8a
+.. revision: fbf8676ffbf3c30494107f690accc2268237dc14

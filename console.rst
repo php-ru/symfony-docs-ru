@@ -337,7 +337,7 @@ console::
 
             $command = $application->find('app:create-user');
             $commandTester = new CommandTester($command);
-            $commandTester->execute(array(
+            $commandTester->execute([
                 'command'  => $command->getName(),
 
                 // pass arguments to the helper
@@ -345,7 +345,7 @@ console::
 
                 // prefix the key with two dashes when passing options,
                 // e.g: '--some-option' => 'option_value',
-            ));
+            ]);
 
             // the output of the command in the console
             $output = $commandTester->getDisplay();
@@ -366,6 +366,15 @@ console::
     :class:`Symfony\\Component\\Console\\Application <Symfony\\Component\\Console\\Application>`
     and extend the normal ``\PHPUnit\Framework\TestCase``.
 
+Logging Command Errors
+----------------------
+
+Whenever an exception is thrown while running commands, Symfony adds a log
+message for it including the entire failing command. In addition, Symfony
+registers an :doc:`event subscriber </event_dispatcher>` to listen to the
+:ref:`ConsoleEvents::TERMINATE event <console-events-terminate>` and adds a log
+message whenever a command doesn't finish with the ``0`` exit status.
+
 Learn More
 ----------
 
@@ -384,4 +393,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: f4b9666f60781f9ef9152037f27f0160786d47f5

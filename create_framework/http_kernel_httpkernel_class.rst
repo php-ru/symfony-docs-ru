@@ -169,7 +169,7 @@ only if needed::
 
         public static function getSubscribedEvents()
         {
-            return array('kernel.view' => 'onView');
+            return ['kernel.view' => 'onView'];
         }
     }
 
@@ -203,4 +203,4 @@ many websites; a code that has been audited for security issues and that has
 proven to scale well.
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

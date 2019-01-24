@@ -217,10 +217,10 @@ exposing a simple and efficient pattern::
             $comments = ...;
 
             // or render a template with the $response you've already started
-            return $this->render('article/show.html.twig', array(
+            return $this->render('article/show.html.twig', [
                 'article' => $article,
                 'comments' => $comments,
-            ), $response);
+            ], $response);
         }
     }
 
@@ -234,4 +234,4 @@ headers that must not be present for ``304`` responses (see
 .. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

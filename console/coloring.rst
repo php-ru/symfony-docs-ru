@@ -40,7 +40,7 @@ It is possible to define your own styles using the
     use Symfony\Component\Console\Formatter\OutputFormatterStyle;
 
     // ...
-    $outputStyle = new OutputFormatterStyle('red', 'yellow', array('bold', 'blink'));
+    $outputStyle = new OutputFormatterStyle('red', 'yellow', ['bold', 'blink']);
     $output->getFormatter()->setStyle('fire', $outputStyle);
 
     $output->writeln('<fire>foo</>');
@@ -98,4 +98,4 @@ will be lost.
 .. _`list of terminal emulators that support links`: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
 
 .. ready: no
-.. revision: bf99c176fd80b0c19e856b931a9cb038adb0bfb3
+.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235

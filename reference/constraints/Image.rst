@@ -142,12 +142,12 @@ that it is between a certain size, add the following:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('headshot', new Assert\Image(array(
+                $metadata->addPropertyConstraint('headshot', new Assert\Image([
                     'minWidth' => 200,
                     'maxWidth' => 400,
                     'minHeight' => 200,
                     'maxHeight' => 400,
-                )));
+                ]));
             }
         }
 
@@ -214,10 +214,10 @@ following code:
 
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('headshot', new Assert\Image(array(
+                $metadata->addPropertyConstraint('headshot', new Assert\Image([
                     'allowLandscape'    => false,
                     'allowPortrait'     => false,
-                )));
+                ]));
             }
         }
 
@@ -569,4 +569,4 @@ This message has no parameters.
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: 60c4d98518ae9d90cae82d661c7f80048f01830b
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

@@ -95,7 +95,7 @@ array of ``key => value`` pairs representing option names and their respective v
         'redis://localhost:6379',
 
         // associative array of configuration options
-        array(
+        [
             'compression' => true,
             'lazy' => false,
             'persistent' => 0,
@@ -104,7 +104,7 @@ array of ``key => value`` pairs representing option names and their respective v
             'timeout' => 30,
             'read_timeout' => 0,
             'retry_interval' => 0,
-         )
+        ]
 
     );
 
@@ -163,4 +163,4 @@ Available Options
 .. _`TCP-keepalive`: https://redis.io/topics/clients#tcp-keepalive
 
 .. ready: no
-.. revision: c19f2794f85b3475a15ee84923703912eba80493
+.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241

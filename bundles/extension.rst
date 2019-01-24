@@ -126,14 +126,14 @@ performance. Define the list of annotated classes to compile in the
     {
         // ...
 
-        $this->addAnnotatedClassesToCompile(array(
+        $this->addAnnotatedClassesToCompile([
             // you can define the fully qualified class names...
             'App\\Controller\\DefaultController',
             // ... but glob patterns are also supported:
             '**Bundle\\Controller\\',
 
             // ...
-        ));
+        ]);
     }
 
 .. note::
@@ -152,4 +152,4 @@ the full classmap executing the ``dump-autoload`` command of Composer.
     these classes from the ``classes.php`` file.
 
 .. ready: no
-.. revision: 1a6ed635c0ab9da47f965caabf27dab4152ec8dc
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd

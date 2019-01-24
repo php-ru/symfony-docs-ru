@@ -15,13 +15,13 @@ Take the following example::
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
     // ...
 
-    $builder->add('publishAt', ChoiceType::class, array(
-        'choices' => array(
+    $builder->add('publishAt', ChoiceType::class, [
+        'choices' => [
             'now' => new \DateTime('now'),
             'tomorrow' => new \DateTime('+1 day'),
             '1 week' => new \DateTime('+1 week'),
             '1 month' => new \DateTime('+1 month'),
-        ),
+        ],
         'group_by' => function($choiceValue, $key, $value) {
             if ($choiceValue <= new \DateTime('+3 days')) {
                 return 'Soon';
@@ -29,7 +29,7 @@ Take the following example::
                 return 'Later';
             }
         },
-    ));
+    ]);
 
 This groups the dates that are within 3 days into "Soon" and everything else into
 a "Later" ``<optgroup>``:
@@ -42,4 +42,4 @@ If you return ``null``, the option won't be grouped. You can also pass a string
 details about using a property path.
 
 .. ready: no
-.. revision: 2d5e4afb41e30c179734b958c42f8a14700e10cb
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -16,11 +16,11 @@ For more information on valid formats, see `Date/Time Format Syntax`_::
     use Symfony\Component\Form\Extension\Core\Type\DateType;
     // ...
 
-    $builder->add('date_created', DateType::class, array(
+    $builder->add('date_created', DateType::class, [
         'widget' => 'single_text',
         // this is actually the default format for single_text
         'format' => 'yyyy-MM-dd',
-    ));
+    ]);
 
 .. note::
 
@@ -34,4 +34,4 @@ For more information on valid formats, see `Date/Time Format Syntax`_::
 .. _`RFC 3339`: https://tools.ietf.org/html/rfc3339
 
 .. ready: no
-.. revision: f70883afcff85808317d433950885346341536f6
+.. revision: a4440f903683700db6b3cbd281387684af93bc42

@@ -49,13 +49,13 @@ tests significantly. That's why Symfony disables it by default:
         // config/packages/test/web_profiler.php
 
         // ...
-        $container->loadFromExtension('framework', array(
+        $container->loadFromExtension('framework', [
             // ...
-            'profiler' => array(
+            'profiler' => [
                 'enabled' => true,
                 'collect' => false,
-            ),
-        ));
+            ],
+        ]);
 
 Setting ``collect`` to ``true`` enables the profiler for all tests. However, if
 you need the profiler just in a few tests, you can keep it disabled globally and
@@ -127,4 +127,4 @@ finish. It's easy to achieve if you embed the token in the error message::
     to learn more about their interfaces.
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475

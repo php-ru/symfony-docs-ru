@@ -201,7 +201,15 @@ Access the node name (HTML tag name) of the first node of the current selection 
 
 Access the value of the first node of the current selection::
 
+    // if the node does not exist, calling to text() will result in an exception
     $message = $crawler->filterXPath('//body/p')->text();
+
+    // avoid the exception passing an argument that text() returns when node does not exist
+    $message = $crawler->filterXPath('//body/p')->text('Default text content');
+
+.. versionadded:: 4.3
+
+    The default argument of ``text()`` was introduced in Symfony 4.3.
 
 Access the attribute value of the first node of the current selection::
 
@@ -211,7 +219,7 @@ Extract attribute and/or node values from the list of nodes::
 
     $attributes = $crawler
         ->filterXpath('//body/p')
-        ->extract(array('_name', '_text', 'class'))
+        ->extract(['_name', '_text', 'class'])
     ;
 
 .. note::
@@ -220,6 +228,7 @@ Extract attribute and/or node values from the list of nodes::
     represents the element name (the HTML tag name).
 
     .. versionadded:: 4.3
+
         The special attribute ``_name`` was introduced in Symfony 4.3.
 
 Call an anonymous function on each node of the list::
@@ -272,7 +281,7 @@ and :phpclass:`DOMNode` objects::
 
     $crawler->addDocument($domDocument);
     $crawler->addNodeList($nodeList);
-    $crawler->addNodes(array($node));
+    $crawler->addNodes([$node]);
     $crawler->addNode($node);
     $crawler->add($domDocument);
 
@@ -297,7 +306,15 @@ and :phpclass:`DOMNode` objects::
     Or you can get the HTML of the first node using
     :method:`Symfony\\Component\\DomCrawler\\Crawler::html`::
 
+        // if the node does not exist, calling to html() will result in an exception
         $html = $crawler->html();
+
+        // avoid the exception passing an argument that html() returns when node does not exist
+        $html = $crawler->html('Default <strong>HTML</strong> content');
+
+    .. versionadded:: 4.3
+
+        The default argument of ``html()`` was introduced in Symfony 4.3.
 
 Expression Evaluation
 ~~~~~~~~~~~~~~~~~~~~~
@@ -425,9 +442,9 @@ form that the button lives in::
     $crawler->filter('.form-vertical')->form();
 
     // or "fill" the form fields with data
-    $form = $crawler->selectButton('my-super-button')->form(array(
+    $form = $crawler->selectButton('my-super-button')->form([
         'name' => 'Ryan',
-    ));
+    ]);
 
 The :class:`Symfony\\Component\\DomCrawler\\Form` object has lots of very
 useful methods for working with forms::
@@ -451,10 +468,10 @@ attribute followed by a query string of all of the form's values.
 You can virtually set and get values on the form::
 
     // sets values on the form internally
-    $form->setValues(array(
+    $form->setValues([
         'registration[username]' => 'symfonyfan',
         'registration[terms]'    => 1,
-    ));
+    ]);
 
     // gets back an array of values - in the "flat" array like above
     $values = $form->getValues();
@@ -474,13 +491,13 @@ To work with multi-dimensional fields::
 Pass an array of values::
 
     // sets a single field
-    $form->setValues(array('multi' => array('value')));
+    $form->setValues(['multi' => ['value']]);
 
     // sets multiple fields at once
-    $form->setValues(array('multi' => array(
+    $form->setValues(['multi' => [
         1             => 'value',
         'dimensional' => 'an other value',
-    )));
+    ]]);
 
 This is great, but it gets better! The ``Form`` object allows you to interact
 with your form like a browser, selecting radio values, ticking checkboxes,
@@ -496,7 +513,7 @@ and uploading files::
     $form['registration[birthday][year]']->select(1984);
 
     // selects many options from a "multiple" select
-    $form['registration[interests]']->select(array('symfony', 'cookies'));
+    $form['registration[interests]']->select(['symfony', 'cookies']);
 
     // fakes a file upload
     $form['registration[photo]']->upload('/path/to/lucas.jpg');
@@ -566,4 +583,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: 851956dd32e226a9d43dbcb40b5662a73145e07c

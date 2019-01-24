@@ -159,7 +159,7 @@ If you do want to though then the container can call the setter method::
 
     $containerBuilder
         ->register('newsletter_manager', 'NewsletterManager')
-        ->addMethodCall('setMailer', array(new Reference('mailer')));
+        ->addMethodCall('setMailer', [new Reference('mailer')]);
 
 You could then get your ``newsletter_manager`` service from the container
 like this::
@@ -300,7 +300,7 @@ config files:
 
         $container
             ->register('newsletter_manager', 'NewsletterManager')
-            ->addMethodCall('setMailer', array(new Reference('mailer')));
+            ->addMethodCall('setMailer', [new Reference('mailer')]);
 
 Learn More
 ----------
@@ -316,4 +316,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/dependency-injection
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
