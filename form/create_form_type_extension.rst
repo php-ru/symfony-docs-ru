@@ -178,7 +178,7 @@ Override the File Widget Template Fragment
 
 Each field type is rendered by a template fragment. Those template fragments
 can be overridden in order to customize form rendering. For more information,
-you can refer to the :ref:`form-customization-form-themes` article.
+you can refer to the :ref:`form fragment naming <form-fragment-naming>` rules.
 
 In your extension class, you added a new variable (``image_url``), but
 you still need to take advantage of this new variable in your templates.
@@ -266,4 +266,4 @@ method to extend all of them::
     }
 
 .. ready: no
-.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e
+.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92

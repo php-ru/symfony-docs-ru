@@ -279,6 +279,14 @@ isAbsolutePath
     // returns false
     $fileSystem->isAbsolutePath('../dir');
 
+tempnam
+~~~~~~~
+
+:method:`Symfony\\Component\\Filesystem\\Filesystem::tempnam` creates a temporary file with a unique filename, and returns its path, or throw an exception on failure::
+
+    // returns a path like : /tmp/prefix_wyjgtF
+    $filesystem->tempnam('/tmp', 'prefix_');
+
 dumpFile
 ~~~~~~~~
 
@@ -319,4 +327,4 @@ Whenever something wrong happens, an exception implementing
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: f18cbc8d265be09a90e38319cafef1c846137b83

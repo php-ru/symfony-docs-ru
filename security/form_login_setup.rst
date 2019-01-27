@@ -295,7 +295,7 @@ be redirected after success:
 
     -     throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     +     // redirect to some "app_homepage" route - of wherever you want
-    +     return new RedirectResponse($this->router->generate('app_homepage'));
+    +     return new RedirectResponse($this->urlGenerator->generate('app_homepage'));
     }
 
 Unless you have any other TODOs in that file, that's it! If you're loading users
@@ -375,4 +375,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 5b03390116b7befd313c8b08e52e2d26c07466de
+.. revision: f00344a80fca2057786563784f3823aa58632e71

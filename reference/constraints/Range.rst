@@ -320,7 +320,7 @@ Options
 min
 ~~~
 
-**type**: ``int`` or ``string`` (date format)
+**type**: ``number`` or ``string`` (date format)
 
 This required option is the "min" value. Validation will fail if the given
 value is **less** than this min value.
@@ -328,7 +328,7 @@ value is **less** than this min value.
 max
 ~~~
 
-**type**: ``int`` or ``string`` (date format)
+**type**: ``number`` or ``string`` (date format)
 
 This required option is the "max" value. Validation will fail if the given
 value is **greater** than this max value.
@@ -391,4 +391,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: f18cbc8d265be09a90e38319cafef1c846137b83

@@ -105,8 +105,9 @@ shipping options.
 Creating a Template for the Field
 ---------------------------------
 
-Each field type is rendered by a template fragment, which is determined in part by
-the class name of your type. For more information, see :ref:`form-customization-form-themes`.
+Each field type is rendered by a template fragment whose name is determined in
+part by the class name of your type. Read the :ref:`from fragment naming <form-fragment-naming>`
+rules for more details.
 
 .. note::
 
@@ -168,8 +169,8 @@ link for details), create a ``shipping_widget`` block to handle this:
 .. note::
 
     Make sure the correct widget prefix is used. In this example the name should
-    be ``shipping_widget`` (see :ref:`form-customization-form-themes`).
-    Further, the main config file should point to the custom form template
+    be ``shipping_widget`` (see :ref:`form fragment naming <form-fragment-naming>`
+    rules). Further, the main config file should point to the custom form template
     so that it's used when rendering all forms.
 
     When using Twig this is:
@@ -323,4 +324,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: e0f44de5bb017dbf2c1ff777fe2f54474f5b2c15
+.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
