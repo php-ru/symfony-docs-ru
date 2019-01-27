@@ -1444,8 +1444,7 @@ resources
 **type**: ``string[]`` **default**: ``['FrameworkBundle:Form']``
 
 A list of all resources for form theming in PHP. This setting is not required
-if you're using the Twig format for your templates, in that case refer to
-:ref:`the form article <forms-theming-twig>`.
+if you're :ref:`using the Twig format for your themes <forms-theming-twig>`.
 
 Assume you have custom global form themes in ``templates/form_themes/``, you can
 configure this like:
@@ -2109,4 +2108,4 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`error_reporting PHP option`: https://secure.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting
 
 .. ready: no
-.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab
+.. revision: 7cdf54aec34164d2d99f3551e38e2668ed53491d

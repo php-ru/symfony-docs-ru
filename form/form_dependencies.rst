@@ -95,7 +95,7 @@ so that you can make a query. First, add this as an argument to your form class:
 
 If you're using :ref:`autowire <services-autowire>` and
 :ref:`autoconfigure <services-autoconfigure>`, then you don't need to do *anything*
-else: Symfony will automatically know to pass the correct ``EntityManager`` object
+else: Symfony will automatically know how to pass the correct ``EntityManager`` object
 to your ``__construct()`` method.
 
 If you are **not using autowire and autoconfigure**, register your form as a service
@@ -145,4 +145,4 @@ at all: Symfony is smart enough to load the ``TaskType`` from the container.
 Read :ref:`form-field-service` for more information.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: f18cbc8d265be09a90e38319cafef1c846137b83
