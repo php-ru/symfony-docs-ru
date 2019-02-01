@@ -8,7 +8,7 @@ First, download ``postcss-loader`` and any plugins you want, like ``autoprefixer
 
 .. code-block:: terminal
 
-    $ yarn add --dev postcss-loader autoprefixer
+    $ yarn add postcss-loader autoprefixer --dev
 
 Next, create a ``postcss.config.js`` file at the root of your project:
 
@@ -83,4 +83,4 @@ See `browserslist`_ for more details on the syntax.
 .. _`postcss-loader`: https://github.com/postcss/postcss-loader
 
 .. ready: no
-.. revision: c2b36a281ba6cfc92c8e94712a7ba60fe69d822e
+.. revision: cf5d474d474a78e1307bbe49e8931d5e852cb51f

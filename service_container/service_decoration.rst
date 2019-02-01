@@ -225,17 +225,17 @@ the ``decoration_priority`` option. Its value is an integer that defaults to
         // config/services.php
         use Symfony\Component\DependencyInjection\Reference;
 
-        $container->register(Foo:class)
+        $container->register(Foo::class)
 
-        $container->register(Bar:class)
-            ->addArgument(new Reference(Bar:class.'.inner'))
+        $container->register(Bar::class)
+            ->addArgument(new Reference(Bar::class.'.inner'))
             ->setPublic(false)
-            ->setDecoratedService(Foo:class, null, 5);
+            ->setDecoratedService(Foo::class, null, 5);
 
-        $container->register(Baz:class)
-            ->addArgument(new Reference(Baz:class.'.inner'))
+        $container->register(Baz::class)
+            ->addArgument(new Reference(Baz::class.'.inner'))
             ->setPublic(false)
-            ->setDecoratedService(Foo:class, null, 1);
+            ->setDecoratedService(Foo::class, null, 1);
 
 The generated code will be the following::
 
@@ -244,4 +244,4 @@ The generated code will be the following::
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: 487ed5c4a497faee37247e447ef4f4a955e3b92f
+.. revision: 513e012a613c5570e758210dd2ce61c5a16bad1c

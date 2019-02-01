@@ -344,6 +344,7 @@ First, create the custom field type class::
     use AppBundle\Form\DataTransformer\IssueToNumberTransformer;
     use Doctrine\Common\Persistence\ObjectManager;
     use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -465,4 +466,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 4f8f8258528e65f6457c170e3147b0ead7068bc7

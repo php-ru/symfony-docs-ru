@@ -19,7 +19,7 @@ Members
 
 Here are all the members of the Code of Conduct CARE team (in alphabetic order).
 You can contact any of them directly using the contact details below or you can
-also contact all of them at once by emailing **coc@symfony.com**:
+also contact all of them at once by emailing **care@symfony.com**:
 
 * **Emilie Lorenzo**
 
@@ -48,4 +48,4 @@ team with candidates they see fit. The CARE team will consist of at least
 ideally from different employers.
 
 .. ready: no
-.. revision: dde1a385ab17bbb6e8ac872f773f5aa26f635558
+.. revision: b56597ad9fe5019c334812ccc6347722f4be6dbf
