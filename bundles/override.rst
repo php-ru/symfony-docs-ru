@@ -45,7 +45,7 @@ extend from the original template, not from the overridden one:
 
     {# templates/bundles/FOSUserBundle/Registration/confirmed.html.twig #}
     {# the special '!' prefix avoids errors when extending from an overridden template #}
-    {% extends "@!FOSUserBundle/Registration/confirmed.html.twig" %}
+    {% extends "@!FOSUser/Registration/confirmed.html.twig" %}
 
     {% block some_block %}
         ...
@@ -183,4 +183,4 @@ create a``<your-project>/translations/FOSUserBundle.es.yml`` file.
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: b390ed4123947baf494f5970ef254063edf1fc1d
