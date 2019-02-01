@@ -14,7 +14,7 @@ Installation
 
 .. code-block:: terminal
 
-    $ composer require symfony/var-dumper --dev
+    $ composer require --dev symfony/var-dumper
 
 Alternatively, you can clone the `<https://github.com/symfony/var-dumper>`_ repository.
 
@@ -411,4 +411,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 2afa75aeab2cfdf223f7c21404734c563a4bdd69

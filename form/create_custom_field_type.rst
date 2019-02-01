@@ -90,8 +90,8 @@ shipping options.
 .. tip::
 
     If the purpose of this new form type was to customize the rendering of some
-    fields only, skip this step and use ``block_name`` or ``block_prefix`` option
-    instead. For more information, see :ref:`form-customization-form-themes`.
+    fields only, skip this step and use ``block_name`` or ``block_prefix`` options
+    instead to :ref:`define a custom form fragment name <form-fragment-custom-naming>`.
 
 .. tip::
 
@@ -324,4 +324,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
+.. revision: fb1cd56293396f3197b82d70cb0e031ff8169dff

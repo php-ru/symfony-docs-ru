@@ -275,6 +275,8 @@ form. You can also define this value explicitly with the ``block_name`` option::
 In this example, the fragment name will be ``_product_custom_name_widget``
 instead of the default ``_product_name_widget``.
 
+.. _form-fragment-custom-naming:
+
 Custom Fragment Naming for Individual Fields
 ............................................
 
@@ -307,7 +309,8 @@ Fragment Naming for Collections
 When using a :doc:`collection of forms </form/form_collections>`, the fragment
 of each collection item follows the pattern ``_field-name_entry_part``. For
 example, if your form field is named ``tasks``, the fragment for each task will
-be named ``_tasks_entry`` (``_tasks_entry_label``, ``_tasks_entry_label``, etc.)
+be named ``_tasks_entry`` (``_tasks_entry_row``, ``_tasks_entry_label``,
+``_tasks_entry_widget``, ``_tasks_entry_error``)
 
 Template Fragment Inheritance
 .............................
@@ -544,4 +547,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
+.. revision: 77cae83befee592286703ce9bf89e33f625232c8

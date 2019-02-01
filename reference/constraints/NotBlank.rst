@@ -2,19 +2,15 @@ NotBlank
 ========
 
 Validates that a value is not blank - meaning not equal to a blank string,
-a blank array, ``null`` or ``false``::
-
-    if (false === $value || (empty($value) && '0' != $value)) {
-        // validation will fail
-    }
-
-To force that a value is simply not equal to ``null``, see the
+a blank array, ``false`` or ``null`` (null behavior is configurable). To check
+that a value is not equal to ``null``, see the
 :doc:`/reference/constraints/NotNull` constraint.
 
 +----------------+------------------------------------------------------------------------+
 | Applies to     | :ref:`property or method <validation-property-target>`                 |
 +----------------+------------------------------------------------------------------------+
-| Options        | - `message`_                                                           |
+| Options        | - `allowNull`_                                                         |
+|                | - `message`_                                                           |
 |                | - `payload`_                                                           |
 +----------------+------------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\NotBlank`          |
@@ -87,6 +83,18 @@ class were not blank, you could do the following:
 Options
 -------
 
+allowNull
+~~~~~~~~~
+
+**type**: ``bool`` **default**: ``false``
+
+If set to ``true``, ``null`` values are considered valid and won't trigger a
+constraint violation.
+
+.. versionadded:: 4.3
+
+    The ``allowNull`` option was introduced in Symfony 4.3.
+
 message
 ~~~~~~~
 
@@ -105,4 +113,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: ab2c4f1ae0a8ae1eeaa5a7bbb9d431c5e917eb68

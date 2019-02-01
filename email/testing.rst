@@ -22,7 +22,7 @@ Start with a simple controller action that sends an email::
 
         $mailer->send($message);
 
-        return $this->render(...);
+        // ...
     }
 
 In your functional test, use the ``swiftmailer`` collector on the profiler
@@ -85,4 +85,4 @@ redirected page and the email won't be accessible.
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 951cb8790953f1c21efae2586de87741ae001b30
+.. revision: 693e45bee960073c07d73e3873ec07c2cbdf16a9

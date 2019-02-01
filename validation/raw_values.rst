@@ -58,7 +58,7 @@ Validation of arrays is possible using the ``Collection`` constraint::
         ],
         'email' => 'test@email.tld',
         'simple' => 'hello',
-        'gender' => 3,
+        'eye_color' => 3,
         'file' => null,
         'password' => 'test',
         'tags' => [
@@ -79,7 +79,7 @@ Validation of arrays is possible using the ``Collection`` constraint::
         ]),
         'email' => new Assert\Email(),
         'simple' => new Assert\Length(['min' => 102]),
-        'gender' => new Assert\Choice([3, 4]),
+        'eye_color' => new Assert\Choice([3, 4]),
         'file' => new Assert\File(),
         'password' => new Assert\Length(['min' => 60]),
         'tags' => new Assert\Optional([
@@ -108,4 +108,4 @@ is a :class:`Symfony\\Component\\Validator\\ConstraintViolation` object,
 which holds the error message on its ``getMessage()`` method.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: d33f73bb93825b9d3959eff99cef970c8a99bc2c

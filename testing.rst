@@ -1037,11 +1037,9 @@ Learn more
     :glob:
 
     testing/*
-
-* :ref:`Testing a console command <console-testing-commands>`
-* :doc:`The chapter about tests in the Symfony Framework Best Practices </best_practices/tests>`
-* :doc:`/components/dom_crawler`
-* :doc:`/components/css_selector`
+    /best_practices/tests
+    /components/dom_crawler
+    /components/css_selector
 
 .. _`PHPUnit`: https://phpunit.de/
 .. _`documentation`: https://phpunit.readthedocs.io/
@@ -1050,4 +1048,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e
+.. revision: 25362d96ca5d686bf5af47ec7696e0a56f31839f

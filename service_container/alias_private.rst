@@ -146,6 +146,69 @@ This means that when using the container directly, you can access the
             # ...
             app.mailer: '@App\Mail\PhpMailer'
 
+Deprecating Service Aliases
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you decide to deprecate the use of a service alias (because it is outdated
+or you decided not to maintain it anymore), you can deprecate its definition:
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        app.mailer:
+            alias: '@AppBundle\Mail\PhpMailer'
+
+            # this will display a generic deprecation message...
+            deprecated: true
+
+            # ...but you can also define a custom deprecation message
+            deprecated: 'The "%alias_id%" alias is deprecated. Don\'t use it anymore.'
+
+    .. code-block:: xml
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+            <services>
+                <service id="app.mailer" alias="App\Mail\PhpMailer">
+                    <!-- this will display a generic deprecation message... -->
+                    <deprecated />
+
+                    <!-- ...but you can also define a custom deprecation message -->
+                    <deprecated>The "%alias_id%" service alias is deprecated. Don't use it anymore.</deprecated>
+                </service>
+            </services>
+        </container>
+
+    .. code-block:: php
+
+        $container
+            ->setAlias('app.mailer', 'App\Mail\PhpMailer')
+
+            // this will display a generic deprecation message...
+            ->setDeprecated(true)
+
+            // ...but you can also define a custom deprecation message
+            ->setDeprecated(
+                true,
+                'The "%alias_id%" service alias is deprecated. Don\'t use it anymore.'
+            )
+        ;
+
+Now, every time this service alias is used, a deprecation warning is triggered,
+advising you to stop or to change your uses of that alias.
+
+The message is actually a message template, which replaces occurrences of the
+``%alias_id%`` placeholder by the service alias id. You **must** have at least
+one occurrence of the ``%alias_id%`` placeholder in your template.
+
+.. versionadded:: 4.3
+
+    The ``deprecated`` option for service aliases was introduced in Symfony 4.3.
+
 Anonymous Services
 ------------------
 
@@ -285,4 +348,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab
+.. revision: d5d87e60e7ddcb72c89d21fa1b9e78d0724fd62b
