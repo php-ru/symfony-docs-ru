@@ -109,13 +109,13 @@ You can also limit a test run to a directory or a specific test file:
 .. code-block:: terminal
 
     # run all tests of the application
-    $ ./bin/phpunit
+    $ php bin/phpunit
 
     # run all tests in the Util/ directory
-    $ ./bin/phpunit tests/Util
+    $ php bin/phpunit tests/Util
 
     # run tests for the Calculator class
-    $ ./bin/phpunit tests/Util/CalculatorTest.php
+    $ php bin/phpunit tests/Util/CalculatorTest.php
 
 .. index::
    single: Tests; Functional tests
@@ -1048,4 +1048,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 25362d96ca5d686bf5af47ec7696e0a56f31839f
+.. revision: 4af99e796fcf0687efc1322c066986e419626726

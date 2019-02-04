@@ -250,7 +250,7 @@ With this, :doc:`Symfony Flex </setup/flex>` will be able to automatically
 enable your bundle when it's installed.
 
 If your bundle requires any setup (e.g. configuration, new files, changes to
-`.gitignore`, etc), then you should create a `Symfony Flex recipe`_.
+``.gitignore``, etc), then you should create a `Symfony Flex recipe`_.
 
 Documentation
 -------------
@@ -557,4 +557,4 @@ Learn more
 .. _`Travis Cron`: https://docs.travis-ci.com/user/cron-jobs/
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 067a6e2b37b0421e906c3efa847c8b40959ed4a1

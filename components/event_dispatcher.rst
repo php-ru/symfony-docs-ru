@@ -262,7 +262,7 @@ order. Start by creating this custom event class and documenting it::
      */
     class OrderPlacedEvent extends Event
     {
-        const NAME = 'order.placed';
+        public const NAME = 'order.placed';
 
         protected $order;
 
@@ -525,4 +525,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/event-dispatcher
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: bf3801ef783cb798194406d90474ac960456d280
