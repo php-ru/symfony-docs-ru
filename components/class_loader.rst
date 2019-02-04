@@ -58,10 +58,10 @@ Learn More
     :maxdepth: 1
 
     class_loader/class_loader
-    class_loader/class_map_generator.rst
-    class_loader/debug_class_loader.rst
-    class_loader/map_class_loader.rst
-    class_loader/psr4_class_loader.rst
+    class_loader/class_map_generator
+    class_loader/debug_class_loader
+    class_loader/map_class_loader
+    class_loader/psr4_class_loader
 
 .. toctree::
     :hidden:
@@ -75,4 +75,4 @@ Learn More
 .. _`class loading optimizations`: https://getcomposer.org/doc/articles/autoloader-optimization.md
 
 .. ready: no
-.. revision: fdaf1898ea53a249a62e6780e939910f12026b4e
+.. revision: 7bd5608d89d18eeea82c09dbcafe6249c6883982
