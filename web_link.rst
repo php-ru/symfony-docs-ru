@@ -55,7 +55,7 @@ To do that, first install the WebLink component:
 Now, update the template to use the ``preload()`` Twig function provided by
 WebLink:
 
-.. code:: twig
+.. code-block:: twig
 
     <head>
        {# ... #}
@@ -69,7 +69,7 @@ requested the HTML page.
 Additionally, according to `the Priority Hints specification`_, you can signal
 the priority of the resource to download using the ``importance`` attribute:
 
-.. code:: twig
+.. code-block:: twig
 
     <head>
        {# ... #}
@@ -99,7 +99,7 @@ improve performance of your apps in production right now.
 If you want to prevent the push but let the browser preload the resource by
 issuing an early separate HTTP request, use the ``nopush`` option:
 
-.. code:: twig
+.. code-block:: twig
 
     <head>
        {# ... #}
@@ -132,7 +132,7 @@ The component also supports sending HTTP links not related to performance and
 any link implementing the `PSR-13`_ standard. For instance, any
 `link defined in the HTML specification`_:
 
-.. code:: twig
+.. code-block:: twig
 
     <head>
        {# ... #}
@@ -183,4 +183,4 @@ You can also add links to the HTTP response directly from controllers and servic
 .. _`PSR-13`: http://www.php-fig.org/psr/psr-13/
 
 .. ready: no
-.. revision: 4fc31c88979f8ee3920f65e7295d15dfcc0318c0
+.. revision: 5896d6a8ed36cdb712c1fe6a1b9c9823020f8d9b
