@@ -768,7 +768,7 @@ Route path  If the requested URL is ``/foo``          If the requested URL is ``
 ----------  ----------------------------------------  ------------------------------------------
 ``/foo``    It matches (``200`` status response)      It makes a ``301`` redirect to ``/foo``
 ``/foo/``   It makes a ``301`` redirect to ``/foo/``  It matches (``200`` status response)
-----------  ----------------------------------------  ------------------------------------------
+==========  ========================================  ==========================================
 
 .. note::
 
@@ -963,4 +963,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 5896d6a8ed36cdb712c1fe6a1b9c9823020f8d9b
+.. revision: f625b13855ea3b5c91f39aabbbd3333ccd171333
