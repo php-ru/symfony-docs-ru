@@ -140,6 +140,13 @@ that group are valid, the second group, ``Strict``, will be validated.
     sequence, which will contain the ``Default`` group which references the
     same group sequence, ...).
 
+.. caution::
+
+    Calling ``validate()`` with a group in the sequence (``Strict`` in previous
+    example) will cause a validation **only** with that group and not with all
+    the groups in the sequence. This is because sequence is now referred to
+    ``Default`` group validation.
+
 You can also define a group sequence in the ``validation_groups`` form option::
 
     use Symfony\Component\Form\AbstractType;
@@ -355,4 +362,4 @@ provides a sequence of groups to be validated:
         }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 91dedc132fa06ef6d129733748307faf21812a5b
