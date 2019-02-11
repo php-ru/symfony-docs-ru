@@ -911,7 +911,8 @@ Users with the ``ROLE_ADMIN`` role will also have the
 ``ROLE_USER`` role. And users with ``ROLE_SUPER_ADMIN``, will automatically have
 ``ROLE_ADMIN``, ``ROLE_ALLOWED_TO_SWITCH`` and ``ROLE_USER`` (inherited from ``ROLE_ADMIN``).
 
-For role hierarchy to work, do not try to call ``$user->getRoles()`` manually::
+For role hierarchy to work, do not try to call ``$user->getRoles()`` manually.
+For example, in a controller extending from the :ref:`base controller <the-base-controller-class-services>`::
 
     // BAD - $user->getRoles() will not know about the role hierarchy
     $hasAccess = in_array('ROLE_ADMIN', $user->getRoles());
@@ -927,8 +928,8 @@ For role hierarchy to work, do not try to call ``$user->getRoles()`` manually::
     :doc:`security voter </security/voters>` that looks for the user roles
     in the database.
 
-Checking for Security Vulnerabilities in your Dependences
----------------------------------------------------------
+Checking for Security Vulnerabilities in your Dependencies
+----------------------------------------------------------
 
 See :doc:`/security/security_checker`.
 
@@ -1013,4 +1014,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: e18e8091f7f433d05c60bcf5d93e51a541320922

@@ -56,7 +56,7 @@ table fields.
 
 .. code-block:: terminal
 
-    $ php bin/console doctrine:mapping:import 'App\Entity' annotation --path=src/Entity
+    $ php bin/console doctrine:mapping:import "App\Entity" annotation --path=src/Entity
 
 This command line tool asks Doctrine to introspect the database and generate
 new PHP classes with annotation metadata into ``src/Entity``. This generates two
@@ -68,7 +68,7 @@ files: ``BlogPost.php`` and ``BlogComment.php``.
 
     .. code-block:: terminal
 
-        $ php bin/console doctrine:mapping:import 'App\Entity' xml --path=config/doctrine
+        $ php bin/console doctrine:mapping:import "App\Entity" xml --path=config/doctrine
 
     In this case, make sure to adapt your mapping configuration accordingly:
 
@@ -115,4 +115,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`doctrine/doctrine#729`: https://github.com/doctrine/DoctrineBundle/issues/729
 
 .. ready: no
-.. revision: eb5cad398ef526a1c864ff2b49a05ab2ba84f759
+.. revision: 085f2d303b53fafd817f5af0fdd2c91b52ab213c

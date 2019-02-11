@@ -40,6 +40,7 @@ manually, but then you should just use the ``ChoiceType`` directly.
 |             | - `error_mapping`_                                                     |
 |             | - `help`_                                                              |
 |             | - `help_attr`_                                                         |
+|             | - `help_html`_                                                         |
 |             | - `label`_                                                             |
 |             | - `label_attr`_                                                        |
 |             | - `label_format`_                                                      |
@@ -135,6 +136,8 @@ The actual default value of this option depends on other field options:
 
 .. include:: /reference/forms/types/options/help_attr.rst.inc
 
+.. include:: /reference/forms/types/options/help_html.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -146,4 +149,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e
+.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee

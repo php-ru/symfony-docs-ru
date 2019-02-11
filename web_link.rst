@@ -50,7 +50,7 @@ To do that, first install the WebLink component:
 
 .. code-block:: terminal
 
-    $ composer req web-link
+    $ composer require symfony/web-link
 
 Now, update the template to use the ``preload()`` Twig function provided by
 WebLink:
@@ -187,4 +187,4 @@ You can also add links to the HTTP response directly from controllers and servic
 .. _`PSR-13`: http://www.php-fig.org/psr/psr-13/
 
 .. ready: no
-.. revision: 156eb9bf69fb9963bbadffa51f2c838849fae2c9
+.. revision: 6d580f2ad0a4939eff874b413bf9093762c3ce5c

@@ -35,6 +35,7 @@ manually, but then you should just use the ``ChoiceType`` directly.
 |             | - `empty_data`_                                                        |
 |             | - `help`_                                                              |
 |             | - `help_attr`_                                                         |
+|             | - `help_html`_                                                         |
 |             | - `label`_                                                             |
 |             | - `label_attr`_                                                        |
 |             | - `label_format`_                                                      |
@@ -107,6 +108,8 @@ The actual default value of this option depends on other field options:
 
 .. include:: /reference/forms/types/options/help_attr.rst.inc
 
+.. include:: /reference/forms/types/options/help_html.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -120,4 +123,4 @@ The actual default value of this option depends on other field options:
 .. _`3-letter ISO 4217`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: fbf8676ffbf3c30494107f690accc2268237dc14
+.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee

@@ -152,6 +152,8 @@ Configuration
   * `metadata_update_threshold`_
   * `name`_
   * `save_path`_
+  * `sid_length`_
+  * `sid_bits_per_character`_
   * `storage_id`_
 
 * `templating`_
@@ -898,6 +900,29 @@ gc_maxlifetime
 This determines the number of seconds after which data will be seen as "garbage"
 and potentially cleaned up. Garbage collection may occur during session
 start and depends on `gc_divisor`_ and `gc_probability`_.
+
+sid_length
+..........
+
+**type**: ``integer`` **default**: ``32``
+
+This determines the length of session ID string, which can be an integer between
+``22`` and ``256`` (both inclusive), being ``32`` the recommended value. Longer
+session IDs are harder to guess.
+
+This option is related to the `session.sid_length PHP option`_.
+
+sid_bits_per_character
+......................
+
+**type**: ``integer`` **default**: ``4``
+
+This determines the number of bits in encoded session ID character. The possible
+values are ``4`` (0-9, a-f), ``5`` (0-9, a-v), and ``6`` (0-9, a-z, A-Z, "-", ",").
+The more bits results in stronger session ID. ``5`` is recommended value for
+most environments.
+
+This option is related to the `session.sid_bits_per_character PHP option`_.
 
 save_path
 .........
@@ -2151,6 +2176,8 @@ available, or to ``flock`` otherwise. Store's DSN are also allowed.
 .. _`webpack-manifest-plugin`: https://www.npmjs.com/package/webpack-manifest-plugin
 .. _`error_reporting PHP option`: https://secure.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
+.. _`session.sid_length PHP option`: https://php.net/manual/session.configuration.php#ini.session.sid-length
+.. _`session.sid_bits_per_character PHP option`: https://php.net/manual/session.configuration.php#ini.session.sid-bits-per-character
 
 .. ready: no
-.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
+.. revision: 927dee1fc96275aa7de384de07257db6097eb4b3

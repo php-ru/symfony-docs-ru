@@ -288,7 +288,7 @@ The **minimum configuration** to get your application running under Nginx is:
         }
 
         location ~ ^/index\.php(/|$) {
-            fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;
+            fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
             fastcgi_split_path_info ^(.+\.php)(/.*)$;
             include fastcgi_params;
 
@@ -354,4 +354,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: c7ee69bb85b9a911a7e39e9e1539320b78be8d4b

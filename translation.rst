@@ -119,7 +119,7 @@ of text (called a *message*), use the
 for example, that you're translating a simple message from inside a controller::
 
     // ...
-    use Symfony\Component\Translation\TranslatorInterface;
+    use Symfony\Contracts\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator)
     {
@@ -197,7 +197,7 @@ Message Placeholders
 
 Sometimes, a message containing a variable needs to be translated::
 
-    use Symfony\Component\Translation\TranslatorInterface;
+    use Symfony\Contracts\Translation\TranslatorInterface;
 
     public function index(TranslatorInterface $translator, $name)
     {
@@ -229,6 +229,12 @@ method or the ``transchoice`` tag/filter in your :ref:`template <translation-tag
 
 For much more information, see :ref:`component-translation-pluralization`
 in the Translation component documentation.
+
+.. versionadded:: 4.2
+
+    In Symfony 4.2 the ``Translator::transChoice()`` method was deprecated in
+    favor of using ``Translator::trans()`` with ``%count%`` as the parameter
+    driving plurals.
 
 Translations in Templates
 -------------------------
@@ -561,4 +567,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e
+.. revision: 5985f27364d9ea5cc648fe2a5270fea90f9bd075

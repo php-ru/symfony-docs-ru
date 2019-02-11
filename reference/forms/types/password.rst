@@ -20,6 +20,7 @@ The ``PasswordType`` field renders an input password text box.
 |             | - `error_mapping`_                                                     |
 |             | - `help`_                                                              |
 |             | - `help_attr`_                                                         |
+|             | - `help_html`_                                                         |
 |             | - `label`_                                                             |
 |             | - `label_attr`_                                                        |
 |             | - `label_format`_                                                      |
@@ -85,6 +86,8 @@ The default value is ``''`` (the empty string).
 
 .. include:: /reference/forms/types/options/help_attr.rst.inc
 
+.. include:: /reference/forms/types/options/help_html.rst.inc
+
 .. include:: /reference/forms/types/options/label.rst.inc
 
 .. include:: /reference/forms/types/options/label_attr.rst.inc
@@ -96,4 +99,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: fbf8676ffbf3c30494107f690accc2268237dc14
+.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee

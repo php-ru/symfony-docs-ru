@@ -37,6 +37,7 @@ and can understand a number of different input formats via the `input`_ option.
 |                      | - `error_mapping`_                                                          |
 |                      | - `help`_                                                                   |
 |                      | - `help_attr`_                                                              |
+|                      | - `help_html`_                                                              |
 |                      | - `inherit_data`_                                                           |
 |                      | - `invalid_message`_                                                        |
 |                      | - `invalid_message_parameters`_                                             |
@@ -214,6 +215,8 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 
 .. include:: /reference/forms/types/options/help_attr.rst.inc
 
+.. include:: /reference/forms/types/options/help_html.rst.inc
+
 .. include:: /reference/forms/types/options/inherit_data.rst.inc
 
 .. include:: /reference/forms/types/options/invalid_message.rst.inc
@@ -239,4 +242,4 @@ Field Variables
 .. _`Bootstrap Datepicker`: https://github.com/eternicode/bootstrap-datepicker
 
 .. ready: no
-.. revision: fbf8676ffbf3c30494107f690accc2268237dc14
+.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
