@@ -96,7 +96,7 @@ The form class for the registration form will look something like this::
                         new Length([
                             'min' => 6,
                             'minMessage' => 'Your password should be at least {{ limit }} characters',
-                            'max' => 4096
+                            'max' => 4096,
                         ]),
                     ],
                 ])
@@ -170,7 +170,7 @@ saves the user::
 
                 // do anything else you need here, like send an email
 
-                return $this->redirect('app_homepage');
+                return $this->redirectToRoute('app_homepage');
             }
 
             return $this->render('registration/register.html.twig', [
@@ -223,13 +223,13 @@ To do this, add a ``termsAccepted`` field to your form, but set its
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
             $builder
-                ->add('email', EmailType::class);
+                ->add('email', EmailType::class)
                 // ...
                 ->add('termsAccepted', CheckboxType::class, [
                     'mapped' => false,
                     'constraints' => new IsTrue(),
                 ])
-            );
+            ;
         }
     }
 
@@ -246,4 +246,4 @@ controller to take advantage of this.
 .. _`CVE-2013-5750`: https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 89bc2db55937b6743c025088abcb749d77b5ceb9

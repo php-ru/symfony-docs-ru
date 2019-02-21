@@ -295,7 +295,7 @@ new "tag" forms. To render it, make the following change to your template:
     on it. You could even choose to render only one of its fields (e.g. the
     ``name`` field):
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {{ form_widget(form.tags.vars.prototype.name)|e }}
 
@@ -716,4 +716,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 5c87af91fa55e6e689ebdbf45466a23cc6c4352c

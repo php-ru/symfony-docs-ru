@@ -122,6 +122,7 @@ a traditional HTML form that submits to ``/login``:
 
     use App\Entity\User;
     use Doctrine\ORM\EntityManagerInterface;
+    use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
     use Symfony\Component\HttpFoundation\RedirectResponse;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\Routing\RouterInterface;
@@ -375,4 +376,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: f00344a80fca2057786563784f3823aa58632e71
+.. revision: 3d2ccdfcc076ccddc43cfb347f5b1d3423f44eab

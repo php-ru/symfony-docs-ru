@@ -86,7 +86,7 @@ Some of the Twig functions mentioned in the previous section allow to pass
 variables to configure their behavior. For example, the ``form_label()``
 function lets you define a custom label to override the one defined in the form:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_label(form.task, 'My Custom Task Label') }}
 
@@ -96,7 +96,7 @@ type, but one common option is ``attr``, which allows you to modify HTML
 attributes on the form element. The following would add the ``task_field`` CSS
 class to the rendered input text field:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_widget(form.task, {'attr': {'class': 'task_field'}}) }}
 
@@ -116,7 +116,7 @@ If you need to render form fields "by hand" then you can access individual
 values for fields (such as the ``id``, ``name`` and ``label``) using its
 ``vars``  property. For example to get the ``id``:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form.task.vars.id }}
 
@@ -312,6 +312,18 @@ obvious (since it'll render the field for you).
 
     {{ form_rest(form) }}
 
+parent_form(form_view)
+......................
+
+.. versionadded:: 4.3
+
+    The ``parent_form()`` function was introduced in Symfony 4.3.
+
+Returns the parent form view or ``null`` if the form view already is the
+root form. Using this function should be preferred over accessing the parent
+form using ``form.parent``. The latter way will produce different results
+when a child form is named ``parent``.
+
 Tests
 ~~~~~
 
@@ -421,4 +433,4 @@ Variable                Usage
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: 7cdf54aec34164d2d99f3551e38e2668ed53491d
+.. revision: 4f90e0e7163d2f6ca24f0a06c59447dd3c477c25

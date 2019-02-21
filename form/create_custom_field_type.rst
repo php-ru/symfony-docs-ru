@@ -16,8 +16,11 @@ Defining the Field Type
 In order to create the custom field type, first you have to create the class
 representing the field. In this situation the class holding the field type
 will be called ``ShippingType`` and the file will be stored in the default location
-for form fields, which is ``App\Form\Type``. Make sure the field extends
-:class:`Symfony\\Component\\Form\\AbstractType`::
+for form fields, which is ``App\Form\Type``.
+
+All field types must implement the :class:`Symfony\\Component\\Form\\FormTypeInterface`,
+but you should instead extend from :class:`Symfony\\Component\\Form\\AbstractType`,
+which already implements that interface and provides some utilities::
 
     // src/Form/Type/ShippingType.php
     namespace App\Form\Type;
@@ -53,8 +56,17 @@ for form fields, which is ``App\Form\Type``. Make sure the field extends
 Here, the return value of the ``getParent()`` function indicates that you're
 extending the ``ChoiceType`` field. This means that, by default, you inherit
 all of the logic and rendering of that field type. To see some of the logic,
-check out the `ChoiceType`_ class. There are three methods that are particularly
-important:
+check out the `ChoiceType`_ class.
+
+.. note::
+
+    The PHP class extension mechanism and the Symfony form field extension
+    mechanism are not the same. The parent type returned in ``getParent()`` is
+    what Symfony uses to build and manage the field type. Making the PHP class
+    extend from ``AbstractType`` is only a convenience way of implementing the
+    required ``FormTypeInterface``.
+
+There are three methods that are particularly important:
 
 .. _form-type-methods-explanation:
 
@@ -324,4 +336,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: fb1cd56293396f3197b82d70cb0e031ff8169dff
+.. revision: 2fa596e324da19e6bc7ecabf27bf360ebd320c58

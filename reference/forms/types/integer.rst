@@ -89,6 +89,11 @@ scale
 
 **type**: ``integer`` **default**: ``0``
 
+.. versionadded:: 4.2
+
+    The ``scale`` option is deprecated since Symfony 4.2 and will be removed
+    in 5.0.
+
 This specifies how many decimals will be allowed until the field rounds the
 submitted value (via ``rounding_mode``). This option inherits from
 :doc:`number </reference/forms/types/number>` type and is overriden to ``0`` for
@@ -136,4 +141,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: c63bd468f1a8482b2e4d30997c145734a444a344

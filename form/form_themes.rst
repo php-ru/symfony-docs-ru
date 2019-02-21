@@ -102,7 +102,7 @@ Although most of the times you'll apply form themes globally, you may need to
 apply a theme only to some specific form. You can do that with the
 :ref:`form_theme Twig tag <reference-twig-tag-form-theme>`:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# this form theme will be applied only to the form of this template #}
     {% form_theme form 'foundation_5_layout.html.twig' %}
@@ -137,7 +137,7 @@ Applying Different Themes to Child Forms
 
 You can also apply a form theme to a specific child of your form:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% form_theme form.a_child_form 'form/my_custom_theme.html.twig' %}
 
@@ -161,7 +161,7 @@ can be installed on different Symfony apps (and so you can't control what themes
 are enabled globally). To do that, add the ``only`` keyword after the list of
 form themes:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% form_theme form with ['foundation_5_layout.html.twig'] only %}
 
@@ -175,7 +175,7 @@ form themes:
     yourself, or extend one of the built-in form themes with Twig's ``use``
     keyword instead of ``extends`` to re-use the original theme contents.
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {# templates/form/common.html.twig #}
         {% use "form_div_layout.html.twig" %}
@@ -192,7 +192,7 @@ with one or more of those blocks that you want to use when rendering a form.
 Consider for example a form field that represents an integer property called
 ``age``. If you add this to the template:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_widget(form.age) }}
 
@@ -307,10 +307,66 @@ Fragment Naming for Collections
 ...............................
 
 When using a :doc:`collection of forms </form/form_collections>`, the fragment
-of each collection item follows the pattern ``_field-name_entry_part``. For
-example, if your form field is named ``tasks``, the fragment for each task will
-be named ``_tasks_entry`` (``_tasks_entry_row``, ``_tasks_entry_label``,
-``_tasks_entry_widget``, ``_tasks_entry_error``)
+of each collection item follows a predefined pattern. For example, consider the
+following complex example where a ``TaskManagerType`` has a collection of
+``TaskListType`` which in turn has a collection of ``TaskType``::
+
+    class TaskManagerType extends AbstractType
+    {
+        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        {
+            // ...
+            $builder->add('taskLists', CollectionType::class, array(
+                'entry_type' => TaskListType::class,
+                'block_name' => 'task_lists',
+            ));
+        }
+    }
+
+    class TaskListType extends AbstractType
+    {
+        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        {
+            // ...
+            $builder->add('tasks', CollectionType::class, array(
+                'entry_type' => TaskType::class,
+            ));
+        }
+    }
+
+    class TaskType
+    {
+        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        {
+            $builder->add('name');
+            // ...
+        }
+    }
+
+Then you get all the following customizable blocks (where ``*`` can be replaced
+by ``row``, ``widget``, ``label``, or ``help``):
+
+.. code-block:: twig
+
+    {% block _task_manager_task_lists_* %}
+        {# the collection field of TaskManager #}
+    {% endblock %}
+
+    {% block _task_manager_task_lists_entry_* %}
+        {# the inner TaskListType #}
+    {% endblock %}
+
+    {% block _task_manager_task_lists_entry_tasks_* %}
+        {# the collection field of TaskListType #}
+    {% endblock %}
+
+    {% block _task_manager_task_lists_entry_tasks_entry_* %}
+        {# the inner TaskType #}
+    {% endblock %}
+
+    {% block _task_manager_task_lists_entry_tasks_entry_name_* %}
+        {# the field of TaskType #}
+    {% endblock %}
 
 Template Fragment Inheritance
 .............................
@@ -341,6 +397,8 @@ for any overridden form blocks:
 
 .. code-block:: html+twig
 
+    {% extends 'base.html.twig' %}
+
     {% form_theme form _self %}
 
     {# this overrides the widget of any field of type integer, but only in the
@@ -359,12 +417,16 @@ for any overridden form blocks:
         </div>
     {% endblock %}
 
-
     {# ... render the form ... #}
 
-The disadvantage of this method is that the customized form blocks can't be
-reused when rendering other forms in other templates. If that's what you need,
-create a form theme in a separate template as explained in the next section.
+The main disadvantage of this method is that it only works if your template
+extends another (``'base.html.twig'`` in the previous example). If your template
+does not, you must point ``form_theme`` to a separate template, as explained in
+the next section.
+
+Another disadvantage is that the customized form blocks can't be reused when
+rendering other forms in other templates. If that's what you need, create a form
+theme in a separate template as explained in the next section.
 
 Creating a Form Theme in a Separate Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -377,7 +439,7 @@ rules to know which Twig blocks to define.
 For example, if your form theme is simple and you only want to override the
 ``<input type="integer">`` elements, create this template:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# templates/form/my_theme.html.twig #}
     {% block integer_widget %}
@@ -429,7 +491,7 @@ you want to apply the theme globally to all forms, define the
 
 If you only want to apply it to some specific forms, use the ``form_theme`` tag:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% form_theme form 'form/my_theme.html.twig' %}
 
@@ -453,7 +515,7 @@ built-in themes using the `Twig "use" tag`_ instead of the ``extends`` tag so
 you can inherit all its blocks (if you are unsure, extend from the default
 ``form_div_layout.html.twig`` theme):
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# templates/form/my_theme.html.twig #}
     {% use 'form_div_layout.html.twig' %}
@@ -547,4 +609,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: 77cae83befee592286703ce9bf89e33f625232c8
+.. revision: dbce4a5fdb11016eaf23b3fc7ed2d2ab92eb141b

@@ -95,7 +95,7 @@ Bootstrap 4 has a feature called "`custom forms`_". You can enable that on your
 Symfony Form ``RadioType`` and ``CheckboxType`` by adding a class called ``radio-custom``
 and ``checkbox-custom`` respectively.
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_row(form.myRadio, {label_attr: {class: 'radio-custom'} }) }}
     {{ form_row(form.myCheckbox, {label_attr: {class: 'checkbox-custom'} }) }}
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 5c87af91fa55e6e689ebdbf45466a23cc6c4352c

@@ -92,7 +92,7 @@ Timing the Execution of the Application
 
 If you want to measure the time some tasks take in your application, there's no
 need to create a custom data collector. Instead, use the `Stopwatch component`_
-which provides utilities to profile code and displayes the results on the
+which provides utilities to profile code and displays the results on the
 "Performance" panel of the Profiler web interface.
 
 When using :ref:`autowiring <services-autowire>`, type-hint any argument with
@@ -221,4 +221,4 @@ event::
 .. _`Blackfire`: https://blackfire.io/
 
 .. ready: no
-.. revision: 2b3384e31114a69551202b44e04938a1f0cc6cbd
+.. revision: a579c6e822253e106da7b9f011c14854f944e448
