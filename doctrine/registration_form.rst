@@ -440,13 +440,13 @@ To do this, add a ``termsAccepted`` field to your form, but set its
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
             $builder
-                ->add('email', EmailType::class);
+                ->add('email', EmailType::class)
                 // ...
                 ->add('termsAccepted', CheckboxType::class, [
                     'mapped' => false,
                     'constraints' => new IsTrue(),
                 ])
-            );
+            ;
         }
     }
 
@@ -458,4 +458,4 @@ us to add validation, even though there is no ``termsAccepted`` property on ``Us
 .. _`bcrypt`: https://en.wikipedia.org/wiki/Bcrypt
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 968783980cd64cd7c6867203ef5c07a358bfc735

@@ -48,7 +48,8 @@ You can also pass options to the `postcss-loader`_ by passing a callback:
         // ...
     +     .enablePostCssLoader((options) => {
     +         options.config = {
-    +             path: 'app/config/postcss.config.js'
+    +             // the directory where the postcss.config.js file is stored
+    +             path: 'path/to/config'
     +         };
     +     })
     ;
@@ -83,4 +84,4 @@ See `browserslist`_ for more details on the syntax.
 .. _`postcss-loader`: https://github.com/postcss/postcss-loader
 
 .. ready: no
-.. revision: cf5d474d474a78e1307bbe49e8931d5e852cb51f
+.. revision: ae44b1a7a904f35486caca105c11ef8cd75c3541

@@ -539,14 +539,23 @@ read any flash messages from the session using ``app.flashes()``:
 
     {# app/Resources/views/base.html.twig #}
 
-    {# you can read and display just one flash message type... #}
+    {# read and display just one flash message type #}
     {% for message in app.flashes('notice') %}
         <div class="flash-notice">
             {{ message }}
         </div>
     {% endfor %}
 
-    {# ...or you can read and display every flash message available #}
+    {# read and display several types of flash messages #}
+    {% for label, messages in app.flashes(['success', 'warning']) %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {# read and display all flash messages #}
     {% for label, messages in app.flashes %}
         {% for message in messages %}
             <div class="flash-{{ label }}">
@@ -741,4 +750,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 08f9501355ecaa9e62c86c186ffbef8b10a608c6
