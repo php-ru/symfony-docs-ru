@@ -531,9 +531,9 @@ Start by adding a ``_defaults`` section with ``autowire`` and ``autoconfigure``.
 
         # ...
 
-This step is easy: you're already *explicitly* configuring all of your services.
-So, ``autowire`` does nothing. You're also already tagging your services, so
-``autoconfigure`` also doesn't change any existing services.
+You're already *explicitly* configuring all of your services. So, ``autowire``
+does nothing. You're also already tagging your services, so ``autoconfigure``
+also doesn't change any existing services.
 
 You have not added ``public: false`` yet. That will come in a minute.
 
@@ -810,4 +810,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

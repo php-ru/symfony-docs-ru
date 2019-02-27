@@ -79,7 +79,7 @@ There are also tools to help ease the pain of deployment. Some of them have been
 specifically tailored to the requirements of Symfony.
 
 `EasyDeployBundle`_
-    A Symfony bundle that adds easy deploy tools to your application.
+    A Symfony bundle that adds deploy tools to your application.
 
 `Deployer`_
     This is another native PHP rewrite of Capistrano, with some ready recipes for
@@ -250,4 +250,4 @@ kernel and return your project's root directory::
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: 0fca11c70240725261e725203f84a158868e93a7
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

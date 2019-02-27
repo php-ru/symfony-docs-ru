@@ -77,9 +77,8 @@ but is a great way to start.
 
     For details on setting up Varnish, see :doc:`/http_cache/varnish`.
 
-Enabling the proxy is easy: each application comes with a caching kernel (``AppCache``)
-that wraps the default one (``AppKernel``). The caching Kernel *is* the reverse
-proxy.
+Each application comes with a caching kernel (``AppCache``) that wraps the
+default one (``AppKernel``). The caching Kernel *is* the reverse proxy.
 
 To enable caching, modify the code of your front controller. You can also make these
 changes to ``app_dev.php`` to add caching to the ``dev`` environment::
@@ -267,7 +266,7 @@ Validation Caching
    single: Cache; Cache-Control header
    single: HTTP headers; Cache-Control
 
-With expiration caching, you simply say "cache for 3600 seconds!". But, when someone
+With expiration caching, you say "cache for 3600 seconds!". But, when someone
 updates cached content, you won't see that content on your site until the cache
 expires.
 
@@ -373,4 +372,4 @@ Learn more
 .. _`they can be cached`: https://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-20#section-2.3.4
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: e1a710737c9de45b915bff1c6d8383e89621f0ea

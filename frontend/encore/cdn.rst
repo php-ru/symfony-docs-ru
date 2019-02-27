@@ -1,9 +1,8 @@
 Using a CDN
 ===========
 
-Are you deploying to a CDN? That's awesome :) - and configuring Encore for that is
-easy. Once you've made sure that your built files are uploaded to the CDN, configure
-it in Encore:
+Are you deploying to a CDN? That's awesome :) Once you've made sure that your
+built files are uploaded to the CDN, configure it in Encore:
 
 .. code-block:: diff
 
@@ -41,4 +40,4 @@ pages also use the CDN. Fortunately, the
 to include the full URL to the CDN.
 
 .. ready: no
-.. revision: 62f322e2196dc6621f63f3bffee907b416ed95fb
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

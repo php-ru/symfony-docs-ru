@@ -350,7 +350,7 @@ Then see webpage in browser:
 
 Hey, that looks a lot like a *traditional* Symfony application! You're right: the
 ``MicroKernelTrait`` *is* still Symfony: but you can control your structure and
-features quite easily.
+features with less boilerplate configuration and code.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

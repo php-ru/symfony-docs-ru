@@ -337,7 +337,7 @@ Forbid Inactive Users (AdvancedUserInterface)
 
 If a User's ``isActive`` property is set to ``false`` (i.e. ``is_active``
 is 0 in the database), the user will still be able to login to the site
-normally. This is easily fixable.
+normally.
 
 To exclude inactive users, change your ``User`` class to implement
 :class:`Symfony\\Component\\Security\\Core\\User\\AdvancedUserInterface`.
@@ -554,4 +554,4 @@ or worry about it.
 .. _`it must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

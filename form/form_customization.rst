@@ -12,9 +12,8 @@ templating engine.
 Form Rendering Basics
 ---------------------
 
-Recall that the label, error and HTML widget of a form field can easily
-be rendered by using the ``form_row()`` Twig function or the ``row`` PHP helper
-method:
+Recall that the label, error and HTML widget of a form field can be rendered
+by using the ``form_row()`` Twig function or the ``row`` PHP helper method:
 
 .. code-block:: twig
 
@@ -206,13 +205,13 @@ Form Theming in Twig
 When customizing the form field block in Twig, you have two options on *where*
 the customized form block can live:
 
-+--------------------------------------+-----------------------------------+-------------------------------------------+
-| Method                               | Pros                              | Cons                                      |
-+======================================+===================================+===========================================+
-| Inside the same template as the form | Quick and easy                    | Can't be reused in other templates        |
-+--------------------------------------+-----------------------------------+-------------------------------------------+
-| Inside a separate template           | Can be reused by many templates   | Requires an extra template to be created  |
-+--------------------------------------+-----------------------------------+-------------------------------------------+
++--------------------------------------+------------------------------------+------------------------------------------+
+| Method                               | Pros                               | Cons                                     |
++======================================+====================================+==========================================+
+| Inside the same template as the form | No need for an extra template file | Can't be reused in other templates       |
++--------------------------------------+------------------------------------+------------------------------------------+
+| Inside a separate template           | Can be reused by many templates    | Requires an extra template to be created |
++--------------------------------------+------------------------------------+------------------------------------------+
 
 Both methods have the same effect but are better in different situations.
 
@@ -863,4 +862,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

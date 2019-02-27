@@ -163,7 +163,7 @@ following:
 Presence and Absence of Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, this constraint validates more than simply whether or not the
+By default, this constraint validates more than whether or not the
 individual fields in the collection pass their assigned constraints. In
 fact, if any keys of a collection are missing or if there are any unrecognized
 keys in the collection, validation errors will be thrown.
@@ -352,4 +352,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

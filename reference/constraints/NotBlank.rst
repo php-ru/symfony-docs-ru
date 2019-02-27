@@ -8,7 +8,7 @@ a blank array, ``null`` or ``false``::
         // validation will fail
     }
 
-To force that a value is simply not equal to ``null``, see the
+To force that a value is not equal to ``null``, see the
 :doc:`/reference/constraints/NotNull` constraint.
 
 +----------------+------------------------------------------------------------------------+
@@ -105,4 +105,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

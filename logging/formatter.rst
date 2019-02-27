@@ -3,9 +3,8 @@ How to Define a Custom Logging Formatter
 
 Each logging handler uses a ``Formatter`` to format the record before logging
 it. All Monolog handlers use an instance of
-``Monolog\Formatter\LineFormatter`` by default but you can replace it
-easily. Your formatter must implement
-``Monolog\Formatter\FormatterInterface``.
+``Monolog\Formatter\LineFormatter`` by default but you can replace it.
+Your formatter must implement ``Monolog\Formatter\FormatterInterface``.
 
 For example, to use the built-in ``JsonFormatter``, register it as a service then
 configure your handler to use it:
@@ -75,4 +74,4 @@ configure your handler to use it:
         ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

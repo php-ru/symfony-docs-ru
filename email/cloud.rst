@@ -12,8 +12,8 @@ option. If setting up and maintaining your own reliable mail server causes
 you a headache there's a simple solution: Leverage the cloud to send your
 emails.
 
-This article shows how easy it is to integrate
-`Amazon's Simple Email Service (SES)`_ into Symfony.
+This article shows how to integrate `Amazon's Simple Email Service (SES)`_
+into Symfony.
 
 .. note::
 
@@ -75,7 +75,7 @@ and complete the configuration with the provided ``username`` and ``password``:
         ]);
 
 The ``port`` and ``encryption`` keys are not present in the Symfony Standard
-Edition configuration by default, but you can simply add them as needed.
+Edition configuration by default, but you can add them if needed.
 
 And that's it, you're ready to start sending emails through the cloud!
 
@@ -120,4 +120,4 @@ And that's it, you're ready to start sending emails through the cloud!
 .. _`Amazon Web Services (AWS)`: http://aws.amazon.com
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

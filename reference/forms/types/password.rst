@@ -41,9 +41,8 @@ If set to true, the field will *always* render blank, even if the corresponding
 field has a value. When set to false, the password field will be rendered
 with the ``value`` attribute set to its true value only upon submission.
 
-Put simply, if for some reason you want to render your password field
-*with* the password value already entered into the box, set this to false
-and submit the form.
+If you want to render your password field *with* the password value already
+entered into the box, set this to false and submit the form.
 
 Overridden Options
 ------------------
@@ -88,4 +87,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

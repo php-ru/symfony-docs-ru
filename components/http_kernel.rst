@@ -174,7 +174,7 @@ to the login page or a 403 Access Denied response.
 If a ``Response`` is returned at this stage, the process skips directly to
 the :ref:`kernel.response <component-http-kernel-kernel-response>` event.
 
-Other listeners simply initialize things or add more information to the request.
+Other listeners initialize things or add more information to the request.
 For example, a listener might determine and set the locale on the ``Request``
 object.
 
@@ -787,4 +787,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: 0f4eed59033bb2e42b63121a4a97f8aa984708dc
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

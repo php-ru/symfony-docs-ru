@@ -3,8 +3,7 @@ The EventDispatcher Component
 
 Our framework is still missing a major characteristic of any good framework:
 *extensibility*. Being extensible means that the developer should be able to
-easily hook into the framework life cycle to modify the way the request is
-handled.
+hook into the framework life cycle to modify the way the request is handled.
 
 What kind of hooks are we talking about? Authentication or caching for
 instance. To be flexible, hooks must be plug-and-play; the ones you "register"
@@ -305,4 +304,4 @@ needs. Stop whenever you see fit, and further evolve the code from there.
 .. _`Rack`: http://rack.rubyforge.org/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

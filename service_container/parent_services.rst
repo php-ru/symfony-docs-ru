@@ -162,8 +162,8 @@ Overriding Parent Dependencies
 ------------------------------
 
 There may be times where you want to override what service is injected for
-one child service only. You can override most settings by simply specifying it
-in the child class:
+one child service only. You can override most settings by specifying it in
+the child class:
 
 .. configuration-block::
 
@@ -245,4 +245,4 @@ in the child class:
         $container->setDefinition(DoctrinePostRepository::class, $definition);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

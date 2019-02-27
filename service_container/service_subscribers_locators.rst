@@ -356,10 +356,10 @@ will share identical locators amongst all the services referencing them::
 
     public function process(ContainerBuilder $container)
     {
-        //...
+        // ...
 
         $locateableServices = [
-            //...
+            // ...
             'logger' => new Reference('logger'),
         ];
 
@@ -369,4 +369,4 @@ will share identical locators amongst all the services referencing them::
 .. _`Command pattern`: https://en.wikipedia.org/wiki/Command_pattern
 
 .. ready: no
-.. revision: d683e064ba3783073ae3d3e8a0561e892898f679
+.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31

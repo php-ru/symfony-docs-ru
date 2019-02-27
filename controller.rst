@@ -260,7 +260,7 @@ any other "work" you can think of.
 If you need a service in a controller, just type-hint an argument with its class
 (or interface) name. Symfony will automatically pass you the service you need::
 
-    use Psr\Log\LoggerInterface
+    use Psr\Log\LoggerInterface;
     // ...
 
     /**
@@ -750,4 +750,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 08f9501355ecaa9e62c86c186ffbef8b10a608c6
+.. revision: a99bd688fcbd785106cdeac280061890bfd45f63

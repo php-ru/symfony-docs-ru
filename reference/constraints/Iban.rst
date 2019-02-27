@@ -20,7 +20,7 @@ borders with a reduced risk of propagating transcription errors.
 Basic Usage
 -----------
 
-To use the Iban validator, simply apply it to a property on an object that
+To use the Iban validator, apply it to a property on an object that
 will contain an International Bank Account Number.
 
 .. configuration-block::
@@ -115,4 +115,4 @@ You can use the following parameters in this message:
 .. _`International Bank Account Number (IBAN)`: https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

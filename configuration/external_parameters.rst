@@ -7,8 +7,7 @@ How to Set external Parameters in the Service Container
 In the article :doc:`/configuration`, you learned how to manage your application
 configuration. At times, it may benefit your application to store certain
 credentials outside of your project code. Database configuration is one such
-example. The flexibility of the Symfony service container allows you to easily
-do this.
+example. The flexibility of the Symfony service container allows you to do this.
 
 Environment Variables
 ---------------------
@@ -552,4 +551,4 @@ the Symfony service container::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

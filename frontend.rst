@@ -28,7 +28,8 @@ to solve the most common Webpack use cases.
 .. tip::
 
     Encore is made by `Symfony`_ and works *beautifully* in Symfony applications.
-    But it can easily be used in any application... in any language!
+    But it can be used in any PHP application and even with other server side
+    programming languages!
 
 .. _encore-toc:
 
@@ -120,4 +121,4 @@ Other Front-End Articles
 .. _`Webpack Encore screencast series`: https://symfonycasts.com/screencast/webpack-encore
 
 .. ready: no
-.. revision: 12ca7d9b70f6269aec1c69354136b00d4690b924
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

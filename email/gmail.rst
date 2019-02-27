@@ -5,8 +5,8 @@ How to Use Gmail to Send Emails
 ===============================
 
 During development, instead of using a regular SMTP server to send emails, you
-might find using Gmail easier and more practical. The SwiftmailerBundle makes
-it really easy.
+might find using Gmail easier and more practical. You can achieve this with the
+SwiftmailerBundle without much effort.
 
 In the development configuration file, change the ``transport`` setting to
 ``gmail`` and set the ``username`` and ``password`` to the Google credentials:
@@ -105,7 +105,7 @@ In the development configuration file, change the ``transport`` setting to
 Redefining the Default Configuration Parameters
 -----------------------------------------------
 
-The ``gmail`` transport is simply a shortcut that uses the ``smtp`` transport
+The ``gmail`` transport is a shortcut that uses the ``smtp`` transport
 and sets these options:
 
 ==============  ==================
@@ -133,4 +133,4 @@ that you `allow less secure apps to access your Gmail account`_.
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

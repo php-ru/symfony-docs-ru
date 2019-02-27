@@ -25,7 +25,7 @@ To do this, add the repository class name to your entity's mapping definition:
          */
         class Product
         {
-            //...
+            // ...
         }
 
     .. code-block:: yaml
@@ -100,4 +100,4 @@ You can use this new method just like the default finder methods of the reposito
     finder methods such as ``find()`` and ``findAll()``.
 
 .. ready: no
-.. revision: 26493f342f87e605e03eea9372ea20124a59ae1d
+.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31

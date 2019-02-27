@@ -46,7 +46,7 @@ Update your framework so that it implements this interface::
         }
     }
 
-Even if this change looks trivial, it brings us a lot! Let's talk about one of
+Even if this change looks not too complex, it brings us a lot! Let's talk about one of
 the most impressive one: transparent :doc:`HTTP caching </http_cache>` support.
 
 The ``HttpCache`` class implements a fully-featured reverse proxy, written in
@@ -54,7 +54,7 @@ PHP; it implements ``HttpKernelInterface`` and wraps another
 ``HttpKernelInterface`` instance::
 
     // example.com/web/front.php
-    
+
     // ..
 
     $framework = new Simplex\Framework($dispatcher, $matcher, $controllerResolver, $argumentResolver);
@@ -211,4 +211,4 @@ one of them but an important one as it can make your applications fly!
 .. _`Varnish`: https://www.varnish-cache.org/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: e1a710737c9de45b915bff1c6d8383e89621f0ea

@@ -29,8 +29,8 @@ the routes from any bundle, then they must be manually imported from somewhere
 in your application (e.g. ``app/config/routing.yml``).
 
 The easiest way to "override" a bundle's routing is to never import it at
-all. Instead of importing a third-party bundle's routing, simply copy
-that routing file into your application, modify it, and import it instead.
+all. Instead of importing a third-party bundle's routing, copy that
+routing file into your application, modify it, and import it instead.
 
 Controllers
 -----------
@@ -140,4 +140,4 @@ can override the translations from any translation file, as long as it is in
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 7c0714af113ad6fc128c7e988dbed26af949139f
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

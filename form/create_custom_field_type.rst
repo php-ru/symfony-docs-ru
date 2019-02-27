@@ -249,8 +249,8 @@ link for details), create a ``shipping_widget`` block to handle this:
 Using the Field Type
 --------------------
 
-You can now use your custom field type immediately, simply by creating a
-new instance of the type in one of your forms::
+You can now use your custom field type by creating a new instance
+of the type in one of your forms::
 
     // src/AppBundle/Form/Type/OrderType.php
     namespace AppBundle\Form\Type;
@@ -315,4 +315,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: ab7cab3fc7f81fb73783050fa0c80d52541bdf30
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

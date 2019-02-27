@@ -49,8 +49,7 @@ stored as a ``DateTime`` object, a string, a timestamp or an array.
 Basic Usage
 -----------
 
-This field type is highly configurable, but easy to use. The most important
-options are ``input`` and ``widget``.
+The most important options are ``input`` and ``widget``.
 
 Suppose that you have a ``startTime`` field whose underlying time data is
 a ``DateTime`` object. The following configures the ``TimeType`` for that
@@ -217,4 +216,4 @@ Form Variables
 +--------------+-------------+----------------------------------------------------------------------+
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

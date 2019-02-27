@@ -29,9 +29,7 @@ Symfony Coding Standards in Detail
 If you want to learn about the Symfony coding standards in detail, here's a
 short example containing most features described below:
 
-.. code-block:: html+php
-
-    <?php
+.. code-block:: php
 
     /*
      * This file is part of the Symfony package.
@@ -292,4 +290,4 @@ License
 .. _`snake_case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31

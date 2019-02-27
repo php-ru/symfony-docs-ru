@@ -235,9 +235,9 @@ allow_delete
 
 If set to ``true``, then if an existing item is not contained in the submitted
 data, it will be correctly absent from the final array of items. This means
-that you can implement a "delete" button via JavaScript which simply removes
-a form element from the DOM. When the user submits the form, its absence
-from the submitted data will mean that it's removed from the final array.
+that you can implement a "delete" button via JavaScript which removes a form
+element from the DOM. When the user submits the form, its absence from the
+submitted data will mean that it's removed from the final array.
 
 For more information, see :ref:`form-collections-remove`.
 
@@ -443,4 +443,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

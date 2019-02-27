@@ -20,7 +20,7 @@ a payment through a payment gateway.
 Basic Usage
 -----------
 
-To use the ``CardScheme`` validator, simply apply it to a property or method
+To use the ``CardScheme`` validator, apply it to a property or method
 on an object that will contain a credit card number.
 
 .. configuration-block::
@@ -144,4 +144,4 @@ You can use the following parameters in this message:
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

@@ -97,7 +97,7 @@ The ``addViolation()`` method call finally adds the violation to the context.
 Using the new Validator
 -----------------------
 
-Using custom validators is very easy, just as the ones provided by Symfony itself:
+You can use custom validators just as the ones provided by Symfony itself:
 
 .. configuration-block::
 
@@ -236,4 +236,4 @@ not to the property:
         </class>
 
 .. ready: no
-.. revision: 42007cba7108589b0cbe2f0990c9a7e81f1b1098
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

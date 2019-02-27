@@ -128,8 +128,7 @@ Supplying the Choices with a Callback Function
 
 You can also use a callback function to specify your options. This is useful
 if you want to keep your choices in some central location so that, for example,
-you can easily access those choices for validation or for building a select
-form element::
+you can access those choices for validation or for building a select form element::
 
     // src/AppBundle/Entity/Author.php
     namespace AppBundle\Entity;
@@ -414,4 +413,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

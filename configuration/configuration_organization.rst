@@ -6,7 +6,7 @@ How to Organize Configuration Files
 
 The default Symfony Standard Edition defines three
 :doc:`execution environments </configuration/environments>` called
-``dev``, ``prod`` and ``test``. An environment simply represents a way to
+``dev``, ``prod`` and ``test``. An environment represents a way to
 execute the same codebase with different configurations.
 
 In order to select the configuration file to load for each environment, Symfony
@@ -370,4 +370,4 @@ files. Don't feel limited by the Standard Edition that comes with Symfony. For e
 more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: b49da4a75f46e04e9b00b5f31cc2689b80faf7f0
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

@@ -58,7 +58,7 @@ scattered through lots of bundles.
     Use a prefixed underscore for partial templates in template names.
 
 You often want to reuse template code using the ``include`` function to avoid
-redundant code. To determine those partials easily in the filesystem you should
+redundant code. To determine those partials in the filesystem you should
 prefix partials and any other template without HTML body or ``extends`` tag
 with a single underscore.
 
@@ -156,4 +156,4 @@ Next: :doc:`/best_practices/forms`
 .. _`Parsedown`: http://parsedown.org/
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

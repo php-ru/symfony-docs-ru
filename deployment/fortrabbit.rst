@@ -78,7 +78,7 @@ Create the file ``app/config/config_prod_secrets.php`` with the following
 contents::
 
     // get the path to the secrects.json file
-    $secrets = getenv("APP_SECRETS")
+    $secrets = getenv("APP_SECRETS");
     if (!$secrets) {
         return;
     }
@@ -284,4 +284,4 @@ documentation.
 .. _`Sign up`: https://dashboard.fortrabbit.com
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5b4e7f0f57221b6d92b3b8148ef00a880fc42e08

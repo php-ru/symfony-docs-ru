@@ -7,9 +7,9 @@ How to Work with Emails during Development
 When developing an application which sends email, you will often
 not want to actually send the email to the specified recipient during
 development. If you are using the SwiftmailerBundle with Symfony, you
-can easily achieve this through configuration settings without having to
-make any changes to your application's code at all. There are two main
-choices when it comes to handling email during development: (a) disabling the
+can achieve this through configuration settings without having to make
+any changes to your application's code at all. There are two main choices
+when it comes to handling email during development: (a) disabling the
 sending of email altogether or (b) sending all email to a specific
 address (with optional exceptions).
 
@@ -51,7 +51,7 @@ will not be sent when you run tests, but will continue to be sent in the
             'disable_delivery' => "true",
         ]);
 
-If you'd also like to disable deliver in the ``dev`` environment, simply
+If you'd also like to disable deliver in the ``dev`` environment,
 add this same configuration to the ``config_dev.yml`` file.
 
 .. _sending-to-a-specified-address:
@@ -257,4 +257,4 @@ you to open the report with details of the sent emails.
 .. _`MailHog`: https://github.com/mailhog/MailHog
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

@@ -452,7 +452,7 @@ this would deny you access. More on that later (:ref:`security-authorization-acc
 Loading Users from the Database
 ...............................
 
-If you'd like to load your users via the Doctrine ORM, that's easy! See
+If you'd like to load your users via the Doctrine ORM, see
 :doc:`/security/entity_provider` for all the details.
 
 .. _security-encoding-user-password:
@@ -685,8 +685,7 @@ Add Code to Deny Access
 There are **two** ways to deny access to something:
 
 #. :ref:`access_control in security.yml <security-authorization-access-control>`
-   allows you to protect URL patterns (e.g. ``/admin/*``). This is easy,
-   but less flexible;
+   allows you to protect URL patterns (e.g. ``/admin/*``). Simpler, but less flexible;
 
 #. :ref:`in your code via the security.authorization_checker service <security-securing-controller>`.
 
@@ -808,8 +807,8 @@ matches the URL.
         ]);
 
 Prepending the path with ``^`` means that only URLs *beginning* with the
-pattern are matched. For example, a path of simply ``/admin`` (without
-the ``^``) would match ``/admin/foo`` but would also match URLs like ``/foo/admin``.
+pattern are matched. For example, a path of ``/admin`` (without the ``^``)
+would match ``/admin/foo`` but would also match URLs like ``/foo/admin``.
 
 .. _security-access-control-explanation:
 
@@ -828,7 +827,7 @@ the ``^``) would match ``/admin/foo`` but would also match URLs like ``/foo/admi
 Securing Controllers and other Code
 ...................................
 
-You can easily deny access from inside a controller::
+You can deny access from inside a controller::
 
     // ...
 
@@ -1330,4 +1329,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony3-security
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

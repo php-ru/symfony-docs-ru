@@ -21,8 +21,7 @@ to manage your project using `SVN`_ in a similar manner you would do with
 .. tip::
 
     This is **a** method to tracking your Symfony project in a Subversion
-    repository. There are several ways to do and this one is simply one that
-    works.
+    repository. There are several ways to do and this one is one that works.
 
 The Subversion Repository
 -------------------------
@@ -144,4 +143,4 @@ central repository to work. You then have several solutions:
 .. _`Gna`: http://gna.org/
 
 .. ready: no
-.. revision: 26493f342f87e605e03eea9372ea20124a59ae1d
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

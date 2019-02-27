@@ -179,9 +179,9 @@ before accessing certain resources. For example, you might allow "remember me"
 users to see basic account information, but then require them to actually
 re-authenticate before modifying that information.
 
-The Security component provides an easy way to do this. In addition to roles
-explicitly assigned to them, users are automatically given one of the following
-roles depending on how they are authenticated:
+The Security component provides a way to do this. In addition to roles explicitly
+assigned to them, users are automatically given one of the following roles depending
+on how they are authenticated:
 
 ``IS_AUTHENTICATED_ANONYMOUSLY``
     Automatically assigned to a user who is in a firewall protected part of the
@@ -263,4 +263,4 @@ For more information on securing services or methods in this way,
 see :doc:`/security/securing_services`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

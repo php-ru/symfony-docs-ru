@@ -160,7 +160,7 @@ To include JavaScript files, use the ``javascripts`` tag in any template:
 
 In this example, all files in the ``Resources/public/js/`` directory of the
 AppBundle will be loaded and served from a different location. The actual
-rendered tag might simply look like:
+rendered tag might look like:
 
 .. code-block:: html
 
@@ -257,10 +257,10 @@ Combining Assets
 
 One feature of Assetic is that it will combine many files into one. This helps
 to reduce the number of HTTP requests, which is great for front-end performance.
-It also allows you to maintain the files more easily by splitting them into
-manageable parts. This can help with re-usability as you can easily split
-project-specific files from those which can be used in other applications,
-but still serve them as a single file:
+It also allows you to maintain the files by splitting them into smaller, more
+manageable parts. This can help with re-usability as you can split project-specific
+files from those which can be used in other applications, but still serve them as a
+single file:
 
 .. code-block:: html+twig
 
@@ -579,4 +579,4 @@ some isolated directory (e.g. ``/js/compiled``), to keep things organized:
 .. _`LiipImagineBundle`: https://github.com/liip/LiipImagineBundle
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

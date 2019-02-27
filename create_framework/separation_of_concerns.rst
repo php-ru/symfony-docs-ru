@@ -171,7 +171,7 @@ a well defined goal:
   our application;
 
 * ``src/Simplex``: The reusable framework code that abstracts the handling of
-  incoming Requests (by the way, it makes your controllers/templates easily
+  incoming Requests (by the way, it makes your controllers/templates better
   testable -- more about that later on);
 
 * ``src/Calendar``: Our application specific code (the controllers and the
@@ -180,4 +180,4 @@ a well defined goal:
 * ``src/app.php``: The application configuration/framework customization.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

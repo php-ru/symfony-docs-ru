@@ -55,7 +55,7 @@ The front controller can be chosen by requesting URLs like:
      http://localhost/app_dev.php/some/path/...
 
 As you can see, this URL contains the PHP script to be used as the front
-controller. You can use that to easily switch the front controller or use
+controller. You can use that to switch the front controller or use
 a custom one by placing it in the ``web/`` directory (e.g. ``app_cache.php``).
 
 When using Apache and the `RewriteRule shipped with the Symfony Standard Edition`_,
@@ -153,7 +153,7 @@ front controller to the ``AppKernel``'s constructor. This name can then be
 used in the :method:`Symfony\\Component\\HttpKernel\\KernelInterface::registerContainerConfiguration`
 method to decide which configuration files to load.
 
-The Symfony Standard Edition's `AppKernel`_ class implements this method by simply
+The Symfony Standard Edition's `AppKernel`_ class implements this method by
 loading the ``app/config/config_*environment*.yml`` file. You are, of course,
 free to implement this method differently if you need a more sophisticated
 way of loading your configuration.
@@ -169,4 +169,4 @@ way of loading your configuration.
 .. _template methods: https://en.wikipedia.org/wiki/Template_method_pattern
 
 .. ready: no
-.. revision: ffee6a9fba2a2b6fd59d17c17f7dffb58820a4eb
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

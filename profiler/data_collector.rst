@@ -166,8 +166,8 @@ block and set the value of two variables called ``icon`` and ``text``:
         <img src="data:image/png;base64,..." />
 
     Another solution is to define the images as SVG files. In addition to being
-    resolution-independent, these images can be easily embedded in the Twig
-    template or included from an external file to reuse them in several templates:
+    resolution-independent, these images can be embedded in the Twig template
+    or included from an external file to reuse them in several templates:
 
     .. code-block:: twig
 
@@ -291,4 +291,4 @@ they default to ``0``. Most built-in collectors use ``255`` as their priority.
 If you want your collector to be displayed before them, use a higher value (like 300).
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

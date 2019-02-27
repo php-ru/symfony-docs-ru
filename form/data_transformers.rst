@@ -121,8 +121,7 @@ Harder Example: Transforming an Issue Number into an Issue Entity
 Say you have a many-to-one relation from the Task entity to an Issue entity (i.e. each
 Task has an optional foreign key to its related Issue). Adding a listbox with all
 possible issues could eventually get *really* long and take a long time to load.
-Instead, you decide you want to add a textbox, where the user can simply enter the
-issue number.
+Instead, you decide you want to add a textbox, where the user can enter the issue number.
 
 Start by setting up the text field like normal::
 
@@ -252,7 +251,7 @@ that message with the ``invalid_message`` option (see below).
 Using the Transformer
 ~~~~~~~~~~~~~~~~~~~~~
 
-Next, you need to use the ``IssueToNumberTransformer`` object inside if ``TaskType``
+Next, you need to use the ``IssueToNumberTransformer`` object inside of ``TaskType``
 and add it to the ``issue`` field. No problem! Just add a ``__construct()`` method
 and type-hint the new class::
 
@@ -300,9 +299,9 @@ know to pass your ``TaskType`` an instance of the ``IssueToNumberTransformer``.
     For more information about defining form types as services, read
     :doc:`register your form type as a service </form/form_dependencies>`.
 
-Now, you can easily use your ``TaskType``::
+Now, you can use your ``TaskType``::
 
-    // e.g. in a controller somewhere
+    // e.g. somewhere in a controller
     $form = $this->createForm(TaskType::class, $task);
 
     // ...
@@ -466,4 +465,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: 4f8f8258528e65f6457c170e3147b0ead7068bc7
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65

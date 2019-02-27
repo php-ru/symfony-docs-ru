@@ -2,7 +2,7 @@ IsNull
 ======
 
 Validates that a value is exactly equal to ``null``. To force that a property
-is simply blank (blank string or ``null``), see the  :doc:`/reference/constraints/Blank`
+is blank (blank string or ``null``), see the  :doc:`/reference/constraints/Blank`
 constraint. To ensure that a property is not null, see :doc:`/reference/constraints/NotNull`.
 
 Also see :doc:`NotNull <NotNull>`.
@@ -101,4 +101,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

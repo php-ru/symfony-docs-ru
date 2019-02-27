@@ -245,7 +245,7 @@ the previous requests.
 Accessing ``Accept-*`` Headers Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can easily access basic data extracted from ``Accept-*`` headers
+You can access basic data extracted from ``Accept-*`` headers
 by using the following methods:
 
 :method:`Symfony\\Component\\HttpFoundation\\Request::getAcceptableContentTypes`
@@ -490,8 +490,8 @@ Serving Files
 ~~~~~~~~~~~~~
 
 When sending a file, you must add a ``Content-Disposition`` header to your
-response. While creating this header for basic file downloads is easy, using
-non-ASCII filenames is more involving. The
+response. While creating this header for basic file downloads is straightforward,
+using non-ASCII filenames is more involving. The
 :method:`Symfony\\Component\\HttpFoundation\\ResponseHeaderBag::makeDisposition`
 abstracts the hard work behind a simple API::
 
@@ -653,4 +653,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8

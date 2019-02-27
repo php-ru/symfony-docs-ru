@@ -511,9 +511,8 @@ you will learn about next!).
     of the relationship is modified.
 
     The trick is to make sure that the single "Task" is set on each "Tag".
-    One easy way to do this is to add some extra logic to ``addTag()``,
-    which is called by the form type since ``by_reference`` is set to
-    ``false``::
+    One way to do this is to add some extra logic to ``addTag()``, which
+    is called by the form type since ``by_reference`` is set to ``false``::
 
         // src/AppBundle/Entity/Task.php
 
@@ -721,4 +720,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
