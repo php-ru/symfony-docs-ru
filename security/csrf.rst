@@ -121,7 +121,8 @@ CSRF Protection in Login Forms
 ------------------------------
 
 See :doc:`/security/form_login_setup` for a login form that is protected from
-CSRF attacks.
+CSRF attacks. You can also configure the
+:ref:`CSRF protection for the logout action <reference-security-logout-csrf>`.
 
 .. _csrf-protection-in-html-forms:
 
@@ -165,4 +166,4 @@ to check its validity::
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: ea1dea0e67c6224e0b188739b702c7246eda1513
+.. revision: 6a4ebdb089ae4a0328ea6114d5ef95eb94c31ed1

@@ -2,7 +2,7 @@ NotNull
 =======
 
 Validates that a value is not strictly equal to ``null``. To ensure that
-a value is simply not blank (not a blank string), see the  :doc:`/reference/constraints/NotBlank`
+a value is not blank (not a blank string), see the  :doc:`/reference/constraints/NotBlank`
 constraint.
 
 +----------------+-----------------------------------------------------------------------+
@@ -99,4 +99,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

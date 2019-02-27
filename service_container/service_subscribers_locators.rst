@@ -360,10 +360,10 @@ will share identical locators amongst all the services referencing them::
 
     public function process(ContainerBuilder $container)
     {
-        //...
+        // ...
 
         $locateableServices = [
-            //...
+            // ...
             'logger' => new Reference('logger'),
         ];
 
@@ -465,4 +465,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: 8a5f6003193e0e1aa8516e71c89834a7b2c9c89a
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

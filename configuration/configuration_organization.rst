@@ -78,7 +78,7 @@ Mix and Match Configuration Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Configuration files can import files defined with any other built-in configuration
-format (``.yaml`` or ``.yml``, ``.xml``, ``.php``, ``.ini``):
+format (``.yaml``, ``.xml``, ``.php``, ``.ini``):
 
 .. configuration-block::
 
@@ -180,4 +180,4 @@ can choose one of these or even create your own custom way of organizing the
 files. For even more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: 94b368468d9657feaae6288a7e98b726c4b187f2
+.. revision: 4e7092d1fe52d7b8e39ae14d874f72379d76a1a7

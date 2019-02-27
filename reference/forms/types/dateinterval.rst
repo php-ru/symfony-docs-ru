@@ -57,8 +57,7 @@ or an array (see `input`_).
 Basic Usage
 -----------
 
-This field type is highly configurable, but easy to use. The most important
-options are `input`_ and `widget`_.
+This field type is highly configurable. The most important options are `input`_ and `widget`_.
 
 You can configure *a lot* of different options, including exactly *which* range
 options to show (e.g. don't show "months", but *do* show "days")::
@@ -346,4 +345,4 @@ with_years    ``Boolean``  The value of the `with_years`_ option.
 .. _`ISO 8601`: https://en.wikipedia.org/wiki/ISO_8601
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: 603556fd7ab3e96252e65dfde070da42930ff92b

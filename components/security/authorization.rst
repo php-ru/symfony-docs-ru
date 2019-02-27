@@ -19,7 +19,7 @@ by an instance of :class:`Symfony\\Component\\Security\\Core\\Authorization\\Acc
 An authorization decision will always be based on a few things:
 
 * The current token
-    For instance, the token's :method:`Symfony\\Component\\Security\\Core\\Authentication\\Token\\TokenInterface::getRoles`
+    For instance, the token's :method:`Symfony\\Component\\Security\\Core\\Authentication\\Token\\TokenInterface::getRoleNames`
     method may be used to retrieve the roles of the current user (e.g.
     ``ROLE_SUPER_ADMIN``), or a decision may be based on the class of the token.
 * A set of attributes
@@ -127,7 +127,7 @@ RoleVoter
 The :class:`Symfony\\Component\\Security\\Core\\Authorization\\Voter\\RoleVoter`
 supports attributes starting with ``ROLE_`` and grants access to the user
 when the required ``ROLE_*`` attributes can all be found in the array of
-roles returned by the token's :method:`Symfony\\Component\\Security\\Core\\Authentication\\Token\\TokenInterface::getRoles`
+roles returned by the token's :method:`Symfony\\Component\\Security\\Core\\Authentication\\Token\\TokenInterface::getRoleNames`
 method::
 
     use Symfony\Component\Security\Core\Authorization\Voter\RoleVoter;
@@ -167,24 +167,10 @@ role::
 Roles
 -----
 
-Roles are objects that give expression to a certain right the user has. The only
-requirement is that they must define a ``getRole()`` method that returns a
-string representation of the role itself. To do so, you can optionally extend
-from the default :class:`Symfony\\Component\\Security\\Core\\Role\\Role` class,
-which returns its first constructor argument in this method::
-
-    use Symfony\Component\Security\Core\Role\Role;
-
-    $role = new Role('ROLE_ADMIN');
-
-    // shows 'ROLE_ADMIN'
-    var_dump($role->getRole());
-
-.. note::
-
-    Most authentication tokens extend from :class:`Symfony\\Component\\Security\\Core\\Authentication\\Token\\AbstractToken`,
-    which means that the roles given to its constructor will be
-    automatically converted from strings to these simple ``Role`` objects.
+Roles are strings that give expression to a certain right the user has (e.g.
+*"edit a blog post"*, *"create an invoice"*). You can freely choose those
+strings. The only requirement is that they must start with the ``ROLE_`` prefix
+(e.g. ``ROLE_POST_EDIT``, ``ROLE_INVOICE_CREATE``).
 
 Using the Decision Manager
 --------------------------
@@ -242,4 +228,4 @@ decision manager::
 
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 29c0fc16ae48cf59767cfe7b2289757b9c375d23

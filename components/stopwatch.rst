@@ -21,7 +21,7 @@ Alternatively, you can clone the `<https://github.com/symfony/stopwatch>`_ repos
 Usage
 -----
 
-The Stopwatch component provides an easy and consistent way to measure execution
+The Stopwatch component provides a consistent way to measure execution
 time of certain parts of code so that you don't constantly have to parse
 microtime by yourself. Instead, use the
 :class:`Symfony\\Component\\Stopwatch\\Stopwatch` class::
@@ -125,4 +125,4 @@ method and specifying the id of the section to be reopened::
 .. _Packagist: https://packagist.org/packages/symfony/stopwatch
 
 .. ready: no
-.. revision: 2b3384e31114a69551202b44e04938a1f0cc6cbd
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

@@ -44,7 +44,7 @@ and ``edit_form.html.twig`` instead of ``EditForm.html.twig``).
     Use a prefixed underscore for partial templates in template names.
 
 You often want to reuse template code using the ``include`` function to avoid
-redundant code. To determine those partials easily in the filesystem you should
+redundant code. To determine those partials in the filesystem you should
 prefix partials and any other template without HTML body or ``extends`` tag
 with a single underscore.
 
@@ -122,4 +122,4 @@ Next: :doc:`/best_practices/forms`
 .. _`Parsedown`: http://parsedown.org/
 
 .. ready: no
-.. revision: 7a4c4c9f356611173945232c6ca75f471d0deac1
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

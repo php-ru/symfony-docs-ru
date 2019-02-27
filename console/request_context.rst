@@ -68,8 +68,8 @@ will override the defaults.
 Configuring the Request Context per Command
 -------------------------------------------
 
-To change it only in one command you can fetch the Request Context from the
-router service and override its settings::
+To change it only in one command you need to fetch the Request Context
+from the ``router`` service and override its settings::
 
     // src/Command/DemoCommand.php
     use Symfony\Component\Routing\RouterInterface;
@@ -99,4 +99,4 @@ router service and override its settings::
     }
 
 .. ready: no
-.. revision: de2802d71a35e3ba1dfd584e55a2ce42cc9442ab
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

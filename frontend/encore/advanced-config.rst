@@ -1,9 +1,9 @@
 Advanced Webpack Config
 =======================
 
-Encore generates the Webpack configuration that's used in your
+Summarized, Encore generates the Webpack configuration that's used in your
 ``webpack.config.js`` file. Encore doesn't support adding all of Webpack's
-`configuration options`_, because many can be easily added on your own.
+`configuration options`_, because many can be added on your own.
 
 For example, suppose you need to set `Webpack's watchOptions`_ setting. To do that,
 modify the config after fetching it from Encore:
@@ -152,4 +152,4 @@ normally use from the command-line interface:
 .. _`Karma`: https://karma-runner.github.io
 
 .. ready: no
-.. revision: f18cbc8d265be09a90e38319cafef1c846137b83
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

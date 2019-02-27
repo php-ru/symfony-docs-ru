@@ -6,10 +6,10 @@ How to Work with Emails during Development
 
 When developing an application which sends email, you will often
 not want to actually send the email to the specified recipient during
-development. If you are using the default Symfony mailer, you
-can achieve this through configuration settings without having to
-make any changes to your application's code at all. There are two main
-choices when it comes to handling email during development: (a) disabling the
+development. If you are using the SwiftmailerBundle with Symfony, you
+can achieve this through configuration settings without having to make
+any changes to your application's code at all. There are two main choices
+when it comes to handling email during development: (a) disabling the
 sending of email altogether or (b) sending all email to a specific
 address (with optional exceptions).
 
@@ -252,4 +252,4 @@ the report with details of the sent emails.
 .. _`MailHog`: https://github.com/mailhog/MailHog
 
 .. ready: no
-.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

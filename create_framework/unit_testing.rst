@@ -135,8 +135,7 @@ Execute this test by running ``phpunit`` in the ``example.com`` directory:
 After the test ran, you should see a green bar. If not, you have a bug
 either in the test or in the framework code!
 
-Adding a unit test for any exception thrown in a controller means expecting a
-response code of 500::
+Adding a unit test for any exception thrown in a controller::
 
     public function testErrorHandling()
     {
@@ -222,4 +221,4 @@ safely think about the next batch of features we want to add to our framework.
 .. _`XDebug`: https://xdebug.org/
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

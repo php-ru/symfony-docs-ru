@@ -23,7 +23,7 @@ check that the BIC is associated with a given IBAN.
 Basic Usage
 -----------
 
-To use the Bic validator, simply apply it to a property on an object that
+To use the Bic validator, apply it to a property on an object that
 will contain a Business Identifier Code (BIC).
 
 .. configuration-block::
@@ -134,4 +134,4 @@ with regard to the ``$iban`` property of the same object, use
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: cc07555fd5f32d435a5d9bfc5e6f7f95d0888df0
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

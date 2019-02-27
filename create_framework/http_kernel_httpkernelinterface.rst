@@ -46,7 +46,7 @@ Update your framework so that it implements this interface::
         }
     }
 
-Even if this change looks trivial, it brings us a lot! Let's talk about one of
+Even if this change looks not too complex, it brings us a lot! Let's talk about one of
 the most impressive one: transparent :doc:`HTTP caching </http_cache>` support.
 
 The ``HttpCache`` class implements a fully-featured reverse proxy, written in
@@ -211,4 +211,4 @@ one of them but an important one as it can make your applications fly!
 .. _`Varnish`: https://www.varnish-cache.org/
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

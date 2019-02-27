@@ -113,7 +113,7 @@ Or set the ``command`` attribute on the ``console.command`` tag in your service 
 
         // config/services.php
         use App\Command\SunshineCommand;
-        //...
+        // ...
 
         $container
             ->register(SunshineCommand::class)
@@ -138,4 +138,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

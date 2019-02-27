@@ -195,7 +195,7 @@ any other "work" you can think of.
 If you need a service in a controller, type-hint an argument with its class
 (or interface) name. Symfony will automatically pass you the service you need::
 
-    use Psr\Log\LoggerInterface
+    use Psr\Log\LoggerInterface;
     // ...
 
     /**
@@ -405,15 +405,12 @@ To get the session, add an argument and type-hint it with
 
 Stored attributes remain in the session for the remainder of that user's session.
 
-.. tip::
-
-    Every ``SessionInterface`` implementation is supported. If you have your
-    own implementation, type-hint this in the argument instead.
-
 For more info, see :doc:`/session`.
 
 .. index::
    single: Session; Flash messages
+
+.. _flash-messages:
 
 Flash Messages
 ~~~~~~~~~~~~~~
@@ -644,4 +641,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 720bbc795699993e35a81f2a08fe10ae6dd0d059
+.. revision: 07f0cd49b8d33cb4fe1f73c4f6ebcc3e4eab900c

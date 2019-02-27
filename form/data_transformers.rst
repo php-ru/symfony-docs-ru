@@ -252,7 +252,7 @@ that message with the ``invalid_message`` option (see below).
 Using the Transformer
 ~~~~~~~~~~~~~~~~~~~~~
 
-Next, you need to use the ``IssueToNumberTransformer`` object inside if ``TaskType``
+Next, you need to use the ``IssueToNumberTransformer`` object inside of ``TaskType``
 and add it to the ``issue`` field. No problem! Add a ``__construct()`` method
 and type-hint the new class::
 
@@ -302,7 +302,7 @@ know to pass your ``TaskType`` an instance of the ``IssueToNumberTransformer``.
 
 Now, you can use your ``TaskType``::
 
-    // e.g. in a controller somewhere
+    // e.g. somewhere in a controller
     $form = $this->createForm(TaskType::class, $task);
 
     // ...
@@ -466,4 +466,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: d33f73bb93825b9d3959eff99cef970c8a99bc2c
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

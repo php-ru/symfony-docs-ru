@@ -312,12 +312,12 @@ obvious (since it'll render the field for you).
 
     {{ form_rest(form) }}
 
-parent_form(form_view)
+form_parent(form_view)
 ......................
 
 .. versionadded:: 4.3
 
-    The ``parent_form()`` function was introduced in Symfony 4.3.
+    The ``form_parent()`` function was introduced in Symfony 4.3.
 
 Returns the parent form view or ``null`` if the form view already is the
 root form. Using this function should be preferred over accessing the parent
@@ -433,4 +433,4 @@ Variable                Usage
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: 4f90e0e7163d2f6ca24f0a06c59447dd3c477c25
+.. revision: f9e355985489ada1893d1f6c4e4f5fbac4603295

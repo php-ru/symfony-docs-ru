@@ -103,6 +103,16 @@ array, you may use the
 
     // Do something with the results array
 
+By default, LDAP queries use the ``Symfony\Component\Ldap\Adapter::SCOPE_SUB``
+scope, which corresponds to the ``LDAP_SCOPE_SUBTREE`` scope of the
+:phpfunction:`ldap_search` function. You can also use ``SCOPE_BASE`` (related
+to the ``LDAP_SCOPE_BASE`` scope of :phpfunction:`ldap_read`) and ``SCOPE_ONE``
+(related to the ``LDAP_SCOPE_ONELEVEL`` scope of :phpfunction:`ldap_list`)::
+
+    use Symfony\Component\Ldap\Adapter;
+
+    $query = $ldap->query('dc=symfony,dc=com', '...', ['scope' => Adapter::SCOPE_ONE]);
+
 Creating or Updating Entries
 ----------------------------
 
@@ -169,4 +179,4 @@ operation type.
 .. _Packagist: https://packagist.org/packages/symfony/ldap
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: ce574b3ddba3a10cdbc710f33cd374fce9ebf8ce

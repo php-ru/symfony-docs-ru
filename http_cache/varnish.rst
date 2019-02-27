@@ -63,7 +63,7 @@ authentication, have Varnish remove the corresponding header from requests to
 prevent clients from bypassing the cache. In practice, you will need sessions
 at least for some parts of the site, e.g. when using forms with
 :doc:`CSRF Protection </security/csrf>`. In this situation, make sure to
-:doc:`only start a session when actually needed </session/avoid_session_start>`
+:ref:`only start a session when actually needed <session-avoid-start>`
 and clear the session when it is no longer needed. Alternatively, you can look
 into :ref:`caching pages that contain CSRF protected forms <caching-pages-that-contain-csrf-protected-forms>`.
 
@@ -246,4 +246,4 @@ proxy before it has expired, it adds complexity to your caching setup.
 .. _`User Context`: http://foshttpcachebundle.readthedocs.org/en/latest/features/user-context.html
 
 .. ready: no
-.. revision: 7ab3ecaf73a149a4592a93c8e78baaafccd24a13
+.. revision: 41f81fe1724bb6d0a6cd5d7fdc59743eb39fbac9

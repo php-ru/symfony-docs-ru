@@ -119,7 +119,7 @@ Using Command Options
 Unlike arguments, options are not ordered (meaning you can specify them in any
 order) and are specified with two dashes (e.g. ``--yell``). Options are
 *always* optional, and can be setup to accept a value (e.g. ``--dir=src``) or
-simply as a boolean flag without a value (e.g.  ``--yell``).
+as a boolean flag without a value (e.g.  ``--yell``).
 
 For example, add a new option to the command that can be used to specify
 how many times in a row the message should be printed::
@@ -269,4 +269,4 @@ Now check the value of the option and keep in mind that ``false !== null``::
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

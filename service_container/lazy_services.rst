@@ -76,8 +76,7 @@ same happens when calling ``Container::get()`` directly.
 The actual class will be instantiated as soon as you try to interact with the
 service (e.g. call one of its methods).
 
-To check if your proxy works you can check the interface of the
-received object::
+To check if your proxy works you can check the interface of the received object::
 
     dump(class_implements($service));
     // the output should include "ProxyManager\Proxy\LazyLoadingInterface"
@@ -100,4 +99,4 @@ in the `documentation of ProxyManager`_.
 .. _`ocramius/proxy-manager`: https://github.com/Ocramius/ProxyManager
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

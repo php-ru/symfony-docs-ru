@@ -282,7 +282,7 @@ Validation Caching
    single: Cache; Cache-Control header
    single: HTTP headers; Cache-Control
 
-With expiration caching, you simply say "cache for 3600 seconds!". But, when someone
+With expiration caching, you say "cache for 3600 seconds!". But, when someone
 updates cached content, you won't see that content on your site until the cache
 expires.
 
@@ -410,4 +410,4 @@ Learn more
 .. _`they can be cached`: https://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-20#section-2.3.4
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5

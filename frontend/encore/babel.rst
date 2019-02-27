@@ -18,17 +18,19 @@ Need to extend the Babel configuration further? The easiest way is via
 
         .configureBabel(function(babelConfig) {
             // add additional presets
-            // babelConfig.presets.push('@babel/preset-flow');
+            babelConfig.presets.push('@babel/preset-flow');
 
             // no plugins are added by default, but you can add some
-            // babelConfig.plugins.push('styled-jsx/babel');
+            babelConfig.plugins.push('styled-jsx/babel');
         }, {
             // node_modules is not processed through Babel by default
             // but you can whitelist specific modules to process
-            // include_node_modules: ['foundation-sites']
+            include_node_modules: ['foundation-sites'],
 
-            // or completely control the exclude
-            // exclude: /bower_components/
+            // or completely control the exclude rule (note that you
+            // can't use both "include_node_modules" and "exclude" at
+            // the same time)
+            exclude: /bower_components/
         })
     ;
 
@@ -63,4 +65,4 @@ configuration added by Encore.
 .. _`Babel`: http://babeljs.io/
 
 .. ready: no
-.. revision: c2b36a281ba6cfc92c8e94712a7ba60fe69d822e
+.. revision: ec6f46b8894c34eb68e4fffc0fd94c16a52689d0

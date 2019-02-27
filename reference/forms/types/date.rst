@@ -53,8 +53,8 @@ and can understand a number of different input formats via the `input`_ option.
 Basic Usage
 -----------
 
-This field type is highly configurable, but easy to use. The most important
-options are ``input`` and ``widget``.
+This field type is highly configurable. The most important options
+are ``input`` and ``widget``.
 
 Suppose that you have a ``publishedAt`` field whose underlying date is a
 ``DateTime`` object. The following configures the ``date`` type for that
@@ -242,4 +242,4 @@ Field Variables
 .. _`Bootstrap Datepicker`: https://github.com/eternicode/bootstrap-datepicker
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: 603556fd7ab3e96252e65dfde070da42930ff92b

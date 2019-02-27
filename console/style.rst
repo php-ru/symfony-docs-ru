@@ -226,7 +226,7 @@ User Input Methods
 
         $io->ask('What is your name?');
 
-    You can pass the default value as the second argument so the user can simply
+    You can pass the default value as the second argument so the user can
     hit the <Enter> key to select that value::
 
         $io->ask('Where are you from?', 'United States');
@@ -262,7 +262,7 @@ User Input Methods
 
         $io->confirm('Restart the web server?');
 
-    You can pass the default value as the second argument so the user can simply
+    You can pass the default value as the second argument so the user can
     hit the <Enter> key to select that value::
 
         $io->confirm('Restart the web server?', true);
@@ -273,7 +273,7 @@ User Input Methods
 
         $io->choice('Select the queue to analyze', ['queue1', 'queue2', 'queue3']);
 
-    You can pass the default value as the third argument so the user can simply
+    You can pass the default value as the third argument so the user can
     hit the <Enter> key to select that value::
 
         $io->choice('Select the queue to analyze', ['queue1', 'queue2', 'queue3'], 'queue1');
@@ -407,4 +407,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c

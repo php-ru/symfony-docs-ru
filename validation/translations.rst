@@ -4,8 +4,8 @@
 How to Translate Validation Constraint Messages
 ===============================================
 
-If you're using validation constraints with the Form component, then translating
-the error messages is done in the translation resource for the
+If you're using validation constraints with the Form component, you can translate
+the error messages by creating a translation resource for the
 ``validators`` :ref:`domain <using-message-domains>`.
 
 To start, suppose you've created a plain-old-PHP object that you need to
@@ -119,4 +119,4 @@ You may need to clear your cache (even in the dev environment) after creating th
 file for the first time.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
