@@ -413,7 +413,7 @@ of domain logic in your templates:
 
 The following example shows these functions in action:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     <h3>Actions</h3>
     {% if workflow_can(post, 'publish') %}
@@ -444,4 +444,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 7ff8c9b669f330cc2e886a531562bb778bb2bad3
