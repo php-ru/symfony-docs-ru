@@ -226,8 +226,7 @@ store it again::
         ],
     ];
 
-So any processing of this might quickly get ugly, even simply adding a token to
-the array::
+So any processing of this might quickly get ugly, even adding a token to the array::
 
     $tokens = $session->get('tokens');
     $tokens['c'] = $value;
@@ -342,4 +341,4 @@ Compact method to process display all flashes at once::
     }
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

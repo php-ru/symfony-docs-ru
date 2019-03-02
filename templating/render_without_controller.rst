@@ -54,8 +54,8 @@ can do this without creating a controller:
 
         return $routes;
 
-The ``TemplateController`` will simply render whatever template you've passed as
-the ``template`` default value.
+The ``TemplateController`` will render whatever template you've passed as the
+``template`` default value.
 
 You can also use this trick when rendering embedded controllers
 from within a template. But since the purpose of rendering a controller from
@@ -130,4 +130,4 @@ will be made public, as long as ``maxAge`` or ``sharedAge`` are passed.
 If set to ``true``, the Response will be marked as private.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

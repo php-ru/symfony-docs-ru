@@ -85,8 +85,7 @@ Deprecations
 From time to time, some classes and/or methods are deprecated in the
 framework; that happens when a feature implementation cannot be changed
 because of backward compatibility issues, but we still want to propose a
-"better" alternative. In that case, the old implementation can simply be
-**deprecated**.
+"better" alternative. In that case, the old implementation can be **deprecated**.
 
 A feature is marked as deprecated by adding a ``@deprecated`` phpdoc to
 relevant classes, methods, properties, ...::
@@ -132,4 +131,4 @@ between the namespace and the use declarations, like in this example from
 .. _`ArrayParserCache`: https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/ExpressionLanguage/ParserCache/ArrayParserCache.php
 
 .. ready: no
-.. revision: aaa1f48bf86d651aa3d0c45c8a7a5da885e8f57d
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

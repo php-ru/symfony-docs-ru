@@ -57,8 +57,8 @@ post URL. Let's create a new ``Slugger`` class inside ``src/Utils/``::
     }
 
 If you're using the :ref:`default services.yaml configuration <service-container-services-load-example>`,
-this class is auto-registered as a service whose ID is ``App\Utils\Slugger`` (or
-simply ``Slugger::class`` if the class is already imported in your code).
+this class is auto-registered as a service with the ID ``App\Utils\Slugger`` (to
+prevent against typos, import the class and write ``Slugger::class`` in your code).
 
 .. best-practice::
 
@@ -273,4 +273,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

@@ -6,7 +6,7 @@ How to Work with Different Output Formats in Templates
 
 Templates are a generic way to render content in *any* format. While in
 most cases you'll use templates to render HTML content, a template can just
-as easily generate JavaScript, CSS, XML or any other format you can dream of.
+generate JavaScript, CSS, XML or any other format.
 
 For example, the same "resource" is often rendered in several formats.
 To render an article index page in XML, include the format in the
@@ -81,4 +81,4 @@ format:
 .. _Request Format Listener: http://symfony.com/doc/current/bundles/FOSRestBundle/3-listener-support.html#format-listener
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

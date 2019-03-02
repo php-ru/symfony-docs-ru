@@ -398,7 +398,7 @@ you.
 .. image:: /_images/doctrine/mapping_relations_proxy.png
     :align: center
 
-What's important is the fact that you have easy access to the product's related
+What's important is the fact that you have access to the product's related
 category, but the category data isn't actually retrieved until you ask for
 the category (i.e. it's "lazily loaded").
 
@@ -597,4 +597,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/doctrine-relations
 
 .. ready: no
-.. revision: f982b42679d06c14d320d3a3ce4a7e92cfb81927
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

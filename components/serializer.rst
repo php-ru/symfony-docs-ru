@@ -1424,7 +1424,7 @@ Learn more
 .. seealso::
 
     Normalizers for the Symfony Serializer Component supporting popular web API formats
-    (JSON-LD, GraphQL, HAL and JSONAPI) are available as part of the `API Platform`_ project.
+    (JSON-LD, GraphQL, OpenAPI, HAL, JSON:API) are available as part of the `API Platform`_ project.
 
 .. seealso::
 
@@ -1445,4 +1445,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: c07bbc2367b8804e584a7fec9e8cd5d7558e429e
+.. revision: a849ebfe9a06ba28d2b98efd43b37e0d4d0e74b4

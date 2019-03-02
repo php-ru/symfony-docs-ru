@@ -1,3 +1,6 @@
+.. index::
+   single: Web Link
+
 Asset Preloading and Resource Hints with HTTP/2 and WebLink
 ===========================================================
 
@@ -187,4 +190,4 @@ You can also add links to the HTTP response directly from controllers and servic
 .. _`PSR-13`: http://www.php-fig.org/psr/psr-13/
 
 .. ready: no
-.. revision: 6d580f2ad0a4939eff874b413bf9093762c3ce5c
+.. revision: 0a6ad93a74fa7d84f3ca36acfe396b4ee3c64d2a

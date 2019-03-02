@@ -36,8 +36,8 @@ buses are central pieces of the application. Read Martin Fowler's
 As queries are usually synchronous and expected to be handled once,
 getting the result from the handler is a common need.
 
-To make this easy, you can leverage the ``HandleTrait`` in any class that has
-a ``$messageBus`` property::
+To avoid boilerplate code, you can leverage the ``HandleTrait`` in any class
+that has a ``$messageBus`` property::
 
     // src/Action/ListItems.php
     namespace App\Action;
@@ -105,4 +105,4 @@ wherever you need a query bus behavior instead of the ``MessageBusInterface``::
 .. _`article about CQRS`: https://martinfowler.com/bliki/CQRS.html
 
 .. ready: no
-.. revision: d75837551802c7cb317d673122c9860bd3df7dbd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

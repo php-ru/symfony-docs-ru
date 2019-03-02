@@ -48,8 +48,8 @@ Using the Bundle Extension
 --------------------------
 
 Imagine you are creating a new bundle - AcmeSocialBundle - which provides
-integration with Twitter, etc. To make your bundle easy to use, you want to
-allow users to configure it with some configuration that looks like this:
+integration with Twitter. To make your bundle configurable to the user, you
+can add some configuration that looks like this:
 
 .. configuration-block::
 
@@ -437,4 +437,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`snake case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

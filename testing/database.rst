@@ -67,7 +67,7 @@ Suppose the class you want to test looks like this::
     }
 
 Since the ``EntityManagerInterface`` gets injected into the class through the constructor,
-it's easy to pass a mock object within a test::
+you can pass a mock object within a test::
 
     // tests/Salary/SalaryCalculatorTest.php
     namespace App\Tests\Salary;
@@ -137,4 +137,4 @@ To do this, you can override the value of the ``DATABASE_URL`` env var in the
 .. _`DoctrineTestBundle`: https://github.com/dmaicher/doctrine-test-bundle
 
 .. ready: no
-.. revision: f52e138807d1b8b66340b61a90e4481db6eb412f
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

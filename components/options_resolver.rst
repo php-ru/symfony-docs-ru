@@ -522,8 +522,8 @@ Options without Default Values
 In some cases, it is useful to define an option without setting a default value.
 This is useful if you need to know whether or not the user *actually* set
 an option or not. For example, if you set the default value for an option,
-it's not possible to know whether the user passed this value or if it simply
-comes from the default::
+it's not possible to know whether the user passed this value or if it comes
+from the default::
 
     // ...
     class Mailer
@@ -830,4 +830,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: c55580563414d8666d679d0541946d2b8ae1a1f8
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

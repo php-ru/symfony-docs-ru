@@ -47,12 +47,12 @@ This is a simplified overview of the request workflow in Symfony applications:
 #. The **browser** displays the **resource** to the **user**.
 
 Typically, some sort of framework or system is built to handle all the repetitive
-tasks (e.g. routing, security, etc) so that a developer can easily build
-each *page* of the application. Exactly *how* these systems are built varies
-greatly. The HttpKernel component provides an interface that formalizes
-the process of starting with a request and creating the appropriate response.
-The component is meant to be the heart of any application or framework, no
-matter how varied the architecture of that system::
+tasks (e.g. routing, security, etc) so that a developer can build each *page* of
+the application. Exactly *how* these systems are built varies greatly. The HttpKernel
+component provides an interface that formalizes the process of starting with a
+request and creating the appropriate response. The component is meant to be the
+heart of any application or framework, no matter how varied the architecture of
+that system::
 
     namespace Symfony\Component\HttpKernel;
 
@@ -769,4 +769,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

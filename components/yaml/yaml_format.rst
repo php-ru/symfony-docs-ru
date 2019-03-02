@@ -286,8 +286,8 @@ Comments can be added in YAML by prefixing them with a hash mark (``#``):
 
 .. note::
 
-    Comments are simply ignored by the YAML parser and do not need to be
-    indented according to the current level of nesting in a collection.
+    Comments are ignored by the YAML parser and do not need to be indented
+    according to the current level of nesting in a collection.
 
 Explicit Typing
 ---------------
@@ -331,4 +331,4 @@ The following YAML features are not supported by the Symfony Yaml component:
 .. _`YAML specification`: http://www.yaml.org/spec/1.2/spec.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

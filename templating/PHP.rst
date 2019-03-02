@@ -66,9 +66,9 @@ Next, enable the php engine:
             ],
         ]);
 
-You can now render a PHP template instead of a Twig one simply by using the
-``.php`` extension in the template name instead of ``.twig``. The controller
-below renders the ``index.html.php`` template::
+You can now render a PHP template instead of a Twig one by using the ``.php``
+extension in the template name instead of ``.twig``. The controller below
+renders the ``index.html.php`` template::
 
     // src/Controller/HelloController.php
 
@@ -566,4 +566,4 @@ original template:
 .. _`@Template`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b

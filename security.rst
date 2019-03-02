@@ -619,7 +619,7 @@ See :doc:`/security/securing_services`.
 Checking to see if a User is Logged In (IS_AUTHENTICATED_FULLY)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you *only* want to check if a user is simply logged in (you don't care about roles),
+If you *only* want to check if a user is logged in (you don't care about roles),
 you have two options. First, if you've given *every* user ``ROLE_USER``, you can
 just check for that role. Otherwise, you can use a special "attribute" in place
 of a role::
@@ -1013,4 +1013,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
