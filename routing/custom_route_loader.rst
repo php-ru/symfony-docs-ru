@@ -38,12 +38,35 @@ and :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::load`.
 
 Take these lines from the ``routes.yaml``:
 
-.. code-block:: yaml
+.. configuration-block::
 
-    # config/routes.yaml
-    controllers:
-        resource: ../src/Controller/
-        type: annotation
+    .. code-block:: yaml
+
+        # config/routes.yaml
+        controllers:
+            resource: ../src/Controller/
+            type: annotation
+
+    .. code-block:: xml
+
+        <!-- config/routes.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <routes xmlns="http://symfony.com/schema/routing"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/routing
+                http://symfony.com/schema/routing/routing-1.0.xsd">
+
+            <import resource="../src/Controller" type="annotation"/>
+        </routes>
+
+    .. code-block:: php
+
+        // config/routes.php
+        namespace Symfony\Component\Routing\Loader\Configurator;
+
+        return function (RoutingConfigurator $routes) {
+            $routes->import('../src/Controller', 'annotation');
+        };
 
 When the main loader parses this, it tries all registered delegate loaders and calls
 their :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::supports`
@@ -93,14 +116,11 @@ and configure the service and method to call:
     .. code-block:: php
 
         // config/routes.php
-        use Symfony\Component\Routing\RouteCollection;
+        namespace Symfony\Component\Routing\Loader\Configurator;
 
-        $routes = new RouteCollection();
-        $routes->addCollection(
-            $loader->import("admin_route_loader:loadRoutes", "service")
-        );
-
-        return $routes;
+        return function (RoutingConfigurator $routes) {
+            $routes->import('admin_route_loader:loadRoutes', 'service');
+        };
 
 In this example, the routes are loaded by calling the ``loadRoutes()`` method of
 the service whose ID is ``admin_route_loader``. Your service doesn't have to
@@ -260,12 +280,11 @@ What remains to do is adding a few lines to the routing configuration:
     .. code-block:: php
 
         // config/routes.php
-        use Symfony\Component\Routing\RouteCollection;
+        namespace Symfony\Component\Routing\Loader\Configurator;
 
-        $routes = new RouteCollection();
-        $routes->addCollection($loader->import('.', 'extra'));
-
-        return $routes;
+        return function (RoutingConfigurator $routes) {
+            $routes->import('.', 'extra');
+        };
 
 The important part here is the ``type`` key. Its value should be ``extra`` as
 this is the type which the ``ExtraLoader`` supports and this will make sure
@@ -342,4 +361,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8

@@ -32,7 +32,7 @@ a service like: ``App\Controller\HelloController::index``:
         class HelloController
         {
             /**
-             * @Route("/hello", name="hello")
+             * @Route("/hello", name="hello", methods={"GET"})
              */
             public function index()
             {
@@ -45,7 +45,8 @@ a service like: ``App\Controller\HelloController::index``:
         # config/routes.yaml
         hello:
             path:     /hello
-            defaults: { _controller: App\Controller\HelloController::index }
+            controller: App\Controller\HelloController::index
+            methods: GET
 
     .. code-block:: xml
 
@@ -56,18 +57,23 @@ a service like: ``App\Controller\HelloController::index``:
             xsi:schemaLocation="http://symfony.com/schema/routing
                 http://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="hello" path="/hello">
-                <default key="_controller">App\Controller\HelloController::index</default>
-            </route>
+            <route id="hello" path="/hello" controller="App\Controller\HelloController::index" methods="GET" />
 
         </routes>
 
     .. code-block:: php
 
         // config/routes.php
-        $collection->add('hello', new Route('/hello', [
-            '_controller' => 'App\Controller\HelloController::index',
-        ]));
+        namespace Symfony\Component\Routing\Loader\Configurator;
+
+        use App\Controller\HelloController;
+
+        return function (RoutingConfigurator $routes) {
+            $routes->add('hello', '/hello')
+                ->controller(['HelloController::class, 'index'])
+                ->methods(['GET'])
+            ;
+        };
 
 .. _controller-service-invoke:
 
@@ -137,4 +143,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8

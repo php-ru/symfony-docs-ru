@@ -128,6 +128,27 @@ environment variables using the second argument of the ``run()``,
     // On both Unix-like and Windows
     $process->run(null, ['MESSAGE' => 'Something to output']);
 
+Setting Environment Variables for Processes
+-------------------------------------------
+
+The constructor of the :class:`Symfony\\Component\\Process\\Process` class and
+all of its methods related to executing processes (``run()``, ``mustRun()``,
+``start()``, etc.) allow passing an array of environment variables to set while
+running the process::
+
+    $process = new Process(['...'], null, ['ENV_VAR_NAME' => 'value']);
+    $process = Process::fromShellCommandline('...', null, ['ENV_VAR_NAME' => 'value']);
+    $process->run(null, ['ENV_VAR_NAME' => 'value']);
+
+In addition to the env vars passed explicitly, processes inherit all the env
+vars defined in your system. You can prevent this by setting to ``false`` the
+env vars you want to remove::
+
+    $process = new Process(['...'], null, [
+        'APP_ENV' => false,
+        'SYMFONY_DOTENV_VARS' => false,
+    ]);
+
 Getting real-time Process Output
 --------------------------------
 
@@ -464,4 +485,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 91697b87d38dcd8bf2358846861b497b47eed8be

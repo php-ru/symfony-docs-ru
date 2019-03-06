@@ -15,7 +15,7 @@ functionality.
 Functionality Shipped with the HttpKernel
 -----------------------------------------
 
-Symfony ships with five value resolvers in the HttpKernel component:
+Symfony ships with the following value resolvers in the HttpKernel component:
 
 :class:`Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver`
     Attempts to find a request attribute that matches the name of the argument.
@@ -235,4 +235,4 @@ subrequests.
 .. _`yield`: http://php.net/manual/en/language.generators.syntax.php
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b9ab0b51c15f213334ce068d376aaa22c09bc583

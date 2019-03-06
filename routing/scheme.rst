@@ -46,23 +46,22 @@ the URI scheme via schemes:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="secure" path="/secure" schemes="https">
-                <default key="_controller">App\Controller\MainController::secure</default>
-            </route>
+            <route id="secure" path="/secure" schemes="https" controller="App\Controller\MainController::secure" />
         </routes>
 
     .. code-block:: php
 
         // config/routes.php
-        use Symfony\Component\Routing\RouteCollection;
-        use Symfony\Component\Routing\Route;
+        namespace Symfony\Component\Routing\Loader\Configurator;
 
-        $routes = new RouteCollection();
-        $routes->add('secure', new Route('/secure', [
-            '_controller' => 'App\Controller\MainController::secure',
-        ], [], [], '', ['https']));
+        use App\Controller\MainController;
 
-        return $routes;
+        return function (RoutingConfigurator $routes) {
+            $routes->add('secure', '/secure')
+                ->controller([MainController::class, 'secure'])
+                ->schemes(['https'])
+            ;
+        };
 
 The above configuration forces the ``secure`` route to always use HTTPS.
 
@@ -96,4 +95,4 @@ to always use ``http``.
     :doc:`/security/force_https` for more details).
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8

@@ -10,5 +10,12 @@ of the choice views in the template.
 This can be a callable or a property path. See `choice_label`_ for similar usage.
 If ``null`` is used, an incrementing integer is used as the name.
 
+.. caution::
+
+    The configured value must be a valid form name. Make sure to only return
+    valid names when using a callable. Valid form names must be composed of
+    letters, digits, underscores, dashes and colons and must not start with
+    a dash or a colon.
+
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: e4c3795197fb1c058c140aebb3484ea0ab151e8c

@@ -100,7 +100,7 @@ configuration (``login``):
         class SecurityController extends AbstractController
         {
             /**
-             * @Route("/login", name="login")
+             * @Route("/login", name="login", methods={"GET", "POST"})
              */
             public function login()
             {
@@ -113,6 +113,7 @@ configuration (``login``):
         login:
             path:       /login
             controller: App\Controller\SecurityController::login
+            methods: GET|POST
 
     .. code-block:: xml
 
@@ -123,24 +124,22 @@ configuration (``login``):
             xsi:schemaLocation="http://symfony.com/schema/routing
                 http://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="login" path="/login">
-                <default key="_controller">App\Controller\SecurityController::login</default>
-            </route>
+            <route id="login" path="/login" controller="App\Controller\SecurityController::login" methods="GET|POST" />
         </routes>
 
     ..  code-block:: php
 
         // config/routes.php
+        namespace Symfony\Component\Routing\Loader\Configurator;
+
         use App\Controller\SecurityController;
-        use Symfony\Component\Routing\RouteCollection;
-        use Symfony\Component\Routing\Route;
 
-        $routes = new RouteCollection();
-        $routes->add('login', new Route('/login', [
-            '_controller' => [SecurityController::class, 'login'],
-        ]));
-
-        return $routes;
+        return function (RoutingConfigurator $routes) {
+            $routes->add('login', '/login')
+                ->controller([SecurityController::class, 'login'])
+                ->methods(['GET', 'POST'])
+            ;
+        };
 
 Great! Next, add the logic to ``login()`` that displays the login form::
 
@@ -774,4 +773,4 @@ are now fully customized:
 .. _`Login CSRF attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8

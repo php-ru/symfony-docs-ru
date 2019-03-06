@@ -21,6 +21,7 @@ String Constraints
 * :doc:`Regex </reference/constraints/Regex>`
 * :doc:`Ip </reference/constraints/Ip>`
 * :doc:`Uuid</reference/constraints/Uuid>`
+* :doc:`Json</reference/constraints/Json>`
 
 Comparison Constraints
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -81,4 +82,4 @@ Other Constraints
 * :doc:`Valid </reference/constraints/Valid>`
 
 .. ready: no
-.. revision: 3270cca02d28dba7bd3c59856a04d8f1aba9ec49
+.. revision: 01ea746e071dc44caeee32b914423f3e419ffe27

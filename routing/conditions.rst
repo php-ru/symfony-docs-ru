@@ -55,8 +55,7 @@ define arbitrary matching logic, use the ``conditions`` routing option:
             xsi:schemaLocation="http://symfony.com/schema/routing
                 http://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="contact" path="/contact">
-                <default key="_controller">App\Controller\DefaultController::contact</default>
+            <route id="contact" path="/contact" controller="App\Controller\DefaultController::contact">
                 <condition>context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'</condition>
                 <!-- expressions can also include config parameters -->
                 <!-- <condition>request.headers.get('User-Agent') matches '%app.allowed_browsers%'</condition> -->
@@ -66,25 +65,18 @@ define arbitrary matching logic, use the ``conditions`` routing option:
     .. code-block:: php
 
         // config/routes.php
-        use Symfony\Component\Routing\RouteCollection;
-        use Symfony\Component\Routing\Route;
+        namespace Symfony\Component\Routing\Loader\Configurator;
 
-        $routes = new RouteCollection();
-        $routes->add('contact', new Route(
-            '/contact', [
-                '_controller' => 'App\Controller\DefaultController::contact',
-            ],
-            [],
-            [],
-            '',
-            [],
-            [],
-            'context.getMethod() in ["GET", "HEAD"] and request.headers.get("User-Agent") matches "/firefox/i"'
-            // expressions can also include config parameters
-            // 'request.headers.get("User-Agent") matches "%app.allowed_browsers%"'
-        ));
+        use App\Controller\DefaultController;
 
-        return $collection;
+        return function (RoutingConfigurator $routes) {
+            $routes->add('contact', '')
+                ->controller([DefaultController::class, 'contact'])
+                ->condition('context.getMethod() in ["GET", "HEAD"] and request.headers.get("User-Agent") matches "/firefox/i"')
+                // expressions can also include config parameters
+                // 'request.headers.get("User-Agent") matches "%app.allowed_browsers%"'
+            ;
+        };
 
 The ``condition`` is an expression, and you can learn more about its syntax
 here: :doc:`/components/expression_language/syntax`. With this, the route
@@ -121,4 +113,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8

@@ -150,12 +150,12 @@ link for details), create a ``shipping_widget`` block to handle this:
         {% spaceless %}
             {% if expanded %}
                 <ul {{ block('widget_container_attributes') }}>
-                {% for child in form if not child.rendered %}
-                    <li>
-                        {{ form_widget(child) }}
-                        {{ form_label(child) }}
-                    </li>
-                {% endfor %}
+                    {% for child in form if not child.rendered %}
+                        <li>
+                            {{ form_widget(child) }}
+                            {{ form_label(child) }}
+                        </li>
+                    {% endfor %}
                 </ul>
             {% else %}
                 {# let the choice widget render the select tag #}
@@ -336,4 +336,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: a58fe2b88692f62ddb5b89a4d1d167ccbc7225d5

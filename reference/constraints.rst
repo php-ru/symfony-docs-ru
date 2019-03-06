@@ -19,6 +19,7 @@ Validation Constraints Reference
    constraints/Regex
    constraints/Ip
    constraints/Uuid
+   constraints/Json
 
    constraints/EqualTo
    constraints/NotEqualTo
@@ -73,4 +74,4 @@ The following constraints are natively available in Symfony:
 .. include:: /reference/constraints/map.rst.inc
 
 .. ready: no
-.. revision: 3270cca02d28dba7bd3c59856a04d8f1aba9ec49
+.. revision: 01ea746e071dc44caeee32b914423f3e419ffe27

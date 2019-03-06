@@ -124,6 +124,8 @@ When the configuration values are dynamic, you can use the PHP configuration
 file to execute your own logic. In addition, you can define your own services
 to load configurations from databases or web services.
 
+.. include:: /components/dependency_injection/_imports-parameters-note.rst.inc
+
 Global Configuration Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -180,4 +182,4 @@ can choose one of these or even create your own custom way of organizing the
 files. For even more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: 4e7092d1fe52d7b8e39ae14d874f72379d76a1a7
+.. revision: fd0c7d01ffa6c485b76e0054ec1a428568a3a9a9

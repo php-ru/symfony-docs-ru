@@ -171,22 +171,19 @@ automatically when installing Twig support):
             xsi:schemaLocation="http://symfony.com/schema/routing
                 http://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <import resource="@TwigBundle/Resources/config/routing/errors.xml"
-                prefix="/_error" />
+            <import resource="@TwigBundle/Resources/config/routing/errors.xml" prefix="/_error" />
         </routes>
 
     .. code-block:: php
 
         // config/routes/dev/twig.php
-        use Symfony\Component\Routing\RouteCollection;
+        namespace Symfony\Component\Routing\Loader\Configurator;
 
-        $routes = new RouteCollection();
-        $routes->addCollection(
-            $loader->import('@TwigBundle/Resources/config/routing/errors.xml')
-        );
-        $routes->addPrefix("/_error");
-
-        return $routes;
+        return function (RoutingConfigurator $routes) {
+            $routes->import('@TwigBundle/Resources/config/routing/errors.xml')
+                ->prefix('/_error')
+            ;
+        };
 
 With this route added, you can use URLs like these to preview the *error* page
 for a given status code as HTML or for a given status code and format.
@@ -365,4 +362,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: 6ee49fbe972c094e8e134ca9fa6ba0c6635f2239
+.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
