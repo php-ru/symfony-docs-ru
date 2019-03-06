@@ -44,11 +44,6 @@ Field Options
 scale
 ~~~~~
 
-.. versionadded:: 2.7
-
-    The ``scale`` option was introduced in Symfony 2.7. Prior to Symfony 2.7,
-    it was known as ``precision``.
-
 **type**: ``integer`` **default**: Locale-specific (usually around ``3``)
 
 This specifies how many decimals will be allowed until the field rounds
@@ -126,4 +121,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: a517280da430571fc271e0b6346b421b536955eb

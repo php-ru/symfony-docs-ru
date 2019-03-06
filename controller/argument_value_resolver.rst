@@ -15,11 +15,7 @@ functionality.
 Functionality Shipped with the HttpKernel
 -----------------------------------------
 
-.. versionadded:: 3.3
-
-    The ``SessionValueResolver`` and ``ServiceValueResolver`` were both added in Symfony 3.3.
-
-Symfony ships with five value resolvers in the HttpKernel component:
+Symfony ships with the following value resolvers in the HttpKernel component:
 
 :class:`Symfony\\Component\\HttpKernel\\Controller\\ArgumentResolver\\RequestAttributeValueResolver`
     Attempts to find a request attribute that matches the name of the argument.
@@ -45,11 +41,6 @@ Symfony ships with five value resolvers in the HttpKernel component:
     Verifies if the request data is an array and will add all of them to the
     argument list. When the action is called, the last (variadic) argument will
     contain all the values of this array.
-
-.. note::
-
-    Prior to Symfony 3.1, this logic was resolved within the ``ControllerResolver``.
-    The old functionality is rewritten to the aforementioned value resolvers.
 
 Adding a Custom Value Resolver
 ------------------------------
@@ -244,4 +235,4 @@ subrequests.
 .. _`yield`: http://php.net/manual/en/language.generators.syntax.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 04ac2c7401fbabdb484c349a9d684570940c9ece
