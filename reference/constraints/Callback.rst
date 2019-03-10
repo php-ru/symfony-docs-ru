@@ -17,16 +17,17 @@ can do anything, including creating and assigning validation errors.
     as you'll see in the example, a callback method has the ability to directly
     add validator "violations".
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`class <validation-class-target>`                                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - :ref:`callback <callback-option>`                                    |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Callback`          |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\CallbackValidator` |
-+----------------+------------------------------------------------------------------------+
++----------------+-----------------------------------------------------------------------------------------------+
+| Applies to     | :ref:`class <validation-class-target>` or :ref:`property/method <validation-property-target>` |
++----------------+-----------------------------------------------------------------------------------------------+
+| Options        | - :ref:`callback <callback-option>`                                                           |
+|                | - `groups`_                                                                                   |
+|                | - `payload`_                                                                                  |
++----------------+-----------------------------------------------------------------------------------------------+
+| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Callback`                                 |
++----------------+-----------------------------------------------------------------------------------------------+
+| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\CallbackValidator`                        |
++----------------+-----------------------------------------------------------------------------------------------+
 
 Configuration
 -------------
@@ -275,7 +276,9 @@ Static or closure callbacks receive the validated object as the first argument
 and the :class:`Symfony\\Component\\Validator\\Context\\ExecutionContextInterface`
 instance as the second argument.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 8bba58a33d8364839b0070a6bdddc8d3d6389305

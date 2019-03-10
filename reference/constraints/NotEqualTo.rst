@@ -15,6 +15,7 @@ options. To force that a value is equal, see
 | Applies to     | :ref:`property or method<validation-property-target>`                   |
 +----------------+-------------------------------------------------------------------------+
 | Options        | - `value`_                                                              |
+|                | - `groups`_                                                             |
 |                | - `message`_                                                            |
 |                | - `payload`_                                                            |
 |                | - `propertyPath`_                                                       |
@@ -113,6 +114,8 @@ Options
 
 .. include:: /reference/constraints/_comparison-value-option.rst.inc
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -137,4 +140,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
 .. ready: no
-.. revision: c318f85684e2ee76217908e4a425516f8845ea2f
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

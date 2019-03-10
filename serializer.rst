@@ -233,7 +233,7 @@ Enabling the Metadata Cache
 
 Metadata used by the Serializer component such as groups can be cached to
 enhance application performance. By default, the serializer uses the ``cache.system``
-cache pool which is configured using the :ref:`cache.system <reference-cache-systen>`
+cache pool which is configured using the :ref:`cache.system <reference-cache-system>`
 option.
 
 Enabling a Name Converter
@@ -299,4 +299,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

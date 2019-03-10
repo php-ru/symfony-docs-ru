@@ -12,6 +12,7 @@ Validates that a given number or ``DateTime`` object is *between* some minimum a
 |                | - `maxMessage`_                                                     |
 |                | - `invalidMessage`_                                                 |
 |                | - `payload`_                                                        |
+|                | - `groups`_                                                         |
 +----------------+---------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Range`          |
 +----------------+---------------------------------------------------------------------+
@@ -387,8 +388,10 @@ You can use the following parameters in this message:
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. _`is_numeric`: https://php.net/manual/en/function.is-numeric.php
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 18836b872ff538d00d81689e05ae9ec992597790
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

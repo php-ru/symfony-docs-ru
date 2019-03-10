@@ -8,7 +8,8 @@ valid YYYY-MM-DD format.
 +----------------+--------------------------------------------------------------------+
 | Applies to     | :ref:`property or method <validation-property-target>`             |
 +----------------+--------------------------------------------------------------------+
-| Options        | - `message`_                                                       |
+| Options        | - `groups`_                                                        |
+|                | - `message`_                                                       |
 |                | - `payload`_                                                       |
 +----------------+--------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Date`          |
@@ -80,6 +81,8 @@ Basic Usage
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -98,4 +101,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f5980f06e9b69855e5730b134e20f5370d370e1a
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

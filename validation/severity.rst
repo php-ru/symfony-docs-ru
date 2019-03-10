@@ -142,7 +142,7 @@ method. Each constraint exposes the attached payload as a public property::
 For example, you can leverage this to customize the ``form_errors`` block
 so that the severity is added as an additional HTML class:
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     {%- block form_errors -%}
         {%- if errors|length > 0 -%}
@@ -159,4 +159,4 @@ so that the severity is added as an additional HTML class:
     For more information on customizing form rendering, see :doc:`/form/form_customization`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

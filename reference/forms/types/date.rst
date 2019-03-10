@@ -62,8 +62,13 @@ field as **three different choice fields**::
         'widget' => 'choice',
     ]);
 
-If your underlying date is *not* a ``DateTime`` object (e.g. it's a unix timestamp),
-configure the `input`_ option.
+If your underlying date is *not* a ``DateTime`` object (e.g. it's a unix
+timestamp or a ``DateTimeImmutable`` object), configure the `input`_ option::
+
+    $builder->add('publishedAt', DateType::class, [
+        'widget' => 'choice',
+        'input'  => 'datetime_immutable'
+    ]);
 
 Rendering a single HTML5 Textbox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -231,4 +236,4 @@ Field Variables
 .. _`Bootstrap Datepicker`: https://github.com/eternicode/bootstrap-datepicker
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 46e650fa0d6e71e110750d2da683d23f7c692e55

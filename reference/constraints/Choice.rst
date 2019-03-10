@@ -10,6 +10,7 @@ an array of items is one of those valid choices.
 +----------------+----------------------------------------------------------------------+
 | Options        | - `choices`_                                                         |
 |                | - `callback`_                                                        |
+|                | - `groups`_                                                          |
 |                | - `multiple`_                                                        |
 |                | - `min`_                                                             |
 |                | - `max`_                                                             |
@@ -46,13 +47,17 @@ If your valid choice list is simple, you can pass them in directly via the
 
         class Author
         {
+            const GENRES = ['fiction', 'non-fiction'];
+
             /**
              * @Assert\Choice({"New York", "Berlin", "Tokyo"})
              */
             protected $city;
 
             /**
-             * @Assert\Choice(choices={"fiction", "non-fiction"}, message="Choose a valid genre.")
+             * You can also directly provide an array constant to the "choices" option in the annotation
+             *
+             * @Assert\Choice(choices=Author::GENRES, message="Choose a valid genre.")
              */
             protected $genre;
         }
@@ -210,7 +215,7 @@ constraint.
             }
         }
 
-If the callback is stored in a different class and is static, for example ``AppBundle\Entity\Genre``,
+If the callback is defined in a different class and is static, for example ``AppBundle\Entity\Genre``,
 you can pass the class name and the method as an array.
 
 .. configuration-block::
@@ -299,6 +304,8 @@ callback
 This is a callback method that can be used instead of the `choices`_ option
 to return the choices array. See
 `Supplying the Choices with a Callback Function`_ for details on its usage.
+
+.. include:: /reference/constraints/_groups-option.rst.inc
 
 multiple
 ~~~~~~~~
@@ -413,4 +420,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 687d345b638ca76e69046c0ba1ff01cbffb2be91

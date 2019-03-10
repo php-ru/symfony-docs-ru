@@ -10,6 +10,7 @@ gives you similar flexibility.
 | Applies to     | :ref:`class <validation-class-target>` or :ref:`property/method <validation-property-target>` |
 +----------------+-----------------------------------------------------------------------------------------------+
 | Options        | - :ref:`expression <reference-constraint-expression-option>`                                  |
+|                | - `groups`_                                                                                   |
 |                | - `message`_                                                                                  |
 |                | - `payload`_                                                                                  |
 +----------------+-----------------------------------------------------------------------------------------------+
@@ -245,6 +246,8 @@ in your expression:
 * ``value``: The value of the property being validated (only available when
   the constraint is applied directly to a property);
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -263,4 +266,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

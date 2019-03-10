@@ -9,6 +9,7 @@ using an email address that already exists in the system.
 | Applies to     | :ref:`class <validation-class-target>`                                              |
 +----------------+-------------------------------------------------------------------------------------+
 | Options        | - `fields`_                                                                         |
+|                | - `groups`_                                                                         |
 |                | - `message`_                                                                        |
 |                | - `em`_                                                                             |
 |                | - `repositoryMethod`_                                                               |
@@ -134,6 +135,8 @@ as long as they don't have the same name also).
 If you need to require two fields to be individually unique (e.g. a unique
 ``email`` *and* a unique ``username``), you use two ``UniqueEntity`` entries,
 each with a single field.
+
+.. include:: /reference/constraints/_groups-option.rst.inc
 
 message
 ~~~~~~~
@@ -307,4 +310,4 @@ also has a ``null`` value, validation would fail.
 .. _`countable PHP variable`: https://php.net/manual/function.is-countable.php
 
 .. ready: no
-.. revision: 8f3e142baf0b91cf48f1557a605e8fe30f46cb6c
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

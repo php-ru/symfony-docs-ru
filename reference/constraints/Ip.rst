@@ -9,6 +9,7 @@ IPv6 and many other combinations.
 | Applies to     | :ref:`property or method <validation-property-target>`              |
 +----------------+---------------------------------------------------------------------+
 | Options        | - `version`_                                                        |
+|                | - `groups`_                                                         |
 |                | - `message`_                                                        |
 |                | - `payload`_                                                        |
 +----------------+---------------------------------------------------------------------+
@@ -125,6 +126,8 @@ of a variety of different values:
 ``all_public``
     Validates for all IP formats but without private and reserved ranges
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -143,4 +146,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ed3d36650568c70f380c0ef7c42a12dd5cb1c0ab
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

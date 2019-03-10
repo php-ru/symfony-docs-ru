@@ -138,7 +138,7 @@ To keep things decoupled, the email body has been stored in a template and
 rendered with the ``renderView()`` method. The ``registration.html.twig``
 template might look something like this:
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     {# app/Resources/views/Emails/registration.html.twig #}
     <h3>You did it! You registered!</h3>
@@ -173,4 +173,4 @@ Learn more
 .. _`Amazon SES`: http://aws.amazon.com/ses/
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

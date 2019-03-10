@@ -660,7 +660,7 @@ being used and generating the correct paths accordingly.
 If you need absolute URLs for assets, use the ``absolute_url()`` Twig function
 as follows:
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     <img src="{{ absolute_url(asset('images/logo.png')) }}" alt="Symfony!" />
 
@@ -811,4 +811,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

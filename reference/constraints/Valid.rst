@@ -10,6 +10,7 @@ an object and all sub-objects associated with it.
 +----------------+---------------------------------------------------------------------+
 | Options        | - `traverse`_                                                       |
 |                | - `payload`_                                                        |
+|                | - `groups`_                                                         |
 +----------------+---------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Valid`          |
 +----------------+---------------------------------------------------------------------+
@@ -261,11 +262,13 @@ traverse
 
 **type**: ``boolean`` **default**: ``true``
 
-If this constraint is applied to a property that holds an array of objects,
-then each object in that array will be validated only if this option is
-set to ``true``.
+If this constraint is applied to a ``Traversable``, then all containing values
+will be validated if this option is set to ``true``. This option is ignored on
+arrays: Arrays are traversed in either case. Keys are not validated.
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: e68678a6ed63e2ce2c214adf293cfa04bf7f555c

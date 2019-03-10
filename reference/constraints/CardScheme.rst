@@ -8,7 +8,8 @@ a payment through a payment gateway.
 +----------------+--------------------------------------------------------------------------+
 | Applies to     | :ref:`property or method <validation-property-target>`                   |
 +----------------+--------------------------------------------------------------------------+
-| Options        | - `schemes`_                                                             |
+| Options        | - `groups`_                                                              |
+|                | - `schemes`_                                                             |
 |                | - `message`_                                                             |
 |                | - `payload`_                                                             |
 +----------------+--------------------------------------------------------------------------+
@@ -101,6 +102,8 @@ on an object that will contain a credit card number.
 Available Options
 -----------------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 schemes
 ~~~~~~~
 
@@ -144,4 +147,4 @@ You can use the following parameters in this message:
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

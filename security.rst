@@ -940,7 +940,7 @@ You can also use expressions inside your templates:
 
 .. configuration-block::
 
-    .. code-block:: html+jinja
+    .. code-block:: html+twig
 
         {% if is_granted(expression(
             '"ROLE_ADMIN" in roles or (not is_anonymous() and user.isSuperAdmin())'
@@ -1329,4 +1329,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony3-security
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

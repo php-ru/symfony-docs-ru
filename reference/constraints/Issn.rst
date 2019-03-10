@@ -7,7 +7,8 @@ Validates that a value is a valid
 +----------------+-----------------------------------------------------------------------+
 | Applies to     | :ref:`property or method<validation-property-target>`                 |
 +----------------+-----------------------------------------------------------------------+
-| Options        | - `message`_                                                          |
+| Options        | - `groups`_                                                           |
+|                | - `message`_                                                          |
 |                | - `caseSensitive`_                                                    |
 |                | - `requireHyphen`_                                                    |
 |                | - `payload`_                                                          |
@@ -81,6 +82,8 @@ Basic Usage
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -117,4 +120,4 @@ this to ``true``, the validator requires a hyphenated ISSN value.
 .. _`International Standard Serial Number (ISSN)`: https://en.wikipedia.org/wiki/Issn
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

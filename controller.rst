@@ -147,7 +147,7 @@ and many others that you'll learn about next.
 .. tip::
 
     You can extend either ``Controller`` or ``AbstractController``. The difference
-    is that when you extend ``AbstractController``, you can't access to your services
+    is that when you extend ``AbstractController``, you can't access your services
     via ``$this->get()`` or ``$this->container->get()``, only to a set of common
     Symfony services. This forces you to write more robust code to access services.
 
@@ -750,4 +750,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: a99bd688fcbd785106cdeac280061890bfd45f63
+.. revision: 36b3ff4d137ded7fb31a5202a0a25e618c94bb5b

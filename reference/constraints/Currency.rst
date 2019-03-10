@@ -6,7 +6,8 @@ Validates that a value is a valid `3-letter ISO 4217`_ currency name.
 +----------------+---------------------------------------------------------------------------+
 | Applies to     | :ref:`property or method<validation-property-target>`                     |
 +----------------+---------------------------------------------------------------------------+
-| Options        | - `message`_                                                              |
+| Options        | - `groups`_                                                               |
+|                | - `message`_                                                              |
 |                | - `payload`_                                                              |
 +----------------+---------------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Currency`             |
@@ -81,6 +82,8 @@ a valid currency, you could do the following:
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -101,4 +104,4 @@ You can use the following parameters in this message:
 .. _`3-letter ISO 4217`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: bdef4849b668ebd14c5b4fc91038fd0403b3ed09
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

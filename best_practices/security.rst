@@ -160,7 +160,7 @@ be reused in other parts of the application. Imagine that you want to add
 a link in a template that will only be seen by authors. Right now you'll
 need to repeat the expression code using Twig syntax:
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     {% if app.user and app.user.email == post.authorEmail %}
         <a href=""> ... </a>
@@ -202,7 +202,7 @@ Now you can reuse this method both in the template and in the security expressio
         // ...
     }
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     {% if post.isAuthor(app.user) %}
         <a href=""> ... </a>
@@ -392,4 +392,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1

@@ -38,6 +38,7 @@ of the documentation on this constraint.
 |                | - `allowPortraitMessage`_                                             |
 |                | - `corruptedMessage`_                                                 |
 |                | - See :doc:`File </reference/constraints/File>` for inherited options |
+|                | - `groups`_                                                           |
 +----------------+-----------------------------------------------------------------------+
 | Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Image`            |
 +----------------+-----------------------------------------------------------------------+
@@ -581,8 +582,10 @@ is corrupted.
 
 This message has no parameters.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. _`IANA website`: http://www.iana.org/assignments/media-types/image/index.html
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

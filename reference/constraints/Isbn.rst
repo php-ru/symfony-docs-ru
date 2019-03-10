@@ -8,6 +8,7 @@ is either a valid ISBN-10 or a valid ISBN-13.
 | Applies to     | :ref:`property or method<validation-property-target>`                |
 +----------------+----------------------------------------------------------------------+
 | Options        | - `type`_                                                            |
+|                | - `groups`_                                                          |
 |                | - `message`_                                                         |
 |                | - `isbn10Message`_                                                   |
 |                | - `isbn13Message`_                                                   |
@@ -107,6 +108,8 @@ type
 The type of ISBN to validate against. Valid values are ``isbn10``, ``isbn13``
 and ``null`` to accept any kind of ISBN.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -176,4 +179,4 @@ You can use the following parameters in this message:
 .. _`International Standard Book Number (ISBN)`: https://en.wikipedia.org/wiki/Isbn
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2

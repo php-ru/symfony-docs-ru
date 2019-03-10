@@ -1973,7 +1973,7 @@ ships with multiple adapters: ``cache.adapter.apcu``, ``cache.adapter.doctrine``
     given the adapter they are based on. Internally, a pool wraps the definition
     of an adapter.
 
-.. _reference-cache-systen:
+.. _reference-cache-system:
 
 system
 ......
@@ -2320,4 +2320,4 @@ a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/s
 .. _`webpack-manifest-plugin`: https://www.npmjs.com/package/webpack-manifest-plugin
 
 .. ready: no
-.. revision: facbe1a541a63c3323ab59ab452337666533580d
+.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
