@@ -174,7 +174,7 @@ link for details), create a ``shipping_widget`` block to handle this:
 
     You can further customize the template used to render each children of the
     choice type. The block to override in that case is named "block name" +
-    ``_entry`` + "element name" (``label``, ``errors`` or ``widget``) (e.g. to
+    ``_entry_`` + "element name" (``label``, ``errors`` or ``widget``) (e.g. to
     customize the labels of the children of the Shipping widget you'd need to
     define ``{% block shipping_entry_label %} ... {% endblock %}``).
 
@@ -336,4 +336,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: a58fe2b88692f62ddb5b89a4d1d167ccbc7225d5
+.. revision: bf9dd53136ebc68cd61494342b610a4c864d3732

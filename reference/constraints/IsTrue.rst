@@ -7,16 +7,14 @@ string "``1``".
 
 Also see :doc:`IsFalse <IsFalse>`.
 
-+----------------+---------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`              |
-+----------------+---------------------------------------------------------------------+
-| Options        | - `message`_                                                        |
-|                | - `payload`_                                                        |
-+----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\IsTrue`         |
-+----------------+---------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\IsTrueValidator`|
-+----------------+---------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\IsTrue`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\IsTrueValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -119,6 +117,8 @@ If the ``isTokenValid()`` returns false, the validation will fail.
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -128,13 +128,13 @@ This message is shown if the underlying data is not true.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

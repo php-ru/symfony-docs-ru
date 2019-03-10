@@ -4,16 +4,14 @@ Time
 Validates that a value is a valid time, meaning a string (or an object that can
 be cast into a string) that follows a valid ``HH:MM:SS`` format.
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - `message`_                                                           |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Time`              |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\TimeValidator`     |
-+----------------+------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Time`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\TimeValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -88,6 +86,8 @@ of the day when the event starts:
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -97,13 +97,13 @@ This message is shown if the underlying data is not a valid time.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 2ebb3d5057c8024355ce173f6d0e0ea215053c71
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

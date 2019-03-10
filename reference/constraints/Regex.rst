@@ -3,19 +3,17 @@ Regex
 
 Validates that a value matches a regular expression.
 
-+----------------+-----------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                |
-+----------------+-----------------------------------------------------------------------+
-| Options        | - `pattern`_                                                          |
-|                | - `htmlPattern`_                                                      |
-|                | - `match`_                                                            |
-|                | - `message`_                                                          |
-|                | - `payload`_                                                          |
-+----------------+-----------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Regex`            |
-+----------------+-----------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\RegexValidator`   |
-+----------------+-----------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `htmlPattern`_
+            - `match`_
+            - `message`_
+            - `pattern`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Regex`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\RegexValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -166,16 +164,7 @@ it a custom message:
 Options
 -------
 
-pattern
-~~~~~~~
-
-**type**: ``string`` [:ref:`default option <validation-default-option>`]
-
-This required option is the regular expression pattern that the input will
-be matched against. By default, this validator will fail if the input string
-does *not* match this regular expression (via the :phpfunction:`preg_match`
-PHP function). However, if `match`_ is set to false, then validation will
-fail if the input string *does* match this pattern.
+.. include:: /reference/constraints/_groups-option.rst.inc
 
 htmlPattern
 ~~~~~~~~~~~
@@ -281,13 +270,24 @@ This is the message that will be shown if this validator fails.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
+
+pattern
+~~~~~~~
+
+**type**: ``string`` [:ref:`default option <validation-default-option>`]
+
+This required option is the regular expression pattern that the input will
+be matched against. By default, this validator will fail if the input string
+does *not* match this regular expression (via the :phpfunction:`preg_match`
+PHP function). However, if `match`_ is set to false, then validation will
+fail if the input string *does* match this pattern.
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

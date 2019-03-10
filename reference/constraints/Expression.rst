@@ -6,18 +6,17 @@ for more complex, dynamic validation. See `Basic Usage`_ for an example.
 See :doc:`/reference/constraints/Callback` for a different constraint that
 gives you similar flexibility.
 
-+----------------+-----------------------------------------------------------------------------------------------+
-| Applies to     | :ref:`class <validation-class-target>` or :ref:`property/method <validation-property-target>` |
-+----------------+-----------------------------------------------------------------------------------------------+
-| Options        | - :ref:`expression <reference-constraint-expression-option>`                                  |
-|                | - `message`_                                                                                  |
-|                | - `payload`_                                                                                  |
-|                | - `values`_                                                                                   |
-+----------------+-----------------------------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Expression`                               |
-+----------------+-----------------------------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\ExpressionValidator`                      |
-+----------------+-----------------------------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`class <validation-class-target>`
+            or :ref:`property/method <validation-property-target>`
+Options     - :ref:`expression <reference-constraint-expression-option>`
+            - `groups`_
+            - `message`_
+            - `payload`_
+            - `values`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Expression`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\ExpressionValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -246,6 +245,8 @@ in your expression:
 * ``value``: The value of the property being validated (only available when
   the constraint is applied directly to a property);
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -255,11 +256,11 @@ The default message supplied when the expression evaluates to false.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
@@ -348,4 +349,4 @@ type (numeric, boolean, strings, null, etc.)
         }
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

@@ -5,16 +5,14 @@ This constraint is used to ensure that a credit card number passes the
 `Luhn algorithm`_. It is useful as a first step to validating a credit
 card: before communicating with a payment gateway.
 
-+----------------+-----------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                |
-+----------------+-----------------------------------------------------------------------+
-| Options        | - `message`_                                                          |
-|                | - `payload`_                                                          |
-+----------------+-----------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Luhn`             |
-+----------------+-----------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\LuhnValidator`    |
-+----------------+-----------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Luhn`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\LuhnValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -90,6 +88,8 @@ will contain a credit card number.
 Available Options
 -----------------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -99,15 +99,15 @@ The default message supplied when the value does not pass the Luhn check.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`Luhn algorithm`: https://en.wikipedia.org/wiki/Luhn_algorithm
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

@@ -5,17 +5,15 @@ Validates that a value is a valid IP address. By default, this will validate
 the value as IPv4, but a number of different options exist to validate as
 IPv6 and many other combinations.
 
-+----------------+---------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`              |
-+----------------+---------------------------------------------------------------------+
-| Options        | - `version`_                                                        |
-|                | - `message`_                                                        |
-|                | - `payload`_                                                        |
-+----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Ip`             |
-+----------------+---------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\IpValidator`    |
-+----------------+---------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+            - `version`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Ip`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\IpValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -81,6 +79,25 @@ Basic Usage
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
+message
+~~~~~~~
+
+**type**: ``string`` **default**: ``This is not a valid IP address.``
+
+This message is shown if the string is not a valid IP address.
+
+You can use the following parameters in this message:
+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
+
+.. include:: /reference/constraints/_payload-option.rst.inc
+
 version
 ~~~~~~~
 
@@ -125,22 +142,5 @@ of a variety of different values:
 ``all_public``
     Validates for all IP formats but without private and reserved ranges
 
-message
-~~~~~~~
-
-**type**: ``string`` **default**: ``This is not a valid IP address.``
-
-This message is shown if the string is not a valid IP address.
-
-You can use the following parameters in this message:
-
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
-
-.. include:: /reference/constraints/_payload-option.rst.inc
-
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

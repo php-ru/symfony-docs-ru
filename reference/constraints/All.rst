@@ -4,16 +4,14 @@ All
 When applied to an array (or Traversable object), this constraint allows
 you to apply a collection of constraints to each element of the array.
 
-+----------------+-------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`            |
-+----------------+-------------------------------------------------------------------+
-| Options        | - `constraints`_                                                  |
-|                | - `payload`_                                                      |
-+----------------+-------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\All`          |
-+----------------+-------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\AllValidator` |
-+----------------+-------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `constraints`_
+            - `groups`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\All`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\AllValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -109,7 +107,9 @@ constraints
 This required option is the array of validation constraints that you want
 to apply to each element of the underlying array.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

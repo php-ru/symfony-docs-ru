@@ -6,16 +6,14 @@ format of an `International Bank Account Number (IBAN)`_. IBAN is an
 internationally agreed means of identifying bank accounts across national
 borders with a reduced risk of propagating transcription errors.
 
-+----------------+-----------------------------------------------------------------------+
-| Applies to     | :ref:`property or method<validation-property-target>`                 |
-+----------------+-----------------------------------------------------------------------+
-| Options        | - `message`_                                                          |
-|                | - `payload`_                                                          |
-+----------------+-----------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Iban`             |
-+----------------+-----------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\IbanValidator`    |
-+----------------+-----------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Iban`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\IbanValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -95,6 +93,8 @@ will contain an International Bank Account Number.
 Available Options
 -----------------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -104,15 +104,15 @@ The default message supplied when the value does not pass the Iban check.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`International Bank Account Number (IBAN)`: https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

@@ -21,6 +21,7 @@ and can understand a number of different input formats via the `input`_ option.
 |                      | - `format`_                                                                 |
 |                      | - `html5`_                                                                  |
 |                      | - `input`_                                                                  |
+|                      | - `input_format`_                                                           |
 |                      | - `model_timezone`_                                                         |
 |                      | - `months`_                                                                 |
 |                      | - `view_timezone`_                                                          |
@@ -67,8 +68,13 @@ field as **three different choice fields**::
         'widget' => 'choice',
     ]);
 
-If your underlying date is *not* a ``DateTime`` object (e.g. it's a unix timestamp),
-configure the `input`_ option.
+If your underlying date is *not* a ``DateTime`` object (e.g. it's a unix
+timestamp or a ``DateTimeImmutable`` object), configure the `input`_ option::
+
+    $builder->add('publishedAt', DateType::class, [
+        'widget' => 'choice',
+        'input'  => 'datetime_immutable'
+    ]);
 
 Rendering a single HTML5 Textbox
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -165,11 +171,18 @@ values for the year, month and day fields::
 
 .. include:: /reference/forms/types/options/date_format.rst.inc
 
+.. versionadded:: 4.3
+
+    Using the ``format`` option when the ``html5`` option is enabled is deprecated
+    since Symfony 4.3.
+
 .. include:: /reference/forms/types/options/html5.rst.inc
 
 .. _form-reference-date-input:
 
 .. include:: /reference/forms/types/options/date_input.rst.inc
+
+.. include:: /reference/forms/types/options/date_input_format.rst.inc
 
 .. include:: /reference/forms/types/options/model_timezone.rst.inc
 
@@ -242,4 +255,4 @@ Field Variables
 .. _`Bootstrap Datepicker`: https://github.com/eternicode/bootstrap-datepicker
 
 .. ready: no
-.. revision: 603556fd7ab3e96252e65dfde070da42930ff92b
+.. revision: 78faf26ffc2ca6b6e8e7ded55e8604db4cc774b0

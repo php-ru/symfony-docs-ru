@@ -3,18 +3,16 @@ DivisibleBy
 
 Validates that a value is divisible by another value, defined in the options.
 
-+----------------+---------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method<validation-property-target>`                     |
-+----------------+---------------------------------------------------------------------------+
-| Options        | - `value`_                                                                |
-|                | - `message`_                                                              |
-|                | - `payload`_                                                              |
-|                | - `propertyPath`_                                                         |
-+----------------+---------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\DivisibleBy`          |
-+----------------+---------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\DivisibleByValidator` |
-+----------------+---------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+            - `propertyPath`_
+            - `value`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\DivisibleBy`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\DivisibleByValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -105,7 +103,7 @@ The following constraints ensure that:
 Options
 -------
 
-.. include:: /reference/constraints/_comparison-value-option.rst.inc
+.. include:: /reference/constraints/_groups-option.rst.inc
 
 message
 ~~~~~~~
@@ -128,5 +126,7 @@ For example, if you want to compare the ``$value`` property of some object
 with regard to the ``$increments`` property of the same object, use
 ``propertyPath="increments"`` in the comparison constraint of ``$value``.
 
+.. include:: /reference/constraints/_comparison-value-option.rst.inc
+
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

@@ -6,19 +6,17 @@ This constraint is used to ensure that a value has the proper format of a
 uniquely identify both financial and non-financial institutions. You may also
 check that the BIC is associated with a given IBAN.
 
-+----------------+-----------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                |
-+----------------+-----------------------------------------------------------------------+
-| Options        | - `message`_                                                          |
-|                | - `payload`_                                                          |
-|                | - `iban`_                                                             |
-|                | - `ibanMessage`_                                                      |
-|                | - `ibanPropertyPath`_                                                 |
-+----------------+-----------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Bic`              |
-+----------------+-----------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\BicValidator`     |
-+----------------+-----------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `iban`_
+            - `ibanMessage`_
+            - `ibanPropertyPath`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Bic`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\BicValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -89,6 +87,45 @@ will contain a Business Identifier Code (BIC).
 Available Options
 -----------------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
+iban
+~~~~
+
+**type**: ``string`` **default**: ``null``
+
+.. versionadded:: 4.3
+
+    The ``iban`` option was introduced in Symfony 4.3.
+
+An IBAN value to validate that the BIC is associated with it.
+
+ibanMessage
+~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``This Business Identifier Code (BIC) is not associated with IBAN {{ iban }}.``
+
+.. versionadded:: 4.3
+
+    The ``ibanMessage`` option was introduced in Symfony 4.3.
+
+The default message supplied when the value does not pass the combined BIC/IBAN check.
+
+ibanPropertyPath
+~~~~~~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``null``
+
+.. versionadded:: 4.3
+
+    The ``ibanPropertyPath`` option was introduced in Symfony 4.3.
+
+It defines the object property whose value stores the IBAN used to check the BIC with.
+
+For example, if you want to compare the ``$bic`` property of some object
+with regard to the ``$iban`` property of the same object, use
+``propertyPath="iban"`` in the comparison constraint of ``$bic``.
+
 message
 ~~~~~~~
 
@@ -98,40 +135,15 @@ The default message supplied when the value does not pass the BIC check.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ value }}``  | The current (invalid) BIC value                |
-+------------------+------------------------------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) BIC value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
-
-iban
-~~~~
-
-**type**: ``string`` **default**: ``null``
-
-An IBAN value to validate that the BIC is associated with it.
-
-ibanMessage
-~~~~~~~~~~~
-
-**type**: ``string`` **default**: ``This Business Identifier Code (BIC) is not associated with IBAN {{ iban }}.``
-
-The default message supplied when the value does not pass the combined BIC/IBAN check.
-
-ibanPropertyPath
-~~~~~~~~~~~~~~~~
-
-**type**: ``string`` **default**: ``null``
-
-It defines the object property whose value stores the IBAN used to check the BIC with.
-
-For example, if you want to compare the ``$bic`` property of some object
-with regard to the ``$iban`` property of the same object, use
-``propertyPath="iban"`` in the comparison constraint of ``$bic``.
 
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 48b0cec9f4106f355cdd4274ff4558053f74f183

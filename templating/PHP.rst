@@ -532,7 +532,7 @@ original template:
     <?php if ($required) { $label_attr['class'] = trim((isset($label_attr['class']) ? $label_attr['class'] : '').' required'); } ?>
     <?php if (!$compound) { $label_attr['for'] = $id; } ?>
     <?php if (!$label) { $label = $view['form']->humanize($name); } ?>
-    <label <?php foreach ($label_attr as $k => $v) { printf('%s="%s" ', $view->escape($k), $view->escape($v)); } ?>><?= $view->escape($view['translator']->trans($label, [], $translation_domain)) ?></label>
+    <label <?php foreach ($label_attr as $k => $v) { printf('%s="%s" ', $view->escape($k), $view->escape($v)); } ?>><?= $view->escape($view['translator']->trans($label, $label_translation_parameters, $translation_domain)) ?></label>
 
     <!-- customization -->
     <?php if ($required) : ?>
@@ -566,4 +566,4 @@ original template:
 .. _`@Template`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: fdc886a2735f542cc3a66439166819bd33ab8b8e

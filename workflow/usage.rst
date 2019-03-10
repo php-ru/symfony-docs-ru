@@ -129,7 +129,7 @@ like this:
                     'marking_store' => [
                         'type' => 'multiple_state', // or 'single_state'
                         'arguments' => ['currentPlace'],
-                    ),
+                    ],
                     'supports' => ['App\Entity\BlogPost'],
                     'places' => [
                         'draft',
@@ -469,4 +469,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: b9ab0b51c15f213334ce068d376aaa22c09bc583
+.. revision: 67eb2564d0a06ef949a768309bd93fdcaa706c6c

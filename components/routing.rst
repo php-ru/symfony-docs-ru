@@ -277,12 +277,14 @@ If you're using the ``YamlFileLoader``, then route definitions look like this:
 
     # routes.yaml
     route1:
-        path:     /foo
-        defaults: { _controller: 'MyController::fooAction' }
+        path:       /foo
+        controller: MyController::fooAction
+        methods:    GET|HEAD
 
     route2:
-        path:     /foo/bar
-        defaults: { _controller: 'MyController::foobarAction' }
+        path:       /foo/bar
+        controller: FooBarInvokableController
+        methods:    PUT
 
 To load this file, you can use the following code. This assumes that your
 ``routes.yaml`` file is in the same directory as the below code::
@@ -540,4 +542,4 @@ Learn more
 .. _PCRE Unicode properties: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: 802244d3ae793764a7bece89831315a88483b4c4

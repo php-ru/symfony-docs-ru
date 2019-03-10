@@ -161,7 +161,7 @@ message:
 
 .. code-block:: text
 
-    App\Entity\Author.name:
+    Object(App\Entity\Author).name:
         This value should not be blank
 
 If you insert a value into the ``name`` property, the happy success message
@@ -727,4 +727,4 @@ Learn more
 .. _JSR303 Bean Validation specification: http://jcp.org/en/jsr/detail?id=303
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: cc831f0a46f440724eb28c56aaa221737832e790

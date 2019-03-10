@@ -4,17 +4,15 @@ DateTime
 Validates that a value is a valid "datetime", meaning a string (or an object
 that can be cast into a string) that follows a specific format.
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - `format`_                                                            |
-|                | - `message`_                                                           |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\DateTime`          |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\DateTimeValidator` |
-+----------------+------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `format`_
+            - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\DateTime`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\DateTimeValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -94,6 +92,8 @@ format
 This option allows to validate a custom date format. See
 :phpmethod:`DateTime::createFromFormat` for formatting options.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -103,13 +103,13 @@ This message is shown if the underlying data is not a valid datetime.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ value }}``  | The current (invalid) value                    |
-+------------------+------------------------------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 2ebb3d5057c8024355ce173f6d0e0ea215053c71
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

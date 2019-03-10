@@ -39,10 +39,15 @@ environment variable in the ``.env`` file:
     # use this to disable email delivery
     MAILER_URL=null://localhost
 
-    # use this to configure a traditional SMTP server (make sure to URL-encode the
-    # values of the username and password if they contain non-alphanumeric characters
-    # such as '+', '@', ':' and '*', which are reserved in URLs)
+    # use this to configure a traditional SMTP server
     MAILER_URL=smtp://localhost:25?encryption=ssl&auth_mode=login&username=&password=
+
+.. caution::
+
+    If the username, password or host contain any character considered special in a
+    URI (such as ``+``, ``@``, ``$``, ``#``, ``/``, ``:``, ``*``, ``!``), you must
+    encode them. See `RFC 3986`_ for the full list of reserved characters or use the
+    :phpfunction:`urlencode` function to encode them.
 
 Refer to the :doc:`SwiftMailer configuration reference </reference/configuration/swiftmailer>`
 for the detailed explanation of all the available config options.
@@ -89,7 +94,7 @@ To keep things decoupled, the email body has been stored in a template and
 rendered with the ``renderView()`` method. The ``registration.html.twig``
 template might look something like this:
 
-.. code-block:: html+jinja
+.. code-block:: html+twig
 
     {# templates/emails/registration.html.twig #}
     <h3>You did it! You registered!</h3>
@@ -171,6 +176,7 @@ Learn more
 .. _`Amazon SES`: http://aws.amazon.com/ses/
 .. _`generate an App password`: https://support.google.com/accounts/answer/185833
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
+.. _`RFC 3986`: https://www.ietf.org/rfc/rfc3986.txt
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: cc831f0a46f440724eb28c56aaa221737832e790

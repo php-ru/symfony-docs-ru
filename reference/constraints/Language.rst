@@ -4,16 +4,14 @@ Language
 Validates that a value is a valid language *Unicode language identifier*
 (e.g. ``fr`` or ``zh-Hant``).
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - `message`_                                                           |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Language`          |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\LanguageValidator` |
-+----------------+------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Language`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\LanguageValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -79,6 +77,8 @@ Basic Usage
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -88,13 +88,13 @@ This message is shown if the string is not a valid language code.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

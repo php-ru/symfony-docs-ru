@@ -3,16 +3,14 @@ Currency
 
 Validates that a value is a valid `3-letter ISO 4217`_ currency name.
 
-+----------------+---------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method<validation-property-target>`                     |
-+----------------+---------------------------------------------------------------------------+
-| Options        | - `message`_                                                              |
-|                | - `payload`_                                                              |
-+----------------+---------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Currency`             |
-+----------------+---------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\CurrencyValidator`    |
-+----------------+---------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Currency`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\CurrencyValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -81,6 +79,8 @@ a valid currency, you could do the following:
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -90,15 +90,15 @@ This is the message that will be shown if the value is not a valid currency.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ value }}``  | The current (invalid) value                    |
-+------------------+------------------------------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`3-letter ISO 4217`: https://en.wikipedia.org/wiki/ISO_4217
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

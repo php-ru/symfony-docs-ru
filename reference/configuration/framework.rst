@@ -845,7 +845,7 @@ cookie_samesite
 
 **type**: ``string`` or ``null`` **default**: ``null``
 
-It controls they way cookies are sent when the HTTP request was not originated
+It controls the way cookies are sent when the HTTP request was not originated
 from the same domain the cookies are associated to. Setting this option is
 recommended to mitigate `CSRF security attacks`_.
 
@@ -1982,7 +1982,7 @@ the ``dev`` environment).
     given the adapter they are based on. Internally, a pool wraps the definition
     of an adapter.
 
-.. _reference-cache-systen:
+.. _reference-cache-system:
 
 system
 ......
@@ -2342,4 +2342,4 @@ a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/s
 .. _`session.sid_bits_per_character PHP option`: https://php.net/manual/session.configuration.php#ini.session.sid-bits-per-character
 
 .. ready: no
-.. revision: 5aa9ee5258fa402c55ba90f2e814653b20d4744d
+.. revision: bf9dd53136ebc68cd61494342b610a4c864d3732

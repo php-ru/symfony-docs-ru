@@ -5,18 +5,16 @@ Validates that a value is greater than or equal to another value, defined in
 the options. To force that a value is greater than another value, see
 :doc:`/reference/constraints/GreaterThan`.
 
-+----------------+----------------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method<validation-property-target>`                            |
-+----------------+----------------------------------------------------------------------------------+
-| Options        | - `value`_                                                                       |
-|                | - `message`_                                                                     |
-|                | - `payload`_                                                                     |
-|                | - `propertyPath`_                                                                |
-+----------------+----------------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual`          |
-+----------------+----------------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqualValidator` |
-+----------------+----------------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+            - `propertyPath`_
+            - `value`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqual`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\GreaterThanOrEqualValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -288,7 +286,7 @@ current time:
 Options
 -------
 
-.. include:: /reference/constraints/_comparison-value-option.rst.inc
+.. include:: /reference/constraints/_groups-option.rst.inc
 
 message
 ~~~~~~~
@@ -300,21 +298,21 @@ to the comparison value.
 
 You can use the following parameters in this message:
 
-+-------------------------------+-----------------------------+
-| Parameter                     | Description                 |
-+===============================+=============================+
-| ``{{ value }}``               | The current (invalid) value |
-+-------------------------------+-----------------------------+
-| ``{{ compared_value }}``      | The lower limit             |
-+-------------------------------+-----------------------------+
-| ``{{ compared_value_type }}`` | The expected value type     |
-+-------------------------------+-----------------------------+
+=============================  ================================================
+Parameter                      Description
+=============================  ================================================
+``{{ compared_value }}``       The lower limit
+``{{ compared_value_type }}``  The expected value type
+``{{ value }}``                The current (invalid) value
+=============================  ================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
+.. include:: /reference/constraints/_comparison-value-option.rst.inc
+
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 1e104b5d3b3c862b6609f5d666595389492e2fce
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

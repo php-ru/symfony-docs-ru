@@ -6,17 +6,15 @@ a blank array, ``false`` or ``null`` (null behavior is configurable). To check
 that a value is not equal to ``null``, see the
 :doc:`/reference/constraints/NotNull` constraint.
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - `allowNull`_                                                         |
-|                | - `message`_                                                           |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\NotBlank`          |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\NotBlankValidator` |
-+----------------+------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `allowNull`_
+            - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\NotBlank`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\NotBlankValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -95,6 +93,8 @@ constraint violation.
 
     The ``allowNull`` option was introduced in Symfony 4.3.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -104,13 +104,13 @@ This is the message that will be shown if the value is blank.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ab2c4f1ae0a8ae1eeaa5a7bbb9d431c5e917eb68
+.. revision: 17f510d3a57d4aae9cb558dd3f3063e33a5306d7

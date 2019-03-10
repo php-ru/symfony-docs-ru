@@ -11,20 +11,18 @@ constraint.
 This constraint can also make sure that certain collection keys are present
 and that extra keys are not present.
 
-+----------------+--------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                   |
-+----------------+--------------------------------------------------------------------------+
-| Options        | - `fields`_                                                              |
-|                | - `allowExtraFields`_                                                    |
-|                | - `extraFieldsMessage`_                                                  |
-|                | - `allowMissingFields`_                                                  |
-|                | - `missingFieldsMessage`_                                                |
-|                | - `payload`_                                                             |
-+----------------+--------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Collection`          |
-+----------------+--------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\CollectionValidator` |
-+----------------+--------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `allowExtraFields`_
+            - `allowMissingFields`_
+            - `extraFieldsMessage`_
+            - `fields`_
+            - `groups`_
+            - `missingFieldsMessage`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Collection`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\CollectionValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -289,15 +287,6 @@ the ``NotBlank`` constraint will still be applied (since it is wrapped in
 Options
 -------
 
-fields
-~~~~~~
-
-**type**: ``array`` [:ref:`default option <validation-default-option>`]
-
-This option is required and is an associative array defining all of the
-keys in the collection and, for each key, exactly which validator(s) should
-be executed against that element of the collection.
-
 allowExtraFields
 ~~~~~~~~~~~~~~~~
 
@@ -306,22 +295,6 @@ allowExtraFields
 If this option is set to ``false`` and the underlying collection contains
 one or more elements that are not included in the `fields`_ option, a validation
 error will be returned. If set to ``true``, extra fields are ok.
-
-extraFieldsMessage
-~~~~~~~~~~~~~~~~~~
-
-**type**: ``string`` **default**: ``This field was not expected.``
-
-The message shown if `allowExtraFields`_ is false and an extra field is
-detected.
-
-You can use the following parameters in this message:
-
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ field }}``  | The key of the extra field detected            |
-+------------------+------------------------------------------------+
 
 allowMissingFields
 ~~~~~~~~~~~~~~~~~~
@@ -333,6 +306,33 @@ option are not present in the underlying collection, a validation error
 will be returned. If set to ``true``, it's ok if some fields in the `fields`_
 option are not present in the underlying collection.
 
+extraFieldsMessage
+~~~~~~~~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``This field was not expected.``
+
+The message shown if `allowExtraFields`_ is false and an extra field is
+detected.
+
+You can use the following parameters in this message:
+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ field }}``  The key of the extra field detected
+===============  ==============================================================
+
+fields
+~~~~~~
+
+**type**: ``array`` [:ref:`default option <validation-default-option>`]
+
+This option is required and is an associative array defining all of the
+keys in the collection and, for each key, exactly which validator(s) should
+be executed against that element of the collection.
+
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 missingFieldsMessage
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -343,13 +343,13 @@ are missing from the underlying collection.
 
 You can use the following parameters in this message:
 
-+------------------+----------------------------------------------------+
-| Parameter        | Description                                        |
-+==================+====================================================+
-| ``{{ field }}``  | The key of the missing field defined in ``fields`` |
-+------------------+----------------------------------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ field }}``  The key of the missing field defined in ``fields``
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

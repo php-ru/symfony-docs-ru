@@ -4,18 +4,16 @@ Issn
 Validates that a value is a valid
 `International Standard Serial Number (ISSN)`_.
 
-+----------------+-----------------------------------------------------------------------+
-| Applies to     | :ref:`property or method<validation-property-target>`                 |
-+----------------+-----------------------------------------------------------------------+
-| Options        | - `message`_                                                          |
-|                | - `caseSensitive`_                                                    |
-|                | - `requireHyphen`_                                                    |
-|                | - `payload`_                                                          |
-+----------------+-----------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Issn`             |
-+----------------+-----------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\IssnValidator`    |
-+----------------+-----------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `caseSensitive`_
+            - `groups`_
+            - `message`_
+            - `payload`_
+            - `requireHyphen`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Issn`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\IssnValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -81,6 +79,16 @@ Basic Usage
 Options
 -------
 
+caseSensitive
+~~~~~~~~~~~~~
+
+**type**: ``boolean`` default: ``false``
+
+The validator will allow ISSN values to end with a lower case 'x' by default.
+When switching this to ``true``, the validator requires an upper case 'X'.
+
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -90,19 +98,13 @@ The message shown if the given value is not a valid ISSN.
 
 You can use the following parameters in this message:
 
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
-caseSensitive
-~~~~~~~~~~~~~
-
-**type**: ``boolean`` default: ``false``
-
-The validator will allow ISSN values to end with a lower case 'x' by default.
-When switching this to ``true``, the validator requires an upper case 'X'.
+.. include:: /reference/constraints/_payload-option.rst.inc
 
 requireHyphen
 ~~~~~~~~~~~~~
@@ -112,9 +114,7 @@ requireHyphen
 The validator will allow non hyphenated ISSN values by default. When switching
 this to ``true``, the validator requires a hyphenated ISSN value.
 
-.. include:: /reference/constraints/_payload-option.rst.inc
-
 .. _`International Standard Serial Number (ISSN)`: https://en.wikipedia.org/wiki/Issn
 
 .. ready: no
-.. revision: f6012cbff5736dc64bfcb083c5096ade0181c976
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

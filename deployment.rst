@@ -146,7 +146,6 @@ most natural in your hosting environment.
 
     .. code-block:: terminal
 
-        $ composer remove symfony/dotenv
         $ composer require symfony/dotenv
 
 C) Install/Update your Vendors
@@ -270,4 +269,4 @@ Learn More
 .. _`Symfony Cloud`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: b7387dbe140d76e458fe290528200473d767a264
+.. revision: b33d8c4011095a3af5bd3291ab42d63e38d049ea

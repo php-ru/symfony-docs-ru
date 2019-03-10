@@ -5,7 +5,7 @@ translation_domain
 
 In case `choice_translation_domain`_ is set to ``true`` or ``null``, this
 configures the exact translation domain that will be used for any labels or
-options that are rendered for this field
+options that are rendered for this field.
 
 .. ready: no
-.. revision: 4b92e8874057475f0a1cb7632f633928ff4a8e62
+.. revision: c57d30af258cfa8290ea58afd50fe584316be78b

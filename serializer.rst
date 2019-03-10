@@ -157,7 +157,7 @@ Configuring the Metadata Cache
 
 The metadata for the serializer is automatically cached to enhance application
 performance. By default, the serializer uses the ``cache.system`` cache pool
-which is configured using the :ref:`cache.system <reference-cache-systen>`
+which is configured using the :ref:`cache.system <reference-cache-system>`
 option.
 
 Enabling a Name Converter
@@ -239,4 +239,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: a849ebfe9a06ba28d2b98efd43b37e0d4d0e74b4
+.. revision: cc831f0a46f440724eb28c56aaa221737832e790

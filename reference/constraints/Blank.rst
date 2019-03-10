@@ -13,16 +13,14 @@ To force that a value strictly be equal to ``null``, see the
 To force that a value is *not* blank, see :doc:`/reference/constraints/NotBlank`.
 But be careful as ``NotBlank`` is *not* strictly the opposite of ``Blank``.
 
-+----------------+---------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`              |
-+----------------+---------------------------------------------------------------------+
-| Options        | - `message`_                                                        |
-|                | - `payload`_                                                        |
-+----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Blank`          |
-+----------------+---------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\BlankValidator` |
-+----------------+---------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Blank`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\BlankValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -89,6 +87,8 @@ of an ``Author`` class were blank, you could do the following:
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -98,13 +98,13 @@ This is the message that will be shown if the value is not blank.
 
 You can use the following parameters in this message:
 
-+------------------+------------------------------------------------+
-| Parameter        | Description                                    |
-+==================+================================================+
-| ``{{ value }}``  | The current (invalid) value                    |
-+------------------+------------------------------------------------+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

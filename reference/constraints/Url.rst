@@ -3,20 +3,18 @@ Url
 
 Validates that a value is a valid URL string.
 
-+----------------+---------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`              |
-+----------------+---------------------------------------------------------------------+
-| Options        | - `message`_                                                        |
-|                | - `protocols`_                                                      |
-|                | - `payload`_                                                        |
-|                | - `checkDNS`_                                                       |
-|                | - `dnsMessage`_                                                     |
-|                | - `relativeProtocol`_                                               |
-+----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Url`            |
-+----------------+---------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\UrlValidator`   |
-+----------------+---------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `checkDNS`_
+            - `dnsMessage`_
+            - `groups`_
+            - `message`_
+            - `payload`_
+            - `protocols`_
+            - `relativeProtocol`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Url`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\UrlValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -81,161 +79,6 @@ Basic Usage
 
 Options
 -------
-
-message
-~~~~~~~
-
-**type**: ``string`` **default**: ``This value is not a valid URL.``
-
-This message is shown if the URL is invalid.
-
-You can use the following parameters in this message:
-
-+-----------------+-----------------------------+
-| Parameter       | Description                 |
-+=================+=============================+
-| ``{{ value }}`` | The current (invalid) value |
-+-----------------+-----------------------------+
-
-.. configuration-block::
-
-    .. code-block:: php-annotations
-
-        // src/Entity/Author.php
-        namespace App\Entity;
-
-        use Symfony\Component\Validator\Constraints as Assert;
-
-        class Author
-        {
-            /**
-             * @Assert\Url(
-             *    message = "The url '{{ value }}' is not a valid url",
-             * )
-             */
-             protected $bioUrl;
-        }
-
-    .. code-block:: yaml
-
-        # config/validator/validation.yaml
-        App\Entity\Author:
-            properties:
-                bioUrl:
-                    - Url:
-                        message: The url "{{ value }}" is not a valid url.
-
-    .. code-block:: xml
-
-        <!-- config/validator/validation.xml -->
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
-
-            <class name="App\Entity\Author">
-                <property name="bioUrl">
-                    <constraint name="Url">
-                        <option name="message">The url "{{ value }}" is not a valid url.</option>
-                    </constraint>
-                </property>
-            </class>
-        </constraint-mapping>
-
-    .. code-block:: php
-
-        // src/Entity/Author.php
-        namespace App\Entity;
-
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
-        use Symfony\Component\Validator\Constraints as Assert;
-
-        class Author
-        {
-            public static function loadValidatorMetadata(ClassMetadata $metadata)
-            {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
-                    'message' => 'The url "{{ value }}" is not a valid url.',
-                ]));
-            }
-        }
-
-protocols
-~~~~~~~~~
-
-**type**: ``array`` **default**: ``['http', 'https']``
-
-The protocols considered to be valid for the URL. For example, if you also consider
-the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
-``http``, ``https``, and also ``ftp``.
-
-.. configuration-block::
-
-    .. code-block:: php-annotations
-
-        // src/Entity/Author.php
-        namespace App\Entity;
-
-        use Symfony\Component\Validator\Constraints as Assert;
-
-        class Author
-        {
-            /**
-             * @Assert\Url(
-             *    protocols = {"http", "https", "ftp"}
-             * )
-             */
-             protected $bioUrl;
-        }
-
-    .. code-block:: yaml
-
-        # config/validator/validation.yaml
-        App\Entity\Author:
-            properties:
-                bioUrl:
-                    - Url: { protocols: [http, https, ftp] }
-
-    .. code-block:: xml
-
-        <!-- config/validator/validation.xml -->
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
-
-            <class name="App\Entity\Author">
-                <property name="bioUrl">
-                    <constraint name="Url">
-                        <option name="protocols">
-                            <value>http</value>
-                            <value>https</value>
-                            <value>ftp</value>
-                        </option>
-                    </constraint>
-                </property>
-            </class>
-        </constraint-mapping>
-
-    .. code-block:: php
-
-        // src/Entity/Author.php
-        namespace App\Entity;
-
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
-        use Symfony\Component\Validator\Constraints as Assert;
-
-        class Author
-        {
-            public static function loadValidatorMetadata(ClassMetadata $metadata)
-            {
-                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
-                    'protocols' => ['http', 'https', 'ftp'],
-                ]));
-            }
-        }
-
-.. include:: /reference/constraints/_payload-option.rst.inc
 
 checkDNS
 ~~~~~~~~
@@ -396,6 +239,163 @@ DNS check failed.
             }
         }
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
+message
+~~~~~~~
+
+**type**: ``string`` **default**: ``This value is not a valid URL.``
+
+This message is shown if the URL is invalid.
+
+You can use the following parameters in this message:
+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
+
+.. configuration-block::
+
+    .. code-block:: php-annotations
+
+        // src/Entity/Author.php
+        namespace App\Entity;
+
+        use Symfony\Component\Validator\Constraints as Assert;
+
+        class Author
+        {
+            /**
+             * @Assert\Url(
+             *    message = "The url '{{ value }}' is not a valid url",
+             * )
+             */
+             protected $bioUrl;
+        }
+
+    .. code-block:: yaml
+
+        # config/validator/validation.yaml
+        App\Entity\Author:
+            properties:
+                bioUrl:
+                    - Url:
+                        message: The url "{{ value }}" is not a valid url.
+
+    .. code-block:: xml
+
+        <!-- config/validator/validation.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+            <class name="App\Entity\Author">
+                <property name="bioUrl">
+                    <constraint name="Url">
+                        <option name="message">The url "{{ value }}" is not a valid url.</option>
+                    </constraint>
+                </property>
+            </class>
+        </constraint-mapping>
+
+    .. code-block:: php
+
+        // src/Entity/Author.php
+        namespace App\Entity;
+
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
+        use Symfony\Component\Validator\Constraints as Assert;
+
+        class Author
+        {
+            public static function loadValidatorMetadata(ClassMetadata $metadata)
+            {
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
+                    'message' => 'The url "{{ value }}" is not a valid url.',
+                ]));
+            }
+        }
+
+.. include:: /reference/constraints/_payload-option.rst.inc
+
+protocols
+~~~~~~~~~
+
+**type**: ``array`` **default**: ``['http', 'https']``
+
+The protocols considered to be valid for the URL. For example, if you also consider
+the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
+``http``, ``https``, and also ``ftp``.
+
+.. configuration-block::
+
+    .. code-block:: php-annotations
+
+        // src/Entity/Author.php
+        namespace App\Entity;
+
+        use Symfony\Component\Validator\Constraints as Assert;
+
+        class Author
+        {
+            /**
+             * @Assert\Url(
+             *    protocols = {"http", "https", "ftp"}
+             * )
+             */
+             protected $bioUrl;
+        }
+
+    .. code-block:: yaml
+
+        # config/validator/validation.yaml
+        App\Entity\Author:
+            properties:
+                bioUrl:
+                    - Url: { protocols: [http, https, ftp] }
+
+    .. code-block:: xml
+
+        <!-- config/validator/validation.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+            <class name="App\Entity\Author">
+                <property name="bioUrl">
+                    <constraint name="Url">
+                        <option name="protocols">
+                            <value>http</value>
+                            <value>https</value>
+                            <value>ftp</value>
+                        </option>
+                    </constraint>
+                </property>
+            </class>
+        </constraint-mapping>
+
+    .. code-block:: php
+
+        // src/Entity/Author.php
+        namespace App\Entity;
+
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
+        use Symfony\Component\Validator\Constraints as Assert;
+
+        class Author
+        {
+            public static function loadValidatorMetadata(ClassMetadata $metadata)
+            {
+                $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
+                    'protocols' => ['http', 'https', 'ftp'],
+                ]));
+            }
+        }
+
 relativeProtocol
 ~~~~~~~~~~~~~~~~
 
@@ -468,4 +468,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

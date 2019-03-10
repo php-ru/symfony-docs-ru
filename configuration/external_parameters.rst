@@ -518,7 +518,6 @@ Symfony provides the following env var processors:
                     http://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
                     http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
                 <parameters>
                     <!-- if PRIVATE_KEY is not a valid file path, the content of raw_key is returned -->
                     <parameter key="private_key">%env(default:raw_key:file:PRIVATE_KEY)%</parameter>
@@ -610,4 +609,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 334ee9944dfc4e1037c14f395402a6921eb488cd

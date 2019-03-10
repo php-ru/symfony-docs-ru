@@ -17,16 +17,14 @@ can do anything, including creating and assigning validation errors.
     as you'll see in the example, a callback method has the ability to directly
     add validator "violations".
 
-+----------------+------------------------------------------------------------------------+
-| Applies to     | :ref:`class <validation-class-target>`                                 |
-+----------------+------------------------------------------------------------------------+
-| Options        | - :ref:`callback <callback-option>`                                    |
-|                | - `payload`_                                                           |
-+----------------+------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Callback`          |
-+----------------+------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Validator\\Constraints\\CallbackValidator` |
-+----------------+------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`class <validation-class-target>` or :ref:`property/method <validation-property-target>`
+Options     - :ref:`callback <callback-option>`
+            - `groups`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Callback`
+Validator   :class:`Symfony\\Component\\Validator\\Constraints\\CallbackValidator`
+==========  ===================================================================
 
 Configuration
 -------------
@@ -275,7 +273,9 @@ Static or closure callbacks receive the validated object as the first argument
 and the :class:`Symfony\\Component\\Validator\\Context\\ExecutionContextInterface`
 instance as the second argument.
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 8adf8c227eb4b5108fecdf4cb3c8250da22912ee

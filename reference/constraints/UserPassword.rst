@@ -10,16 +10,14 @@ password, but needs to enter their old password for security.
     This should **not** be used to validate a login form, since this is
     done automatically by the security system.
 
-+----------------+--------------------------------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`                                     |
-+----------------+--------------------------------------------------------------------------------------------+
-| Options        | - `message`_                                                                               |
-|                | - `payload`_                                                                               |
-+----------------+--------------------------------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPassword`          |
-+----------------+--------------------------------------------------------------------------------------------+
-| Validator      | :class:`Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPasswordValidator` |
-+----------------+--------------------------------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `message`_
+            - `payload`_
+Class       :class:`Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPassword`
+Validator   :class:`Symfony\\Component\\Security\\Core\\Validator\\Constraints\\UserPasswordValidator`
+==========  ===================================================================
 
 Basic Usage
 -----------
@@ -100,6 +98,8 @@ the user's current password:
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
 message
 ~~~~~~~
 
@@ -113,4 +113,4 @@ This message has no parameters.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1

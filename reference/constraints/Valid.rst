@@ -5,14 +5,13 @@ This constraint is used to enable validation on objects that are embedded
 as properties on an object being validated. This allows you to validate
 an object and all sub-objects associated with it.
 
-+----------------+---------------------------------------------------------------------+
-| Applies to     | :ref:`property or method <validation-property-target>`              |
-+----------------+---------------------------------------------------------------------+
-| Options        | - `traverse`_                                                       |
-|                | - `payload`_                                                        |
-+----------------+---------------------------------------------------------------------+
-| Class          | :class:`Symfony\\Component\\Validator\\Constraints\\Valid`          |
-+----------------+---------------------------------------------------------------------+
+==========  ===================================================================
+Applies to  :ref:`property or method <validation-property-target>`
+Options     - `groups`_
+            - `payload`_
+            - `traverse`_
+Class       :class:`Symfony\\Component\\Validator\\Constraints\\Valid`
+==========  ===================================================================
 
 .. include:: /reference/forms/types/options/_error_bubbling_hint.rst.inc
 
@@ -256,16 +255,18 @@ the validation of the ``Address`` fields failed.
 Options
 -------
 
+.. include:: /reference/constraints/_groups-option.rst.inc
+
+.. include:: /reference/constraints/_payload-option.rst.inc
+
 traverse
 ~~~~~~~~
 
 **type**: ``boolean`` **default**: ``true``
 
-If this constraint is applied to a property that holds an array of objects,
-then each object in that array will be validated only if this option is
-set to ``true``.
-
-.. include:: /reference/constraints/_payload-option.rst.inc
+If this constraint is applied to a ``Traversable``, then all containing values
+will be validated if this option is set to ``true``. This option is ignored on
+arrays: Arrays are traversed in either case. Keys are not validated.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 32e7bfc5c4ba187d4cc5612cab92b181779a0c0a
