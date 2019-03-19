@@ -20,7 +20,7 @@ in your application configuration.
 
     When using XML, you must use the ``http://symfony.com/schema/dic/monolog``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/monolog/monolog-1.0.xsd``
+    ``https://symfony.com/schema/dic/monolog/monolog-1.0.xsd``
 
 .. tip::
 
@@ -36,4 +36,4 @@ in your application configuration.
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php
 
 .. ready: no
-.. revision: fb5c50fb2ebaa414624560633dc4e9205c2f81df
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

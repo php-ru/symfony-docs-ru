@@ -19,10 +19,10 @@
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <imports>
-                    <import resource="%kernel.project_dir%/somefile.yaml" />
+                    <import resource="%kernel.project_dir%/somefile.yaml"/>
                 </imports>
             </container>
 
@@ -32,4 +32,4 @@
             $loader->import('%kernel.project_dir%/somefile.yaml');
 
 .. ready: no
-.. revision: a4db8b8d47a0a4bfbc5ac03befe349a39b9e7226
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

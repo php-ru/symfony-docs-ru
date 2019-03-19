@@ -53,7 +53,7 @@ The ``Json`` constraint can be applied to a property or a "getter" method:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Book">
                 <property name="chapters">
@@ -99,4 +99,4 @@ This message is shown if the underlying data is not a valid JSON value.
 .. _`JSON`: https://en.wikipedia.org/wiki/JSON
 
 .. ready: no
-.. revision: 7c9f6315d6e06e209dfc1b590f8643bafd70419f
+.. revision: 7c081f11c70f5d43188f3354aa5eaab9394cdf17

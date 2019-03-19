@@ -52,7 +52,7 @@ decided to move some configuration to a new file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <!-- ... some parameters -->
@@ -87,7 +87,7 @@ To import this file, use the ``imports`` key from a file that *is* loaded:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <imports>
                 <import resource="services/mailer.xml"/>
@@ -126,4 +126,4 @@ extension of its related  bundle - e.g. ``FrameworkBundle`` or ``TwigBundle`` -
 and used to configure those services further.
 
 .. ready: no
-.. revision: 65d6754d9aa12e7b56b3611276ce8ea4c40c0239
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

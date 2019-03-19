@@ -41,12 +41,12 @@ First, enable ``form_login`` under your firewall:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
-                    <anonymous />
-                    <form-login login-path="login" check-path="login" />
+                    <anonymous/>
+                    <form-login login-path="login" check-path="login"/>
                 </firewall>
             </config>
         </srv:container>
@@ -122,9 +122,9 @@ configuration (``login``):
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="login" path="/login" controller="App\Controller\SecurityController::login" methods="GET|POST" />
+            <route id="login" path="/login" controller="App\Controller\SecurityController::login" methods="GET|POST"/>
         </routes>
 
     ..  code-block:: php
@@ -190,15 +190,15 @@ Finally, create the template:
 
     <form action="{{ path('login') }}" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
+        <input type="password" id="password" name="_password"/>
 
         {#
             If you want to control the URL the user
             is redirected to on success (more details below)
-            <input type="hidden" name="_target_path" value="/account" />
+            <input type="hidden" name="_target_path" value="/account"/>
         #}
 
         <button type="submit">login</button>
@@ -280,14 +280,14 @@ security component:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="secured_area">
                     <!-- ... -->
-                    <form-login csrf-token-generator="security.csrf.token_manager" />
+                    <form-login csrf-token-generator="security.csrf.token_manager"/>
                 </firewall>
             </config>
         </srv:container>
@@ -362,7 +362,7 @@ After this, you have protected your login form against CSRF attacks.
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:srv="http://symfony.com/schema/dic/services"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <config>
                     <!-- ... -->
@@ -436,13 +436,13 @@ a relative/absolute URL or a Symfony route name:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
-                    <form-login default-target-path="after_login_route_name" />
+                    <form-login default-target-path="after_login_route_name"/>
                 </firewall>
             </config>
         </srv:container>
@@ -493,14 +493,14 @@ previously requested URL and always redirect to the default page:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login always-use-default-target-path="true" />
+                    <form-login always-use-default-target-path="true"/>
                 </firewall>
             </config>
         </srv:container>
@@ -546,8 +546,8 @@ Defining the redirect URL via POST using a hidden form field:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="_target_path" value="{{ path('account') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="_target_path" value="{{ path('account') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 Using the Referring URL
@@ -581,14 +581,14 @@ parameter is included in the request, you may use the value of the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login use-referer="true" />
+                    <form-login use-referer="true"/>
                 </firewall>
             </config>
         </srv:container>
@@ -647,14 +647,14 @@ option to define a new target via a relative/absolute URL or a Symfony route nam
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login failure-path="login_failure_route_name" />
+                    <form-login failure-path="login_failure_route_name"/>
                 </firewall>
             </config>
         </srv:container>
@@ -688,8 +688,8 @@ This option can also be set via the ``_failure_path`` request parameter:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="_failure_path" value="{{ path('forgot_password') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="_failure_path" value="{{ path('forgot_password') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 Customizing the Target and Failure Request Parameters
@@ -722,15 +722,15 @@ redirects can be customized using the  ``target_path_parameter`` and
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login target-path-parameter="go_to" />
-                    <form-login failure-path-parameter="back_to" />
+                    <form-login target-path-parameter="go_to"/>
+                    <form-login failure-path-parameter="back_to"/>
                 </firewall>
             </config>
         </srv:container>
@@ -765,12 +765,12 @@ are now fully customized:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="go_to" value="{{ path('dashboard') }}" />
-        <input type="hidden" name="back_to" value="{{ path('forgot_password') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="go_to" value="{{ path('dashboard') }}"/>
+        <input type="hidden" name="back_to" value="{{ path('forgot_password') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 .. _`Login CSRF attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

@@ -53,15 +53,15 @@ Now, examine the results to see this closely:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:my-bundle="http://example.org/schema/dic/my_bundle">
 
-            <my-bundle:config logging="true" />
+            <my-bundle:config logging="true"/>
             <!-- true, as expected -->
 
-            <my-bundle:config logging="%kernel.debug%" />
+            <my-bundle:config logging="%kernel.debug%"/>
             <!-- true/false (depends on 2nd parameter of Kernel),
                  as expected, because %kernel.debug% inside configuration
                  gets evaluated before being passed to the extension -->
 
-            <my-bundle:config />
+            <my-bundle:config/>
             <!-- passes the string "%kernel.debug%".
                  Which is always considered as true.
                  The Configurator does not know anything about
@@ -147,4 +147,4 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
     the default parameter value is set by the Extension class.
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

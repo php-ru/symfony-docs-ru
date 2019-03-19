@@ -90,14 +90,14 @@ duplicated service definitions:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Repository\BaseDoctrineRepository" abstract="true">
-                    <argument type="service" id="doctrine.orm.entity_manager" />
+                    <argument type="service" id="doctrine.orm.entity_manager"/>
 
                     <call method="setLogger">
-                        <argument type="service" id="logger" />
+                        <argument type="service" id="logger"/>
                     </call>
                 </service>
 
@@ -200,7 +200,7 @@ the child class:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
@@ -212,14 +212,14 @@ the child class:
                 >
                     <!-- appends the '@app.username_checker' argument to the parent
                          argument list -->
-                    <argument type="service" id="app.username_checker" />
+                    <argument type="service" id="app.username_checker"/>
                 </service>
 
                 <service id="App\Repository\DoctrinePostRepository"
                     parent="App\Repository\BaseDoctrineRepository"
                 >
                     <!-- overrides the first argument (using the index attribute) -->
-                    <argument index="0" type="service" id="doctrine.custom_entity_manager" />
+                    <argument index="0" type="service" id="doctrine.custom_entity_manager"/>
                 </service>
 
                 <!-- ... -->
@@ -251,4 +251,4 @@ the child class:
         $container->setDefinition(DoctrinePostRepository::class, $definition);
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

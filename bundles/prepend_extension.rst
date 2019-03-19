@@ -122,13 +122,13 @@ registered and the ``entity_manager_name`` setting for ``acme_hello`` is set to
             xmlns:acme-something="http://example.org/schema/dic/acme_something"
             xmlns:acme-other="http://example.org/schema/dic/acme_other"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <acme-something:config use-acme-goodbye="false">
                 <acme-something:entity-manager-name>non_default</acme-something:entity-manager-name>
             </acme-something:config>
 
-            <acme-other:config use-acme-goodbye="false" />
+            <acme-other:config use-acme-goodbye="false"/>
 
         </container>
 
@@ -153,4 +153,4 @@ the same key, the bundle that is registered **first** will take priority:
 next bundles won't override this specific config setting.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

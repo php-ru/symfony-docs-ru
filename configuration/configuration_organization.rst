@@ -98,13 +98,13 @@ format (``.yaml``, ``.xml``, ``.php``, ``.ini``):
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="my_config_file.yaml" />
-                <import resource="legacy.php" />
+                <import resource="my_config_file.yaml"/>
+                <import resource="legacy.php"/>
             </imports>
 
             <!-- ... -->
@@ -152,12 +152,12 @@ when importing it from any other configuration file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="/etc/sites/mysite.com/parameters.yaml" ignore-errors="true" />
+                <import resource="/etc/sites/mysite.com/parameters.yaml" ignore-errors="true"/>
             </imports>
 
             <!-- ... -->
@@ -182,4 +182,4 @@ can choose one of these or even create your own custom way of organizing the
 files. For even more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: fd0c7d01ffa6c485b76e0054ec1a428568a3a9a9
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

@@ -38,7 +38,7 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -50,7 +50,7 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
                     <remember-me
                         secret="%kernel.secret%"
                         lifetime="604800"
-                        path="/" />
+                        path="/"/>
                     <!-- by default, the feature is enabled by checking a checkbox
                          in the login form (see below), add always-remember-me="true"
                          to always enable it. -->
@@ -154,7 +154,7 @@ this:
     <form method="post">
         {# ... your form fields #}
 
-        <input type="checkbox" id="remember_me" name="_remember_me" checked />
+        <input type="checkbox" id="remember_me" name="_remember_me" checked/>
         <label for="remember_me">Keep me logged in</label>
 
         {# ... #}
@@ -198,4 +198,4 @@ users to change their password. You can do this by leveraing a few special "role
     }
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

@@ -29,12 +29,12 @@ as integration of other related components:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:form />
+                <framework:form/>
             </framework:config>
         </container>
 
@@ -69,10 +69,10 @@ can add some configuration that looks like this:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:acme-social="http://example.org/schema/dic/acme_social"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
            <acme-social:config>
-               <acme-social:twitter client-id="123" client-secret="your_secret" />
+               <acme-social:twitter client-id="123" client-secret="your_secret"/>
            </acme-social:config>
 
            <!-- ... -->
@@ -240,7 +240,7 @@ For example, imagine your bundle has the following example config:
     <container xmlns="http://symfony.com/schema/dic/services"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://symfony.com/schema/dic/services
-            http://symfony.com/schema/dic/services/services-1.0.xsd">
+            https://symfony.com/schema/dic/services/services-1.0.xsd">
 
         <services>
             <service id="acme.social.twitter_client" class="Acme\SocialBundle\TwitterClient">
@@ -301,9 +301,7 @@ In your extension, you can load this and dynamically set its arguments::
     Using the Config component is fully optional. The ``load()`` method gets an
     array of configuration values. You can instead parse these arrays yourself
     (e.g. by overriding configurations and using :phpfunction:`isset` to check
-    for the existence of a value). Be aware that it'll be very hard to support XML.
-
-    .. code-block:: php
+    for the existence of a value). Be aware that it'll be very hard to support XML::
 
         public function load(array $configs, ContainerBuilder $container)
         {
@@ -437,4 +435,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`snake case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

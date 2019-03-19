@@ -248,7 +248,7 @@ to specify a tag that contains the template:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\DataCollector\RequestCollector" public="false">
@@ -282,4 +282,4 @@ Most built-in collectors use ``255`` as their priority. If you want your collect
 to be displayed before them, use a higher value (like 300).
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

@@ -22,7 +22,7 @@ configuration.
 
     When using XML, you must use the ``http://symfony.com/schema/dic/doctrine``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd``
+    ``https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd``
 
 .. index::
     single: Configuration; Doctrine DBAL
@@ -78,9 +78,9 @@ The following block shows all possible configuration keys:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal
@@ -321,11 +321,11 @@ directory instead:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:orm auto-mapping="true">
-                    <mapping name="AppBundle" dir="SomeResources/config/doctrine" type="xml" />
+                    <mapping name="AppBundle" dir="SomeResources/config/doctrine" type="xml"/>
                 </doctrine:orm>
             </doctrine:config>
         </container>
@@ -372,7 +372,7 @@ namespace in the ``src/Entity`` directory and gives them an ``App`` alias
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:orm>
@@ -439,4 +439,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

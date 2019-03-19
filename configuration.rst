@@ -43,19 +43,19 @@ instance, the framework bundle is configured in ``config/packages/framework.yaml
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:framework="http://symfony.com/schema/dic/framework"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                    http://symfony.com/schema/dic/framework http://symfony.com/schema/dic/framework/framework-1.0.xsd"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/framework https://symfony.com/schema/dic/framework/framework-1.0.xsd"
             >
                 <framework:config secret="%env(APP_SECRET)%">
-                    <!--<framework:csrf-protection enabled="true“ />-->
-                    <!--<framework:esi enabled="true" />-->
-                    <!--<framework:fragments enabled="true" />-->
+                    <!--<framework:csrf-protection enabled="true"/>-->
+                    <!--<framework:esi enabled="true"/>-->
+                    <!--<framework:fragments enabled="true"/>-->
 
                     <!-- Enables session support. Note that the session will ONLY be started if you read or write from it.
                          Remove or comment this section to explicitly disable session support. -->
-                    <framework:session />
+                    <framework:session/>
 
-                    <framework:php-errors log="true" />
+                    <framework:php-errors log="true"/>
                 </framework:config>
             </container>
 
@@ -142,9 +142,9 @@ package, a ``locale`` parameter is added  to ``config/services.yaml``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <parameters>
                 <parameter key="locale">en</parameter>
@@ -181,9 +181,9 @@ This parameter is then referenced in the framework config in
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <!-- any string surrounded by two % is replaced by that parameter value -->
             <framework:config default-locale="%locale%">
@@ -319,4 +319,4 @@ Learn more
 .. _`Incenteev Parameter Handler`: https://github.com/Incenteev/ParameterHandler
 
 .. ready: no
-.. revision: b0b38f2bf7ea372c1ae5dcc1f63156801cf8f086
+.. revision: 3344a4f63bd37749354be617879b24a78cedab72

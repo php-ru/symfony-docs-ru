@@ -55,13 +55,13 @@ managers that use this connection.
                 <!-- ... -->
 
                 <service id="App\EventListener\SearchIndexer">
-                    <tag name="doctrine.event_listener" event="postPersist" />
+                    <tag name="doctrine.event_listener" event="postPersist"/>
                 </service>
                 <service id="App\EventListener\SearchIndexer2">
-                    <tag name="doctrine.event_listener" event="postPersist" connection="default" />
+                    <tag name="doctrine.event_listener" event="postPersist" connection="default"/>
                 </service>
                 <service id="App\EventListener\SearchIndexerSubscriber">
-                    <tag name="doctrine.event_subscriber" connection="default" />
+                    <tag name="doctrine.event_subscriber" connection="default"/>
                 </service>
             </services>
         </container>
@@ -230,10 +230,10 @@ numbers mean that listeners are invoked earlier.
 
             <services>
                 <service id="App\EventListener\MyHighPriorityListener" autowire="true">
-                    <tag name="doctrine.event_listener" event="postPersist" priority="10" />
+                    <tag name="doctrine.event_listener" event="postPersist" priority="10"/>
                 </service>
                 <service id="App\EventListener\MyLowPriorityListener" autowire="true">
-                    <tag name="doctrine.event_listener" event="postPersist" priority="1" />
+                    <tag name="doctrine.event_listener" event="postPersist" priority="1"/>
                 </service>
             </services>
         </container>
@@ -258,4 +258,4 @@ numbers mean that listeners are invoked earlier.
 .. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
 .. ready: no
-.. revision: b7be4a52a099b52736e02be31dac979f4a427c29
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

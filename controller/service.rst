@@ -55,9 +55,9 @@ a service like: ``App\Controller\HelloController::index``:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="hello" path="/hello" controller="App\Controller\HelloController::index" methods="GET" />
+            <route id="hello" path="/hello" controller="App\Controller\HelloController::index" methods="GET"/>
 
         </routes>
 
@@ -143,4 +143,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

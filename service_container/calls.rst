@@ -51,13 +51,13 @@ To configure the container to call the ``setLogger`` method, use the ``calls`` k
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Service\MessageGenerator">
                     <!-- ... -->
                     <call method="setLogger">
-                        <argument type="service" id="logger" />
+                        <argument type="service" id="logger"/>
                     </call>
                 </service>
             </services>
@@ -73,4 +73,4 @@ To configure the container to call the ``setLogger`` method, use the ``calls`` k
             ->addMethodCall('setLogger', [new Reference('logger')]);
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

@@ -204,9 +204,9 @@ link for details), create a ``shipping_widget`` block to handle this:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:twig="http://symfony.com/schema/dic/twig"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/twig
-                    http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                    https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
                 <twig:config>
                     <twig:form-theme>form/fields.html.twig</twig:form-theme>
@@ -242,8 +242,8 @@ link for details), create a ``shipping_widget`` block to handle this:
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
-                xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <framework:config>
                     <framework:templating>
@@ -336,4 +336,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: bf9dd53136ebc68cd61494342b610a4c864d3732
+.. revision: ad683390ddeaa64084700dc20b1fb069b3bc8a5c

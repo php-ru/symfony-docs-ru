@@ -50,17 +50,17 @@ configure the service container to use the
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Email\NewsletterManager">
                     <!-- call the static method -->
-                    <factory class="App\Email\NewsletterManagerStaticFactory" method="createNewsletterManager" />
+                    <factory class="App\Email\NewsletterManagerStaticFactory" method="createNewsletterManager"/>
 
                     <!-- if the factory class is the same as the service class, you can omit
                          the 'class' attribute and define just the 'method' attribute:
 
-                         <factory method="createNewsletterManager" />
+                         <factory method="createNewsletterManager"/>
                     -->
                 </service>
             </services>
@@ -113,10 +113,10 @@ Configuration of the service container then looks like this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="App\Email\NewsletterManagerFactory" />
+                <service id="App\Email\NewsletterManagerFactory"/>
 
                 <service id="App\Email\NewsletterManager">
                     <!-- call a method on the specified factory service -->
@@ -190,7 +190,7 @@ example takes the ``templating`` service as an argument:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
@@ -218,4 +218,4 @@ example takes the ``templating`` service as an argument:
             ]);
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

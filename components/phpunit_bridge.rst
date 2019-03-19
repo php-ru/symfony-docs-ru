@@ -55,7 +55,7 @@ to register a new `test listener`_ called ``SymfonyTestsListener``:
         <!-- ... -->
 
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
     </phpunit>
 
@@ -122,7 +122,7 @@ The summary includes:
         <!-- phpunit.xml.dist -->
         <!-- ... -->
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
 
 Trigger Deprecation Notices
@@ -179,8 +179,8 @@ message, enclosed with ``/``. For example, with:
         <!-- ... -->
 
         <php>
-            <server name="KERNEL_CLASS" value="App\Kernel" />
-            <env name="SYMFONY_DEPRECATIONS_HELPER" value="/foobar/" />
+            <server name="KERNEL_CLASS" value="App\Kernel"/>
+            <env name="SYMFONY_DEPRECATIONS_HELPER" value="/foobar/"/>
         </php>
     </phpunit>
 
@@ -342,7 +342,7 @@ following listener in your PHPUnit configuration:
     <!-- phpunit.xml.dist -->
     <!-- ... -->
     <listeners>
-        <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+        <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
     </listeners>
 
 .. note::
@@ -587,7 +587,7 @@ It's also possible to set this env var in the ``phpunit.xml.dist`` file.
 
 If you have installed the bridge through Composer, you can run it by calling e.g.:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ vendor/bin/simple-phpunit
 
@@ -676,7 +676,7 @@ Add the following configuration to the ``phpunit.xml.dist`` file
         <!-- ... -->
 
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\CoverageListener" />
+            <listener class="Symfony\Bridge\PhpUnit\CoverageListener"/>
         </listeners>
     </phpunit>
 
@@ -724,4 +724,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

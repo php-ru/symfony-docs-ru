@@ -54,7 +54,7 @@ Take these lines from the ``routes.yaml``:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <import resource="../src/Controller" type="annotation"/>
         </routes>
@@ -108,7 +108,7 @@ and configure the service and method to call:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <import resource="admin_route_loader:loadRoutes" type="service"/>
         </routes>
@@ -224,13 +224,13 @@ Now define a service for the ``ExtraLoader``:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <service id="App\Routing\ExtraLoader">
-                    <tag name="routing.loader" />
+                    <tag name="routing.loader"/>
                 </service>
             </services>
         </container>
@@ -272,9 +272,9 @@ What remains to do is adding a few lines to the routing configuration:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <import resource="." type="extra" />
+            <import resource="." type="extra"/>
         </routes>
 
     .. code-block:: php
@@ -361,4 +361,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

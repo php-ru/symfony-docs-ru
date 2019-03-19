@@ -308,7 +308,7 @@ Then, create your groups definition:
         <serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
-                http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+                https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
         >
             <class name="Acme\MyObj">
                 <attribute name="foo">
@@ -586,10 +586,10 @@ defines a ``Person`` entity with a ``firstName`` property:
         <serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
-                http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+                https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
         >
             <class name="App\Entity\Person">
-                <attribute name="firstName" serialized-name="customer_name" />
+                <attribute name="firstName" serialized-name="customer_name"/>
             </class>
         </serializer>
 
@@ -795,7 +795,7 @@ the key  ``#comment`` for encoding XML comments::
     // will return:
     // <?xml version="1.0"?>
     // <response>
-    //     <foo bar="value" />
+    //     <foo bar="value"/>
     //     <qux><!-- A comment --!><qux>
     // </response>
 
@@ -993,10 +993,10 @@ Here, we set it to 2 for the ``$child`` property:
         <serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
-                http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+                https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
         >
             <class name="Acme\MyObj">
-                <attribute name="child" max-depth="2" />
+                <attribute name="child" max-depth="2"/>
             </class>
         </serializer>
 
@@ -1102,9 +1102,7 @@ If you want to deserialize such a structure, you need to add the
 :class:`Symfony\\Component\\Serializer\\Normalizer\\ArrayDenormalizer`
 to the set of normalizers. By appending ``[]`` to the type parameter of the
 :method:`Symfony\\Component\\Serializer\\Serializer::deserialize` method,
-you indicate that you're expecting an array instead of a single object.
-
-.. code-block:: php
+you indicate that you're expecting an array instead of a single object::
 
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
@@ -1145,7 +1143,7 @@ The array keys beginning with ``@`` are considered XML attributes::
     // is encoded as follows:
     // <?xml version="1.0"?>
     // <response>
-    //     <foo bar="value" />
+    //     <foo bar="value"/>
     // </response>
 
 Use the special ``#`` key to define the data of a node::
@@ -1368,12 +1366,12 @@ and ``BitBucketCodeRepository`` classes:
         <serializer xmlns="http://symfony.com/schema/dic/serializer-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/serializer-mapping
-                http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
+                https://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
         >
             <class name="App\CodeRepository">
                 <discriminator-map type-property="type">
-                    <mapping type="github" class="App\GitHubCodeRepository" />
-                    <mapping type="bitbucket" class="App\BitBucketCodeRepository" />
+                    <mapping type="github" class="App\GitHubCodeRepository"/>
+                    <mapping type="bitbucket" class="App\BitBucketCodeRepository"/>
                 </discriminator-map>
             </class>
         </serializer>
@@ -1445,4 +1443,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: cc831f0a46f440724eb28c56aaa221737832e790
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

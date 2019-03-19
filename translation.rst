@@ -83,9 +83,9 @@ that will be used if Symfony can't find some translation:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config default-locale="en">
                 <framework:translator>
@@ -446,9 +446,9 @@ For more options, see :ref:`component-translator-message-catalogs`.
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
             >
 
                 <framework:config>
@@ -567,4 +567,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: 5985f27364d9ea5cc648fe2a5270fea90f9bd075
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

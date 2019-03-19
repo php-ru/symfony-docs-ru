@@ -158,7 +158,7 @@ page as being the content of a sub-request call:
 
     This is the content of your page
 
-    Is 2012 a leap year? <esi:include src="/leapyear/2012" />
+    Is 2012 a leap year? <esi:include src="/leapyear/2012"/>
 
     Some other content
 
@@ -211,4 +211,4 @@ one of them but an important one as it can make your applications fly!
 .. _`Varnish`: https://www.varnish-cache.org/
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

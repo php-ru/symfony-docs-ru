@@ -59,11 +59,11 @@ of an ``Author`` class were blank, you could do the following:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Author">
                 <property name="firstName">
-                    <constraint name="Blank" />
+                    <constraint name="Blank"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -107,4 +107,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

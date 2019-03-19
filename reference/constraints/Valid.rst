@@ -114,14 +114,14 @@ stores an ``Address`` instance in the ``$address`` property::
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Address">
                 <property name="street">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
                 <property name="zipCode">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                     <constraint name="Length">
                         <option name="max">5</option>
                     </constraint>
@@ -130,13 +130,13 @@ stores an ``Address`` instance in the ``$address`` property::
 
             <class name="App\Entity\Author">
                 <property name="firstName">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                     <constraint name="Length">
                         <option name="min">4</option>
                     </constraint>
                 </property>
                 <property name="lastName">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -217,11 +217,11 @@ an invalid address. To prevent that, add the ``Valid`` constraint to the
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Author">
                 <property name="address">
-                    <constraint name="Valid" />
+                    <constraint name="Valid"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -269,4 +269,4 @@ will be validated if this option is set to ``true``. This option is ignored on
 arrays: Arrays are traversed in either case. Keys are not validated.
 
 .. ready: no
-.. revision: 32e7bfc5c4ba187d4cc5612cab92b181779a0c0a
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

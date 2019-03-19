@@ -134,7 +134,7 @@ view layer:
     {{ form_start(form) }}
         {{ form_widget(form) }}
 
-        <input type="submit" class="btn" value="Create" />
+        <input type="submit" class="btn" value="Create"/>
     {{ form_end(form) }}
 
 Validation
@@ -221,4 +221,4 @@ submit. Both those actions will be almost identical. So it's much simpler to let
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: c83c2e7858232a9a3bb4a2552b767002671dce3c
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

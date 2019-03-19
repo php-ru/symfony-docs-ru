@@ -57,13 +57,13 @@ To support HTTP Basic authentication, add the ``http_basic`` key to your firewal
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
-                    <http-basic realm="Secured Area" />
+                    <http-basic realm="Secured Area"/>
                 </firewall>
             </config>
         </srv:container>
@@ -123,14 +123,14 @@ Enable the x509 authentication for a particular firewall in the security configu
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <x509 provider="your_user_provider" />
+                    <x509 provider="your_user_provider"/>
                 </firewall>
             </config>
         </srv:container>
@@ -234,4 +234,4 @@ key in the ``remote_user`` firewall configuration.
 .. _`HTTP Basic authentication`: https://en.wikipedia.org/wiki/Basic_access_authentication
 
 .. ready: no
-.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

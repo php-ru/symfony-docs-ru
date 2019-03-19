@@ -51,11 +51,11 @@ Basic Usage
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\File">
                 <property name="identifier">
-                    <constraint name="Uuid" />
+                    <constraint name="Uuid"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -134,4 +134,4 @@ All five versions are allowed by default.
 .. _`UUID versions`: http://en.wikipedia.org/wiki/Universally_unique_identifier#Variants_and_versions
 
 .. ready: no
-.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

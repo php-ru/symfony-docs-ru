@@ -33,9 +33,9 @@ In Symfony, you can register your custom DQL functions as follows:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:orm>
@@ -105,9 +105,9 @@ In Symfony, you can register your custom DQL functions as follows:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/doctrine
-                    http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                    https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
                 <doctrine:config>
                     <doctrine:orm>
@@ -151,4 +151,4 @@ In Symfony, you can register your custom DQL functions as follows:
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

@@ -35,12 +35,12 @@ configure your handler to use it:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <services>
-                <service id="Monolog\Formatter\JsonFormatter" />
+                <service id="Monolog\Formatter\JsonFormatter"/>
             </services>
 
             <!-- config/packages/prod/monolog.xml (and/or config/packages/dev/monolog.xml) -->
@@ -73,4 +73,4 @@ configure your handler to use it:
         ]);
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

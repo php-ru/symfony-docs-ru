@@ -410,7 +410,7 @@ to service ids that may not exist yet: ``App\Security\Authentication\Provider\Ws
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Security\Authentication\Provider\WsseProvider"
@@ -423,7 +423,7 @@ to service ids that may not exist yet: ``App\Security\Authentication\Provider\Ws
                     public="false"
                 >
                     <argument type="service" id="security.token_storage"/>
-                    <argument type="service" id="security.authentication.manager" />
+                    <argument type="service" id="security.authentication.manager"/>
                 </service>
             </services>
         </container>
@@ -490,7 +490,7 @@ You are finished! You can now define parts of your app as under WSSE protection.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -606,13 +606,13 @@ set to any desirable value per firewall.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="wsse_secured" pattern="^/api/" stateless="true">
-                    <wsse lifetime="30" />
+                    <wsse lifetime="30"/>
                 </firewall>
             </config>
         </srv:container>
@@ -643,4 +643,4 @@ in the factory and consumed or passed to the other classes in the container.
 .. _`timing attacks`: https://en.wikipedia.org/wiki/Timing_attack
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

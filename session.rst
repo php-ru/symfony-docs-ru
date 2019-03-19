@@ -35,8 +35,8 @@ sessions, check their default configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!--
@@ -48,7 +48,7 @@ sessions, check their default configuration:
                 <framework:session enabled="true"
                                    handler-id="null"
                                    cookie-secure="auto"
-                                   cookie-samesite="lax" />
+                                   cookie-samesite="lax"/>
             </framework:config>
         </container>
 
@@ -99,13 +99,13 @@ session metadata files:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:session enabled="true"
                                    handler-id="session.handler.native_file"
-                                   save-path="%kernel.project_dir%/var/sessions/%kernel.environment%" />
+                                   save-path="%kernel.project_dir%/var/sessions/%kernel.environment%"/>
             </framework:config>
         </container>
 
@@ -205,4 +205,4 @@ More about Sessions
 .. _`HttpFoundation component`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: d02ff772a41cf6ab9561af2a71c92b5bffebfde8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

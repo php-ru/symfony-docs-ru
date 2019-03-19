@@ -148,17 +148,17 @@ all the classes are already loaded as services. All you need to do is specify th
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <prototype namespace="App\" resource="../src/*" />
+                <prototype namespace="App\" resource="../src/*"/>
 
                 <service id="App\Mail\NewsletterManager">
-                    <configurator service="App\Mail\EmailConfigurator" method="configure" />
+                    <configurator service="App\Mail\EmailConfigurator" method="configure"/>
                 </service>
 
                 <service id="App\Mail\GreetingCardManager">
-                    <configurator service="App\Mail\EmailConfigurator" method="configure" />
+                    <configurator service="App\Mail\EmailConfigurator" method="configure"/>
                 </service>
             </services>
         </container>
@@ -200,4 +200,4 @@ That's it! When requesting the ``App\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

@@ -85,10 +85,10 @@ type-hinted method arguments:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:sensio-framework-extra="http://symfony.com/schema/dic/symfony_extra"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <sensio-framework-extra:config>
-                <request converters="true" auto-convert="false" />
+                <request converters="true" auto-convert="false"/>
             </sensio-framework-extra:config>
         </container>
 
@@ -190,15 +190,15 @@ and adding a priority.
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... be sure autowiring is enabled -->
-                <defaults autowire="true" />
+                <defaults autowire="true"/>
                 <!-- ... -->
 
                 <service id="App\ArgumentResolver\UserValueResolver">
-                    <tag name="controller.argument_value_resolver" priority="50" />
+                    <tag name="controller.argument_value_resolver" priority="50"/>
                 </service>
             </services>
 
@@ -235,4 +235,4 @@ subrequests.
 .. _`yield`: http://php.net/manual/en/language.generators.syntax.php
 
 .. ready: no
-.. revision: b9ab0b51c15f213334ce068d376aaa22c09bc583
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

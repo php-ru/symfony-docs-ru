@@ -44,6 +44,7 @@ Suppose you want to create a page - ``/lucky/number`` - that generates a lucky (
 random) number and prints it. To do that, create a "Controller class" and a
 "controller" method inside of it::
 
+    <?php
     // src/Controller/LuckyController.php
     namespace App\Controller;
 
@@ -337,4 +338,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Flex recipes`: https://flex.symfony.com
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: a8058395e7d0ce3b1e1454a9a7724fdf230b2a9b

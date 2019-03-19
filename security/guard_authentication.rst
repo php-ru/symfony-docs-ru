@@ -207,7 +207,7 @@ Finally, configure your ``firewalls`` key in ``security.yaml`` to use this authe
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
@@ -215,7 +215,7 @@ Finally, configure your ``firewalls`` key in ``security.yaml`` to use this authe
                     pattern="^/"
                     anonymous="true"
                 >
-                    <logout />
+                    <logout/>
 
                     <guard>
                         <authenticator>App\Security\TokenAuthenticator</authenticator>
@@ -252,7 +252,7 @@ Finally, configure your ``firewalls`` key in ``security.yaml`` to use this authe
 You did it! You now have a fully-working API token authentication system. If your
 homepage required ``ROLE_USER``, then you could test it under different conditions:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     # test with no token
     curl http://localhost:8000/
@@ -382,7 +382,7 @@ to cause a failure::
 In this case, since "ILuvAPIs" is a ridiculous API key, you could include an easter
 egg to return a custom message if someone tries this:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     curl -H "X-AUTH-TOKEN: ILuvAPIs" http://localhost:8000/
     # {"message":"ILuvAPIs is not a real API key: it's just a silly phrase"}
@@ -514,4 +514,4 @@ Frequently Asked Questions
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

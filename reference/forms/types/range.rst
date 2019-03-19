@@ -5,7 +5,7 @@ RangeType Field
 ===============
 
 The ``RangeType`` field is a slider that is rendered using the HTML5
-``<input type="range" />`` tag.
+``<input type="range"/>`` tag.
 
 +-------------+---------------------------------------------------------------------+
 | Rendered as | ``input`` ``range`` field (slider in HTML5 supported browser)       |
@@ -87,4 +87,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939

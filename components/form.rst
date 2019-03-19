@@ -519,7 +519,7 @@ done by passing a special form "view" object to your template (notice the
     {{ form_start(form) }}
         {{ form_widget(form) }}
 
-        <input type="submit" />
+        <input type="submit"/>
     {{ form_end(form) }}
 
 .. image:: /_images/form/simple-form.png
@@ -782,4 +782,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

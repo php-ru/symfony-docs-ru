@@ -296,11 +296,11 @@ security configuration:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
 
             <config>
-                <access-decision-manager strategy="unanimous" allow-if-all-abstain="false"  />
+                <access-decision-manager strategy="unanimous" allow-if-all-abstain="false"/>
             </config>
         </srv:container>
 
@@ -315,4 +315,4 @@ security configuration:
         ]);
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

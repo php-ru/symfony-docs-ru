@@ -215,9 +215,7 @@ bit field of ``Caster::EXCLUDE_*`` constants and influences the expected
 output produced by the different casters.
 
 If ``DUMP_STRING_LENGTH`` is set, then the length of a string is displayed
-next to its content:
-
-.. code-block:: php
+next to its content::
 
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
@@ -239,9 +237,7 @@ next to its content:
     // ]
 
 If ``DUMP_LIGHT_ARRAY`` is set, then arrays are dumped in a shortened format
-similar to PHP's short array notation:
-
-.. code-block:: php
+similar to PHP's short array notation::
 
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
@@ -263,9 +259,7 @@ similar to PHP's short array notation:
     // ]
 
 If you would like to use both options, then you can combine them by
-using a the logical OR operator ``|``:
-
-.. code-block:: php
+using a the logical OR operator ``|``::
 
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
@@ -404,4 +398,4 @@ that holds a file name or a URL, you can wrap them in a ``LinkStub`` to tell
     }
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: be3e0b6c9b2c6b120aee80882d88abafac55ee69

@@ -238,14 +238,14 @@ a traditional HTML form that submits to ``/login``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
                 <firewall name="main">
                     <!-- ... -->
                     <guard>
-                        <authenticator class="App\Security\LoginFormAuthenticator" />
+                        <authenticator class="App\Security\LoginFormAuthenticator"/>
                     </guard>
                 </firewall>
             </config>
@@ -376,4 +376,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 3d2ccdfcc076ccddc43cfb347f5b1d3423f44eab
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

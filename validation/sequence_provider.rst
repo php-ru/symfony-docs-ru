@@ -71,15 +71,15 @@ username and the password are different only if all other validation passes
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\User">
                 <property name="username">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
 
                 <property name="password">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
 
                 <getter property="passwordSafe">
@@ -219,11 +219,11 @@ entity and a new constraint group called ``Premium``:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\User">
                 <property name="name">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
 
                 <property name="creditCard">
@@ -329,10 +329,10 @@ provides a sequence of groups to be validated:
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\User">
-                <group-sequence-provider />
+                <group-sequence-provider/>
                 <!-- ... -->
             </class>
         </constraint-mapping>
@@ -357,4 +357,4 @@ provides a sequence of groups to be validated:
         }
 
 .. ready: no
-.. revision: 85854ff8058063ff57fb0c7bbbedfc0342346e38
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

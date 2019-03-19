@@ -154,11 +154,11 @@ the environment variable is passed to the kernel::
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/twig
-                    http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                    https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
-                <twig:config debug="%kernel.debug%" />
+                <twig:config debug="%kernel.debug%"/>
 
             </container>
 
@@ -226,12 +226,12 @@ configuration file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:profiler only-exceptions="false" />
+                <framework:profiler only-exceptions="false"/>
             </framework:config>
 
         </container>
@@ -284,9 +284,9 @@ environment through your browser:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <imports>
                     <import resource="../prod/"/>
@@ -364,4 +364,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

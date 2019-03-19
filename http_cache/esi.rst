@@ -27,7 +27,7 @@ as this is the only useful one outside of Akamai context:
             <!-- ... some content -->
 
             <!-- Embed the content of another page here -->
-            <esi:include src="http://..." />
+            <esi:include src="http://..."/>
 
             <!-- ... more content -->
         </body>
@@ -75,13 +75,13 @@ First, to use ESI, be sure to enable it in your application configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!-- ... -->
-                <framework:esi enabled="true" />
+                <framework:esi enabled="true"/>
             </framework:config>
         </container>
 
@@ -205,13 +205,13 @@ that must be enabled in your configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <!-- ... -->
             <framework:config>
-                <framework:fragment path="/_fragment" />
+                <framework:fragment path="/_fragment"/>
             </framework:config>
         </container>
 
@@ -255,4 +255,4 @@ The ``render_esi`` helper supports two other useful options:
 .. _`ESI`: http://www.w3.org/TR/esi-lang
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

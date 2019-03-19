@@ -71,7 +71,7 @@ Run the following command to start it:
 
 .. code-block:: terminal
 
-    $ JWT_KEY='aVerySecretKey' ADDR='localhost:3000' ALLOW_ANONYMOUS=1 ./mercure
+    $ JWT_KEY='aVerySecretKey' ADDR='localhost:3000' ALLOW_ANONYMOUS=1 CORS_ALLOWED_ORIGINS=* ./mercure
 
 .. note::
 
@@ -532,7 +532,7 @@ its Mercure support.
 .. _`the Mercure protocol`: https://github.com/dunglas/mercure#protocol-specification
 .. _`Server-Sent Events (SSE)`: https://developer.mozilla.org/docs/Server-sent_events
 .. _`a polyfill`: https://github.com/Yaffle/EventSource
-.. _`high-level implementations`: https://github.com/dunglas/mercure#resources
+.. _`high-level implementations`: https://github.com/dunglas/mercure#tools
 .. _`In this recording`: https://www.youtube.com/watch?v=UI1l0JOjLeI
 .. _`API Platform`: https://api-platform.com
 .. _`Mercure.rocks`: https://mercure.rocks
@@ -545,4 +545,4 @@ its Mercure support.
 .. _`the online debugger`: https://uri-template-tester.mercure.rocks
 
 .. ready: no
-.. revision: 53f9fbe5fcd27a59830789800eb542746d97fd31
+.. revision: 8bc40ea08ba589536d033dc2feb2611003d66e8d

@@ -44,9 +44,9 @@ the URI scheme via schemes:
 
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/routing https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="secure" path="/secure" schemes="https" controller="App\Controller\MainController::secure" />
+            <route id="secure" path="/secure" schemes="https" controller="App\Controller\MainController::secure"/>
         </routes>
 
     .. code-block:: php
@@ -95,4 +95,4 @@ to always use ``http``.
     :doc:`/security/force_https` for more details).
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

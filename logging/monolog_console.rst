@@ -90,7 +90,7 @@ The Monolog console handler is enabled by default:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <monolog:config>
                 <!-- ... -->
@@ -126,4 +126,4 @@ By default (normal verbosity level), warnings and higher will be shown. But in
 .. _MonologBridge: https://github.com/symfony/MonologBridge
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

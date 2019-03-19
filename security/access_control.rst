@@ -41,7 +41,7 @@ Take the following ``access_control`` entries as an example:
             # ...
             access_control:
                 - { path: ^/admin, roles: ROLE_USER_IP, ip: 127.0.0.1 }
-                - { path: ^/admin, roles: ROLE_USER_IP, ip: 127.0.0.1, port: 8080 }
+                - { path: ^/admin, roles: ROLE_USER_PORT, ip: 127.0.0.1, port: 8080 }
                 - { path: ^/admin, roles: ROLE_USER_HOST, host: symfony\.com$ }
                 - { path: ^/admin, roles: ROLE_USER_METHOD, methods: [POST, PUT] }
                 - { path: ^/admin, roles: ROLE_USER }
@@ -54,15 +54,15 @@ Take the following ``access_control`` entries as an example:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
-                <rule path="^/admin" role="ROLE_USER_IP" ip="127.0.0.1" />
-                <rule path="^/admin" role="ROLE_USER_IP" ip="127.0.0.1" port="8080" />
-                <rule path="^/admin" role="ROLE_USER_HOST" host="symfony\.com$" />
-                <rule path="^/admin" role="ROLE_USER_METHOD" methods="POST, PUT" />
-                <rule path="^/admin" role="ROLE_USER" />
+                <rule path="^/admin" role="ROLE_USER_IP" ip="127.0.0.1"/>
+                <rule path="^/admin" role="ROLE_USER_PORT" ip="127.0.0.1" port="8080"/>
+                <rule path="^/admin" role="ROLE_USER_HOST" host="symfony\.com$"/>
+                <rule path="^/admin" role="ROLE_USER_METHOD" methods="POST, PUT"/>
+                <rule path="^/admin" role="ROLE_USER"/>
             </config>
         </srv:container>
 
@@ -79,7 +79,7 @@ Take the following ``access_control`` entries as an example:
                 ],
                 [
                     'path' => '^/admin',
-                    'role' => 'ROLE_USER_IP',
+                    'role' => 'ROLE_USER_PORT',
                     'ip' => '127.0.0.1',
                     'port' => '8080',
                 ),
@@ -204,7 +204,7 @@ pattern so that it is only accessible by requests from the local server itself:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -215,7 +215,7 @@ pattern so that it is only accessible by requests from the local server itself:
                     <ip>::1</ip>
                 </rule>
 
-                <rule path="^/internal" role="ROLE_NO_ACCESS" />
+                <rule path="^/internal" role="ROLE_NO_ACCESS"/>
             </config>
         </srv:container>
 
@@ -288,11 +288,11 @@ key:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <rule path="^/_internal/secure"
-                    allow-if="'127.0.0.1' == request.getClientIp() or is_granted('ROLE_ADMIN')" />
+                    allow-if="'127.0.0.1' == request.getClientIp() or is_granted('ROLE_ADMIN')"/>
             </config>
         </srv:container>
 
@@ -347,7 +347,7 @@ access those URLs via a specific port. This could be useful for example for
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <rule path="^/cart/checkout"
                 role="IS_AUTHENTICATED_ANONYMOUSLY"
@@ -394,7 +394,7 @@ the user will be redirected to ``https``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <rule path="^/cart/checkout"
                 role="IS_AUTHENTICATED_ANONYMOUSLY"
@@ -416,4 +416,4 @@ the user will be redirected to ``https``:
         ]);
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

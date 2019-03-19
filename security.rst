@@ -137,14 +137,14 @@ command will pre-configure this for you:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <encoder class="App\Entity\User"
                     algorithm="bcrypt"
-                    cost="12" />
+                    cost="12"/>
 
                 <!-- ... -->
             </config>
@@ -249,15 +249,15 @@ important section is ``firewalls``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="dev"
                     pattern="^/(_(profiler|wdt)|css|images|js)/"
-                    security="false" />
+                    security="false"/>
 
                 <firewall name="main">
-                    <anonymous />
+                    <anonymous/>
                 </firewall>
             </config>
         </srv:container>
@@ -446,7 +446,7 @@ start with ``/admin``, you can:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -456,7 +456,7 @@ start with ``/admin``, you can:
                 </firewall>
 
                 <!-- require ROLE_ADMIN for /admin* -->
-                <rule path="^/admin" role="ROLE_ADMIN" />
+                <rule path="^/admin" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -505,13 +505,13 @@ the list and stops when it finds the first match:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
-                <rule path="^/admin/users" role="ROLE_SUPER_ADMIN" />
-                <rule path="^/admin" role="ROLE_ADMIN" />
+                <rule path="^/admin/users" role="ROLE_SUPER_ADMIN"/>
+                <rule path="^/admin" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -765,14 +765,14 @@ To enable logging out, activate the  ``logout`` config parameter under your fire
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="secured_area">
                     <!-- ... -->
-                    <logout path="app_logout" />
+                    <logout path="app_logout"/>
                 </firewall>
             </config>
         </srv:container>
@@ -829,9 +829,9 @@ Next, you'll need to create a route for this URL (but not a controller):
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="app_logout" path="/logout" methods="GET" />
+            <route id="app_logout" path="/logout" methods="GET"/>
         </routes>
 
     ..  code-block:: php
@@ -882,7 +882,7 @@ rules by creating a role hierarchy:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -1014,4 +1014,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

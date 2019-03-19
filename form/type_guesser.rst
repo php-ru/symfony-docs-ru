@@ -198,7 +198,7 @@ and tag it with ``form.type_guesser``:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Form\TypeGuesser\PHPDocTypeGuesser">
@@ -243,4 +243,4 @@ and tag it with ``form.type_guesser``:
         $ php bin/console debug:form
 
 .. ready: no
-.. revision: 6811b4d3c8d425e4edf3dc6e706dc1085c3503e6
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

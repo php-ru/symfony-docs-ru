@@ -14,7 +14,7 @@ A Single-File Symfony Application
 Start with a completely empty directory and install these Symfony components
 via Composer:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ composer require symfony/config symfony/http-kernel \
       symfony/http-foundation symfony/routing \
@@ -220,11 +220,11 @@ because the configuration started to get bigger:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config secret="S0ME_SECRET">
-                <framework:profiler only-exceptions="false" />
+                <framework:profiler only-exceptions="false"/>
             </framework:config>
         </container>
 
@@ -335,4 +335,4 @@ Then see webpage in browser:
     http://localhost:8000/random/10
 
 .. ready: no
-.. revision: 337c59cac02dad7f3ddbfa193f44e3091e2917ea
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

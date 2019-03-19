@@ -22,7 +22,7 @@ configured under the ``framework`` key in your application configuration.
 
     When using XML, you must use the ``http://symfony.com/schema/dic/symfony``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/symfony/symfony-1.0.xsd``
+    ``https://symfony.com/schema/dic/symfony/symfony-1.0.xsd``
 
 Configuration
 -------------
@@ -73,6 +73,7 @@ Configuration
   * :ref:`enabled <reference-csrf_protection-enabled>`
 
 * `default_locale`_
+* `disallow_search_engine_index`_
 * `esi`_
 
   * :ref:`enabled <reference-esi-enabled>`
@@ -310,10 +311,10 @@ doubling them to prevent Symfony from interpreting them as container parameters)
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
-            <framework:config ide="myide://open?url=file://%%f&line=%%l" />
+            <framework:config ide="myide://open?url=file://%%f&line=%%l"/>
         </container>
 
     .. code-block:: php
@@ -384,6 +385,21 @@ method.
     You can read more information about the default locale in
     :ref:`translation-default-locale`.
 
+disallow_search_engine_index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**type**: ``boolean`` **default**: ``true`` when the debug mode is enabled, ``false`` otherwise.
+
+.. versionadded:: 4.3
+
+    The ``disallow_search_engine_index`` option was introduced in Symfony 4.3.
+
+If ``true``, Symfony adds a ``X-Robots-Tag: noindex`` HTTP tag to all responses
+(unless your own app adds that header, in which case it's not modified). This
+`X-Robots-Tag HTTP header`_ tells search engines to not index your web site.
+This option is a protection measure in case you accidentally publish your site
+in debug mode.
+
 trusted_hosts
 ~~~~~~~~~~~~~
 
@@ -424,8 +440,8 @@ the application won't respond and the user will receive a 400 response.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:trusted-host>^example\.com$</framework:trusted-host>
@@ -541,11 +557,11 @@ You can also set ``esi`` to ``true`` to enable it:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:esi />
+                <framework:esi/>
             </framework:config>
         </container>
 
@@ -681,9 +697,9 @@ To configure a ``jsonp`` format:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:request>
@@ -967,11 +983,11 @@ setting the value to ``null``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:session save-path="null" />
+                <framework:session save-path="null"/>
             </framework:config>
         </container>
 
@@ -1024,11 +1040,11 @@ Whether to enable the session support in the framework.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:session enabled="true" />
+                <framework:session enabled="true"/>
             </framework:config>
         </container>
 
@@ -1080,11 +1096,11 @@ This option allows you to define a base path to be used for assets:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:assets base-path="/images" />
+                <framework:assets base-path="/images"/>
             </framework:config>
         </container>
 
@@ -1129,11 +1145,11 @@ collection each time it generates an asset's path:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:assets base-url="http://cdn.example.com/" />
+                <framework:assets base-url="http://cdn.example.com/"/>
             </framework:config>
         </container>
 
@@ -1174,14 +1190,14 @@ You can group assets into packages, to specify different base URLs for them:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:assets>
                     <framework:package
                         name="avatars"
-                        base-url="http://static_cdn.example.com/avatars" />
+                        base-url="http://static_cdn.example.com/avatars"/>
                 </framework:assets>
             </framework:config>
         </container>
@@ -1232,7 +1248,7 @@ For example, suppose you have the following:
 
 .. code-block:: html+twig
 
-    <img src="{{ asset('images/logo.png') }}" alt="Symfony!" />
+    <img src="{{ asset('images/logo.png') }}" alt="Symfony!"/>
 
 By default, this will render a path to your image such as ``/images/logo.png``.
 Now, activate the ``version`` option:
@@ -1255,11 +1271,11 @@ Now, activate the ``version`` option:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:assets version="v2" />
+                <framework:assets version="v2"/>
             </framework:config>
         </container>
 
@@ -1369,23 +1385,23 @@ individually for each asset package:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:assets version-strategy="app.asset.my_versioning_strategy">
                     <!-- this package removes any versioning (its assets won't be versioned) -->
                     <framework:package
                         name="foo_package"
-                        version="null" />
+                        version="null"/>
                     <!-- this package uses its own strategy (the default strategy is ignored) -->
                     <framework:package
                         name="bar_package"
-                        version-strategy="app.asset.another_version_strategy" />
+                        version-strategy="app.asset.another_version_strategy"/>
                     <!-- this package inherits the default strategy -->
                     <framework:package
                         name="baz_package"
-                        base_path="/images" />
+                        base_path="/images"/>
                 </framework:assets>
             </framework:config>
         </container>
@@ -1464,8 +1480,8 @@ package:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!-- this manifest is applied to every asset (including packages) -->
@@ -1473,11 +1489,11 @@ package:
                     <!-- this package uses its own manifest (the default file is ignored) -->
                     <framework:package
                         name="foo_package"
-                        json-manifest-path="%kernel.project_dir%/public/build/a_different_manifest.json" />
+                        json-manifest-path="%kernel.project_dir%/public/build/a_different_manifest.json"/>
                     <!-- this package uses the global manifest (the default file is used) -->
                     <framework:package
                         name="bar_package"
-                        base-path="/images" />
+                        base-path="/images"/>
                 </framework:assets>
             </framework:config>
         </container>
@@ -1563,8 +1579,8 @@ configure this like:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:templating>
@@ -2073,8 +2089,8 @@ To configure a Redis cache pool with a default lifetime of 1 hour, do the follow
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:cache>
@@ -2222,13 +2238,13 @@ A list of workflows to be created by the framework extension:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:workflows>
                     <framework:workflow
-                        name="my_workflow" />
+                        name="my_workflow"/>
                 </framework:workflows>
                 <!-- ... -->
             </framework:config>
@@ -2340,6 +2356,7 @@ a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/s
 .. _`CSRF security attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 .. _`session.sid_length PHP option`: https://php.net/manual/session.configuration.php#ini.session.sid-length
 .. _`session.sid_bits_per_character PHP option`: https://php.net/manual/session.configuration.php#ini.session.sid-bits-per-character
+.. _`X-Robots-Tag HTTP header`: https://developers.google.com/search/reference/robots_meta_tag
 
 .. ready: no
-.. revision: bf9dd53136ebc68cd61494342b610a4c864d3732
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

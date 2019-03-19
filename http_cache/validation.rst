@@ -62,7 +62,7 @@ To see a simple implementation, generate the ETag as the md5 of the content::
     // src/Controller/DefaultController.php
     namespace App\Controller;
 
-    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Request;
 
     class DefaultController extends AbstractController
@@ -234,4 +234,4 @@ headers that must not be present for ``304`` responses (see
 .. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: b6ab4fae3781d76437fcca325a8d3dc1cd6f4e7d

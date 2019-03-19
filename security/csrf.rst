@@ -39,12 +39,12 @@ for more information):
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:csrf-protection enabled="true" />
+                <framework:csrf-protection enabled="true"/>
             </framework:config>
         </container>
 
@@ -141,7 +141,7 @@ generate a CSRF token in the template and store it as a hidden form field:
 
     <form action="{{ url('admin_post_delete', { id: post.id }) }}" method="post">
         {# the argument of csrf_token() is an arbitrary string used to generate the token #}
-        <input type="hidden" name="token" value="{{ csrf_token('delete-item') }}" />
+        <input type="hidden" name="token" value="{{ csrf_token('delete-item') }}"/>
 
         <button type="submit">Delete item</button>
     </form>
@@ -166,4 +166,4 @@ to check its validity::
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: 6a4ebdb089ae4a0328ea6114d5ef95eb94c31ed1
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

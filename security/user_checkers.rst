@@ -16,9 +16,7 @@ User checkers are classes that must implement the
 defines two methods called ``checkPreAuth()`` and ``checkPostAuth()`` to
 perform checks before and after user authentication. If one or more conditions
 are not met, an exception should be thrown which extends the
-:class:`Symfony\\Component\\Security\\Core\\Exception\\AccountStatusException`.
-
-.. code-block:: php
+:class:`Symfony\\Component\\Security\\Core\\Exception\\AccountStatusException`::
 
     namespace App\Security;
 
@@ -93,7 +91,7 @@ is the service id of your user checker:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -122,4 +120,4 @@ is the service id of your user checker:
         ]);
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: be3e0b6c9b2c6b120aee80882d88abafac55ee69

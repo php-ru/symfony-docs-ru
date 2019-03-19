@@ -129,7 +129,7 @@ To do this, you can override the value of the ``DATABASE_URL`` env var in the
     <phpunit>
         <php>
             <!-- the value is the Doctrine connection string in DSN format -->
-            <env name="DATABASE_URL" value="mysql://USERNAME:PASSWORD@127.0.0.1/DB_NAME" />
+            <env name="DATABASE_URL" value="mysql://USERNAME:PASSWORD@127.0.0.1/DB_NAME"/>
         </php>
         <!-- ... -->
     </phpunit>
@@ -137,4 +137,4 @@ To do this, you can override the value of the ``DATABASE_URL`` env var in the
 .. _`DoctrineTestBundle`: https://github.com/dmaicher/doctrine-test-bundle
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

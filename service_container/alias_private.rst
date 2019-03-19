@@ -45,10 +45,10 @@ You can also control the ``public`` option on a service-by-service basis:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="App\Service\Foo" public="false" />
+                <service id="App\Service\Foo" public="false"/>
             </services>
         </container>
 
@@ -111,12 +111,12 @@ services.
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="App\Mail\PhpMailer" public="false" />
+                <service id="App\Mail\PhpMailer" public="false"/>
 
-                <service id="app.mailer" alias="App\Mail\PhpMailer" />
+                <service id="app.mailer" alias="App\Mail\PhpMailer"/>
             </services>
         </container>
 
@@ -170,7 +170,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="app.mailer" alias="App\Mail\PhpMailer">
@@ -241,12 +241,12 @@ The following example shows how to inject an anonymous service into another serv
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="foo" class="App\Foo">
                     <argument type="service">
-                        <service class="App\AnonymousBar" />
+                        <service class="App\AnonymousBar"/>
                     </argument>
                 </service>
             </services>
@@ -270,7 +270,7 @@ Using an anonymous service as a factory looks like this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="foo" class="App\Foo">
@@ -301,7 +301,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Service\OldService">
@@ -348,4 +348,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: d5d87e60e7ddcb72c89d21fa1b9e78d0724fd62b
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

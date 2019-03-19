@@ -56,13 +56,13 @@ entry in that array:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\User">
                 <property name="favoriteColors">
                     <constraint name="All">
                         <option name="constraints">
-                            <constraint name="NotBlank" />
+                            <constraint name="NotBlank"/>
                             <constraint name="Length">
                                 <option name="min">5</option>
                             </constraint>
@@ -112,4 +112,4 @@ to apply to each element of the underlying array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

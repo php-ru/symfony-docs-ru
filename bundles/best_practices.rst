@@ -362,11 +362,8 @@ following standardized instructions in your ``README.md`` file.
         ~~~~~~~~~~~~~~~~~~~~~~~~~
 
         Then, enable the bundle by adding it to the list of registered bundles
-        in the ``app/AppKernel.php`` file of your project:
+        in the ``app/AppKernel.php`` file of your project::
 
-        .. code-block:: php
-
-            <?php
             // app/AppKernel.php
 
             // ...
@@ -449,7 +446,7 @@ The end user can provide values in any configuration file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="acme_blog.author.email">fabien@example.com</parameter>
@@ -556,4 +553,4 @@ Learn more
 .. _`Travis Cron`: https://docs.travis-ci.com/user/cron-jobs/
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 7af99d4a0becd7e1c33964cf0b0fcf18fc63ac8e

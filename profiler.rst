@@ -164,10 +164,10 @@ create an alias pointing to the existing ``profiler`` service:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="Symfony\Component\HttpKernel\Profiler\Profiler" alias="profiler" />
+                <service id="Symfony\Component\HttpKernel\Profiler\Profiler" alias="profiler"/>
             </services>
         </container>
 
@@ -221,4 +221,4 @@ event::
 .. _`Blackfire`: https://blackfire.io/
 
 .. ready: no
-.. revision: a579c6e822253e106da7b9f011c14854f944e448
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

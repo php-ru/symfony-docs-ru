@@ -41,9 +41,9 @@ the available blog posts for this imaginary blog application:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="blog" path="/blog" controller="App\Controller\BlogController::index" />
+            <route id="blog" path="/blog" controller="App\Controller\BlogController::index"/>
         </routes>
 
     .. code-block:: php
@@ -94,9 +94,9 @@ entries? Update the route to have a new ``{page}`` placeholder:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="blog" path="/blog/{page}" controller="App\Controller\BlogController::index" />
+            <route id="blog" path="/blog/{page}" controller="App\Controller\BlogController::index"/>
         </routes>
 
     .. code-block:: php
@@ -153,7 +153,7 @@ This is done by including it in the ``defaults`` collection:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="blog" path="/blog/{page}" controller="App\Controller\BlogController::index">
                 <default key="page">1</default>
@@ -202,4 +202,4 @@ URL          Route     Parameters
     with a trailing slash (i.e. ``/blog/`` will not match, ``/blog`` will match).
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

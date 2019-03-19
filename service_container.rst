@@ -169,13 +169,13 @@ each time you ask for it.
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <services>
                     <!-- Default configuration for services in *this* file -->
-                    <defaults autowire="true" autoconfigure="true" public="false" />
+                    <defaults autowire="true" autoconfigure="true" public="false"/>
 
-                    <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}" />
+                    <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}"/>
                 </services>
             </container>
 
@@ -410,13 +410,13 @@ pass here. No problem! In your configuration, you can explicitly set this argume
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <!-- Same as before -->
-                <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}" />
+                <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}"/>
 
                 <!-- Explicitly configure the service -->
                 <service id="App\Updates\SiteUpdateManager">
@@ -485,7 +485,7 @@ and reference it with the ``%parameter_name%`` syntax:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="admin_email">manager@example.com</parameter>
@@ -597,14 +597,14 @@ But, you can control this and pass in a different logger:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... same code as before -->
 
                 <!-- Explicitly configure the service -->
                 <service id="App\Service\MessageGenerator">
-                    <argument key="$logger" type="service" id="monolog.logger.request" />
+                    <argument key="$logger" type="service" id="monolog.logger.request"/>
                 </service>
             </services>
         </container>
@@ -671,7 +671,7 @@ You can also use the ``bind`` keyword to bind specific arguments by name or type
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <defaults autowire="true" autoconfigure="true" public="false">
@@ -839,7 +839,7 @@ But, if you *do* need to make a service public, override the ``public`` setting:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... same code as before -->
@@ -878,12 +878,12 @@ key. For example, the default Symfony configuration contains this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
-                <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}" />
+                <prototype namespace="App\" resource="../src/*" exclude="../src/{Entity,Migrations,Tests}"/>
             </services>
         </container>
 
@@ -1014,24 +1014,24 @@ admin email. In this case, each needs to have a unique service id:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <service id="site_update_manager.superadmin" class="App\Updates\SiteUpdateManager" autowire="false">
-                    <argument type="service" id="App\Service\MessageGenerator" />
-                    <argument type="service" id="mailer" />
+                    <argument type="service" id="App\Service\MessageGenerator"/>
+                    <argument type="service" id="mailer"/>
                     <argument>superadmin@example.com</argument>
                 </service>
 
                 <service id="site_update_manager.normal_users" class="App\Updates\SiteUpdateManager" autowire="false">
-                    <argument type="service" id="App\Service\MessageGenerator" />
-                    <argument type="service" id="mailer" />
+                    <argument type="service" id="App\Service\MessageGenerator"/>
+                    <argument type="service" id="mailer"/>
                     <argument>contact@example.com</argument>
                 </service>
 
-                <service id="App\Updates\SiteUpdateManager" alias="site_update_manager.superadmin" />
+                <service id="App\Updates\SiteUpdateManager" alias="site_update_manager.superadmin"/>
             </services>
         </container>
 
@@ -1086,4 +1086,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony-fundamentals
 
 .. ready: no
-.. revision: 5e3d47c742b58a59bdcfb71267a758862b7b578d
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

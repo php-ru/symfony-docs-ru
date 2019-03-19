@@ -29,12 +29,12 @@ First, enable the JSON login under your firewall:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
-                    <anonymous />
-                    <json-login check-path="/login" />
+                    <anonymous/>
+                    <json-login check-path="/login"/>
                 </firewall>
             </config>
         </srv:container>
@@ -102,9 +102,9 @@ The next step is to configure a route in your app matching this path:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="login" path="/login" controller="App\Controller\SecurityController::login" methods="POST" />
+            <route id="login" path="/login" controller="App\Controller\SecurityController::login" methods="POST"/>
         </routes>
 
     .. code-block:: php
@@ -178,14 +178,14 @@ The security configuration should be:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
-                    <anonymous />
+                    <anonymous/>
                     <json-login check-path="login"
                                 username-path="security.credentials.login"
-                                password-path="security.credentials.password" />
+                                password-path="security.credentials.password"/>
                 </firewall>
             </config>
         </srv:container>
@@ -207,4 +207,4 @@ The security configuration should be:
         ]);
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

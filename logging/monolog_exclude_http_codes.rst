@@ -30,9 +30,9 @@ logging these HTTP codes based on the MonologBundle configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
                 <monolog:handler type="fingers_crossed" name="main" handler="...">
@@ -41,7 +41,7 @@ logging these HTTP codes based on the MonologBundle configuration:
                         <monolog:url>^/foo</monolog:url>
                         <monolog:url>^/bar</monolog:url>
                     </monolog:excluded-http-code>
-                    <monolog:excluded-http-code code="404" />
+                    <monolog:excluded-http-code code="404"/>
                 </monolog:handler>
             </monolog:config>
         </container>
@@ -61,4 +61,4 @@ logging these HTTP codes based on the MonologBundle configuration:
         ]);
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

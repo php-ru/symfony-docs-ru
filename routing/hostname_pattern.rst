@@ -54,14 +54,14 @@ You can also match on the HTTP *host* of the incoming request.
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="mobile_homepage"
                 path="/"
                 host="m.example.com"
-                controller="App\Controller\MainController::mobileHomepage" />
+                controller="App\Controller\MainController::mobileHomepage"/>
 
-            <route id="homepage" path="/" controller="App\Controller\MainController::homepage" />
+            <route id="homepage" path="/" controller="App\Controller\MainController::homepage"/>
         </routes>
 
     .. code-block:: php
@@ -140,14 +140,14 @@ you can use placeholders in your hostname:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="projects_homepage"
                 path="/"
                 host="{project}.example.com"
-                controller="App\Controller\MainController::projectsHomepage" />
+                controller="App\Controller\MainController::projectsHomepage"/>
 
-            <route id="homepage" path="/" controller="App\Controller\MainController::homepage" />
+            <route id="homepage" path="/" controller="App\Controller\MainController::homepage"/>
         </routes>
 
     .. code-block:: php
@@ -229,7 +229,7 @@ instance, if you want to match both ``m.example.com`` and
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="mobile_homepage"
                 path="/"
@@ -239,7 +239,7 @@ instance, if you want to match both ``m.example.com`` and
                 <requirement key="subdomain">m|mobile</requirement>
             </route>
 
-            <route id="homepage" path="/" controller="App\Controller\MainController::homepage" />
+            <route id="homepage" path="/" controller="App\Controller\MainController::homepage"/>
         </routes>
 
     .. code-block:: php
@@ -328,7 +328,7 @@ instance, if you want to match both ``m.example.com`` and
             <routes xmlns="http://symfony.com/schema/routing"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/routing
-                    http://symfony.com/schema/routing/routing-1.0.xsd">
+                    https://symfony.com/schema/routing/routing-1.0.xsd">
 
                 <route id="mobile_homepage"
                     path="/"
@@ -338,7 +338,7 @@ instance, if you want to match both ``m.example.com`` and
                     <requirement key="domain">%domain%</requirement>
                 </route>
 
-                <route id="homepage" path="/" controller="App\Controller\MainController::homepage" />
+                <route id="homepage" path="/" controller="App\Controller\MainController::homepage"/>
             </routes>
 
         .. code-block:: php
@@ -409,9 +409,9 @@ You can also set the host option on imported routes:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <import resource="@AcmeHelloBundle/Resources/config/routing.xml" host="hello.example.com" />
+            <import resource="@AcmeHelloBundle/Resources/config/routing.xml" host="hello.example.com"/>
         </routes>
 
     .. code-block:: php
@@ -443,4 +443,4 @@ past url matching in your functional tests::
     );
 
 .. ready: no
-.. revision: 802244d3ae793764a7bece89831315a88483b4c4
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

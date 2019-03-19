@@ -108,9 +108,7 @@ For controlling access on a controller-by-controller basis, use the ``@Security`
 annotation whenever possible. Placing it above each action makes it consistent and readable.
 
 In our application, you need the ``ROLE_ADMIN`` in order to create a new post.
-Using ``@Security``, this looks like:
-
-.. code-block:: php
+Using ``@Security``, this looks like::
 
     use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
     use Symfony\Component\Routing\Annotation\Route;
@@ -383,4 +381,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: cc831f0a46f440724eb28c56aaa221737832e790
+.. revision: be3e0b6c9b2c6b120aee80882d88abafac55ee69

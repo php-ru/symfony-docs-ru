@@ -55,11 +55,11 @@ will contain a Business Identifier Code (BIC).
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Transaction">
                 <property name="businessIdentifierCode">
-                    <constraint name="Bic" />
+                    <constraint name="Bic"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -146,4 +146,4 @@ Parameter        Description
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: 48b0cec9f4106f355cdd4274ff4558053f74f183
+.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939

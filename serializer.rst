@@ -97,11 +97,11 @@ properties and setters (``setXxx()``) to change properties:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="get_set_method_normalizer" class="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer" public="false">
-                    <tag name="serializer.normalizer" />
+                    <tag name="serializer.normalizer"/>
                 </service>
             </services>
         </container>
@@ -186,7 +186,7 @@ value:
         <!-- config/packages/framework.xml -->
         <framework:config>
             <!-- ... -->
-            <framework:serializer name-converter="serializer.name_converter.camel_case_to_snake_case" />
+            <framework:serializer name-converter="serializer.name_converter.camel_case_to_snake_case"/>
         </framework:config>
 
     .. code-block:: php
@@ -239,4 +239,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: cc831f0a46f440724eb28c56aaa221737832e790
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

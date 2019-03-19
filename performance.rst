@@ -75,7 +75,7 @@ overhead that can be avoided as follows:
     opcache.validate_timestamps=0
 
 After each deploy, you must empty and regenerate the cache of OPcache. Otherwise
-you won't see the updates made in the application. Given than in PHP, the CLI
+you won't see the updates made in the application. Given that in PHP, the CLI
 and the web processes don't share the same OPcache, you cannot clear the web
 server OPcache by executing some command in your terminal. These are some of the
 possible solutions:
@@ -123,7 +123,7 @@ in ``vendor/composer/autoload_classmap.php``.
 Execute this command to generate the class map (and make it part of your
 deployment process too):
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ composer dump-autoload --optimize --no-dev --classmap-authoritative
 
@@ -150,4 +150,4 @@ Learn more
 .. _`open_basedir`: https://php.net/manual/ini.core.php#ini.open-basedir
 
 .. ready: no
-.. revision: ecb5e623edcfeb3238cffbfe584b0fc715ac2bd5
+.. revision: 0cd91c0bf8f6ff0db05da0d4a51e19d73faa069e

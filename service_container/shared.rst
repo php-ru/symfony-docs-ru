@@ -26,7 +26,7 @@ in your service definition:
 
         <!-- config/services.xml -->
         <services>
-            <service id="App\SomeNonSharedService" shared="false" />
+            <service id="App\SomeNonSharedService" shared="false"/>
         </services>
 
     .. code-block:: php
@@ -41,4 +41,4 @@ Now, whenever you request the ``App\SomeNonSharedService`` from the container,
 you will be passed a new instance.
 
 .. ready: no
-.. revision: d18e99500772dcf3a9e497b8d656c4f9d6b14db1
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

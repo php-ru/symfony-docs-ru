@@ -38,14 +38,14 @@ listener:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <switch-user />
+                    <switch-user/>
                 </firewall>
             </config>
         </srv:container>
@@ -164,13 +164,13 @@ also adjust the query parameter name via the ``parameter`` setting:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <switch-user role="ROLE_ADMIN" parameter="_want_to_be_this_user" />
+                    <switch-user role="ROLE_ADMIN" parameter="_want_to_be_this_user"/>
                 </firewall>
             </config>
         </srv:container>
@@ -296,4 +296,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: ef324dc7a7b86240575a875dfc2dfd14ed26e5ec
+.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939

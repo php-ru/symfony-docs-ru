@@ -182,31 +182,22 @@ allows you to return a list of extensions to register::
     namespace App\Tests\Form\Type;
 
     // ...
-    use App\Form\Type\TestedType;
     use Symfony\Component\Form\Extension\Validator\ValidatorExtension;
-    use Symfony\Component\Form\Form;
-    use Symfony\Component\Validator\ConstraintViolationList;
-    use Symfony\Component\Validator\Mapping\ClassMetadata;
-    use Symfony\Component\Validator\Validator\ValidatorInterface;
+    use Symfony\Component\Validator\Validation;
 
     class TestedTypeTest extends TypeTestCase
     {
-        private $validator;
-
         protected function getExtensions()
         {
-            $this->validator = $this->createMock(ValidatorInterface::class);
-            // use getMock() on PHPUnit 5.3 or below
-            // $this->validator = $this->getMock(ValidatorInterface::class);
-            $this->validator
-                ->method('validate')
-                ->will($this->returnValue(new ConstraintViolationList()));
-            $this->validator
-                ->method('getMetadataFor')
-                ->will($this->returnValue(new ClassMetadata(Form::class)));
+            $validator = Validation::createValidator();
+
+            // or if you also need to read constraints from annotations
+            $validator = Validation::createValidatorBuilder()
+                ->enableAnnotationMapping()
+                ->getValidator();
 
             return [
-                new ValidatorExtension($this->validator),
+                new ValidatorExtension($validator),
             ];
         }
 
@@ -220,4 +211,4 @@ and :method:`Symfony\\Component\\Form\\Test\\FormIntegrationTestCase::getTypeGue
 methods.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: f8709111da9aaf177bd3b37c5fd4cd127c9837ad

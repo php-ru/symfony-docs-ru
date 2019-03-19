@@ -48,9 +48,9 @@ This variable is referenced in the service container configuration using
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal
@@ -86,7 +86,7 @@ will be used whenever the corresponding environment variable is *not* found:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="env(DATABASE_HOST)">localhost</parameter>
@@ -159,12 +159,12 @@ turn the value of the ``HTTP_PORT`` env var into an integer:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:router http-port="%env(int:HTTP_PORT)%" />
+                <framework:router http-port="%env(int:HTTP_PORT)%"/>
             </framework:config>
         </container>
 
@@ -200,15 +200,15 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(SECRET)">some_secret</parameter>
                 </parameters>
 
-                <framework:config secret="%env(string:SECRET)%" />
+                <framework:config secret="%env(string:SECRET)%"/>
             </container>
 
         .. code-block:: php
@@ -240,15 +240,15 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(HTTP_METHOD_OVERRIDE)">true</parameter>
                 </parameters>
 
-                <framework:config http-methode-override="%env(bool:HTTP_METHOD_OVERRIDE)%" />
+                <framework:config http-methode-override="%env(bool:HTTP_METHOD_OVERRIDE)%"/>
             </container>
 
         .. code-block:: php
@@ -287,14 +287,14 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:security="http://symfony.com/schema/dic/security"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(HEALTH_CHECK_METHOD)">Symfony\Component\HttpFoundation\Request::METHOD_HEAD</parameter>
                 </parameters>
 
                 <security:config>
-                    <rule path="^/health-check$" methods="%env(const:HEALTH_CHECK_METHOD)%" />
+                    <rule path="^/health-check$" methods="%env(const:HEALTH_CHECK_METHOD)%"/>
                 </security:config>
             </container>
 
@@ -336,15 +336,15 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(TRUSTED_HOSTS)">["10.0.0.1", "10.0.0.2"]</parameter>
                 </parameters>
 
-                <framework:config trusted-hosts="%env(json:TRUSTED_HOSTS)%" />
+                <framework:config trusted-hosts="%env(json:TRUSTED_HOSTS)%"/>
             </container>
 
         .. code-block:: php
@@ -377,14 +377,14 @@ Symfony provides the following env var processors:
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(HOST)">10.0.0.1</parameter>
                     <parameter key="env(SENTRY_DSN)">http://%env(HOST)%/project</parameter>
                 </parameters>
 
-                <sentry:config dsn="%env(resolve:SENTRY_DSN)%" />
+                <sentry:config dsn="%env(resolve:SENTRY_DSN)%"/>
             </container>
 
         .. code-block:: php
@@ -427,15 +427,15 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(AUTH_FILE)">../config/auth.json</parameter>
                 </parameters>
 
-                <google auth="%env(file:AUTH_FILE)%" />
+                <google auth="%env(file:AUTH_FILE)%"/>
             </container>
 
         .. code-block:: php
@@ -477,9 +477,9 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(SECRETS_FILE)">/opt/application/.secrets.json</parameter>
@@ -515,9 +515,9 @@ Symfony provides the following env var processors:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
                 <parameters>
                     <!-- if PRIVATE_KEY is not a valid file path, the content of raw_key is returned -->
                     <parameter key="private_key">%env(default:raw_key:file:PRIVATE_KEY)%</parameter>
@@ -532,6 +532,9 @@ Symfony provides the following env var processors:
             // if PRIVATE_KEY is not a valid file path, the content of raw_key is returned
             $container->setParameter('private_key', '%env(default:raw_key:file:PRIVATE_KEY)%');
             $container->setParameter('raw_key', '%env(PRIVATE_KEY)%');
+
+    When the fallback parameter is omitted (e.g. ``env(default::API_KEY)``), the
+    value returned is ``null``.
 
     .. versionadded:: 4.3
 
@@ -609,4 +612,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 334ee9944dfc4e1037c14f395402a6921eb488cd
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

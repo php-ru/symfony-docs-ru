@@ -107,11 +107,11 @@ If you're not using service autoconfiguration, then you need to add this config:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\MessageHandler\SmsNotificationHandler">
-                   <tag name="messenger.message_handler" />
+                   <tag name="messenger.message_handler"/>
                 </service>
             </services>
         </container>
@@ -165,13 +165,13 @@ the messenger component, the following configuration should have been created:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
-                    <framework:transport name="amqp" dsn="%env(MESSENGER_TRANSPORT_DSN)%" />
+                    <framework:transport name="amqp" dsn="%env(MESSENGER_TRANSPORT_DSN)%"/>
                 </framework:messenger>
             </framework:config>
         </container>
@@ -235,14 +235,14 @@ configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:routing message-class="My\Message\Message">
-                        <framework:sender service="amqp" />
+                        <framework:sender service="amqp"/>
                     </framework:routing>
                 </framework:messenger>
             </framework:config>
@@ -284,17 +284,17 @@ instead of a class name:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:routing message-class="My\Message\Message">
-                        <framework:sender service="another_transport" />
+                        <framework:sender service="another_transport"/>
                     </framework:routing>
                     <framework:routing message-class="*">
-                        <framework:sender service="amqp" />
+                        <framework:sender service="amqp"/>
                     </framework:routing>
                 </framework:messenger>
             </framework:config>
@@ -332,15 +332,15 @@ A class of messages can also be routed to multiple senders by specifying a list:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:routing message-class="My\Message\ToBeSentToTwoSenders">
-                        <framework:sender service="amqp" />
-                        <framework:sender service="audit" />
+                        <framework:sender service="amqp"/>
+                        <framework:sender service="audit"/>
                     </framework:routing>
                 </framework:messenger>
             </framework:config>
@@ -380,14 +380,14 @@ while still having them passed to their respective handler:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:routing message-class="My\Message\ThatIsGoingToBeSentAndHandledLocally" send-and-handle="true">
-                        <framework:sender service="amqp" />
+                        <framework:sender service="amqp"/>
                     </framework:routing>
                 </framework:messenger>
             </framework:config>
@@ -471,13 +471,13 @@ you can disable them like this:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
-                    <framework:bus name="messenger.bus.default" default-middleware="false" />
+                    <framework:bus name="messenger.bus.default" default-middleware="false"/>
                 </framework:messenger>
             </framework:config>
         </container>
@@ -522,15 +522,15 @@ within the buses to add some extra capabilities like this:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:bus name="messenger.bus.default">
-                        <framework:middleware id="App\Middleware\MyMiddleware" />
-                        <framework:middleware id="App\Middleware\AnotherMiddleware" />
+                        <framework:middleware id="App\Middleware\MyMiddleware"/>
+                        <framework:middleware id="App\Middleware\AnotherMiddleware"/>
                     </framework:bus>
                 </framework:messenger>
             </framework:config>
@@ -589,15 +589,15 @@ This middleware can be configured to define the entity manager to use:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
                     <framework:bus name="command_bus">
                         <!-- Using the default configured entity manager name -->
-                        <framework:middleware id="doctrine_transaction" />
+                        <framework:middleware id="doctrine_transaction"/>
                         <!-- Using another entity manager -->
                         <framework:middleware id="doctrine_transaction">
                             <framework:argument>custom</framework:argument>
@@ -649,7 +649,7 @@ Defining such configurable middleware is based on Symfony's
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="messenger.middleware.doctrine_transaction"
@@ -658,7 +658,7 @@ Defining such configurable middleware is based on Symfony's
                     abstract="true">
                     <!-- Main dependencies are defined by the parent definitions. -->
                     <!-- Arguments provided in the middleware config will be appended on the child definition. -->
-                    <argument type="service" id="doctrine" />
+                    <argument type="service" id="doctrine"/>
                 </service>
             </services>
         </container>
@@ -752,11 +752,11 @@ Register your Factory
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="Your\Transport\YourTransportFactory">
-                   <tag name="messenger.transport_factory" />
+                   <tag name="messenger.transport_factory"/>
                 </service>
             </services>
         </container>
@@ -793,13 +793,13 @@ named transport using your own DSN:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:messenger>
-                    <framework:transport name="yours" dsn="my-transport://..." />
+                    <framework:transport name="yours" dsn="my-transport://..."/>
                 </framework:messenger>
             </framework:config>
         </container>
@@ -832,4 +832,4 @@ Learn more
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

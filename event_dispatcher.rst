@@ -88,11 +88,11 @@ using a special "tag":
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\EventListener\ExceptionListener">
-                    <tag name="kernel.event_listener" event="kernel.exception" />
+                    <tag name="kernel.event_listener" event="kernel.exception"/>
                 </service>
             </services>
         </container>
@@ -267,4 +267,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

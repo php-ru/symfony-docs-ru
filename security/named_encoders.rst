@@ -27,7 +27,7 @@ to apply to all instances of a specific class:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
             <config>
                 <!-- ... -->
@@ -81,14 +81,14 @@ be done with named encoders:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
 
             <config>
                 <!-- ... -->
                 <encoder class="harsh"
                     algorithm="bcrypt"
-                    cost="15" />
+                    cost="15"/>
             </config>
         </srv:container>
 
@@ -158,13 +158,13 @@ you must register a service for it in order to use it as a named encoder:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
 
             <config>
                 <!-- ... -->
                 <encoder class="app_encoder"
-                    id="App\Security\Encoder\MyCustomPasswordEncoder" />
+                    id="App\Security\Encoder\MyCustomPasswordEncoder"/>
             </config>
         </srv:container>
 
@@ -189,4 +189,4 @@ This creates an encoder named ``app_encoder`` from a service with the ID
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

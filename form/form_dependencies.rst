@@ -118,12 +118,12 @@ manually and tag it with ``form.type``:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="App\Form\TaskType">
                     <argument type="service" id="doctrine.orm.entity_manager"/>
-                    <tag name="form.type" />
+                    <tag name="form.type"/>
                 </service>
             </services>
         </container>
@@ -145,4 +145,4 @@ at all: Symfony is smart enough to load the ``TaskType`` from the container.
 Read :ref:`form-field-service` for more information.
 
 .. ready: no
-.. revision: f18cbc8d265be09a90e38319cafef1c846137b83
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

@@ -34,13 +34,13 @@ tests significantly. That's why Symfony disables it by default:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                        http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                        http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <!-- ... -->
 
             <framework:config>
-                <framework:profiler enabled="true" collect="false" />
+                <framework:profiler enabled="true" collect="false"/>
             </framework:config>
         </container>
 
@@ -127,4 +127,4 @@ finish. It can be achived by embedding the token in the error message::
     to learn more about their interfaces.
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

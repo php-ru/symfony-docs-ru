@@ -21,7 +21,7 @@ under the ``web_profiler`` key in your application configuration.
 
     When using XML, you must use the ``http://symfony.com/schema/dic/webprofiler``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/webprofiler/webprofiler-1.0.xsd``
+    ``https://symfony.com/schema/dic/webprofiler/webprofiler-1.0.xsd``
 
 .. caution::
 
@@ -72,4 +72,4 @@ in the ``dev`` and ``test`` environments and to ``false`` in the ``prod``
 environment.
 
 .. ready: no
-.. revision: 87acc6b5780f734e7e657535cb6ae2940288d84e
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

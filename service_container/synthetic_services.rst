@@ -51,12 +51,12 @@ configuration:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
 
                 <!-- synthetic services don't specify a class -->
-                <service id="app.synthetic_service" synthetic="true" />
+                <service id="app.synthetic_service" synthetic="true"/>
 
             </services>
         </container>
@@ -77,4 +77,4 @@ Now, you can inject the instance in the container using
     $container->set('app.synthetic_service', $theService);
 
 .. ready: no
-.. revision: 9b1521b7b172b15292b19a43fa9490df964f05eb
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

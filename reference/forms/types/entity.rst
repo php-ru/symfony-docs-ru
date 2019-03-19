@@ -177,13 +177,14 @@ more details, see the main :ref:`choice_label <reference-form-choice-label>` doc
     :doc:`PropertyAccessor component </components/property_access>`
 
     For example, if the translations property is actually an associative
-    array of objects, each with a name property, then you could do this::
+    array of objects, each with a ``name`` property, then you could do this::
 
+        use App\Entity\Genre;
         use Symfony\Bridge\Doctrine\Form\Type\EntityType;
         // ...
 
         $builder->add('genre', EntityType::class, [
-           'class' => 'App\Entity\Genre',
+           'class' => Genre::class,
            'choice_label' => 'translations[en].name',
         ]);
 
@@ -361,4 +362,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/help_translation_parameters.rst.inc
 
 .. ready: no
-.. revision: d7e7b0b22cc7f5cc24d5d5ccadef32d79aa5ca32
+.. revision: af5e795af27ccd0cd62cf09cc5f4376af400ff51

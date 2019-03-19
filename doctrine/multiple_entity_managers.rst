@@ -76,9 +76,9 @@ The following configuration code shows how you can configure two entity managers
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal default-connection="default">
@@ -285,4 +285,4 @@ The same applies to repository calls::
     }
 
 .. ready: no
-.. revision: b6dc182f67452ae09564eb6d1cd2fd0bff6aa475
+.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6

@@ -68,8 +68,8 @@ want to use another theme for all the forms of your app, configure it in the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/twig http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/twig https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:form-theme>bootstrap_4_horizontal_layout.html.twig</twig:form-theme>
@@ -201,7 +201,7 @@ upon the form themes enabled in your app):
 
 .. code-block:: html
 
-    <input type="number" id="form_age" name="form[age]" required="required" value="33" />
+    <input type="number" id="form_age" name="form[age]" required="required" value="33"/>
 
 Symfony uses a Twig block called ``integer_widget`` to render that field. This
 is because the field type is ``integer`` and you're rendering its ``widget`` (as
@@ -470,8 +470,8 @@ you want to apply the theme globally to all forms, define the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/twig http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/twig https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:form-theme>form/my_theme.html.twig</twig:form-theme>
@@ -555,7 +555,6 @@ bit more complicated:
         </div>
     {% endblock %}
 
-
     {# ... render the form ... #}
 
 Customizing the Form Validation Errors
@@ -609,4 +608,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: dbce4a5fdb11016eaf23b3fc7ed2d2ab92eb141b
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

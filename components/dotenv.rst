@@ -47,7 +47,7 @@ Load a ``.env`` file in your PHP application via ``Dotenv::load()``::
 
 Given the following ``.env`` file content:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     # .env
     DB_USER=root
@@ -84,7 +84,7 @@ shell scripts:
 
 Add comments by prefixing them with ``#``:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     # Database credentials
     DB_USER=root
@@ -92,14 +92,14 @@ Add comments by prefixing them with ``#``:
 
 Use environment variables in values by prefixing variables with ``$``:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     DB_USER=root
     DB_PASS=${DB_USER}pass # Include the user as a password prefix
 
 Embed commands via ``$()`` (not supported on Windows):
 
-.. code-block:: bash
+.. code-block:: terminal
 
     START_TIME=$(date)
 
@@ -111,4 +111,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 2de7548a65514a0a60854416c46ff48f34e0cbeb
+.. revision: ed9dc2bf656efcaf38adaf36ef73d251c047d3f5

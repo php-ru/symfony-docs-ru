@@ -305,7 +305,7 @@ This results in:
         $table->setHeaders([
             [new TableCell('Main table title', ['colspan' => 3])],
             ['ISBN', 'Title', 'Author'],
-        ))
+        ])
         // ...
 
     This generates:
@@ -395,4 +395,4 @@ This will display the following table in the terminal:
     +---------+
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 60142c53315ba35610e4d58486895b8da1606054

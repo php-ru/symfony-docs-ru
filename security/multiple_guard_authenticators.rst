@@ -42,12 +42,12 @@ This is how your security configuration can look in action:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
                 <firewall name="default">
-                    <anonymous />
+                    <anonymous/>
                     <guard entry-point="App\Security\LoginFormAuthenticator">
                         <authenticator>App\Security\LoginFormAuthenticator</authenticator>
                         <authenticator>App\Security\FacebookConnectAuthenticator</authenticator>
@@ -120,7 +120,7 @@ the solution is to split the configuration into two separate firewalls:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -130,14 +130,14 @@ the solution is to split the configuration into two separate firewalls:
                     </guard>
                 </firewall>
                 <firewall name="default">
-                    <anonymous />
+                    <anonymous/>
                     <guard>
                         <authenticator>App\Security\LoginFormAuthenticator</authenticator>
                     </guard>
                 </firewall>
-                <rule path="^/login" role="IS_AUTHENTICATED_ANONYMOUSLY" />
-                <rule path="^/api" role="ROLE_API_USER" />
-                <rule path="^/" role="ROLE_USER" />
+                <rule path="^/login" role="IS_AUTHENTICATED_ANONYMOUSLY"/>
+                <rule path="^/api" role="ROLE_API_USER"/>
+                <rule path="^/" role="ROLE_USER"/>
             </config>
         </srv:container>
 
@@ -175,4 +175,4 @@ the solution is to split the configuration into two separate firewalls:
         ]);
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

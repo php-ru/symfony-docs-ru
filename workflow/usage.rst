@@ -72,13 +72,13 @@ like this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
         >
 
             <framework:config>
                 <framework:workflow name="blog_publishing" type="workflow">
-                    <framework:audit-trail enabled="true" />
+                    <framework:audit-trail enabled="true"/>
 
                     <framework:marking-store type="single_state">
                       <framework:argument>currentPlace</framework:argument>
@@ -469,4 +469,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: 67eb2564d0a06ef949a768309bd93fdcaa706c6c
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

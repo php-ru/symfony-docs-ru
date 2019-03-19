@@ -67,18 +67,18 @@ to retrieve them:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <provider name="users">
                     <!-- 'class' is the entity that represents users and 'property'
                          is the entity property to query by - e.g. username, email, etc -->
-                    <entity class="App\Entity\User" property="username" />
+                    <entity class="App\Entity\User" property="username"/>
 
                     <!-- optional: if you're using multiple Doctrine entity
                          managers, this option defines which one to use -->
                     <!-- <entity class="App\Entity\User" property="username"
-                                 manager-name="customer" /> -->
+                                 manager-name="customer"/> -->
                 </provider>
 
                 <!-- ... -->
@@ -169,13 +169,13 @@ To finish this, remove the ``property`` key from the user provider in
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <provider name="users">
-                    <entity class="App\Entity\User" />
+                    <entity class="App\Entity\User"/>
                 </provider>
             </config>
         </srv:container>
@@ -234,7 +234,7 @@ users will encode their passwords:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
             <config>
                 <!-- ... -->
@@ -379,7 +379,7 @@ command will generate a nice skeleton to get you started::
          * called. Your job is to make sure the user's data is still fresh by,
          * for example, re-querying for fresh User data.
          *
-         * If your firewall is "stateless: false" (for a pure API), this
+         * If your firewall is "stateless: true" (for a pure API), this
          * method is not called.
          *
          * @return UserInterface
@@ -509,4 +509,4 @@ user provider:
             $userProvider: '@security.user.provider.concrete.backend_users'
 
 .. ready: no
-.. revision: 2234bd3802c73d234c058c4fa91ec6c85b668fe2
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6

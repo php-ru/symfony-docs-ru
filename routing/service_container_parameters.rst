@@ -16,6 +16,27 @@ inside your routing configuration:
 
 .. configuration-block::
 
+    .. code-block:: php-annotations
+
+        // src/Controller/MainController.php
+        namespace App\Controller;
+
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+        use Symfony\Component\Routing\Annotation\Route;
+
+        class MainController extends AbstractController
+        {
+            /**
+             * @Route("/{_locale}/contact", name="contact", requirements={
+             *     "_locale"="%app.locales%"
+             * })
+             */
+            public function contact()
+            {
+                // ...
+            }
+        }
+
     .. code-block:: yaml
 
         # config/routes.yaml
@@ -32,7 +53,7 @@ inside your routing configuration:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="contact" path="/{_locale}/contact" controller="App\Controller\MainController::contact">
                 <requirement key="_locale">%app.locales%</requirement>
@@ -55,6 +76,10 @@ inside your routing configuration:
             ;
         };
 
+.. versionadded:: 4.3
+
+    Support for boolean container parameters in routes was introduced in Symfony 4.3.
+
 You can now control and set the  ``app.locales`` parameter somewhere
 in your container:
 
@@ -73,7 +98,7 @@ in your container:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="app.locales">en|es</parameter>
@@ -90,6 +115,25 @@ path):
 
 .. configuration-block::
 
+    .. code-block:: php-annotations
+
+        // src/Controller/MainController.php
+        namespace App\Controller;
+
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+        use Symfony\Component\Routing\Annotation\Route;
+
+        class MainController extends AbstractController
+        {
+            /**
+             * @Route("/%app.route_prefix%/contact", name="contact")
+             */
+            public function contact()
+            {
+                // ...
+            }
+        }
+
     .. code-block:: yaml
 
         # config/routes.yaml
@@ -104,11 +148,11 @@ path):
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="some_route"
                 path="/%app.route_prefix%/contact"
-                controller="App\Controller\MainController::contact" />
+                controller="App\Controller\MainController::contact"/>
         </routes>
 
     .. code-block:: php
@@ -140,4 +184,4 @@ path):
     :doc:`/configuration/using_parameters_in_dic`.
 
 .. ready: no
-.. revision: 21408cf551d90e9e4a99fd7fc043b19f6c4843c8
+.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815

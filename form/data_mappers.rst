@@ -78,9 +78,7 @@ one of the values is changed.
 
 The red, green and blue form fields have to be mapped to the constructor
 arguments and the ``Color`` instance has to be mapped to red, green and blue
-form fields. Recognize a familiar pattern? It's time for a data mapper!
-
-.. code-block:: php
+form fields. Recognize a familiar pattern? It's time for a data mapper::
 
     // src/App/Form/DataMapper/ColorMapper.php
     namespace App\Form\DataMapper;
@@ -197,4 +195,4 @@ a new ``Color`` object now.
     ``$builder->setDataMapper($this)``.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb

@@ -85,11 +85,11 @@ An LDAP client can be configured using the built-in
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="Symfony\Component\Ldap\Ldap">
-                    <argument type="service" id="Symfony\Component\Ldap\Adapter\ExtLdap\Adapter" />
+                    <argument type="service" id="Symfony\Component\Ldap\Adapter\ExtLdap\Adapter"/>
                 </service>
                 <service id="Symfony\Component\Ldap\Adapter\ExtLdap\Adapter">
                     <argument type="collection">
@@ -158,7 +158,7 @@ use the ``ldap`` user provider.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <provider name="my_ldap">
@@ -371,13 +371,13 @@ Configuration example for form login
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
                     <form-login-ldap
                             service="Symfony\Component\Ldap\Ldap"
-                            dn-string="uid={username},dc=example,dc=com" />
+                            dn-string="uid={username},dc=example,dc=com"/>
                 </firewall>
             </config>
         </srv:container>
@@ -426,11 +426,11 @@ Configuration example for HTTP Basic
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main" stateless="true">
-                    <http-basic-ldap service="Symfony\Component\Ldap\Ldap" dn-string="uid={username},dc=example,dc=com" />
+                    <http-basic-ldap service="Symfony\Component\Ldap\Ldap" dn-string="uid={username},dc=example,dc=com"/>
                 </firewall>
             </config>
         </srv:container>
@@ -481,14 +481,14 @@ Configuration example for form login and query_string
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
                     <form-login-ldap
                             service="Symfony\Component\Ldap\Ldap"
                             dn-string="dc=example,dc=com"
-                            query-string="(&amp;(uid={username})(memberOf=cn=users,ou=Services,dc=example,dc=com))" />
+                            query-string="(&amp;(uid={username})(memberOf=cn=users,ou=Services,dc=example,dc=com))"/>
                 </firewall>
             </config>
         </srv:container>
@@ -509,11 +509,11 @@ Configuration example for form login and query_string
                     ],
                 ],
             ]
-        ];
+        ]);
 
 .. _`LDAP PHP extension`: http://www.php.net/manual/en/intro.ldap.php
 .. _`RFC4515`: http://www.faqs.org/rfcs/rfc4515.html
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 60142c53315ba35610e4d58486895b8da1606054

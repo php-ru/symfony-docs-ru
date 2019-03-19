@@ -105,17 +105,17 @@ following:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Author">
                 <property name="profileData">
                     <constraint name="Collection">
                         <option name="fields">
                             <value key="personal_email">
-                                <constraint name="Email" />
+                                <constraint name="Email"/>
                             </value>
                             <value key="short_bio">
-                                <constraint name="NotBlank" />
+                                <constraint name="NotBlank"/>
                                 <constraint name="Length">
                                     <option name="max">100</option>
                                     <option name="maxMessage">Your short bio is too long!</option>
@@ -230,7 +230,7 @@ you can do the following:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="App\Entity\Author">
                 <property name="profile_data">
@@ -238,13 +238,13 @@ you can do the following:
                         <option name="fields">
                             <value key="personal_email">
                                 <constraint name="Required">
-                                    <constraint name="NotBlank" />
-                                    <constraint name="Email" />
+                                    <constraint name="NotBlank"/>
+                                    <constraint name="Email"/>
                                 </constraint>
                             </value>
                             <value key="alternate_email">
                                 <constraint name="Optional">
-                                    <constraint name="Email" />
+                                    <constraint name="Email"/>
                                 </constraint>
                             </value>
                         </option>
@@ -352,4 +352,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 34d8337f40d593c9da110d3f8acc7354c33a4ff1
+.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f

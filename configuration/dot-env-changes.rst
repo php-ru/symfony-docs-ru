@@ -82,7 +82,7 @@ changes can be made to any Symfony 3.4 or higher app:
        $ mv .env .env.local
        $ git mv .env.dist .env
 
-    You can also update the `comment on the top of .env`_ to reflect the new changes.
+   You can also update the `comment on the top of .env`_ to reflect the new changes.
 
 #. If you're using PHPUnit, you will also need to `create a new .env.test`_ file
    and update your `phpunit.xml.dist file`_ so it loads the ``config/bootstrap.php``
@@ -98,4 +98,4 @@ changes can be made to any Symfony 3.4 or higher app:
 .. _`One further change to the recipe in January 2019`: https://github.com/symfony/recipes/pull/501
 
 .. ready: no
-.. revision: 98d4a3ed339e3ec98b5b622c2a55d25579e88dba
+.. revision: 99dfc304ba15824d7fd0229be48edf3d3b2e3b8f

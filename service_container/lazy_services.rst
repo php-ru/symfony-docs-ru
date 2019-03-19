@@ -54,10 +54,10 @@ You can mark the service as ``lazy`` by manipulating its definition:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="App\Twig\AppExtension" lazy="true" />
+                <service id="App\Twig\AppExtension" lazy="true"/>
             </services>
         </container>
 
@@ -99,4 +99,4 @@ in the `documentation of ProxyManager`_.
 .. _`ocramius/proxy-manager`: https://github.com/Ocramius/ProxyManager
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
