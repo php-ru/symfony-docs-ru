@@ -215,12 +215,12 @@ service type to a service.
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
 
                 <service id="AppBundle\CommandBus">
-                    <tag name="container.service_subscriber" key="logger" id="monolog.logger.event" />
+                    <tag name="container.service_subscriber" key="logger" id="monolog.logger.event"/>
                 </service>
 
             </services>
@@ -270,16 +270,16 @@ include as many services as needed in it.
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
 
                 <service id="app.command_handler_locator" class="Symfony\Component\DependencyInjection\ServiceLocator">
                     <argument type="collection">
-                        <argument key="AppBundle\FooCommand" type="service" id="app.command_handler.foo" />
-                        <argument key="AppBundle\BarCommand" type="service" id="app.command_handler.bar" />
+                        <argument key="AppBundle\FooCommand" type="service" id="app.command_handler.foo"/>
+                        <argument key="AppBundle\BarCommand" type="service" id="app.command_handler.bar"/>
                     </argument>
-                    <tag name="container.service_locator" />
+                    <tag name="container.service_locator"/>
                 </service>
 
             </services>
@@ -324,12 +324,12 @@ Now you can use the service locator by injecting it in any other service:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
 
                 <service id="AppBundle\CommandBus">
-                    <argument type="service" id="app.command_handler_locator" />
+                    <argument type="service" id="app.command_handler_locator"/>
                 </service>
 
             </services>
@@ -369,4 +369,4 @@ will share identical locators amongst all the services referencing them::
 .. _`Command pattern`: https://en.wikipedia.org/wiki/Command_pattern
 
 .. ready: no
-.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

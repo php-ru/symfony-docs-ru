@@ -110,13 +110,13 @@ Next, make sure you've configured a "user provider" for the user:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <provider name="your_db_provider">
-                    <entity class="AppBundle:User" />
+                    <entity class="AppBundle:User"/>
                 </provider>
 
                 <!-- ... -->
@@ -299,7 +299,7 @@ Finally, configure your ``firewalls`` key in ``security.yml`` to use this authen
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
@@ -307,7 +307,7 @@ Finally, configure your ``firewalls`` key in ``security.yml`` to use this authen
                     pattern="^/"
                     anonymous="true"
                 >
-                    <logout />
+                    <logoutOjso/>
 
                     <guard>
                         <authenticator>AppBundle\Security\TokenAuthenticator</authenticator>
@@ -344,7 +344,7 @@ Finally, configure your ``firewalls`` key in ``security.yml`` to use this authen
 You did it! You now have a fully-working API token authentication system. If your
 homepage required ``ROLE_USER``, then you could test it under different conditions:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     # test with no token
     curl http://localhost:8000/
@@ -480,7 +480,7 @@ to cause a failure::
 In this case, since "ILuvAPIs" is a ridiculous API key, you could include an easter
 egg to return a custom message if someone tries this:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     curl -H "X-AUTH-TOKEN: ILuvAPIs" http://localhost:8000/
     # {"message":"ILuvAPIs is not a real API key: it's just a silly phrase"}
@@ -630,4 +630,4 @@ Frequently Asked Questions
 .. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

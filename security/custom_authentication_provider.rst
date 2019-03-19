@@ -418,7 +418,7 @@ to service ids that may not exist yet: ``AppBundle\Security\Authentication\Provi
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Security\Authentication\Provider\WsseProvider"
@@ -431,7 +431,7 @@ to service ids that may not exist yet: ``AppBundle\Security\Authentication\Provi
                     public="false"
                 >
                     <argument type="service" id="security.token_storage"/>
-                    <argument type="service" id="security.authentication.manager" />
+                    <argument type="service" id="security.authentication.manager"/>
                 </service>
             </services>
         </container>
@@ -499,7 +499,7 @@ You are finished! You can now define parts of your app as under WSSE protection.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -615,13 +615,13 @@ set to any desirable value per firewall.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="wsse_secured" pattern="^/api/" stateless="true">
-                    <wsse lifetime="30" />
+                    <wsse lifetime="30"/>
                 </firewall>
             </config>
         </srv:container>
@@ -653,4 +653,4 @@ in the factory and consumed or passed to the other classes in the container.
 .. _`Symfony Polyfill`: https://github.com/symfony/polyfill
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

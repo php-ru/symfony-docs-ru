@@ -55,7 +55,7 @@ to register a new `test listener`_ called ``SymfonyTestsListener``:
         <!-- ... -->
 
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
     </phpunit>
 
@@ -122,7 +122,7 @@ The summary includes:
         <!-- phpunit.xml.dist -->
         <!-- ... -->
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+            <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
 
 Trigger Deprecation Notices
@@ -179,8 +179,8 @@ message, enclosed with ``/``. For example, with:
         <!-- ... -->
 
         <php>
-            <server name="KERNEL_DIR" value="app/" />
-            <env name="SYMFONY_DEPRECATIONS_HELPER" value="/foobar/" />
+            <server name="KERNEL_DIR" value="app/"/>
+            <env name="SYMFONY_DEPRECATIONS_HELPER" value="/foobar/"/>
         </php>
     </phpunit>
 
@@ -317,7 +317,7 @@ following listener in your PHPUnit configuration:
     <!-- phpunit.xml.dist -->
     <!-- ... -->
     <listeners>
-        <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
+        <listener class="\Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
     </listeners>
 
 .. note::
@@ -565,7 +565,7 @@ the ``simple-phpunit`` if it is not provided.
 
 If you have installed the bridge through Composer, you can run it by calling e.g.:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ vendor/bin/simple-phpunit
 
@@ -650,7 +650,7 @@ Add the following configuration to the ``phpunit.xml.dist`` file
         <!-- ... -->
 
         <listeners>
-            <listener class="Symfony\Bridge\PhpUnit\CoverageListener" />
+            <listener class="Symfony\Bridge\PhpUnit\CoverageListener"/>
         </listeners>
     </phpunit>
 
@@ -698,4 +698,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

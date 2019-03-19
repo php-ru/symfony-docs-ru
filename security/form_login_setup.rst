@@ -37,12 +37,12 @@ First, enable form login under your firewall:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="main">
-                    <anonymous />
-                    <form-login login-path="login" check-path="login" />
+                    <anonymous/>
+                    <form-login login-path="login" check-path="login"/>
                 </firewall>
             </config>
         </srv:container>
@@ -117,7 +117,7 @@ configuration (``login``):
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="login" path="/login">
                 <default key="_controller">AppBundle:Security:login</default>
@@ -185,15 +185,15 @@ Finally, create the template:
 
     <form action="{{ path('login') }}" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
+        <input type="password" id="password" name="_password"/>
 
         {#
             If you want to control the URL the user
             is redirected to on success (more details below)
-            <input type="hidden" name="_target_path" value="/account" />
+            <input type="hidden" name="_target_path" value="/account"/>
         #}
 
         <button type="submit">login</button>
@@ -293,11 +293,11 @@ all URLs (including the ``/login`` URL), will cause a redirect loop:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
-                <rule path="^/" role="ROLE_ADMIN" />
+                <rule path="^/" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -332,12 +332,12 @@ fixes the problem:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
-                <rule path="^/login" role="IS_AUTHENTICATED_ANONYMOUSLY" />
-                <rule path="^/" role="ROLE_ADMIN" />
+                <rule path="^/login" role="IS_AUTHENTICATED_ANONYMOUSLY"/>
+                <rule path="^/" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -381,4 +381,4 @@ for more details.
 .. _`FOSUserBundle`: https://github.com/FriendsOfSymfony/FOSUserBundle
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

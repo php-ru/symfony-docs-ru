@@ -349,14 +349,14 @@ object.
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Task">
                 <property name="task">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
                 <property name="dueDate">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                     <constraint name="Type">\DateTime</constraint>
                 </property>
             </class>
@@ -706,4 +706,4 @@ Learn more
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony3-forms
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

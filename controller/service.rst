@@ -53,7 +53,7 @@ syntax:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="hello" path="/hello">
                 <default key="_controller">app.hello_controller:indexAction</default>
@@ -141,4 +141,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

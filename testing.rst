@@ -179,7 +179,7 @@ As an example, a test could look like this::
         <?xml version="1.0" charset="utf-8" ?>
         <phpunit>
             <php>
-                <server name="KERNEL_DIR" value="/path/to/your/app/" />
+                <server name="KERNEL_DIR" value="/path/to/your/app/"/>
             </php>
             <!-- ... -->
         </phpunit>
@@ -847,12 +847,12 @@ configuration option:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/swiftmailer
-                http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+                https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
             <!-- ... -->
-            <swiftmailer:config disable-delivery="true" />
+            <swiftmailer:config disable-delivery="true"/>
         </container>
 
     .. code-block:: php
@@ -984,4 +984,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: e70893a4873e5fde526acadcd2b88759449cb125
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

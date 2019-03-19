@@ -35,10 +35,10 @@ Symfony to use your session handler instead of the default one:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <framework:config>
-                <framework:session handler-id="AppBundle\Session\CustomSessionHandler" />
+                <framework:session handler-id="AppBundle\Session\CustomSessionHandler"/>
             </framework:config>
         </container>
 
@@ -143,4 +143,4 @@ can intercept the session before it is written::
 .. _`php-encryption`: https://github.com/defuse/php-encryption
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

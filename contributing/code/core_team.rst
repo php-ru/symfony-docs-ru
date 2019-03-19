@@ -114,6 +114,7 @@ Active Core Members
   * **Wouter De Jong** (`wouterj`_);
   * **Jules Pietri** (`HeahDude`_);
   * **Javier Eguiluz** (`javiereguiluz`_).
+  * **Oskar Stark** (`OskarStark`_).
 
 Former Core Members
 ~~~~~~~~~~~~~~~~~~~
@@ -258,6 +259,7 @@ discretion of the **Project Leader**.
 .. _`michaelcullum`: https://github.com/michaelcullum
 .. _`wouterj`: https://github.com/wouterj
 .. _`HeahDude`: https://github.com/HeahDude
+.. _`OskarStark`: https://github.com/OskarStark
 
 .. ready: no
-.. revision: ae3fdda74bc70f1ecf9ae9829477de08a4bcc1cd
+.. revision: b682cc471a7c7cd8a2486c4d24e9e6acba4a949c

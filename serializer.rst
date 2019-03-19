@@ -37,15 +37,15 @@ it in your configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
             <framework:config>
                 <!-- ... -->
-                <framework:serializer enable-annotations="true" />
+                <framework:serializer enable-annotations="true"/>
                 <!--
                 Alternatively, if you don't want to use annotations
-                <framework:serializer enabled="true" />
+                <framework:serializer enabled="true"/>
                 -->
             </framework:config>
         </container>
@@ -138,11 +138,11 @@ properties and setters (``setXxx()``) to change properties:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="get_set_method_normalizer" class="Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer" public="false">
-                    <tag name="serializer.normalizer" />
+                    <tag name="serializer.normalizer"/>
                 </service>
             </services>
         </container>
@@ -189,13 +189,13 @@ with the following configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!-- ... -->
-                <framework:serializer enable-annotations="true" />
+                <framework:serializer enable-annotations="true"/>
             </framework:config>
         </container>
 
@@ -262,7 +262,7 @@ value:
         <!-- app/config/config.xml -->
         <framework:config>
             <!-- ... -->
-            <framework:serializer name-converter="serializer.name_converter.camel_case_to_snake_case" />
+            <framework:serializer name-converter="serializer.name_converter.camel_case_to_snake_case"/>
         </framework:config>
 
     .. code-block:: php
@@ -299,4 +299,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

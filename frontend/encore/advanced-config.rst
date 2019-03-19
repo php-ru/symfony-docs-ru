@@ -100,6 +100,30 @@ prefer to build configs separately, pass the ``--config-name`` option:
 
     $ yarn encore dev --config-name firstConfig
 
+Next, define the output directories of each build:
+
+.. code-block:: yaml
+
+    # config/packages/webpack_encore.yaml
+    webpack_encore:
+        output_path: '%kernel.public_dir%/web/default_build'
+        builds:
+            firstConfig: '%kernel.public_dir%/web/first_build'
+            secondConfig: '%kernel.public_dir%/web/second_build'
+
+Finally, use the third optional parameter of the ``encore_entry_*_tags()``
+functions to specify which build to use:
+
+.. code-block:: twig
+
+    {# Using the entrypoints.json file located in ./web/first_build #}
+    {{ encore_entry_script_tags('app', null, 'firstConfig') }}
+    {{ encore_entry_link_tags('global', null, 'firstConfig') }}
+
+    {# Using the entrypoints.json file located in ./web/second_build #}
+    {{ encore_entry_script_tags('mobile', null, 'secondConfig') }}
+    {{ encore_entry_link_tags('mobile', null, 'secondConfig') }}
+
 Generating a Webpack Configuration Object without using the Command-Line Interface
 ----------------------------------------------------------------------------------
 
@@ -152,4 +176,4 @@ normally use from the command-line interface:
 .. _`Karma`: https://karma-runner.github.io
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: e2bfb6734ea766920393627b916ccef028fdc901

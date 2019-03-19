@@ -84,11 +84,11 @@ your class as a service and using the  ``form.type_extension`` tag:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Form\Extension\ImageTypeExtension">
-                    <tag name="form.type_extension" extended-type="Symfony\Component\Form\Extension\Core\Type\FileType" />
+                    <tag name="form.type_extension" extended-type="Symfony\Component\Form\Extension\Core\Type\FileType"/>
                 </service>
             </services>
         </container>
@@ -286,4 +286,4 @@ it's possible that it does *not* extend ``FormType``, and so your form type exte
 may not be applied to it.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

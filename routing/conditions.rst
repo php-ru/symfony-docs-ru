@@ -15,10 +15,10 @@ define arbitrary matching logic, use the ``conditions`` routing option:
         // src/Controller/DefaultController.php
         namespace App\Controller;
 
-        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+        use Symfony\Bundle\FrameworkBundle\Controller\Controller;
         use Symfony\Component\Routing\Annotation\Route;
 
-        class DefaultController extends AbstractController
+        class DefaultController extends Controller
         {
             /**
              * @Route(
@@ -27,7 +27,7 @@ define arbitrary matching logic, use the ``conditions`` routing option:
              *     condition="context.getMethod() in ['GET', 'HEAD'] and request.headers.get('User-Agent') matches '/firefox/i'"
              * )
              *
-             * expressions can also include config parameters 
+             * expressions can also include config parameters
              * condition: "request.headers.get('User-Agent') matches '%app.allowed_browsers%'"
              */
             public function contact()
@@ -49,7 +49,7 @@ define arbitrary matching logic, use the ``conditions`` routing option:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="contact" path="/contact">
                 <default key="_controller">AcmeDemoBundle:Main:contact</default>
@@ -112,4 +112,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: a464d7e0eca7eeae82293fb8116b3707d6fce7b5

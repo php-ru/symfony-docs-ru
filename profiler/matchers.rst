@@ -43,14 +43,14 @@ configuration:
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!-- ... -->
                 <framework:profiler>
-                    <framework:matcher ip="168.0.0.1" />
+                    <framework:matcher ip="168.0.0.1"/>
                 </framework:profiler>
             </framework:config>
         </container>
@@ -136,14 +136,14 @@ profiler to use this service as the matcher:
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <!-- ... -->
                 <framework:profiler>
-                    <framework:matcher service="AppBundle\Profiler\SuperAdminMatcher" />
+                    <framework:matcher service="AppBundle\Profiler\SuperAdminMatcher"/>
                 </framework:profiler>
             </framework:config>
         </container>
@@ -163,4 +163,4 @@ profiler to use this service as the matcher:
         ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

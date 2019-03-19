@@ -50,13 +50,13 @@ Enable the x509 authentication for a particular firewall in the security configu
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="secured_area" pattern="^/">
-                    <x509 provider="your_user_provider" />
+                    <x509 provider="your_user_provider"/>
                 </firewall>
             </config>
         </srv:container>
@@ -159,4 +159,4 @@ key in the ``remote_user`` firewall configuration.
 
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

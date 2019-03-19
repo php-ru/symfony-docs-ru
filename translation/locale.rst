@@ -80,7 +80,7 @@ by the routing system using the special ``_locale`` parameter:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="contact" path="/{_locale}/contact">
                 <default key="_controller">AppBundle:Contact:index</default>
@@ -149,11 +149,11 @@ the framework:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
-            <framework:config default-locale="en" />
+            <framework:config default-locale="en"/>
         </container>
 
     .. code-block:: php
@@ -164,4 +164,4 @@ the framework:
         ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

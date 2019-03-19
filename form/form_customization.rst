@@ -40,7 +40,7 @@ above templates would render:
         <ul>
             <li>This field is required</li>
         </ul>
-        <input type="number" id="form_age" name="form[age]" />
+        <input type="number" id="form_age" name="form[age]"/>
     </div>
 
 To quickly prototype and test a form, you can render the entire form with
@@ -122,7 +122,7 @@ renders:
 
 .. code-block:: html
 
-    <input type="number" id="form_age" name="form[age]" required="required" value="33" />
+    <input type="number" id="form_age" name="form[age]" required="required" value="33"/>
 
 Internally, Symfony uses the ``integer_widget`` fragment to render the field.
 This is because the field type is ``integer`` and you're rendering its ``widget``
@@ -436,9 +436,9 @@ rendered.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:form-theme>form/fields.html.twig</twig:form-theme>
@@ -479,9 +479,9 @@ resource to use such a layout:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:form-theme>form_table_layout.html.twig</twig:form-theme>
@@ -862,4 +862,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

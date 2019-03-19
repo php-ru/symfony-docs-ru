@@ -56,11 +56,11 @@ of an ``Author`` class exactly equal to ``null``, you could do the following:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="firstName">
-                    <constraint name="IsNull" />
+                    <constraint name="IsNull"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -104,4 +104,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

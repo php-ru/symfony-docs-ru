@@ -72,12 +72,12 @@ accomplished easily and transparently:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <imports>
-                <import resource="config.xml" />
+                <import resource="config.xml"/>
             </imports>
 
             <!-- ... -->
@@ -118,15 +118,15 @@ configuration file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:webprofiler="http://symfony.com/schema/dic/webprofiler"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/webprofiler
                 http://symfony.com/schema/dic/webprofiler/webprofiler-1.0.xsd">
 
             <imports>
-                <import resource="config.xml" />
+                <import resource="config.xml"/>
             </imports>
 
-            <webprofiler:config toolbar="true" />
+            <webprofiler:config toolbar="true"/>
 
         </container>
 
@@ -225,11 +225,11 @@ this code and changing the environment string.
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/doctrine
                     http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
-                <doctrine:dbal logging="%kernel.debug%" />
+                <doctrine:dbal logging="%kernel.debug%"/>
 
             </container>
 
@@ -314,16 +314,16 @@ The best way to accomplish this is via a new environment called, for example,
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="config_prod.xml" />
+                <import resource="config_prod.xml"/>
             </imports>
 
             <framework:config>
-                <framework:profiler only-exceptions="false" />
+                <framework:profiler only-exceptions="false"/>
             </framework:config>
 
         </container>
@@ -429,4 +429,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

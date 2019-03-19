@@ -50,14 +50,14 @@ Take the following ``access_control`` entries as an example:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
-                <rule path="^/admin" role="ROLE_USER_IP" ip="127.0.0.1" />
-                <rule path="^/admin" role="ROLE_USER_HOST" host="symfony\.com$" />
-                <rule path="^/admin" role="ROLE_USER_METHOD" methods="POST, PUT" />
-                <rule path="^/admin" role="ROLE_USER" />
+                <rule path="^/admin" role="ROLE_USER_IP" ip="127.0.0.1"/>
+                <rule path="^/admin" role="ROLE_USER_HOST" host="symfony\.com$"/>
+                <rule path="^/admin" role="ROLE_USER_METHOD" methods="POST, PUT"/>
+                <rule path="^/admin" role="ROLE_USER"/>
             </config>
         </srv:container>
 
@@ -191,7 +191,7 @@ pattern so that it is only accessible by requests from the local server itself:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -202,7 +202,7 @@ pattern so that it is only accessible by requests from the local server itself:
                     <ip>::1</ip>
                 </rule>
 
-                <rule path="^/internal" role="ROLE_NO_ACCESS" />
+                <rule path="^/internal" role="ROLE_NO_ACCESS"/>
             </config>
         </srv:container>
 
@@ -275,11 +275,11 @@ key:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <rule path="^/_internal/secure"
-                    allow-if="'127.0.0.1' == request.getClientIp() or has_role('ROLE_ADMIN')" />
+                    allow-if="'127.0.0.1' == request.getClientIp() or has_role('ROLE_ADMIN')"/>
             </config>
         </srv:container>
 
@@ -330,7 +330,7 @@ the user will be redirected to ``https``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <rule path="^/cart/checkout"
                 role="IS_AUTHENTICATED_ANONYMOUSLY"
@@ -352,4 +352,4 @@ the user will be redirected to ``https``:
         ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

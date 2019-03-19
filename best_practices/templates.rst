@@ -128,7 +128,7 @@ class in the constructor of the Twig extension::
                     [$this, 'markdownToHtml'],
                     ['is_safe' => ['html'], 'pre_escape' => 'html']
                 ),
-            );
+            ];
         }
 
         public function markdownToHtml($content)
@@ -156,4 +156,4 @@ Next: :doc:`/best_practices/forms`
 .. _`Parsedown`: http://parsedown.org/
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

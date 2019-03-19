@@ -183,7 +183,7 @@ using the ``simple_form`` key:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
@@ -227,4 +227,4 @@ If creating a login form in general is new to you or you don't understand
 the ``check_path`` or ``login_path`` options, see :doc:`/security/form_login`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

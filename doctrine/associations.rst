@@ -93,7 +93,7 @@ property on the ``Product`` class, annotated as follows:
                     inversed-by="products"
                     join-column="category">
 
-                    <join-column name="category_id" referenced-column-name="id" />
+                    <join-column name="category_id" referenced-column-name="id"/>
                 </many-to-one>
             </entity>
         </doctrine-mapping>
@@ -157,7 +157,7 @@ to hold those associated objects.
                 <one-to-many
                     field="products"
                     target-entity="Product"
-                    mapped-by="category" />
+                    mapped-by="category"/>
 
                 <!--
                     don't forget to init the collection in
@@ -418,4 +418,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/symfony3-doctrine-relations
 
 .. ready: no
-.. revision: 6bfddaca45425359f54225ee58da1dab5f4949fe
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

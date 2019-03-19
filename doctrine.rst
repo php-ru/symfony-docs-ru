@@ -83,7 +83,7 @@ information. By convention, this information is usually configured in an
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/doctrine
                     http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -93,7 +93,7 @@ information. By convention, this information is usually configured in an
                         host="%database_host%"
                         dbname="%database_name%"
                         user="%database_user%"
-                        password="%database_password%" />
+                        password="%database_password%"/>
                 </doctrine:config>
             </container>
 
@@ -169,7 +169,7 @@ can automatically generate an empty ``test_project`` database for you:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/doctrine
                     http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -233,7 +233,7 @@ can automatically generate an empty ``test_project`` database for you:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/doctrine
                     http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -241,7 +241,7 @@ can automatically generate an empty ``test_project`` database for you:
                     <doctrine:dbal
                         driver="pdo_sqlite"
                         path="%kernel.project_dir%/app/sqlite.db"
-                        charset="UTF-8" />
+                        charset="UTF-8"/>
                 </doctrine:config>
             </container>
 
@@ -383,11 +383,11 @@ directly inside the ``Product`` class via DocBlock annotations:
 
             <entity name="AppBundle\Entity\Product" table="product">
                 <id name="id" type="integer">
-                    <generator strategy="AUTO" />
+                    <generator strategy="AUTO"/>
                 </id>
-                <field name="name" type="string" length="100" />
-                <field name="price" type="decimal" scale="2" />
-                <field name="description" type="text" />
+                <field name="name" type="string" length="100"/>
+                <field name="price" type="decimal" scale="2"/>
+                <field name="description" type="text"/>
             </entity>
         </doctrine-mapping>
 
@@ -905,4 +905,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony3-doctrine
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

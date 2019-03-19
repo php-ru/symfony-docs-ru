@@ -22,13 +22,20 @@ FriendsOfPHP organization.
 
     The ``security:check`` command terminates with a non-zero exit code if
     any of your dependencies is affected by a known security vulnerability.
-    This allows you to add it to your project build process and your continuous
-    integration workflows.
+    This way you can add it to your project build process and your continuous
+    integration workflows to make them fail when there are vulnerabilities.
 
 .. note::
 
     To enable the ``security:check`` command, make sure the
     `SensioDistributionBundle`_ is installed and enabled in your application.
+
+.. note::
+
+    Make sure that the installed version of the security checker package is at
+    least 5.0 (run ``composer show sensiolabs/security-checker`` to show it).
+    Older versions checked the security vulnerabilities using an URL that is no
+    longer available and the command execution will result in an error.
 
 .. tip::
 
@@ -41,4 +48,4 @@ FriendsOfPHP organization.
 .. _`Security Checker repository`: https://github.com/sensiolabs/security-checker
 
 .. ready: no
-.. revision: 10671c8d263d61b1821cb7b35fb02180c72444c8
+.. revision: 858b1a7ff67739d924c7e3df1c4c75218823af03

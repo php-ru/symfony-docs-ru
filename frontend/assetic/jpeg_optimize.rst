@@ -37,14 +37,14 @@ using the ``bin`` option of the ``jpegoptim`` filter:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
                     name="jpegoptim"
-                    bin="path/to/jpegoptim" />
+                    bin="path/to/jpegoptim"/>
             </assetic:config>
         </container>
 
@@ -94,7 +94,7 @@ to ``true``:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -102,7 +102,7 @@ to ``true``:
                 <assetic:filter
                     name="jpegoptim"
                     bin="path/to/jpegoptim"
-                    strip-all="true" />
+                    strip-all="true"/>
             </assetic:config>
         </container>
 
@@ -145,7 +145,7 @@ be at the expense of its quality:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -153,7 +153,7 @@ be at the expense of its quality:
                 <assetic:filter
                     name="jpegoptim"
                     bin="path/to/jpegoptim"
-                    max="70" />
+                    max="70"/>
             </assetic:config>
         </container>
 
@@ -197,17 +197,17 @@ following configuration:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
                     name="jpegoptim"
-                    bin="path/to/jpegoptim" />
+                    bin="path/to/jpegoptim"/>
                 <assetic:twig>
                     <assetic:function
-                        name="jpegoptim" />
+                        name="jpegoptim"/>
                 </assetic:twig>
             </assetic:config>
         </container>
@@ -256,18 +256,18 @@ file:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
                     name="jpegoptim"
-                    bin="path/to/jpegoptim" />
+                    bin="path/to/jpegoptim"/>
                 <assetic:twig>
                     <assetic:function
                         name="jpegoptim"
-                        output="images/*.jpg" />
+                        output="images/*.jpg"/>
                 </assetic:twig>
             </assetic:config>
         </container>
@@ -299,4 +299,4 @@ file:
 .. _`LiipImagineBundle`: https://github.com/liip/LiipImagineBundle
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

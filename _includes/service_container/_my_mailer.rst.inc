@@ -15,7 +15,7 @@
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="app.mailer" class="AppBundle\Mailer">
@@ -31,3 +31,6 @@
 
         $container->register('app.mailer', Mailer::class)
             ->addArgument('sendmail');
+
+.. ready: no
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

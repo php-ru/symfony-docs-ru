@@ -38,7 +38,7 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -50,7 +50,7 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
                     <remember-me
                         secret="%secret%"
                         lifetime="604800"
-                        path="/" />
+                        path="/"/>
                     <!-- by default, the feature is enabled by checking a checkbox
                          in the login form (see below), add always-remember-me="true"
                          to always enable it. -->
@@ -152,15 +152,15 @@ this:
 
     <form action="{{ path('login') }}" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
+        <input type="password" id="password" name="_password"/>
 
-        <input type="checkbox" id="remember_me" name="_remember_me" checked />
+        <input type="checkbox" id="remember_me" name="_remember_me" checked/>
         <label for="remember_me">Keep me logged in</label>
 
-        <input type="submit" name="login" />
+        <input type="submit" name="login"/>
     </form>
 
 The user will then automatically be logged in on subsequent visits while
@@ -263,4 +263,4 @@ For more information on securing services or methods in this way,
 see :doc:`/security/securing_services`.
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

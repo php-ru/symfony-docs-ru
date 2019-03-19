@@ -38,7 +38,7 @@ a new provider that chains the two together:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <provider name="chain_provider">
@@ -50,12 +50,12 @@ a new provider that chains the two together:
 
                 <provider name="in_memory">
                     <memory>
-                        <user name="foo" password="test" />
+                        <user name="foo" password="test"/>
                     </memory>
                 </provider>
 
                 <provider name="user_db">
-                    <entity class="AppBundle\Entity\User" property="username" />
+                    <entity class="AppBundle\Entity\User" property="username"/>
                 </provider>
             </config>
         </srv:container>
@@ -128,13 +128,13 @@ the first provider is always used:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <firewall name="secured_area" pattern="^/" provider="user_db">
                     <!-- ... -->
-                    <http-basic realm="Secured Demo Area" provider="in_memory" />
-                    <form-login />
+                    <http-basic realm="Secured Demo Area" provider="in_memory"/>
+                    <form-login/>
                 </firewall>
             </config>
         </srv:container>
@@ -187,4 +187,4 @@ For more information about user provider and firewall configuration, see
 the :doc:`/reference/configuration/security`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

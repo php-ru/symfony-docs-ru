@@ -518,7 +518,7 @@ helper functions:
     {{ form_start(form) }}
         {{ form_widget(form) }}
 
-        <input type="submit" />
+        <input type="submit"/>
     {{ form_end(form) }}
 
 .. image:: /_images/form/simple-form.png
@@ -769,4 +769,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: 057f279d9ff0ece0a4d3521d008b85bc1e2904b3
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

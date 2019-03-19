@@ -52,11 +52,11 @@ Basic Usage
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Journal">
                 <property name="issn">
-                    <constraint name="Issn" />
+                    <constraint name="Issn"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -120,4 +120,4 @@ this to ``true``, the validator requires a hyphenated ISSN value.
 .. _`International Standard Serial Number (ISSN)`: https://en.wikipedia.org/wiki/Issn
 
 .. ready: no
-.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -97,13 +97,13 @@ to false:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
                         http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <!-- ... -->
 
             <framework:config>
-                <framework:profiler enabled="true" collect="false" />
+                <framework:profiler enabled="true" collect="false"/>
             </framework:config>
         </container>
 
@@ -122,4 +122,4 @@ to false:
 In this way only tests that call ``$client->enableProfiler()`` will collect data.
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

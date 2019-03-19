@@ -48,23 +48,22 @@ configure the service container to use the
     .. code-block:: xml
 
         <!-- app/config/services.xml -->
-
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Email\NewsletterManager"
                          class="AppBundle\Email\NewsletterManager">
                     <!-- call the static method that creates the object -->
-                    <factory class="AppBundle\Email\NewsletterManagerStaticFactory" method="createNewsletterManager" />
+                    <factory class="AppBundle\Email\NewsletterManagerStaticFactory" method="createNewsletterManager"/>
 
                     <!-- starting from Symfony 3.3, if the factory class is the same as the service
                          class, you can omit the 'class' attribute and define just the 'method' attribute:
 
-                         <factory method="createNewsletterManager" />
+                         <factory method="createNewsletterManager"/>
                     -->
                 </service>
             </services>
@@ -102,7 +101,6 @@ Configuration of the service container then looks like this:
     .. code-block:: yaml
 
         # app/config/services.yml
-
         services:
             # ...
 
@@ -116,15 +114,14 @@ Configuration of the service container then looks like this:
     .. code-block:: xml
 
         <!-- app/config/services.xml -->
-
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="AppBundle\Email\NewsletterManagerFactory" />
+                <service id="AppBundle\Email\NewsletterManagerFactory"/>
 
                 <service id="AppBundle\Email\NewsletterManager"
                          class="AppBundle\Email\NewsletterManager">
@@ -162,7 +159,6 @@ Configuration of the service container then looks like this:
     .. code-block:: yaml
 
         # app/config/services.yml
-
         AppBundle\Email\NewsletterManager:
             class: AppBundle\Email\NewsletterManager
             # new syntax
@@ -189,7 +185,6 @@ example takes the ``templating`` service as an argument:
     .. code-block:: yaml
 
         # app/config/services.yml
-
         services:
             # ...
 
@@ -201,12 +196,11 @@ example takes the ``templating`` service as an argument:
     .. code-block:: xml
 
         <!-- app/config/services.xml -->
-
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
@@ -236,4 +230,4 @@ example takes the ``templating`` service as an argument:
             ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 855f64af91e900c702911b12c94f956d653fae29

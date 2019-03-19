@@ -135,12 +135,12 @@ You can use custom validators just as the ones provided by Symfony itself:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\AcmeEntity">
                 <property name="name">
-                    <constraint name="NotBlank" />
-                    <constraint name="AppBundle\Validator\Constraints\ContainsAlphanumeric" />
+                    <constraint name="NotBlank"/>
+                    <constraint name="AppBundle\Validator\Constraints\ContainsAlphanumeric"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -178,15 +178,15 @@ with the necessary ``validator.constraint_validator``. This means you can
 Class Constraint Validator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Beside validating a class property, a constraint can have a class scope by
-providing a target in its ``Constraint`` class::
+Besides validating a single property, a constraint can have an entire class
+as its scope. You only need to add this to the ``Constraint`` class::
 
     public function getTargets()
     {
         return self::CLASS_CONSTRAINT;
     }
 
-With this, the validator ``validate()`` method gets an object as its first argument::
+With this, the validator's ``validate()`` method gets an object as its first argument::
 
     class ProtocolClassValidator extends ConstraintValidator
     {
@@ -206,7 +206,7 @@ With this, the validator ``validate()`` method gets an object as its first argum
     associated to. Use any :doc:`valid PropertyAccess syntax </components/property_access>`
     to define that property.
 
-Note that a class constraint validator is applied to the class itself, and
+A class constraint validator is applied to the class itself, and
 not to the property:
 
 .. configuration-block::
@@ -214,7 +214,7 @@ not to the property:
     .. code-block:: php-annotations
 
         /**
-         * @AcmeAssert\ProtocolClassValidator
+         * @AcmeAssert\ProtocolClass
          */
         class AcmeEntity
         {
@@ -226,14 +226,14 @@ not to the property:
         # src/AppBundle/Resources/config/validation.yml
         AppBundle\Entity\AcmeEntity:
             constraints:
-                - AppBundle\Validator\Constraints\ProtocolClassValidator: ~
+                - AppBundle\Validator\Constraints\ProtocolClass: ~
 
     .. code-block:: xml
 
         <!-- src/AppBundle/Resources/config/validation.xml -->
         <class name="AppBundle\Entity\AcmeEntity">
-            <constraint name="AppBundle\Validator\Constraints\ProtocolClassValidator" />
+            <constraint name="AppBundle\Validator\Constraints\ProtocolClass"/>
         </class>
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: fa9139bf59e6bb4b1b608d86070c4d04125bcb91

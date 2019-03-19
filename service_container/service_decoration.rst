@@ -25,14 +25,14 @@ When overriding an existing definition, the original service is lost:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-            xsd:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsd:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="AppBundle\Mailer" />
+                <service id="AppBundle\Mailer"/>
 
                 <!-- this replaces the old AppBundle\Mailer definition with the new
                      one, the old definition is lost -->
-                <service id="AppBundle\Mailer" class="AppBundle\NewMailer" />
+                <service id="AppBundle\Mailer" class="AppBundle\NewMailer"/>
             </services>
         </container>
 
@@ -79,16 +79,16 @@ but keeps a reference of the old one as ``App\DecoratingMailer.inner``:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-            xsd:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsd:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="AppBundle\Mailer" />
+                <service id="AppBundle\Mailer"/>
 
                 <service id="AppBundle\DecoratingMailer"
                     decorates="AppBundle\Mailer"
                     public="false"
                 >
-                    <argument type="service" id="AppBundle\DecoratingMailer.inner" />
+                    <argument type="service" id="AppBundle\DecoratingMailer.inner"/>
                 </service>
 
             </services>
@@ -143,7 +143,7 @@ replaces the ``AppBundle\Mailer`` service. The old ``AppBundle\Mailer`` service 
             <?xml version="1.0" encoding="UTF-8" ?>
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
-                xsd:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+                xsd:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <services>
                     <!-- ... -->
@@ -154,7 +154,7 @@ replaces the ``AppBundle\Mailer`` service. The old ``AppBundle\Mailer`` service 
                         decoration-inner-name="AppBundle\DecoratingMailer.wooz"
                         public="false"
                     >
-                        <argument type="service" id="AppBundle\DecoratingMailer.wooz" />
+                        <argument type="service" id="AppBundle\DecoratingMailer.wooz"/>
                     </service>
 
                 </services>
@@ -205,17 +205,17 @@ the ``decoration_priority`` option. Its value is an integer that defaults to
 
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="Foo" />
+                <service id="Foo"/>
 
                 <service id="Bar" decorates="Foo" decoration-priority="5" public="false">
-                    <argument type="service" id="Bar.inner" />
+                    <argument type="service" id="Bar.inner"/>
                 </service>
 
                 <service id="Baz" decorates="Foo" decoration-priority="1" public="false">
-                    <argument type="service" id="Baz.inner" />
+                    <argument type="service" id="Baz.inner"/>
                 </service>
             </services>
         </container>
@@ -244,4 +244,4 @@ The generated code will be the following::
 .. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: 47e01adab0250bcee20f2e3391eb8a6e751c7121
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

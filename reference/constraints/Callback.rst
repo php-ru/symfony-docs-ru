@@ -66,7 +66,7 @@ Configuration
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <constraint name="Callback">validate</constraint>
@@ -189,7 +189,7 @@ You can then use the following configuration to invoke this validator:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <constraint name="Callback">
@@ -281,4 +281,4 @@ instance as the second argument.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 8bba58a33d8364839b0070a6bdddc8d3d6389305
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

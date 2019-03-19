@@ -25,7 +25,7 @@ to apply to all instances of a specific class:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
             <config>
                 <!-- ... -->
@@ -77,14 +77,14 @@ named encoders:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
 
             <config>
                 <!-- ... -->
                 <encoder class="harsh"
                     algorithm="bcrypt"
-                    cost="15" />
+                    cost="15"/>
             </config>
         </srv:container>
 
@@ -154,13 +154,13 @@ you must register a service for it in order to use it as a named encoder:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
 
             <config>
                 <!-- ... -->
                 <encoder class="app_encoder"
-                    id="app.password_encoder_service" />
+                    id="app.password_encoder_service"/>
             </config>
         </srv:container>
 
@@ -182,4 +182,4 @@ This creates an encoder named ``app_encoder`` from a service named
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

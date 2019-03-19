@@ -104,7 +104,7 @@ to a new validation group:
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="FOS\UserBundle\Model\User">
                 <property name="plainPassword">
@@ -140,4 +140,4 @@ can override the translations from any translation file, as long as it is in
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

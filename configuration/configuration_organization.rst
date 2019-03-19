@@ -126,14 +126,14 @@ needed for the ``app/config/dev/config.yml`` file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="../common/config.xml" />
-                <import resource="parameters.xml" />
-                <import resource="security.xml" />
+                <import resource="../common/config.xml"/>
+                <import resource="parameters.xml"/>
+                <import resource="security.xml"/>
             </imports>
 
             <!-- ... -->
@@ -237,15 +237,15 @@ format (``.yml``, ``.xml``, ``.php``, ``.ini``):
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="parameters.yml" />
-                <import resource="services.xml" />
-                <import resource="security.yml" />
-                <import resource="legacy.php" />
+                <import resource="parameters.yml"/>
+                <import resource="services.xml"/>
+                <import resource="security.yml"/>
+                <import resource="legacy.php"/>
             </imports>
 
             <!-- ... -->
@@ -301,13 +301,13 @@ any other configuration file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="parameters.yml" />
-                <import resource="/etc/sites/mysite.com/parameters.yml" />
+                <import resource="parameters.yml"/>
+                <import resource="/etc/sites/mysite.com/parameters.yml"/>
             </imports>
 
             <!-- ... -->
@@ -344,13 +344,13 @@ doesn't exist:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="parameters.yml" />
-                <import resource="/etc/sites/mysite.com/parameters.yml" ignore-errors="true" />
+                <import resource="parameters.yml"/>
+                <import resource="/etc/sites/mysite.com/parameters.yml" ignore-errors="true"/>
             </imports>
 
             <!-- ... -->
@@ -370,4 +370,4 @@ files. Don't feel limited by the Standard Edition that comes with Symfony. For e
 more customization, see ":doc:`/configuration/override_dir_structure`".
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -40,12 +40,12 @@ tags:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <!-- ... -->
                 <framework:config>
-                    <framework:fragment path="/_fragment" />
+                    <framework:fragment path="/_fragment"/>
                 </framework:config>
             </container>
 
@@ -78,12 +78,12 @@ in your application configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <!-- ... -->
             <framework:config>
-                <framework:templating hinclude-default-template="hinclude.html.twig" />
+                <framework:templating hinclude-default-template="hinclude.html.twig"/>
             </framework:config>
         </container>
 
@@ -117,4 +117,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

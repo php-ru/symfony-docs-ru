@@ -87,15 +87,15 @@ both services:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <defaults autowire="true" autoconfigure="true" public="false" />
+                <defaults autowire="true" autoconfigure="true" public="false"/>
                 <!-- ... -->
 
-                <service id="AppBundle\Service\TwitterClient" autowire="true" />
+                <service id="AppBundle\Service\TwitterClient" autowire="true"/>
 
-                <service id="AppBundle\Util\Rot13Transformer" autowire="true" />
+                <service id="AppBundle\Util\Rot13Transformer" autowire="true"/>
             </services>
         </container>
 
@@ -226,13 +226,13 @@ adding a service alias:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
-                <service id="app.rot13.transformer" class="AppBundle\Util\Rot13Transformer" autowire="true" />
-                <service id="AppBundle\Util\Rot13Transformer" alias="app.rot13.transformer" />
+                <service id="app.rot13.transformer" class="AppBundle\Util\Rot13Transformer" autowire="true"/>
+                <service id="AppBundle\Util\Rot13Transformer" alias="app.rot13.transformer"/>
             </services>
         </container>
 
@@ -319,13 +319,13 @@ To fix that, add an :ref:`alias <service-autowiring-alias>`:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
-                <service id="AppBundle\Util\Rot13Transformer" />
+                <service id="AppBundle\Util\Rot13Transformer"/>
 
-                <service id="AppBundle\Util\TransformerInterface" alias="AppBundle\Util\Rot13Transformer" />
+                <service id="AppBundle\Util\TransformerInterface" alias="AppBundle\Util\Rot13Transformer"/>
             </services>
         </container>
 
@@ -402,17 +402,17 @@ that alias:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
-                <service id="AppBundle\Util\Rot13Transformer" />
-                <service id="AppBundle\Util\UppercaseTransformer" />
+                <service id="AppBundle\Util\Rot13Transformer"/>
+                <service id="AppBundle\Util\UppercaseTransformer"/>
 
-                <service id="AppBundle\Util\TransformerInterface" alias="AppBundle\Util\Rot13Transformer" />
+                <service id="AppBundle\Util\TransformerInterface" alias="AppBundle\Util\Rot13Transformer"/>
 
                 <service id="AppBundle\Service\TwitterClient" autowire="true">
-                    <!-- <argument key="$transformer" type="service" id="AppBundle\Util\UppercaseTransformer" /> -->
+                    <!-- <argument key="$transformer" type="service" id="AppBundle\Util\UppercaseTransformer"/> -->
                 </service>
             </services>
         </container>
@@ -512,4 +512,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _service definition prototype: https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -45,7 +45,7 @@ To get started, configure the database connection parameters:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -120,14 +120,14 @@ mapping types, read Doctrine's `Custom Mapping Types`_ section of their document
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal>
-                    <doctrine:type name="custom_first" class="AppBundle\Type\CustomFirst" />
-                    <doctrine:type name="custom_second" class="AppBundle\Type\CustomSecond" />
+                    <doctrine:type name="custom_first" class="AppBundle\Type\CustomFirst"/>
+                    <doctrine:type name="custom_second" class="AppBundle\Type\CustomSecond"/>
                 </doctrine:dbal>
             </doctrine:config>
         </container>
@@ -174,7 +174,7 @@ mapping type:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -202,4 +202,4 @@ mapping type:
 .. _`Custom Mapping Types`: http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html#custom-mapping-types
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

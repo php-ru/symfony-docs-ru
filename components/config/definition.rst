@@ -295,8 +295,8 @@ Or the following XML configuration:
 
 .. code-block:: xml
 
-    <connection table="symfony" user="root" password="null" />
-    <connection table="foo" user="root" password="pa$$" />
+    <connection table="symfony" user="root" password="null"/>
+    <connection table="foo" user="root" password="pa$$"/>
 
 The processed configuration is::
 
@@ -364,9 +364,9 @@ same YAML configuration shown before or the following XML configuration:
 .. code-block:: xml
 
     <connection name="sf_connection"
-        table="symfony" user="root" password="null" />
+        table="symfony" user="root" password="null"/>
     <connection name="default"
-        table="foo" user="root" password="pa$$" />
+        table="foo" user="root" password="pa$$"/>
 
 In both cases, the processed configuration maintains the ``sf_connection`` and
 ``default`` keys::
@@ -490,7 +490,7 @@ and in XML:
 .. code-block:: xml
 
     <!-- entries-per-page: This value is only used for the search results page. -->
-    <config entries-per-page="25" />
+    <config entries-per-page="25"/>
 
 Optional Sections
 -----------------
@@ -830,4 +830,4 @@ Otherwise the result is a clean array of configuration values::
     );
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

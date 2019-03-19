@@ -67,7 +67,7 @@ Be aware that this encoder will consider keys beginning with ``@`` as attributes
     // will return:
     // <?xml version="1.0"?>
     // <response>
-    //     <foo bar="value" />
+    //     <foo bar="value"/>
     // </response>
 
 The ``YamlEncoder``
@@ -77,4 +77,4 @@ This encoder requires the :doc:`Yaml Component </components/yaml>` and
 transforms from and to Yaml.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

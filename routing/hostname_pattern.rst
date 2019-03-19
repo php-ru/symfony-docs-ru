@@ -52,7 +52,7 @@ You can also match on the HTTP *host* of the incoming request.
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="mobile_homepage" path="/" host="m.example.com">
                 <default key="_controller">AppBundle:Main:mobileHomepage</default>
@@ -134,7 +134,7 @@ you can use placeholders in your hostname:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="projects_homepage" path="/" host="{project_name}.example.com">
                 <default key="_controller">AppBundle:Main:projectsHomepage</default>
@@ -221,7 +221,7 @@ instance, if you want to match both ``m.example.com`` and
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="mobile_homepage" path="/" host="{subdomain}.example.com">
                 <default key="_controller">AppBundle:Main:mobileHomepage</default>
@@ -314,7 +314,7 @@ instance, if you want to match both ``m.example.com`` and
             <routes xmlns="http://symfony.com/schema/routing"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/routing
-                    http://symfony.com/schema/routing/routing-1.0.xsd">
+                    https://symfony.com/schema/routing/routing-1.0.xsd">
 
                 <route id="mobile_homepage" path="/" host="m.{domain}">
                     <default key="_controller">AppBundle:Main:mobileHomepage</default>
@@ -389,9 +389,9 @@ You can also set the host option on imported routes:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <import resource="@AppBundle/Resources/config/routing.xml" host="hello.example.com" />
+            <import resource="@AppBundle/Resources/config/routing.xml" host="hello.example.com"/>
         </routes>
 
     .. code-block:: php
@@ -419,4 +419,4 @@ past url matching in your functional tests::
     );
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -11,7 +11,7 @@ Starting from Symfony 2.8, Assetic is no longer included by default in the
 Symfony Standard Edition. Before using any of its features, install the
 AsseticBundle executing this console command in your project:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ composer require symfony/assetic-bundle
 
@@ -59,12 +59,12 @@ your application:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config debug="%kernel.debug%" use-controller="%kernel.debug%">
-                <assetic:filters cssrewrite="null" />
+                <assetic:filters cssrewrite="null"/>
             </assetic:config>
 
             <!-- ... -->
@@ -181,7 +181,7 @@ except with the ``stylesheets`` tag:
 .. code-block:: html+twig
 
     {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
+        <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
 .. note::
@@ -195,7 +195,7 @@ except with the ``stylesheets`` tag:
         {# ... #}
         {% block stylesheets %}
             {% stylesheets 'bundles/app/css/*' filter='cssrewrite' %}
-                <link rel="stylesheet" href="{{ asset_url }}" />
+                <link rel="stylesheet" href="{{ asset_url }}"/>
             {% endstylesheets %}
         {% endblock %}
         {# ... #}
@@ -223,7 +223,7 @@ To include an image you can use the ``image`` tag.
 .. code-block:: html+twig
 
     {% image '@AppBundle/Resources/public/images/example.jpg' %}
-        <img src="{{ asset_url }}" alt="Example" />
+        <img src="{{ asset_url }}" alt="Example"/>
     {% endimage %}
 
 You can also use Assetic for image optimization. More information in
@@ -323,7 +323,7 @@ configuration under the ``assetic`` section. Read more in the
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -404,14 +404,14 @@ should be defined:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
                     name="uglifyjs2"
-                    bin="/usr/local/bin/uglifyjs" />
+                    bin="/usr/local/bin/uglifyjs"/>
             </assetic:config>
         </container>
 
@@ -532,11 +532,11 @@ the following change in your ``config_dev.yml`` file:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
-            <assetic:config use-controller="false" />
+            <assetic:config use-controller="false"/>
         </container>
 
     .. code-block:: php
@@ -579,4 +579,4 @@ some isolated directory (e.g. ``/js/compiled``), to keep things organized:
 .. _`LiipImagineBundle`: https://github.com/liip/LiipImagineBundle
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -44,25 +44,25 @@ The main configuration file is called ``config.yml``:
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <imports>
-                <import resource="parameters.yml" />
-                <import resource="security.yml" />
-                <import resource="services.yml" />
+                <import resource="parameters.yml"/>
+                <import resource="security.yml"/>
+                <import resource="services.yml"/>
             </imports>
 
             <framework:config secret="%secret%">
-                <framework:router resource="%kernel.project_dir%/app/config/routing.xml" />
+                <framework:router resource="%kernel.project_dir%/app/config/routing.xml"/>
                 <!-- ... -->
             </framework:config>
 
             <!-- Twig Configuration -->
-            <twig:config debug="%kernel.debug%" strict-variables="%kernel.debug%" />
+            <twig:config debug="%kernel.debug%" strict-variables="%kernel.debug%"/>
 
             <!-- ... -->
         </container>
@@ -151,12 +151,12 @@ it *also* loads other configuration files via its ``imports`` key:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <imports>
-                <import resource="parameters.yml" />
-                <import resource="security.yml" />
-                <import resource="services.yml" />
+                <import resource="parameters.yml"/>
+                <import resource="security.yml"/>
+                <import resource="services.yml"/>
             </imports>
 
             <!-- ... -->
@@ -199,14 +199,14 @@ can also load XML files or PHP files.
                 xmlns:framework="http://symfony.com/schema/dic/symfony"
                 xmlns:twig="http://symfony.com/schema/dic/twig"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
                     http://symfony.com/schema/dic/symfony/symfony-1.0.xsd
                     http://symfony.com/schema/dic/twig
-                    http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                    https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
                 <imports>
-                    <import resource="parameters.res" type="yml" />
+                    <import resource="parameters.res" type="yml"/>
                     <!-- ... -->
                 </imports>
             </container>
@@ -253,7 +253,7 @@ key:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
@@ -333,7 +333,7 @@ configure DoctrineBundle and other parts of Symfony:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -342,7 +342,7 @@ configure DoctrineBundle and other parts of Symfony:
                     driver="pdo_mysql"
 
                     user="%database_user%"
-                    password="%database_password%" />
+                    password="%database_password%"/>
             </doctrine:config>
         </container>
 
@@ -430,4 +430,4 @@ Learn more
 .. _`Incenteev Parameter Handler`: https://github.com/Incenteev/ParameterHandler
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

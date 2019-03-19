@@ -48,13 +48,13 @@ to redirect it to :phpfunction:`error_log`:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
                 <!-- ... -->
-                <monolog:handler name="nested" type="error_log" />
+                <monolog:handler name="nested" type="error_log"/>
             </monolog:config>
         </container>
 
@@ -140,18 +140,18 @@ Make sure this file is imported into the main config file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
-                <import resource="config.xml" />
-                <import resource="config_prod_secrets.php" />
+                <import resource="config.xml"/>
+                <import resource="config_prod_secrets.php"/>
             </imports>
 
             <!-- .. -->
             <framework:config>
                 <!-- .. -->
-                <framework:session handler-id="null" />
+                <framework:session handler-id="null"/>
             </framework:config>
         </container>
 
@@ -284,4 +284,4 @@ documentation.
 .. _`Sign up`: https://dashboard.fortrabbit.com
 
 .. ready: no
-.. revision: 5b4e7f0f57221b6d92b3b8148ef00a880fc42e08
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

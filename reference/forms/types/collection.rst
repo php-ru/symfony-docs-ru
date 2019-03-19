@@ -111,8 +111,8 @@ your form):
 
 .. code-block:: html
 
-    <input type="email" id="form_emails_0" name="form[emails][0]" value="foo@foo.com" />
-    <input type="email" id="form_emails_1" name="form[emails][1]" value="bar@bar.com" />
+    <input type="email" id="form_emails_0" name="form[emails][0]" value="foo@foo.com"/>
+    <input type="email" id="form_emails_1" name="form[emails][1]" value="bar@bar.com"/>
 
 To allow your user to add another email, just set `allow_add`_ to ``true``
 and - via JavaScript - render another field with the name ``form[emails][2]``
@@ -371,9 +371,7 @@ prototype_data
 
 Allows you to define specific data for the prototype. Each new row added will
 initially contain the data set by this option. By default, the data configured
-for all entries with the `entry_options`_ option will be used.
-
-.. code-block:: php
+for all entries with the `entry_options`_ option will be used::
 
     use Symfony\Component\Form\Extension\Core\Type\CollectionType;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -443,4 +441,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

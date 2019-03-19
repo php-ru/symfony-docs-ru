@@ -143,7 +143,7 @@ view layer:
         {{ form_widget(form) }}
 
         <input type="submit" value="Create"
-               class="btn btn-default pull-right" />
+               class="btn btn-default pull-right"/>
     {{ form_end(form) }}
 
 Validation
@@ -238,4 +238,4 @@ is deprecated since version 3.2 and will throw an exception in 4.0.
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -29,12 +29,12 @@ directory. If you want to use another location to store the profiles, define the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:profiler dsn="file:/tmp/symfony/profiler" />
+                <framework:profiler dsn="file:/tmp/symfony/profiler"/>
             </framework:config>
         </container>
 
@@ -54,4 +54,4 @@ You can also create your own profile storage service implementing the
 overriding the ``profiler.storage`` service.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

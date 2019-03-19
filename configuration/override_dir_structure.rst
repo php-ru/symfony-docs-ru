@@ -114,9 +114,9 @@ define your own templates directory (or directories):
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:path>%kernel.project_dir%/templates</twig:path>
@@ -192,12 +192,12 @@ You also need to change the ``extra.symfony-web-dir`` option in the
                 xmlns:assetic="http://symfony.com/schema/dic/assetic"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/assetic
                     http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
                 <!-- ... -->
-                <assetic:config read-from="%kernel.project_dir%/../public_html" />
+                <assetic:config read-from="%kernel.project_dir%/../public_html"/>
 
             </container>
 
@@ -250,4 +250,4 @@ Then, update the path to the ``autoload.php`` file in ``app/autoload.php``::
     Vagrant/VirtualBox in a guest operating system.
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

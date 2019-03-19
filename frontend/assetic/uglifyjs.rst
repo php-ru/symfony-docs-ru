@@ -96,7 +96,7 @@ your JavaScripts:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -104,7 +104,7 @@ your JavaScripts:
                 <!-- bin: the path to the uglifyjs executable -->
                 <assetic:filter
                     name="uglifyjs2"
-                    bin="/usr/local/bin/uglifyjs" />
+                    bin="/usr/local/bin/uglifyjs"/>
             </assetic:config>
         </container>
 
@@ -164,7 +164,7 @@ can configure its location using the ``node`` key:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -172,7 +172,7 @@ can configure its location using the ``node`` key:
                 node="/usr/bin/nodejs" >
                 <assetic:filter
                     name="uglifyjs2"
-                    bin="/usr/local/bin/uglifyjs" />
+                    bin="/usr/local/bin/uglifyjs"/>
             </assetic:config>
         </container>
 
@@ -268,14 +268,14 @@ Next, add the configuration for this filter:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
                     name="uglifycss"
-                    bin="/usr/local/bin/uglifycss" />
+                    bin="/usr/local/bin/uglifycss"/>
             </assetic:config>
         </container>
 
@@ -296,7 +296,7 @@ helper:
 .. code-block:: html+twig
 
     {% stylesheets 'bundles/App/css/*' filter='uglifycss' filter='cssrewrite' %}
-         <link rel="stylesheet" href="{{ asset_url }}" />
+         <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
 Just like with the ``uglifyjs2`` filter, if you prefix the filter name with
@@ -310,4 +310,4 @@ not in debug mode.
 .. _`package.json`: http://browsenpm.org/package.json
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

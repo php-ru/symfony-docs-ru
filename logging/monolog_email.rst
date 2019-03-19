@@ -48,7 +48,7 @@ it is broken down.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
@@ -167,7 +167,7 @@ You can adjust the time period using the ``time`` option:
         <monolog:handler name="deduplicated"
             type="deduplication"
             time="10"
-            handler="swift" />
+            handler="swift"/>
 
     .. code-block:: php
 
@@ -180,7 +180,9 @@ You can adjust the time period using the ``time`` option:
                     // the time in seconds during which duplicate entries are discarded (default: 60)
                     'time' => 10,
                     'handler' => 'swift',
-                ]
+                ],
+            ],
+        ]);
 
 The messages are then passed to the ``swift`` handler. This is the handler that
 actually deals with emailing you the error. The settings for this are
@@ -212,12 +214,12 @@ get logged on the server as well as the emails being sent:
                     type:    deduplication
                     handler: swift
                 swift:
-                    type:       swift_mailer
-                    from_email: 'error@example.com'
-                    to_email:   'error@example.com'
-                    subject:    'An Error Occurred! %%message%%'
-                    level:      debug
-                    formatter:  monolog.formatter.html
+                    type:         swift_mailer
+                    from_email:   'error@example.com'
+                    to_email:     'error@example.com'
+                    subject:      'An Error Occurred! %%message%%'
+                    level:        debug
+                    formatter:    monolog.formatter.html
                     content_type: text/html
 
     .. code-block:: xml
@@ -227,7 +229,7 @@ get logged on the server as well as the emails being sent:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
@@ -319,4 +321,4 @@ now be both written to the log file and emailed.
 .. _Monolog: https://github.com/Seldaek/monolog
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

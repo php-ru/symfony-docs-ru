@@ -34,7 +34,7 @@ An example configuration might look like this:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -129,7 +129,7 @@ In this case you can specify that the ``coffee`` filter is applied to all
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
@@ -174,4 +174,4 @@ files being run through the CoffeeScript filter):
 
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

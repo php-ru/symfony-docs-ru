@@ -497,7 +497,7 @@ you will learn about next!).
                     <!-- ... -->
                     <one-to-many field="tags" target-entity="Tag">
                         <cascade>
-                            <cascade-persist />
+                            <cascade-persist/>
                         </cascade>
                     </one-to-many>
                 </entity>
@@ -720,4 +720,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

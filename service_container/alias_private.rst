@@ -43,10 +43,10 @@ You can also control the ``public`` option on a service-by-service basis:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="AppBundle\Service\Foo" public="false" />
+                <service id="AppBundle\Service\Foo" public="false"/>
             </services>
         </container>
 
@@ -111,12 +111,12 @@ services.
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <service id="AppBundle\Mail\PhpMailer" public="false" />
+                <service id="AppBundle\Mail\PhpMailer" public="false"/>
 
-                <service id="app.mailer" alias="AppBundle\Mail\PhpMailer" />
+                <service id="app.mailer" alias="AppBundle\Mail\PhpMailer"/>
             </services>
         </container>
 
@@ -183,14 +183,14 @@ The following example shows how to inject an anonymous service into another serv
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <defaults autowire="true" />
+                <defaults autowire="true"/>
 
                 <service id="foo" class="AppBundle\Foo">
                     <argument type="service">
-                        <service class="AppBundle\AnonymousBar" />
+                        <service class="AppBundle\AnonymousBar"/>
                     </argument>
                 </service>
             </services>
@@ -217,10 +217,10 @@ Using an anonymous service as a factory looks like this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <defaults autowire="true" />
+                <defaults autowire="true"/>
 
                 <service id="foo" class="AppBundle\Foo">
                     <factory method="constructFoo">
@@ -248,7 +248,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Service\OldService">
@@ -294,4 +294,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

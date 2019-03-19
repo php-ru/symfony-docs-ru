@@ -53,7 +53,7 @@ property is not empty, add the following:
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="name">
@@ -119,4 +119,4 @@ You may need to clear your cache (even in the dev environment) after creating th
 file for the first time.
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

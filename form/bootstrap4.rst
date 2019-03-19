@@ -42,9 +42,9 @@ configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:form-theme>bootstrap_4_layout.html.twig</twig:form-theme>
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

@@ -226,7 +226,7 @@ This results in:
         $table->setHeaders([
             [new TableCell('Main table title', ['colspan' => 3])],
             ['ISBN', 'Title', 'Author'],
-        ))
+        ])
         // ...
 
     This generates:
@@ -275,4 +275,4 @@ You can use the ``colspan`` and ``rowspan`` options at the same time which allow
 you to create any table layout you may wish.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

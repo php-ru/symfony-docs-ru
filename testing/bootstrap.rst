@@ -44,7 +44,7 @@ cache to be cleared:
         <!-- ... -->
 
         <php>
-            <env name="BOOTSTRAP_CLEAR_CACHE_ENV" value="test" />
+            <env name="BOOTSTRAP_CLEAR_CACHE_ENV" value="test"/>
         </php>
     </phpunit>
 
@@ -52,4 +52,4 @@ This now becomes an environment variable (i.e. ``$_ENV``) that's available
 in the custom bootstrap file (``tests/bootstrap.php``).
 
 .. ready: no
-.. revision: 99234ea381c408f78aa246c42aef7b1aa467d13c
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

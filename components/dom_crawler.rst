@@ -231,16 +231,16 @@ Adding the Content
 
 The crawler supports multiple ways of adding the content::
 
-    $crawler = new Crawler('<html><body /></html>');
+    $crawler = new Crawler('<html><body/></html>');
 
-    $crawler->addHtmlContent('<html><body /></html>');
-    $crawler->addXmlContent('<root><node /></root>');
+    $crawler->addHtmlContent('<html><body/></html>');
+    $crawler->addXmlContent('<root><node/></root>');
 
-    $crawler->addContent('<html><body /></html>');
-    $crawler->addContent('<root><node /></root>', 'text/xml');
+    $crawler->addContent('<html><body/></html>');
+    $crawler->addContent('<root><node/></root>', 'text/xml');
 
-    $crawler->add('<html><body /></html>');
-    $crawler->add('<root><node /></root>');
+    $crawler->add('<html><body/></html>');
+    $crawler->add('<root><node/></root>');
 
 .. note::
 
@@ -264,7 +264,7 @@ to interact with native :phpclass:`DOMDocument`, :phpclass:`DOMNodeList`
 and :phpclass:`DOMNode` objects::
 
     $domDocument = new \DOMDocument();
-    $domDocument->loadXml('<root><node /><node /></root>');
+    $domDocument->loadXml('<root><node/><node/></root>');
     $nodeList = $domDocument->getElementsByTagName('node');
     $node = $domDocument->getElementsByTagName('node')->item(0);
 
@@ -469,9 +469,9 @@ You can virtually set and get values on the form::
 To work with multi-dimensional fields::
 
     <form>
-        <input name="multi[]" />
-        <input name="multi[]" />
-        <input name="multi[dimensional]" />
+        <input name="multi[]"/>
+        <input name="multi[]"/>
+        <input name="multi[dimensional]"/>
     </form>
 
 Pass an array of values::
@@ -569,4 +569,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -36,12 +36,12 @@ file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:csrf-protection enabled="true" />
+                <framework:csrf-protection enabled="true"/>
             </framework:config>
         </container>
 
@@ -78,14 +78,14 @@ use the default provider available in the security component:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="secured_area">
                     <!-- ... -->
-                    <form-login csrf-token-generator="security.csrf.token_manager" />
+                    <form-login csrf-token-generator="security.csrf.token_manager"/>
                 </firewall>
             </config>
         </srv:container>
@@ -174,7 +174,7 @@ After this, you have protected your login form against CSRF attacks.
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:srv="http://symfony.com/schema/dic/services"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <config>
                     <!-- ... -->
@@ -210,4 +210,4 @@ After this, you have protected your login form against CSRF attacks.
 .. _`Forging Login Requests`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

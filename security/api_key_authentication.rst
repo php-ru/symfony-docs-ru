@@ -316,18 +316,18 @@ and ``provider`` keys:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
-                <provider name="api_key_user_provider" id="AppBundle\Security\ApiKeyUserProvider" />
+                <provider name="api_key_user_provider" id="AppBundle\Security\ApiKeyUserProvider"/>
 
                 <firewall name="main"
                     pattern="^/api"
                     stateless="true"
                     provider="api_key_user_provider"
                 >
-                    <simple-preauth authenticator="AppBundle\Security\ApiKeyAuthenticator" />
+                    <simple-preauth authenticator="AppBundle\Security\ApiKeyAuthenticator"/>
                 </firewall>
             </config>
         </srv:container>
@@ -379,9 +379,9 @@ If you have defined ``access_control``, make sure to add a new entry:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
-                <rule path="^/api" role="ROLE_API" />
+                <rule path="^/api" role="ROLE_API"/>
             </config>
         </srv:container>
 
@@ -441,7 +441,7 @@ configuration or set it to ``false``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
             <config>
                 <!-- ... -->
 
@@ -608,4 +608,4 @@ current URL is before creating the token in ``createToken()``::
 That's it! Have fun!
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

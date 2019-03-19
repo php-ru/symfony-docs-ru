@@ -17,7 +17,7 @@ A Single-File Symfony Application
 Start with a completely empty directory. Get ``symfony/symfony`` as a dependency
 via Composer:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ composer require symfony/symfony
 
@@ -76,7 +76,7 @@ Next, create an ``index.php`` file that creates a kernel class and executes it::
 
 That's it! To test it, you can start the built-in web server:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     $ php -S localhost:8000
 
@@ -229,14 +229,14 @@ because the configuration started to get bigger:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config secret="S0ME_SECRET">
                 <framework:templating>
                     <framework:engine>twig</framework:engine>
                 </framework:templating>
-                <framework:profiler only-exceptions="false" />
+                <framework:profiler only-exceptions="false"/>
             </framework:config>
         </container>
 
@@ -339,7 +339,7 @@ this:
 
 As before you can use PHP built-in server:
 
-.. code-block:: bash
+.. code-block:: terminal
 
     cd web/
     $ php -S localhost:8000
@@ -353,4 +353,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features with less boilerplate configuration and code.
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

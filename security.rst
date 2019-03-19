@@ -64,19 +64,19 @@ configuration looks like this:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <provider name="in_memory">
-                    <memory />
+                    <memory/>
                 </provider>
 
                 <firewall name="dev"
                     pattern="^/(_(profiler|wdt)|css|images|js)/"
-                    security="false" />
+                    security="false"/>
 
                 <firewall name="main">
-                    <anonymous />
+                    <anonymous/>
                 </firewall>
             </config>
         </srv:container>
@@ -161,14 +161,14 @@ To activate this, add the ``http_basic`` key under your firewall:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
-                    <anonymous />
-                    <http-basic />
+                    <anonymous/>
+                    <http-basic/>
                 </firewall>
             </config>
         </srv:container>
@@ -236,7 +236,7 @@ user to be logged in to access this URL:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -246,7 +246,7 @@ user to be logged in to access this URL:
                 </firewall>
 
                 <!-- require ROLE_ADMIN for /admin* -->
-                <rule path="^/admin" role="ROLE_ADMIN" />
+                <rule path="^/admin" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -334,13 +334,13 @@ provider, but it's better to think of it as an "in configuration" provider:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <provider name="in_memory">
                     <memory>
-                        <user name="ryan" password="ryanpass" roles="ROLE_USER" />
-                        <user name="admin" password="kitten" roles="ROLE_ADMIN" />
+                        <user name="ryan" password="ryanpass" roles="ROLE_USER"/>
+                        <user name="admin" password="kitten" roles="ROLE_ADMIN"/>
                     </memory>
                 </provider>
                 <!-- ... -->
@@ -407,13 +407,13 @@ To fix this, add an ``encoders`` key:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <encoder class="Symfony\Component\Security\Core\User\User"
-                    algorithm="plaintext" />
+                    algorithm="plaintext"/>
                 <!-- ... -->
             </config>
         </srv:container>
@@ -486,14 +486,14 @@ is ``bcrypt``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <encoder class="Symfony\Component\Security\Core\User\User"
                     algorithm="bcrypt"
-                    cost="12" />
+                    cost="12"/>
 
                 <!-- ... -->
             </config>
@@ -550,15 +550,15 @@ It will give you something like this:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <provider name="in_memory">
                     <memory>
-                        <user name="ryan" password="$2a$12$LCY0MefVIEc3TYPHV9SNnuzOfyr2p/AXIGoQJEDs4am4JwhNz/jli" roles="ROLE_USER" />
-                        <user name="admin" password="$2a$12$cyTWeE9kpq1PjqKFiWUZFuCRPwVyAZwm4XzMZ1qPUFl7/flCM3V0G" roles="ROLE_ADMIN" />
+                        <user name="ryan" password="$2a$12$LCY0MefVIEc3TYPHV9SNnuzOfyr2p/AXIGoQJEDs4am4JwhNz/jli" roles="ROLE_USER"/>
+                        <user name="admin" password="$2a$12$cyTWeE9kpq1PjqKFiWUZFuCRPwVyAZwm4XzMZ1qPUFl7/flCM3V0G" roles="ROLE_ADMIN"/>
                     </memory>
                 </provider>
             </config>
@@ -723,7 +723,7 @@ URL pattern. You saw this earlier, where anything matching the regular expressio
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -733,7 +733,7 @@ URL pattern. You saw this earlier, where anything matching the regular expressio
                 </firewall>
 
                 <!-- require ROLE_ADMIN for /admin* -->
-                <rule path="^/admin" role="ROLE_ADMIN" />
+                <rule path="^/admin" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -784,13 +784,13 @@ matches the URL.
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
-                <rule path="^/admin/users" role="ROLE_SUPER_ADMIN" />
-                <rule path="^/admin" role="ROLE_ADMIN" />
+                <rule path="^/admin/users" role="ROLE_SUPER_ADMIN"/>
+                <rule path="^/admin" role="ROLE_ADMIN"/>
             </config>
         </srv:container>
 
@@ -1119,14 +1119,14 @@ the firewall can handle this automatically for you when you activate the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="secured_area">
                     <!-- ... -->
-                    <logout path="/logout" target="/" />
+                    <logout path="/logout" target="/"/>
                 </firewall>
             </config>
         </srv:container>
@@ -1162,9 +1162,9 @@ Next, you'll need to create a route for this URL (but not a controller):
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="logout" path="/logout" />
+            <route id="logout" path="/logout"/>
         </routes>
 
     ..  code-block:: php
@@ -1220,7 +1220,7 @@ rules by creating a role hierarchy:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -1329,4 +1329,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony3-security
 
 .. ready: no
-.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

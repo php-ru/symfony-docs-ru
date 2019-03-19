@@ -19,10 +19,10 @@
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <imports>
-                    <import resource="%kernel.project_dir%/app/parameters.yml" />
+                    <import resource="%kernel.project_dir%/app/parameters.yml"/>
                 </imports>
             </container>
 
@@ -30,3 +30,6 @@
 
             // app/config/config.php
             $loader->import('%kernel.project_dir%/app/parameters.yml');
+
+.. ready: no
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

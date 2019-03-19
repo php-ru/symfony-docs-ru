@@ -268,7 +268,7 @@ config files:
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <!-- ... -->
@@ -282,7 +282,7 @@ config files:
 
                 <service id="newsletter_manager" class="NewsletterManager">
                     <call method="setMailer">
-                        <argument type="service" id="mailer" />
+                        <argument type="service" id="mailer"/>
                     </call>
                 </service>
             </services>
@@ -316,4 +316,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/dependency-injection
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

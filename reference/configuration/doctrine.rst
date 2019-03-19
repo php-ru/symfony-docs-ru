@@ -78,7 +78,7 @@ The following block shows all possible configuration keys:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -330,11 +330,11 @@ directory instead:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:orm auto-mapping="true">
-                    <mapping name="AppBundle" dir="SomeResources/config/doctrine" type="xml" />
+                    <mapping name="AppBundle" dir="SomeResources/config/doctrine" type="xml"/>
                 </doctrine:orm>
             </doctrine:config>
         </container>
@@ -383,7 +383,7 @@ namespace in the ``src/Entity`` directory and gives them an ``App`` alias
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:orm>
@@ -450,4 +450,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

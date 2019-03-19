@@ -4,7 +4,7 @@
 SearchType Field
 ================
 
-This renders an ``<input type="search" />`` field, which is a text box with
+This renders an ``<input type="search"/>`` field, which is a text box with
 special functionality supported by some browsers.
 
 Read about the input search field at `DiveIntoHTML5.info`_
@@ -62,4 +62,4 @@ The default value is ``''`` (the empty string).
 .. _`DiveIntoHTML5.info`: http://diveintohtml5.info/forms.html#type-search
 
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

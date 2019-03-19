@@ -47,9 +47,9 @@ and complete the configuration with the provided ``username`` and ``password``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/swiftmailer
-                http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+                https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
             <!-- ... -->
             <swiftmailer:config
@@ -120,4 +120,4 @@ And that's it, you're ready to start sending emails through the cloud!
 .. _`Amazon Web Services (AWS)`: http://aws.amazon.com
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

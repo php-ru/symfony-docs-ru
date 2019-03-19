@@ -73,7 +73,7 @@ and "50", you might add the following:
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Participant">
                 <property name="firstName">
@@ -223,4 +223,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_groups-option.rst.inc
 
 .. ready: no
-.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

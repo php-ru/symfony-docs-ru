@@ -69,9 +69,9 @@ Platform.sh how to deploy your application (read more about
     hooks:
         build: |
           rm web/app_dev.php
-          bin/console --env=prod assetic:dump --no-debug
+          php bin/console --env=prod assetic:dump --no-debug
         deploy: |
-          bin/console --env=prod cache:clear
+          php bin/console --env=prod cache:clear
 
 For best practices, you should also add a ``.platform`` folder at the root of
 your Git repository which contains the following files:
@@ -196,4 +196,4 @@ soon be able to see it in your browser.
 .. _`migrating your database and files`: https://docs.platform.sh/tutorials/migrating.html
 
 .. ready: no
-.. revision: ab9e665a24b4d97a1bba895500f2afa72bccd187
+.. revision: a8afae4d48b915c6250854569f9287e85d8ba0b5

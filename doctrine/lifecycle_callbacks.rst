@@ -63,7 +63,7 @@ the current date, only when the entity is first persisted (i.e. inserted):
             <entity name="AppBundle\Entity\Product">
                 <!-- ... -->
                 <lifecycle-callbacks>
-                    <lifecycle-callback type="prePersist" method="setCreatedAtValue" />
+                    <lifecycle-callback type="prePersist" method="setCreatedAtValue"/>
                 </lifecycle-callbacks>
             </entity>
         </doctrine-mapping>
@@ -96,4 +96,4 @@ Doctrine's `Lifecycle Events documentation`_.
 .. _`Lifecycle Events documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html#lifecycle-events
 
 .. ready: no
-.. revision: a504f7f6e5233b66a8e9082aef7f739d37fc8a33
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

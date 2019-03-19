@@ -53,7 +53,7 @@ a more permissive regular expression for it:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="share" path="/share/{token}">
                 <default key="_controller">AppBundle:Default:share</default>
@@ -95,4 +95,4 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     and the token, and ``token`` will be empty.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

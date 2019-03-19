@@ -122,13 +122,13 @@ The above would be the equivalent of writing the following into the
             xmlns:acme-something="http://example.org/schema/dic/acme_something"
             xmlns:acme-other="http://example.org/schema/dic/acme_other"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <acme-something:config use-acme-goodbye="false">
                 <acme-something:entity-manager-name>non_default</acme-something:entity-manager-name>
             </acme-something:config>
 
-            <acme-other:config use-acme-goodbye="false" />
+            <acme-other:config use-acme-goodbye="false"/>
 
         </container>
 
@@ -153,4 +153,4 @@ the same key, the bundle that is registered **first** will take priority:
 next bundles won't override this specific config setting.
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

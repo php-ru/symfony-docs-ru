@@ -5,7 +5,7 @@ EmailType Field
 ===============
 
 The ``EmailType`` field is a text field that is rendered using the HTML5
-``<input type="email" />`` tag.
+``<input type="email"/>`` tag.
 
 +-------------+---------------------------------------------------------------------+
 | Rendered as | ``input`` ``email`` field (a text box)                              |
@@ -61,4 +61,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: f8b560d92f5d89d6e72c65658cc67a189abefc9e
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

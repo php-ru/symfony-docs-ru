@@ -43,19 +43,19 @@ This can be done by importing routing resources from the main routing file:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <!-- loads routes from the given routing file stored in some bundle -->
-            <import resource="@AcmeOtherBundle/Resources/config/routing.yml" />
+            <import resource="@AcmeOtherBundle/Resources/config/routing.yml"/>
 
             <!-- loads routes from the PHP annotations of the controllers found in that directory -->
-            <import resource="@AppBundle/Controller/" type="annotation" />
+            <import resource="@AppBundle/Controller/" type="annotation"/>
 
             <!-- loads routes from the YAML or XML files found in that directory -->
-            <import resource="../legacy/routing/" type="directory" />
+            <import resource="../legacy/routing/" type="directory"/>
 
             <!-- loads routes from the YAML or XML files found in some bundle directory -->
-            <import resource="@AppBundle/Resources/config/routing/public/" type="directory" />
+            <import resource="@AppBundle/Resources/config/routing/public/" type="directory"/>
         </routes>
 
     .. code-block:: php
@@ -123,12 +123,12 @@ suppose you want to prefix all routes in the AppBundle with ``/site`` (e.g.
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <import
                 resource="@AppBundle/Controller/"
                 type="annotation"
-                prefix="/site" />
+                prefix="/site"/>
         </routes>
 
     .. code-block:: php
@@ -190,4 +190,4 @@ You can set the host regex on imported routes. For more information, see
 :ref:`component-routing-host-imported`.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

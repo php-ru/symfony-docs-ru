@@ -85,13 +85,11 @@ options are buried in the business logic of your code. Use the
         }
     }
 
-Now all four options are guaranteed to be set. But what happens if the user of
-the ``Mailer`` class makes a mistake?
-
-.. code-block:: php
+Now all four options are guaranteed to be set, but you could still make an error
+like the following when using the ``Mailer`` class::
 
     $mailer = new Mailer([
-        'usernme' => 'johndoe',  // usernme misspelled (instead of username)
+        'usernme' => 'johndoe',  // 'username' is wrongly spelled as 'usernme'
     ]);
 
 No error will be shown. In the best case, the bug will appear during testing,
@@ -701,4 +699,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d65b6e0d09630bb29edd0a52bcb363b6039d982b

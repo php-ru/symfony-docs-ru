@@ -41,7 +41,7 @@ the available blog posts for this imaginary blog application:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="blog" path="/blog">
                 <default key="_controller">AppBundle:Blog:index</default>
@@ -96,7 +96,7 @@ entries? Update the route to have a new ``{page}`` placeholder:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="blog" path="/blog/{page}">
                 <default key="_controller">AppBundle:Blog:index</default>
@@ -156,7 +156,7 @@ This is done by including it in the ``defaults`` collection:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="blog" path="/blog/{page}">
                 <default key="_controller">AppBundle:Blog:index</default>
@@ -204,4 +204,4 @@ URL          Route     Parameters
     with a trailing slash (i.e. ``/blog/`` will not match, ``/blog`` will match).
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

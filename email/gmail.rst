@@ -29,9 +29,9 @@ In the development configuration file, change the ``transport`` setting to
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/swiftmailer
-                http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+                https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
             <!-- ... -->
             <swiftmailer:config
@@ -81,9 +81,9 @@ In the development configuration file, change the ``transport`` setting to
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/swiftmailer
-                    http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+                    https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
                 <!-- ... -->
                 <swiftmailer:config
@@ -133,4 +133,4 @@ that you `allow less secure apps to access your Gmail account`_.
 .. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

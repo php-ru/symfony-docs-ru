@@ -53,7 +53,7 @@ parameters key:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="tokens" type="collection">
@@ -241,4 +241,4 @@ And by storing a value in the request's "attributes" bag, the ``onKernelResponse
 method knows to add the extra header. Have fun!
 
 .. ready: no
-.. revision: a0d0c8356e7b674b94a170083bfa4c8d11da0fbd
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

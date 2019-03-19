@@ -37,7 +37,7 @@ to another service: ``AppBundle\Mailer``. One way to do this is with an expressi
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
@@ -88,7 +88,7 @@ via a ``container`` variable. Here's another example:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Mailer">
@@ -111,4 +111,4 @@ Expressions can be used in ``arguments``, ``properties``, as arguments with
 ``configurator`` and as arguments to ``calls`` (method calls).
 
 .. ready: no
-.. revision: a26813572c1f246c23347eaf97c8c521cc47d4df
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

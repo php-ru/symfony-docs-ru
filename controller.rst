@@ -186,7 +186,7 @@ and ``redirect()`` methods::
         // redirects to a route with parameters
         return $this->redirectToRoute('blog_show', ['slug' => 'my-page']);
 
-        // redirects to a route and mantains the original query string parameters
+        // redirects to a route and maintains the original query string parameters
         return $this->redirectToRoute('blog_show', $request->query->all());
 
         // redirects externally
@@ -306,7 +306,7 @@ the argument by its name:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
@@ -750,4 +750,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 36b3ff4d137ded7fb31a5202a0a25e618c94bb5b
+.. revision: dfd369922fa1c21d101414bcd881bde6e661ad14

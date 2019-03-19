@@ -125,7 +125,7 @@ to write logs using the :phpfunction:`syslog` function:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
@@ -204,7 +204,7 @@ one of the messages reaches an ``action_level``. Take this example:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
@@ -248,7 +248,7 @@ one of the messages reaches an ``action_level``. Take this example:
                     'type'  => 'syslog',
                     'level' => 'error',
                 ],
-            ),
+            ],
         ]);
 
 Now, if even one log entry has an ``error`` level or higher, then *all* log entries
@@ -310,7 +310,7 @@ option of your handler to ``rotating_file``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
@@ -377,4 +377,4 @@ Learn more
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php#L25
 
 .. ready: no
-.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

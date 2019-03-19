@@ -365,7 +365,7 @@ done by using a public ``vars`` property on the
 | ``label_attr``         | A key-value array that will be rendered as HTML attributes on the label.            |
 +------------------------+-------------------------------------------------------------------------------------+
 | ``compound``           | Whether or not a field is actually a holder for a group of children fields          |
-|                        | (for example, a ``choice`` field, which is actually a group of checkboxes.          |
+|                        | (for example, a ``choice`` field, which is actually a group of checkboxes).         |
 +------------------------+-------------------------------------------------------------------------------------+
 | ``block_prefixes``     | An array of all the names of the parent types.                                      |
 +------------------------+-------------------------------------------------------------------------------------+
@@ -384,4 +384,4 @@ done by using a public ``vars`` property on the
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: 451d44b3d4d92a5ef1fdee7719353ccff90855b1
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

@@ -829,7 +829,7 @@ Here, we set it to 2 for the ``$child`` property:
                 http://symfony.com/schema/dic/serializer-mapping/serializer-mapping-1.0.xsd"
         >
             <class name="Acme\MyObj">
-                <attribute name="child" max-depth="2" />
+                <attribute name="child" max-depth="2"/>
             </class>
         </serializer>
 
@@ -883,9 +883,7 @@ If you want to deserialize such a structure, you need to add the
 :class:`Symfony\\Component\\Serializer\\Normalizer\\ArrayDenormalizer`
 to the set of normalizers. By appending ``[]`` to the type parameter of the
 :method:`Symfony\\Component\\Serializer\\Serializer::deserialize` method,
-you indicate that you're expecting an array instead of a single object.
-
-.. code-block:: php
+you indicate that you're expecting an array instead of a single object::
 
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
     use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
@@ -926,7 +924,7 @@ The array keys beginning with ``@`` are considered XML attributes::
     // is encoded as follows:
     // <?xml version="1.0"?>
     // <response>
-    //     <foo bar="value" />
+    //     <foo bar="value"/>
     // </response>
 
 Use the special ``#`` key to define the data of a node::
@@ -1063,4 +1061,4 @@ Learn more
 .. _CSV: https://tools.ietf.org/html/rfc4180
 
 .. ready: no
-.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

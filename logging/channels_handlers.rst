@@ -54,7 +54,7 @@ in all environments, or just ``config_prod.yml`` to happen only in ``prod``:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
@@ -149,7 +149,7 @@ You can also configure additional channels without the need to tag your services
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:monolog="http://symfony.com/schema/dic/monolog"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
                 http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
@@ -175,4 +175,4 @@ inject this service into others, you must update the service configuration to
 :ref:`choose the specific service to inject <services-wire-specific-service>`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

@@ -45,6 +45,7 @@ random) number and prints it. To do that, create a "Controller class" and a
 "controller" method inside of it that will be executed when someone goes to
 ``/lucky/number``::
 
+    <?php
     // src/AppBundle/Controller/LuckyController.php
     namespace AppBundle\Controller;
 
@@ -268,4 +269,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Joyful Development with Symfony`: https://symfonycasts.com/screencast/symfony3
 
 .. ready: no
-.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31
+.. revision: 4c3a0d040cb86963b4474e4e0c389a172506538c

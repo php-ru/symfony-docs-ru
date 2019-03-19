@@ -39,11 +39,11 @@ swiftmailer with the memory option, use the following configuration:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/swiftmailer http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/swiftmailer https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
             <swiftmailer:config>
-                <swiftmailer:spool type="memory" />
+                <swiftmailer:spool type="memory"/>
             </swiftmailer:config>
         </container>
 
@@ -86,8 +86,8 @@ In order to use the spool with files, use the following configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:swiftmailer="http://symfony.com/schema/dic/swiftmailer"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/swiftmailer http://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd
+                http://symfony.com/schema/dic/swiftmailer https://symfony.com/schema/dic/swiftmailer/swiftmailer-1.0.xsd">
 
             <swiftmailer:config>
                 <swiftmailer:spool
@@ -162,4 +162,4 @@ at a regular interval.
     ``swiftmailer`` service without the ``lazy`` option (see :doc:`/service_container/lazy_services`).
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

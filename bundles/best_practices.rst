@@ -265,11 +265,8 @@ following standardized instructions in your ``README.md`` file.
         -------------------------
 
         Then, enable the bundle by adding it to the list of registered bundles
-        in the ``app/AppKernel.php`` file of your project:
+        in the ``app/AppKernel.php`` file of your project::
 
-        .. code-block:: php
-
-            <?php
             // app/AppKernel.php
 
             // ...
@@ -352,7 +349,7 @@ The end user can provide values in any configuration file:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <parameters>
                 <parameter key="acme_blog.author.email">fabien@example.com</parameter>
@@ -457,4 +454,4 @@ Learn more
 .. _`valid license identifier`: https://spdx.org/licenses/
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: ffabe9027c8851e165b64637d8cca314c7dc88f8

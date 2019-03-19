@@ -72,11 +72,11 @@ following:
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="name">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                 </property>
             </class>
         </constraint-mapping>
@@ -214,11 +214,11 @@ file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:validation enabled="true" />
+                <framework:validation enabled="true"/>
             </framework:config>
         </container>
 
@@ -250,11 +250,11 @@ previous configuration by the following:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:validation enable-annotations="true" />
+                <framework:validation enable-annotations="true"/>
             </framework:config>
         </container>
 
@@ -348,7 +348,7 @@ literature genre mostly associated with the author, which can be set to either
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="genre">
@@ -432,7 +432,7 @@ options can be specified in this way.
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="genre">
@@ -488,7 +488,7 @@ of the form fields::
             ->add('myField', TextType::class, [
                 'required' => true,
                 'constraints' => [new Length(['min' => 3])]
-            ))
+            ])
         ;
     }
 
@@ -554,11 +554,11 @@ class to have at least 3 characters.
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <property name="firstName">
-                    <constraint name="NotBlank" />
+                    <constraint name="NotBlank"/>
                     <constraint name="Length">
                         <option name="min">3</option>
                     </constraint>
@@ -640,7 +640,7 @@ this method must return ``true``:
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Author">
                 <getter property="passwordSafe">
@@ -717,4 +717,4 @@ Learn more
 .. _JSR303 Bean Validation specification: http://jcp.org/en/jsr/detail?id=303
 
 .. ready: no
-.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

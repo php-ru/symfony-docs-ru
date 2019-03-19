@@ -208,12 +208,12 @@ to the list of providers in the "security" section. Choose a name for the user p
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
-                <provider name="webservice" id="AppBundle\Security\User\WebserviceUserProvider" />
+                <provider name="webservice" id="AppBundle\Security\User\WebserviceUserProvider"/>
             </config>
         </srv:container>
 
@@ -255,13 +255,13 @@ users, e.g. by filling in a login form. You can do this by adding a line to the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <encoder class="AppBundle\Security\User\WebserviceUser"
-                    algorithm="bcrypt" />
+                    algorithm="bcrypt"/>
             </config>
         </srv:container>
 
@@ -325,14 +325,14 @@ is compared to the hashed password returned by your ``getPassword()`` method.
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:srv="http://symfony.com/schema/dic/services"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <config>
                     <!-- ... -->
 
                     <encoder class="AppBundle\Security\User\WebserviceUser"
                         algorithm="bcrypt"
-                        cost="12" />
+                        cost="12"/>
                 </config>
             </srv:container>
 
@@ -355,4 +355,4 @@ is compared to the hashed password returned by your ``getPassword()`` method.
 .. _MessageDigestPasswordEncoder: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -133,7 +133,7 @@ After creating the strategy PHP class, register it as a Symfony service.
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd"
+                https://symfony.com/schema/dic/services/services-1.0.xsd"
         >
             <services>
                 <service id="AppBundle\Asset\VersionStrategy\GulpBusterVersionStrategy" public="false">
@@ -178,11 +178,11 @@ the :ref:`version_strategy <reference-assets-version-strategy>` option:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
-                <framework:assets version-strategy="AppBundle\Asset\VersionStrategy\GulpBusterVersionStrategy" />
+                <framework:assets version-strategy="AppBundle\Asset\VersionStrategy\GulpBusterVersionStrategy"/>
             </framework:config>
         </container>
 
@@ -201,4 +201,4 @@ the :ref:`version_strategy <reference-assets-version-strategy>` option:
 .. _`gulp-buster`: https://www.npmjs.com/package/gulp-buster
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -194,7 +194,7 @@ recommended format. These files are parsed by one of the loader classes.
                     'has' => [
                         'bundles' => 'Symfony has bundles',
                     ],
-                ),
+                ],
                 'user' => [
                     'login' => 'Login',
                 ],
@@ -495,4 +495,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

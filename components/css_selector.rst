@@ -97,7 +97,7 @@ Several pseudo-classes are not yet supported:
 
 * ``*:first-of-type``, ``*:last-of-type``, ``*:nth-of-type``,
   ``*:nth-last-of-type``, ``*:only-of-type``. (These work with an element
-  name (e.g. ``li:first-of-type``) but not with ``*``.
+  name (e.g. ``li:first-of-type``) but not with ``*``).
 
 .. _Packagist: https://packagist.org/packages/symfony/css-selector
 
@@ -108,4 +108,4 @@ Learn more
 * :doc:`/components/dom_crawler`
 
 .. ready: no
-.. revision: 8875c445ce64a63fbe023de88b22f8a7498e7a6a
+.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a

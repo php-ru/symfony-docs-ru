@@ -154,10 +154,10 @@ To use this feature, you need to have a definition in your
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <import resource="@TwigBundle/Resources/config/routing/errors.xml"
-                prefix="/_error" />
+                prefix="/_error"/>
         </routes>
 
     .. code-block:: php
@@ -217,9 +217,9 @@ configuration option to point to it:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:twig="http://symfony.com/schema/dic/twig"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/twig
-                http://symfony.com/schema/dic/twig/twig-1.0.xsd">
+                https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
                 <twig:exception-controller>AppBundle:Exception:showException</twig:exception-controller>
@@ -283,11 +283,11 @@ In that case, you might want to override one or both of the ``showAction()`` and
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <services>
                     <!-- ... be sure autowiring is enabled -->
-                    <defaults autowire="true" />
+                    <defaults autowire="true"/>
                     <!-- ... -->
 
                     <service id="AppBundle\Controller\CustomExceptionController" public="true">
@@ -355,4 +355,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

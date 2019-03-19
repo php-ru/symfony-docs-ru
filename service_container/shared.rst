@@ -26,7 +26,7 @@ in your service definition:
 
         <!-- app/config/services.xml -->
         <services>
-            <service id="AppBundle\SomeNonSharedService" shared="false" />
+            <service id="AppBundle\SomeNonSharedService" shared="false"/>
         </services>
 
     .. code-block:: php
@@ -41,4 +41,4 @@ Now, whenever you request the ``AppBundle\SomeNonSharedService`` from the contai
 you will be passed a new instance.
 
 .. ready: no
-.. revision: 9c2223b45c94f48d35b4f661c803bc426f8e4f70
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

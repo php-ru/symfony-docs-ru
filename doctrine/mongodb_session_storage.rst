@@ -44,7 +44,7 @@ need to change/add some parameters in the main configuration file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
@@ -126,7 +126,7 @@ parameters configuration:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
                 http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
@@ -172,4 +172,4 @@ From the `MongoDB shell`_:
 .. _MongoDB shell: http://docs.mongodb.org/v2.2/tutorial/getting-started-with-the-mongo-shell/
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

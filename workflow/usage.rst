@@ -59,13 +59,13 @@ like this:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd
+            xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
         >
 
             <framework:config>
                 <framework:workflow name="blog_publishing" type="workflow">
-                    <framework:audit-trail enabled="true" />
+                    <framework:audit-trail enabled="true"/>
 
                     <framework:marking-store type="single_state">
                       <framework:argument>currentPlace</framework:argument>
@@ -444,4 +444,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: 7ff8c9b669f330cc2e886a531562bb778bb2bad3
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

@@ -163,7 +163,7 @@ block and set the value of two variables called ``icon`` and ``text``:
 
     .. code-block:: html
 
-        <img src="data:image/png;base64,..." />
+        <img src="data:image/png;base64,..."/>
 
     Another solution is to define the images as SVG files. In addition to being
     resolution-independent, these images can be embedded in the Twig template
@@ -257,7 +257,7 @@ to specify a tag that contains the template:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="AppBundle\DataCollector\RequestCollector" public="false">
@@ -291,4 +291,4 @@ they default to ``0``. Most built-in collectors use ``255`` as their priority.
 If you want your collector to be displayed before them, use a higher value (like 300).
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

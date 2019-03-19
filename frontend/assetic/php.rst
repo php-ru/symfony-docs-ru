@@ -93,12 +93,12 @@ First, configure a new ``scssphp`` Assetic filter:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
-                <assetic:filter name="scssphp" formatter="Leafo\ScssPhp\Formatter\Compressed" />
+                <assetic:filter name="scssphp" formatter="Leafo\ScssPhp\Formatter\Compressed"/>
                 <!-- ... -->
             </assetic:config>
         </container>
@@ -136,7 +136,7 @@ by Assetic:
                 "assets/scss/font-awesome.scss"
                 "assets/css/*.css"
             %}
-                <link rel="stylesheet" href="{{ asset_url }}" />
+                <link rel="stylesheet" href="{{ asset_url }}"/>
             {% endstylesheets %}
 
 This simple configuration compiles, combines and minifies the SCSS files into a
@@ -166,12 +166,12 @@ First, configure a new ``jsqueeze`` Assetic filter as follows:
             xmlns:assetic="http://symfony.com/schema/dic/assetic"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
                 http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
-                <assetic:filter name="jsqueeze" />
+                <assetic:filter name="jsqueeze"/>
                 <!-- ... -->
             </assetic:config>
         </container>
@@ -213,4 +213,4 @@ apply the filter when *not* in ``debug`` mode. In practice, this means that you'
 see unminified files while developing and minimized files in the ``prod`` environment.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

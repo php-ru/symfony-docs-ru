@@ -122,10 +122,10 @@ the ``base.html.twig`` template and you'll find the following Twig code:
     <!DOCTYPE html>
     <html>
         <head>
-            <meta charset="UTF-8" />
+            <meta charset="UTF-8"/>
             <title>{% block title %}Welcome!{% endblock %}</title>
             {% block stylesheets %}{% endblock %}
-            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+            <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
         </head>
         <body>
             {% block body %}{% endblock %}
@@ -258,9 +258,9 @@ Symfony provides the ``asset()`` function to deal with them easily:
 
 .. code-block:: twig
 
-    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" type="text/css"/>
 
-    <img src="{{ asset('images/logo.png') }}" />
+    <img src="{{ asset('images/logo.png') }}"/>
 
 The ``asset()`` function looks for the web assets inside the ``web/`` directory.
 If you store them in another directory, read
@@ -291,4 +291,4 @@ controller and that's exactly the topic of the :doc:`next part of this tutorial
 .. _`Twig documentation`: https://twig.symfony.com/doc/2.x/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

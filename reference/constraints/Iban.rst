@@ -58,7 +58,7 @@ will contain an International Bank Account Number.
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+            xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
             <class name="AppBundle\Entity\Transaction">
                 <property name="bankAccountNumber">
@@ -118,4 +118,4 @@ You can use the following parameters in this message:
 .. _`International Bank Account Number (IBAN)`: https://en.wikipedia.org/wiki/International_Bank_Account_Number
 
 .. ready: no
-.. revision: da9aa0e8e54095f4640e80305dbfacabb10997c2
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

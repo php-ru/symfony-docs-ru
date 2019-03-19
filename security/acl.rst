@@ -70,12 +70,12 @@ First, you need to configure the connection the ACL system is supposed to use:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
-                <acl connection="default" />
+                <acl connection="default"/>
             </config>
         </srv:container>
 
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

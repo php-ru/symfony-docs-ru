@@ -69,7 +69,7 @@ The following configuration code shows how you can configure two entity managers
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:doctrine="http://symfony.com/schema/dic/doctrine"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd
+                https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
                 http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
@@ -98,12 +98,12 @@ The following configuration code shows how you can configure two entity managers
 
                 <doctrine:orm default-entity-manager="default">
                     <doctrine:entity-manager name="default" connection="default">
-                        <doctrine:mapping name="AppBundle" />
-                        <doctrine:mapping name="AcmeStoreBundle" />
+                        <doctrine:mapping name="AppBundle"/>
+                        <doctrine:mapping name="AcmeStoreBundle"/>
                     </doctrine:entity-manager>
 
                     <doctrine:entity-manager name="customer" connection="customer">
-                        <doctrine:mapping name="AcmeCustomerBundle" />
+                        <doctrine:mapping name="AcmeCustomerBundle"/>
                     </doctrine:entity-manager>
                 </doctrine:orm>
             </doctrine:config>
@@ -243,4 +243,4 @@ The same applies to repository calls::
     }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

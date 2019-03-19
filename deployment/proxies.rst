@@ -22,9 +22,7 @@ Solution: setTrustedProxies()
 -----------------------------
 
 To fix this, you need to tell Symfony which reverse proxy IP addresses to trust
-and what headers your reverse proxy uses to send information:
-
-.. code-block:: php
+and what headers your reverse proxy uses to send information::
 
     // web/app.php
 
@@ -84,4 +82,4 @@ other information.
 .. _`RFC 7239`: http://tools.ietf.org/html/rfc7239
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb

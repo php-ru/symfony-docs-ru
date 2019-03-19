@@ -53,13 +53,13 @@ a relative/absolute URL or a Symfony route name:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
-                    <form-login default-target-path="after_login_route_name" />
+                    <form-login default-target-path="after_login_route_name"/>
                 </firewall>
             </config>
         </srv:container>
@@ -110,14 +110,14 @@ previously requested URL and always redirect to the default page:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login always-use-default-target-path="true" />
+                    <form-login always-use-default-target-path="true"/>
                 </firewall>
             </config>
         </srv:container>
@@ -163,8 +163,8 @@ Defining the redirect URL via POST using a hidden form field:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="_target_path" value="{{ path('account') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="_target_path" value="{{ path('account') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 Using the Referring URL
@@ -198,14 +198,14 @@ parameter is included in the request, you may use the value of the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login use-referer="true" />
+                    <form-login use-referer="true"/>
                 </firewall>
             </config>
         </srv:container>
@@ -264,14 +264,14 @@ option to define a new target via a relative/absolute URL or a Symfony route nam
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login failure-path="login_failure_route_name" />
+                    <form-login failure-path="login_failure_route_name"/>
                 </firewall>
             </config>
         </srv:container>
@@ -305,8 +305,8 @@ This option can also be set via the ``_failure_path`` request parameter:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="_failure_path" value="{{ path('forgot_password') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="_failure_path" value="{{ path('forgot_password') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 Customizing the Target and Failure Request Parameters
@@ -339,15 +339,15 @@ redirects can be customized using the  ``target_path_parameter`` and
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
 
                 <firewall name="main">
                     <!-- ... -->
-                    <form-login target-path-parameter="go_to" />
-                    <form-login failure-path-parameter="back_to" />
+                    <form-login target-path-parameter="go_to"/>
+                    <form-login failure-path-parameter="back_to"/>
                 </firewall>
             </config>
         </srv:container>
@@ -382,9 +382,9 @@ are now fully customized:
     <form action="{{ path('login') }}" method="post">
         {# ... #}
 
-        <input type="hidden" name="go_to" value="{{ path('dashboard') }}" />
-        <input type="hidden" name="back_to" value="{{ path('forgot_password') }}" />
-        <input type="submit" name="login" />
+        <input type="hidden" name="go_to" value="{{ path('dashboard') }}"/>
+        <input type="hidden" name="back_to" value="{{ path('forgot_password') }}"/>
+        <input type="submit" name="login"/>
     </form>
 
 Redirecting to the Last Accessed Page with ``TargetPathTrait``
@@ -410,4 +410,4 @@ remove this variable, it's better to use the
     The ``TargetPathTrait`` was introduced in Symfony 3.1.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

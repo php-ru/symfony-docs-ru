@@ -28,7 +28,7 @@ to your controller, and as attributes of the ``Request`` object:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="blog" path="/blog/{page}">
                 <default key="_controller">AppBundle:Blog:index</default>
@@ -76,4 +76,4 @@ path, but you can still access its value from inside your controller, through
 the method's argument, or from the ``Request`` object's ``attributes`` bag.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

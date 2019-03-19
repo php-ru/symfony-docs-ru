@@ -153,10 +153,10 @@ You can also add links to the HTTP response directly from controllers and servic
 
     use Fig\Link\GenericLinkProvider;
     use Fig\Link\Link;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
     use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-    class BlogController extends AbstractController
+    class BlogController extends Controller
     {
         public function index(Request $request)
         {
@@ -186,4 +186,4 @@ You can also add links to the HTTP response directly from controllers and servic
 .. _`PSR-13`: http://www.php-fig.org/psr/psr-13/
 
 .. ready: no
-.. revision: 3162df8bb83a191c4a214763ae10e2fb6dcb148e
+.. revision: a464d7e0eca7eeae82293fb8116b3707d6fce7b5

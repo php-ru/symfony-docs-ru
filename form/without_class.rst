@@ -103,9 +103,7 @@ but here's a short example::
 
     If you are using validation groups, you need to either reference the
     ``Default`` group when creating the form, or set the correct group on
-    the constraint you are adding.
-
-    .. code-block:: php
+    the constraint you are adding::
 
         new NotBlank(['groups' => ['create', 'update']]);
 
@@ -116,4 +114,4 @@ but here's a short example::
     constraint, unless you :doc:`disable validation </form/disabling_validation>`.
 
 .. ready: no
-.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e
+.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb

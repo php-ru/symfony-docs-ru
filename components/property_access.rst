@@ -296,9 +296,7 @@ can use setters, the magic ``__set()`` method or properties to set values::
     var_dump($person->getChildren()); // [Person()];
 
 You can also use ``__call()`` to set values but you need to enable the feature,
-see `Enable other Features`_.
-
-.. code-block:: php
+see `Enable other Features`_::
 
     // ...
     class Person
@@ -335,9 +333,7 @@ Writing to Array Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``PropertyAccessor`` class allows to update the content of arrays stored in
-properties through *adder* and *remover* methods.
-
-.. code-block:: php
+properties through *adder* and *remover* methods::
 
     // ...
     class Person
@@ -471,4 +467,4 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb

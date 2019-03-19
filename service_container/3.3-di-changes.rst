@@ -72,15 +72,15 @@ Symfony Standard Edition:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
-                <defaults autowire="true" autoconfigure="true" public="false" />
+                <defaults autowire="true" autoconfigure="true" public="false"/>
 
-                <prototype namespace="AppBundle\" resource="../../src/AppBundle/*" exclude="../../src/AppBundle/{Entity,Repository}" />
+                <prototype namespace="AppBundle\" resource="../../src/AppBundle/*" exclude="../../src/AppBundle/{Entity,Repository}"/>
 
                 <prototype namespace="AppBundle\Controller\" resource="../../src/AppBundle/Controller">
-                    <tag name="controller.service_arguments" />
+                    <tag name="controller.service_arguments"/>
                 </prototype>
 
                 <!-- add more services, or override services that need manual wiring -->
@@ -125,12 +125,12 @@ thanks to the following config:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
-                <prototype namespace="AppBundle\" resource="../../src/AppBundle/*" exclude="../../src/AppBundle/{Entity,Repository}" />
+                <prototype namespace="AppBundle\" resource="../../src/AppBundle/*" exclude="../../src/AppBundle/{Entity,Repository}"/>
             </services>
         </container>
 
@@ -198,16 +198,16 @@ service as an argument to another with the following config:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <service id="app.invoice_generator"
-                    class="AppBundle\Service\InvoiceGenerator" />
+                    class="AppBundle\Service\InvoiceGenerator"/>
 
                 <service id="app.invoice_mailer"
                     class="AppBundle\Service\InvoiceMailer">
 
-                    <argument type="service" id="app.invoice_generator" />
+                    <argument type="service" id="app.invoice_generator"/>
                 </service>
             </services>
         </container>
@@ -315,13 +315,13 @@ The third big change is that, in a new Symfony 3.3 project, your controllers are
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <prototype namespace="AppBundle\Controller\" resource="../../src/AppBundle/Controller">
-                    <tag name="controller.service_arguments" />
+                    <tag name="controller.service_arguments"/>
                 </prototype>
             </services>
         </container>
@@ -459,13 +459,13 @@ inherited from an abstract definition:
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <instanceof id="AppBundle\Domain\LoaderInterface" public="true">
-                    <tag name="app.domain_loader" />
+                    <tag name="app.domain_loader"/>
                 </instanceof>
             </services>
         </container>
@@ -810,4 +810,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

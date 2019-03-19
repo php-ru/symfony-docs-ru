@@ -519,7 +519,7 @@ configuration:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="welcome" path="/">
                 <default key="_controller">AppBundle:Welcome:index</default>
@@ -582,7 +582,7 @@ route:
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/routing
-                http://symfony.com/schema/routing/routing-1.0.xsd">
+                https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="article_show" path="/article/{slug}">
                 <default key="_controller">AppBundle:Article:show</default>
@@ -638,9 +638,9 @@ but Symfony provides a more dynamic option via the ``asset()`` Twig function:
 
 .. code-block:: html+twig
 
-    <img src="{{ asset('images/logo.png') }}" alt="Symfony!" />
+    <img src="{{ asset('images/logo.png') }}" alt="Symfony!"/>
 
-    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet"/>
 
 The ``asset()`` function's main purpose is to make your application more portable.
 If your application lives at the root of your host (e.g. ``http://example.com``),
@@ -662,7 +662,7 @@ as follows:
 
 .. code-block:: html+twig
 
-    <img src="{{ absolute_url(asset('images/logo.png')) }}" alt="Symfony!" />
+    <img src="{{ absolute_url(asset('images/logo.png')) }}" alt="Symfony!"/>
 
 .. index::
    single: Templating; Including stylesheets and JavaScripts
@@ -697,7 +697,7 @@ stylesheets and JavaScripts that you'll need throughout your site:
             {# ... #}
 
             {% block stylesheets %}
-                <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
+                <link href="{{ asset('css/main.css') }}" rel="stylesheet"/>
             {% endblock %}
         </head>
         <body>
@@ -722,7 +722,7 @@ page. From inside that contact page's template, do the following:
     {% block stylesheets %}
         {{ parent() }}
 
-        <link href="{{ asset('css/contact.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/contact.css') }}" rel="stylesheet"/>
     {% endblock %}
 
     {# ... #}
@@ -740,7 +740,7 @@ is by default the "web/" directory of your application).
 
 .. code-block:: html+twig
 
-    <link href="{{ asset('bundles/acmedemo/css/contact.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/acmedemo/css/contact.css') }}" rel="stylesheet"/>
 
 The end result is a page that includes ``main.js`` and both the ``main.css`` and ``contact.css``
 stylesheets.
@@ -811,4 +811,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: 1b7318cfb81ccc4422bacda8107e2481aeb46dc1
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c

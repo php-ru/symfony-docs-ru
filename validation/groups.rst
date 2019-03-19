@@ -64,7 +64,7 @@ user registers and when a user updates their contact information later:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="
                 http://symfony.com/schema/dic/constraint-mapping
-                http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd
+                https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd
             ">
 
             <class name="AppBundle\Entity\User">
@@ -184,4 +184,4 @@ library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1

@@ -28,12 +28,12 @@ to use HTTPS then you could use the following configuration:
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xmlns:srv="http://symfony.com/schema/dic/services"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <config>
                     <!-- ... -->
 
-                    <rule path="^/secure" role="ROLE_ADMIN" requires_channel="https" />
+                    <rule path="^/secure" role="ROLE_ADMIN" requires_channel="https"/>
                 </config>
             </srv:container>
 
@@ -76,7 +76,7 @@ role:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
                 <!-- ... -->
@@ -113,4 +113,4 @@ see :doc:`/routing/scheme` for more details.
     for more details.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: d14992116a29795b2135bfa042d04305eea6df0c
