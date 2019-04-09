@@ -101,18 +101,17 @@ method::
             new Category('Cat3'),
             new Category('Cat4'),
         ],
-        'choice_label' => function($category, $key, $value) {
-            /** @var Category $category */
+        'choice_label' => function(Category $category, $key, $value) {
             return strtoupper($category->getName());
         },
-        'choice_attr' => function($category, $key, $value) {
+        'choice_attr' => function(Category $category, $key, $value) {
             return ['class' => 'category_'.strtolower($category->getName())];
         },
-        'group_by' => function($category, $key, $value) {
+        'group_by' => function(Category $category, $key, $value) {
             // randomly assign things into 2 groups
             return rand(0, 1) == 1 ? 'Group A' : 'Group B';
         },
-        'preferred_choices' => function($category, $key, $value) {
+        'preferred_choices' => function(Category $category, $key, $value) {
             return $category->getName() == 'Cat2' || $category->getName() == 'Cat3';
         },
     ]);
@@ -342,4 +341,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: 71fc7ce1eaeff78f3897a3a76e832a12304858b8
+.. revision: 90ad0e2ad25c5869251208feef50d3bde2e58510

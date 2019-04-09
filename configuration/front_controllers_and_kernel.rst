@@ -74,7 +74,7 @@ It then creates the service container before serving requests in its
 :method:`Symfony\\Component\\HttpKernel\\HttpKernelInterface::handle`
 method.
 
-The kernel used in Symfony apps extends from :class:`Symfony\\Component\\HttpKernel\\Kernel`
+The kernel used in Symfony applications extends from :class:`Symfony\\Component\\HttpKernel\\Kernel`
 and uses the :class:`Symfony\\Bundle\\FrameworkBundle\\Kernel\\MicroKernelTrait`.
 The ``Kernel`` class leaves some methods from :class:`Symfony\\Component\\HttpKernel\\KernelInterface`
 unimplemented and the ``MicroKernelTrait`` defines several abstract methods, so
@@ -145,4 +145,4 @@ differently if you need a more sophisticated way of loading your configuration.
 .. _decorate: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: a669ceb1ea7e6297a8aba9e602b33a69271f3c7d

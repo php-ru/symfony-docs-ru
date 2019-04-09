@@ -26,7 +26,6 @@ a service like: ``App\Controller\HelloController::index``:
     .. code-block:: php-annotations
 
         // src/Controller/HelloController.php
-
         use Symfony\Component\Routing\Annotation\Route;
 
         class HelloController
@@ -80,9 +79,57 @@ a service like: ``App\Controller\HelloController::index``:
 Invokable Controllers
 ---------------------
 
-If your controller implements the ``__invoke()`` method - popular with the
-Action-Domain-Response (ADR) pattern, you can refer to the service id
-without the method (``App\Controller\HelloController`` for example).
+Controllers can also define a single action using the ``__invoke()`` method,
+which is a common practice when following the `ADR pattern`_
+(Action-Domain-Responder):
+
+.. configuration-block::
+
+    .. code-block:: php-annotations
+
+        // src/Controller/Hello.php
+        use Symfony\Component\HttpFoundation\Response;
+        use Symfony\Component\Routing\Annotation\Route;
+
+        /**
+         * @Route("/hello/{name}", name="hello")
+         */
+        class Hello
+        {
+            public function __invoke($name = 'World')
+            {
+                return new Response(sprintf('Hello %s!', $name));
+            }
+        }
+
+    .. code-block:: yaml
+
+        # app/config/routing.yml
+        hello:
+            path:     /hello/{name}
+            defaults: { _controller: app.hello_controller }
+
+    .. code-block:: xml
+
+        <!-- app/config/routing.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <routes xmlns="http://symfony.com/schema/routing"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/routing
+                https://symfony.com/schema/routing/routing-1.0.xsd">
+
+            <route id="hello" path="/hello/{name}">
+                <default key="_controller">app.hello_controller</default>
+            </route>
+
+        </routes>
+
+    .. code-block:: php
+
+        // app/config/routing.php
+        $collection->add('hello', new Route('/hello', [
+            '_controller' => 'app.hello_controller',
+        ]));
 
 Alternatives to base Controller Methods
 ---------------------------------------
@@ -141,6 +188,7 @@ If you want to know what type-hints to use for each service, see the
 .. _`base Controller class`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php
 .. _`ControllerTrait`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php
 .. _`AbstractController`: https://github.com/symfony/symfony/blob/master/src/Symfony/Bundle/FrameworkBundle/Controller/AbstractController.php
+.. _`ADR pattern`: https://en.wikipedia.org/wiki/Action%E2%80%93domain%E2%80%93responder
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 5539265fb68eec42f9bba98b561b18dcb9d0bcff

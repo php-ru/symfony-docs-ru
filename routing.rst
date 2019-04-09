@@ -4,13 +4,14 @@
 Routing
 =======
 
-Beautiful URLs are a must for any serious web application. This means leaving behind
-ugly URLs like ``index.php?article_id=57`` in favor of something like ``/read/intro-to-symfony``.
+Beautiful URLs are a must for any serious web application. This means leaving
+behind ugly URLs like ``index.php?article_id=57`` in favor of something like
+``/read/intro-to-symfony``.
 
 Having flexibility is even more important. What if you need to change the
 URL of a page from ``/blog`` to ``/news``? How many links would you need to
 hunt down and update to make the change? If you're using Symfony's router,
-the change is simple.
+the change should be trivial.
 
 .. index::
    single: Routing; Basics
@@ -20,19 +21,13 @@ the change is simple.
 Creating Routes
 ---------------
 
-A *route* is a map from a URL path to a controller. Suppose you want one route that
-matches ``/blog`` exactly and another more dynamic route that can match *any* URL
-like ``/blog/my-post`` or ``/blog/all-about-symfony``.
+A *route* is a map from a URL path to attributes (i.e a controller). Suppose
+you want one route that matches ``/blog`` exactly and another more dynamic
+route that can match *any* URL like ``/blog/my-post`` or
+``/blog/all-about-symfony``.
 
-Routes can be configured in YAML, XML and PHP. All formats provide the same
-features and performance, so choose the one you prefer. If you choose PHP
-annotations, run this command once in your app to add support for them:
-
-.. code-block:: terminal
-
-    $ composer require annotations
-
-Now you can configure the routes:
+Routes can be configured in YAML, XML, PHP or annotations. All formats provide
+the same features and performance, so choose the one you prefer:
 
 .. configuration-block::
 
@@ -58,6 +53,7 @@ Now you can configure the routes:
 
             /**
              * Matches /blog/*
+             * but not /blog/slug/extra-part
              *
              * @Route("/blog/{slug}", name="blog_show")
              */
@@ -74,10 +70,13 @@ Now you can configure the routes:
 
         # config/routes.yaml
         blog_list:
+            # Matches /blog exactly
             path:     /blog
             controller: App\Controller\BlogController::list
 
         blog_show:
+            # Matches /blog/*
+            # but not /blog/slug/extra-part
             path:     /blog/{slug}
             controller: App\Controller\BlogController::show
 
@@ -90,10 +89,13 @@ Now you can configure the routes:
             xsi:schemaLocation="http://symfony.com/schema/routing
                 https://symfony.com/schema/routing/routing-1.0.xsd">
 
+            <!-- Matches /blog exactly -->
             <route id="blog_list" path="/blog" controller="App\Controller\BlogController::list">
                 <!-- settings -->
             </route>
 
+            <!-- Matches /blog/* -->
+            <!-- but not /blog/slug/extra-part -->
             <route id="blog_show" path="/blog/{slug}" controller="App\Controller\BlogController::show">
                 <!-- settings -->
             </route>
@@ -107,9 +109,12 @@ Now you can configure the routes:
         use App\Controller\BlogController;
 
         return function (RoutingConfigurator $routes) {
+            // Matches /blog exactly
             $routes->add('blog_list', '/blog')
                 ->controller([BlogController::class, 'list'])
             ;
+            // Matches /blog/*
+            // but not /blog/slug/extra-part
             $routes->add('blog_show', '/blog/{slug}')
                 ->controller([BlogController::class, 'show'])
             ;
@@ -121,13 +126,21 @@ Thanks to these two routes:
   is executed;
 
 * If the user goes to ``/blog/*``, the second route is matched and ``show()``
-  is executed. Because the route path is ``/blog/{slug}``, a ``$slug`` variable is
-  passed to ``show()`` matching that value. For example, if the user goes to
+  is executed. Because the route path is ``/blog/{slug}``, a ``$slug`` variable
+  is passed to ``show()`` matching that value. For example, if the user goes to
   ``/blog/yay-routing``, then ``$slug`` will equal ``yay-routing``.
 
-Whenever you have a ``{placeholder}`` in your route path, that portion becomes a
-wildcard: it matches *any* value. Your controller can now *also* have an argument
-called ``$placeholder`` (the wildcard and argument names *must* match).
+Whenever you have a ``{placeholder}`` in your route path, that portion becomes
+a wildcard: it matches *any* value. Your controller can now *also* have an
+argument called ``$placeholder`` (the wildcard and argument names *must*
+match).
+
+.. caution::
+
+    However the slash ``/`` is ignored by default in placeholder values because
+    the router uses it as separator between different placeholders.
+    To learn more about this, you can read
+    :ref:`routing/slash_in_parameter`.
 
 Each route also has an internal name: ``blog_list`` and ``blog_show``. These can
 be anything (as long as each is unique) and don't have any meaning yet. You'll
@@ -516,6 +529,7 @@ example to force the generation of ``/blog/1`` instead of ``/blog`` in the
 previous example) add the ``!`` character before the placeholder name: ``/blog/{!page}``
 
 .. versionadded:: 4.3
+
     The feature to force the inclusion of default values in generated URLs was
     introduced in Symfony 4.3.
 
@@ -623,7 +637,10 @@ With all of this in mind, check out this advanced example:
             /**
              * @Route(
              *     "/articles/{_locale}/{year}/{slug}.{_format}",
-             *     defaults={"_format": "html"},
+             *     defaults={
+             *         "_locale": "en",
+             *         "_format": "html"
+             *     },
              *     requirements={
              *         "_locale": "en|fr",
              *         "_format": "html|rss",
@@ -643,6 +660,7 @@ With all of this in mind, check out this advanced example:
           path:     /articles/{_locale}/{year}/{slug}.{_format}
           controller: App\Controller\ArticleController::show
           defaults:
+              _locale: en
               _format: html
           requirements:
               _locale:  en|fr
@@ -662,6 +680,7 @@ With all of this in mind, check out this advanced example:
                 path="/articles/{_locale}/{year}/{slug}.{_format}"
                 controller="App\Controller\ArticleController::show">
 
+                <default key="_locale">en</default>
                 <default key="_format">html</default>
                 <requirement key="_locale">en|fr</requirement>
                 <requirement key="_format">html|rss</requirement>
@@ -681,6 +700,7 @@ With all of this in mind, check out this advanced example:
             $routes->add('article_show', '/articles/{_locale}/{year}/{slug}.{_format}')
                 ->controller([ArticleController::class, 'show'])
                 ->defaults([
+                    '_locale' => 'en',
                     '_format' => 'html',
                 ])
                 ->requirements([
@@ -738,6 +758,91 @@ that are special: each adds a unique piece of functionality inside your applicat
 
 ``_locale``
     Used to set the locale on the request (:ref:`read more <translation-locale-url>`).
+
+You can also use special attributes to configure them (except ``_fragment``):
+
+.. configuration-block::
+
+    .. code-block:: php-annotations
+
+        // src/Controller/ArticleController.php
+
+        // ...
+        class ArticleController extends AbstractController
+        {
+            /**
+             * @Route(
+             *     "/articles/{_locale}/search.{_format}",
+             *     locale="en",
+             *     format="html",
+             *     requirements={
+             *         "_locale": "en|fr",
+             *         "_format": "html|xml",
+             *     }
+             * )
+             */
+            public function search()
+            {
+            }
+        }
+
+    .. code-block:: yaml
+
+        # config/routes.yaml
+        article_search:
+          path:        /articles/{_locale}/search.{_format}
+          controller:  App\Controller\ArticleController::search
+          locale:      en
+          format:      html
+          requirements:
+              _locale: en|fr
+              _format: html|xml
+
+    .. code-block:: xml
+
+        <!-- config/routes.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <routes xmlns="http://symfony.com/schema/routing"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/routing
+                http://symfony.com/schema/routing/routing-1.0.xsd">
+
+            <route id="article_search"
+                path="/articles/{_locale}/search.{_format}"
+                controller="App\Controller\ArticleController::search"
+                locale="en"
+                format="html">
+
+                <requirement key="_locale">en|fr</requirement>
+                <requirement key="_format">html|rss</requirement>
+
+            </route>
+        </routes>
+
+    .. code-block:: php
+
+        // config/routes.php
+        namespace Symfony\Component\Routing\Loader\Configurator;
+
+        use App\Controller\ArticleController;
+
+        return function (RoutingConfigurator $routes) {
+            $routes->add('article_show', '/articles/{_locale}/search.{_format}')
+                ->controller([ArticleController::class, 'search'])
+                ->locale('en')
+                ->format('html')
+                ->requirements([
+                    '_locale' => 'en|fr',
+                    '_format' => 'html|rss',
+                ])
+            ;
+        };
+
+These attributes can also be used for route imports.
+
+.. versionadded:: 4.3
+
+    The special attributes were introduced in Symfony 4.3.
 
 .. _routing-trailing-slash-redirection:
 
@@ -816,7 +921,6 @@ If you need to generate a URL from a service, type-hint the :class:`Symfony\\Com
 service::
 
     // src/Service/SomeService.php
-
     use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
     class SomeService
@@ -906,7 +1010,7 @@ This happens when your controller method has an argument (e.g. ``$slug``)::
 
     public function show($slug)
     {
-        // ..
+        // ...
     }
 
 But your route path does *not* have a ``{slug}`` wildcard (e.g. it is ``/blog/show``).
@@ -945,8 +1049,5 @@ Learn more about Routing
 
     routing/*
 
-.. _`JMSI18nRoutingBundle`: https://github.com/schmittjoh/JMSI18nRoutingBundle
-.. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
-
 .. ready: no
-.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815
+.. revision: 1dcb818daea477dc9bac08eec9a2f4d019d3c3cb

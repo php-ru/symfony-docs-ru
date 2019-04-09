@@ -32,7 +32,7 @@ Basic Usage
             /**
              * @Assert\Ip
              */
-             protected $ipAddress;
+            protected $ipAddress;
         }
 
     .. code-block:: yaml
@@ -143,4 +143,4 @@ of a variety of different values:
     Validates for all IP formats but without private and reserved ranges
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

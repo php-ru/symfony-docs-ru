@@ -109,7 +109,7 @@ here: :doc:`User Providers </security/user_provider>`.
 2c) Encoding Passwords
 ----------------------
 
-Not all apps have "users" that need passwords. *If* your users have passwords,
+Not all applications have "users" that need passwords. *If* your users have passwords,
 you can control how those passwords are encoded in ``security.yaml``. The ``make:user``
 command will pre-configure this for you:
 
@@ -795,13 +795,6 @@ Next, you'll need to create a route for this URL (but not a controller):
 
 .. configuration-block::
 
-    .. code-block:: yaml
-
-        # config/routes.yaml
-        app_logout:
-            path: /logout
-            methods: GET
-
     .. code-block:: php-annotations
 
         // src/Controller/SecurityController.php
@@ -821,6 +814,13 @@ Next, you'll need to create a route for this URL (but not a controller):
                 throw new \Exception('Don\'t forget to activate logout in security.yaml');
             }
         }
+
+    .. code-block:: yaml
+
+        # config/routes.yaml
+        app_logout:
+            path: /logout
+            methods: GET
 
     .. code-block:: xml
 
@@ -963,7 +963,7 @@ Frequently Asked Questions
     To see if this is an issue, check your log file (``var/log/dev.log``) for
     the log message:
 
-    > Cannot refresh token because user has changed.
+**Cannot refresh token because user has changed**
 
     If you see this, there are two possible causes. First, there may be a problem
     loading your User from the session. See :ref:`user_session_refresh`. Second,
@@ -1014,4 +1014,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 70f654c96729a9120574633cd412f2e1a4e48b79

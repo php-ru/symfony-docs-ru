@@ -107,6 +107,7 @@ Configuration
 
   * `magic_call`_
   * `throw_exception_on_invalid_index`_
+  * `throw_exception_on_invalid_property_path`_
 
 * `property_info`_
 
@@ -183,6 +184,7 @@ Configuration
 * `validation`_
 
   * :ref:`cache <reference-validation-cache>`
+  * :ref:`disable_not_compromised_password <reference-validation-disable_not_compromised_password>`
   * `email_validation_mode`_
   * :ref:`enable_annotations <reference-validation-enable_annotations>`
   * :ref:`enabled <reference-validation-enabled>`
@@ -312,7 +314,7 @@ doubling them to prevent Symfony from interpreting them as container parameters)
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
-                https://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config ide="myide://open?url=file://%%f&line=%%l"/>
         </container>
@@ -349,8 +351,11 @@ need to escape the percent signs (``%``) by doubling them.
 
         // /path/to/guest/.../file will be opened
         // as /path/to/host/.../file on the host
-        // and /foo/.../file as /bar/.../file also
-        'myide://%f:%l&/path/to/guest/>/path/to/host/&/foo/>/bar/&...'
+        // and /var/www/app/ as /projects/my_project/ also
+        'myide://%%f:%%l&/path/to/guest/>/path/to/host/&/var/www/app/>/projects/my_project/&...'
+        
+        // example for PhpStorm
+        'phpstorm://open?file=%%f&line=%%l&/var/www/app/>/projects/my_project/'
 
 .. _reference-framework-test:
 
@@ -762,7 +767,7 @@ strict_requirements
 
 **type**: ``mixed`` **default**: ``true``
 
-Determines the routing generator behaviour. When generating a route that
+Determines the routing generator behavior. When generating a route that
 has specific :doc:`requirements </routing/requirements>`, the generator
 can behave differently in case the used parameters do not meet these requirements.
 
@@ -1554,6 +1559,12 @@ resources
 
 **type**: ``string[]`` **default**: ``['FrameworkBundle:Form']``
 
+.. deprecated:: 4.3
+
+    The integration of the Templating component in FrameworkBundle has been
+    deprecated since version 4.3 and will be removed in 5.0. Form theming with
+    PHP templates will no longer be supported and you'll need to use Twig instead.
+
 A list of all resources for form theming in PHP. This setting is not required
 if you're :ref:`using the Twig format for your themes <forms-theming-twig>`.
 
@@ -1726,6 +1737,18 @@ throw_exception_on_invalid_index
 When enabled, the ``property_accessor`` service throws an exception when you
 try to access an invalid index of an array.
 
+throw_exception_on_invalid_property_path
+........................................
+
+**type**: ``boolean`` **default**: ``true``
+
+.. versionadded:: 4.3
+
+    The ``throw_exception_on_invalid_property_path`` option was introduced in Symfony 4.3.
+
+When enabled, the ``property_accessor`` service throws an exception when you
+try to access an invalid property path of an object.
+
 property_info
 ~~~~~~~~~~~~~
 
@@ -1764,6 +1787,26 @@ has to implement the :class:`Symfony\\Component\\Validator\\Mapping\\Cache\\Cach
 Set this option to ``validator.mapping.cache.doctrine.apc`` to use the APC
 cache provide from the Doctrine project.
 
+.. _reference-validation-disable_not_compromised_password:
+
+disable_not_compromised_password
+................................
+
+**type**: ``boolean`` **default**: ``false``
+
+.. versionadded:: 4.3
+
+    The ``disable_not_compromised_password`` option was introduced in Symfony 4.3.
+
+The :doc:`NotCompromisedPassword </reference/constraints/NotCompromisedPassword>`
+constraint makes HTTP requests to a public API to check if the given password
+has been compromised in a data breach.
+
+If you set this option to ``true``, no HTTP requests will be made and the given
+password will be considered valid. This is useful when you don't want or can't
+make HTTP requests, such as in ``dev`` and ``test`` environments or in
+continuous integration servers.
+
 .. _reference-validation-enable_annotations:
 
 enable_annotations
@@ -1796,7 +1839,7 @@ strict_email
 
 **type**: ``Boolean`` **default**: ``false``
 
-.. versionadded:: 4.1
+.. deprecated:: 4.1
 
     The ``strict_email`` option was deprecated in Symfony 4.1. Use the new
     ``email_validation_mode`` option instead.
@@ -2022,7 +2065,7 @@ default_doctrine_provider
 **type**: ``string``
 
 The service name to use as your default Doctrine provider. The provider is
-available as the ``cache.doctrine`` service.
+available as the ``cache.default_doctrine_provider`` service.
 
 default_psr6_provider
 .....................
@@ -2030,14 +2073,14 @@ default_psr6_provider
 **type**: ``string``
 
 The service name to use as your default PSR-6 provider. It is available as
-the ``cache.psr6`` service.
+the ``cache.default_psr6_provider`` service.
 
 default_redis_provider
 ......................
 
 **type**: ``string`` **default**: ``redis://localhost``
 
-The DSN to use by the Redis provider. The provider is available as the ``cache.redis``
+The DSN to use by the Redis provider. The provider is available as the ``cache.default_redis_provider``
 service.
 
 default_memcached_provider
@@ -2045,7 +2088,7 @@ default_memcached_provider
 
 **type**: ``string`` **default**: ``memcached://localhost``
 
-The DSN to use by the Memcached provider. The provider is available as the ``cache.memcached``
+The DSN to use by the Memcached provider. The provider is available as the ``cache.default_memcached_provider``
 service.
 
 default_pdo_provider
@@ -2054,7 +2097,8 @@ default_pdo_provider
 **type**: ``string`` **default**: ``doctrine.dbal.default_connection``
 
 The service id of the database connection, which should be either a PDO or a
-Doctrine DBAL instance.
+Doctrine DBAL instance. The provider is available as the ``cache.default_pdo_provider``
+service.
 
 pools
 .....
@@ -2261,7 +2305,7 @@ A list of workflows to be created by the framework extension:
 
 .. seealso::
 
-    See also the article about :doc:`using workflows in Symfony apps </workflow>`.
+    See also the article about :doc:`using workflows in Symfony applications </workflow>`.
 
 .. _reference-workflows-enabled:
 
@@ -2359,4 +2403,4 @@ a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/s
 .. _`X-Robots-Tag HTTP header`: https://developers.google.com/search/reference/robots_meta_tag
 
 .. ready: no
-.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815
+.. revision: a2a2b28b9f68e33b269af1a02038c74b9522fac3

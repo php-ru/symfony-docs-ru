@@ -108,8 +108,6 @@ If your valid choice list is simple, you can pass them in directly via the
 
         class Author
         {
-            protected $genre;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint(
@@ -408,4 +406,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ad683390ddeaa64084700dc20b1fb069b3bc8a5c
+.. revision: 1f89237c7e903d3b88ab28b106f2541ddd650765

@@ -73,7 +73,7 @@ regions
 
 **type**: ``int`` **default**: ``\DateTimeZone::ALL``
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     This option was deprecated in Symfony 4.2.
 
@@ -149,4 +149,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: 264ede9ab68ded40b65ddad85d4c3679c6ed9ac2

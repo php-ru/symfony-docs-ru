@@ -22,8 +22,8 @@ Take the following example::
             '1 week' => new \DateTime('+1 week'),
             '1 month' => new \DateTime('+1 month'),
         ],
-        'group_by' => function($choiceValue, $key, $value) {
-            if ($choiceValue <= new \DateTime('+3 days')) {
+        'group_by' => function($choice, $key, $value) {
+            if ($choice <= new \DateTime('+3 days')) {
                 return 'Soon';
             } else {
                 return 'Later';
@@ -42,4 +42,4 @@ If you return ``null``, the option won't be grouped. You can also pass a string
 details about using a property path.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71

@@ -74,7 +74,7 @@ First, enable ``form_login`` under your firewall:
 
 Now, when the security system initiates the authentication process, it will
 redirect the user to the login form ``/login``. Implementing this login form
-is your job. First, create a new ``SecurityController`` inside a bundle::
+is your job. First, create a new ``SecurityController``::
 
     // src/Controller/SecurityController.php
     namespace App\Controller;
@@ -773,4 +773,4 @@ are now fully customized:
 .. _`Login CSRF attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 4b9df245ed875077e291bd49f801d1df19ecf561

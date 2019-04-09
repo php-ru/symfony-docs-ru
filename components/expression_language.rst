@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/expression-language
 
-Alternatively, you can clone the `<https://github.com/symfony/expression-language>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 How can the Expression Engine Help Me?
@@ -135,4 +133,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/expression-language
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

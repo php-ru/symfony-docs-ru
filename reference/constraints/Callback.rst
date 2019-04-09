@@ -84,6 +84,11 @@ Configuration
             {
                 $metadata->addConstraint(new Assert\Callback('validate'));
             }
+
+            public function validate(ExecutionContextInterface $context, $payload)
+            {
+                // ...
+            }
         }
 
 The Callback Method
@@ -278,4 +283,4 @@ instance as the second argument.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

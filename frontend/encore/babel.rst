@@ -41,7 +41,7 @@ The ``@babel/preset-env`` preset rewrites your JavaScript so that the final synt
 will work in whatever browsers you want. To configure the browsers that you need
 to support, see :ref:`browserslist_package_config`.
 
-After change our "browerslist" config, you will need to manually remove the babel
+After changing your "browserslist" config, you will need to manually remove the babel
 cache directory:
 
 .. code-block:: terminal
@@ -65,4 +65,4 @@ configuration added by Encore.
 .. _`Babel`: http://babeljs.io/
 
 .. ready: no
-.. revision: ec6f46b8894c34eb68e4fffc0fd94c16a52689d0
+.. revision: 0973a0175d35a726697904d3c8b4a9bbb8edbc4e

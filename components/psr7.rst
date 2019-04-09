@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/psr-http-message-bridge
 
-Alternatively, you can clone the `<https://github.com/symfony/psr-http-message-bridge>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 The bridge also needs a PSR-7 and `PSR-17`_ implementation to convert
@@ -100,4 +98,4 @@ to a :class:`Symfony\\Component\\HttpFoundation\\Response` instance::
 .. _`libraries that implement psr/http-factory-implementation`: https://packagist.org/providers/psr/http-factory-implementation
 
 .. ready: no
-.. revision: f12abbbdec113bf47711174a9e258990cd2a39c8
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

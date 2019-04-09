@@ -26,12 +26,6 @@ by the normal `webpack-dev-server`_. For example:
 
 This will start a server at ``https://localhost:9000``.
 
-.. note::
-
-    This Webpack server is independent from
-    :doc:`Symfony's development web server </setup/built_in_web_server>` and
-    you need to run both separately.
-
 Using dev-server inside a VM
 ----------------------------
 
@@ -62,4 +56,4 @@ for styles anywhere at this time.
 .. _`HMR`: https://webpack.js.org/concepts/hot-module-replacement/
 
 .. ready: no
-.. revision: 165432f81bb388fb49a7fd2cd57d5cd2c4b67b4c
+.. revision: ff8b8bf981404785e528c9aa6f872c1cb3681b64

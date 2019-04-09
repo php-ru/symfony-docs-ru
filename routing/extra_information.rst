@@ -11,6 +11,32 @@ to your controller, and as attributes of the ``Request`` object:
 
 .. configuration-block::
 
+    .. code-block:: php-annotations
+
+        use Symfony\Component\Routing\Annotation\Route;
+
+        /**
+         * @Route(name="blog_")
+         */
+        class BlogController
+        {
+            /**
+             * @Route("/blog/{page}", name="index", defaults={"page": 1, "title": "Hello world!"})
+             */
+            public function index($page)
+            {
+                // ...
+            }
+        }
+
+        # config/routes.yaml
+        blog:
+            path:       /blog/{page}
+            controller: App\Controller\BlogController::index
+            defaults:
+                page: 1
+                title: "Hello world!"
+
     .. code-block:: yaml
 
         # config/routes.yaml
@@ -77,4 +103,4 @@ path, but you can still access its value from inside your controller, through
 the method's argument, or from the ``Request`` object's ``attributes`` bag.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: c0a0a685c430274d299a80a463585a32c18dc280

@@ -221,9 +221,9 @@ loading all entities.
 
 .. caution::
 
-    The entity used in the ``FROM`` clause of the `query_builder`_ option
-    will always be validated against the class which you have specified with
-    the form's `class`_ option. If you return another entity instead of the
+    The entity used in the ``FROM`` clause of the ``query_builder`` option
+    will always be validated against the class which you have specified at the
+    `class`_ option. If you return another entity instead of the
     one used in your ``FROM`` clause (for instance if you return an entity
     from a joined table), it will break validation.
     
@@ -291,7 +291,7 @@ This option allows you to move certain choices to the top of your list with a vi
 separator between them and the rest of the options. This option expects an array
 of entity objects::
 
-    use AppBundle\Entity\User;
+    use App\Entity\User;
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
@@ -362,4 +362,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/help_translation_parameters.rst.inc
 
 .. ready: no
-.. revision: af5e795af27ccd0cd62cf09cc5f4376af400ff51
+.. revision: dd40b56859c41f9871f6f0910c6fef8b8c04aa78

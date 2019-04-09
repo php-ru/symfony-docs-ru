@@ -245,7 +245,7 @@ for all parameters that are arrays.
 Environment Variables and Dynamic Values
 ----------------------------------------
 
-See :doc:`/configuration/external_parameters`.
+See :doc:`/configuration/environment_variables`.
 
 .. _component-di-parameters-constants:
 
@@ -351,4 +351,4 @@ To disable this behavior, use the ``string`` type:
     support for the PHP keywords.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: e433e533676561e0a5c603238a7563ed2a850dcd

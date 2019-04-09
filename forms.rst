@@ -154,7 +154,7 @@ done by passing a special form "view" object to your template (notice the
 ``$form->createView()`` in the controller above) and using a set of
 :ref:`form helper functions <reference-form-twig-functions>`:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# templates/task/new.html.twig #}
     {{ form(form) }}
@@ -166,7 +166,7 @@ That's it! The :ref:`form() function <reference-forms-twig-form>` renders all
 fields *and* the ``<form>`` start and end tags. By default, the form method is
 ``POST`` and the target URL is the same that displayed the form.
 
-As easy as this is, it's not very flexible. Usually, you'll need more control
+As short as this is, it's not very flexible. Usually, you'll need more control
 about how the entire form or some of its fields look. Symfony provides several
 ways of doing that:
 
@@ -412,7 +412,7 @@ Validation is a very powerful feature of Symfony and has its own
     but are being prevented by your browser from, for example, submitting
     blank fields.
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {# templates/task/new.html.twig #}
         {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -691,7 +691,23 @@ the choice is ultimately up to you.
 .. note::
 
     The form name is automatically generated from the type class name. If you want
-    to modify it, use the :method:`Symfony\\Component\\Form\\FormFactoryInterface::createNamed` method.
+    to modify it, use the :method:`Symfony\\Component\\Form\\FormFactoryInterface::createNamed` method::
+
+        // src/AppBundle/Controller/DefaultController.php
+        use AppBundle\Form\TaskType;
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+        class DefaultController extends AbstractController
+        {
+            public function newAction()
+            {
+                $task = ...;
+                $form = $this->get('form.factory')->createNamed('name', TaskType::class, $task);
+
+                // ...
+            }
+        }
+
     You can even suppress the name completely by setting it to an empty string.
 
 Final Thoughts
@@ -720,4 +736,4 @@ Learn more
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony-forms
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: a2edc09d315c88ee6c4f5003fd96f533d4b06773

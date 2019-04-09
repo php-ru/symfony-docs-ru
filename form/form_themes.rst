@@ -18,8 +18,8 @@ great when using some of the most popular CSS frameworks. Each theme is defined
 in a single Twig template:
 
 * `form_div_layout.html.twig`_, wraps each form field inside a ``<div>`` element
-  and it's the theme used by default in Symfony apps unless you configure it as
-  explained later in this article.
+  and it's the theme used by default in Symfony applications unless you configure
+  it as explained later in this article.
 * `form_table_layout.html.twig`_, wraps the entire form inside a ``<table>``
   element and each form field inside a ``<tr>`` element.
 * `bootstrap_3_layout.html.twig`_, wraps each form field inside a ``<div>``
@@ -122,7 +122,7 @@ A form can also be customized by applying several themes. To do this, pass the
 path of all the Twig templates as an array using the ``with`` keyword (their
 order is important, because each theme overrides all the previous ones):
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# apply multiple form themes but only to the form of this template #}
     {% form_theme form with [
@@ -144,7 +144,7 @@ You can also apply a form theme to a specific child of your form:
 This is useful when you want to have a custom theme for a nested form that's
 different than the one of your main form. Specify both your themes:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% form_theme form 'form/my_custom_theme.html.twig' %}
     {% form_theme form.a_child_form 'form/my_other_theme.html.twig' %}
@@ -157,9 +157,9 @@ Disabling Global Themes for Single Forms
 Global form themes defined in the app are always applied to all forms, even
 those which use the ``form_theme`` tag to apply their own themes. You may want
 to disable this for example when creating an admin interface for a bundle which
-can be installed on different Symfony apps (and so you can't control what themes
-are enabled globally). To do that, add the ``only`` keyword after the list of
-form themes:
+can be installed on different Symfony applications (and so you can't control what
+themes are enabled globally). To do that, add the ``only`` keyword after the list
+of form themes:
 
 .. code-block:: twig
 
@@ -289,9 +289,9 @@ field without having to :doc:`create a custom form type </form/create_custom_fie
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('name', TextType::class, array(
+        $builder->add('name', TextType::class, [
             'block_prefix' => 'wrapped_text',
-        ));
+        ]);
     }
 
 .. versionadded:: 4.3
@@ -313,30 +313,30 @@ following complex example where a ``TaskManagerType`` has a collection of
 
     class TaskManagerType extends AbstractType
     {
-        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        public function buildForm(FormBuilderInterface $builder, array $options = [])
         {
             // ...
-            $builder->add('taskLists', CollectionType::class, array(
+            $builder->add('taskLists', CollectionType::class, [
                 'entry_type' => TaskListType::class,
                 'block_name' => 'task_lists',
-            ));
+            ]);
         }
     }
 
     class TaskListType extends AbstractType
     {
-        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        public function buildForm(FormBuilderInterface $builder, array $options = [])
         {
             // ...
-            $builder->add('tasks', CollectionType::class, array(
+            $builder->add('tasks', CollectionType::class, [
                 'entry_type' => TaskType::class,
-            ));
+            ]);
         }
     }
 
     class TaskType
     {
-        public function buildForm(FormBuilderInterface $builder, array $options = array())
+        public function buildForm(FormBuilderInterface $builder, array $options = [])
         {
             $builder->add('name');
             // ...
@@ -432,7 +432,7 @@ Creating a Form Theme in a Separate Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is recommended when creating form themes that are used in your entire app
-or even reused in different Symfony apps. You only need to create a Twig
+or even reused in different Symfony applications. You only need to create a Twig
 template somewhere and follow the :ref:`form fragment naming <form-fragment-naming>`
 rules to know which Twig blocks to define.
 
@@ -608,4 +608,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815
+.. revision: 6b404e2eac3296d529dcdb34722bae2b2bf22f28

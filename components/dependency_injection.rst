@@ -19,8 +19,6 @@ Installation
 
     $ composer require symfony/dependency-injection
 
-Alternatively, you can clone the `<https://github.com/symfony/dependency-injection>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Basic Usage
@@ -316,4 +314,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/dependency-injection
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

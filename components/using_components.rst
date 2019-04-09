@@ -59,7 +59,7 @@ immediately::
 Now what?
 ---------
 
-Now that the component is installed and autoloaded, read the specific component's
+Now, the component is installed and autoloaded. Read the specific component's
 documentation to find out more about how to use it.
 
 And have fun!
@@ -68,4 +68,4 @@ And have fun!
 .. _Install Composer: https://getcomposer.org/download/
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 45c7c69302d7020d23a0c03393906dbff556e5af

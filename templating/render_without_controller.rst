@@ -69,7 +69,7 @@ within a template is typically to prepare some data in a custom controller,
 this is probably only useful if you'd like to cache this page partial (see
 :ref:`templating-no-controller-caching`).
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ render(url('acme_privacy')) }}
 
@@ -142,4 +142,4 @@ will be made public, as long as ``maxAge`` or ``sharedAge`` are passed.
 If set to ``true``, the Response will be marked as private.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: a2edc09d315c88ee6c4f5003fd96f533d4b06773

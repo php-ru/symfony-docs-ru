@@ -31,6 +31,12 @@ Validation Constraints Reference
    constraints/GreaterThanOrEqual
    constraints/Range
    constraints/DivisibleBy
+   constraints/Unique
+
+   constraints/Positive
+   constraints/PositiveOrZero
+   constraints/Negative
+   constraints/NegativeOrZero
 
    constraints/Date
    constraints/DateTime
@@ -43,6 +49,7 @@ Validation Constraints Reference
    constraints/Language
    constraints/Locale
    constraints/Country
+   constraints/Timezone
 
    constraints/File
    constraints/Image
@@ -59,7 +66,9 @@ Validation Constraints Reference
    constraints/Expression
    constraints/All
    constraints/UserPassword
+   constraints/NotCompromisedPassword
    constraints/Valid
+   constraints/Traverse
 
 The Validator is designed to validate objects against *constraints*.
 In real life, a constraint could be: "The cake must not be burned". In
@@ -74,4 +83,4 @@ The following constraints are natively available in Symfony:
 .. include:: /reference/constraints/map.rst.inc
 
 .. ready: no
-.. revision: 01ea746e071dc44caeee32b914423f3e419ffe27
+.. revision: d479fc24d5e3651aa96b6623d9fab4f65dc62e8e

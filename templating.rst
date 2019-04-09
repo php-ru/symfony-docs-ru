@@ -777,11 +777,11 @@ Suppose ``description`` equals ``I <3 this product``:
 
 .. code-block:: twig
 
-    <!-- output escaping is on automatically -->
-    {{ description }} <!-- I &lt;3 this product -->
+    {# output escaping is on automatically #}
+    {{ description }} {# I &lt;3 this product #}
 
-    <!-- disable output escaping with the raw filter -->
-    {{ description|raw }} <!-- I <3 this product -->
+    {# disable output escaping with the raw filter #}
+    {{ description|raw }} {# I <3 this product #}
 
 .. caution::
 
@@ -825,4 +825,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 25b242e827a68c224859e966728ad262bfa303f3

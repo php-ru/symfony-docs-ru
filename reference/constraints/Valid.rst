@@ -151,9 +151,6 @@ stores an ``Address`` instance in the ``$address`` property::
 
         class Address
         {
-            protected $street;
-            protected $zipCode;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('street', new Assert\NotBlank());
@@ -170,10 +167,6 @@ stores an ``Address`` instance in the ``$address`` property::
 
         class Author
         {
-            protected $firstName;
-            protected $lastName;
-            protected $address;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\NotBlank());
@@ -236,8 +229,6 @@ an invalid address. To prevent that, add the ``Valid`` constraint to the
 
         class Author
         {
-            protected $address;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('address', new Assert\Valid());
@@ -269,4 +260,4 @@ will be validated if this option is set to ``true``. This option is ignored on
 arrays: Arrays are traversed in either case. Keys are not validated.
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

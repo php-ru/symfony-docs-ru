@@ -298,6 +298,7 @@ use:
     $ php bin/console make:crud Product
 
 .. versionadded:: 1.2
+
     The ``make:crud`` command was introduced in MakerBundle 1.2.
 
 .. index::
@@ -641,4 +642,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa

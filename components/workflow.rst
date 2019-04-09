@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/workflow
 
-Alternatively, you can clone the `<https://github.com/symfony/workflow>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Creating a Workflow
@@ -103,4 +101,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/workflow
 
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

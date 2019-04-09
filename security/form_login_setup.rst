@@ -38,6 +38,7 @@ and your generated code may be slightly different:
      created: templates/security/login.html.twig
 
 .. versionadded:: 1.8
+
     Support for login form authentication was added to ``make:auth`` in MakerBundle 1.8.
 
 This generates the following: 1) a login route & controller, 2) a template that
@@ -73,10 +74,55 @@ class that processes the login submit and 4) updates the main security config fi
         }
     }
 
+Edit the ``security.yml`` file in order to allow access for anyone to the
+``/login`` route:
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # config/packages/security.yaml
+        security:
+            # ...
+
+            access_control:
+                - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+                # ...
+
+    .. code-block:: xml
+
+        <!-- config/packages/security.xml -->
+        <?xml version="1.0" charset="UTF-8" ?>
+        <srv:container xmlns="http://symfony.com/schema/dic/security"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:srv="http://symfony.com/schema/dic/services"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services
+                http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+            <config>
+                <rule path="^/login$" role="IS_AUTHENTICATED_ANONYMOUSLY" />
+                <!-- ... -->
+            </config>
+        </srv:container>
+
+    .. code-block:: php
+
+        // config/packages/security.php
+        $container->loadFromExtension('security', [
+            // ...
+            'access_control' => [
+                [
+                    'path' => '^/login',
+                    'roles' => 'IS_AUTHENTICATED_ANONYMOUSLY',
+                ],
+                // ...
+            ],
+        ]);
+
 **Step 2.** The template has very little to do with security: it just generates
 a traditional HTML form that submits to ``/login``:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {% extends 'base.html.twig' %}
 
@@ -253,7 +299,7 @@ a traditional HTML form that submits to ``/login``:
 
     .. code-block:: php
 
-        // app/config/security.php
+        // config/packages/security.php
         use App\Security\LoginFormAuthenticator;
 
         $container->loadFromExtension('security', [
@@ -376,4 +422,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: a461f58179deffbc822c90411f732150630d3cc0

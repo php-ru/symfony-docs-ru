@@ -15,6 +15,9 @@ callbacks. This is not necessary if you're using YAML or XML for your mapping.
 
 .. code-block:: php-annotations
 
+    // src/Entity/Product.php
+    use Doctrine\ORM\Mapping as ORM;
+
     /**
      * @ORM\Entity()
      * @ORM\HasLifecycleCallbacks()
@@ -33,6 +36,7 @@ the current date, only when the entity is first persisted (i.e. inserted):
     .. code-block:: php-annotations
 
         // src/Entity/Product.php
+        use Doctrine\ORM\Mapping as ORM;
 
         /**
          * @ORM\PrePersist
@@ -58,7 +62,7 @@ the current date, only when the entity is first persisted (i.e. inserted):
         <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-                http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+                https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
             <entity name="App\Entity\Product">
                 <!-- ... -->
@@ -96,4 +100,4 @@ Doctrine's `Lifecycle Events documentation`_.
 .. _`Lifecycle Events documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html#lifecycle-events
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 395adb49d006c2ebb1a77eba53313590769cc79b

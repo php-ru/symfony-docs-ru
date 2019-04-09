@@ -523,8 +523,8 @@ hypermedia API, and automatic update broadcasting through the Mercure hub::
     }
 
 As showcased `in this recording`_, the API Platform Client Generator also
-allows to scaffold complete React and React Native apps from this API.
-These apps will render the content of Mercure updates in real-time.
+allows to scaffold complete React and React Native applications from this API.
+These applications will render the content of Mercure updates in real-time.
 
 Checkout `the dedicated API Platform documentation`_ to learn more about
 its Mercure support.
@@ -545,4 +545,4 @@ its Mercure support.
 .. _`the online debugger`: https://uri-template-tester.mercure.rocks
 
 .. ready: no
-.. revision: 8bc40ea08ba589536d033dc2feb2611003d66e8d
+.. revision: a669ceb1ea7e6297a8aba9e602b33a69271f3c7d

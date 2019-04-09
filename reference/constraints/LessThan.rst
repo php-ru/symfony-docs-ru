@@ -36,7 +36,6 @@ The following constraints ensure that:
 
         class Person
         {
-
             /**
              * @Assert\LessThan(5)
              */
@@ -316,4 +315,4 @@ Parameter                      Description
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 6ad0053da7105543759850a5b426ce7c9bfe1092

@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/polyfill-php73
 
-Alternatively, you can clone the `<https://github.com/symfony/polyfill-php73>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -35,4 +33,4 @@ Provided Functions
 * :phpfunction:`array_key_last`
 
 .. ready: no
-.. revision: 71702dda34f56c52cbbb54757795d67a72713812
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

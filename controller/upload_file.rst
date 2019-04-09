@@ -189,7 +189,7 @@ There are some important things to consider in the code of the above controller:
    use the :method:`Symfony\\Component\\HttpFoundation\\File\\UploadedFile::guessExtension`
    method to let Symfony guess the right extension according to the file MIME type;
 
-.. versionadded:: 4.1
+.. deprecated:: 4.1
 
     The :method:`Symfony\\Component\\HttpFoundation\\File\\UploadedFile::getClientSize`
     method was deprecated in Symfony 4.1 and will be removed in Symfony 5.0.
@@ -333,7 +333,7 @@ Using a Doctrine Listener
 
 If you are using Doctrine to store the Product entity, you can create a
 :doc:`Doctrine listener </doctrine/event_listeners_subscribers>` to
-automatically upload the file when persisting the entity::
+automatically move the file when persisting the entity::
 
     // src/EventListener/BrochureUploadListener.php
     namespace App\EventListener;
@@ -479,4 +479,4 @@ controller.
 .. _`VichUploaderBundle`: https://github.com/dustin10/VichUploaderBundle
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 5bd0790c0582181675e3e383d02491fb8dca741b

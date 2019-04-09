@@ -83,7 +83,7 @@ Congrats! You now have three new files:
 Next, include these in your base layout file. Two Twig helpers from WebpackEncoreBundle
 can do most of the work for you:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# templates/base.html.twig #}
     <!DOCTYPE html>
@@ -212,8 +212,8 @@ To import values, use ``import``:
 Page-Specific JavaScript or CSS (Multiple Entries)
 --------------------------------------------------
 
-So far, you only have one final JavaScript file: ``app.js``. For simple apps or
-SPA's (Single Page Applications), that might be fine! However, as your app grows,
+So far, you only have one final JavaScript file: ``app.js``. For small applications
+or SPA's (Single Page Applications), that might be fine! However, as your app grows,
 you may want to have page-specific JavaScript or CSS (e.g. checkout, account,
 etc.). To handle this, create a new "entry" JavaScript file for each page:
 
@@ -348,4 +348,4 @@ Encore support many more features! For a full list of what you can do, see
 .. _`ECMAScript 6 modules`: https://hacks.mozilla.org/2015/08/es6-in-depth-modules/
 
 .. ready: no
-.. revision: cba024568624947dcd6860adddca38cd41f3d44d
+.. revision: 25b242e827a68c224859e966728ad262bfa303f3

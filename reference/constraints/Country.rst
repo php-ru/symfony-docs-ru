@@ -29,7 +29,7 @@ Basic Usage
             /**
              * @Assert\Country
              */
-             protected $country;
+            protected $country;
         }
 
     .. code-block:: yaml
@@ -98,4 +98,4 @@ Parameter        Description
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

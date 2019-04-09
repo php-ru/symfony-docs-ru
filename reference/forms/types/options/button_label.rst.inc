@@ -8,7 +8,7 @@ be directly set inside the template:
 
 .. configuration-block::
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {{ form_widget(form.save, { 'label': 'Click me' }) }}
 
@@ -17,4 +17,4 @@ be directly set inside the template:
         <?= $view['form']->widget($form['save'], ['label' => 'Click me']) ?>
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

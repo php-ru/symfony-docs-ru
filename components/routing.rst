@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/routing
 
-Alternatively, you can clone the `<https://github.com/symfony/routing>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -39,8 +37,8 @@ your autoloader to load the Routing component::
 
     use Symfony\Component\Routing\Matcher\UrlMatcher;
     use Symfony\Component\Routing\RequestContext;
-    use Symfony\Component\Routing\RouteCollection;
     use Symfony\Component\Routing\Route;
+    use Symfony\Component\Routing\RouteCollection;
 
     $route = new Route('/foo', ['_controller' => 'MyController']);
     $routes = new RouteCollection();
@@ -82,20 +80,24 @@ be thrown.
 Defining Routes
 ~~~~~~~~~~~~~~~
 
-A full route definition can contain up to seven parts:
+A full route definition can contain up to eight parts:
 
-#. The URL path route. This is matched against the URL passed to the `RequestContext`,
-   and can contain named wildcard placeholders (e.g. ``{placeholders}``)
-   to match dynamic parts in the URL.
+#. The URL pattern. This is matched against the URL passed to the
+   ``RequestContext``. It is not a regular expression, but can contain named
+   wildcard placeholders (e.g. ``{slug}``) to match dynamic parts in the URL.
+   The component will create the regular expression from it.
 
-#. An array of default values. This contains an array of arbitrary values
-   that will be returned when the request matches the route.
+#. An array of default parameters. This contains an array of arbitrary values
+   that will be returned when the request matches the route. It is used by
+   convention to map a controller to the route.
 
 #. An array of requirements. These define constraints for the values of the
-   placeholders as regular expressions.
+   placeholders in the pattern as regular expressions.
 
-#. An array of options. These contain internal settings for the route and
-   are the least commonly needed.
+#. An array of options. These contain advanced settings for the route and
+   can be used to control encoding or customize compilation.
+   See :ref:`routing-unicode-support` below. You can learn more about them by
+   reading :method:`Symfony\\Component\\Routing\\Route::setOptions` implementation.
 
 #. A host. This is matched against the host of the request. See
    :doc:`/routing/hostname_pattern` for more details.
@@ -104,6 +106,10 @@ A full route definition can contain up to seven parts:
 
 #. An array of methods. These enforce a certain HTTP request method (``HEAD``,
    ``GET``, ``POST``, ...).
+
+#. A condition, using the :doc:`/components/expression_language/syntax`.
+   A string that must evaluate to ``true`` so the route matches. See
+   :doc:`/routing/conditions` for more details.
 
 Take the following route, which combines several of these ideas::
 
@@ -114,7 +120,8 @@ Take the following route, which combines several of these ideas::
         [], // options
         '{subdomain}.example.com', // host
         [], // schemes
-        [] // methods
+        [], // methods
+        'context.getHost() matches "/(secure|admin).example.com/"' // condition
     );
 
     // ...
@@ -138,19 +145,22 @@ When using wildcards, these are returned in the array result when calling
 ``match``. The part of the path that the wildcard matched (e.g. ``2012-01``) is used
 as value.
 
-.. tip::
+A placeholder matches any character except slashes ``/`` by default, unless you define
+a specific requirement for it.
+The reason is that they are used by convention to separate different placeholders.
 
-    If you want to match all URLs which start with a certain path and end in an
-    arbitrary suffix you can use the following route definition::
+If you want a placeholder to match anything, it must be the last of the route::
 
-        $route = new Route(
-            '/start/{suffix}',
-            ['suffix' => ''],
-            ['suffix' => '.*']
-        );
+    $route = new Route(
+        '/start/{required}/{anything}',
+        ['required' => 'default'], // should always be defined
+        ['anything' => '.*'] // explicit requirement to allow "/"
+    );
 
-Using Prefixes
-~~~~~~~~~~~~~~
+Learn more about it by reading :ref:`routing/slash_in_parameter`.
+
+Using Prefixes and Collection Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can add routes or other instances of
 :class:`Symfony\\Component\\Routing\\RouteCollection` to *another* collection.
@@ -166,11 +176,12 @@ host to all routes of a subtree using methods provided by the
     $subCollection->add(...);
     $subCollection->addPrefix('/prefix');
     $subCollection->addDefaults([...]);
-    $subCollection->addRequirements([]);
-    $subCollection->addOptions([]);
-    $subCollection->setHost('admin.example.com');
+    $subCollection->addRequirements([...]);
+    $subCollection->addOptions([...]);
+    $subCollection->setHost('{subdomain}.example.com');
     $subCollection->setMethods(['POST']);
     $subCollection->setSchemes(['https']);
+    $subCollection->setCondition('context.getHost() matches "/(secure|admin).example.com/"');
 
     $rootCollection->addCollection($subCollection);
 
@@ -210,7 +221,7 @@ Generate a URL
 
 While the :class:`Symfony\\Component\\Routing\\Matcher\\UrlMatcher` tries
 to find a route that fits the given request you can also build a URL from
-a certain route::
+a certain route with the :class:`Symfony\\Component\\Routing\\Generator\\UrlGenerator`::
 
     use Symfony\Component\Routing\Generator\UrlGenerator;
     use Symfony\Component\Routing\RequestContext;
@@ -372,13 +383,16 @@ automatically in the background if you want to use it. A basic example of the
         ['cache_dir' => __DIR__.'/cache'],
         $requestContext
     );
-    $router->match('/foo/bar');
+    $parameters = $router->match('/foo/bar');
+    $url = $router->generate('some_route', ['parameter' => 'value']);
 
 .. note::
 
     If you use caching, the Routing component will compile new classes which
     are saved in the ``cache_dir``. This means your script must have write
     permissions for that location.
+
+.. _routing-unicode-support:
 
 Unicode Routing Support
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -399,7 +413,7 @@ routes with UTF-8 characters:
         class DefaultController extends AbstractController
         {
             /**
-             * @Route("/category/{name}", name="route1", options={"utf8": true})
+             * @Route("/category/{name}", name="route1", utf8=true)
              */
             public function category()
             {
@@ -411,8 +425,7 @@ routes with UTF-8 characters:
         route1:
             path:     /category/{name}
             controller: App\Controller\DefaultController::category
-            options:
-                utf8: true
+            utf8: true
 
     .. code-block:: xml
 
@@ -422,9 +435,10 @@ routes with UTF-8 characters:
             xsi:schemaLocation="http://symfony.com/schema/routing
                 https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="route1" path="/category/{name}" controller="App\Controller\DefaultController::category">
-                <option key="utf8">true</option>
-            </route>
+            <route id="route1"
+                path="/category/{name}"
+                controller="App\Controller\DefaultController::category"
+                utf8="true"/>
         </routes>
 
     .. code-block:: php
@@ -437,11 +451,59 @@ routes with UTF-8 characters:
         return function (RoutingConfigurator $routes) {
             $routes->add('route1', '/category/{name}')
                 ->controller([DefaultController::class, 'category'])
-                ->options([
-                    'utf8' => true,
-                ])
+                ->utf8()
             ;
         };
+
+.. versionadded:: 4.3
+
+    The ``utf8`` option/method has been introduced in Symfony 4.3.
+    Before you had to use the ``options`` setting to define this value:
+
+    .. configuration-block::
+
+        .. code-block:: php-annotations
+
+            route1:
+                path:       /category/{name}
+                controller: App\Controller\DefaultController::category
+                options:    { utf8: true }
+
+        .. code-block:: yaml
+
+            route1:
+                path:       /category/{name}
+                controller: App\Controller\DefaultController::category
+                utf8:       true
+
+        .. code-block:: xml
+
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <routes xmlns="http://symfony.com/schema/routing"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/routing
+                    http://symfony.com/schema/routing/routing-1.0.xsd">
+
+                <route id="route1"
+                    path="/category/{name}"
+                    controller="App\Controller\DefaultController::category">
+                    <option key="utf8">true</option>
+                </route>
+            </routes>
+
+        .. code-block:: php
+
+            // config/routes.php
+            namespace Symfony\Component\Routing\Loader\Configurator;
+
+            use App\Controller\DefaultController;
+
+            return function (RoutingConfigurator $routes) {
+                $routes->add('route1', '/category/{name}')
+                    ->controller([DefaultController::class, 'category'])
+                    ->options(['utf8' => true])
+                ;
+            };
 
 In this route, the ``utf8`` option set to ``true`` makes Symfony consider the
 ``.`` requirement to match any UTF-8 characters instead of just a single
@@ -466,8 +528,8 @@ You can also include UTF-8 strings as routing requirements:
              * @Route(
              *     "/category/{name}",
              *     name="route2",
-             *     defaults={"name"="한국어"},
-             *     options={"utf8": true}
+             *     defaults={"name": "한국어"},
+             *     utf8=true
              * )
              */
             public function category()
@@ -482,8 +544,7 @@ You can also include UTF-8 strings as routing requirements:
             controller: 'App\Controller\DefaultController::category'
             defaults:
                 name: "한국어"
-            options:
-                utf8: true
+            utf8: true
 
     .. code-block:: xml
 
@@ -493,9 +554,11 @@ You can also include UTF-8 strings as routing requirements:
             xsi:schemaLocation="http://symfony.com/schema/routing
                 https://symfony.com/schema/routing/routing-1.0.xsd">
 
-            <route id="route2" path="/category/{name}" controller="App\Controller\DefaultController::category">
+            <route id="route2"
+                path="/category/{name}"
+                controller="App\Controller\DefaultController::category"
+                utf8="true">
                 <default key="name">한국어</default>
-                <option key="utf8">true</option>
             </route>
         </routes>
 
@@ -512,9 +575,7 @@ You can also include UTF-8 strings as routing requirements:
                 ->defaults([
                     'name' => '한국어',
                 ])
-                ->options([
-                    'utf8' => true,
-                ])
+                ->utf8()
             ;
         };
 
@@ -542,4 +603,4 @@ Learn more
 .. _PCRE Unicode properties: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 337a9e2446f7d38f726c6b5c6e3a4c59e5faaa1b

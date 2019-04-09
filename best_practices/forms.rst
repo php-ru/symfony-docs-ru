@@ -177,7 +177,7 @@ One of the simplest ways - which is especially useful during development -
 is to render the form tags and use the ``form_widget()`` function to render
 all of the fields:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_start(form, {attr: {class: 'my-form-class'} }) }}
         {{ form_widget(form) }}
@@ -221,4 +221,4 @@ submit. Both those actions will be almost identical. So it's much simpler to let
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: a2edc09d315c88ee6c4f5003fd96f533d4b06773

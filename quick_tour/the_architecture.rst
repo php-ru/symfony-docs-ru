@@ -200,7 +200,7 @@ that extends ``AbstractExtension``::
 
 After creating just *one* file, you can use this immediately:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# templates/default/index.html.twig #}
     {# Will print something like "Hey Symfony!" #}
@@ -345,4 +345,4 @@ to the official :doc:`/index` and pick any guide you want.
 .. _`Monolog`: https://github.com/Seldaek/monolog
 
 .. ready: no
-.. revision: 6dcf6918af5447151b001520af323b51fd082861
+.. revision: a461f58179deffbc822c90411f732150630d3cc0

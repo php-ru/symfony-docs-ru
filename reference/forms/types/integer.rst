@@ -89,7 +89,7 @@ scale
 
 **type**: ``integer`` **default**: ``0``
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     The ``scale`` option is deprecated since Symfony 4.2 and will be removed
     in 5.0.
@@ -141,4 +141,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: c63bd468f1a8482b2e4d30997c145734a444a344
+.. revision: 264ede9ab68ded40b65ddad85d4c3679c6ed9ac2

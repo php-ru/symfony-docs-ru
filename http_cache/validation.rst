@@ -29,18 +29,7 @@ page again (see below for an implementation example).
 Like with expiration, there are two different HTTP headers that can be used
 to implement the validation model: ``ETag`` and ``Last-Modified``.
 
-.. sidebar:: Expiration and Validation
-
-    You can use both validation and expiration within the same ``Response``.
-    As expiration wins over validation, you can benefit from the best of
-    both worlds. In other words, by using both expiration and validation, you
-    can instruct the cache to serve the cached content, while checking back
-    at some interval (the expiration) to verify that the content is still valid.
-
-    .. tip::
-
-        You can also define HTTP caching headers for expiration and validation by using
-        annotations. See the `FrameworkExtraBundle documentation`_.
+.. include:: /http_cache/_expiration-and-validation.rst.inc
 
 .. index::
     single: Cache; Etag header
@@ -231,7 +220,6 @@ headers that must not be present for ``304`` responses (see
 
 .. _`expiration model`: https://tools.ietf.org/html/rfc2616#section-13.2
 .. _`validation model`: http://tools.ietf.org/html/rfc2616#section-13.3
-.. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: b6ab4fae3781d76437fcca325a8d3dc1cd6f4e7d
+.. revision: e7ef09a9e5e599585ec1eb14d34f3896969520b4

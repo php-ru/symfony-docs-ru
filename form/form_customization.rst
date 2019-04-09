@@ -339,7 +339,7 @@ This test will check if the current choice is equal to the ``selected_value``
 or if the current choice is in the array (when ``selected_value`` is an
 array).
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     <option {% if choice is selectedchoice(value) %}selected="selected"{% endif %} ...>
 
@@ -396,7 +396,7 @@ Variable                Usage
 ``block_prefixes``      An array of all the names of the parent types.
 ``cache_key``           A unique key which is used for caching.
 ``compound``            Whether or not a field is actually a holder for a group of children fields
-                        (for example, a ``choice`` field, which is actually a group of checkboxes.
+                        (for example, a ``choice`` field, which is actually a group of checkboxes).
 ``data``                The normalized data of the type.
 ``disabled``            If ``true``, ``disabled="disabled"`` is added to the field.
 ``errors``              An array of any errors attached to *this* specific field (e.g. ``form.title.errors``).
@@ -433,4 +433,4 @@ Variable                Usage
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: f9e355985489ada1893d1f6c4e4f5fbac4603295
+.. revision: 6b404e2eac3296d529dcdb34722bae2b2bf22f28

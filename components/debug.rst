@@ -14,8 +14,6 @@ Installation
 
     $ composer require symfony/debug
 
-Alternatively, you can clone the `<https://github.com/symfony/debug>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -93,4 +91,4 @@ Using the ``DebugClassLoader`` is done by calling its static
 .. _Packagist: https://packagist.org/packages/symfony/debug
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

@@ -33,9 +33,9 @@ be especially useful if your values are objects::
             '1 week' => new \DateTime('+1 week'),
             '1 month' => new \DateTime('+1 month'),
         ],
-        'preferred_choices' => function ($value, $key) {
+        'preferred_choices' => function ($choice, $key, $value) {
             // prefer options within 3 days
-            return $value <= new \DateTime('+3 days');
+            return $choice <= new \DateTime('+3 days');
         },
     ]);
 
@@ -65,4 +65,4 @@ when rendering the field:
         ]) ?>
 
 .. ready: no
-.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e
+.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71

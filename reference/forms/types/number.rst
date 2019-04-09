@@ -13,6 +13,7 @@ that you want to use for your number.
 +-------------+----------------------------------------------------------------------+
 | Options     | - `grouping`_                                                        |
 |             | - `html5`_                                                           |
+|             | - `input`_                                                           |
 |             | - `scale`_                                                           |
 |             | - `rounding_mode`_                                                   |
 +-------------+----------------------------------------------------------------------+
@@ -58,6 +59,21 @@ html5
 
 If set to ``true``, the HTML input will be rendered as a native HTML5 ``type="number"``
 form.
+
+input
+~~~~~
+
+**type**: ``string`` **default**: ``number``
+
+.. versionadded:: 4.3
+
+    The ``input`` option was introduced in Symfony 4.3.
+
+The format of the input data - i.e. the format that the number is stored on
+your underlying object. Valid values are ``number`` and ``string``. Setting
+this option to ``string`` can be useful if the underlying data is a string
+for precision reasons (for example, Doctrine uses strings for the ``decimal``
+type).
 
 scale
 ~~~~~
@@ -118,4 +134,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: bc5ac2806ea527cf4cad330a757012bbf1ac3e1c
+.. revision: c004dc54e311264b8400bba254bc3eb4b7118c0a

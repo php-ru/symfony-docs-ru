@@ -76,13 +76,13 @@ Application Bundles
 
 When Symfony 2.0 was released, most developers naturally adopted the symfony
 1.x way of dividing applications into logical modules. That's why many Symfony
-apps used bundles to divide their code into logical features: UserBundle,
+applications used bundles to divide their code into logical features: UserBundle,
 ProductBundle, InvoiceBundle, etc.
 
 But a bundle is *meant* to be something that can be reused as a stand-alone
 piece of software. If UserBundle cannot be used *"as is"* in other Symfony
-apps, then it shouldn't be its own bundle. Moreover, if InvoiceBundle depends on
-ProductBundle, then there's no advantage to having two separate bundles.
+applications, then it shouldn't be its own bundle. Moreover, if InvoiceBundle
+depends on ProductBundle, then there's no advantage to having two separate bundles.
 
 .. best-practice::
 
@@ -101,4 +101,4 @@ Next: :doc:`/best_practices/configuration`
 .. _`Symfony Skeleton`: https://github.com/symfony/skeleton
 
 .. ready: no
-.. revision: a7637586f23d8dbfebd30b712a3614dac1a545a5
+.. revision: de0e40b5603071efaadff8cd2e260341b0ea59c8

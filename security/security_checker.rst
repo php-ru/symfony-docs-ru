@@ -14,7 +14,7 @@ First, install the security checker in your project:
 .. code-block:: terminal
 
     # require at least the 5.0 version of the package because older versions
-    # checked the security vulnerabilities using an URL that is no longer available
+    # checked the security vulnerabilities using a URL that is no longer available
     $ composer require sensiolabs/security-checker:^5.0
 
 Then run this command:
@@ -45,4 +45,4 @@ FriendsOfPHP organization.
 .. _`Security Checker repository`: https://github.com/sensiolabs/security-checker
 
 .. ready: no
-.. revision: 7af99d4a0becd7e1c33964cf0b0fcf18fc63ac8e
+.. revision: 7374c0f4d8d8a10c3adc7181a87181d52618d410

@@ -81,12 +81,10 @@ on an object that will contain an ISBN.
 
         class Book
         {
-            protected $isbn;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('isbn', new Assert\Isbn([
-                    'type'    => 'isbn10',
+                    'type' => 'isbn10',
                     'message' => 'This value is not valid.',
                 ]));
             }
@@ -176,4 +174,4 @@ and ``null`` to accept any kind of ISBN.
 .. _`International Standard Book Number (ISBN)`: https://en.wikipedia.org/wiki/Isbn
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

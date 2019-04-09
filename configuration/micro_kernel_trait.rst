@@ -282,7 +282,6 @@ Finally, you need a front controller to boot and run the application. Create a
 ``public/index.php``::
 
     // public/index.php
-
     use App\Kernel;
     use Doctrine\Common\Annotations\AnnotationRegistry;
     use Symfony\Component\HttpFoundation\Request;
@@ -335,4 +334,4 @@ Then see webpage in browser:
     http://localhost:8000/random/10
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9

@@ -315,7 +315,7 @@ paths
 
 **type**: ``array`` **default**: ``null``
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     Using the ``src/Resources/views/`` directory to store templates was
     deprecated in Symfony 4.2. Use instead the directory defined in the
@@ -432,4 +432,4 @@ and the non-existing values are replaced by ``null``.
 .. _`the optimizer extension`: https://twig.symfony.com/doc/2.x/api.html#optimizer-extension
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa

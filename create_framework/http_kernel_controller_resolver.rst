@@ -25,7 +25,7 @@ Update the route definition accordingly::
     $routes->add('leap_year', new Routing\Route('/is_leap_year/{year}', [
         'year' => null,
         '_controller' => [new LeapYearController(), 'index'],
-    )));
+    ]));
 
 The move is pretty straightforward and makes a lot of sense as soon as you
 create more pages but you might have noticed a non-desirable side-effect...
@@ -206,4 +206,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 2a8b2fed6199c896568d9fafd20cfd004c04fa26

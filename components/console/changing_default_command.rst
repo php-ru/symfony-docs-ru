@@ -31,7 +31,6 @@ name to the ``setDefaultCommand()`` method::
 Executing the application and changing the default command::
 
     // application.php
-
     use Acme\Console\Command\HelloWorldCommand;
     use Symfony\Component\Console\Application;
 
@@ -64,4 +63,4 @@ Learn More!
 * :doc:`/components/console/single_command_tool`
 
 .. ready: no
-.. revision: f25b41b0ee6f05a46de6be5547907a1b751fbbfd
+.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9

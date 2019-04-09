@@ -102,6 +102,7 @@ URL:
              */
             public function homepage($_locale)
             {
+                // ...
             }
         }
 
@@ -312,4 +313,4 @@ information on the request. See :doc:`/routing/conditions`.
 .. _`PCRE Unicode property`: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: c0a0a685c430274d299a80a463585a32c18dc280

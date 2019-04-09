@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/options-resolver
 
-Alternatively, you can clone the `<https://github.com/symfony/options-resolver>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -435,6 +433,16 @@ if you need to use other options during normalization::
         }
     }
 
+To normalize a new allowed value in sub-classes that are being normalized
+in parent classes use :method:`Symfony\\Component\\OptionsResolver\\OptionsResolver::addNormalizer`.
+This way, the ``$value`` argument will receive the previously normalized
+value, otherwise you can prepend the new normalizer by passing ``true`` as
+third argument.
+
+.. versionadded:: 4.3
+
+    The ``addNormalizer()`` method was introduced in Symfony 4.3.
+
 Default Values that Depend on another Option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -828,4 +836,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: f8709111da9aaf177bd3b37c5fd4cd127c9837ad
+.. revision: 337a9e2446f7d38f726c6b5c6e3a4c59e5faaa1b

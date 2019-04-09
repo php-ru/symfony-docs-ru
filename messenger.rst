@@ -202,12 +202,12 @@ This will also configure the following services for you:
 
 .. note::
 
-    In order to use Symfony's built-in AMQP transport, you will need the Serializer
-    Component. Ensure that it is installed with:
+    In order to use Symfony's built-in AMQP transport, you will need the AMQP
+    PHP extension and the Serializer Component. Ensure that they are installed with:
 
     .. code-block:: terminal
 
-        $ composer require symfony/serializer-pack
+        $ composer require symfony/amqp-pack
 
 Routing
 -------
@@ -410,18 +410,22 @@ while still having them passed to their respective handler:
 Consuming Messages
 ------------------
 
-Once your messages have been routed, you will like to consume your messages in most
-of the cases. To do so, you can use the ``messenger:consume-messages`` command
-like this:
+Once your messages have been routed, you will like to consume your messages in
+most of the cases. To do so, use the ``messenger:consume`` command like this:
 
 .. code-block:: terminal
 
-    $ bin/console messenger:consume-messages amqp
+    $ php bin/console messenger:consume amqp
 
 The first argument is the receiver's service name. It might have been created by
 your ``transports`` configuration or it can be your own receiver.
 It also requires a ``--bus`` option in case you have multiple buses configured,
 which is the name of the bus to which received messages should be dispatched.
+
+.. versionadded:: 4.3
+
+    The ``messenger:consume`` command was renamed in Symfony 4.3 (previously it
+    was called ``messenger:consume-messages``).
 
 Middleware
 ----------
@@ -832,4 +836,4 @@ Learn more
 .. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 52a7157fe131970043d6372eb9d65aceeca907c2

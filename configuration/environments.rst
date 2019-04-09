@@ -361,7 +361,7 @@ includes the following:
 Going further
 -------------
 
-Read the article on :doc:`/configuration/external_parameters`.
+Read the article on :doc:`/configuration/environment_variables`.
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: e433e533676561e0a5c603238a7563ed2a850dcd

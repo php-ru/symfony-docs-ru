@@ -188,7 +188,7 @@ the ``Product`` entity (and getter & setter methods):
         <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-                http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+                https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
             <entity name="App\Entity\Product">
                 <!-- ... -->
@@ -264,7 +264,7 @@ class that will hold these objects:
         <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-                http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+                https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
             <entity name="App\Entity\Category">
                 <!-- ... -->
@@ -597,4 +597,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/doctrine-relations
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 395adb49d006c2ebb1a77eba53313590769cc79b

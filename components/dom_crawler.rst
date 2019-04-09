@@ -19,8 +19,6 @@ Installation
 
     $ composer require symfony/dom-crawler
 
-Alternatively, you can clone the `<https://github.com/symfony/dom-crawler>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -71,6 +69,17 @@ tree.
     unexpected behavior, this could be a cause. And while the DomCrawler
     isn't meant to dump content, you can see the "fixed" version of your HTML
     by :ref:`dumping it <component-dom-crawler-dumping>`.
+
+.. note::
+
+    If you need better support for HTML5 contents or want to get rid of the
+    inconsistencies of PHP's DOM extension, install the `html5-php library`_.
+    The DomCrawler component will use it automatically when the content has
+    an HTML5 doctype.
+
+    .. versionadded:: 4.3
+
+        The automatic support of the html5-php library was introduced in Symfony 4.3.
 
 Node Filtering
 ~~~~~~~~~~~~~~
@@ -573,14 +582,15 @@ the whole form or specific field(s)::
     $form->disableValidation();
     $form['country']->select('Invalid value');
 
-.. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
-.. _Packagist: https://packagist.org/packages/symfony/dom-crawler
-
 Learn more
 ----------
 
 * :doc:`/testing`
 * :doc:`/components/css_selector`
 
+.. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
+.. _Packagist: https://packagist.org/packages/symfony/dom-crawler
+.. _`html5-php library`: https://github.com/Masterminds/html5-php
+
 .. ready: no
-.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939
+.. revision: 1c7eb7929e665f5d6f4d06dea359e560d2d37a59

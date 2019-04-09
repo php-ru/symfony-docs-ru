@@ -86,4 +86,4 @@ except that ``window.jQuery`` won't work when using ``autoProvidejQuery()``.
 In other words, use ``global``.
 
 .. ready: no
-.. revision: 6833bb62232ff68eea0b9b3464312c7a32516f17
+.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f

@@ -69,7 +69,7 @@ Guides
 
 * :doc:`Using Bootstrap CSS & JS </frontend/encore/bootstrap>`
 * :doc:`Creating Page-Specific CSS/JS </frontend/encore/page-specific-assets>`
-* :doc:`jQuery and Legacy Applications </frontend/encore/legacy-apps>`
+* :doc:`jQuery and Legacy Applications </frontend/encore/legacy-applications>`
 * :doc:`Passing Information from Twig to JavaScript </frontend/encore/server-data>`
 * :doc:`webpack-dev-server and Hot Module Replacement (HMR) </frontend/encore/dev-server>`
 * :doc:`Adding custom loaders & plugins </frontend/encore/custom-loaders-plugins>`
@@ -113,4 +113,4 @@ Other Front-End Articles
 .. _`Webpack Encore screencast series`: https://symfonycasts.com/screencast/webpack-encore
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: de0e40b5603071efaadff8cd2e260341b0ea59c8

@@ -248,7 +248,9 @@ User Input Methods
 
         $io->askHidden('What is your password?');
 
-        // validates the given answer
+    In case you need to validate the given value, pass a callback validator as
+    the second argument::
+
         $io->askHidden('What is your password?', function ($password) {
             if (empty($password)) {
                 throw new \RuntimeException('Password cannot be empty.');
@@ -352,6 +354,7 @@ Then, instantiate this custom class instead of the default ``SymfonyStyle`` in
 your commands. Thanks to the ``StyleInterface`` you won't need to change the code
 of your commands to change their appearance::
 
+    // src/Command/GreetCommand.php
     namespace App\Console;
 
     use App\Console\CustomStyle;
@@ -366,10 +369,11 @@ of your commands to change their appearance::
         protected function execute(InputInterface $input, OutputInterface $output)
         {
             // Before
-            // $io = new SymfonyStyle($input, $output);
+            $io = new SymfonyStyle($input, $output);
 
             // After
             $io = new CustomStyle($input, $output);
+
             // ...
         }
     }
@@ -407,4 +411,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 25c3cae7d9ff88dbd0c27bbb88cbc017bb35d3d2

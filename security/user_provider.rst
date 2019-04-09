@@ -208,8 +208,8 @@ Memory User Provider
 --------------------
 
 It's not recommended to use this provider in real applications because of its
-limitations and how difficult it is to manage users. It may be useful in app
-prototypes and for limited apps that don't store users in databases.
+limitations and how difficult it is to manage users. It may be useful in application
+prototypes and for limited applications that don't store users in databases.
 
 This user provider stores all user information in a configuration file,
 including their passwords. That's why the first step is to configure how these
@@ -509,4 +509,4 @@ user provider:
             $userProvider: '@security.user.provider.concrete.backend_users'
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: a669ceb1ea7e6297a8aba9e602b33a69271f3c7d

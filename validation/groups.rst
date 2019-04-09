@@ -132,7 +132,8 @@ With this configuration, there are three validation groups:
 
 ``Default``
     Contains the constraints in the current class and all referenced classes
-    that belong to no other group.
+    that belong to no other group. In this example, it only contains the
+    ``city`` field.
 
 ``User``
     Equivalent to all constraints of the ``User`` object in the ``Default``
@@ -140,7 +141,9 @@ With this configuration, there are three validation groups:
     and ``Default`` is explained in :doc:`/validation/sequence_provider`.
 
 ``registration``
-    Contains the constraints on the ``email`` and ``password`` fields only.
+    This is a custom validation group, so it only contains the constraints
+    explicitly associated to it. In this example, only the ``email`` and
+    ``password`` fields.
 
 Constraints in the ``Default`` group of a class are the constraints that have
 either no explicit group configured or that are configured to a group equal to
@@ -184,4 +187,4 @@ library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 06d83cd285775c5accfdc491f7f20041b7853c8b

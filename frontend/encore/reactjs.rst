@@ -5,7 +5,7 @@ Using React? First enable support for it in ``webpack.config.js``:
 
 .. code-block:: terminal
 
-    $ yarn add --dev @babel/preset-react
+    $ yarn add @babel/preset-react --dev
     $ yarn add react react-dom prop-types
 
 Enable react in your ``webpack.config.js``:
@@ -30,4 +30,4 @@ Your ``.js`` and ``.jsx`` files will now be transformed through ``babel-preset-r
 .. _`babel-preset-react`: https://babeljs.io/docs/plugins/preset-react/
 
 .. ready: no
-.. revision: cba52cc8f007ef4347803339c13e11f40e968e51
+.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa

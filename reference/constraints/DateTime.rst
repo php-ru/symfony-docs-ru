@@ -32,7 +32,7 @@ Basic Usage
              * @Assert\DateTime
              * @var string A "Y-m-d H:i:s" formatted value
              */
-             protected $createdAt;
+            protected $createdAt;
         }
 
     .. code-block:: yaml
@@ -112,4 +112,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

@@ -33,7 +33,7 @@ the session lasts using a cookie with the ``remember_me`` firewall option:
     .. code-block:: xml
 
         <!-- config/packages/security.xml -->
-        <?xml version="1.0" encoding="utf-8" ?>
+        <?xml version="1.0" encoding="UTF-8" ?>
         <srv:container xmlns="http://symfony.com/schema/dic/security"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -150,7 +150,6 @@ this:
 .. code-block:: html+twig
 
     {# templates/security/login.html.twig #}
-
     <form method="post">
         {# ... your form fields #}
 
@@ -198,4 +197,4 @@ users to change their password. You can do this by leveraing a few special "role
     }
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 387578b74776691563b90fc5c75434a0711296df

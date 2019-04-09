@@ -1,34 +1,33 @@
 .. index::
-    single: Environments; External parameters
+    single: Environment Variables; env vars
 
-How to Set external Parameters in the Service Container
-=======================================================
+How to Configure Symfony With Environment Variables
+===================================================
 
 In :doc:`/configuration`, you learned how to manage your application
-configuration. At times, it may benefit your application to store certain
-credentials outside of your project code. Database configuration is one such
-example. The flexibility of the Symfony service container allows you to do this.
+configuration. In this article you'll learn how to use environment variables (or
+"env vars" for short) to configure some of those options, which is a common
+practice to configure sensitive options such as credentials and passwords.
 
 .. _config-env-vars:
 
-Environment Variables
----------------------
+Referencing Env Vars in Configuration Files
+-------------------------------------------
 
-You can reference environment variables by using special parameters named after
-the variables you want to use enclosed between ``env()``. Their actual values
-will be resolved at runtime (once per request), so that dumped containers can be
-reconfigured dynamically even after being compiled.
-
-For example, when installing the ``doctrine`` recipe, database configuration is
-put in a ``DATABASE_URL`` environment variable:
+First, define the value of the env var, using your shell environment or the
+``.env`` file at the project root directory. For example, consider the
+``DATABASE_URL`` env var defined when installing the ``doctrine`` recipe (by
+convention the env var names are always uppercase):
 
 .. code-block:: bash
 
     # .env
     DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name"
 
-This variable is referenced in the service container configuration using
-``%env(DATABASE_URL)%``:
+Then, you can reference those env vars in any configuration option enclosing
+their names with ``env()``. Their actual values will be resolved at runtime
+(once per request), so that dumped containers can be reconfigured dynamically
+even after being compiled:
 
 .. configuration-block::
 
@@ -69,8 +68,8 @@ This variable is referenced in the service container configuration using
             ]
         ]);
 
-You can also give the ``env()`` parameters a default value: the default value
-will be used whenever the corresponding environment variable is *not* found:
+You can also give the ``env()`` parameters a default value, which will be used
+whenever the corresponding environment variable is *not* found:
 
 .. configuration-block::
 
@@ -78,7 +77,7 @@ will be used whenever the corresponding environment variable is *not* found:
 
         # config/services.yaml
         parameters:
-            env(DATABASE_HOST): localhost
+            env(DATABASE_HOST): 'localhost'
 
     .. code-block:: xml
 
@@ -98,10 +97,16 @@ will be used whenever the corresponding environment variable is *not* found:
         // config/services.php
         $container->setParameter('env(DATABASE_HOST)', 'localhost');
 
+.. deprecated:: 4.3
+
+    Passing non-string values as default values for environment variables is
+    deprecated since Symfony 4.3. Use :ref:`environment variable processors <env-var-processors>`
+    if you need to transform those string default values into other data types.
+
 .. _configuration-env-var-in-prod:
 
 Configuring Environment Variables in Production
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 During development, you'll use the ``.env`` file to configure your environment
 variables. On your production server, it is recommended to configure these at
@@ -132,6 +137,8 @@ the following:
     The values of the env vars are also exposed in the web interface of the
     :doc:`Symfony profiler </profiler>`. In practice this shouldn't be a
     problem because the web profiler must **never** be enabled in production.
+
+.. _env-var-processors:
 
 Environment Variable Processors
 -------------------------------
@@ -366,7 +373,8 @@ Symfony provides the following env var processors:
             # config/packages/sentry.yaml
             parameters:
                 env(HOST): '10.0.0.1'
-                env(SENTRY_DSN): 'http://%env(HOST)%/project'
+                sentry_host: '%env(HOST)%'
+                env(SENTRY_DSN): 'http://%sentry_host%/project'
             sentry:
                 dsn: '%env(resolve:SENTRY_DSN)%'
 
@@ -381,7 +389,8 @@ Symfony provides the following env var processors:
 
                 <parameters>
                     <parameter key="env(HOST)">10.0.0.1</parameter>
-                    <parameter key="env(SENTRY_DSN)">http://%env(HOST)%/project</parameter>
+                    <parameter key="sentry_host">%env(HOST)%</parameter>
+                    <parameter key="env(SENTRY_DSN)">http://%sentry_host%/project</parameter>
                 </parameters>
 
                 <sentry:config dsn="%env(resolve:SENTRY_DSN)%"/>
@@ -391,7 +400,8 @@ Symfony provides the following env var processors:
 
             // config/packages/sentry.php
             $container->setParameter('env(HOST)', '10.0.0.1');
-            $container->setParameter('env(SENTRY_DSN)', 'http://%env(HOST)%/project');
+            $container->setParameter('sentry_host', '%env(HOST)%');
+            $container->setParameter('env(SENTRY_DSN)', 'http://%sentry_host%/project');
             $container->loadFromExtension('sentry', [
                 'dsn' => '%env(resolve:SENTRY_DSN)%',
             ]);
@@ -445,6 +455,51 @@ Symfony provides the following env var processors:
             $container->loadFromExtension('google', [
                 'auth' => '%env(file:AUTH_FILE)%',
             ]);
+
+``env(require:FOO)``
+    ``require()`` the PHP file whose path is the value of the ``FOO``
+    env var and return the value returned from it.
+
+    .. configuration-block::
+
+        .. code-block:: yaml
+
+            # config/packages/framework.yaml
+            parameters:
+                env(PHP_FILE): '../config/.runtime-evaluated.php'
+            app:
+                auth: '%env(require:PHP_FILE)%'
+
+        .. code-block:: xml
+
+            <!-- config/packages/framework.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:framework="http://symfony.com/schema/dic/symfony"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    https://symfony.com/schema/dic/services/services-1.0.xsd
+                    http://symfony.com/schema/dic/symfony
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+
+                <parameters>
+                    <parameter key="env(PHP_FILE)">../config/.runtime-evaluated.php</parameter>
+                </parameters>
+
+                <app auth="%env(require:PHP_FILE)%"/>
+            </container>
+
+        .. code-block:: php
+
+            // config/packages/framework.php
+            $container->setParameter('env(PHP_FILE)', '../config/.runtime-evaluated.php');
+            $container->loadFromExtension('app', [
+                'auth' => '%env(require:AUTH_FILE)%',
+            ]);
+
+    .. versionadded:: 4.3
+
+        The ``require`` processor was introduced in Symfony 4.3.
 
 ``env(trim:FOO)``
     Trims the content of ``FOO`` env var, removing whitespaces from the beginning
@@ -540,6 +595,129 @@ Symfony provides the following env var processors:
 
         The ``default`` processor was introduced in Symfony 4.3.
 
+``env(url:FOO)``
+    Parses an absolute URL and returns its components as an associative array.
+
+    .. code-block:: bash
+
+        # .env
+        MONGODB_URL="mongodb://db_user:db_password@127.0.0.1:27017/db_name"
+
+    .. configuration-block::
+
+        .. code-block:: yaml
+
+            # config/packages/mongodb.yaml
+            mongo_db_bundle:
+                clients:
+                    default:
+                        hosts:
+                            - { host: '%env(key:host:url:MONGODB_URL)%', port: '%env(key:port:url:MONGODB_URL)%' }
+                        username: '%env(key:user:url:MONGODB_URL)%'
+                        password: '%env(key:pass:url:MONGODB_URL)%'
+                connections:
+                    default:
+                        database_name: '%env(key:path:url:MONGODB_URL)%'
+
+        .. code-block:: xml
+
+            <!-- config/packages/mongodb.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+                <mongodb:config>
+                    <mongodb:client name="default" username="%env(key:user:url:MONGODB_URL)%" password="%env(key:pass:url:MONGODB_URL)%">
+                        <mongodb:host host="%env(key:host:url:MONGODB_URL)%" port="%env(key:port:url:MONGODB_URL)%"/>
+                    </mongodb:client>
+                    <mongodb:connections name="default" database_name="%env(key:path:url:MONGODB_URL)%"/>
+                </mongodb:config>
+            </container>
+
+        .. code-block:: php
+
+            // config/packages/mongodb.php
+            $container->loadFromExtension('mongodb', [
+                'clients' => [
+                    'default' => [
+                        'hosts' => [
+                            [
+                                'host' => '%env(key:host:url:MONGODB_URL)%',
+                                'port' => '%env(key:port:url:MONGODB_URL)%',
+                            ],
+                        ],
+                        'username' => '%env(key:user:url:MONGODB_URL)%',
+                        'password' => '%env(key:pass:url:MONGODB_URL)%',
+                    ],
+                ],
+                'connections' => [
+                    'default' => [
+                        'database_name' => '%env(key:path:url:MONGODB_URL)%',
+                    ],
+                ],
+            ]);
+
+    .. caution::
+
+        In order to ease extraction of the resource from the URL, the leading
+        ``/`` is trimmed from the ``path`` component.
+
+    .. versionadded:: 4.3
+
+        The ``url`` processor was introduced in Symfony 4.3.
+
+``env(query_string:FOO)``
+    Parses the query string part of the given URL and returns its components as
+    an associative array.
+
+    .. code-block:: bash
+
+        # .env
+        MONGODB_URL="mongodb://db_user:db_password@127.0.0.1:27017/db_name?timeout=3000"
+
+    .. configuration-block::
+
+        .. code-block:: yaml
+
+            # config/packages/mongodb.yaml
+            mongo_db_bundle:
+                clients:
+                    default:
+                        # ...
+                        connectTimeoutMS: '%env(int:key:timeout:query_string:MONGODB_URL)%'
+
+        .. code-block:: xml
+
+            <!-- config/packages/mongodb.xml -->
+            <?xml version="1.0" encoding="UTF-8" ?>
+            <container xmlns="http://symfony.com/schema/dic/services"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://symfony.com/schema/dic/services
+                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+                <mongodb:config>
+                    <mongodb:client name="default" connectTimeoutMS="%env(int:key:timeout:query_string:MONGODB_URL)%"/>
+                </mongodb:config>
+            </container>
+
+        .. code-block:: php
+
+            // config/packages/mongodb.php
+            $container->loadFromExtension('mongodb', [
+                'clients' => [
+                    'default' => [
+                        // ...
+                        'connectTimeoutMS' => '%env(int:key:timeout:query_string:MONGODB_URL)%',
+                    ],
+                ],
+            ]);
+
+    .. versionadded:: 4.3
+
+        The ``query_string`` processor was introduced in Symfony 4.3.
+
 It is also possible to combine any number of processors:
 
 .. code-block:: yaml
@@ -612,4 +790,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 4d5a93c25b18f2e3546c1dcf9c8237421a067815
+.. revision: 947f246eef06e06dc5198ee8429c542a6c318193

@@ -83,7 +83,7 @@ Now, you can start fixing the notices:
 
     Remaining deprecation notices (6)
 
-    The "request" service is deprecated and will be removed in 3.0. Add a typehint for
+    The "request" service is deprecated and will be removed in 3.0. Add a type-hint for
     Symfony\Component\HttpFoundation\Request to your controller parameters to retrieve the
     request instead: 6x
         3x in PageAdminTest::testPageShow from Symfony\Cmf\SimpleCmsBundle\Tests\WebTest\Admin
@@ -163,4 +163,4 @@ This takes some work, but is optional. For details, see :ref:`upgrade-to-flex`.
 .. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 688ecbac0590ea407fbe3c941c4b4c5031a78c2b

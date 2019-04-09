@@ -77,7 +77,6 @@ Suppose you need to access the :ref:`EntityManager <doctrine-entity-manager>` ob
 so that you can make a query. First, add this as an argument to your form class::
 
     // src/Form/TaskType.php
-
     use Doctrine\ORM\EntityManagerInterface;
     // ...
 
@@ -145,4 +144,4 @@ at all: Symfony is smart enough to load the ``TaskType`` from the container.
 Read :ref:`form-field-service` for more information.
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9

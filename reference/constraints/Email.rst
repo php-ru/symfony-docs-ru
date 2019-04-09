@@ -36,7 +36,7 @@ Basic Usage
              *     checkMX = true
              * )
              */
-             protected $email;
+            protected $email;
         }
 
     .. code-block:: yaml
@@ -96,7 +96,7 @@ checkHost
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     This option was deprecated in Symfony 4.2.
 
@@ -109,7 +109,7 @@ checkMX
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     This option was deprecated in Symfony 4.2.
 
@@ -173,4 +173,4 @@ This matches the pattern used for the `HTML5 email input element`_.
 .. _HTML5 email input element: https://www.w3.org/TR/html5/sec-forms.html#email-state-typeemail
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

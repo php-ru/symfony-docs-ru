@@ -19,8 +19,6 @@ Installation
 
     $ composer require symfony/console
 
-Alternatively, you can clone the `<https://github.com/symfony/console>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Creating a Console Application
@@ -71,4 +69,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/console
 
 .. ready: no
-.. revision: 4185aa85186e84d16082cd863c0a070a5fb920ee
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

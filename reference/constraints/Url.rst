@@ -33,7 +33,7 @@ Basic Usage
             /**
              * @Assert\Url
              */
-             protected $bioUrl;
+            protected $bioUrl;
         }
 
     .. code-block:: yaml
@@ -85,7 +85,7 @@ checkDNS
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.1
+.. deprecated:: 4.1
 
     This option was deprecated in Symfony 4.1 and will be removed in Symfony 5.0,
     because checking the DNS records is not reliable enough to validate the
@@ -167,7 +167,7 @@ dnsMessage
 
 **type**: ``string`` **default**: ``The host could not be resolved.``
 
-.. versionadded:: 4.1
+.. deprecated:: 4.1
 
     This option was deprecated in Symfony 4.1 and will be removed in Symfony 5.0,
     because checking the DNS records is not reliable enough to validate the
@@ -193,7 +193,7 @@ DNS check failed.
              *    dnsMessage = "The host '{{ value }}' could not be resolved."
              * )
              */
-             protected $bioUrl;
+            protected $bioUrl;
         }
 
     .. code-block:: yaml
@@ -272,7 +272,7 @@ Parameter        Description
              *    message = "The url '{{ value }}' is not a valid url",
              * )
              */
-             protected $bioUrl;
+            protected $bioUrl;
         }
 
     .. code-block:: yaml
@@ -346,7 +346,7 @@ the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
              *    protocols = {"http", "https", "ftp"}
              * )
              */
-             protected $bioUrl;
+            protected $bioUrl;
         }
 
     .. code-block:: yaml
@@ -421,7 +421,7 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
              *    relativeProtocol = true
              * )
              */
-             protected $bioUrl;
+            protected $bioUrl;
         }
 
     .. code-block:: yaml
@@ -468,4 +468,4 @@ also relative URLs that contain no protocol (e.g. ``//example.com``).
         }
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

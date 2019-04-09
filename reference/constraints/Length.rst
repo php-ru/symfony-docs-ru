@@ -49,7 +49,7 @@ and "50", you might add the following:
              *      maxMessage = "Your first name cannot be longer than {{ limit }} characters"
              * )
              */
-             protected $firstName;
+            protected $firstName;
         }
 
     .. code-block:: yaml
@@ -101,8 +101,8 @@ and "50", you might add the following:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\Length([
-                    'min'        => 2,
-                    'max'        => 50,
+                    'min' => 2,
+                    'max' => 50,
                     'minMessage' => 'Your first name must be at least {{ limit }} characters long',
                     'maxMessage' => 'Your first name cannot be longer than {{ limit }} characters',
                 ]));
@@ -216,4 +216,4 @@ Parameter          Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

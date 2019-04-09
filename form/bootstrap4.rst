@@ -66,7 +66,7 @@ configuration:
 If you prefer to apply the Bootstrap styles on a form to form basis, include the
 ``form_theme`` tag in the templates where those forms are used:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# ... #}
     {# this tag only applies to the forms defined in this template #}
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 25b242e827a68c224859e966728ad262bfa303f3

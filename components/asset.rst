@@ -46,8 +46,6 @@ Installation
 
     $ composer require symfony/asset
 
-Alternatively, you can clone the `<https://github.com/symfony/asset>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -405,4 +403,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

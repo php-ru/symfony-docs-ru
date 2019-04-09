@@ -46,7 +46,7 @@ Install and run it with:
 
 .. code-block:: terminal
 
-    $ composer require server --dev
+    $ composer require --dev server
     $ php bin/console server:start
 
 Try your new app by going to ``http://localhost:8000`` in a browser!
@@ -200,4 +200,4 @@ Keep reading with :doc:`/quick_tour/flex_recipes`.
 .. _`Composer`: https://getcomposer.org/
 
 .. ready: no
-.. revision: a49109f32ef4de3d323ef6e97af3b2ed1a866c97
+.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa

@@ -40,7 +40,6 @@ brevity) to explain how to set up and use the ``ResolveTargetEntityListener``.
 A Customer entity::
 
     // src/Entity/Customer.php
-
     namespace App\Entity;
 
     use Doctrine\ORM\Mapping as ORM;
@@ -60,10 +59,9 @@ A Customer entity::
 An Invoice entity::
 
     // src/Acme/InvoiceBundle/Entity/Invoice.php
-
     namespace Acme\InvoiceBundle\Entity;
 
-    use Doctrine\ORM\Mapping AS ORM;
+    use Doctrine\ORM\Mapping as ORM;
     use Acme\InvoiceBundle\Model\InvoiceSubjectInterface;
 
     /**
@@ -84,7 +82,6 @@ An Invoice entity::
 An InvoiceSubjectInterface::
 
     // src/Acme/InvoiceBundle/Model/InvoiceSubjectInterface.php
-
     namespace Acme\InvoiceBundle\Model;
 
     /**
@@ -164,4 +161,4 @@ define relationships between different objects. By using this method,
 your bundles will end up being easier to maintain independently.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9

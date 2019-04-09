@@ -230,7 +230,7 @@ Finally, configure your ``firewalls`` key in ``security.yaml`` to use this authe
 
         // config/packages/security.php
 
-        // ..
+        // ...
         use App\Security\TokenAuthenticator;
 
         $container->loadFromExtension('security', [
@@ -514,4 +514,4 @@ Frequently Asked Questions
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: ed6fbfb90a9a1d946ff81ea46cf3c87605990908

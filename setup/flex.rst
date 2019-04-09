@@ -239,7 +239,7 @@ manual steps:
 
 #. Move the original PHP source code from ``src/AppBundle/*``, except bundle
    specific files (like ``AppBundle.php`` and ``DependencyInjection/``), to
-   ``src/``. Remove ``src/AppBundle/``.
+   ``src/``.
 
    In addition to moving the files, update the ``autoload`` and ``autoload-dev``
    values of the ``composer.json`` file as `shown in this example`_ to use
@@ -257,6 +257,10 @@ manual steps:
 #. Move the source of the assets (e.g. the SCSS files) to ``assets/`` and use
    :doc:`Webpack Encore </frontend>` to manage and compile them.
 
+#. ``SYMFONY_DEBUG`` and ``SYMFONY_ENV`` environment variables were replaced by
+   ``APP_DEBUG`` and ``APP_ENV``. Copy their values to the new vars and then remove
+   the former ones.
+
 #. Create the new ``public/index.php`` front controller
    `copying Symfony's index.php source`_ and, if you made any customization in
    your ``web/app.php`` and ``web/app_dev.php`` files, copy those changes into
@@ -265,8 +269,17 @@ manual steps:
 #. Update the ``bin/console`` script `copying Symfony's bin/console source`_
    and changing anything according to your original console script.
 
+#. Remove ``src/AppBundle/``.
+
+#. Move the original source code from ``src/{App,...}Bundle/`` to ``src/`` and
+   update the namespaces of every PHP file to be ``App\...`` (advanced IDEs can do
+   this automatically).
+
 #. Remove the ``bin/symfony_requirements`` script and if you need a replacement
    for it, use the new `Symfony Requirements Checker`_.
+
+#. Update the ``.gitignore`` file to replace the existing ``var/logs/`` entry
+   by ``var/log/``, which is the new name for the log directory.
 
 Customizing Flex Paths
 ----------------------
@@ -312,4 +325,4 @@ manually after a recipe is installed.
 .. _`Symfony Requirements Checker`: https://github.com/symfony/requirements-checker
 
 .. ready: no
-.. revision: 042f44461c8f7edfd9d99ac5e6973d4d94688260
+.. revision: 765d692d890d687505d1b2ad3c6bb7233dd11549

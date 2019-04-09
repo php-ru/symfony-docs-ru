@@ -16,27 +16,25 @@ Given this translation message:
 
 .. code-block:: yaml
 
-    # translations/messages.en.yml
+    # translations/messages.en.yaml
     form.order.id.placeholder: 'Enter unique identifier of the order to %company%'
     form.order.id.title: 'This will be the reference in communications with %company%'
 
-You can specify the placeholder values as follows:
+You can specify the placeholder values as follows::
 
-.. code-block:: php
-
-    $builder->add('id', null, array(
-        'attr' => array(
+    $builder->add('id', null, [
+        'attr' => [
             'placeholder' => 'form.order.id.placeholder',
             'title' => 'form.order.id.title',
-        ),
+        ],
         'attr_translation_parameters' => [
-            '%company%' => 'ACME Inc.'
-        ]
-    ));
+            '%company%' => 'ACME Inc.',
+        ],
+    ]);
 
 The ``attr_translation_parameters`` option of children fields is merged with the
 same option of their parents, so children can reuse and/or override any of the
 parent placeholders.
 
 .. ready: no
-.. revision: 0a42ca714cd2c4b889779e13fcc25b549168e311
+.. revision: 8c4b4c0c6ee2437597a45bf535cb1a5b33ae8d88

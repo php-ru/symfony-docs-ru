@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/property-access
 
-Alternatively, you can clone the `<https://github.com/symfony/property-access>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -167,6 +165,36 @@ getters, this means that you can do something like this::
     }
 
 This will produce: ``He is an author``
+
+Accessing a non Existing Property Path
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: 4.3
+
+    The ``disableExceptionOnInvalidPropertyPath()`` method was introduced in
+    Symfony 4.3.
+
+By default a :class:`Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException`
+is thrown if the property path passed to :method:`PropertyAccessor::getValue<Symfony\\Component\\PropertyAccess\\PropertyAccessor::getValue>`
+does not exist. You can change this behaviour using the
+:method:`Symfony\\Component\\PropertyAccess\\PropertyAccessorBuilder::disableExceptionOnInvalidPropertyPath`
+method::
+
+    // ...
+    class Person
+    {
+        public $name;
+    }
+
+    $person = new Person();
+
+    $propertyAccessor = PropertyAccess::createPropertyAccessorBuilder()
+        ->disableExceptionOnInvalidPropertyPath()
+        ->getPropertyAccessor();
+
+    // instead of throwing an exception the following code returns null
+    $value = $propertyAccessor->getValue($person, 'birthday');
+
 
 Magic ``__get()`` Method
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -467,4 +495,4 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb
+.. revision: 98dfd5d3db5f199def30e34abc40ebc7009d13c5

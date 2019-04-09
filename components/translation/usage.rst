@@ -67,15 +67,15 @@ is done just as before:
             </file>
         </xliff>
 
+    .. code-block:: yaml
+
+        'Hello %name%': Bonjour %name%
+
     .. code-block:: php
 
         return [
             'Hello %name%' => 'Bonjour %name%',
         ];
-
-    .. code-block:: yaml
-
-        'Hello %name%': Bonjour %name%
 
 .. note::
 
@@ -431,7 +431,7 @@ loaded/dumped when using this component inside a Symfony application:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="UTF-8"?>
     <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
            srcLang="fr-FR" trgLang="en-US">
       <file id="messages.en_US">
@@ -476,4 +476,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: 60142c53315ba35610e4d58486895b8da1606054
+.. revision: 3b335321c5cfae02df1bff5cec35eb30fb823a49

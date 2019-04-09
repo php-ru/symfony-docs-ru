@@ -153,7 +153,7 @@ it a custom message:
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\Regex([
                     'pattern' => '/\d/',
-                    'match'   => false,
+                    'match' => false,
                     'message' => 'Your name cannot contain a number',
                 ]));
             }
@@ -243,7 +243,7 @@ need to specify the HTML5 compatible pattern in the ``htmlPattern`` option:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('name', new Assert\Regex([
-                    'pattern'     => '/^[a-z]+$/i',
+                    'pattern' => '/^[a-z]+$/i',
                     'htmlPattern' => '^[a-zA-Z]+$',
                 ]));
             }
@@ -290,4 +290,4 @@ fail if the input string *does* match this pattern.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

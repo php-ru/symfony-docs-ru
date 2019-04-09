@@ -5,6 +5,11 @@ Validates that a particular field (or fields) in a Doctrine entity is (are)
 unique. This is commonly used, for example, to prevent a new user to register
 using an email address that already exists in the system.
 
+.. seealso::
+
+    If you want to validate that all the elements of the collection are unique
+    use the :doc:`Unique constraint </reference/constraints/Unique>`.
+
 ==========  ===================================================================
 Applies to  :ref:`class <validation-class-target>`
 Options     - `em`_
@@ -47,14 +52,10 @@ between all of the constraints in your user table:
         class Author
         {
             /**
-             * @var string $email
-             *
              * @ORM\Column(name="email", type="string", length=255, unique=true)
              * @Assert\Email
              */
             protected $email;
-
-            // ...
         }
 
     .. code-block:: yaml
@@ -100,7 +101,7 @@ between all of the constraints in your user table:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addConstraint(new UniqueEntity([
-                    'fields'  => 'email',
+                    'fields' => 'email',
                 ]));
 
                 $metadata->addPropertyConstraint('email', new Assert\Email());
@@ -227,9 +228,9 @@ Consider this example:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addConstraint(new UniqueEntity([
-                    'fields'    => ['host', 'port'],
+                    'fields' => ['host', 'port'],
                     'errorPath' => 'port',
-                    'message'   => 'This port is already in use on that host.',
+                    'message' => 'This port is already in use on that host.',
                 ]));
             }
         }
@@ -302,4 +303,4 @@ fields configured in the ``fields`` option). The method should return a
 .. _`countable PHP variable`: https://php.net/manual/function.is-countable.php
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 1f89237c7e903d3b88ab28b106f2541ddd650765

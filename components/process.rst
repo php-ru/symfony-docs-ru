@@ -14,7 +14,6 @@ Installation
 
     $ composer require symfony/process
 
-Alternatively, you can clone the `<https://github.com/symfony/process>`_ repository.
 
 .. include:: /components/require_autoload.rst.inc
 
@@ -485,4 +484,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: 91697b87d38dcd8bf2358846861b497b47eed8be
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

@@ -240,10 +240,9 @@ Template files live in the ``templates/`` directory, which was created for you a
 when you installed Twig. Create a new ``templates/lucky`` directory with a new
 ``number.html.twig`` file inside:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# templates/lucky/number.html.twig #}
-
     <h1>Your lucky number is {{ number }}</h1>
 
 The ``{{ number }}`` syntax is used to *print* variables in Twig. Refresh your browser
@@ -302,7 +301,7 @@ What's Next?
 ------------
 
 Congrats! You're already starting to master Symfony and learn a whole new
-way of building beautiful, functional, fast and maintainable apps.
+way of building beautiful, functional, fast and maintainable applications.
 
 Ok, time to finish mastering the fundamentals by reading these articles:
 
@@ -338,4 +337,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Flex recipes`: https://flex.symfony.com
 
 .. ready: no
-.. revision: a8058395e7d0ce3b1e1454a9a7724fdf230b2a9b
+.. revision: c89ece4b19e99a6eb587c7af8eaff01c95213b36

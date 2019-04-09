@@ -42,7 +42,7 @@ you might add the following:
              *      maxMessage = "You cannot specify more than {{ limit }} emails"
              * )
              */
-             protected $emails = [];
+            protected $emails = [];
         }
 
     .. code-block:: yaml
@@ -90,8 +90,8 @@ you might add the following:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('emails', new Assert\Count([
-                    'min'        => 1,
-                    'max'        => 5,
+                    'min' => 1,
+                    'max' => 5,
                     'minMessage' => 'You must specify at least one email',
                     'maxMessage' => 'You cannot specify more than {{ limit }} emails',
                 ]));
@@ -173,4 +173,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

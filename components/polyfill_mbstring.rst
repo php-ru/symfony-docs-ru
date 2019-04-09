@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/polyfill-mbstring
 
-Alternatively, you can clone the `<https://github.com/symfony/polyfill-mbstring>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -78,4 +76,4 @@ Provided Functions
 .. _`PHP mbstring extension`: https://secure.php.net/manual/en/book.mbstring.php
 
 .. ready: no
-.. revision: debea6645af0e4750a230dd536eaf5d5f889f210
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

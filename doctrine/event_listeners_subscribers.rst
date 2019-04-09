@@ -241,8 +241,8 @@ numbers mean that listeners are invoked earlier.
     .. code-block:: php
 
         // config/services.php
-        use AppBundle\EventListener\MyHighPriorityListener;
-        use AppBundle\EventListener\MyLowPriorityListener;
+        use App\EventListener\MyHighPriorityListener;
+        use App\EventListener\MyLowPriorityListener;
 
         $container
             ->autowire(MyHighPriorityListener::class)
@@ -258,4 +258,4 @@ numbers mean that listeners are invoked earlier.
 .. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 120dbaabe0ab155da37345484f366ae1a2d13e81

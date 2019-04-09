@@ -9,7 +9,7 @@ The Mercure Component
     browsers and other HTTP clients in a convenient, fast, reliable
     and battery-friendly way.
     It is especially useful to publish real-time updates of resources served
-    through web APIs, to reactive web and mobile apps.
+    through web APIs, to reactive web and mobile applications.
 
 The Mercure Component implements the "publisher" part of the Mercure Protocol.
 
@@ -19,8 +19,6 @@ Installation
 .. code-block:: terminal
 
     $ composer require symfony/mercure
-
-Alternatively, you can clone the `<https://github.com/symfony/mercure>`_ repository.
 
 .. include:: /components/require_autoload.rst.inc
 
@@ -48,4 +46,4 @@ framework.
 .. _`Mercure`: https://mercure.rocks
 
 .. ready: no
-.. revision: 9c310730324eada7357f438ae96a9535af6b0d7a
+.. revision: 928832ad216f9abba7be7798245dc5e1fe6e9040

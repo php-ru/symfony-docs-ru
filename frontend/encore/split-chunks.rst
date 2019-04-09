@@ -33,7 +33,7 @@ Twig functions from WebpackEncoreBundle, you don't need to do anything else! The
 functions automatically read this file and render as many ``script`` or ``link``
 tags as needed:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {#
         May now render multiple script tags:
@@ -64,4 +64,4 @@ this plugin with the ``configureSplitChunks()`` function:
 .. _`SplitChunksPlugin from Webpack`: https://webpack.js.org/plugins/split-chunks-plugin/
 
 .. ready: no
-.. revision: 97fbaa4bb68d9fe88a5f2bf206090ac609d56679
+.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19

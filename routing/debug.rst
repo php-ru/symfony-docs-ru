@@ -6,8 +6,8 @@ How to Visualize And Debug Routes
 
 While adding and customizing routes, it's helpful to be able to visualize
 and get detailed information about your routes. A great way to see every
-route in your application is via the ``debug:router`` console command, which
-lists *all* the configured routes in your application:
+route in your application is via the ``debug:router`` console command, which,
+by default, lists *all* the configured routes in your application:
 
 .. code-block:: terminal
 
@@ -48,5 +48,27 @@ which route is associated with the given URL:
 
     Route "blog_show" matches
 
+    +--------------+---------------------------------------------------------+
+    | Property     | Value                                                   |
+    +--------------+---------------------------------------------------------+
+    | Route Name   | blog_show                                               |
+    | Path         | /blog/{slug}                                            |
+    | Path Regex   | #^/blog/(?P<slug>[^/]++)$#sDu                           |
+    | Host         | ANY                                                     |
+    | Host Regex   |                                                         |
+    | Scheme       | ANY                                                     |
+    | Method       | ANY                                                     |
+    | Requirements | NO CUSTOM                                               |
+    | Class        | Symfony\Component\Routing\Route                         |
+    | Defaults     | _controller: App\Controller\BlogController:show         |
+    | Options      | compiler_class: Symfony\Component\Routing\RouteCompiler |
+    |              | utf8: true                                              |
+    | Condition    | context.getMethod() in ['GET', 'HEAD', 'POST']          |
+    +--------------+---------------------------------------------------------+
+
+.. versionadded:: 4.3
+
+    The ``Condition`` was added to the router debug output in Symfony 4.3.
+
 .. ready: no
-.. revision: 64062ed7e7c818e00b05208ce1a4b04fc52f2d18
+.. revision: 2a29904c0700e2ef602f0636a57d9249139874d1

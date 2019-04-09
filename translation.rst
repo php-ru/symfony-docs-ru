@@ -230,7 +230,7 @@ method or the ``transchoice`` tag/filter in your :ref:`template <translation-tag
 For much more information, see :ref:`component-translation-pluralization`
 in the Translation component documentation.
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     In Symfony 4.2 the ``Translator::transChoice()`` method was deprecated in
     favor of using ``Translator::trans()`` with ``%count%`` as the parameter
@@ -307,18 +307,18 @@ texts* and complex expressions:
     that your translated message is *not* output escaped, you must apply
     the ``raw`` filter after the translation filter:
 
-    .. code-block:: twig
+    .. code-block:: html+twig
 
-            {# text translated between tags is never escaped #}
-            {% trans %}
-                <h3>foo</h3>
-            {% endtrans %}
+        {# text translated between tags is never escaped #}
+        {% trans %}
+            <h3>foo</h3>
+        {% endtrans %}
 
-            {% set message = '<h3>foo</h3>' %}
+        {% set message = '<h3>foo</h3>' %}
 
-            {# strings and variables translated via a filter are escaped by default #}
-            {{ message|trans|raw }}
-            {{ '<h3>bar</h3>'|trans|raw }}
+        {# strings and variables translated via a filter are escaped by default #}
+        {{ message|trans|raw }}
+        {{ '<h3>bar</h3>'|trans|raw }}
 
 .. tip::
 
@@ -387,7 +387,7 @@ Symfony looks for message files (i.e. translations) in the following default loc
 
 * the ``Resources/translations/`` directory inside of any bundle.
 
-.. versionadded:: 4.2
+.. deprecated:: 4.2
 
     Using the ``src/Resources/<bundle name>/translations/`` directory to store
     translations was deprecated in Symfony 4.2. Use instead the directory
@@ -567,4 +567,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 25b242e827a68c224859e966728ad262bfa303f3

@@ -69,7 +69,7 @@ Below is the configuration for the pull request state machine.
     .. code-block:: xml
 
         <!-- config/packages/workflow.xml -->
-        <?xml version="1.0" encoding="utf-8" ?>
+        <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
@@ -209,6 +209,36 @@ you can get this state machine by injecting the Workflow registry service::
         public function someMethod($subject)
         {
             $stateMachine = $this->workflows->get($subject, 'pull_request');
+            $stateMachine->apply($subject, 'wait_for_review');
+            // ...
+        }
+
+        // ...
+    }
+
+Symfony automatically creates a service for each workflow (:class:`Symfony\\Component\\Workflow\\Workflow`)
+or state machine (:class:`Symfony\\Component\\Workflow\\StateMachine`) you
+have defined in your configuration. This means that you can use ``workflow.pull_request``
+or ``state_machine.pull_request`` respectively in your service definitions
+to access the proper service::
+
+    // ...
+    use Symfony\Component\Workflow\StateMachine;
+
+    class SomeService
+    {
+        private $stateMachine;
+
+        public function __construct(StateMachine $stateMachine)
+        {
+            $this->stateMachine = $stateMachine;
+        }
+
+        public function someMethod($subject)
+        {
+            $this->stateMachine->apply($subject, 'wait_for_review', [
+                'log_comment' => 'My logging comment for the wait for review transition.',
+            ]);
             // ...
         }
 
@@ -218,4 +248,4 @@ you can get this state machine by injecting the Workflow registry service::
 .. _Petri net: https://en.wikipedia.org/wiki/Petri_net
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: e1e4efcd707cfa7489d6df4ba47a6d1be4a308ea

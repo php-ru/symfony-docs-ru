@@ -16,7 +16,7 @@ Validator   :class:`Symfony\\Component\\Validator\\Constraints\\TimeValidator`
 Basic Usage
 -----------
 
-Suppose you have an Event class, with a ``startAt`` field that is the time
+Suppose you have an Event class, with a ``startsAt`` field that is the time
 of the day when the event starts:
 
 .. configuration-block::
@@ -34,7 +34,7 @@ of the day when the event starts:
              * @Assert\Time
              * @var string A "H:i:s" formatted value
              */
-             protected $startsAt;
+            protected $startsAt;
         }
 
     .. code-block:: yaml
@@ -106,4 +106,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c

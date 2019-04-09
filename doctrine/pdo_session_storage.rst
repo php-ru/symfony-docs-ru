@@ -68,8 +68,8 @@ To use it, first register a new handler service:
 
 .. tip::
 
-    Configure the database credentials as
-    :doc:`parameters defined with environment variables </configuration/external_parameters>`
+    Configure the database credentials
+    :doc:`using environment variables in the config file </configuration/environment_variables>`
     to make your application more secure.
 
 Next, tell Symfony to use your service as the session handler:
@@ -150,7 +150,6 @@ a second array argument to ``PdoSessionHandler``:
     .. code-block:: php
 
         // config/services.php
-
         use Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler;
         // ...
 
@@ -276,4 +275,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9

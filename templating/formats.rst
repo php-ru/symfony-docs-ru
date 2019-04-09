@@ -51,7 +51,7 @@ be configured so that ``/about-us`` sets the request format to ``html`` while
 special ``_format`` placeholder in your route definition::
 
     /**
-     * @Route("/{slug}.{_format}", defaults={"_format"="html"})
+     * @Route("/{slug}.{_format}", defaults={"_format"="html"}, requirements={"_format"="html|xml"}))
      */
     public function show(Request $request, $slug)
     {
@@ -81,4 +81,4 @@ format:
 .. _Request Format Listener: http://symfony.com/doc/current/bundles/FOSRestBundle/3-listener-support.html#format-listener
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: 765d692d890d687505d1b2ad3c6bb7233dd11549

@@ -78,6 +78,7 @@ Displaying Clickable Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionadded:: 4.3
+
     The feature to display clickable links was introduced in Symfony 4.3.
 
 Commands can use the special ``<href>`` tag to display links similar to the
@@ -98,4 +99,4 @@ will be lost.
 .. _`list of terminal emulators that support links`: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
 
 .. ready: no
-.. revision: 23b409b325e675a8d7e1894cc8300f8775c3b235
+.. revision: 8c4b4c0c6ee2437597a45bf535cb1a5b33ae8d88

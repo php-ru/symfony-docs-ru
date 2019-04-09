@@ -12,12 +12,11 @@ the available blog posts for this imaginary blog application:
     .. code-block:: php-annotations
 
         // src/Controller/BlogController.php
+        use Symfony\Component\Routing\Annotation\Route;
 
         // ...
         class BlogController extends AbstractController
         {
-            // ...
-
             /**
              * @Route("/blog")
              */
@@ -25,6 +24,7 @@ the available blog posts for this imaginary blog application:
             {
                 // ...
             }
+            // ...
         }
 
     .. code-block:: yaml
@@ -202,4 +202,4 @@ URL          Route     Parameters
     with a trailing slash (i.e. ``/blog/`` will not match, ``/blog`` will match).
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 1601a50ec08a3563b9b46d1a06ab6ad1193cd1d3

@@ -21,7 +21,7 @@ Make sure MakerBundle is installed:
 
 .. code-block:: terminal
 
-    $ composer require symfony/maker-bundle --dev
+    $ composer require --dev symfony/maker-bundle
 
 If you need any other dependencies, MakerBundle will tell you when you run each
 command.
@@ -50,6 +50,7 @@ To easiest way to build your registration form is by using the ``make:registrati
 command:
 
 .. versionadded:: 1.11
+
     The ``make:registration-form`` was introduced in MakerBundle 1.11.0.
 
 .. code-block:: terminal
@@ -184,7 +185,7 @@ register.html.twig
 
 The template renders the form:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {% extends 'base.html.twig' %}
 
@@ -246,4 +247,4 @@ controller to take advantage of this.
 .. _`CVE-2013-5750`: https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form
 
 .. ready: no
-.. revision: 89bc2db55937b6743c025088abcb749d77b5ceb9
+.. revision: a461f58179deffbc822c90411f732150630d3cc0

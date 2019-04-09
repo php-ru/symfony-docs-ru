@@ -208,7 +208,7 @@ percent signs - e.g. ``%locale%``.
 .. seealso::
 
     You can also set parameters dynamically, like from environment variables.
-    See :doc:`/configuration/external_parameters`.
+    See :doc:`/configuration/environment_variables`.
 
 For more information about parameters - including how to reference them from inside
 a controller - see :ref:`service-container-parameters`.
@@ -319,4 +319,4 @@ Learn more
 .. _`Incenteev Parameter Handler`: https://github.com/Incenteev/ParameterHandler
 
 .. ready: no
-.. revision: 3344a4f63bd37749354be617879b24a78cedab72
+.. revision: e433e533676561e0a5c603238a7563ed2a850dcd

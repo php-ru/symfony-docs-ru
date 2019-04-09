@@ -30,8 +30,6 @@ Installation
 
     $ composer require --dev "symfony/phpunit-bridge:*"
 
-Alternatively, you can clone the `<https://github.com/symfony/phpunit-bridge>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 .. note::
@@ -49,7 +47,7 @@ to register a new `test listener`_ called ``SymfonyTestsListener``:
 
     <!-- http://phpunit.de/manual/6.0/en/appendixes.configuration.html -->
     <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.0/phpunit.xsd"
+             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.0/phpunit.xsd"
     >
 
         <!-- ... -->
@@ -173,7 +171,7 @@ message, enclosed with ``/``. For example, with:
 
     <!-- http://phpunit.de/manual/6.0/en/appendixes.configuration.html -->
     <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.0/phpunit.xsd"
+             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.0/phpunit.xsd"
     >
 
         <!-- ... -->
@@ -525,7 +523,7 @@ namespaces in the ``phpunit.xml`` file, as done for example in the
 
     <!-- http://phpunit.de/manual/4.1/en/appendixes.configuration.html -->
     <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/4.1/phpunit.xsd"
     >
 
         <!-- ... -->
@@ -605,11 +603,11 @@ If you have installed the bridge through Composer, you can run it by calling e.g
 
     It's also possible to set this env var in the ``phpunit.xml.dist`` file.
 
-Code coverage listener
+Code Coverage Listener
 ----------------------
 
 By default, the code coverage is computed with the following rule: if a line of
-code is executed, then it is marked as covered. And the test which executes a
+code is executed, then it is marked as covered. The test which executes a
 line of code is therefore marked as "covering the line of code". This can be
 misleading.
 
@@ -664,13 +662,13 @@ the ``Test`` part of the classname: ``My\Namespace\Tests\FooTest`` ->
 Installation
 ~~~~~~~~~~~~
 
-Add the following configuration to the ``phpunit.xml.dist`` file
+Add the following configuration to the ``phpunit.xml.dist`` file:
 
 .. code-block:: xml
 
     <!-- http://phpunit.de/manual/6.0/en/appendixes.configuration.html -->
     <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/6.0/phpunit.xsd"
+             xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.0/phpunit.xsd"
     >
 
         <!-- ... -->
@@ -724,4 +722,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08

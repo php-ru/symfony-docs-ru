@@ -37,7 +37,7 @@ Basic Usage
              *     canonicalize = true
              * )
              */
-             protected $locale;
+            protected $locale;
         }
 
     .. code-block:: yaml
@@ -92,7 +92,7 @@ canonicalize
 
 **type**: ``boolean`` **default**: ``false``
 
-.. versionadded:: 4.1
+.. deprecated:: 4.1
 
     Using this option with value ``false`` was deprecated in Symfony 4.1 and it
     will throw an exception in Symfony 5.0. Use ``true`` instead.
@@ -124,4 +124,4 @@ Parameter        Description
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
