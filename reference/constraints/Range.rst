@@ -92,8 +92,8 @@ you might add the following:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('height', new Assert\Range([
-                    'min'        => 120,
-                    'max'        => 180,
+                    'min' => 120,
+                    'max' => 180,
                     'minMessage' => 'You must be at least {{ limit }}cm tall to enter',
                     'maxMessage' => 'You cannot be taller than {{ limit }}cm to enter',
                 ]));
@@ -394,4 +394,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

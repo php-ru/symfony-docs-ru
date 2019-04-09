@@ -92,7 +92,7 @@ or ``jQuery`` to be a global variable. But, when you use Webpack and ``require('
 no global variables are set.
 
 The fix depends on if the error is happening in your code or inside some third-party
-code that you're using. See :doc:`/frontend/encore/legacy-apps` for the fix.
+code that you're using. See :doc:`/frontend/encore/legacy-applications` for the fix.
 
 Uncaught ReferenceError: webpackJsonp is not defined
 ----------------------------------------------------
@@ -170,4 +170,4 @@ running it (e.g. when executing ``yarn encore dev``). Fix this issue calling to
 .. _`Webpack integration in PhpStorm`: https://www.jetbrains.com/help/phpstorm/using-webpack.html
 
 .. ready: no
-.. revision: 334384d7090a12892f69cc89d48a1b411ae63ec9
+.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f

@@ -2,7 +2,7 @@ Code of Conduct: Concrete Example Document
 ==========================================
 
 This is a living document that serves to give concrete examples of
-unwanted behaviour. These examples have all taken place somewhere in the
+unwanted behavior. These examples have all taken place somewhere in the
 PHP community in the past, and are clear code of conduct violations
 according to the Symfony code of conduct.
 
@@ -30,4 +30,4 @@ confirmed by experiences from PHPWomen.
 .. _geek feminism: https://geekfeminism.org/about/code-of-conduct
 
 .. ready: no
-.. revision: cccf8694575d6265bcf1e888c1ad4315fa7c4d9c
+.. revision: 3b961fe970adcbbe021c62496b0248f6009b7c47

@@ -81,7 +81,7 @@ If you want to apply tags automatically for your own services, use the
 
     .. code-block:: xml
 
-        <?xml version="1.0" encoding="utf-8"?>
+        <?xml version="1.0" encoding="UTF-8"?>
         <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
             <services>
                 <!-- this config only applies to the services created by this file -->
@@ -560,4 +560,4 @@ application handlers::
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: f1c624d0f11105f6ddd5446f2cc864d76649fe18

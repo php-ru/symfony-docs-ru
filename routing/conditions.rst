@@ -6,7 +6,7 @@ How to Restrict Route Matching through Conditions
 
 A route can be made to match only certain routing placeholders (via regular
 expressions), HTTP methods, or host names. If you need more flexibility to
-define arbitrary matching logic, use the ``conditions`` routing option:
+define arbitrary matching logic, use the ``condition`` routing setting:
 
 .. configuration-block::
 
@@ -112,4 +112,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: a464d7e0eca7eeae82293fb8116b3707d6fce7b5
+.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc

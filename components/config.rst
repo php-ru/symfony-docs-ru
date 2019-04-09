@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/config
 
-Alternatively, you can clone the `<https://github.com/symfony/config>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Learn More
@@ -35,4 +33,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/config
 
 .. ready: no
-.. revision: 91622722a145ccbcfb17631b79879f71448692f7
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

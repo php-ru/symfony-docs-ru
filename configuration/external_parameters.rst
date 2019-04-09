@@ -44,7 +44,7 @@ variable in your service container configuration, you can reference it using
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal
@@ -122,7 +122,7 @@ of the following:
 
 .. tip::
 
-    .. versionadded:: 3.3
+    .. deprecated:: 3.3
 
         The support of the special ``SYMFONY__`` environment variables was
         deprecated in Symfony 3.3 and it will be removed in 4.0. Instead of
@@ -172,7 +172,7 @@ turn the value of the ``HTTP_PORT`` env var into an integer:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:router http-port="%env(int:HTTP_PORT)%"/>
@@ -213,7 +213,7 @@ Symfony provides the following env var processors:
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(SECRET)">some_secret</parameter>
@@ -253,7 +253,7 @@ Symfony provides the following env var processors:
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(HTTP_METHOD_OVERRIDE)">true</parameter>
@@ -349,7 +349,7 @@ Symfony provides the following env var processors:
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(TRUSTED_HOSTS)">["10.0.0.1", "10.0.0.2"]</parameter>
@@ -377,7 +377,8 @@ Symfony provides the following env var processors:
             # config/packages/sentry.yaml
             parameters:
                 env(HOST): '10.0.0.1'
-                env(SENTRY_DSN): 'http://%env(HOST)%/project'
+                sentry_host: '%env(HOST)%'
+                env(SENTRY_DSN): 'http://%sentry_host%/project'
             sentry:
                 dsn: '%env(resolve:SENTRY_DSN)%'
 
@@ -392,7 +393,8 @@ Symfony provides the following env var processors:
 
                 <parameters>
                     <parameter key="env(HOST)">10.0.0.1</parameter>
-                    <parameter key="env(SENTRY_DSN)">http://%env(HOST)%/project</parameter>
+                    <parameter key="sentry_host">%env(HOST)%</parameter>
+                    <parameter key="env(SENTRY_DSN)">http://%sentry_host%/project</parameter>
                 </parameters>
 
                 <sentry:config dsn="%env(resolve:SENTRY_DSN)%"/>
@@ -402,7 +404,8 @@ Symfony provides the following env var processors:
 
             // config/packages/sentry.php
             $container->setParameter('env(HOST)', '10.0.0.1');
-            $container->setParameter('env(SENTRY_DSN)', 'http://%env(HOST)%/project');
+            $container->setParameter('sentry_host', '%env(HOST)%');
+            $container->setParameter('env(SENTRY_DSN)', 'http://%sentry_host%/project');
             $container->loadFromExtension('sentry', [
                 'dsn' => '%env(resolve:SENTRY_DSN)%',
             ]);
@@ -430,7 +433,7 @@ Symfony provides the following env var processors:
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
                 <parameters>
                     <parameter key="env(AUTH_FILE)">../config/auth.json</parameter>
@@ -551,4 +554,4 @@ the Symfony service container::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3e60b9d4debe0bc8c2e64ad93f93fe561fac2581

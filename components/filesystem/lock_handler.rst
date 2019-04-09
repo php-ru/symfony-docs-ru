@@ -1,7 +1,7 @@
 LockHandler
 ===========
 
-.. versionadded:: 3.4
+.. deprecated:: 3.4
 
     The ``LockHandler`` class was deprecated in Symfony 3.4 and it will be
     removed in Symfony 4.0. Use :ref:`SemaphoreStore <lock-store-semaphore>`
@@ -96,4 +96,4 @@ PHP code will wait indefinitely until the lock is released by another process.
     :method:`Symfony\\Component\\Filesystem\\LockHandler::release` method.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df

@@ -366,7 +366,6 @@ Next, create the template:
 .. code-block:: html+twig
 
     {# app/Resources/views/registration/register.html.twig #}
-
     {{ form_start(form) }}
         {{ form_row(form.username) }}
         {{ form_row(form.email) }}
@@ -458,4 +457,4 @@ us to add validation, even though there is no ``termsAccepted`` property on ``Us
 .. _`bcrypt`: https://en.wikipedia.org/wiki/Bcrypt
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: b4117c51c61954e1d969cbb7d4fc2f3eff356a92

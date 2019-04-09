@@ -6,7 +6,7 @@ The Dotenv Component
 ====================
 
     The Dotenv Component parses ``.env`` files to make environment variables
-    stored in them accessible via ``getenv()``, ``$_ENV`` or ``$_SERVER``.
+    stored in them accessible via ``$_ENV`` or ``$_SERVER``.
 
 .. versionadded:: 3.3
 
@@ -18,8 +18,6 @@ Installation
 .. code-block:: terminal
 
     $ composer require --dev symfony/dotenv
-
-Alternatively, you can clone the `<https://github.com/symfony/dotenv>`_ repository.
 
 .. include:: /components/require_autoload.rst.inc
 
@@ -57,10 +55,10 @@ Given the following ``.env`` file content:
     DB_USER=root
     DB_PASS=pass
 
-Access the value with ``getenv()`` in your code::
+Access the value with ``$_ENV`` in your code::
 
-    $dbUser = getenv('DB_USER');
-    // you can also use ``$_ENV`` or ``$_SERVER``
+    $dbUser = $_ENV['DB_USER'];
+    // you can also use ``$_SERVER``
 
 .. note::
 
@@ -113,4 +111,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 1528faca2603469a4a64d03ccba0d9248c6cf384
+.. revision: 5be35bf75dea1eb80bdd41aa9ce67686b71ebb3e

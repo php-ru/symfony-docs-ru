@@ -13,7 +13,7 @@ command helps you to find these missing or unused translation messages.
 Thanks to the messages extractors, the command will detect the translation
 tag or filter usages in Twig templates:
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {% trans %}Symfony is great{% endtrans %}
 
@@ -37,7 +37,7 @@ It will also detect the following translator usages in PHP templates::
     or expressions are not detected in templates, which means this example
     won't be analyzed:
 
-    .. code-block:: jinja
+    .. code-block:: twig
 
         {% set message = 'Symfony is great' %}
         {{ message|trans }}
@@ -195,4 +195,4 @@ switches:
     $ php bin/console debug:translation en AcmeDemoBundle --only-missing
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: b407409c25db736ef0128251840609f79466dd88

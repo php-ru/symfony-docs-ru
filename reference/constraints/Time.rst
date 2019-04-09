@@ -20,7 +20,7 @@ that follows a valid ``HH:MM:SS`` format.
 Basic Usage
 -----------
 
-Suppose you have an Event class, with a ``startAt`` field that is the time
+Suppose you have an Event class, with a ``startsAt`` field that is the time
 of the day when the event starts:
 
 .. configuration-block::
@@ -37,7 +37,7 @@ of the day when the event starts:
             /**
              * @Assert\Time
              */
-             protected $startsAt;
+            protected $startsAt;
         }
 
     .. code-block:: yaml
@@ -104,4 +104,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

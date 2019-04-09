@@ -19,11 +19,11 @@ If an array, the keys of the ``choices`` array must be used as keys::
             'No' => false,
             'Maybe' => null,
         ],
-        'choice_attr' => function($choiceValue, $key, $value) {
+        'choice_attr' => function($choice, $key, $value) {
             // adds a class like attending_yes, attending_no, etc
             return ['class' => 'attending_'.strtolower($key)];
         },
     ]);
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71

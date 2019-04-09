@@ -51,14 +51,10 @@ your user table:
         class Author
         {
             /**
-             * @var string $email
-             *
              * @ORM\Column(name="email", type="string", length=255, unique=true)
              * @Assert\Email
              */
             protected $email;
-
-            // ...
         }
 
     .. code-block:: yaml
@@ -104,7 +100,7 @@ your user table:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addConstraint(new UniqueEntity([
-                    'fields'  => 'email',
+                    'fields' => 'email',
                 ]));
 
                 $metadata->addPropertyConstraint('email', new Assert\Email());
@@ -285,9 +281,9 @@ Consider this example:
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addConstraint(new UniqueEntity([
-                    'fields'    => ['host', 'port'],
+                    'fields' => ['host', 'port'],
                     'errorPath' => 'port',
-                    'message'   => 'This port is already in use on that host.',
+                    'message' => 'This port is already in use on that host.',
                 ]));
             }
         }
@@ -310,4 +306,4 @@ also has a ``null`` value, validation would fail.
 .. _`countable PHP variable`: https://php.net/manual/function.is-countable.php
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

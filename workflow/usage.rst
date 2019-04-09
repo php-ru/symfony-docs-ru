@@ -55,12 +55,12 @@ like this:
     .. code-block:: xml
 
         <!-- app/config/config.xml -->
-        <?xml version="1.0" encoding="utf-8" ?>
+        <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
         >
 
             <framework:config>
@@ -104,7 +104,6 @@ like this:
     .. code-block:: php
 
         // app/config/config.php
-
         $container->loadFromExtension('framework', [
             // ...
             'workflows' => [
@@ -142,7 +141,7 @@ like this:
             ],
         ]);
 
-.. code-block:: php
+As configured, the following property is used by the marking store::
 
     class BlogPost
     {
@@ -176,7 +175,7 @@ like this:
 With this workflow named ``blog_publishing``, you can get help to decide
 what actions are allowed on a blog post::
 
-    $post = new \AppBundle\Entity\BlogPost();
+    $post = new AppBundle\Entity\BlogPost();
 
     $workflow = $this->container->get('workflow.blog_publishing');
     $workflow->can($post, 'publish'); // False
@@ -339,7 +338,7 @@ See example to make sure no blog post without title is moved to "review"::
     {
         public function guardReview(GuardEvent $event)
         {
-            /** @var \AppBundle\Entity\BlogPost $post */
+            /** @var AppBundle\Entity\BlogPost $post */
             $post = $event->getSubject();
             $title = $post->title;
 
@@ -444,4 +443,4 @@ The following example shows these functions in action:
     {% endif %}
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

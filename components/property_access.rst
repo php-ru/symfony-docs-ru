@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/property-access
 
-Alternatively, you can clone the `<https://github.com/symfony/property-access>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -467,4 +465,4 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

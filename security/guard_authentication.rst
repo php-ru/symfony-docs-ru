@@ -322,7 +322,7 @@ Finally, configure your ``firewalls`` key in ``security.yml`` to use this authen
 
         // app/config/security.php
 
-        // ..
+        // ...
         use AppBundle\Security\TokenAuthenticator;
 
         $container->loadFromExtension('security', [
@@ -630,4 +630,4 @@ Frequently Asked Questions
 .. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: bee41916fed451edd44ec394bb3852ee380254c9

@@ -6,8 +6,8 @@ How to Visualize And Debug Routes
 
 While adding and customizing routes, it's helpful to be able to visualize
 and get detailed information about your routes. A great way to see every
-route in your application is via the ``debug:router`` console command, which
-lists *all* the configured routes in your application:
+route in your application is via the ``debug:router`` console command, which,
+by default, lists *all* the configured routes in your application:
 
 .. code-block:: terminal
 
@@ -41,5 +41,22 @@ which route is associated with the given URL:
 
     Route "blog_show" matches
 
+    +--------------+---------------------------------------------------------+
+    | Property     | Value                                                   |
+    +--------------+---------------------------------------------------------+
+    | Route Name   | blog_show                                               |
+    | Path         | /blog/{slug}                                            |
+    | Path Regex   | #^/blog/(?P<slug>[^/]++)$#sDu                           |
+    | Host         | ANY                                                     |
+    | Host Regex   |                                                         |
+    | Scheme       | ANY                                                     |
+    | Method       | ANY                                                     |
+    | Requirements | NO CUSTOM                                               |
+    | Class        | Symfony\Component\Routing\Route                         |
+    | Defaults     | _controller: App\Controller\BlogController:show         |
+    | Options      | compiler_class: Symfony\Component\Routing\RouteCompiler |
+    |              | utf8: true                                              |
+    +--------------+---------------------------------------------------------+
+
 .. ready: no
-.. revision: ec0075a26c145879b2ef9ab195659929dffa1ed9
+.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc

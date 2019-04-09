@@ -33,8 +33,6 @@ Installation
 
     $ composer require symfony/yaml
 
-Alternatively, you can clone the `<https://github.com/symfony/yaml>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Why?
@@ -415,7 +413,6 @@ First, install the Console component:
 Create a console application with ``lint:yaml`` as its only command::
 
     // lint.php
-
     use Symfony\Component\Console\Application;
     use Symfony\Component\Yaml\Command\LintCommand;
 
@@ -466,4 +463,4 @@ Learn More
 .. _ISO-8601: http://www.iso.org/iso/iso8601
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

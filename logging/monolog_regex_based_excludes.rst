@@ -35,7 +35,7 @@ configuration:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
                 <monolog:handler type="fingers_crossed" name="main" handler="...">
@@ -62,4 +62,4 @@ configuration:
         ]);
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

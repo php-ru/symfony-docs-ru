@@ -403,7 +403,7 @@ has a certain value:
     (``null``, ``true``, ``false``), provide a replacement value in case
     the value is ``*.``
 
-.. code-block:: php
+The following example shows these methods in practice::
 
     $rootNode
         ->children()
@@ -483,7 +483,7 @@ In YAML you may have:
 .. code-block:: yaml
 
     # This value is only used for the search results page.
-    entries_per_page:     25
+    entries_per_page: 25
 
 and in XML:
 
@@ -830,4 +830,4 @@ Otherwise the result is a clean array of configuration values::
     );
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 6b107ba518883744f403844e90712dc6026c7cff

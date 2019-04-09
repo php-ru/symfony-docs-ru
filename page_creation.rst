@@ -141,10 +141,9 @@ Finally, template files should live in the ``app/Resources/views`` directory. Cr
 a new ``app/Resources/views/lucky`` directory with a new ``number.html.twig`` file
 inside:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# app/Resources/views/lucky/number.html.twig #}
-
     <h1>Your lucky number is {{ number }}</h1>
 
 The ``{{ number }}`` syntax is used to *print* variables in Twig. Refresh your browser
@@ -234,7 +233,7 @@ What's Next?
 ------------
 
 Congrats! You're already starting to master Symfony and learn a whole new
-way of building beautiful, functional, fast and maintainable apps.
+way of building beautiful, functional, fast and maintainable applications.
 
 Ok, time to finish mastering the fundamentals by reading these articles:
 
@@ -269,4 +268,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Joyful Development with Symfony`: https://symfonycasts.com/screencast/symfony3
 
 .. ready: no
-.. revision: 4c3a0d040cb86963b4474e4e0c389a172506538c
+.. revision: 43f7ba774dc823ce33fd893e62565f713efbeb41

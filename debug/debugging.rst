@@ -61,7 +61,7 @@ cache files, or you can change the extension used by Symfony for these files::
 
     $kernel->loadClassCache('classes', '.php.cache');
 
-.. versionadded:: 3.3
+.. deprecated:: 3.3
 
     The ``loadClassCache()`` was deprecated in Symfony 3.3 and removed in
     Symfony 4.0. No alternative is provided because this feature is useless
@@ -106,4 +106,4 @@ that can help you visualize and find the information.
     appending the ``--help`` option.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df

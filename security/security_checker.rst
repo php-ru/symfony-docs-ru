@@ -34,7 +34,7 @@ FriendsOfPHP organization.
 
     Make sure that the installed version of the security checker package is at
     least 5.0 (run ``composer show sensiolabs/security-checker`` to show it).
-    Older versions checked the security vulnerabilities using an URL that is no
+    Older versions checked the security vulnerabilities using a URL that is no
     longer available and the command execution will result in an error.
 
 .. tip::
@@ -48,4 +48,4 @@ FriendsOfPHP organization.
 .. _`Security Checker repository`: https://github.com/sensiolabs/security-checker
 
 .. ready: no
-.. revision: 858b1a7ff67739d924c7e3df1c4c75218823af03
+.. revision: f6a986e9c6c08ec8d69338b9ad2cf86b8d61d7f8

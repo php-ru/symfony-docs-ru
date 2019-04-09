@@ -130,7 +130,7 @@ read more about it, see the ":doc:`/bundles/configuration`" article.
 Adding Classes to Compile
 -------------------------
 
-.. versionadded:: 3.3
+.. deprecated:: 3.3
 
     This technique is discouraged and the ``addClassesToCompile()`` method was
     deprecated in Symfony 3.3 because modern PHP versions make it unnecessary.
@@ -209,4 +209,4 @@ the full classmap executing the ``dump-autoload`` command of Composer.
     these classes from the ``classes.php`` file.
 
 .. ready: no
-.. revision: e1a710737c9de45b915bff1c6d8383e89621f0ea
+.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df

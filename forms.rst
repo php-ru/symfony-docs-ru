@@ -144,7 +144,7 @@ done by passing a special form "view" object to your template (notice the
 ``$form->createView()`` in the controller above) and using a set of form
 helper functions:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# app/Resources/views/default/new.html.twig #}
     {{ form_start(form) }}
@@ -178,7 +178,7 @@ That's it! Just three lines are needed to render the complete form:
 
 .. seealso::
 
-    As easy as this is, it's not very flexible (yet). Usually, you'll want to
+    As short as this is, it's not very flexible. Usually, you'll want to
     render each form field individually so you can control how the form looks.
     You'll learn how to do that in the ":doc:`/form/rendering`" section.
 
@@ -409,7 +409,7 @@ Validation is a very powerful feature of Symfony and has its own
     but are being prevented by your browser from, for example, submitting
     blank fields.
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# app/Resources/views/default/new.html.twig #}
     {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
@@ -611,9 +611,9 @@ be used to quickly build a form object in the controller::
         // ...
     }
 
-Placing the form logic into its own class means that the form can be easily
-reused elsewhere in your project. This is the best way to create forms, but
-the choice is ultimately up to you.
+Placing the form logic into its own class means that the form can be reused
+elsewhere in your project. This is the best way to create forms, but the
+choice is ultimately up to you.
 
 .. _form-data-class:
 
@@ -676,7 +676,23 @@ the choice is ultimately up to you.
 .. note::
 
     The form name is automatically generated from the type class name. If you want
-    to modify it, use the :method:`Symfony\\Component\\Form\\FormFactoryInterface::createNamed` method.
+    to modify it, use the :method:`Symfony\\Component\\Form\\FormFactoryInterface::createNamed` method::
+
+        // src/AppBundle/Controller/DefaultController.php
+        use AppBundle\Form\TaskType;
+        use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+        class DefaultController extends AbstractController 
+        {
+            public function newAction()
+            {
+                $task = ...;
+                $form = $this->get('form.factory')->createNamed('name', TaskType::class, $task);
+
+                // ...
+            }
+        }
+
     You can even suppress the name completely by setting it to an empty string.
 
 Final Thoughts
@@ -706,4 +722,4 @@ Learn more
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony3-forms
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

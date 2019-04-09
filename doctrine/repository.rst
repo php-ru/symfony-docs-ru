@@ -43,7 +43,7 @@ To do this, add the repository class name to your entity's mapping definition:
         <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-                http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+                https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
             <entity
                 name="AppBundle\Entity\Product"
@@ -100,4 +100,4 @@ You can use this new method just like the default finder methods of the reposito
     finder methods such as ``find()`` and ``findAll()``.
 
 .. ready: no
-.. revision: 0b751ed1439435a595f8051e79c7e20daabacf31
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

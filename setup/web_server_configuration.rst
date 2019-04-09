@@ -5,10 +5,11 @@ Configuring a Web Server
 ========================
 
 The preferred way to develop your Symfony application is to use
-:doc:`PHP's internal web server </setup/built_in_web_server>`. However,
-when using an older PHP version or when running the application in the production
-environment, you'll need to use a fully-featured web server. This article
-describes several ways to use Symfony with Apache or Nginx.
+:doc:`Symfony Local Web Server </setup/symfony_server>`.
+
+However, when running the application in the production environment, you'll need
+to use a fully-featured web server. This article describes several ways to use
+Symfony with Apache or Nginx.
 
 When using Apache, you can configure PHP as an
 :ref:`Apache module <web-server-apache-mod-php>` or with FastCGI using
@@ -343,4 +344,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: e8dd6b02d78f74e63615c037034ad6a079ef4928
+.. revision: ff8b8bf981404785e528c9aa6f872c1cb3681b64

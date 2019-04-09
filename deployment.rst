@@ -231,7 +231,7 @@ kernel and return your project's root directory::
 
         public function getProjectDir()
         {
-            return __DIR__.'/..';
+            return dirname(__DIR__);
         }
     }
 
@@ -250,4 +250,4 @@ kernel and return your project's root directory::
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: d2e3e6b99afbe26d6f3ff6670809f5aa146398d5

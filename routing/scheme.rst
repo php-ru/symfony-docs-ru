@@ -6,7 +6,7 @@ How to Force Routes to Always Use HTTPS or HTTP
 
 Sometimes, you want to secure some routes and be sure that they are always
 accessed via the HTTPS protocol. The Routing component allows you to enforce
-the URI scheme via schemes:
+the URI scheme with the ``schemes`` setting:
 
 .. configuration-block::
 
@@ -96,4 +96,4 @@ to always use ``http``.
     :doc:`/security/force_https` for more details).
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc

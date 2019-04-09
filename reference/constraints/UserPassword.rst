@@ -46,7 +46,7 @@ the user's current password:
              *     message = "Wrong value for your current password"
              * )
              */
-             protected $oldPassword;
+            protected $oldPassword;
         }
 
     .. code-block:: yaml
@@ -116,4 +116,4 @@ This message has no parameters.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

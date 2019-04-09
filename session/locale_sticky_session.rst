@@ -13,7 +13,7 @@ in the session, so that it's used on subsequent requests.
 Creating a LocaleSubscriber
 ---------------------------
 
-Create and a :ref:`new event subscriber <events-subscriber>`. Typically, ``_locale``
+Create a :ref:`new event subscriber <events-subscriber>`. Typically, ``_locale``
 is used as a routing parameter to signify the locale, though you can determine the
 correct locale however you want::
 
@@ -185,4 +185,4 @@ event::
     the ``User`` entity.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3be0563fa152aa4486136eaa8901413635a47ea6

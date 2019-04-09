@@ -345,7 +345,6 @@ This extends :class:`Symfony\\Component\\Security\\Core\\User\\UserInterface`,
 so you only need the new interface::
 
     // src/AppBundle/Entity/User.php
-
     use Symfony\Component\Security\Core\User\AdvancedUserInterface;
     // ...
 
@@ -554,4 +553,4 @@ or worry about it.
 .. _`it must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 48badfdeb0e187fde256387da308d881d443836c

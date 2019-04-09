@@ -14,8 +14,6 @@ Installation
 
     $ composer require symfony/stopwatch
 
-Alternatively, you can clone the `<https://github.com/symfony/stopwatch>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -126,4 +124,4 @@ method and specifying the id of the section to be reopened::
 .. _Packagist: https://packagist.org/packages/symfony/stopwatch
 
 .. ready: no
-.. revision: e1a710737c9de45b915bff1c6d8383e89621f0ea
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

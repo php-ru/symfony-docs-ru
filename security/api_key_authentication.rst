@@ -457,7 +457,7 @@ configuration or set it to ``false``:
 
         // app/config/security.php
 
-        // ..
+        // ...
         $container->loadFromExtension('security', [
             'firewalls' => [
                 'secured_area'       => [
@@ -608,4 +608,4 @@ current URL is before creating the token in ``createToken()``::
 That's it! Have fun!
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: bee41916fed451edd44ec394bb3852ee380254c9

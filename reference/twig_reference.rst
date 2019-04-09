@@ -377,7 +377,7 @@ information in :ref:`templating-pages`.
 absolute_url
 ~~~~~~~~~~~~
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {{ absolute_url(path) }}
 
@@ -388,7 +388,7 @@ Returns the absolute URL from the passed relative path. For example, assume
 you're on the following page in your app:
 ``http://example.com/products/hover-board``.
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {{ absolute_url('/human.txt') }}
     {# http://example.com/human.txt #}
@@ -399,7 +399,7 @@ you're on the following page in your app:
 relative_path
 ~~~~~~~~~~~~~
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {{ relative_path(path) }}
 
@@ -410,7 +410,7 @@ Returns the relative path from the passed absolute URL. For example, assume
 you're on the following page in your app:
 ``http://example.com/products/hover-board``.
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {{ relative_path('http://example.com/human.txt') }}
     {# ../human.txt #}
@@ -704,7 +704,7 @@ This will set the default domain in the current template.
 stopwatch
 ~~~~~~~~~
 
-.. code-block:: jinja
+.. code-block:: twig
 
     {% stopwatch 'name' %}...{% endstopwatch %}
 
@@ -776,4 +776,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: ec537cdd2e9d9c2cf2634c299dc63a2be1f0bcad
+.. revision: b407409c25db736ef0128251840609f79466dd88

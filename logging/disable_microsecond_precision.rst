@@ -30,7 +30,7 @@ log generation. This is recommended for systems that generate a large number of 
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config use-microseconds="false">
                 <monolog:handler
@@ -57,4 +57,4 @@ log generation. This is recommended for systems that generate a large number of 
         ]);
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

@@ -26,8 +26,6 @@ Installation
 
     $ composer require symfony/intl
 
-Alternatively, you can clone the `<https://github.com/symfony/intl>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 If you install the component via Composer, the following classes and functions
@@ -361,4 +359,4 @@ Learn more
 .. _ICU library: http://site.icu-project.org/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

@@ -10,7 +10,7 @@ is that dynamic content could break the HTML of the resulting page or allow
 a malicious user to perform a `Cross Site Scripting`_ (XSS) attack. Consider
 this classic example:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     Hello {{ name }}
 
@@ -91,4 +91,4 @@ in a JavaScript string, use the ``js`` context:
 .. _`Output Escaping`: https://twig.symfony.com/doc/2.x/api.html#escaper-extension
 
 .. ready: no
-.. revision: e3cc3def0805855858d8e4387edb6148344c85ba
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

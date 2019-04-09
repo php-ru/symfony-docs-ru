@@ -295,7 +295,7 @@ new "tag" forms. To render it, make the following change to your template:
     on it. You could even choose to render only one of its fields (e.g. the
     ``name`` field):
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {{ form_widget(form.tags.vars.prototype.name)|e }}
 
@@ -491,7 +491,7 @@ you will learn about next!).
             <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
-                                http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+                                https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
                 <entity name="AppBundle\Entity\Task">
                     <!-- ... -->
@@ -516,6 +516,7 @@ you will learn about next!).
 
         // src/AppBundle/Entity/Task.php
 
+        // ...
         public function addTag(Tag $tag)
         {
             // for a many-to-many association:
@@ -636,7 +637,7 @@ the relationship between the removed ``Tag`` and ``Task`` object.
     ``Tag`` is properly removed.
 
     In Doctrine, you have two sides of the relationship: the owning side and the
-    inverse side. Normally in this case you'll have a many-to-many relationship
+    inverse side. Normally in this case you'll have a many-to-one relationship
     and the deleted tags will disappear and persist correctly (adding new
     tags also works effortlessly).
 
@@ -649,7 +650,6 @@ the relationship between the removed ``Tag`` and ``Task`` object.
     is handling the "update" of your Task::
 
         // src/AppBundle/Controller/TaskController.php
-
         use AppBundle\Entity\Task;
         use Doctrine\Common\Collections\ArrayCollection;
 
@@ -720,4 +720,4 @@ the relationship between the removed ``Tag`` and ``Task`` object.
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

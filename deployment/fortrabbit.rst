@@ -50,7 +50,7 @@ to redirect it to :phpfunction:`error_log`:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
                 <!-- ... -->
@@ -126,12 +126,12 @@ Make sure this file is imported into the main config file:
             - { resource: config.yml }
             - { resource: config_prod_secrets.php }
 
-        # ..
+        # ...
         framework:
             session:
                 # set handler_id to null to use default session handler from php.ini (memcached)
                 handler_id:  ~
-        # ..
+        # ...
 
     .. code-block:: xml
 
@@ -141,16 +141,16 @@ Make sure this file is imported into the main config file:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <imports>
                 <import resource="config.xml"/>
                 <import resource="config_prod_secrets.php"/>
             </imports>
 
-            <!-- .. -->
+            <!-- ... -->
             <framework:config>
-                <!-- .. -->
+                <!-- ... -->
                 <framework:session handler-id="null"/>
             </framework:config>
         </container>
@@ -284,4 +284,4 @@ documentation.
 .. _`Sign up`: https://dashboard.fortrabbit.com
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

@@ -25,8 +25,6 @@ Installation
 
     $ composer require symfony/cache
 
-Alternatively, you can clone the `<https://github.com/symfony/cache>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Cache (PSR-6) Versus Simple Cache (PSR-16)
@@ -197,4 +195,4 @@ Advanced Usage (PSR-6)
 .. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

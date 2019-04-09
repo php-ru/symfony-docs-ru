@@ -42,7 +42,7 @@ If your problem definitely looks like a bug, report it using the official bug
   **Be wary that stack traces may contain sensitive information, and if it is
   the case, be sure to redact them prior to posting your stack trace.**
 
-* *(optional)* Attach a :doc:`patch <patches>`.
+* *(optional)* Attach a :doc:`patch <pull_requests>`.
 
 .. _`Stack Overflow`: https://stackoverflow.com/questions/tagged/symfony
 .. _IRC channel: https://symfony.com/irc
@@ -52,4 +52,4 @@ If your problem definitely looks like a bug, report it using the official bug
 .. _<details> HTML tag: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 
 .. ready: no
-.. revision: 22e432a993a0c49396cbbfd124805241d83024a6
+.. revision: dc35a224ffeefa02c7e8cdee51fcf99315ce045a

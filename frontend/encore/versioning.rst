@@ -65,7 +65,7 @@ an ``img`` tag) to certain assets. If you're using Symfony, just activate the
 That's it! Just be sure to wrap each path in the Twig ``asset()`` function
 like normal:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     <img src="{{ asset('build/images/logo.png') }}">
 
@@ -75,4 +75,4 @@ Learn more
 * :doc:`/components/asset`
 
 .. ready: no
-.. revision: 62f322e2196dc6621f63f3bffee907b416ed95fb
+.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19

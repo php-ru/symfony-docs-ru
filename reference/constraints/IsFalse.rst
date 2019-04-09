@@ -55,10 +55,10 @@ method returns **false**:
              *     message = "You've entered an invalid state."
              * )
              */
-             public function isStateInvalid()
-             {
+            public function isStateInvalid()
+            {
                 // ...
-             }
+            }
         }
 
     .. code-block:: yaml
@@ -99,8 +99,15 @@ method returns **false**:
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addGetterConstraint('stateInvalid', new Assert\IsFalse());
+                $metadata->addGetterConstraint('stateInvalid', new Assert\IsFalse([
+                    'message' => 'You've entered an invalid state.',
+                ]));
             }
+        }
+
+        public function isStateInvalid()
+        {
+            // ...
         }
 
 Options
@@ -126,4 +133,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

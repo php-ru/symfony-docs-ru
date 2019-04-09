@@ -29,7 +29,7 @@ extend from the original template, not from the overridden one:
 
     {# app/Resources/AcmeBlogBundle/views/Blog/index.html.twig #}
     {# the special '!' prefix avoids errors when extending from an overridden template #}
-    {% extends "@!AcmeBlogBundle/index.html.twig" %}
+    {% extends "@!AcmeBlog/index.html.twig" %}
 
     {% block some_block %}
         ...
@@ -69,4 +69,4 @@ to, you guessed it, the ``app/Resources/TwigBundle/views/Exception`` directory.
 .. _`KnpBundles.com`: http://knpbundles.com
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: 3150911bab8902df4e00f77e68e76d72d830004d

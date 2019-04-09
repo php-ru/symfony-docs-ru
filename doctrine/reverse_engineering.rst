@@ -73,8 +73,8 @@ The generated ``BlogPost.orm.xml`` metadata file looks as follows:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
       <entity name="AppBundle\Entity\BlogPost" table="blog_post">
         <id name="id" type="bigint" column="id">
           <generator strategy="IDENTITY"/>
@@ -169,4 +169,4 @@ The generated entities are now ready to be used. Have fun!
 .. _`Doctrine tools documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/tools.html#reverse-engineering
 
 .. ready: no
-.. revision: da156dd992747a35da5b48bbb331e6078a1989fe
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

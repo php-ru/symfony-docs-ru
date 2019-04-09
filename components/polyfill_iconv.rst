@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/polyfill-iconv
 
-Alternatively, you can clone the `<https://github.com/symfony/polyfill-iconv>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -61,4 +59,4 @@ extension are installed:
 .. _`xml`: https://secure.php.net/manual/en/book.xml.php
 
 .. ready: no
-.. revision: 8c048985ec3357154cc28b7e919897629dea4336
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

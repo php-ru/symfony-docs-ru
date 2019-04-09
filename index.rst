@@ -33,6 +33,7 @@ Topics
     :maxdepth: 1
 
     bundles
+    cache
     console
     doctrine
     debug
@@ -114,4 +115,4 @@ Want to create your own framework based on Symfony?
 .. include:: /create_framework/map.rst.inc
 
 .. ready: no
-.. revision: fecef29699d92dbedec8e2f67c6461f53c3ebd01
+.. revision: 957fbaba39d6a054868a54c61fe98c71618ac7c8

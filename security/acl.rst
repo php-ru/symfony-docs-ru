@@ -4,7 +4,7 @@
 How to Use Access Control Lists (ACLs)
 ======================================
 
-.. versionadded:: 3.4
+.. deprecated:: 3.4
 
     ACL support was deprecated in Symfony 3.4 and will be removed in 4.0. Install
     the `Symfony ACL bundle`_ if you want to keep using ACL.
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df

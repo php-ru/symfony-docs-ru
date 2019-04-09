@@ -153,9 +153,6 @@ stores an ``Address`` instance in the ``$address`` property::
 
         class Address
         {
-            protected $street;
-            protected $zipCode;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('street', new Assert\NotBlank());
@@ -172,10 +169,6 @@ stores an ``Address`` instance in the ``$address`` property::
 
         class Author
         {
-            protected $firstName;
-            protected $lastName;
-            protected $address;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('firstName', new Assert\NotBlank());
@@ -238,8 +231,6 @@ an invalid address. To prevent that, add the ``Valid`` constraint to the
 
         class Author
         {
-            protected $address;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('address', new Assert\Valid());
@@ -271,4 +262,4 @@ arrays: Arrays are traversed in either case. Keys are not validated.
 .. include:: /reference/constraints/_groups-option.rst.inc
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

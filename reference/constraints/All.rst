@@ -39,7 +39,7 @@ entry in that array:
              *     @Assert\Length(min=5)
              * })
              */
-             protected $favoriteColors = [];
+            protected $favoriteColors = [];
         }
 
     .. code-block:: yaml
@@ -115,4 +115,4 @@ to apply to each element of the underlying array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

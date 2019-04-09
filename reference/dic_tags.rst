@@ -178,7 +178,7 @@ Second, define a service:
 
 Finally, apply the filter:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {% javascripts
         '@AcmeBaseBundle/Resources/public/js/global.js'
@@ -1388,4 +1388,4 @@ Bridge.
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19

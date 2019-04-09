@@ -16,8 +16,6 @@ Installation
 
     $ composer require symfony/options-resolver
 
-Alternatively, you can clone the `<https://github.com/symfony/options-resolver>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -699,4 +697,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: d65b6e0d09630bb29edd0a52bcb363b6039d982b
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

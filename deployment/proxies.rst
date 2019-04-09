@@ -59,9 +59,7 @@ In this case, you'll need to - *very carefully* - trust *all* proxies.
    other than your load balancers. For AWS, this can be done with `security groups`_.
 
 #. Once you've guaranteed that traffic will only come from your trusted reverse
-   proxies, configure Symfony to *always* trust incoming request:
-
-   .. code-block:: php
+   proxies, configure Symfony to *always* trust incoming request::
 
        // web/app.php
 
@@ -82,4 +80,4 @@ other information.
 .. _`RFC 7239`: http://tools.ietf.org/html/rfc7239
 
 .. ready: no
-.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb
+.. revision: a96cb3a856a577baa160d84f042d3f6616f882c7

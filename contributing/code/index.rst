@@ -6,7 +6,7 @@ Contributing Code
 
     bugs
     reproducer
-    patches
+    pull_requests
     maintenance
     core_team
     security
@@ -19,4 +19,4 @@ Contributing Code
     license
 
 .. ready: no
-.. revision: cbdf57385510cedb8b82daad9fc3a40aab7bb86f
+.. revision: dc35a224ffeefa02c7e8cdee51fcf99315ce045a

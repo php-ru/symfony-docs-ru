@@ -84,8 +84,6 @@ on an object that will contain a credit card number.
 
         class Transaction
         {
-            protected $cardNumber;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('cardNumber', new Assert\CardScheme([
@@ -147,4 +145,4 @@ You can use the following parameters in this message:
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

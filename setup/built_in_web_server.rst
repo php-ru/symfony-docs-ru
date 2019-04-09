@@ -4,11 +4,15 @@
 How to Use PHP's built-in Web Server
 ====================================
 
-Since PHP 5.4 the CLI SAPI comes with a `built-in web server`_. It can be used
-to run your PHP applications locally during development, for testing or for
-application demonstrations. This way, you don't have to bother configuring
-a full-featured web server such as
-:doc:`Apache or Nginx </setup/web_server_configuration>`.
+The PHP CLI SAPI comes with a `built-in web server`_. It can be used to run your
+PHP applications locally during development, for testing or for application
+demonstrations. This way, you don't have to bother configuring a full-featured
+web server such as :doc:`Apache or Nginx </setup/web_server_configuration>`.
+
+.. tip::
+
+    The preferred way to develop your Symfony application is to use
+    :doc:`Symfony Local Web Server </setup/symfony_server>`.
 
 .. caution::
 
@@ -135,8 +139,7 @@ you have to pass the correct location using the ``--docroot`` option:
 Stopping the Server
 -------------------
 
-When you are finished, you can simply stop the web server using the ``server:stop``
-command:
+When you finish your work, you can stop the web server with the following command:
 
 .. code-block:: terminal
 
@@ -146,4 +149,4 @@ command:
 .. _`php.net`: https://php.net/manual/en/features.commandline.webserver.php#example-411
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: ff8b8bf981404785e528c9aa6f872c1cb3681b64

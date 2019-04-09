@@ -152,7 +152,8 @@ and many others that you'll learn about next.
     Symfony services. This forces you to write more robust code to access services.
 
     Moreover, in Symfony 4.2 ``Controller`` was deprecated in favor of
-    ``AbstractController``, so using the latter will make your apps future-proof.
+    ``AbstractController``, so using the latter will make your applications
+    future-proof.
 
 .. versionadded:: 3.3
 
@@ -750,4 +751,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: dfd369922fa1c21d101414bcd881bde6e661ad14
+.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f

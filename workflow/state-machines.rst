@@ -69,12 +69,12 @@ Below is the configuration for the pull request state machine.
     .. code-block:: xml
 
         <!-- app/config/config.xml -->
-        <?xml version="1.0" encoding="utf-8" ?>
+        <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
         >
 
             <framework:config>
@@ -142,7 +142,6 @@ Below is the configuration for the pull request state machine.
     .. code-block:: php
 
         // app/config/config.php
-
         $container->loadFromExtension('framework', [
             // ...
             'workflows' => [
@@ -198,4 +197,4 @@ You can now use this state machine by getting the ``state_machine.pull_request``
 .. _Petri net: https://en.wikipedia.org/wiki/Petri_net
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

@@ -14,8 +14,6 @@ Installation
 
     $ composer require symfony/ldap
 
-Alternatively, you can clone the `<https://github.com/symfony/ldap>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -146,4 +144,4 @@ delete existing ones::
 .. _Packagist: https://packagist.org/packages/symfony/ldap
 
 .. ready: no
-.. revision: 4d8040d4b9921940c96ca82ca2f7050ce20ed161
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

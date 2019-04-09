@@ -66,7 +66,7 @@ configuration:
 If you prefer to apply the Bootstrap styles on a form to form basis, include the
 ``form_theme`` tag in the templates where those forms are used:
 
-.. code-block:: twig
+.. code-block:: html+twig
 
     {# ... #}
     {# this tag only applies to the forms defined in this template #}
@@ -95,7 +95,7 @@ Bootstrap 4 has a feature called "`custom forms`_". You can enable that on your
 Symfony Form ``RadioType`` and ``CheckboxType`` by adding a class called ``radio-custom``
 and ``checkbox-custom`` respectively.
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_row(form.myRadio, {label_attr: {class: 'radio-custom'} }) }}
     {{ form_row(form.myCheckbox, {label_attr: {class: 'checkbox-custom'} }) }}
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

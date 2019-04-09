@@ -20,8 +20,6 @@ Installation
 
     $ composer require symfony/form
 
-Alternatively, you can clone the `<https://github.com/symfony/form>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Configuration
@@ -156,7 +154,7 @@ the CSRF generator and validated when binding the form.
 
 You can disable CSRF protection per form using the ``csrf_protection`` option::
 
-    use Symfony\\Component\\Form\\Extension\\Core\\Type\\FormType
+    use Symfony\Component\Form\Extension\Core\Type\FormType;
 
     $form = $formFactory->createBuilder(FormType::class, null, ['csrf_protection' => false])
         ->getForm();
@@ -769,4 +767,4 @@ Learn more
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

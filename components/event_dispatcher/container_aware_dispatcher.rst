@@ -4,7 +4,7 @@
 The Container Aware Event Dispatcher
 ====================================
 
-.. versionadded:: 3.3
+.. deprecated:: 3.3
 
     The ``ContainerAwareEventDispatcher`` class has been deprecated in Symfony 3.3
     and it will be removed in Symfony 4.0. Use ``EventDispatcher`` with
@@ -107,4 +107,4 @@ The ``EventSubscriberInterface`` is exactly as you would expect::
     }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df

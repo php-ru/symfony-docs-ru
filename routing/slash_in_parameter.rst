@@ -1,6 +1,8 @@
 .. index::
    single: Routing; Allow / in route parameter
 
+.. _routing/slash_in_parameter:
+
 How to Allow a "/" Character in a Route Parameter
 =================================================
 
@@ -95,4 +97,4 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     and the token, and ``token`` will be empty.
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc

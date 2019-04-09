@@ -186,7 +186,7 @@ One of the simplest ways - which is especially useful during development -
 is to render the form tags and use the ``form_widget()`` function to render
 all of the fields:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {{ form_start(form, {'attr': {'class': 'my-form-class'} }) }}
         {{ form_widget(form) }}
@@ -238,4 +238,4 @@ is deprecated since version 3.2 and will throw an exception in 4.0.
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

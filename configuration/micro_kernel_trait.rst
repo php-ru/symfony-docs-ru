@@ -133,7 +133,6 @@ putting *everything* in ``index.php``, create a new ``app/AppKernel.php`` to
 hold the kernel. Now it looks like this::
 
     // app/AppKernel.php
-
     use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
     use Symfony\Component\Config\Loader\LoaderInterface;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -186,7 +185,7 @@ hold the kernel. Now it looks like this::
             }
 
             // load the annotation routes
-            $routes->import(__DIR__.'/../src/App/Controller/', '/', 'annotation');
+            $routes->import(__DIR__.'/../src/Controller/', '/', 'annotation');
         }
 
         // optional, to use the standard Symfony cache directory
@@ -230,7 +229,7 @@ because the configuration started to get bigger:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config secret="S0ME_SECRET">
                 <framework:templating>
@@ -253,10 +252,10 @@ because the configuration started to get bigger:
             ],
         ]);
 
-This also loads annotation routes from an ``src/App/Controller/`` directory, which
+This also loads annotation routes from an ``src/Controller/`` directory, which
 has one file in it::
 
-    // src/App/Controller/MicroController.php
+    // src/Controller/MicroController.php
     namespace App\Controller;
 
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -298,7 +297,6 @@ Finally, you need a front controller to boot and run the application. Create a
 ``web/index.php``::
 
     // web/index.php
-
     use Symfony\Component\HttpFoundation\Request;
 
     require __DIR__.'/../app/AppKernel.php';
@@ -353,4 +351,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features with less boilerplate configuration and code.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 4b7dfec901e157d3026c217a8ad87ec1fc13c2e3

@@ -172,6 +172,10 @@ manual steps:
    If you have defined :doc:`custom config options in your bundles </bundles/configuration>`
    move them to the new ``config/services.yaml`` and ``.env`` files.
 
+#. ``SYMFONY_DEBUG`` and ``SYMFONY_ENV`` environment variables were replaced by
+   ``APP_DEBUG`` and ``APP_ENV``. Copy their values to the new vars and then remove
+   the former ones.
+
 #. Move the original source code from ``src/{App,...}Bundle/`` to ``src/`` and
    update the namespaces of every PHP file to be ``App\...`` (advanced IDEs can do
    this automatically).
@@ -222,4 +226,4 @@ manually after a recipe is installed.
 .. _`Symfony Recipes documentation`: https://github.com/symfony/recipes/blob/master/README.rst
 
 .. ready: no
-.. revision: d307157bba08eeb90e2e5f37cb55287d04b4c2be
+.. revision: 8b9966f8e54ebffbe7b692289bec05e1cea3567e

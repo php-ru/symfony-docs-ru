@@ -51,7 +51,7 @@ Creating the webpack.config.js File
 Next, create a new ``webpack.config.js`` file at the root of your project. This
 is the main config file for both Webpack and Webpack Encore:
 
-.. code-block:: js
+.. code-block:: javascript
 
     var Encore = require('@symfony/webpack-encore');
 
@@ -133,4 +133,4 @@ You'll customize and learn more about these file in :doc:`/frontend/encore/simpl
 .. _`WebpackEncoreBundle`: https://github.com/symfony/webpack-encore-bundle
 
 .. ready: no
-.. revision: 4ef3922245a59d82c90f0bc2fe403e686437ab2a
+.. revision: b407409c25db736ef0128251840609f79466dd88

@@ -40,6 +40,8 @@ defined. Each loader should implement
 abstract :class:`Symfony\\Component\\Config\\Loader\\FileLoader` class,
 which allows for recursively importing other resources::
 
+    namespace Acme\Config\Loader;
+
     use Symfony\Component\Config\Loader\FileLoader;
     use Symfony\Component\Yaml\Yaml;
 
@@ -81,8 +83,9 @@ When it is asked to load a resource, it delegates this question to the
 resolver has found a suitable loader, this loader will be asked to load
 the resource::
 
-    use Symfony\Component\Config\Loader\LoaderResolver;
+    use Acme\Config\Loader\YamlUserLoader;
     use Symfony\Component\Config\Loader\DelegatingLoader;
+    use Symfony\Component\Config\Loader\LoaderResolver;
 
     $loaderResolver = new LoaderResolver([new YamlUserLoader($fileLocator)]);
     $delegatingLoader = new DelegatingLoader($loaderResolver);
@@ -92,4 +95,4 @@ the resource::
     $delegatingLoader->load(__DIR__.'/users.yml');
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6dbf04687fa9ffcfa1752fb088b19892d2c56b94

@@ -23,8 +23,6 @@ Installation
 
     $ composer require symfony/http-foundation
 
-Alternatively, you can clone the `<https://github.com/symfony/http-foundation>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 .. seealso::
@@ -653,4 +651,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

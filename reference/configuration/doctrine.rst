@@ -22,7 +22,7 @@ configuration.
 
     When using XML, you must use the ``http://symfony.com/schema/dic/doctrine``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd``
+    ``https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd``
 
 .. index::
     single: Configuration; Doctrine DBAL
@@ -80,7 +80,7 @@ The following block shows all possible configuration keys:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/doctrine
-                http://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
+                https://symfony.com/schema/dic/doctrine/doctrine-1.0.xsd">
 
             <doctrine:config>
                 <doctrine:dbal
@@ -450,4 +450,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

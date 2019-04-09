@@ -150,7 +150,7 @@ score for Affected Projects is capped at 4.*
 Score Totals
 ~~~~~~~~~~~~
 
-* Attack Complexity: 1 - 4
+* Attack Complexity: 1 - 5
 * Impact: 1 - 6
 * Affected Projects: 1 - 4
 
@@ -183,4 +183,4 @@ vulnerabilities that were fixed in Symfony releases, starting from Symfony
 .. _`Security Advisories`: https://symfony.com/blog/category/security-advisories
 
 .. ready: no
-.. revision: b0299f924cb4ccc1eb18b38f30aa0cf1ae23f3a1
+.. revision: 1ce2d7bb0d0a3a5723a1f25b3231d6e742c22fae

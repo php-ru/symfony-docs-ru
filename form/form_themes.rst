@@ -42,7 +42,7 @@ The ``form_row`` form fragment is used when rendering most fields via the
 fragment defined above, add the following to the top of the template that
 renders the form:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {# app/Resources/views/default/new.html.twig #}
     {% form_theme form 'form/fields.html.twig' %}
@@ -225,7 +225,7 @@ to define form output.
     In Twig, you can also customize a form block right inside the template
     where that customization is needed:
 
-    .. code-block:: html+twig
+    .. code-block:: twig
 
         {% extends 'base.html.twig' %}
 
@@ -282,7 +282,7 @@ file:
             xmlns:framework="http://symfony.com/schema/dic/symfony"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:templating>
@@ -316,4 +316,4 @@ globally to define form output.
 .. _`view on GitHub`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2

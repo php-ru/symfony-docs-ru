@@ -25,14 +25,6 @@ Basic Usage
 
 .. configuration-block::
 
-    .. code-block:: yaml
-
-        # src/AppBundle/Resources/config/validation.yml
-        AppBundle\Entity\File:
-            properties:
-                identifier:
-                    - Uuid: ~
-
     .. code-block:: php-annotations
 
         // src/AppBundle/Entity/File.php
@@ -45,8 +37,16 @@ Basic Usage
             /**
              * @Assert\Uuid
              */
-             protected $identifier;
+            protected $identifier;
         }
+
+    .. code-block:: yaml
+
+        # src/AppBundle/Resources/config/validation.yml
+        AppBundle\Entity\File:
+            properties:
+                identifier:
+                    - Uuid: ~
 
     .. code-block:: xml
 
@@ -137,4 +137,4 @@ All five versions are allowed by default.
 .. _`UUID versions`: http://en.wikipedia.org/wiki/Universally_unique_identifier#Variants_and_versions
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

@@ -19,8 +19,6 @@ Installation
 
     $ composer require symfony/lock
 
-Alternatively, you can clone the `<https://github.com/symfony/lock>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -493,4 +491,4 @@ are still running.
 .. _`PHP semaphore functions`: http://php.net/manual/en/book.sem.php
 
 .. ready: no
-.. revision: 2618c7d4827d6032ea99a3422d69045d767147fb
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

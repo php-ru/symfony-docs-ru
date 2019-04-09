@@ -73,8 +73,6 @@ will contain a Business Identifier Code (BIC).
 
         class Transaction
         {
-            protected $businessIdentifierCode;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('businessIdentifierCode', new Assert\Bic());
@@ -108,4 +106,4 @@ You can use the following parameters in this message:
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

@@ -21,7 +21,7 @@ execution and displays it in both the web debug toolbar and the
 
     When using XML, you must use the ``http://symfony.com/schema/dic/webprofiler``
     namespace and the related XSD schema is available at:
-    ``http://symfony.com/schema/dic/webprofiler/webprofiler-1.0.xsd``
+    ``https://symfony.com/schema/dic/webprofiler/webprofiler-1.0.xsd``
 
 .. caution::
 
@@ -50,7 +50,7 @@ environment.
 position
 ~~~~~~~~
 
-.. versionadded:: 3.4
+.. deprecated:: 3.4
 
     The ``position`` option was deprecated in Symfony 3.4 and it will be removed
     in Symfony 4.0, where the toolbar is always displayed in the ``bottom`` position.
@@ -93,4 +93,4 @@ This option is **deprecated** and has no effect on the toolbar or the profiler,
 so you can safely remove it from your configuration.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

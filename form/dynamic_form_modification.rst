@@ -237,11 +237,16 @@ The service can be injected into the form via its constructor::
     use Symfony\Component\Security\Core\Security;
     // ...
 
-    private $security;
-
-    public function __construct(Security $security)
+    class FriendMessageFormType extends AbstractType
     {
-        $this->security = $security;
+        private $security;
+
+        public function __construct(Security $security)
+        {
+            $this->security = $security;
+        }
+
+        // ....
     }
 
 Customizing the Form Type
@@ -251,7 +256,6 @@ Now that you have all the basics in place you can use the features of the
 security helper to fill in the listener logic::
 
     // src/AppBundle/Form/Type/FriendMessageFormType.php
-
     use AppBundle\Entity\User;
     use Doctrine\ORM\EntityRepository;
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -577,4 +581,4 @@ The major benefit of submitting the whole form to just extract the updated
 code from above to generate the submitted form can be reused.
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 46c4dd11d88646c29d08780a55e9b2a8ab086613

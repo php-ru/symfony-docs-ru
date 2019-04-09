@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/translation
 
-Alternatively, you can clone the `<https://github.com/symfony/translation>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 .. seealso::
@@ -234,4 +232,4 @@ Learn More
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

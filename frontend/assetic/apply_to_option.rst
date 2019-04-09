@@ -36,7 +36,7 @@ An example configuration might look like this:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
-                http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
+                https://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
@@ -131,7 +131,7 @@ In this case you can specify that the ``coffee`` filter is applied to all
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/assetic
-                http://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
+                https://symfony.com/schema/dic/assetic/assetic-1.0.xsd">
 
             <assetic:config>
                 <assetic:filter
@@ -174,4 +174,4 @@ files being run through the CoffeeScript filter):
 
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48

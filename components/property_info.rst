@@ -23,8 +23,6 @@ Installation
 
     $ composer require symfony/property-info
 
-Alternatively, you can clone the `<https://github.com/symfony/property-info>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Additional dependencies may be required for some of the
@@ -88,9 +86,7 @@ both provide list and type information it is probably better that:
   just mapped properties) are returned.
 * The :class:`Symfony\\Bridge\\Doctrine\\PropertyInfo\\DoctrineExtractor`
   has priority for type information so that entity metadata is used instead
-  of type-hinting to provide more accurate type information.
-
-.. code-block:: php
+  of type-hinting to provide more accurate type information::
 
     use Symfony\Bridge\Doctrine\PropertyInfo\DoctrineExtractor;
     use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
@@ -373,21 +369,7 @@ ReflectionExtractor
 
 Using PHP reflection, the :class:`Symfony\\Component\\PropertyInfo\\Extractor\\ReflectionExtractor`
 provides list, type and access information from setter and accessor methods.
-It can also provide return and scalar types for PHP 7+.
-
-.. note::
-
-    When using the Symfony framework, this service is automatically registered
-    when the ``property_info`` feature is enabled:
-
-    .. code-block:: yaml
-
-        # app/config/config.yml
-        framework:
-            property_info:
-                enabled: true
-
-.. code-block:: php
+It can also provide return and scalar types for PHP 7+::
 
     use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
 
@@ -400,6 +382,18 @@ It can also provide return and scalar types for PHP 7+.
     // Access information.
     $reflectionExtractor->isReadable($class, $property);
     $reflectionExtractor->isWritable($class, $property);
+
+.. note::
+
+    When using the Symfony framework, this service is automatically registered
+    when the ``property_info`` feature is enabled:
+
+    .. code-block:: yaml
+
+        # app/config/config.yml
+        framework:
+            property_info:
+                enabled: true
 
 PhpDocExtractor
 ~~~~~~~~~~~~~~~
@@ -510,4 +504,4 @@ service by defining it as a service with one or more of the following
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

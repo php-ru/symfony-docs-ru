@@ -73,7 +73,7 @@ locale to lookup and return translated messages. Before using it, enable the
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/symfony
-                http://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
+                https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
 
             <framework:config>
                 <framework:translator>
@@ -286,18 +286,18 @@ texts* and complex expressions:
     that your translated message is *not* output escaped, you must apply
     the ``raw`` filter after the translation filter:
 
-    .. code-block:: twig
+    .. code-block:: html+twig
 
-            {# text translated between tags is never escaped #}
-            {% trans %}
-                <h3>foo</h3>
-            {% endtrans %}
+        {# text translated between tags is never escaped #}
+        {% trans %}
+            <h3>foo</h3>
+        {% endtrans %}
 
-            {% set message = '<h3>foo</h3>' %}
+        {% set message = '<h3>foo</h3>' %}
 
-            {# strings and variables translated via a filter are escaped by default #}
-            {{ message|trans|raw }}
-            {{ '<h3>bar</h3>'|trans|raw }}
+        {# strings and variables translated via a filter are escaped by default #}
+        {{ message|trans|raw }}
+        {{ '<h3>bar</h3>'|trans|raw }}
 
 .. tip::
 
@@ -423,7 +423,7 @@ For more options, see :ref:`component-translator-message-catalogs`.
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
                     https://symfony.com/schema/dic/services/services-1.0.xsd
                     http://symfony.com/schema/dic/symfony
-                    http://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
+                    https://symfony.com/schema/dic/symfony/symfony-1.0.xsd"
             >
 
                 <framework:config>
@@ -542,4 +542,4 @@ Learn more
 .. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: b9fc90b35eed357b2dc268787df678b741edada3

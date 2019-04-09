@@ -207,9 +207,9 @@ loading all entities.
 
 .. caution::
 
-    The entity used in the ``FROM`` clause of the `query_builder`_ option
-    will always be validated against the class which you have specified with
-    the form's `class`_ option. If you return another entity instead of the
+    The entity used in the ``FROM`` clause of the ``query_builder`` option
+    will always be validated against the class which you have specified at the
+    `class`_ option. If you return another entity instead of the
     one used in your ``FROM`` clause (for instance if you return an entity
     from a joined table), it will break validation.
     
@@ -334,4 +334,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 1995aa118bfeff059a730fe3c168420e5eea2484
+.. revision: 307ade66346034c4e2cdf505f93e0a4999cc36e6

@@ -29,7 +29,7 @@ This method has 3 arguments:
   function;
 * **evaluator** - A function executed when the expression is evaluated.
 
-.. code-block:: php
+Example::
 
     use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
@@ -140,4 +140,4 @@ or by using the second argument of the constructor::
 
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 6518bc07e146feed098d747d02d060bcc6a551dc

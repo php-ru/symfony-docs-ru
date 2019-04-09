@@ -211,13 +211,11 @@ following code:
 
         class Author
         {
-            // ...
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('headshot', new Assert\Image([
-                    'allowLandscape'    => false,
-                    'allowPortrait'     => false,
+                    'allowLandscape' => false,
+                    'allowPortrait' => false,
                 ]));
             }
         }
@@ -588,4 +586,4 @@ This message has no parameters.
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

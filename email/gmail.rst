@@ -122,7 +122,7 @@ parameters.
 
 If your Gmail account uses 2-Step-Verification, you must `generate an App password`_
 and use it as the value of the ``mailer_password`` parameter. You must also ensure
-that you `allow less secure apps to access your Gmail account`_.
+that you `allow less secure applications to access your Gmail account`_.
 
 .. seealso::
 
@@ -130,7 +130,7 @@ that you `allow less secure apps to access your Gmail account`_.
     for more details.
 
 .. _`generate an App password`: https://support.google.com/accounts/answer/185833
-.. _`allow less secure apps to access your Gmail account`: https://support.google.com/accounts/answer/6010255
+.. _`allow less secure applications to access your Gmail account`: https://support.google.com/accounts/answer/6010255
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f

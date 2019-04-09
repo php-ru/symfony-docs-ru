@@ -15,8 +15,6 @@ Installation
 
     $ composer require symfony/validator
 
-Alternatively, you can clone the `<https://github.com/symfony/validator>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -98,4 +96,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

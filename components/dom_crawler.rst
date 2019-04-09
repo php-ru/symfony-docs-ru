@@ -19,8 +19,6 @@ Installation
 
     $ composer require symfony/dom-crawler
 
-Alternatively, you can clone the `<https://github.com/symfony/dom-crawler>`_ repository.
-
 .. include:: /components/require_autoload.rst.inc
 
 Usage
@@ -569,4 +567,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff

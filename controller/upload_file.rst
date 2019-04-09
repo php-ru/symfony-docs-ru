@@ -315,7 +315,7 @@ Using a Doctrine Listener
 
 If you are using Doctrine to store the Product entity, you can create a
 :doc:`Doctrine listener </doctrine/event_listeners_subscribers>` to
-automatically upload the file when persisting the entity::
+automatically move the file when persisting the entity::
 
     // src/AppBundle/EventListener/BrochureUploadListener.php
     namespace AppBundle\EventListener;
@@ -459,4 +459,4 @@ controller.
 .. _`VichUploaderBundle`: https://github.com/dustin10/VichUploaderBundle
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 9497189e59bc3f8aa201abd46cb3745aeac6f565

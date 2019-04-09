@@ -71,7 +71,7 @@ This is how your security configuration can look in action:
                         'entry_point' => '',
                         'authenticators' => [
                             LoginFormAuthenticator::class,
-                            FacebookConnectAuthenticator::class'
+                            FacebookConnectAuthenticator::class,
                         ],
                     ],
                 ],
@@ -175,4 +175,4 @@ the solution is to split the configuration into two separate firewalls:
         ]);
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: acd93d64dc317150822ac024ec3ff354310cb591

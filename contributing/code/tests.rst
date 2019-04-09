@@ -4,11 +4,11 @@ Running Symfony Tests
 =====================
 
 The Symfony project uses a third-party service which automatically runs tests
-for any submitted :doc:`patch <patches>`. If the new code breaks any test,
+for any submitted :doc:`patch <pull_requests>`. If the new code breaks any test,
 the pull request will show an error message with a link to the full error details.
 
 In any case, it's a good practice to run tests locally before submitting a
-:doc:`patch <patches>` for inclusion, to check that you have not broken anything.
+:doc:`patch <pull_requests>` for inclusion, to check that you have not broken anything.
 
 .. _phpunit:
 .. _dependencies_optional:
@@ -60,4 +60,4 @@ what's going on and if the tests are broken because of the new code.
 .. _Mintty: https://mintty.github.io/
 
 .. ready: no
-.. revision: b5683259ef105a0107149eba06107cb6c09f42b5
+.. revision: dc35a224ffeefa02c7e8cdee51fcf99315ce045a

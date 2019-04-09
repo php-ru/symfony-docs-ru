@@ -75,7 +75,7 @@ information:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <services>
                 <service id="monolog.formatter.session_request"
@@ -129,7 +129,7 @@ Finally, set the formatter to be used on whatever handler you want:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <monolog:config>
                 <monolog:handler
@@ -160,6 +160,24 @@ If you use several handlers, you can also register a processor at the
 handler level or at the channel level instead of registering it globally
 (see the following sections).
 
+Symfony's MonologBridge provides processors that can be registered inside your application.
+
+:class:`Symfony\\Bridge\\Monolog\\Processor\\DebugProcessor`
+    Adds additional information useful for debugging like a timestamp or an
+    error message to the record.
+
+:class:`Symfony\\Bridge\\Monolog\\Processor\\TokenProcessor`
+    Adds information from the current user's token to the record namely
+    username, roles and whether the user is authenticated.
+
+:class:`Symfony\\Bridge\\Monolog\\Processor\\WebProcessor`
+    Overrides data from the request using the data inside Symfony's request
+    object.
+
+.. versionadded:: 3.4
+
+    The ``TokenProcessor`` class was introduced in Symfony 3.4.
+
 Registering Processors per Handler
 ----------------------------------
 
@@ -187,7 +205,7 @@ the ``monolog.processor`` tag:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Logger\SessionRequestProcessor" autowire="true">
@@ -232,7 +250,7 @@ the ``monolog.processor`` tag:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd
                 http://symfony.com/schema/dic/monolog
-                http://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
+                https://symfony.com/schema/dic/monolog/monolog-1.0.xsd">
 
             <services>
                 <service id="AppBundle\Logger\SessionRequestProcessor" autowire="true">
@@ -251,4 +269,4 @@ the ``monolog.processor`` tag:
             ->addTag('monolog.processor', ['channel' => 'main']);
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: b0fd0874d93a3b488109542adaa938f4fa058a24

@@ -94,8 +94,8 @@ paginated results.
     Use constants to define configuration options that rarely change.
 
 The traditional approach for defining configuration options has caused many
-Symfony apps to include an option like the following, which would be used
-to control the number of posts to display on the blog homepage:
+Symfony applications to include an option like the following, which would be
+used to control the number of posts to display on the blog homepage:
 
 .. code-block:: yaml
 
@@ -222,4 +222,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f

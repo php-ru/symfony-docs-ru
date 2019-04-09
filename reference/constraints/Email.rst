@@ -39,7 +39,7 @@ Basic Usage
              *     checkMX = true
              * )
              */
-             protected $email;
+            protected $email;
         }
 
     .. code-block:: yaml
@@ -147,4 +147,4 @@ of the given email.
 .. _egulias/email-validator: https://packagist.org/packages/egulias/email-validator
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1

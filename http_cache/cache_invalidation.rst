@@ -51,7 +51,6 @@ Here is how you can configure the Symfony reverse proxy to support the
 ``PURGE`` HTTP method::
 
     // app/AppCache.php
-
     use Symfony\Bundle\FrameworkBundle\HttpCache\HttpCache;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
@@ -106,4 +105,4 @@ different URLs. More flexible concepts exist for those cases:
 .. _`FOSHttpCacheBundle`: http://foshttpcachebundle.readthedocs.org/
 
 .. ready: no
-.. revision: 3d612816fbc10d6364c01243b5ae4be45c112bc0
+.. revision: 48badfdeb0e187fde256387da308d881d443836c

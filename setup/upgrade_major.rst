@@ -82,7 +82,7 @@ Now, you can start fixing the notices:
 
     Remaining deprecation notices (6)
 
-    The "request" service is deprecated and will be removed in 3.0. Add a typehint for
+    The "request" service is deprecated and will be removed in 3.0. Add a type-hint for
     Symfony\Component\HttpFoundation\Request to your controller parameters to retrieve the
     request instead: 6x
         3x in PageAdminTest::testPageShow from Symfony\Cmf\SimpleCmsBundle\Tests\WebTest\Admin
@@ -162,4 +162,4 @@ of.
 .. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: d06bf109f693c787b60a8a65d31665d415e3bbec
+.. revision: 4182c8c6e3b327603748b3f9d531058a84728484
