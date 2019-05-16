@@ -65,9 +65,8 @@ define arbitrary matching logic, use the ``condition`` routing setting:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\DefaultController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('contact', '')
@@ -113,4 +112,4 @@ variables that are passed into the expression:
     beyond the time it takes for the underlying PHP to execute.
 
 .. ready: no
-.. revision: c0a0a685c430274d299a80a463585a32c18dc280
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

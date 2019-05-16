@@ -85,8 +85,8 @@ The following constraints ensure that:
         // src/Entity/Item.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Item
         {
@@ -129,4 +129,4 @@ with regard to the ``$increments`` property of the same object, use
 .. include:: /reference/constraints/_comparison-value-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca

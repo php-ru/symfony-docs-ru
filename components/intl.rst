@@ -79,8 +79,8 @@ resulting .txt file can be converted to a binary .res file with the
 :class:`Symfony\\Component\\Intl\\ResourceBundle\\Compiler\\BundleCompiler`
 class::
 
-    use Symfony\Component\Intl\ResourceBundle\Writer\TextBundleWriter;
     use Symfony\Component\Intl\ResourceBundle\Compiler\BundleCompiler;
+    use Symfony\Component\Intl\ResourceBundle\Writer\TextBundleWriter;
 
     $writer = new TextBundleWriter();
     $writer->write('/path/to/bundle', 'en', [
@@ -209,125 +209,227 @@ locale will be merged. In order to suppress this behavior, the last parameter
 Accessing ICU Data
 ------------------
 
-The ICU data is located in several "resource bundles". You can access a PHP
-wrapper of these bundles through the static
-:class:`Symfony\\Component\\Intl\\Intl` class. At the moment, the following
-data is supported:
+This component provides the following ICU data:
 
 * `Language and Script Names`_
 * `Country Names`_
 * `Locales`_
 * `Currencies`_
+* `Timezones`_
 
 Language and Script Names
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The translations of language and script names can be found in the language
-bundle::
+The ``Languages`` class provides access to the name of all languages::
 
-    use Symfony\Component\Intl\Intl;
+    use Symfony\Component\Intl\Languages;
 
     \Locale::setDefault('en');
 
-    $languages = Intl::getLanguageBundle()->getLanguageNames();
-    // => ['ab' => 'Abkhazian', ...]
+    $languages = Languages::getNames();
+    // ('languageCode' => 'languageName')
+    // => ['ab' => 'Abkhazian', 'ace' => 'Achinese', ...]
 
-    $language = Intl::getLanguageBundle()->getLanguageName('de');
-    // => 'German'
+    $language = Languages::getName('fr');
+    // => 'French'
 
-    $language = Intl::getLanguageBundle()->getLanguageName('de', 'AT');
-    // => 'Austrian German'
+All methods accept the translation locale as the last, optional parameter,
+which defaults to the current default locale::
 
-    $scripts = Intl::getLanguageBundle()->getScriptNames();
-    // => ['Arab' => 'Arabic', ...]
+    $languages = Languages::getNames('de');
+    // => ['ab' => 'Abchasisch', 'ace' => 'Aceh', ...]
 
-    $script = Intl::getLanguageBundle()->getScriptName('Hans');
+    $language = Languages::getName('fr', 'de');
+    // => 'Französisch'
+
+You can also check if a given language code is valid::
+
+    $isValidLanguage = Languages::exists($languageCode);
+
+.. versionadded:: 4.3
+
+    The ``Languages`` class was introduced in Symfony 4.3.
+
+The ``Scripts`` class provides access to the optional four-letter script code
+that can follow the language code according to the `Unicode ISO 15924 Registry`_
+(e.g. ``HANS`` in ``zh_HANS`` for simplified Chinese and ``HANT`` in ``zh_HANT``
+for traditional Chinese)::
+
+    use Symfony\Component\Intl\Scripts;
+
+    \Locale::setDefault('en');
+
+    $scripts = Scripts::getNames();
+    // ('scriptCode' => 'scriptName')
+    // => ['Adlm' => 'Adlam', 'Afak' => 'Afaka', ...]
+
+    $script = Scripts::getName('Hans');
     // => 'Simplified'
 
 All methods accept the translation locale as the last, optional parameter,
 which defaults to the current default locale::
 
-    $languages = Intl::getLanguageBundle()->getLanguageNames('de');
-    // => ['ab' => 'Abchasisch', ...]
+    $languages = Scripts::getNames('de');
+    // => ['Adlm' => 'Adlam', 'Afak' => 'Afaka', ...]
+
+    $language = Scripts::getName('Hans', 'de');
+    // => 'Vereinfacht'
+
+You can also check if a given script code is valid::
+
+    $isValidScript = Scripts::exists($scriptCode);
+
+.. versionadded:: 4.3
+
+    The ``Scripts`` class was introduced in Symfony 4.3.
 
 Country Names
 ~~~~~~~~~~~~~
 
-The translations of country names can be found in the region bundle::
+The ``Countries`` class provides access to the name of all countries according
+to the `ISO 3166-1 alpha-2`_ list of officially recognized countries and
+territories::
 
-    use Symfony\Component\Intl\Intl;
+    use Symfony\Component\Intl\Countries;
 
     \Locale::setDefault('en');
 
-    $countries = Intl::getRegionBundle()->getCountryNames();
-    // => ['AF' => 'Afghanistan', ...]
+    $countries = Countries::getNames();
+    // ('countryCode' => 'countryName')
+    // => ['AF' => 'Afghanistan', 'AX' => 'Åland Islands', ...]
 
-    $country = Intl::getRegionBundle()->getCountryName('GB');
+    $country = Countries::getName('GB');
     // => 'United Kingdom'
 
 All methods accept the translation locale as the last, optional parameter,
 which defaults to the current default locale::
 
-    $countries = Intl::getRegionBundle()->getCountryNames('de');
-    // => ['AF' => 'Afghanistan', ...]
+    $countries = Countries::getNames('de');
+    // => ['AF' => 'Afghanistan', 'EG' => 'Ägypten', ...]
+
+    $country = Countries::getName('GB', 'de');
+    // => 'Vereinigtes Königreich'
+
+You can also check if a given country code is valid::
+
+    $isValidCountry = Countries::exists($countryCode);
+
+.. versionadded:: 4.3
+
+    The ``Countries`` class was introduced in Symfony 4.3.
 
 Locales
 ~~~~~~~
 
-The translations of locale names can be found in the locale bundle::
+A locale is the combination of a language and a region. For example, "Chinese"
+is the language and ``zh_Hans_MO`` is the locale for "Chinese" (language) +
+"Simplified" (script) + "Macau SAR China" (region). The ``Locales`` class
+provides access to the name of all locales::
 
-    use Symfony\Component\Intl\Intl;
+    use Symfony\Component\Intl\Locales;
 
     \Locale::setDefault('en');
 
-    $locales = Intl::getLocaleBundle()->getLocaleNames();
-    // => ['af' => 'Afrikaans', ...]
+    $locales = Locales::getNames();
+    // ('localeCode' => 'localeName')
+    // => ['af' => 'Afrikaans', 'af_NA' => 'Afrikaans (Namibia)', ...]
 
-    $locale = Intl::getLocaleBundle()->getLocaleName('zh_Hans_MO');
+    $locale = Locales::getName('zh_Hans_MO');
     // => 'Chinese (Simplified, Macau SAR China)'
 
 All methods accept the translation locale as the last, optional parameter,
 which defaults to the current default locale::
 
-    $locales = Intl::getLocaleBundle()->getLocaleNames('de');
-    // => ['af' => 'Afrikaans', ...]
+    $locales = Locales::getNames('de');
+    // => ['af' => 'Afrikaans', 'af_NA' => 'Afrikaans (Namibia)', ...]
+
+    $locale = Locales::getName('zh_Hans_MO', 'de');
+    // => 'Chinesisch (Vereinfacht, Sonderverwaltungsregion Macau)'
+
+You can also check if a given locale code is valid::
+
+    $isValidLocale = Locales::exists($localeCode);
+
+.. versionadded:: 4.3
+
+    The ``Locales`` class was introduced in Symfony 4.3.
 
 Currencies
 ~~~~~~~~~~
 
-The translations of currency names and other currency-related information can
-be found in the currency bundle::
+The ``Currencies`` class provides access to the name of all currencies as well
+as some of their information (symbol, fraction digits, etc.)::
 
-    use Symfony\Component\Intl\Intl;
+    use Symfony\Component\Intl\Currencies;
 
     \Locale::setDefault('en');
 
-    $currencies = Intl::getCurrencyBundle()->getCurrencyNames();
-    // => ['AFN' => 'Afghan Afghani', ...]
+    $currencies = Currencies::getNames();
+    // ('currencyCode' => 'currencyName')
+    // => ['AFN' => 'Afghan Afghani', 'ALL' => 'Albanian Lek', ...]
 
-    $currency = Intl::getCurrencyBundle()->getCurrencyName('INR');
+    $currency = Currencies::getName('INR');
     // => 'Indian Rupee'
 
-    $symbol = Intl::getCurrencyBundle()->getCurrencySymbol('INR');
+    $symbol = Currencies::getSymbol('INR');
     // => '₹'
 
-    $fractionDigits = Intl::getCurrencyBundle()->getFractionDigits('INR');
+    $fractionDigits = Currencies::getFractionDigits('INR');
     // => 2
 
-    $roundingIncrement = Intl::getCurrencyBundle()->getRoundingIncrement('INR');
+    $roundingIncrement = Currencies::getRoundingIncrement('INR');
     // => 0
 
-All methods (except for
-:method:`Symfony\\Component\\Intl\\ResourceBundle\\CurrencyBundleInterface::getFractionDigits`
-and
-:method:`Symfony\\Component\\Intl\\ResourceBundle\\CurrencyBundleInterface::getRoundingIncrement`)
-accept the translation locale as the last, optional parameter, which defaults
-to the current default locale::
+All methods (except for ``getFractionDigits()`` and ``getRoundingIncrement()``)
+accept the translation locale as the last, optional parameter, which defaults to
+the current default locale::
 
-    $currencies = Intl::getCurrencyBundle()->getCurrencyNames('de');
-    // => ['AFN' => 'Afghanische Afghani', ...]
+    $currencies = Currencies::getNames('de');
+    // => ['AFN' => 'Afghanischer Afghani', 'EGP' => 'Ägyptisches Pfund', ...]
 
-That's all you need to know for now. Have fun coding!
+    $currency = Currencies::getName('INR', 'de');
+    // => 'Indische Rupie'
+
+You can also check if a given currency code is valid::
+
+    $isValidCurrency = Currencies::exists($currencyCode);
+
+.. versionadded:: 4.3
+
+    The ``Currencies`` class was introduced in Symfony 4.3.
+
+Timezones
+~~~~~~~~~
+
+The ``Timezones`` class provides access to the name and values of all timezones::
+
+    use Symfony\Component\Intl\Timezones;
+
+    \Locale::setDefault('en');
+
+    $timezones = Timezones::getNames();
+    // ('timezoneID' => 'timezoneValue')
+    // => ['America/Eirunepe' => 'Acre Time (Eirunepe)', 'America/Rio_Branco' => 'Acre Time (Rio Branco)', ...]
+
+    $timezone = Timezones::getName('Africa/Nairobi');
+    // => 'East Africa Time (Nairobi)'
+
+All methods accept the translation locale as the last, optional parameter,
+which defaults to the current default locale::
+
+    $timezones = Timezones::getNames('de');
+    // => ['America/Eirunepe' => 'Acre-Zeit (Eirunepe)', 'America/Rio_Branco' => 'Acre-Zeit (Rio Branco)', ...]
+
+    $timezone = Timezones::getName('Africa/Nairobi', 'de');
+    // => 'Ostafrikanische Zeit (Nairobi)'
+
+You can also check if a given timezone ID is valid::
+
+    $isValidTimezone = Timezones::exists($timezoneId);
+
+.. versionadded:: 4.3
+
+    The ``Timezones`` class was introduced in Symfony 4.3.
 
 Learn more
 ----------
@@ -346,6 +448,8 @@ Learn more
 .. _intl extension: https://php.net/manual/en/book.intl.php
 .. _install the intl extension: https://php.net/manual/en/intl.setup.php
 .. _ICU library: http://site.icu-project.org/
+.. _`Unicode ISO 15924 Registry`: https://www.unicode.org/iso15924/iso15924-codes.html
+.. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: a9788bcf7016b0908b3a27a0d26dfd590880ea78

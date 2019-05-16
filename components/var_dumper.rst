@@ -21,7 +21,7 @@ Installation
 .. note::
 
     If using it inside a Symfony application, make sure that the DebugBundle has
-    been installed (or run ``composer require symfony/debug-bundle`` to install it).
+    been installed (or run ``composer require --dev symfony/debug-bundle`` to install it).
 
 .. _components-var-dumper-dump:
 
@@ -152,13 +152,13 @@ Outside a Symfony application, use the :class:`Symfony\\Component\\VarDumper\\Du
 
     require __DIR__.'/vendor/autoload.php';
 
-    use Symfony\Component\VarDumper\VarDumper;
     use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
     use Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider;
     use Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider;
     use Symfony\Component\VarDumper\Dumper\HtmlDumper;
     use Symfony\Component\VarDumper\Dumper\ServerDumper;
+    use Symfony\Component\VarDumper\VarDumper;
 
     $cloner = new VarCloner();
     $fallbackDumper = \in_array(\PHP_SAPI, ['cli', 'phpdbg']) ? new CliDumper() : new HtmlDumper();
@@ -244,10 +244,11 @@ This will provide you with two new assertions:
 Example::
 
     use PHPUnit\Framework\TestCase;
+    use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 
     class ExampleTest extends TestCase
     {
-        use \Symfony\Component\VarDumper\Test\VarDumperTestTrait;
+        use VarDumperTestTrait;
 
         public function testWithDumpEquals()
         {
@@ -409,4 +410,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 0a9e117bfac1554033cfd0e19ea59acf0d3b52ef

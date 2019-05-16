@@ -68,13 +68,11 @@ will contain a credit card number.
         // src/Entity/Transaction.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Transaction
         {
-            protected $cardNumber;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('cardNumber', new Assert\Luhn([
@@ -110,4 +108,4 @@ Parameter        Description
 .. _`Luhn algorithm`: https://en.wikipedia.org/wiki/Luhn_algorithm
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

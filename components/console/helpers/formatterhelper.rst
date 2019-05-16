@@ -108,9 +108,10 @@ If you don't want to use suffix at all, pass an empty string::
 
     $truncatedMessage = $formatter->truncate($message, 7, '!!'); // result: This is!!
     $truncatedMessage = $formatter->truncate($message, 7, '');   // result: This is
+
     $truncatedMessage = $formatter->truncate('test', 10);
-    /* result: test
-       because length of the "test..." string is shorter than 10 */
+    // result: test
+    // because length of the "test..." string is shorter than 10
 
 .. ready: no
-.. revision: 60142c53315ba35610e4d58486895b8da1606054
+.. revision: de41795e29b42be1211d5606d5541bb1547e4a36

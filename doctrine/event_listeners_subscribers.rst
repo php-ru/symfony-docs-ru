@@ -95,9 +95,9 @@ a ``postPersist()`` method, which will be called when the event is dispatched::
     // src/EventListener/SearchIndexer.php
     namespace App\EventListener;
 
+    use App\Entity\Product;
     // for Doctrine < 2.4: use Doctrine\ORM\Event\LifecycleEventArgs;
     use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-    use App\Entity\Product;
 
     class SearchIndexer
     {
@@ -140,10 +140,10 @@ interface and have an event method for each event it subscribes to::
     // src/EventListener/SearchIndexerSubscriber.php
     namespace App\EventListener;
 
+    use App\Entity\Product;
     use Doctrine\Common\EventSubscriber;
     // for Doctrine < 2.4: use Doctrine\ORM\Event\LifecycleEventArgs;
     use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-    use App\Entity\Product;
     use Doctrine\ORM\Events;
 
     class SearchIndexerSubscriber implements EventSubscriber
@@ -258,4 +258,4 @@ numbers mean that listeners are invoked earlier.
 .. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
 .. ready: no
-.. revision: 120dbaabe0ab155da37345484f366ae1a2d13e81
+.. revision: f8e32c11d38d45cebed8210f913b0d9b59659c4f

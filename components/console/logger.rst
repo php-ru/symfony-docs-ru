@@ -39,8 +39,8 @@ You can rely on the logger to use this dependency inside a command::
     use Acme\MyDependency;
     use Symfony\Component\Console\Command\Command;
     use Symfony\Component\Console\Input\InputInterface;
-    use Symfony\Component\Console\Output\OutputInterface;
     use Symfony\Component\Console\Logger\ConsoleLogger;
+    use Symfony\Component\Console\Output\OutputInterface;
 
     class MyCommand extends Command
     {
@@ -116,4 +116,4 @@ the command.
 .. _PSR-3: https://www.php-fig.org/psr/psr-3/
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

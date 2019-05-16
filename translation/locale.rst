@@ -83,7 +83,7 @@ by the routing system using the special ``_locale`` parameter:
                 https://symfony.com/schema/routing/routing-1.0.xsd">
 
             <route id="contact" path="/{_locale}/contact">
-                controller="App\Controller\ContactContorller::index">
+                controller="App\Controller\ContactController::index">
                 <requirement key="_locale">en|fr|de</requirement>
             </route>
         </routes>
@@ -91,9 +91,8 @@ by the routing system using the special ``_locale`` parameter:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\ContactController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('contact', '/{_locale}/contact')
@@ -161,4 +160,4 @@ the framework:
         ]);
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: b2895b0ac82e1130c9480196937d55577d689412

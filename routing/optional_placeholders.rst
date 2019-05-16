@@ -14,8 +14,7 @@ the available blog posts for this imaginary blog application:
         // src/Controller/BlogController.php
         use Symfony\Component\Routing\Annotation\Route;
 
-        // ...
-        class BlogController extends AbstractController
+        class BlogController
         {
             /**
              * @Route("/blog")
@@ -49,9 +48,8 @@ the available blog posts for this imaginary blog application:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\BlogController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('blog', '/blog')
@@ -102,9 +100,8 @@ entries? Update the route to have a new ``{page}`` placeholder:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\BlogController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('blog', '/blog/{page}')
@@ -163,9 +160,8 @@ This is done by including it in the ``defaults`` collection:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\BlogController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('blog', '/blog/{page}')
@@ -202,4 +198,4 @@ URL          Route     Parameters
     with a trailing slash (i.e. ``/blog/`` will not match, ``/blog`` will match).
 
 .. ready: no
-.. revision: 1601a50ec08a3563b9b46d1a06ab6ad1193cd1d3
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

@@ -39,7 +39,7 @@ remain resistant to brute-force search attacks.
 
 .. note::
 
-    :ref:`Argon2i <reference-security-argon2i>` is the hashing algorithm as
+    :ref:`Sodium <reference-security-sodium>` is the hashing algorithm as
     recommended by industry standards, but this won't be available to you unless
     you are using PHP 7.2+ or have the `libsodium`_ extension installed.
     ``bcrypt`` is sufficient for most applications.
@@ -356,7 +356,7 @@ via the even easier shortcut in a controller::
         $this->denyAccessUnlessGranted('edit', $post);
 
         // use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-        // use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface
+        // use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
         //
         // ...
         //
@@ -381,4 +381,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: be3e0b6c9b2c6b120aee80882d88abafac55ee69
+.. revision: 0f8240dfaaea2d1d5a728562639428d0b54a8937

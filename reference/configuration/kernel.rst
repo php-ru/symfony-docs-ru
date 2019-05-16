@@ -154,7 +154,7 @@ Since the ``container.build_time`` value will change every time you compile the
 application, the build will not be strictly reproducible. If you care about
 this, the solution is to use another configuration parameter called
 ``kernel.container_build_time`` and set it to a non-changing build time to
-achieve a strict reproducible build::
+achieve a strict reproducible build:
 
 .. configuration-block::
 
@@ -182,7 +182,6 @@ achieve a strict reproducible build::
     .. code-block:: php
 
         // config/services.php
-        use Symfony\Component\DependencyInjection\Reference;
 
         // ...
         $container->setParameter('kernel.container_build_time', '1234567890');
@@ -190,4 +189,4 @@ achieve a strict reproducible build::
 .. _`reproducible builds`: https://en.wikipedia.org/wiki/Reproducible_builds
 
 .. ready: no
-.. revision: 11c107f3628e43f10f7ba2a875ac9d884a0e781b
+.. revision: 2dbf149d7e4bbdf1bd9d144ca2591aa763739697

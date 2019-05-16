@@ -21,11 +21,11 @@ PHP class::
 
     use App\Entity\Post;
     use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+    use Symfony\Component\Form\Extension\Core\Type\EmailType;
+    use Symfony\Component\Form\Extension\Core\Type\TextareaType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
-    use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-    use Symfony\Component\Form\Extension\Core\Type\EmailType;
-    use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
     class PostType extends AbstractType
     {
@@ -103,9 +103,9 @@ some developers configure form buttons in the controller::
 
     use App\Entity\Post;
     use App\Form\PostType;
-    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+    use Symfony\Component\HttpFoundation\Request;
 
     class PostController extends AbstractController
     {
@@ -221,4 +221,4 @@ submit. Both those actions will be almost identical. So it's much simpler to let
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: a2edc09d315c88ee6c4f5003fd96f533d4b06773
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

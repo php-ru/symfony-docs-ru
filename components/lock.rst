@@ -155,6 +155,10 @@ to reset the TTL to its original value::
         // refresh the lock for 600 seconds (next refresh() call will be 30 seconds again)
         $lock->refresh(600);
 
+This component also provides two useful methods related to expiring locks:
+``getExpiringDate()`` (which returns ``null`` or a ``\DateTimeImmutable``
+object) and ``isExpired()`` (which returns a boolean).
+
 Available Stores
 ----------------
 
@@ -325,9 +329,9 @@ is being acquired, it forwards the call to all the managed stores, and it
 collects their responses. If a simple majority of stores have acquired the lock,
 then the lock is considered as acquired; otherwise as not acquired::
 
-    use Symfony\Component\Lock\Strategy\ConsensusStrategy;
     use Symfony\Component\Lock\Store\CombinedStore;
     use Symfony\Component\Lock\Store\RedisStore;
+    use Symfony\Component\Lock\Strategy\ConsensusStrategy;
 
     $stores = [];
     foreach (['server1', 'server2', 'server3'] as $server) {
@@ -698,4 +702,4 @@ are still running.
 .. _`Replica Set Read and Write Semantics`: https://docs.mongodb.com/manual/applications/replication/
 
 .. ready: no
-.. revision: 337a9e2446f7d38f726c6b5c6e3a4c59e5faaa1b
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

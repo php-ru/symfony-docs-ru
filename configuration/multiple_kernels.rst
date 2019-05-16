@@ -82,9 +82,9 @@ Kernel. Be sure to also change the location of the cache, logs and configuration
 files so they don't collide with the files from ``src/Kernel.php``::
 
     // src/ApiKernel.php
-    use Symfony\Component\HttpKernel\Kernel;
     use Symfony\Component\Config\Loader\LoaderInterface;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\HttpKernel\Kernel;
 
     class ApiKernel extends Kernel
     {
@@ -225,4 +225,4 @@ the default ``src/`` directory:
         └─ index.php
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

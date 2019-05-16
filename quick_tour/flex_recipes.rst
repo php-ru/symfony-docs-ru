@@ -156,8 +156,8 @@ Are you building an API? You can already return JSON easily from any controller:
     // src/Controller/DefaultController.php
     namespace App\Controller;
 
-    use Symfony\Component\Routing\Annotation\Route;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\Routing\Annotation\Route;
 
     class DefaultController extends AbstractController
     {
@@ -264,4 +264,4 @@ the service container, and it's Symfony's super power. Read on: about :doc:`/qui
 .. _`Twig`: https://twig.symfony.com/
 
 .. ready: no
-.. revision: a461f58179deffbc822c90411f732150630d3cc0
+.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca

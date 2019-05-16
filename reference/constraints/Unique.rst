@@ -78,8 +78,8 @@ strings:
         // src/Entity/Person.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -113,4 +113,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 4b2007e6dcfa1d4cd7f1c7ed97e2192960a5352a
+.. revision: e861d6434db149f8438ba86037db17d8823f8af7

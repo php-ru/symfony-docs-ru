@@ -90,7 +90,7 @@ whenever the corresponding environment variable is *not* found:
             <parameters>
                 <parameter key="env(DATABASE_HOST)">localhost</parameter>
             </parameters>
-         </container>
+        </container>
 
     .. code-block:: php
 
@@ -156,7 +156,7 @@ turn the value of the ``HTTP_PORT`` env var into an integer:
         # config/packages/framework.yaml
         framework:
             router:
-                http_port: env(int:HTTP_PORT)
+                http_port: '%env(int:HTTP_PORT)%'
 
     .. code-block:: xml
 
@@ -522,7 +522,7 @@ Symfony provides the following env var processors:
             parameters:
                 env(SECRETS_FILE): '/opt/application/.secrets.json'
                 database_password: '%env(key:database_password:json:file:SECRETS_FILE)%'
-                # if SECRETS_FILE contents are: {"database_password": "secret"} it returns "secret"
+                # if SECRETS_FILE contents are: {"database_password": "secret"} it returns "secret"
 
         .. code-block:: xml
 
@@ -626,7 +626,7 @@ Symfony provides the following env var processors:
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <mongodb:config>
                     <mongodb:client name="default" username="%env(key:user:url:MONGODB_URL)%" password="%env(key:pass:url:MONGODB_URL)%">
@@ -695,7 +695,7 @@ Symfony provides the following env var processors:
             <container xmlns="http://symfony.com/schema/dic/services"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:schemaLocation="http://symfony.com/schema/dic/services
-                    http://symfony.com/schema/dic/services/services-1.0.xsd">
+                    https://symfony.com/schema/dic/services/services-1.0.xsd">
 
                 <mongodb:config>
                     <mongodb:client name="default" connectTimeoutMS="%env(int:key:timeout:query_string:MONGODB_URL)%"/>
@@ -790,4 +790,4 @@ configuration::
 .. _`fastcgi_param`: http://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_param
 
 .. ready: no
-.. revision: 947f246eef06e06dc5198ee8429c542a6c318193
+.. revision: 61327968b79a7c756f6dbee927c2c3af3cf46d6e

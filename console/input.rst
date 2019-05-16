@@ -166,8 +166,8 @@ flag:
 
 .. tip::
 
-     You can also declare a one-letter shortcut that you can call with a single
-     dash, like ``-i``::
+    You can also declare a one-letter shortcut that you can call with a single
+    dash, like ``-i``::
 
         $this
             // ...
@@ -269,4 +269,4 @@ Now check the value of the option and keep in mind that ``false !== null``::
 .. _`docopt standard`: http://docopt.org/
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: de41795e29b42be1211d5606d5541bb1547e4a36

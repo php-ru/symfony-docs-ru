@@ -142,8 +142,8 @@ framework does not need to be modified in any way, create a new
 ``app.php`` file::
 
     // example.com/src/app.php
-    use Symfony\Component\Routing;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\Routing;
 
     function is_leap_year($year = null) {
         if (null === $year) {
@@ -181,4 +181,4 @@ probably all you need to create simple websites like those fancy one-page
 .. _`websites`: https://kottke.org/08/02/single-serving-sites
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

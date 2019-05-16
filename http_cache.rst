@@ -99,13 +99,9 @@ caching kernel:
     use App\Kernel;
 
     // ...
-    $env = $_SERVER['APP_ENV'] ?? 'dev';
-    $debug = (bool) ($_SERVER['APP_DEBUG'] ?? ('prod' !== $env));
-    // ...
-    $kernel = new Kernel($env, $debug);
-
+    $kernel = new Kernel($_SERVER['APP_ENV'], (bool) $_SERVER['APP_DEBUG']);
     + // Wrap the default Kernel with the CacheKernel one in 'prod' environment
-    + if ('prod' === $env) {
+    + if ('prod' === $kernel->getEnvironment()) {
     +     $kernel = new CacheKernel($kernel);
     + }
 
@@ -429,4 +425,4 @@ Learn more
 .. _`they can be cached`: https://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-20#section-2.3.4
 
 .. ready: no
-.. revision: 75febdc46fccae2e35960d3f7855262c5f875562
+.. revision: 7aa3f7501dc7caadc51319306f49e9dd9a0bca8e

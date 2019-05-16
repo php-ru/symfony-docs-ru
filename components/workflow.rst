@@ -36,9 +36,9 @@ of predefined statuses (`draft`, `review`, `rejected`, `published`). In a workfl
 these statuses are called **places**. You can define the workflow like this::
 
     use Symfony\Component\Workflow\DefinitionBuilder;
+    use Symfony\Component\Workflow\MarkingStore\SingleStateMarkingStore;
     use Symfony\Component\Workflow\Transition;
     use Symfony\Component\Workflow\Workflow;
-    use Symfony\Component\Workflow\MarkingStore\SingleStateMarkingStore;
 
     $definitionBuilder = new DefinitionBuilder();
     $definition = $definitionBuilder->addPlaces(['draft', 'review', 'rejected', 'published'])
@@ -61,10 +61,10 @@ which is an object that stores and provides access to different workflows.
 A registry will also help you to decide if a workflow supports the object you
 are trying to use it with::
 
-    use Symfony\Component\Workflow\Registry;
-    use Symfony\Component\Workflow\SupportStrategy\InstanceOfSupportStrategy;
     use Acme\Entity\BlogPost;
     use Acme\Entity\Newsletter;
+    use Symfony\Component\Workflow\Registry;
+    use Symfony\Component\Workflow\SupportStrategy\InstanceOfSupportStrategy;
 
     $blogWorkflow = ...
     $newsletterWorkflow = ...
@@ -101,4 +101,4 @@ Learn more
 .. _Packagist: https://packagist.org/packages/symfony/workflow
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

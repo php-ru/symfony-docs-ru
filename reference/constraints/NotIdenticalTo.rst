@@ -92,8 +92,8 @@ The following constraints ensure that:
         // src/Entity/Person.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -136,4 +136,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_comparison-value-option.rst.inc
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

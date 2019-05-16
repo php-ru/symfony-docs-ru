@@ -163,6 +163,13 @@ Woh! You now have a new ``src/Entity/Product.php`` file::
     Confused why the price is an integer? Don't worry: this is just an example.
     But, storing prices as integers (e.g. 100 = $1 USD) can avoid rounding issues.
 
+.. note::
+
+    If you are using an SQLite database, you'll see the following error:
+    *PDOException: SQLSTATE[HY000]: General error: 1 Cannot add a NOT NULL
+    column with default value NULL*. Add a ``nullable=true`` option to the
+    ``description`` property to fix the problem.
+
 .. caution::
 
     There is a `limit of 767 bytes for the index key prefix`_ when using
@@ -339,9 +346,9 @@ and save it::
     namespace App\Controller;
 
     // ...
-    use Symfony\Component\HttpFoundation\Response;
-
     use App\Entity\Product;
+    use Doctrine\ORM\EntityManagerInterface;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ProductController extends AbstractController
     {
@@ -811,4 +818,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony-doctrine
 
 .. ready: no
-.. revision: 5539265fb68eec42f9bba98b561b18dcb9d0bcff
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

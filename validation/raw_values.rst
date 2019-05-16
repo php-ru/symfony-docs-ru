@@ -45,8 +45,8 @@ section.
 
 Validation of arrays is possible using the ``Collection`` constraint::
 
-    use Symfony\Component\Validator\Validation;
     use Symfony\Component\Validator\Constraints as Assert;
+    use Symfony\Component\Validator\Validation;
 
     $validator = Validation::createValidator();
 
@@ -107,4 +107,4 @@ is a :class:`Symfony\\Component\\Validator\\ConstraintViolation` object,
 which holds the error message on its ``getMessage()`` method.
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

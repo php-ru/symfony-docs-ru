@@ -110,6 +110,13 @@ the `query_builder`_ option::
         'choice_label' => 'username',
     ]);
 
+.. note::
+
+    Using form collections may result in making too many database requests to
+    fetch related entities. This is known as the *"N + 1 query problem"* and it
+    can be solved by :ref:`joining related records <doctrine-associations-join-query>`
+    when querying for Doctrine associations.
+
 .. _reference-forms-entity-choices:
 
 Using Choices
@@ -184,8 +191,8 @@ more details, see the main :ref:`choice_label <reference-form-choice-label>` doc
         // ...
 
         $builder->add('genre', EntityType::class, [
-           'class' => Genre::class,
-           'choice_label' => 'translations[en].name',
+            'class' => Genre::class,
+            'choice_label' => 'translations[en].name',
         ]);
 
 class
@@ -221,12 +228,12 @@ loading all entities.
 
 .. caution::
 
-    The entity used in the ``FROM`` clause of the ``query_builder`` option
+    The entity used in the ``FROM`` clause of the ``query_builder`` option
     will always be validated against the class which you have specified at the
     `class`_ option. If you return another entity instead of the
     one used in your ``FROM`` clause (for instance if you return an entity
     from a joined table), it will break validation.
-    
+
 Overridden Options
 ------------------
 
@@ -362,4 +369,4 @@ The actual default value of this option depends on other field options:
 .. include:: /reference/forms/types/options/help_translation_parameters.rst.inc
 
 .. ready: no
-.. revision: dd40b56859c41f9871f6f0910c6fef8b8c04aa78
+.. revision: 61327968b79a7c756f6dbee927c2c3af3cf46d6e

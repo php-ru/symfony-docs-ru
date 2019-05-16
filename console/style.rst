@@ -54,9 +54,9 @@ title of the command::
     namespace App\Command;
 
     use Symfony\Component\Console\Command\Command;
-    use Symfony\Component\Console\Style\SymfonyStyle;
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Output\OutputInterface;
+    use Symfony\Component\Console\Style\SymfonyStyle;
 
     class GreetCommand extends Command
     {
@@ -411,4 +411,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: 25c3cae7d9ff88dbd0c27bbb88cbc017bb35d3d2
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

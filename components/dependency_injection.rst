@@ -198,8 +198,8 @@ files. To do this you also need to install
 
 Loading an XML config file::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
     $containerBuilder = new ContainerBuilder();
@@ -208,8 +208,8 @@ Loading an XML config file::
 
 Loading a YAML config file::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
     $containerBuilder = new ContainerBuilder();
@@ -233,8 +233,8 @@ Loading a YAML config file::
 If you *do* want to use PHP to create the services then you can move this
 into a separate config file and load it in a similar way::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
     $containerBuilder = new ContainerBuilder();
@@ -314,4 +314,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/dependency-injection
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

@@ -338,6 +338,16 @@ option of your handler to ``rotating_file``:
 Using a Logger inside a Service
 -------------------------------
 
+If your application uses :ref:`service autoconfiguration <services-autoconfigure>`,
+any service whose class implements ``Psr\Log\LoggerAwareInterface`` will
+receive a call to its method ``setLogger()`` with the default logger service
+passed as a service.
+
+.. versionadded:: 4.2
+
+    The automatic call to ``setLogger()`` when implementing ``LoggerAwareInterface``
+    was introduced in Symfony 4.2.
+
 If you want to use in your own services a pre-configured logger which uses a
 specific channel (``app`` by default), use the ``monolog.logger`` tag  with the
 ``channel`` property as explained in the
@@ -378,4 +388,4 @@ Learn more
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php#L25
 
 .. ready: no
-.. revision: 60142c53315ba35610e4d58486895b8da1606054
+.. revision: 7305bf0b9e21bf928e1ed3f61024eeca6bad6ac1

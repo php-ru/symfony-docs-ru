@@ -10,6 +10,7 @@ UUID versions can also be restricted using a whitelist.
 Applies to  :ref:`property or method <validation-property-target>`
 Options     - `groups`_
             - `message`_
+            - `normalizer`_
             - `payload`_
             - `strict`_
             - `versions`_
@@ -65,8 +66,8 @@ Basic Usage
         // src/Entity/File.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class File
         {
@@ -97,6 +98,8 @@ Parameter        Description
 ===============  ==============================================================
 ``{{ value }}``  The current (invalid) value
 ===============  ==============================================================
+
+.. include:: /reference/constraints/_normalizer-option.rst.inc
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
@@ -134,4 +137,4 @@ All five versions are allowed by default.
 .. _`UUID versions`: http://en.wikipedia.org/wiki/Universally_unique_identifier#Variants_and_versions
 
 .. ready: no
-.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
+.. revision: 9d34ea08aef9bf60169a4375b967cf301d8e8ee0

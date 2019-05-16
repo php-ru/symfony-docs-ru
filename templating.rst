@@ -113,7 +113,7 @@ with alternating ``odd``, ``even`` classes:
 
     {% for i in 1..10 %}
         <div class="{{ cycle(['even', 'odd'], i) }}">
-          <!-- some HTML here -->
+            <!-- some HTML here -->
         </div>
     {% endfor %}
 
@@ -530,9 +530,8 @@ configuration:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\WelcomeController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('welcome', '/')
@@ -596,9 +595,8 @@ route:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\ArticleController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('article_show', '/articles/{slug}')
@@ -825,4 +823,4 @@ Learn more
 .. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: 25b242e827a68c224859e966728ad262bfa303f3
+.. revision: de41795e29b42be1211d5606d5541bb1547e4a36

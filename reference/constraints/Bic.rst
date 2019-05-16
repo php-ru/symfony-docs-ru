@@ -69,8 +69,8 @@ will contain a Business Identifier Code (BIC).
         // src/Entity/Transaction.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Transaction
         {
@@ -144,4 +144,4 @@ Parameter        Description
 .. _`Business Identifier Code (BIC)`: https://en.wikipedia.org/wiki/Business_Identifier_Code
 
 .. ready: no
-.. revision: 1f89237c7e903d3b88ab28b106f2541ddd650765
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

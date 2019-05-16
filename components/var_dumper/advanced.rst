@@ -15,10 +15,10 @@ By adding a handler, you can customize the `Cloners`_, `Dumpers`_ and `Casters`_
 as explained below. A simple implementation of a handler function might look
 like this::
 
-    use Symfony\Component\VarDumper\VarDumper;
     use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
     use Symfony\Component\VarDumper\Dumper\HtmlDumper;
+    use Symfony\Component\VarDumper\VarDumper;
 
     VarDumper::setHandler(function ($var) {
         $cloner = new VarCloner();
@@ -398,4 +398,4 @@ that holds a file name or a URL, you can wrap them in a ``LinkStub`` to tell
     }
 
 .. ready: no
-.. revision: be3e0b6c9b2c6b120aee80882d88abafac55ee69
+.. revision: e31c324ed9693ed59cf845ee3ec7a6f2775e405c

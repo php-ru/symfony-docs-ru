@@ -20,9 +20,9 @@ correct locale however you want::
     // src/EventSubscriber/LocaleSubscriber.php
     namespace App\EventSubscriber;
 
+    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
     use Symfony\Component\HttpKernel\Event\GetResponseEvent;
     use Symfony\Component\HttpKernel\KernelEvents;
-    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
     class LocaleSubscriber implements EventSubscriberInterface
     {
@@ -187,4 +187,4 @@ event::
     the ``User`` entity.
 
 .. ready: no
-.. revision: 2f97fffe4aa1368fa119d9bf1b9fb3034d3d9e71
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

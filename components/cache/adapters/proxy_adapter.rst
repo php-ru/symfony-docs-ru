@@ -9,14 +9,18 @@ This adapter wraps a `PSR-6`_ compliant `cache item pool interface`_. It is used
 your application's cache item pool implementation with the Symfony :ref:`Cache Component <cache-component>`
 by consuming any implementation of ``Psr\Cache\CacheItemPoolInterface``.
 
+It can also be used to prefix all keys automatically before storing items in the decorated pool,
+effectively allowing the creation of several namespaced pools out of a single one.
+
 This adapter expects a ``Psr\Cache\CacheItemPoolInterface`` instance as its first parameter,
 and optionally a namespace and default cache lifetime as its second and third parameters::
 
     use Psr\Cache\CacheItemPoolInterface;
     use Symfony\Component\Cache\Adapter\ProxyAdapter;
 
-    $psr6CachePool = \\ create your own cache pool instance that implements the PSR-6
-                     \\ interface `CacheItemPoolInterface`
+    // create your own cache pool instance that implements
+    // the PSR-6 CacheItemPoolInterface
+    $psr6CachePool = ...
 
     $cache = new ProxyAdapter(
 
@@ -36,4 +40,4 @@ and optionally a namespace and default cache lifetime as its second and third pa
 .. _`cache item pool interface`: http://www.php-fig.org/psr/psr-6/#cacheitempoolinterface
 
 .. ready: no
-.. revision: c49d42713a2ce8802b5fcd315aa981259d7c7964
+.. revision: 543b184945600c4c8146b782b994a73f0e1a2786

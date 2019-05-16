@@ -8,8 +8,8 @@
 * **Code**
 
   * :doc:`Bugs </contributing/code/bugs>`
-  * :doc:`Patches </contributing/code/pull_requests>`
-  * :doc:`Reviewing Issues and Patches </contributing/community/reviews>`
+  * :doc:`Pull Requests </contributing/code/pull_requests>`
+  * :doc:`Reviewing Issues and Pull Requests </contributing/community/reviews>`
   * :doc:`Maintenance </contributing/code/maintenance>`
   * :doc:`The Core Team </contributing/code/core_team>`
   * :doc:`Security </contributing/code/security>`
@@ -39,4 +39,4 @@
   * :doc:`Governance </contributing/diversity/governance>`
 
 .. ready: no
-.. revision: dc35a224ffeefa02c7e8cdee51fcf99315ce045a
+.. revision: b75912f4e424feb7acbc586fda611f58b52e8251

@@ -78,7 +78,7 @@ projects. The process works as follows:
    date for a joint release (there is no guarantee that all releases will
    be at the same time but we will try hard to make them at about the same
    time). When the issue is not known to be exploited in the wild, a period
-   of two weeks seems like a reasonable amount of time.
+   of two weeks is considered a reasonable amount of time.
 
 The list of downstream projects participating in this process is kept as small
 as possible in order to better manage the flow of confidential information
@@ -183,4 +183,4 @@ vulnerabilities that were fixed in Symfony releases, starting from Symfony
 .. _`Security Advisories`: https://symfony.com/blog/category/security-advisories
 
 .. ready: no
-.. revision: 1ce2d7bb0d0a3a5723a1f25b3231d6e742c22fae
+.. revision: 1c4d8fcc7282caf401ef4677fb3087dad3f08475

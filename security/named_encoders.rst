@@ -109,7 +109,7 @@ be done with named encoders:
 
     If you are running PHP 7.2+ or have the `libsodium`_ extension installed,
     then the recommended hashing algorithm to use is
-    :ref:`Argon2i <reference-security-argon2i>`.
+    :ref:`Sodium <reference-security-sodium>`.
 
 This creates an encoder named ``harsh``. In order for a ``User`` instance
 to use it, the class must implement
@@ -120,8 +120,8 @@ the name of the encoder to use::
     // src/Acme/UserBundle/Entity/User.php
     namespace Acme\UserBundle\Entity;
 
-    use Symfony\Component\Security\Core\User\UserInterface;
     use Symfony\Component\Security\Core\Encoder\EncoderAwareInterface;
+    use Symfony\Component\Security\Core\User\UserInterface;
 
     class User implements UserInterface, EncoderAwareInterface
     {
@@ -189,4 +189,4 @@ This creates an encoder named ``app_encoder`` from a service with the ID
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

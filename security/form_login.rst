@@ -130,9 +130,8 @@ configuration (``login``):
     ..  code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\SecurityController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('login', '/login')
@@ -773,4 +772,4 @@ are now fully customized:
 .. _`Login CSRF attacks`: https://en.wikipedia.org/wiki/Cross-site_request_forgery#Forging_login_requests
 
 .. ready: no
-.. revision: 4b9df245ed875077e291bd49f801d1df19ecf561
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

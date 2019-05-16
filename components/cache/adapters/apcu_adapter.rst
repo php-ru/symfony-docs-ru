@@ -1,6 +1,6 @@
 .. index::
     single: Cache Pool
-    single: APC Cache, APCu Cache
+    single: APCu Cache
 
 .. _apcu-adapter:
 
@@ -50,4 +50,4 @@ and cache items version string as constructor arguments::
 .. _`APCu extension`: https://pecl.php.net/package/APCu
 
 .. ready: no
-.. revision: eb70a365ee34aa47997694da9aedf615a5c443bd
+.. revision: 808453abe5cfa04c1517d76f4a2cb4bac060ce0a

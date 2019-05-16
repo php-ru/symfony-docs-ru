@@ -190,7 +190,7 @@ provide a callback function to dynamically generate suggestions::
     {
         // This function is called whenever the input changes and new
         // suggestions are needed.
-        $callback = function (string $input): array {
+        $callback = function (string $userInput): array {
             // Strip any characters from the last slash to the end of the string
             // to keep only the last directory and generate suggestions for it
             $inputPath = preg_replace('%(/|^)[^/]*$%', '$1', $userInput);
@@ -377,8 +377,8 @@ Testing a Command that Expects Input
 If you want to write a unit test for a command which expects some kind of input
 from the command line, you need to set the inputs that the command expects::
 
-    use Symfony\Component\Console\Helper\QuestionHelper;
     use Symfony\Component\Console\Helper\HelperSet;
+    use Symfony\Component\Console\Helper\QuestionHelper;
     use Symfony\Component\Console\Tester\CommandTester;
 
     // ...
@@ -422,4 +422,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: 9af9d577eeb29cfacf72a2c2e7d3fd3543d4a6aa
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

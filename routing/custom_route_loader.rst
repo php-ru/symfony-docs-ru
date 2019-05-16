@@ -62,7 +62,7 @@ Take these lines from the ``routes.yaml``:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->import('../src/Controller', 'annotation');
@@ -116,7 +116,7 @@ and configure the service and method to call:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->import('admin_route_loader::loadRoutes', 'service');
@@ -208,8 +208,8 @@ have to create an ``extra()`` method in the ``ExtraController``::
     // src/Controller/ExtraController.php
     namespace App\Controller;
 
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ExtraController extends AbstractController
     {
@@ -294,7 +294,7 @@ What remains to do is adding a few lines to the routing configuration:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->import('.', 'extra');
@@ -375,4 +375,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 38e9f4081d8490f5c75b854cb15fdbc553ce3be2
+.. revision: 5d6766afc43db244ac586455b88f3050ef35be40

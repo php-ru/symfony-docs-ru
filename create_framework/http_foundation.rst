@@ -78,7 +78,7 @@ unit test for the above code::
 
     If our application were just slightly bigger, we would have been able to
     find even more problems. If you are curious about them, read the
-    :doc:`/introduction/from_flat_php_to_symfony2` chapter of the book.
+    :doc:`/introduction/from_flat_php_to_symfony` chapter of the book.
 
 At this point, if you are not convinced that security and testing are indeed
 two very good reasons to stop writing code the old way and adopt a framework
@@ -304,4 +304,4 @@ component is the start of better interoperability between all frameworks and
 .. _`more`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 7985280c05ae38ce4ec4382086110fa6a8d3c398

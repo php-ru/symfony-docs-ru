@@ -106,13 +106,13 @@ set an authenticated token in the token storage if successful::
     // src/Security/Firewall/WsseListener.php
     namespace App\Security\Firewall;
 
+    use App\Security\Authentication\Token\WsseUserToken;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\HttpKernel\Event\GetResponseEvent;
     use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
     use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
     use Symfony\Component\Security\Core\Exception\AuthenticationException;
     use Symfony\Component\Security\Http\Firewall\ListenerInterface;
-    use App\Security\Authentication\Token\WsseUserToken;
 
     class WsseListener implements ListenerInterface
     {
@@ -200,12 +200,13 @@ the ``PasswordDigest`` header value matches with the user's password::
     // src/Security/Authentication/Provider/WsseProvider.php
     namespace App\Security\Authentication\Provider;
 
+    use App\Security\Authentication\Token\WsseUserToken;
     use Psr\Cache\CacheItemPoolInterface;
     use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
-    use Symfony\Component\Security\Core\User\UserProviderInterface;
-    use Symfony\Component\Security\Core\Exception\AuthenticationException;
     use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-    use App\Security\Authentication\Token\WsseUserToken;
+    use Symfony\Component\Security\Core\Exception\AuthenticationException;
+    use Symfony\Component\Security\Core\Exception\NonceExpiredException;
+    use Symfony\Component\Security\Core\User\UserProviderInterface;
 
     class WsseProvider implements AuthenticationProviderInterface
     {
@@ -299,13 +300,13 @@ create a class which implements
     // src/DependencyInjection/Security/Factory/WsseFactory.php
     namespace App\DependencyInjection\Security\Factory;
 
+    use App\Security\Authentication\Provider\WsseProvider;
+    use App\Security\Firewall\WsseListener;
+    use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
+    use Symfony\Component\Config\Definition\Builder\NodeDefinition;
     use Symfony\Component\DependencyInjection\ChildDefinition;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Reference;
-    use Symfony\Component\Config\Definition\Builder\NodeDefinition;
-    use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
-    use App\Security\Authentication\Provider\WsseProvider;
-    use App\Security\Firewall\WsseListener;
 
     class WsseFactory implements SecurityFactoryInterface
     {
@@ -546,10 +547,10 @@ the ``addConfiguration()`` method::
 
         public function addConfiguration(NodeDefinition $node)
         {
-          $node
-            ->children()
-                ->scalarNode('lifetime')->defaultValue(300)
-            ->end();
+            $node
+                ->children()
+                    ->scalarNode('lifetime')->defaultValue(300)
+                ->end();
         }
     }
 
@@ -643,4 +644,4 @@ in the factory and consumed or passed to the other classes in the container.
 .. _`timing attacks`: https://en.wikipedia.org/wiki/Timing_attack
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 543b184945600c4c8146b782b994a73f0e1a2786

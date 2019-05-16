@@ -76,8 +76,8 @@ on an object that will contain an ISBN.
         // src/Entity/Book.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Book
         {
@@ -174,4 +174,4 @@ and ``null`` to accept any kind of ISBN.
 .. _`International Standard Book Number (ISBN)`: https://en.wikipedia.org/wiki/Isbn
 
 .. ready: no
-.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

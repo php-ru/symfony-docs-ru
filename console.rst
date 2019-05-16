@@ -52,8 +52,7 @@ want a command to create a user::
 Configuring the Command
 -----------------------
 
-First of all, you must configure the name of the command in the ``configure()``
-method. Then you can optionally define a help message and the
+You can optionally define a description, help message and the
 :doc:`input options and arguments </console/input>`::
 
     // ...
@@ -92,7 +91,7 @@ available in the ``configure()`` method::
             parent::__construct();
         }
 
-        public function configure()
+        protected function configure()
         {
             $this
                 // ...
@@ -262,8 +261,8 @@ as a service, you can use normal dependency injection. Imagine you have a
 ``App\Service\UserManager`` service that you want to access::
 
     // ...
-    use Symfony\Component\Console\Command\Command;
     use App\Service\UserManager;
+    use Symfony\Component\Console\Command\Command;
 
     class CreateUserCommand extends Command
     {
@@ -393,4 +392,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: f4b9666f60781f9ef9152037f27f0160786d47f5
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

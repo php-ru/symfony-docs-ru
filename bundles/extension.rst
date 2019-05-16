@@ -7,7 +7,8 @@ How to Load Service Configuration inside a Bundle
 
 Services created by bundles are not defined in the main ``config/services.yaml``
 file used by the application but in the bundles themselves. This article
-explains how to create and load those bundle services files.
+explains how to create and load service files using the bundle directory
+structure.
 
 Creating an Extension Class
 ---------------------------
@@ -88,8 +89,8 @@ but it is more common if you put these definitions in a configuration file
 For instance, assume you have a file called ``services.xml`` in the
 ``Resources/config/`` directory of your bundle, your ``load()`` method looks like::
 
-    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
     // ...
     public function load(array $configs, ContainerBuilder $container)
@@ -152,4 +153,4 @@ the full classmap executing the ``dump-autoload`` command of Composer.
     these classes from the ``classes.php`` file.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 14432ceff9699231d4e2552ebf0422ce7509a52e

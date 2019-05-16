@@ -223,8 +223,8 @@ If you are also using the :doc:`HttpFoundation </components/http_foundation>`
 component in your project (for instance, in a Symfony application), the ``PathPackage``
 class can take into account the context of the current request::
 
-    use Symfony\Component\Asset\PathPackage;
     use Symfony\Component\Asset\Context\RequestStackContext;
+    use Symfony\Component\Asset\PathPackage;
     // ...
 
     $pathPackage = new PathPackage(
@@ -313,8 +313,8 @@ account the context of the current request. In this case, only the request
 scheme is considered, in order to select the appropriate base URL (HTTPs or
 protocol-relative URLs for HTTPs requests, any base URL for HTTP requests)::
 
-    use Symfony\Component\Asset\UrlPackage;
     use Symfony\Component\Asset\Context\RequestStackContext;
+    use Symfony\Component\Asset\UrlPackage;
     // ...
 
     $urlPackage = new UrlPackage(
@@ -339,9 +339,9 @@ In the following example, all packages use the same versioning strategy, but
 they all have different base paths::
 
     use Symfony\Component\Asset\Package;
+    use Symfony\Component\Asset\Packages;
     use Symfony\Component\Asset\PathPackage;
     use Symfony\Component\Asset\UrlPackage;
-    use Symfony\Component\Asset\Packages;
     // ...
 
     $versionStrategy = new StaticVersionStrategy('v1');
@@ -403,4 +403,4 @@ Learn more
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

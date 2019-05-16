@@ -169,8 +169,8 @@ as you normally do:
 .. caution::
 
     If you get a "class not found" error during this step, you may need to
-    run ``export APP_ENV=prod`` (or ``export SYMFONY_ENV=prod`` if you're not
-    using :doc:`Symfony Flex </setup/flex>`) before running this command so
+    run ``export APP_ENV=prod`` (or ``export SYMFONY_ENV=prod`` if you're not
+    using :doc:`Symfony Flex </setup/flex>`) before running this command so
     that the ``post-install-cmd`` scripts run in the ``prod`` environment.
 
 D) Clear your Symfony Cache
@@ -189,7 +189,7 @@ There may be lots of other things that you need to do, depending on your
 setup:
 
 * Running any database migrations
-* Clearing your APC cache
+* Clearing your APCu cache
 * Add/edit CRON jobs
 * :ref:`Building and minifying your assets <how-do-i-deploy-my-encore-assets>` with Webpack Encore
 * Pushing assets to a CDN
@@ -256,4 +256,4 @@ Learn More
 .. _`Symfony Cloud`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: 4ecda82f1e2f01fd4a7e232a80d701b1d2a99307
+.. revision: 4f7b9c40e45ce574d9f39b7f2c98265172318426

@@ -103,8 +103,8 @@ username and the password are different only if all other validation passes
         // src/Entity/User.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class User
         {
@@ -357,4 +357,4 @@ provides a sequence of groups to be validated:
         }
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

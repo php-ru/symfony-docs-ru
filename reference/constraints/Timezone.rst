@@ -38,7 +38,7 @@ string meant to contain a timezone identifier (e.g. ``America/New_York``):
             /**
              * @Assert\Timezone
              */
-             protected $timezone;
+            protected $timezone;
         }
 
     .. code-block:: yaml
@@ -69,13 +69,11 @@ string meant to contain a timezone identifier (e.g. ``America/New_York``):
         // src/Entity/UserSettings.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class UserSettings
         {
-            protected $timezone;
-
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('timezone', new Assert\Timezone());
@@ -125,12 +123,13 @@ identifiers to the ones that belong to that geographical zone:
 * ``\DateTimeZone::INDIAN``
 * ``\DateTimeZone::PACIFIC``
 
-The special ``\DateTimeZone::ALL`` zone accepts any timezone excluding deprecated timezones.
+In addition, there are some special zone values:
 
-The special ``\DateTimeZone::ALL_WITH_BC`` zone accepts any timezone including deprecated timezones.
-
-The special ``\DateTimeZone::PER_COUNTRY`` zone limits the timezones to a certain country. This zone
-value must be used in combination with the ``countryCode`` option.
+* ``\DateTimeZone::ALL`` accepts any timezone excluding deprecated timezones;
+* ``\DateTimeZone::ALL_WITH_BC`` accepts any timezone including deprecated
+  timezones;
+* ``\DateTimeZone::PER_COUNTRY`` restricts the valid timezones to a certain
+  country (which is defined using the ``countryCode`` option).
 
 countryCode
 ~~~~~~~~~~~
@@ -148,4 +147,4 @@ The value of this option must be a valid `ISO 3166-1 alpha-2`_ country code
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 .. ready: no
-.. revision: 0cba12ea6e3636ede738d588faf9f7b6b627743e
+.. revision: e861d6434db149f8438ba86037db17d8823f8af7

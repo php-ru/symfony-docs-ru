@@ -137,8 +137,8 @@ that it is between a certain size, add the following:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -207,8 +207,8 @@ following code:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -556,4 +556,4 @@ This message has no parameters.
 .. _`PHP GD extension`: http://php.net/manual/en/book.image.php
 
 .. ready: no
-.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

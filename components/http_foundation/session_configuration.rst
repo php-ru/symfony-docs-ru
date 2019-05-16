@@ -42,8 +42,8 @@ Symfony provides drivers for the following native save handler as an example:
 Example usage::
 
     use Symfony\Component\HttpFoundation\Session\Session;
-    use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
     use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler;
+    use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 
     $sessionStorage = new NativeSessionStorage([], new NativeFileSessionHandler());
     $session = new Session($sessionStorage);
@@ -81,8 +81,8 @@ serve as examples if you wish to write your own.
 Example usage::
 
     use Symfony\Component\HttpFoundation\Session\Session;
-    use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
     use Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler;
+    use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
 
     $pdo = new \PDO(...);
     $sessionStorage = new NativeSessionStorage([], new PdoSessionHandler($pdo));
@@ -291,4 +291,4 @@ timestamp and the lifetime.
 .. _`php.net/memcached.setoption`: https://php.net/memcached.setoption
 
 .. ready: no
-.. revision: 82ef94e226e43c8dd43fc337dacf602e57f45241
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

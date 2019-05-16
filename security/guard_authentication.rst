@@ -66,14 +66,14 @@ This requires you to implement several methods::
 
     use App\Entity\User;
     use Doctrine\ORM\EntityManagerInterface;
-    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\JsonResponse;
+    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\Security\Core\User\UserInterface;
-    use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
     use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
     use Symfony\Component\Security\Core\Exception\AuthenticationException;
+    use Symfony\Component\Security\Core\User\UserInterface;
     use Symfony\Component\Security\Core\User\UserProviderInterface;
+    use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
 
     class TokenAuthenticator extends AbstractGuardAuthenticator
     {
@@ -514,4 +514,4 @@ Frequently Asked Questions
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 
 .. ready: no
-.. revision: ed6fbfb90a9a1d946ff81ea46cf3c87605990908
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

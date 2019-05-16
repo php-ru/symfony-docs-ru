@@ -305,11 +305,11 @@ as your `entry_type`_ option (e.g. for a collection of drop-down menus),
 then you'd need to at least pass the ``choices`` option to the underlying
 type::
 
-    use Symfony\Component\Form\Extension\Core\Type\CollectionType;
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+    use Symfony\Component\Form\Extension\Core\Type\CollectionType;
     // ...
 
-    $builder->add('favorite_cities', CollectionType::class, [
+    $builder->add('favoriteCities', CollectionType::class, [
         'entry_type'   => ChoiceType::class,
         'entry_options'  => [
             'choices'  => [
@@ -448,4 +448,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

@@ -380,8 +380,9 @@ alternatives based on the :ref:`service binding <services-binding>` feature:
 
         // config/services.php
         use App\Some\Service;
-        use Symfony\Component\DependencyInjection\Reference;
         use Psr\Log\LoggerInterface;
+        use Symfony\Component\DependencyInjection\Reference;
+
 
         $container->register(Service::class)
             ->setPublic(true)
@@ -394,4 +395,4 @@ alternatives based on the :ref:`service binding <services-binding>` feature:
         ;
 
 .. ready: no
-.. revision: e433e533676561e0a5c603238a7563ed2a850dcd
+.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca

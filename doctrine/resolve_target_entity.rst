@@ -42,9 +42,9 @@ A Customer entity::
     // src/Entity/Customer.php
     namespace App\Entity;
 
-    use Doctrine\ORM\Mapping as ORM;
     use Acme\CustomerBundle\Entity\Customer as BaseCustomer;
     use Acme\InvoiceBundle\Model\InvoiceSubjectInterface;
+    use Doctrine\ORM\Mapping as ORM;
 
     /**
      * @ORM\Entity
@@ -61,8 +61,8 @@ An Invoice entity::
     // src/Acme/InvoiceBundle/Entity/Invoice.php
     namespace Acme\InvoiceBundle\Entity;
 
-    use Doctrine\ORM\Mapping as ORM;
     use Acme\InvoiceBundle\Model\InvoiceSubjectInterface;
+    use Doctrine\ORM\Mapping as ORM;
 
     /**
      * Represents an Invoice.
@@ -161,4 +161,4 @@ define relationships between different objects. By using this method,
 your bundles will end up being easier to maintain independently.
 
 .. ready: no
-.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

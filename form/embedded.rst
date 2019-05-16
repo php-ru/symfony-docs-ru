@@ -94,8 +94,8 @@ inside the task form itself. To accomplish this, add a ``category`` field
 to the ``TaskType`` object whose type is an instance of the new ``CategoryType``
 class::
 
-    use Symfony\Component\Form\FormBuilderInterface;
     use App\Form\CategoryType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: 33fdfd623ac91f26ab686c2c1943c26a7878da0c
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

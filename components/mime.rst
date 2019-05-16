@@ -50,7 +50,7 @@ methods to compose the entire email message::
         ->cc('bar@example.com')
         ->bcc('baz@example.com')
         ->replyTo('fabien@symfony.com')
-        ->priority(1)
+        ->priority(Email::PRIORITY_HIGH)
         ->subject('Important Notification')
         ->text('Lorem ipsum...')
         ->html('<h1>Lorem ipsum</h1> <p>...</p>')
@@ -156,7 +156,7 @@ images inside the HTML contents::
         ->embed(fopen('/path/to/images/logo.png', 'r'), 'logo')
         ->embedFromPath('/path/to/images/signature.gif', 'footer-signature')
         // reference images using the syntax 'cid:' + "image embed name"
-        ->html('<img src="cid:logo" /> ... <img src="cid:footer-signature" /> ...')
+        ->html('<img src="cid:logo"/> ... <img src="cid:footer-signature"/> ...')
     ;
 
 File Attachments
@@ -198,10 +198,10 @@ the following tree is the one that works on most email clients:
 
     multipart/mixed
     ├── multipart/related
-    │   ├── multipart/alternative
-    │   │   ├── text/plain
-    │   │   └── text/html
-    │   └── image/png
+    │   ├── multipart/alternative
+    │   │   ├── text/plain
+    │   │   └── text/html
+    │   └── image/png
     └── application/pdf
 
 This is the purpose of each MIME message part:
@@ -251,7 +251,7 @@ email multiparts::
 
     $textContent = new TextPart('Lorem ipsum...');
     $htmlContent = new TextPart(sprintf(
-        '<img src="cid:%s" /> <h1>Lorem ipsum</h1> <p>...</p>', $imageCid
+        '<img src="cid:%s"/> <h1>Lorem ipsum</h1> <p>...</p>', $imageCid
     ), 'html');
     $bodyContent = new AlternativePart($textContent, $htmlContent);
     $body = new RelatedPart($bodyContent, $embeddedImage);
@@ -308,7 +308,7 @@ some utility methods for Twig templates::
 
     $email = (new TemplatedEmail())
         ->from('fabien@symfony.com')
-        ->fo('foo@example.com')
+        ->to('foo@example.com')
         // ...
 
         // this method defines the path of the Twig template to render
@@ -373,7 +373,7 @@ the ``TemplatedEmail`` class::
 
     $email = (new TemplatedEmail())
         ->from('fabien@symfony.com')
-        ->fo('foo@example.com')
+        ->to('foo@example.com')
         // ...
 
         ->textTemplate('messages/user/signup.txt.twig')
@@ -390,7 +390,7 @@ the ``TemplatedEmail`` class::
 Embedding Images in Emails with Twig
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Instead of dealing with the ``<img src="cid: ..." />`` syntax explained in the
+Instead of dealing with the ``<img src="cid: ..."/>`` syntax explained in the
 previous sections, when using Twig to render email contents you can refer to
 image files as usual. First, define a Twig namespace called ``images`` to
 simplify things later::
@@ -398,7 +398,7 @@ simplify things later::
     // ...
 
     $templateLoader = new FilesystemLoader(__DIR__.'/templates');
-    $templatedLoader->addPath(__DIR__.'/images', 'images');
+    $templateLoader->addPath(__DIR__.'/images', 'images');
     $twig = new Environment($templateLoader);
 
 Now, use the special ``email.image()`` Twig helper to embed the images inside
@@ -407,7 +407,7 @@ the email contents:
 .. code-block:: html+twig
 
     {# '@images/' refers to the Twig namespace defined earlier #}
-    <img src="{{ email.image('@images/logo.png') }}" />
+    <img src="{{ email.image('@images/logo.png') }}"/>
 
     <h1>Welcome {{ username }}!</h1>
     {# ... #}
@@ -495,7 +495,7 @@ Now, enable the extension (this is done automatically in Symfony applications)::
 Finally, use the ``markdown`` filter to convert parts or the entire email
 contents from Markdown to HTML:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% filter markdown %}
         Welcome {{ username }}!
@@ -560,7 +560,7 @@ contents from Inky to HTML:
 
 You can combine all filters to create complex email messages:
 
-.. code-block:: html+twig
+.. code-block:: twig
 
     {% filter inky|inline_css(source('@zurb/stylesheets/main.css')) %}
         {# ... #}
@@ -625,7 +625,7 @@ You can register your own MIME type guesser by creating a class that implements
         public function isGuesserSupported(): bool
         {
             // return true when the guesser is supported (might depend on the OS for instance)
-             return true;
+            return true;
         }
 
         public function guessMimeType(string $path): ?string
@@ -645,4 +645,4 @@ You can register your own MIME type guesser by creating a class that implements
 .. _`fileinfo extension`: https://php.net/fileinfo
 
 .. ready: no
-.. revision: ecede2dd1435cdccd40addd1285cffc653abb8e9
+.. revision: 9590a37fa8493fb1ae014fe6df3e85ab5ae6c11f

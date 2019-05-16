@@ -104,7 +104,7 @@ Or set the ``command`` attribute on the ``console.command`` tag in your service 
 
             <services>
                 <service id="App\Command\SunshineCommand">
-                     <tag name="console.command" command="app:sunshine"/>
+                    <tag name="console.command" command="app:sunshine"/>
                 </service>
             </services>
         </container>
@@ -138,4 +138,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 2be18a39f4260314dd90c392085338f42f5dc450

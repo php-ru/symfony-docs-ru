@@ -41,7 +41,7 @@ Creating a Page: Route and Controller
     article and can access your new Symfony app in the browser.
 
 Suppose you want to create a page - ``/lucky/number`` - that generates a lucky (well,
-random) number and prints it. To do that, create a "Controller class" and a
+random) number and prints it. To do that, create a "Controller" class and a
 "controller" method inside of it::
 
     <?php
@@ -337,4 +337,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Flex recipes`: https://flex.symfony.com
 
 .. ready: no
-.. revision: c89ece4b19e99a6eb587c7af8eaff01c95213b36
+.. revision: 8b23729d19c8ec55dfc58819adec4d53d26a0ee6

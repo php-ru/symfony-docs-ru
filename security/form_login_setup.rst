@@ -97,10 +97,10 @@ Edit the ``security.yml`` file in order to allow access for anyone to the
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xmlns:srv="http://symfony.com/schema/dic/services"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <config>
-                <rule path="^/login$" role="IS_AUTHENTICATED_ANONYMOUSLY" />
+                <rule path="^/login$" role="IS_AUTHENTICATED_ANONYMOUSLY"/>
                 <!-- ... -->
             </config>
         </srv:container>
@@ -168,12 +168,13 @@ a traditional HTML form that submits to ``/login``:
 
     use App\Entity\User;
     use Doctrine\ORM\EntityManagerInterface;
-    use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
+
     use Symfony\Component\HttpFoundation\RedirectResponse;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\Routing\RouterInterface;
     use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
     use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+    use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
     use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
     use Symfony\Component\Security\Core\Security;
     use Symfony\Component\Security\Core\User\UserInterface;
@@ -422,4 +423,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: a461f58179deffbc822c90411f732150630d3cc0
+.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca

@@ -163,8 +163,8 @@ looking for mapping information::
 
     namespace App\Entity;
 
-    use Doctrine\ORM\Mapping as ORM;
     use Doctrine\Common\Collections\ArrayCollection;
+    use Doctrine\ORM\Mapping as ORM;
 
     /**
      * @ORM\Entity
@@ -283,4 +283,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: b991e8be21b6404c4dfe1bb5e211cd7f47f46f39
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

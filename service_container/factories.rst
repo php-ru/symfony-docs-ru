@@ -202,14 +202,14 @@ method name, just as routes can reference
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/services
-                http://symfony.com/schema/dic/services/services-1.0.xsd">
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
 
             <services>
                 <!-- ... -->
 
                 <service id="App\Email\NewsletterManager"
                          class="App\Email\NewsletterManager">
-                    <factory service="App\Email\NewsletterManagerFactory" />
+                    <factory service="App\Email\NewsletterManagerFactory"/>
                 </service>
             </services>
         </container>
@@ -286,4 +286,4 @@ example takes the ``templating`` service as an argument:
             ]);
 
 .. ready: no
-.. revision: 1b15af7660dd47e12e6d165a6daf386a7cfc2165
+.. revision: 112184bcca1c43c6760de303dc3a3446caa3cf17

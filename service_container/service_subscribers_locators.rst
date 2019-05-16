@@ -290,8 +290,8 @@ include as many services as needed in it.
     .. code-block:: php
 
         // config/services.php
-        use Symfony\Component\DependencyInjection\ServiceLocator;
         use Symfony\Component\DependencyInjection\Reference;
+        use Symfony\Component\DependencyInjection\ServiceLocator;
 
         // ...
 
@@ -465,4 +465,4 @@ and compose your services with them::
     ``__CLASS__.'::'.__FUNCTION__`` as the service id.
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

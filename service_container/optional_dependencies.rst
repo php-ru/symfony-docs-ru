@@ -35,8 +35,8 @@ if the service does not exist:
 
         // config/services.php
         use App\Newsletter\NewsletterManager;
-        use Symfony\Component\DependencyInjection\Reference;
         use Symfony\Component\DependencyInjection\ContainerInterface;
+        use Symfony\Component\DependencyInjection\Reference;
 
         // ...
 
@@ -92,8 +92,8 @@ call if the service exists and remove the method call if it does not:
 
         // config/services.php
         use App\Newsletter\NewsletterManager;
-        use Symfony\Component\DependencyInjection\Reference;
         use Symfony\Component\DependencyInjection\ContainerInterface;
+        use Symfony\Component\DependencyInjection\Reference;
 
         $container
             ->register(NewsletterManager::class)
@@ -121,4 +121,4 @@ adding a ``setLogger()`` method::
         }
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

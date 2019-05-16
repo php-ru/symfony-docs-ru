@@ -43,8 +43,8 @@ Example Usage
 
 .. code-block:: php
 
-    use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
     use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+    use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
     // ...
 
     $builder->add('password', RepeatedType::class, [
@@ -199,4 +199,4 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 .. include:: /reference/forms/types/options/mapped.rst.inc
 
 .. ready: no
-.. revision: cc6a5f30beef994adf0de13510be5edcc49d15ee
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

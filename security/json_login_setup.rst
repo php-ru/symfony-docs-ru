@@ -110,9 +110,8 @@ The next step is to configure a route in your app matching this path:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\SecurityController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('login', '/login')
@@ -207,4 +206,4 @@ The security configuration should be:
         ]);
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

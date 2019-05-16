@@ -69,8 +69,8 @@ The following constraint ensures that the ``withdraw`` of a  bank account
         // src/Entity/TransferItem.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class TransferItem
         {
@@ -105,4 +105,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 77c8b09efb53ad1e718d795f5e5be635ab4a982d
+.. revision: e861d6434db149f8438ba86037db17d8823f8af7

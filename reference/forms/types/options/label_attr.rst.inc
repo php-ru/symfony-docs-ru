@@ -13,7 +13,7 @@ template:
     .. code-block:: twig
 
         {{ form_label(form.name, 'Your name', {
-               'label_attr': {'class': 'CUSTOM_LABEL_CLASS'}
+            'label_attr': {'class': 'CUSTOM_LABEL_CLASS'}
         }) }}
 
     .. code-block:: php
@@ -25,4 +25,4 @@ template:
         );
 
 .. ready: no
-.. revision: eac8e9052919cdd186f9f711a91e95e3f2fdc96e
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

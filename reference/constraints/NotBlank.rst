@@ -11,6 +11,7 @@ Applies to  :ref:`property or method <validation-property-target>`
 Options     - `allowNull`_
             - `groups`_
             - `message`_
+            - `normalizer`_
             - `payload`_
 Class       :class:`Symfony\\Component\\Validator\\Constraints\\NotBlank`
 Validator   :class:`Symfony\\Component\\Validator\\Constraints\\NotBlankValidator`
@@ -67,8 +68,8 @@ class were not blank, you could do the following:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -110,7 +111,9 @@ Parameter        Description
 ``{{ value }}``  The current (invalid) value
 ===============  ==============================================================
 
+.. include:: /reference/constraints/_normalizer-option.rst.inc
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939
+.. revision: 9d34ea08aef9bf60169a4375b967cf301d8e8ee0

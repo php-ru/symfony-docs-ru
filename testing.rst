@@ -733,7 +733,7 @@ Use the ``submitForm()`` method to submit the form that contains the given butto
     $client->request('GET', '/post/hello-world');
 
     $crawler = $client->submitForm('Add comment', [
-       'comment_form[content]' => '...',
+        'comment_form[content]' => '...',
     ]);
 
 The first argument of ``submitForm()`` is the text content, ``id``, ``value`` or
@@ -1065,4 +1065,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 3b1a1a13277e89cf8f16b58ad1fe0eab22982b3b
+.. revision: 3f34d3aed44789236528de26dd983a76828e1bca

@@ -59,10 +59,10 @@ can be retrieved via ``/soap?wsdl``::
 
     namespace App\Controller;
 
+    use App\Service\HelloService;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Routing\Annotation\Route;
-    use App\Service\HelloService;
 
     class HelloServiceController extends AbstractController
     {
@@ -171,4 +171,4 @@ An example WSDL is below.
 .. _`Zend SOAP`: http://framework.zend.com/manual/current/en/modules/zend.soap.server.html
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

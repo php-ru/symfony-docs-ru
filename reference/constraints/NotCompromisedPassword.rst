@@ -36,8 +36,6 @@ The following constraint ensures that the ``rawPassword`` property of the
 
         class User
         {
-            // ...
-
             /**
              * @Assert\NotCompromisedPassword
              */
@@ -72,8 +70,8 @@ The following constraint ensures that the ``rawPassword`` property of the
         // src/Entity/User.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class User
         {
@@ -100,7 +98,7 @@ For example, if the password is ``test``, the entire SHA-1 hash is
 .. seealso::
 
     When using this constraint inside a Symfony application, define the
-    :ref:`disable_not_compromised_password <reference-validation-disable_not_compromised_password>`
+    :ref:`not_compromised_password <reference-validation-not-compromised-password>`
     option to avoid making HTTP requests in the ``dev`` and ``test`` environments.
 
 Available Options
@@ -139,4 +137,4 @@ to a higher value because it could decrease the security of your application.
 .. _`k-anonimity password validation`: https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/
 
 .. ready: no
-.. revision: c2b30f0de5f0bf01762adb99b5f864d689349691
+.. revision: e861d6434db149f8438ba86037db17d8823f8af7

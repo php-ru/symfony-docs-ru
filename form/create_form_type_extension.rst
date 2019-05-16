@@ -134,11 +134,11 @@ For example::
     namespace App\Form\Extension;
 
     use Symfony\Component\Form\AbstractTypeExtension;
-    use Symfony\Component\Form\FormView;
-    use Symfony\Component\Form\FormInterface;
-    use Symfony\Component\PropertyAccess\PropertyAccess;
-    use Symfony\Component\OptionsResolver\OptionsResolver;
     use Symfony\Component\Form\Extension\Core\Type\FileType;
+    use Symfony\Component\Form\FormInterface;
+    use Symfony\Component\Form\FormView;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
+    use Symfony\Component\PropertyAccess\PropertyAccess;
 
     class ImageTypeExtension extends AbstractTypeExtension
     {
@@ -214,9 +214,9 @@ next to the file field. For example::
     namespace App\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\FileType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     class MediaType extends AbstractType
     {
@@ -266,4 +266,4 @@ method to extend all of them::
     }
 
 .. ready: no
-.. revision: 5bb148eee0ea013c8835dbce5ff5db603db8ce92
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

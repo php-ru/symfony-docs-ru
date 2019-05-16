@@ -115,7 +115,7 @@ publish:
     }
 
 Because the array is empty, the Symfony app will only be authorized to publish
-public updates (see the authorization_ section for further informations).
+public updates (see the authorization_ section for further information).
 
 .. tip::
 
@@ -249,8 +249,8 @@ it will be handled automatically::
     namespace App\Controller;
 
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\Messenger\MessageBusInterface;
     use Symfony\Component\Mercure\Update;
+    use Symfony\Component\Messenger\MessageBusInterface;
 
     class PublishController
     {
@@ -545,4 +545,4 @@ its Mercure support.
 .. _`the online debugger`: https://uri-template-tester.mercure.rocks
 
 .. ready: no
-.. revision: a669ceb1ea7e6297a8aba9e602b33a69271f3c7d
+.. revision: 165e57347c9e28fd348b6f3b2c6240180cbb1370

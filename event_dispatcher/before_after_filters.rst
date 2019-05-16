@@ -114,9 +114,9 @@ event subscribers, you can learn more about them at :doc:`/event_dispatcher`::
     namespace App\EventSubscriber;
 
     use App\Controller\TokenAuthenticatedController;
-    use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-    use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+    use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
+    use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
     use Symfony\Component\HttpKernel\KernelEvents;
 
     class TokenSubscriber implements EventSubscriberInterface
@@ -240,4 +240,4 @@ And by storing a value in the request's "attributes" bag, the ``onKernelResponse
 method knows to add the extra header. Have fun!
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

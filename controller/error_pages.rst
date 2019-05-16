@@ -177,7 +177,7 @@ automatically when installing Twig support):
     .. code-block:: php
 
         // config/routes/dev/twig.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->import('@TwigBundle/Resources/config/routing/errors.xml')
@@ -362,4 +362,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

@@ -15,8 +15,8 @@ The following example shows how to validate that the ``$firstName`` property of
 the ``Author`` class has at least 3 characters::
 
     // ...
-    use Symfony\Component\Validator\Mapping\ClassMetadata;
     use Symfony\Component\Validator\Constraints as Assert;
+    use Symfony\Component\Validator\Mapping\ClassMetadata;
 
     class Author
     {
@@ -51,8 +51,8 @@ doesn't match the first name of the user. First, create a public method called
 Then, add the Validator component configuration to the class::
 
     // ...
-    use Symfony\Component\Validator\Mapping\ClassMetadata;
     use Symfony\Component\Validator\Constraints as Assert;
+    use Symfony\Component\Validator\Mapping\ClassMetadata;
 
     class Author
     {
@@ -85,8 +85,8 @@ validation logic::
 Then, add the Validator component configuration to the class::
 
     // ...
-    use Symfony\Component\Validator\Mapping\ClassMetadata;
     use Symfony\Component\Validator\Constraints as Assert;
+    use Symfony\Component\Validator\Mapping\ClassMetadata;
 
     class Author
     {
@@ -97,4 +97,4 @@ Then, add the Validator component configuration to the class::
     }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

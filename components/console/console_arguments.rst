@@ -39,7 +39,7 @@ Have a look at the following command that has three options::
 
         protected function execute(InputInterface $input, OutputInterface $output)
         {
-           // ...
+            // ...
         }
     }
 
@@ -93,4 +93,4 @@ Input                           ``bar``            ``cat``      ``arg``
 .. _docopt: http://docopt.org/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

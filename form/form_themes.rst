@@ -260,8 +260,8 @@ based on your form type name (e.g. ``ProductType`` equates to ``product``). If
 you're not sure what your form name is, look at the HTML code rendered for your
 form. You can also define this value explicitly with the ``block_name`` option::
 
-    use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -608,4 +608,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: 6b404e2eac3296d529dcdb34722bae2b2bf22f28
+.. revision: 165e57347c9e28fd348b6f3b2c6240180cbb1370

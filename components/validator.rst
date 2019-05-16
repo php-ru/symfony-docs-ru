@@ -34,9 +34,9 @@ The Validator component behavior is based on two concepts:
 The following example shows how to validate that a string is at least 10
 characters long::
 
-    use Symfony\Component\Validator\Validation;
     use Symfony\Component\Validator\Constraints\Length;
     use Symfony\Component\Validator\Constraints\NotBlank;
+    use Symfony\Component\Validator\Validation;
 
     $validator = Validation::createValidator();
     $violations = $validator->validate('Bernhard', [
@@ -92,4 +92,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

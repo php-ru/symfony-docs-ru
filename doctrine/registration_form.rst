@@ -77,8 +77,8 @@ The form class for the registration form will look something like this::
     use Symfony\Component\Form\Extension\Core\Type\PasswordType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
-    use Symfony\Component\Validator\Constraints\NotBlank;
     use Symfony\Component\Validator\Constraints\Length;
+    use Symfony\Component\Validator\Constraints\NotBlank;
 
     class RegistrationFormType extends AbstractType
     {
@@ -215,9 +215,9 @@ To do this, add a ``termsAccepted`` field to your form, but set its
 
     // src/Form/UserType.php
     // ...
-    use Symfony\Component\Validator\Constraints\IsTrue;
     use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
     use Symfony\Component\Form\Extension\Core\Type\EmailType;
+    use Symfony\Component\Validator\Constraints\IsTrue;
 
     class UserType extends AbstractType
     {
@@ -247,4 +247,4 @@ controller to take advantage of this.
 .. _`CVE-2013-5750`: https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form
 
 .. ready: no
-.. revision: a461f58179deffbc822c90411f732150630d3cc0
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

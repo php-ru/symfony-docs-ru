@@ -293,7 +293,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
 
         # config/services.yaml
         App\Service\OldService:
-            deprecated: The "%service_id%" service is deprecated since 2.8 and will be removed in 3.0.
+            deprecated: The "%service_id%" service is deprecated since vendor-name/package-name 2.8 and will be removed in 3.0.
 
     .. code-block:: xml
 
@@ -305,7 +305,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
 
             <services>
                 <service id="App\Service\OldService">
-                    <deprecated>The "%service_id%" service is deprecated since 2.8 and will be removed in 3.0.</deprecated>
+                    <deprecated>The "%service_id%" service is deprecated since vendor-name/package-name 2.8 and will be removed in 3.0.</deprecated>
                 </service>
             </services>
         </container>
@@ -319,7 +319,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
             ->register(OldService::class)
             ->setDeprecated(
                 true,
-                'The "%service_id%" service is deprecated since 2.8 and will be removed in 3.0.'
+                'The "%service_id%" service is deprecated since vendor-name/package-name 2.8 and will be removed in 3.0.'
             )
         ;
 
@@ -348,4 +348,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: 8c4b4c0c6ee2437597a45bf535cb1a5b33ae8d88
+.. revision: a5e0f0792cc8d081883dd1ae4a0020b01d4d6479

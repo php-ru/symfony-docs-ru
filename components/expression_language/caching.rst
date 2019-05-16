@@ -31,8 +31,8 @@ uses an :class:`Symfony\\Component\\Cache\\Adapter\\ArrayAdapter`). You can
 customize this by creating a custom cache pool or using one of the available
 ones and injecting this using the constructor::
 
-    use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
     use Symfony\Component\Cache\Adapter\RedisAdapter;
+    use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
     $cache = new RedisAdapter(...);
     $expressionLanguage = new ExpressionLanguage($cache);
@@ -70,4 +70,4 @@ Both ``evaluate()`` and ``compile()`` can handle ``ParsedExpression`` and
 .. _`CacheItemPoolInterface`: https://github.com/php-fig/cache/blob/master/src/CacheItemPoolInterface.php
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

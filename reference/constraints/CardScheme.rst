@@ -76,8 +76,8 @@ on an object that will contain a credit card number.
         // src/Entity/Transaction.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Transaction
         {
@@ -148,4 +148,4 @@ For more information about the used schemes, see
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: 1f89237c7e903d3b88ab28b106f2541ddd650765
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40

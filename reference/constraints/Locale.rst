@@ -71,14 +71,16 @@ Basic Usage
         // src/Entity/User.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class User
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
-                $metadata->addPropertyConstraint('locale', new Assert\Locale(['canonicalize' => true]));
+                $metadata->addPropertyConstraint('locale', new Assert\Locale([
+                    'canonicalize' => true,
+                ]));
             }
         }
 
@@ -124,4 +126,4 @@ Parameter        Description
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

@@ -91,8 +91,8 @@ The error controller reads as follows::
     // example.com/src/Calendar/Controller/ErrorController.php
     namespace Calendar\Controller;
 
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Debug\Exception\FlattenException;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ErrorController
     {
@@ -153,8 +153,8 @@ only if needed::
     namespace Simplex;
 
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-    use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
 
     class StringResponseListener implements EventSubscriberInterface
     {
@@ -203,4 +203,4 @@ many websites; a code that has been audited for security issues and that has
 proven to scale well.
 
 .. ready: no
-.. revision: b7ab8588827520f9b3cd2b3617c3d1e6405e40a5
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

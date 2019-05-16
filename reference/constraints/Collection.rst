@@ -82,10 +82,10 @@ following:
              *     allowMissingFields = true
              * )
              */
-             protected $profileData = [
-                 'personal_email' => '...',
-                 'short_bio' => '...',
-             ];
+            protected $profileData = [
+                'personal_email' => '...',
+                'short_bio' => '...',
+            ];
         }
 
     .. code-block:: yaml
@@ -138,8 +138,8 @@ following:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -261,8 +261,8 @@ you can do the following:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -356,4 +356,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 1f89237c7e903d3b88ab28b106f2541ddd650765
+.. revision: 61327968b79a7c756f6dbee927c2c3af3cf46d6e

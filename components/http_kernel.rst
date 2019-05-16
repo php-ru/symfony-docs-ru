@@ -101,12 +101,12 @@ not take many steps. You create an
 (explained below). To complete your working kernel, you'll add more event
 listeners to the events discussed below::
 
-    use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Component\HttpKernel\HttpKernel;
     use Symfony\Component\EventDispatcher\EventDispatcher;
+    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\RequestStack;
     use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
     use Symfony\Component\HttpKernel\Controller\ControllerResolver;
+    use Symfony\Component\HttpKernel\HttpKernel;
 
     // create the Request object
     $request = Request::createFromGlobals();
@@ -768,4 +768,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

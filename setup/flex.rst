@@ -136,17 +136,17 @@ following directory structure, which is the same used by default in Symfony 4:
     your-project/
     ├── assets/
     ├── bin/
-    │   └── console
+    │   └── console
     ├── config/
-    │   ├── bundles.php
-    │   ├── packages/
-    │   ├── routes.yaml
-    │   └── services.yaml
+    │   ├── bundles.php
+    │   ├── packages/
+    │   ├── routes.yaml
+    │   └── services.yaml
     ├── public/
-    │   └── index.php
+    │   └── index.php
     ├── src/
-    │   ├── ...
-    │   └── Kernel.php
+    │   ├── ...
+    │   └── Kernel.php
     ├── templates/
     ├── tests/
     ├── translations/
@@ -325,4 +325,4 @@ manually after a recipe is installed.
 .. _`Symfony Requirements Checker`: https://github.com/symfony/requirements-checker
 
 .. ready: no
-.. revision: 765d692d890d687505d1b2ad3c6bb7233dd11549
+.. revision: f60923be19b855aea1bef5f3df937204df65215c

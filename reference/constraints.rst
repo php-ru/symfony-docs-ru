@@ -41,6 +41,7 @@ Validation Constraints Reference
    constraints/Date
    constraints/DateTime
    constraints/Time
+   constraints/Timezone
 
    constraints/Choice
    constraints/Collection
@@ -49,7 +50,6 @@ Validation Constraints Reference
    constraints/Language
    constraints/Locale
    constraints/Country
-   constraints/Timezone
 
    constraints/File
    constraints/Image
@@ -83,4 +83,4 @@ The following constraints are natively available in Symfony:
 .. include:: /reference/constraints/map.rst.inc
 
 .. ready: no
-.. revision: d479fc24d5e3651aa96b6623d9fab4f65dc62e8e
+.. revision: ae1a7ab1496e66531c9421463620f7798d64d8f7

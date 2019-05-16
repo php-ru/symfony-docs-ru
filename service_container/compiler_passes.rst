@@ -75,9 +75,9 @@ method in the extension)::
     // src/MyBundle/MyBundle.php
     namespace App\MyBundle;
 
-    use Symfony\Component\HttpKernel\Bundle\Bundle;
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use App\DependencyInjection\Compiler\CustomPass;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\HttpKernel\Bundle\Bundle;
 
     class MyBundle extends Bundle
     {
@@ -96,4 +96,4 @@ bundle then by convention, tag names consist of the name of the bundle
 in your AcmeMailerBundle, you should call it ``acme_mailer.transport``.
 
 .. ready: no
-.. revision: 6f3ef4df8042a608ff2c8fba99d53ab0d0d2decc
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

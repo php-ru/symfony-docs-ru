@@ -19,6 +19,7 @@ Options     - `charset`_
             - `maxMessage`_
             - `min`_
             - `minMessage`_
+            - `normalizer`_
             - `payload`_
 Class       :class:`Symfony\\Component\\Validator\\Constraints\\Length`
 Validator   :class:`Symfony\\Component\\Validator\\Constraints\\LengthValidator`
@@ -93,8 +94,8 @@ and "50", you might add the following:
         // src/Entity/Participant.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Participant
         {
@@ -119,10 +120,9 @@ charset
 
 **type**: ``string``  **default**: ``UTF-8``
 
-The charset to be used when computing value's length. The
-:phpfunction:`grapheme_strlen` PHP function is used if available. If not,
-the :phpfunction:`mb_strlen` PHP function is used if available. If neither
-are available, the :phpfunction:`strlen` PHP function is used.
+The charset to be used when computing value's length with the
+:phpfunction:`mb_check_encoding` and :phpfunction:`mb_strlen`
+PHP functions.
 
 charsetMessage
 ~~~~~~~~~~~~~~
@@ -213,7 +213,9 @@ Parameter          Description
 ``{{ value }}``    The current (invalid) value
 =================  ============================================================
 
+.. include:: /reference/constraints/_normalizer-option.rst.inc
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: b14c33c845b0d55da0722e0d622db14c02a3631c
+.. revision: 9d34ea08aef9bf60169a4375b967cf301d8e8ee0

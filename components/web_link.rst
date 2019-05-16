@@ -5,8 +5,8 @@
 The WebLink Component
 ======================
 
-   The WebLink component provides tools to manage the ``Link`` HTTP header needed
-   for `Web Linking`_ when using `HTTP/2 Server Push`_ as well as `Resource Hints`_.
+    The WebLink component provides tools to manage the ``Link`` HTTP header needed
+    for `Web Linking`_ when using `HTTP/2 Server Push`_ as well as `Resource Hints`_.
 
 Installation
 ------------
@@ -22,16 +22,16 @@ Usage
 
 The following example shows the component in action::
 
-   use Fig\Link\GenericLinkProvider;
-   use Fig\Link\Link;
-   use Symfony\Component\WebLink\HttpHeaderSerializer;
+    use Fig\Link\GenericLinkProvider;
+    use Fig\Link\Link;
+    use Symfony\Component\WebLink\HttpHeaderSerializer;
 
-   $linkProvider = (new GenericLinkProvider())
-       ->withLink(new Link('preload', '/bootstrap.min.css'));
+    $linkProvider = (new GenericLinkProvider())
+        ->withLink(new Link('preload', '/bootstrap.min.css'));
 
-   header('Link: '.(new HttpHeaderSerializer())->serialize($linkProvider->getLinks()));
+    header('Link: '.(new HttpHeaderSerializer())->serialize($linkProvider->getLinks()));
 
-   echo 'Hello';
+    echo 'Hello';
 
 Read the full :doc:`WebLink documentation </web_link>` to learn about all the
 features of the component and its integration with the Symfony framework.
@@ -41,4 +41,4 @@ features of the component and its integration with the Symfony framework.
 .. _`Resource Hints`: https://www.w3.org/TR/resource-hints/
 
 .. ready: no
-.. revision: 928832ad216f9abba7be7798245dc5e1fe6e9040
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

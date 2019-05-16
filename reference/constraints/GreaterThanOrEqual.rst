@@ -86,8 +86,8 @@ The following constraints ensure that:
         // src/Entity/Person.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -153,8 +153,8 @@ that a date must at least be the current day:
         // src/Entity/Order.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Order
         {
@@ -212,8 +212,8 @@ dates. If you want to fix the timezone, append it to the date string:
         // src/Entity/Order.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Order
         {
@@ -272,8 +272,8 @@ current time:
         // src/Entity/Order.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Order
         {
@@ -315,4 +315,4 @@ Parameter                      Description
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

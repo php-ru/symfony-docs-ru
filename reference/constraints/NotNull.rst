@@ -65,8 +65,8 @@ class were not strictly equal to ``null``, you would:
         // src/Entity/Author.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -99,4 +99,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

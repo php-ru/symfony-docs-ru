@@ -52,9 +52,9 @@ ability to find out if the current request points to a secured area.
 The listeners are then asked if the current request can be used to authenticate
 the user::
 
-    use Symfony\Component\Security\Http\FirewallMap;
     use Symfony\Component\HttpFoundation\RequestMatcher;
     use Symfony\Component\Security\Http\Firewall\ExceptionListener;
+    use Symfony\Component\Security\Http\FirewallMap;
 
     $firewallMap = new FirewallMap();
 
@@ -70,8 +70,8 @@ the user::
 The firewall map will be given to the firewall as its first argument, together
 with the event dispatcher that is used by the :class:`Symfony\\Component\\HttpKernel\\HttpKernel`::
 
-    use Symfony\Component\Security\Http\Firewall;
     use Symfony\Component\HttpKernel\KernelEvents;
+    use Symfony\Component\Security\Http\Firewall;
 
     // the EventDispatcher used by the HttpKernel
     $dispatcher = ...;
@@ -164,4 +164,4 @@ Read the next articles to find out more about :doc:`/components/security/authent
 and :doc:`/components/security/authorization`.
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

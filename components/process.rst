@@ -26,8 +26,8 @@ escaping arguments to prevent security issues. It replaces PHP functions like
 :phpfunction:`exec`, :phpfunction:`passthru`, :phpfunction:`shell_exec` and
 :phpfunction:`system`::
 
-    use Symfony\Component\Process\Process;
     use Symfony\Component\Process\Exception\ProcessFailedException;
+    use Symfony\Component\Process\Process;
 
     $process = new Process(['ls', '-lsa']);
     $process->run();
@@ -484,4 +484,4 @@ whether `TTY`_ is supported on the current operating system::
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

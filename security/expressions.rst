@@ -43,7 +43,7 @@ Inside the expression, you have access to a number of variables:
     :ref:`role hierarchy <security-role-hierarchy>` but not including the
     ``IS_AUTHENTICATED_*`` attributes (see the functions below).
 ``object``
-     The object (if any) that's passed as the second argument to ``isGranted()``.
+    The object (if any) that's passed as the second argument to ``isGranted()``.
 ``token``
     The token object.
 ``trust_resolver``
@@ -101,4 +101,4 @@ Learn more
 * :doc:`/reference/constraints/Expression`
 
 .. ready: no
-.. revision: e56793b28d127cf38e6443c64df4f5f23085d13b
+.. revision: de41795e29b42be1211d5606d5541bb1547e4a36

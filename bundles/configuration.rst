@@ -71,11 +71,11 @@ can add some configuration that looks like this:
             xsi:schemaLocation="http://symfony.com/schema/dic/services
                 https://symfony.com/schema/dic/services/services-1.0.xsd">
 
-           <acme-social:config>
-               <acme-social:twitter client-id="123" client-secret="your_secret"/>
-           </acme-social:config>
+            <acme-social:config>
+                <acme-social:twitter client-id="123" client-secret="your_secret"/>
+            </acme-social:config>
 
-           <!-- ... -->
+            <!-- ... -->
         </container>
 
     .. code-block:: php
@@ -255,8 +255,8 @@ In your extension, you can load this and dynamically set its arguments::
     // src/Acme/SocialBundle/DependencyInjection/AcmeSocialExtension.php
     // ...
 
-    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
     public function load(array $configs, ContainerBuilder $container)
     {
@@ -435,4 +435,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`snake case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 395adb49d006c2ebb1a77eba53313590769cc79b
+.. revision: 2be18a39f4260314dd90c392085338f42f5dc450

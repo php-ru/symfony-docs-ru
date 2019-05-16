@@ -124,8 +124,8 @@ command will pre-configure this for you:
             encoders:
                 # use your user class name here
                 App\Entity\User:
-                    # bcrypt or argon2i are recommended
-                    # argon2i is more secure, but requires PHP 7.2 or the Sodium extension
+                    # bcrypt or sodium are recommended
+                    # sodium is more secure, but requires PHP 7.2 or the Sodium extension
                     algorithm: bcrypt
                     cost: 12
 
@@ -472,10 +472,10 @@ start with ``/admin``, you can:
                     // ...
                 ],
             ],
-           'access_control' => [
-               // require ROLE_ADMIN for /admin*
-               ['path' => '^/admin', 'role' => 'ROLE_ADMIN'],
-           ],
+            'access_control' => [
+                // require ROLE_ADMIN for /admin*
+                ['path' => '^/admin', 'role' => 'ROLE_ADMIN'],
+            ],
         ]);
 
 You can define as many URL patterns as you need - each is a regular expression.
@@ -602,8 +602,8 @@ For more information, see the `FrameworkExtraBundle documentation`_.
 Access Control in Templates
 ...........................
 
-If you want to check if the current access inside a template, use
-the built-in ``is_granted()`` helper function:
+If you want to check if the current user has a certain role, you can use
+the built-in ``is_granted()`` helper function in any Twig template:
 
 .. code-block:: html+twig
 
@@ -837,7 +837,7 @@ Next, you'll need to create a route for this URL (but not a controller):
     ..  code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('logout', '/logout')
@@ -1014,4 +1014,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 70f654c96729a9120574633cd412f2e1a4e48b79
+.. revision: 61327968b79a7c756f6dbee927c2c3af3cf46d6e

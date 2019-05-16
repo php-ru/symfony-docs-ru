@@ -106,8 +106,8 @@ Use the ``payload`` option to configure the error level for each constraint:
         // src/Entity/User.php
         namespace App\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class User
         {
@@ -159,4 +159,4 @@ so that the severity is added as an additional HTML class:
     For more information on customizing form rendering, see :doc:`/form/form_customization`.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232

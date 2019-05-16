@@ -321,7 +321,7 @@ The following YAML features are not supported by the Symfony Yaml component:
 * Complex mapping keys and complex values starting with ``?``;
 * Tagged values as keys;
 * The following tags and types: `!!set`, `!!omap`, `!!pairs`, `!!set`, `!!seq`,
-  `!!bool`, `!!int`, `!!merge`, `!!null`, `!!timestamp`, `!!value`, `!!yaml`;
+  `!!bool`, `!!int`, `!!merge`, `!!null`, `!!timestamp`, `!!value`, `!!yaml`;
 * Tags (``TAG`` directive; example: ``%TAG ! tag:example.com,2000:app/``)
   and tag references (example: ``!<tag:example.com,2000:app/foo>``);
 * Using sequence-like syntax for mapping elements (example: ``{foo, bar}``; use
@@ -331,4 +331,4 @@ The following YAML features are not supported by the Symfony Yaml component:
 .. _`YAML specification`: http://www.yaml.org/spec/1.2/spec.html
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: f60923be19b855aea1bef5f3df937204df65215c

@@ -207,6 +207,8 @@ Example::
     // ...
     $session->clear();
 
+.. _namespaced-attributes:
+
 Namespaced Attributes
 .....................
 
@@ -341,4 +343,4 @@ Compact method to process display all flashes at once::
     }
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: c145ed116162563d51d149a7ee89421a6f5387a4

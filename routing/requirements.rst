@@ -57,9 +57,8 @@ a routing ``{wildcard}`` to only match some regular expression:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\BlogController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('blog_list', '/blog/{page}')
@@ -134,9 +133,8 @@ URL:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\MainController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('homepage', '/{_locale}')
@@ -253,9 +251,8 @@ accomplished with the following route configuration:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\BlogApiController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('api_post_show', '/api/posts/{id}')
@@ -313,4 +310,4 @@ information on the request. See :doc:`/routing/conditions`.
 .. _`PCRE Unicode property`: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: c0a0a685c430274d299a80a463585a32c18dc280
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

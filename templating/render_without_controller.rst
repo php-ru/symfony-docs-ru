@@ -46,9 +46,8 @@ can do this without creating a controller:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('acme_privacy', '/privacy')
@@ -117,9 +116,8 @@ exactly how your page is cached:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use Symfony\Bundle\FrameworkBundle\Controller\TemplateController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('acme_privacy', '/privacy')
@@ -142,4 +140,4 @@ will be made public, as long as ``maxAge`` or ``sharedAge`` are passed.
 If set to ``true``, the Response will be marked as private.
 
 .. ready: no
-.. revision: a2edc09d315c88ee6c4f5003fd96f533d4b06773
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

@@ -63,13 +63,12 @@ a service like: ``App\Controller\HelloController::index``:
     .. code-block:: php
 
         // config/routes.php
-        namespace Symfony\Component\Routing\Loader\Configurator;
-
         use App\Controller\HelloController;
+        use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
         return function (RoutingConfigurator $routes) {
             $routes->add('hello', '/hello')
-                ->controller(['HelloController::class, 'index'])
+                ->controller([HelloController::class, 'index'])
                 ->methods(['GET'])
             ;
         };
@@ -191,4 +190,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`ADR pattern`: https://en.wikipedia.org/wiki/Action%E2%80%93domain%E2%80%93responder
 
 .. ready: no
-.. revision: 5539265fb68eec42f9bba98b561b18dcb9d0bcff
+.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972

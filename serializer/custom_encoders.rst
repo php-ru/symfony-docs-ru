@@ -32,7 +32,7 @@ create your own encoder that uses the
             return Yaml::dump($data);
         }
 
-        public function supportsEncoding($format)
+        public function supportsEncoding($format, array $context = [])
         {
             return 'yaml' === $format;
         }
@@ -42,7 +42,7 @@ create your own encoder that uses the
             return Yaml::parse($data);
         }
 
-        public function supportsDecoding($format)
+        public function supportsDecoding($format, array $context = [])
         {
             return 'yaml' === $format;
         }
@@ -65,4 +65,4 @@ Now you'll be able to serialize and deserialize YAML!
 .. _tracker: https://github.com/symfony/symfony/issues
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 193dbc06a30a2e26e66b27321891c60a189bc593

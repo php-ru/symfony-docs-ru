@@ -261,8 +261,8 @@ you switch users, add an event subscriber on this event::
     // src/EventListener/SwitchUserSubscriber.php
     namespace App\EventListener;
 
-    use Symfony\Component\Security\Http\Event\SwitchUserEvent;
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+    use Symfony\Component\Security\Http\Event\SwitchUserEvent;
     use Symfony\Component\Security\Http\SecurityEvents;
 
     class SwitchUserSubscriber implements EventSubscriberInterface
@@ -296,4 +296,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: c2cbfe37a8c46fc99276dc9e3ebecbca99dd6939
+.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40
