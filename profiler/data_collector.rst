@@ -24,9 +24,9 @@ request::
     // src/AppBundle/DataCollector/RequestCollector.php
     namespace AppBundle\DataCollector;
 
-    use Symfony\Component\HttpKernel\DataCollector\DataCollector;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
     class RequestCollector extends DataCollector
     {
@@ -291,4 +291,4 @@ they default to ``0``. Most built-in collectors use ``255`` as their priority.
 If you want your collector to be displayed before them, use a higher value (like 300).
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

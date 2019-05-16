@@ -51,7 +51,7 @@ swiftmailer with the memory option, use the following configuration:
 
         // app/config/config.php
         $container->loadFromExtension('swiftmailer', [
-             // ...
+            // ...
             'spool' => ['type' => 'memory'],
         ]);
 
@@ -101,7 +101,7 @@ In order to use the spool with files, use the following configuration:
 
         // app/config/config.php
         $container->loadFromExtension('swiftmailer', [
-             // ...
+            // ...
 
             'spool' => [
                 'type' => 'file',
@@ -162,4 +162,4 @@ at a regular interval.
     ``swiftmailer`` service without the ``lazy`` option (see :doc:`/service_container/lazy_services`).
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

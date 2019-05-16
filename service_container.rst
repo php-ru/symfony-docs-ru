@@ -50,7 +50,7 @@ service's class or interface name. Want to :doc:`log </logging>` something? No p
 
 .. versionadded:: 3.3
 
-    The ability to type-hint a service in order to receive it was added in Symfony 3.3.
+    The ability to type-hint a service in order to receive it was introduced in Symfony 3.3.
     See the :ref:`controller chapter <controller-service-arguments-tag>` for more
     details.
 
@@ -512,7 +512,7 @@ pass here. No problem! In your configuration, you can explicitly set this argume
 
 .. versionadded:: 3.3
 
-    The ability to configure an argument by its name (``$adminEmail``) was added
+    The ability to configure an argument by its name (``$adminEmail``) was introduced
     in Symfony 3.3. Previously, you could configure it only by its index (``2`` in
     this case) or by using empty quotes for the other arguments.
 
@@ -755,8 +755,8 @@ You can also use the ``bind`` keyword to bind specific arguments by name or type
 
         // config/services.php
         use App\Controller\LuckyController;
-        use Symfony\Component\DependencyInjection\Reference;
         use Psr\Log\LoggerInterface;
+        use Symfony\Component\DependencyInjection\Reference;
 
         $container->register(LuckyController::class)
             ->setPublic(true)
@@ -794,7 +794,7 @@ The autoconfigure Option
 
 .. versionadded:: 3.3
 
-    The ``autoconfigure`` option was added in Symfony 3.3.
+    The ``autoconfigure`` option was introduced in Symfony 3.3.
 
 Above, the ``services.yml`` file has ``autoconfigure: true`` in the ``_defaults``
 section so that it applies to all services defined in that file. With this setting,
@@ -1144,8 +1144,8 @@ admin email. In this case, each needs to have a unique service id:
     .. code-block:: php
 
         // app/config/services.php
-        use AppBundle\Updates\SiteUpdateManager;
         use AppBundle\Service\MessageGenerator;
+        use AppBundle\Updates\SiteUpdateManager;
         use Symfony\Component\DependencyInjection\Reference;
 
         $container->register('site_update_manager.superadmin', SiteUpdateManager::class)
@@ -1193,4 +1193,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony3-fundamentals
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 9654d1aa7c2effbc9b318146e7057df4ba4b10cc

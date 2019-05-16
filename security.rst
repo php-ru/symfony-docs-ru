@@ -261,10 +261,10 @@ user to be logged in to access this URL:
                     // ...
                 ],
             ],
-           'access_control' => [
-               // require ROLE_ADMIN for /admin*
+            'access_control' => [
+                // require ROLE_ADMIN for /admin*
                 ['path' => '^/admin', 'roles' => 'ROLE_ADMIN'],
-           ],
+            ],
         ]);
 
 .. note::
@@ -749,10 +749,10 @@ URL pattern. You saw this earlier, where anything matching the regular expressio
                     // ...
                 ],
             ],
-           'access_control' => [
-               // require ROLE_ADMIN for /admin*
-               ['path' => '^/admin', 'role' => 'ROLE_ADMIN'],
-           ],
+            'access_control' => [
+                // require ROLE_ADMIN for /admin*
+                ['path' => '^/admin', 'role' => 'ROLE_ADMIN'],
+            ],
         ]);
 
 This is great for securing entire sections, but you'll also probably want
@@ -1170,8 +1170,8 @@ Next, you'll need to create a route for this URL (but not a controller):
     ..  code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('logout', new Route('/logout'));
@@ -1329,4 +1329,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony3-security
 
 .. ready: no
-.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

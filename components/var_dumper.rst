@@ -142,10 +142,11 @@ This will provide you with two new assertions:
 Example::
 
     use PHPUnit\Framework\TestCase;
+    use Symfony\Component\VarDumper\Test\VarDumperTestTrait;
 
     class ExampleTest extends TestCase
     {
-        use \Symfony\Component\VarDumper\Test\VarDumperTestTrait;
+        use VarDumperTestTrait;
 
         public function testWithDumpEquals()
         {
@@ -302,4 +303,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/var-dumper
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 26b31ac2a2c939aeb80b7e445c8769359578ff83

@@ -6,8 +6,8 @@ Using the Translator
 
 Imagine you want to translate the string *"Symfony is great"* into French::
 
-    use Symfony\Component\Translation\Translator;
     use Symfony\Component\Translation\Loader\ArrayLoader;
+    use Symfony\Component\Translation\Translator;
 
     $translator = new Translator('fr_FR');
     $translator->addLoader('array', new ArrayLoader());
@@ -452,28 +452,28 @@ loaded/dumped when using this component inside a Symfony application:
 
     <?xml version="1.0" encoding="UTF-8"?>
     <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0"
-           srcLang="fr-FR" trgLang="en-US">
-      <file id="messages.en_US">
-        <unit id="LCa0a2j">
-          <notes>
-            <note category="state">new</note>
-            <note category="approved">true</note>
-            <note category="section" priority="1">user login</note>
-          </notes>
-          <segment>
-            <source>original-content</source>
-            <target>translated-content</target>
-          </segment>
-        </unit>
-      </file>
+        srcLang="fr-FR" trgLang="en-US">
+        <file id="messages.en_US">
+            <unit id="LCa0a2j">
+                <notes>
+                    <note category="state">new</note>
+                    <note category="approved">true</note>
+                    <note category="section" priority="1">user login</note>
+                </notes>
+                <segment>
+                    <source>original-content</source>
+                    <target>translated-content</target>
+                </segment>
+            </unit>
+        </file>
     </xliff>
 
 When using the standalone Translation component, call the ``setMetadata()``
 method of the catalogue and pass the notes as arrays. This is for example the
 code needed to generate the previous XLIFF file::
 
-    use Symfony\Component\Translation\MessageCatalogue;
     use Symfony\Component\Translation\Dumper\XliffFileDumper;
+    use Symfony\Component\Translation\MessageCatalogue;
 
     $catalogue = new MessageCatalogue('en_US');
     $catalogue->add([
@@ -495,4 +495,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: f1c624d0f11105f6ddd5446f2cc864d76649fe18
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

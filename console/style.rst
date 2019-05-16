@@ -54,9 +54,9 @@ title of the command::
     namespace AppBundle\Command;
 
     use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-    use Symfony\Component\Console\Style\SymfonyStyle;
     use Symfony\Component\Console\Input\InputInterface;
     use Symfony\Component\Console\Output\OutputInterface;
+    use Symfony\Component\Console\Style\SymfonyStyle;
 
     class GreetCommand extends ContainerAwareCommand
     {
@@ -410,4 +410,4 @@ instance which makes use of the error output::
     will still write to the standard output instead of the error output.
 
 .. ready: no
-.. revision: 4b8114db9fc724eb38c70c15b4db1edf0712f4a9
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

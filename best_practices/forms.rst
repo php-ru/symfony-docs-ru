@@ -21,11 +21,11 @@ form in its own PHP class::
 
     use AppBundle\Entity\Post;
     use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+    use Symfony\Component\Form\Extension\Core\Type\EmailType;
+    use Symfony\Component\Form\Extension\Core\Type\TextareaType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
-    use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-    use Symfony\Component\Form\Extension\Core\Type\EmailType;
-    use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
     class PostType extends AbstractType
     {
@@ -109,11 +109,11 @@ some developers configure form buttons in the controller::
 
     namespace AppBundle\Controller\Admin;
 
-    use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-    use Symfony\Component\Form\Extension\Core\Type\SubmitType;
     use AppBundle\Entity\Post;
     use AppBundle\Form\PostType;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+    use Symfony\Component\HttpFoundation\Request;
 
     class PostController extends Controller
     {
@@ -143,7 +143,7 @@ view layer:
         {{ form_widget(form) }}
 
         <input type="submit" value="Create"
-               class="btn btn-default pull-right"/>
+            class="btn btn-default pull-right"/>
     {{ form_end(form) }}
 
 Validation
@@ -238,4 +238,4 @@ is deprecated since version 3.2 and will throw an exception in 4.0.
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

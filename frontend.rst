@@ -74,6 +74,7 @@ Guides
 * :doc:`webpack-dev-server and Hot Module Replacement (HMR) </frontend/encore/dev-server>`
 * :doc:`Adding custom loaders & plugins </frontend/encore/custom-loaders-plugins>`
 * :doc:`Advanced Webpack Configuration </frontend/encore/advanced-config>`
+* :doc:`Using Encore in a Virtual Machine </frontend/encore/virtual-machine>`
 
 Issues & Questions
 ..................
@@ -121,4 +122,4 @@ Other Front-End Articles
 .. _`Webpack Encore screencast series`: https://symfonycasts.com/screencast/webpack-encore
 
 .. ready: no
-.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f
+.. revision: 86c897fde303831288d30c0a22aa7093db41abb5

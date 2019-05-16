@@ -66,8 +66,8 @@ Basic Usage
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -149,8 +149,8 @@ You can use the following parameters in this message:
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -224,8 +224,8 @@ the ``ftp://`` type URLs to be valid, redefine the ``protocols`` array, listing
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -298,8 +298,8 @@ option to the value of any of the ``CHECK_DNS_TYPE_*`` constants in the
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -371,18 +371,18 @@ DNS check failed.
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
                 $metadata->addPropertyConstraint('bioUrl', new Assert\Url([
-                     'dnsMessage' => 'The host "{{ value }}" could not be resolved.',
+                    'dnsMessage' => 'The host "{{ value }}" could not be resolved.',
                 ]));
             }
         }
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

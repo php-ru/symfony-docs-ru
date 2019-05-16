@@ -436,8 +436,8 @@ interface only requires one method: ``loadUserByUsername($username)``::
     // src/AppBundle/Repository/UserRepository.php
     namespace AppBundle\Repository;
 
-    use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
     use Doctrine\ORM\EntityRepository;
+    use Symfony\Bridge\Doctrine\Security\User\UserLoaderInterface;
 
     class UserRepository extends EntityRepository implements UserLoaderInterface
     {
@@ -553,4 +553,4 @@ or worry about it.
 .. _`it must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: 48badfdeb0e187fde256387da308d881d443836c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

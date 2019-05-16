@@ -40,7 +40,7 @@ following options:
     The encryption protocol: ``ssl``, ``tls`` or ``none`` (default)
 
 ``connection_string``
-    You may use this option instead of ``host`` and ``port`` to connect to the
+    You may use this option instead of ``host`` and ``port`` to connect to the
     LDAP server
 
 ``optReferrals``
@@ -117,8 +117,8 @@ Creating or Updating Entries
 The Ldap component provides means to create new LDAP entries, update or even
 delete existing ones::
 
-    use Symfony\Component\Ldap\Ldap;
     use Symfony\Component\Ldap\Entry;
+    use Symfony\Component\Ldap\Ldap;
     // ...
 
     $entry = new Entry('cn=Fabien Potencier,dc=symfony,dc=com', [
@@ -144,4 +144,4 @@ delete existing ones::
 .. _Packagist: https://packagist.org/packages/symfony/ldap
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

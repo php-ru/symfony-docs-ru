@@ -595,7 +595,7 @@ class, which can make this even easier::
 .. versionadded:: 3.2
 
     The :method:`Symfony\\Component\\HttpFoundation\\JsonResponse::fromJsonString`
-    method was added in Symfony 3.2.
+    method was introduced in Symfony 3.2.
 
 The ``JsonResponse`` class sets the ``Content-Type`` header to
 ``application/json`` and encodes your data to JSON when needed.
@@ -651,4 +651,4 @@ Learn More
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49

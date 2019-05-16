@@ -33,8 +33,8 @@ Just before executing any command, the ``ConsoleEvents::COMMAND`` event is
 dispatched. Listeners receive a
 :class:`Symfony\\Component\\Console\\Event\\ConsoleCommandEvent` event::
 
-    use Symfony\Component\Console\Event\ConsoleCommandEvent;
     use Symfony\Component\Console\ConsoleEvents;
+    use Symfony\Component\Console\Event\ConsoleCommandEvent;
 
     $dispatcher->addListener(ConsoleEvents::COMMAND, function (ConsoleCommandEvent $event) {
         // gets the input instance
@@ -64,8 +64,8 @@ will then *not* execute the command, but instead will return the code ``113``
 of the `reserved exit codes`_ for console commands that conform with the
 C/C++ standard::
 
-    use Symfony\Component\Console\Event\ConsoleCommandEvent;
     use Symfony\Component\Console\ConsoleEvents;
+    use Symfony\Component\Console\Event\ConsoleCommandEvent;
 
     $dispatcher->addListener(ConsoleEvents::COMMAND, function (ConsoleCommandEvent $event) {
         // gets the command to be executed
@@ -112,8 +112,8 @@ thrown by the application.
 Listeners receive a
 :class:`Symfony\\Component\\Console\\Event\\ConsoleErrorEvent` event::
 
-    use Symfony\Component\Console\Event\ConsoleErrorEvent;
     use Symfony\Component\Console\ConsoleEvents;
+    use Symfony\Component\Console\Event\ConsoleErrorEvent;
 
     $dispatcher->addListener(ConsoleEvents::ERROR, function (ConsoleErrorEvent $event) {
         $output = $event->getOutput();
@@ -146,8 +146,8 @@ listener (like sending logs, closing a database connection, sending emails,
 Listeners receive a
 :class:`Symfony\\Component\\Console\\Event\\ConsoleTerminateEvent` event::
 
-    use Symfony\Component\Console\Event\ConsoleTerminateEvent;
     use Symfony\Component\Console\ConsoleEvents;
+    use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 
     $dispatcher->addListener(ConsoleEvents::TERMINATE, function (ConsoleTerminateEvent $event) {
         // gets the output
@@ -172,4 +172,4 @@ Listeners receive a
 .. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: 25cb4d61d1663122ed04476648ca325d7216a335
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

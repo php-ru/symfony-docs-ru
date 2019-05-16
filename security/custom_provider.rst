@@ -38,8 +38,8 @@ This is how your ``WebserviceUser`` class looks in action::
     // src/AppBundle/Security/User/WebserviceUser.php
     namespace AppBundle\Security\User;
 
-    use Symfony\Component\Security\Core\User\UserInterface;
     use Symfony\Component\Security\Core\User\EquatableInterface;
+    use Symfony\Component\Security\Core\User\UserInterface;
 
     class WebserviceUser implements UserInterface, EquatableInterface
     {
@@ -124,10 +124,10 @@ Here's an example of how this might look::
     namespace AppBundle\Security\User;
 
     use AppBundle\Security\User\WebserviceUser;
-    use Symfony\Component\Security\Core\User\UserProviderInterface;
-    use Symfony\Component\Security\Core\User\UserInterface;
-    use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
     use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
+    use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
+    use Symfony\Component\Security\Core\User\UserInterface;
+    use Symfony\Component\Security\Core\User\UserProviderInterface;
 
     class WebserviceUserProvider implements UserProviderInterface
     {
@@ -355,4 +355,4 @@ is compared to the hashed password returned by your ``getPassword()`` method.
 .. _MessageDigestPasswordEncoder: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

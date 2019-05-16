@@ -46,8 +46,8 @@ that constructor with no arguments::
     // src/AppBundle/Form/Type/BlogType.php
 
     // ...
-    use Symfony\Component\Form\AbstractType;
     use AppBundle\Entity\Blog;
+    use Symfony\Component\Form\AbstractType;
     use Symfony\Component\OptionsResolver\OptionsResolver;
 
     class BlogType extends AbstractType
@@ -87,8 +87,8 @@ if it is needed.
 
 The closure must accept a ``FormInterface`` instance as the first argument::
 
-    use Symfony\Component\OptionsResolver\OptionsResolver;
     use Symfony\Component\Form\FormInterface;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
     // ...
 
     public function configureOptions(OptionsResolver $resolver)
@@ -101,4 +101,4 @@ The closure must accept a ``FormInterface`` instance as the first argument::
     }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

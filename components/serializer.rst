@@ -38,18 +38,21 @@ Usage
 
 .. seealso::
 
-    This article explains how to use the Serializer features as an independent
-    component in any PHP application. Read the :doc:`/serializer` article to
-    learn about how to use it in Symfony applications.
+    This article explains the philosophy of the Serializer and gets you familiar
+    with the concepts of normalizers and encoders. The code examples assume
+    that you use the Serializer as an independent component. If you are using
+    the Serializer in a Symfony application, read :doc:`/serializer` after you
+    finish this article.
 
 Using the Serializer component is really simple. You just need to set up
 the :class:`Symfony\\Component\\Serializer\\Serializer` specifying
 which encoders and normalizer are going to be available::
 
-    use Symfony\Component\Serializer\Serializer;
-    use Symfony\Component\Serializer\Encoder\XmlEncoder;
+
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
+    use Symfony\Component\Serializer\Encoder\XmlEncoder;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
 
     $encoders = [new XmlEncoder(), new JsonEncoder()];
     $normalizers = [new ObjectNormalizer()];
@@ -258,14 +261,14 @@ for each format:
 
     $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
 
-* XML files::
+* YAML files::
 
     use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
     use Symfony\Component\Serializer\Mapping\Loader\YamlFileLoader;
 
     $classMetadataFactory = new ClassMetadataFactory(new YamlFileLoader('/path/to/your/definition.yml'));
 
-* YAML files::
+* XML files::
 
     use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
     use Symfony\Component\Serializer\Mapping\Loader\XmlFileLoader;
@@ -333,8 +336,8 @@ Then, create your groups definition:
 
 You are now able to serialize only attributes in the groups you want::
 
-    use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
 
     $obj = new MyObj();
     $obj->foo = 'foo';
@@ -363,8 +366,8 @@ Selecting Specific Attributes
 
 It is also possible to serialize only a set of specific attributes::
 
-    use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
 
     class User
     {
@@ -411,9 +414,9 @@ those attributes use the
 :method:`Symfony\\Component\\Serializer\\Normalizer\\AbstractNormalizer::setIgnoredAttributes`
 method on the normalizer definition::
 
-    use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
 
     $normalizer = new ObjectNormalizer();
     $normalizer->setIgnoredAttributes(['age']);
@@ -644,7 +647,7 @@ There are several types of normalizers available:
 
     .. versionadded:: 3.4
 
-        The ``DateIntervalNormalizer`` normalizer was added in Symfony 3.4.
+        The ``DateIntervalNormalizer`` normalizer was introduced in Symfony 3.4.
 
 .. _component-serializer-encoders:
 
@@ -853,11 +856,11 @@ because it is deeper than the configured maximum depth of 2::
     $result = [
         'foo' => 'level1',
         'child' => [
-                'foo' => 'level2',
-                'child' => [
-                        'child' => null,
-                    ],
+            'foo' => 'level2',
+            'child' => [
+                'child' => null,
             ],
+        ],
     ];
     */
 
@@ -987,9 +990,9 @@ parameter of the ``ObjectNormalizer``::
     namespace Acme;
 
     use Symfony\Component\PropertyInfo\Extractor\ReflectionExtractor;
-    use Symfony\Component\Serializer\Serializer;
     use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+    use Symfony\Component\Serializer\Serializer;
 
     class ObjectOuter
     {
@@ -1028,7 +1031,7 @@ parameter of the ``ObjectNormalizer``::
 
     $obj = $serializer->denormalize(
         ['inner' => ['foo' => 'foo', 'bar' => 'bar'], 'date' => '1988/01/21'],
-         'Acme\ObjectOuter'
+        'Acme\ObjectOuter'
     );
 
     dump($obj->getInner()->foo); // 'foo'
@@ -1066,4 +1069,4 @@ Learn more
 .. _CSV: https://tools.ietf.org/html/rfc4180
 
 .. ready: no
-.. revision: a87aaec236f7162894155baef6fc8b2ec7f702d6
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

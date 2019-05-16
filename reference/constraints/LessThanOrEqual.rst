@@ -89,8 +89,8 @@ The following constraints ensure that:
         // src/AppBundle/Entity/Person.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -156,8 +156,8 @@ that a date must be today or in the past like this:
         // src/AppBundle/Entity/Person.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -215,8 +215,8 @@ dates. If you want to fix the timezone, append it to the date string:
         // src/AppBundle/Entity/Person.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -274,8 +274,8 @@ can check that a person must be at least 18 years old like this:
         // src/AppBundle/Entity/Person.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Person
         {
@@ -319,4 +319,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

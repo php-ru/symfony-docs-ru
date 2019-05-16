@@ -83,10 +83,10 @@ from inside a controller::
 
     use AppBundle\Entity\Task;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-    use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\DateType;
     use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\HttpFoundation\Request;
 
     class DefaultController extends Controller
     {
@@ -365,9 +365,9 @@ object.
     .. code-block:: php
 
         // src/AppBundle/Entity/Task.php
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\NotBlank;
         use Symfony\Component\Validator\Constraints\Type;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Task
         {
@@ -557,8 +557,8 @@ the correct values of a number of field options.
 
 .. caution::
 
-  These field options are *only* guessed if you're using Symfony to guess
-  the field type (i.e. omit or pass ``null`` as the second argument to ``add()``).
+    These field options are *only* guessed if you're using Symfony to guess
+    the field type (i.e. omit or pass ``null`` as the second argument to ``add()``).
 
 If you'd like to change one of the guessed values, you can override it by
 passing the option in the options field array::
@@ -582,8 +582,8 @@ that will house the logic for building the task form::
     namespace AppBundle\Form;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     class TaskType extends AbstractType
     {
@@ -707,6 +707,7 @@ There's a lot more to learn and a lot of *powerful* tricks in the form system.
 
 Learn more
 ----------
+
 .. toctree::
     :maxdepth: 1
     :glob:
@@ -722,4 +723,4 @@ Learn more
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony3-forms
 
 .. ready: no
-.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2
+.. revision: 4ef5b97a15017bc0a581464847419dfa62739df2

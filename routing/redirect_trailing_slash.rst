@@ -80,8 +80,8 @@ system, as explained below:
 
     .. code-block:: php
 
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add(
@@ -105,4 +105,4 @@ system, as explained below:
     slash in their path.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

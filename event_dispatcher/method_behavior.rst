@@ -114,8 +114,8 @@ could listen to the ``mailer.post_send`` event and change the method's return va
     // src/AppBundle/EventSubscriber/MailPostSendSubscriber.php
     namespace AppBundle\EventSubscriber;
 
-    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
     use AppBundle\Event\AfterSendMailEvent;
+    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
     class MailPostSendSubscriber implements EventSubscriberInterface
     {
@@ -139,4 +139,4 @@ That's it! Your subscriber should be called automatically (or read more about
 :ref:`event subscriber configuration <ref-event-subscriber-configuration>`).
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

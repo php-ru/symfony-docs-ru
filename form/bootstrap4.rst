@@ -30,13 +30,13 @@ configuration:
 
     .. code-block:: yaml
 
-        # config/packages/twig.yaml
+        # app/config/config.yml
         twig:
             form_themes: ['bootstrap_4_layout.html.twig']
 
     .. code-block:: xml
 
-        <!-- config/packages/twig.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -54,7 +54,7 @@ configuration:
 
     .. code-block:: php
 
-        // config/packages/twig.php
+        // app/config/config.php
         $container->loadFromExtension('twig', [
             'form_themes' => [
                 'bootstrap_4_layout.html.twig',
@@ -116,4 +116,4 @@ is a strong connection between the error and its ``<input>``, as required by the
 .. _`custom forms`: https://getbootstrap.com/docs/4.1/components/forms/#custom-forms
 
 .. ready: no
-.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2
+.. revision: 80c175f0e6f18a2b49c1c5c5d8fb0d863915c29a

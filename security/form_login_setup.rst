@@ -127,8 +127,8 @@ configuration (``login``):
     ..  code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('login', new Route('/login', [
@@ -381,4 +381,4 @@ for more details.
 .. _`FOSUserBundle`: https://github.com/FriendsOfSymfony/FOSUserBundle
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

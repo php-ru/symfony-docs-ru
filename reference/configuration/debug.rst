@@ -79,7 +79,7 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
 
         # app/config/config.yml
         debug:
-           dump_destination: php://stderr
+            dump_destination: php://stderr
 
     .. code-block:: xml
 
@@ -99,8 +99,8 @@ destination for dumps. Typically, you would set this to ``php://stderr``:
 
         // app/config/config.php
         $container->loadFromExtension('debug', [
-           'dump_destination' => 'php://stderr',
+            'dump_destination' => 'php://stderr',
         ]);
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

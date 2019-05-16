@@ -84,7 +84,7 @@ available in the ``configure()`` method::
             parent::__construct();
         }
 
-        public function configure()
+        protected function configure()
         {
             $this
                 // ...
@@ -210,8 +210,8 @@ as a service, you can use normal dependency injection. Imagine you have a
 ``AppBundle\Service\UserManager`` service that you want to access::
 
     // ...
-    use Symfony\Component\Console\Command\Command;
     use AppBundle\Service\UserManager;
+    use Symfony\Component\Console\Command\Command;
 
     class CreateUserCommand extends Command
     {
@@ -341,4 +341,4 @@ tools capable of helping you with different tasks:
 * :doc:`/components/console/helpers/table`: displays tabular data as a table
 
 .. ready: no
-.. revision: 23bd98c8c50c0d5865a126bc0d9eb68e56703b48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

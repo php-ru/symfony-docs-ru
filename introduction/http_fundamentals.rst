@@ -121,7 +121,7 @@ like this:
     Content-Type: text/html
 
     <html>
-      <!-- ... HTML for the xkcd comic -->
+        <!-- ... HTML for the xkcd comic -->
     </html>
 
 The HTTP response contains the requested resource (the HTML content in this
@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

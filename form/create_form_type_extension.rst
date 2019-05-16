@@ -173,11 +173,11 @@ For example::
     namespace AppBundle\Form\Extension;
 
     use Symfony\Component\Form\AbstractTypeExtension;
-    use Symfony\Component\Form\FormView;
-    use Symfony\Component\Form\FormInterface;
-    use Symfony\Component\PropertyAccess\PropertyAccess;
-    use Symfony\Component\OptionsResolver\OptionsResolver;
     use Symfony\Component\Form\Extension\Core\Type\FileType;
+    use Symfony\Component\Form\FormInterface;
+    use Symfony\Component\Form\FormView;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
+    use Symfony\Component\PropertyAccess\PropertyAccess;
 
     class ImageTypeExtension extends AbstractTypeExtension
     {
@@ -252,9 +252,9 @@ next to the file field. For example::
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\FileType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     class MediaType extends AbstractType
     {
@@ -286,4 +286,4 @@ it's possible that it does *not* extend ``FormType``, and so your form type exte
 may not be applied to it.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

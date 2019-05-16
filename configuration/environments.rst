@@ -214,9 +214,9 @@ this code and changing the environment string.
         .. code-block:: yaml
 
             doctrine:
-               dbal:
-                   logging: '%kernel.debug%'
-                   # ...
+                dbal:
+                    logging: '%kernel.debug%'
+                    # ...
 
         .. code-block:: xml
 
@@ -429,4 +429,4 @@ Going further
 Read the article on :doc:`/configuration/external_parameters`.
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

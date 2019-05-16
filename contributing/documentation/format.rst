@@ -191,8 +191,8 @@ describe how the behavior has changed:
 
     .. versionadded:: 3.4
 
-        Support for annotation routing without an external bundle was added in
-        Symfony 3.4. Prior, you needed to install the SensioFrameworkExtraBundle.
+        Support for annotation routing without an external bundle was introduced
+        in Symfony 3.4. Prior, you needed to install the SensioFrameworkExtraBundle.
 
 For a deprecation use the ``.. deprecated:: 3.X`` directive:
 
@@ -219,4 +219,4 @@ tags would be removed from the new ``4.0`` branch.
 .. _`supported languages`: http://pygments.org/languages/
 
 .. ready: no
-.. revision: 3b961fe970adcbbe021c62496b0248f6009b7c47
+.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49

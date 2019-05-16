@@ -26,7 +26,7 @@ To see a list of all of the available types that can be used for autowiring, run
 
 .. versionadded:: 3.4
 
-   The ``debug:autowiring`` command was introduced in Symfony 3.3.
+    The ``debug:autowiring`` command was introduced in Symfony 3.3.
 
 Detailed Info about a Single Service
 ------------------------------------
@@ -43,7 +43,7 @@ its id:
 
 .. versionadded:: 3.3
 
-   The ``--show-arguments`` option was introduced in Symfony 3.3.
+    The ``--show-arguments`` option was introduced in Symfony 3.3.
 
 .. ready: no
-.. revision: ec17bff3ee090b39a014e6e957a468f4c934daf4
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

@@ -116,8 +116,8 @@ the controller does *not* return a :class:`Symfony\\Component\\HttpFoundation\\R
 object. It's useful to transform the returned value (e.g. a string with some
 HTML contents) into the ``Response`` object needed by Symfony::
 
-    use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent;
 
     public function onKernelView(GetResponseForControllerResultEvent $event)
     {
@@ -225,8 +225,8 @@ This event is dispatched as soon as an error occurs during the handling of the
 HTTP request. It's useful to recover from errors or modify the exception details
 sent as response::
 
-    use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 
     public function onKernelException(GetResponseForExceptionEvent $event)
     {
@@ -290,4 +290,4 @@ their priorities:
 .. _`param converters`: https://symfony.com/doc/master/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: bcfa1e4b634134e77c3d746473183d7da5f40c46
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

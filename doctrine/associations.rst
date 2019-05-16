@@ -355,6 +355,8 @@ to the given ``Category`` object via their ``category_id`` value.
     all at once (via a *join*), Doctrine will return the *true* ``Category``
     object, since nothing needs to be lazily loaded.
 
+.. _doctrine-associations-join-query:
+
 Joining Related Records
 -----------------------
 
@@ -418,4 +420,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/symfony3-doctrine-relations
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 2a01088737e06729dbbfa09b98132943a4a095ab

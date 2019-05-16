@@ -215,7 +215,7 @@ This test will check if the current ``form`` does not have a parent form view.
         {{ form_errors(form) }}
     {% endif %}
 
-   {# DO THIS: this check is always reliable, even if the form defines a field called 'parent' #}
+    {# DO THIS: this check is always reliable, even if the form defines a field called 'parent' #}
 
     {% if form is rootform %}
         {{ form_errors(form) }}
@@ -384,4 +384,4 @@ done by using a public ``vars`` property on the
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

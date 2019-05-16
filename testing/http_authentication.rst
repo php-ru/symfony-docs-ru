@@ -40,8 +40,8 @@ firewall, but only in the configuration file used by tests:
         <security:config>
             <!-- replace 'main' by the name of your own firewall -->
             <security:firewall name="main">
-              <security:http-basic/>
-           </security:firewall>
+                <security:http-basic/>
+            </security:firewall>
         </security:config>
 
     .. code-block:: php
@@ -130,4 +130,4 @@ needs::
     }
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

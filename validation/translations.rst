@@ -69,8 +69,8 @@ property is not empty, add the following:
         // src/AppBundle/Entity/Author.php
 
         // ...
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints\NotBlank;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -119,4 +119,4 @@ You may need to clear your cache (even in the dev environment) after creating th
 file for the first time.
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

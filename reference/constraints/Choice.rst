@@ -107,8 +107,8 @@ If your valid choice list is simple, you can pass them in directly via the
         // src/AppBundle/EntityAuthor.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -198,8 +198,8 @@ constraint.
         // src/AppBundle/EntityAuthor.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -267,8 +267,8 @@ you can pass the class name and the method as an array.
         namespace AppBundle\Entity;
 
         use AppBundle\Entity\Genre;
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -418,4 +418,4 @@ method when checking to see if a value is in the valid choices array.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

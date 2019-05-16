@@ -83,8 +83,8 @@ This field has a *lot* of options and most control how the field is displayed. I
 this example, the underlying data is some ``Category`` object that has a ``getName()``
 method::
 
-    use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
     use AppBundle\Entity\Category;
+    use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
     // ...
 
     $builder->add('category', ChoiceType::class, [
@@ -333,4 +333,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

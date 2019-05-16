@@ -547,8 +547,8 @@ field whose *id* is ``product_name`` (and name is ``product[name]``).
     name ``_product_name_widget`` you can set the ``block_name`` option in your
     form type::
 
-        use Symfony\Component\Form\FormBuilderInterface;
         use Symfony\Component\Form\Extension\Core\Type\TextType;
+        use Symfony\Component\Form\FormBuilderInterface;
 
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
@@ -862,4 +862,4 @@ more details about this concept in Twig, see :ref:`twig-reference-form-variables
 .. _`Foundation CSS framework`: http://foundation.zurb.com/
 
 .. ready: no
-.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

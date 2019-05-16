@@ -13,9 +13,9 @@ decoding (format to array).
 
 You can add new encoders to a Serializer instance by using its second constructor argument::
 
-    use Symfony\Component\Serializer\Serializer;
-    use Symfony\Component\Serializer\Encoder\XmlEncoder;
     use Symfony\Component\Serializer\Encoder\JsonEncoder;
+    use Symfony\Component\Serializer\Encoder\XmlEncoder;
+    use Symfony\Component\Serializer\Serializer;
 
     $encoders = [new XmlEncoder(), new JsonEncoder()];
     $serializer = new Serializer([], $encoders);
@@ -77,4 +77,4 @@ This encoder requires the :doc:`Yaml Component </components/yaml>` and
 transforms from and to Yaml.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

@@ -91,8 +91,8 @@ by the routing system using the special ``_locale`` parameter:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('contact', new Route(
@@ -164,4 +164,4 @@ the framework:
         ]);
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

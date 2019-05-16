@@ -15,8 +15,9 @@ and optionally a namespace and default cache lifetime as its second and third pa
     use Psr\Cache\CacheItemPoolInterface;
     use Symfony\Component\Cache\Adapter\ProxyAdapter;
 
-    $psr6CachePool = \\ create your own cache pool instance that implements the PSR-6
-                     \\ interface `CacheItemPoolInterface`
+    // create your own cache pool instance that implements
+    // the PSR-6 CacheItemPoolInterface
+    $psr6CachePool = ...
 
     $cache = new ProxyAdapter(
 
@@ -36,4 +37,4 @@ and optionally a namespace and default cache lifetime as its second and third pa
 .. _`cache item pool interface`: http://www.php-fig.org/psr/psr-6/#cacheitempoolinterface
 
 .. ready: no
-.. revision: c49d42713a2ce8802b5fcd315aa981259d7c7964
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

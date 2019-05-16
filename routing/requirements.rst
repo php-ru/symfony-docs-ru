@@ -58,8 +58,8 @@ a routing ``{wildcard}`` to only match some regular expression:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('blog_list', new Route('/blog/{page}', [
@@ -135,8 +135,8 @@ URL:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('homepage', new Route('/{_locale}', [
@@ -254,8 +254,8 @@ accomplished with the following route configuration:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('api_post_show', new Route('/api/posts/{id}', [
@@ -300,4 +300,4 @@ information on the request. See :doc:`/routing/conditions`.
 .. _`PCRE Unicode property`: http://php.net/manual/en/regexp.reference.unicode.php
 
 .. ready: no
-.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

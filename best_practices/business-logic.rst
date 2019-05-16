@@ -238,8 +238,8 @@ looking for mapping information::
 
     namespace AppBundle\Entity;
 
-    use Doctrine\ORM\Mapping as ORM;
     use Doctrine\Common\Collections\ArrayCollection;
+    use Doctrine\ORM\Mapping as ORM;
 
     /**
      * @ORM\Entity
@@ -373,4 +373,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: 6d164c34f84fa4905892c858cc33ea691b09edb1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

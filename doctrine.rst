@@ -393,6 +393,13 @@ directly inside the ``Product`` class via DocBlock annotations:
 
 .. note::
 
+    If you are using an SQLite database, you'll see the following error:
+    *PDOException: SQLSTATE[HY000]: General error: 1 Cannot add a NOT NULL
+    column with default value NULL*. Add a ``nullable=true`` option to the
+    ``description`` property to fix the problem.
+
+.. note::
+
     A bundle can accept only one metadata definition format. For example, it's
     not possible to mix YAML metadata definitions with annotated PHP entity
     class definitions.
@@ -513,8 +520,8 @@ a controller, this is pretty easy. Add the following method to the
 
     // ...
     use AppBundle\Entity\Product;
-    use Symfony\Component\HttpFoundation\Response;
     use Doctrine\ORM\EntityManagerInterface;
+    use Symfony\Component\HttpFoundation\Response;
 
     public function createAction()
     {
@@ -905,4 +912,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony3-doctrine
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

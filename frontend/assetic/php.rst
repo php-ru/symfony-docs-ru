@@ -46,27 +46,27 @@ and some regular CSS and JavaScript application files (called ``main.css`` and
 
     web/assets/
     ├── css
-    │   ├── main.css
-    │   └── code-highlight.css
+    │   ├── main.css
+    │   └── code-highlight.css
     ├── js
-    │   ├── bootstrap.js
-    │   ├── jquery.js
-    │   └── main.js
+    │   ├── bootstrap.js
+    │   ├── jquery.js
+    │   └── main.js
     └── scss
         ├── bootstrap
-        │   ├── _alerts.scss
-        │   ├── ...
-        │   ├── _variables.scss
-        │   ├── _wells.scss
-        │   └── mixins
-        │       ├── _alerts.scss
-        │       ├── ...
-        │       └── _vendor-prefixes.scss
+        │   ├── _alerts.scss
+        │   ├── ...
+        │   ├── _variables.scss
+        │   ├── _wells.scss
+        │   └── mixins
+        │       ├── _alerts.scss
+        │       ├── ...
+        │       └── _vendor-prefixes.scss
         ├── bootstrap.scss
         ├── font-awesome
-        │   ├── _animated.scss
-        │   ├── ...
-        │   └── _variables.scss
+        │   ├── _animated.scss
+        │   ├── ...
+        │   └── _variables.scss
         └── font-awesome.scss
 
 Combining and Minimizing CSS Files and Compiling SCSS Files
@@ -108,10 +108,10 @@ First, configure a new ``scssphp`` Assetic filter:
         // app/config/config.php
         $container->loadFromExtension('assetic', [
             'filters' => [
-                 'scssphp' => [
-                     'formatter' => 'Leafo\ScssPhp\Formatter\Compressed',
-                 ],
-                 // ...
+                'scssphp' => [
+                    'formatter' => 'Leafo\ScssPhp\Formatter\Compressed',
+                ],
+                // ...
             ],
         ]);
 
@@ -181,8 +181,8 @@ First, configure a new ``jsqueeze`` Assetic filter as follows:
         // app/config/config.php
         $container->loadFromExtension('assetic', [
             'filters' => [
-                 'jsqueeze' => null,
-                 // ...
+                'jsqueeze' => null,
+                // ...
             ],
         ]);
 
@@ -213,4 +213,4 @@ apply the filter when *not* in ``debug`` mode. In practice, this means that you'
 see unminified files while developing and minimized files in the ``prod`` environment.
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

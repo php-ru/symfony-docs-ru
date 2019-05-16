@@ -73,9 +73,9 @@ in the same place. By using two adapters, you can e.g. store some big cached ite
 on the filesystem or in the database and keep tags in a Redis database to sync all
 your fronts and have very fast invalidation checks::
 
-    use Symfony\Component\Cache\Adapter\TagAwareAdapter;
     use Symfony\Component\Cache\Adapter\FilesystemAdapter;
     use Symfony\Component\Cache\Adapter\RedisAdapter;
+    use Symfony\Component\Cache\Adapter\TagAwareAdapter;
 
     $cache = new TagAwareAdapter(
         // Adapter for cached items
@@ -104,4 +104,4 @@ lifetime or their expiration date with the PSR-6 interface, as explained in the
 :doc:`/components/cache/cache_items` article.
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

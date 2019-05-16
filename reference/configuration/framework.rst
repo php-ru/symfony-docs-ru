@@ -1328,7 +1328,7 @@ individually for each asset package:
     .. code-block:: yaml
 
         # app/config/config.yml
-       framework:
+        framework:
             assets:
                 # this strategy is applied to every asset (including packages)
                 version_strategy: 'app.asset.my_versioning_strategy'
@@ -1430,7 +1430,7 @@ package:
     .. code-block:: yaml
 
         # app/config/config.yml
-       framework:
+        framework:
             assets:
                 # this manifest is applied to every asset (including packages)
                 json_manifest_path: "%kernel.project_dir%/web/assets/manifest.json"
@@ -2044,7 +2044,7 @@ To configure a Redis cache pool with a default lifetime of 1 hour, do the follow
 
     .. code-block:: yaml
 
-        # config/packages/framework.yaml
+        # app/config/config.yml
         framework:
             cache:
                 pools:
@@ -2054,7 +2054,7 @@ To configure a Redis cache pool with a default lifetime of 1 hour, do the follow
 
     .. code-block:: xml
 
-        <!-- config/packages/framework.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -2077,7 +2077,7 @@ To configure a Redis cache pool with a default lifetime of 1 hour, do the follow
 
     .. code-block:: php
 
-        // config/packages/framework.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'pools' => [
@@ -2191,7 +2191,7 @@ A list of workflows to be created by the framework extension:
 
     .. code-block:: yaml
 
-        # config/packages/workflow.yaml
+        # app/config/config.yml
         framework:
             workflows:
                 my_workflow:
@@ -2199,7 +2199,7 @@ A list of workflows to be created by the framework extension:
 
     .. code-block:: xml
 
-        <!-- config/packages/workflow.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -2219,7 +2219,7 @@ A list of workflows to be created by the framework extension:
 
     .. code-block:: php
 
-        // config/packages/workflow.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'workflows' => [
                 'my_workflow' => // ...
@@ -2252,12 +2252,18 @@ Name of the workflow you want to create.
 audit_trail
 """""""""""
 
-**type**: ``array``
+**type**: ``bool``
+
+If set to ``true``, the :class:`Symfony\\Component\\Workflow\\EventListener\\AuditTrailListener`
+will be enabled.
 
 initial_place
 """""""""""""
 
 **type**: ``string`` **default**: ``null``
+
+One of the ``places`` or ``null``. If not null and the supported object is not
+already initialized via the workflow, this place will be set.
 
 marking_store
 """""""""""""
@@ -2276,10 +2282,15 @@ places
 
 **type**: ``array``
 
+All available places (**type**: ``string``) for the workflow configuration.
+
 supports
 """"""""
 
 **type**: ``string`` | ``array``
+
+The FQCN (fully-qualified class name) of the object supported by the workflow
+configuration or an array of FQCN if multiple objects are supported.
 
 support_strategy
 """"""""""""""""
@@ -2293,11 +2304,13 @@ transitions
 
 Each marking store can define any of these options:
 
-* ``from`` (**type**: ``string``)
-* ``guard`` (**type**: ``string``) a :doc:`ExpressionLanguage </components/expression_language>`
-  compatible expression to block the transition
-* ``name`` (**type**: ``string``)
-* ``to`` (**type**: ``string``)
+* ``from`` (**type**: ``string`` or ``array``) value from the ``places``,
+  multiple values are allowed for both ``workflow`` and ``state_machine``;
+* ``guard`` (**type**: ``string``) an :doc:`ExpressionLanguage </components/expression_language>`
+  compatible expression to block the transition;
+* ``name`` (**type**: ``string``) the name of the transition;
+* ``to`` (**type**: ``string`` or ``array``) value from the ``places``,
+  multiple values are allowed only for ``workflow``.
 
 .. _reference-workflows-type:
 
@@ -2306,8 +2319,9 @@ type
 
 **type**: ``string`` **possible values**: ``'workflow'`` or ``'state_machine'``
 
-Defines the kind fo workflow that is going to be created, which can be either
-a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/state-machines>`.
+Defines the kind of workflow that is going to be created, which can be either
+a normal workflow or a state machine. Read :doc:`this article </workflow/introduction>`
+to know their differences.
 
 .. _`HTTP Host header attacks`: http://www.skeletonscribe.net/2013/05/practical-http-host-header-attacks.html
 .. _`Security Advisory Blog post`: https://symfony.com/blog/security-releases-symfony-2-0-24-2-1-12-2-2-5-and-2-3-3-released#cve-2013-4752-request-gethost-poisoning
@@ -2320,4 +2334,4 @@ a :doc:`normal workflow </workflow/usage>` or a :doc:`state machine </workflow/s
 .. _`webpack-manifest-plugin`: https://www.npmjs.com/package/webpack-manifest-plugin
 
 .. ready: no
-.. revision: 53e465d5844c1a2bdb3fdef17d536b319159c9ee
+.. revision: 7f2ad5dd4fe9696b769ff2c8f4a903a45a8fc657

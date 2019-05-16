@@ -180,8 +180,8 @@ of the ``AppBundle``::
     // src/AppBundle/Controller/ExtraController.php
     namespace AppBundle\Controller;
 
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ExtraController extends Controller
     {
@@ -345,4 +345,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

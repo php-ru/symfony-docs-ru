@@ -9,7 +9,7 @@ PDO & Doctrine DBAL Cache Adapter
 
 .. versionadded:: 3.2
 
-   The PDO & Doctrine DBAL adapter was introduced in Symfony 3.2.
+    The PDO & Doctrine DBAL adapter was introduced in Symfony 3.2.
 
 This adapter stores the cache items in an SQL database. It requires a `PDO`_,
 `Doctrine DBAL Connection`_, or `Data Source Name (DSN)`_ as its first parameter, and
@@ -51,4 +51,4 @@ third, and forth parameters::
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

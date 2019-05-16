@@ -26,8 +26,8 @@ which already implements that interface and provides some utilities::
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\OptionsResolver\OptionsResolver;
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
 
     class ShippingType extends AbstractType
     {
@@ -255,15 +255,15 @@ of the type in one of your forms::
     // src/AppBundle/Form/Type/OrderType.php
     namespace AppBundle\Form\Type;
 
+    use AppBundle\Form\Type\ShippingType;
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
-    use AppBundle\Form\Type\ShippingType;
 
     class OrderType extends AbstractType
     {
         public function buildForm(FormBuilderInterface $builder, array $options)
         {
-            $builder->add('shipping_code', ShippingType::class, [
+            $builder->add('shippingCode', ShippingType::class, [
                 'placeholder' => 'Choose a delivery option',
             ]);
         }
@@ -315,4 +315,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

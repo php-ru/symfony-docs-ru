@@ -103,8 +103,8 @@ user registers and when a user updates their contact information later:
         // src/AppBundle/Entity/User.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class User
         {
@@ -187,4 +187,4 @@ library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: d07b5423d404e29b3804190eec89b733fe145d4d
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

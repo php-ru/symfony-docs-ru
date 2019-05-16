@@ -93,9 +93,7 @@ in your application configuration:
         $container->loadFromExtension('framework', [
             // ...
             'templating' => [
-                'hinclude_default_template' => [
-                    'hinclude.html.twig',
-                ],
+                'hinclude_default_template' => 'hinclude.html.twig',
             ],
         ]);
 
@@ -117,4 +115,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 39da837707899ab563d050d3bb28db037e8ed3f7

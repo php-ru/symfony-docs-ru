@@ -92,7 +92,7 @@ A feature is marked as deprecated by adding a ``@deprecated`` phpdoc to
 relevant classes, methods, properties, ...::
 
     /**
-     * @deprecated since version 2.8, to be removed in 3.0. Use XXX instead.
+     * @deprecated since vendor-name/package-name 2.8, to be removed in 3.0. Use XXX instead.
      */
 
 The deprecation message should indicate the version when the class/method was
@@ -103,7 +103,7 @@ A PHP ``E_USER_DEPRECATED`` error must also be triggered to help people with
 the migration starting one or two minor versions before the version where the
 feature will be removed (depending on the criticality of the removal)::
 
-    @trigger_error('XXX() is deprecated since version 2.8 and will be removed in 3.0. Use XXX instead.', E_USER_DEPRECATED);
+    @trigger_error('XXX() is deprecated since vendor-name/package-name 2.8 and will be removed in 3.0. Use XXX instead.', E_USER_DEPRECATED);
 
 Without the `@-silencing operator`_, users would need to opt-out from deprecation
 notices. Silencing swaps this behavior and allows users to opt-in when they are
@@ -132,4 +132,4 @@ between the namespace and the use declarations, like in this example from
 .. _`ArrayParserCache`: https://github.com/symfony/symfony/blob/3.2/src/Symfony/Component/ExpressionLanguage/ParserCache/ArrayParserCache.php
 
 .. ready: no
-.. revision: aaa1f48bf86d651aa3d0c45c8a7a5da885e8f57d
+.. revision: 6434a5b8a0804eb24ded08d15a9520d51042c845

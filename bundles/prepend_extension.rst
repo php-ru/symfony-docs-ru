@@ -28,9 +28,9 @@ To give an Extension the power to do this, it needs to implement
     // src/Acme/HelloBundle/DependencyInjection/AcmeHelloExtension.php
     namespace Acme\HelloBundle\DependencyInjection;
 
-    use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-    use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
+    use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
     class AcmeHelloExtension extends Extension implements PrependExtensionInterface
     {
@@ -153,4 +153,4 @@ the same key, the bundle that is registered **first** will take priority:
 next bundles won't override this specific config setting.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

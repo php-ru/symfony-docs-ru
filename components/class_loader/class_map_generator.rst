@@ -19,12 +19,12 @@ manually. For example, imagine a library with the following directory structure:
 
     library/
     ├── bar/
-    │   ├── baz/
-    │   │   └── Boo.php
-    │   └── Foo.php
+    │   ├── baz/
+    │   │   └── Boo.php
+    │   └── Foo.php
     └── foo/
         ├── bar/
-        │   └── Foo.php
+        │   └── Foo.php
         └── Bar.php
 
 These files contain the following classes:
@@ -128,4 +128,4 @@ is the same as in the example above)::
 .. _`Composer`: https://getcomposer.org
 
 .. ready: no
-.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

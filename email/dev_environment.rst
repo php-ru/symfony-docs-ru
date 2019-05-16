@@ -145,10 +145,10 @@ by adding the ``delivery_whitelist`` option:
         swiftmailer:
             delivery_addresses: ['dev@example.com']
             delivery_whitelist:
-               # all email addresses matching these regexes will be delivered
-               # like normal, as well as being sent to dev@example.com
-               - '/@specialdomain\.com$/'
-               - '/^admin@mydomain\.com$/'
+                # all email addresses matching these regexes will be delivered
+                # like normal, as well as being sent to dev@example.com
+                - '/@specialdomain\.com$/'
+                - '/^admin@mydomain\.com$/'
 
     .. code-block:: xml
 
@@ -257,4 +257,4 @@ you to open the report with details of the sent emails.
 .. _`MailHog`: https://github.com/mailhog/MailHog
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

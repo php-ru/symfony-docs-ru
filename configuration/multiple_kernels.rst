@@ -79,8 +79,8 @@ sure to also change the location of the cache, logs and configuration files so
 they don't collide with the files from ``AppKernel``::
 
     // app/ApiKernel.php
-    use Symfony\Component\HttpKernel\Kernel;
     use Symfony\Component\Config\Loader\LoaderInterface;
+    use Symfony\Component\HttpKernel\Kernel;
 
     class ApiKernel extends Kernel
     {
@@ -241,4 +241,4 @@ the default ``app/`` directory:
         └─ api_dev.php
 
 .. ready: no
-.. revision: 5cd7a3ae00c4de13efec009dc7b8547a0002261a
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

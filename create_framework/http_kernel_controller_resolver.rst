@@ -163,8 +163,8 @@ Let's conclude with the new version of our framework::
 
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\Routing;
     use Symfony\Component\HttpKernel;
+    use Symfony\Component\Routing;
 
     function render_template(Request $request)
     {
@@ -207,4 +207,4 @@ ever and it still has less than 50 lines of code.
 .. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: 535d3a91fce6ff2024274c08479926f6e6c38254
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

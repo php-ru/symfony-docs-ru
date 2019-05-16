@@ -33,9 +33,9 @@ Suppose you have a Task form with a tags ``text`` type::
     namespace AppBundle\Form\Type;
 
     use AppBundle\Entity\Task;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\OptionsResolver\OptionsResolver;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
 
     // ...
     class TaskType extends AbstractType
@@ -66,8 +66,9 @@ class::
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\CallbackTransformer;
-    use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
+
     // ...
 
     class TaskType extends AbstractType
@@ -465,4 +466,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

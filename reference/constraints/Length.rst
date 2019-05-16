@@ -96,8 +96,8 @@ and "50", you might add the following:
         // src/AppBundle/Entity/Participant.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Participant
         {
@@ -142,10 +142,9 @@ charset
 
 **type**: ``string``  **default**: ``UTF-8``
 
-The charset to be used when computing value's length. The
-:phpfunction:`grapheme_strlen` PHP function is used if available. If not,
-the :phpfunction:`mb_strlen` PHP function is used if available. If neither
-are available, the :phpfunction:`strlen` PHP function is used.
+The charset to be used when computing value's length with the
+:phpfunction:`mb_check_encoding` and :phpfunction:`mb_strlen`
+PHP functions.
 
 minMessage
 ~~~~~~~~~~
@@ -223,4 +222,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_groups-option.rst.inc
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

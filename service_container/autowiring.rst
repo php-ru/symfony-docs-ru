@@ -288,7 +288,7 @@ Now that you have an interface, you should use this as your type-hint::
     {
         public function __construct(TransformerInterface $transformer)
         {
-             // ...
+            // ...
         }
 
         // ...
@@ -419,10 +419,10 @@ that alias:
 
     .. code-block:: php
 
-        use AppBundle\Util\Rot13Transformer;
-        use AppBundle\Util\UppercaseTransformer;
-        use AppBundle\Util\TransformerInterface;
         use AppBundle\Service\TwitterClient;
+        use AppBundle\Util\Rot13Transformer;
+        use AppBundle\Util\TransformerInterface;
+        use AppBundle\Util\UppercaseTransformer;
 
         // ...
         $container->autowire(Rot13Transformer::class);
@@ -512,4 +512,4 @@ Public bundles should explicitly configure their services and not rely on autowi
 .. _service definition prototype: https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

@@ -115,9 +115,9 @@ header value::
     namespace AppBundle\Controller;
 
     // ...
-    use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\HttpFoundation\Request;
     use AppBundle\Entity\Article;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ArticleController extends Controller
     {
@@ -175,8 +175,8 @@ exposing a simple and efficient pattern::
     namespace AppBundle\Controller;
 
     // ...
-    use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\Response;
 
     class ArticleController extends Controller
     {
@@ -222,4 +222,4 @@ headers that must not be present for ``304`` responses (see
 .. _`validation model`: http://tools.ietf.org/html/rfc2616#section-13.3
 
 .. ready: no
-.. revision: 53128619fe42919df43eae593605871c45344f99
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

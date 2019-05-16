@@ -53,10 +53,10 @@ In Symfony, you can register your custom DQL functions as follows:
     .. code-block:: php
 
         // app/config/config.php
-        use AppBundle\DQL\StringFunction;
-        use AppBundle\DQL\SecondStringFunction;
-        use AppBundle\DQL\NumericFunction;
         use AppBundle\DQL\DatetimeFunction;
+        use AppBundle\DQL\NumericFunction;
+        use AppBundle\DQL\SecondStringFunction;
+        use AppBundle\DQL\StringFunction;
 
         $container->loadFromExtension('doctrine', [
             'orm' => [
@@ -151,4 +151,4 @@ In Symfony, you can register your custom DQL functions as follows:
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

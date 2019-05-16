@@ -97,13 +97,13 @@ container:
 Create a new file to host the dependency injection container configuration::
 
     // example.com/src/container.php
+    use Simplex\Framework;
     use Symfony\Component\DependencyInjection;
     use Symfony\Component\DependencyInjection\Reference;
+    use Symfony\Component\EventDispatcher;
     use Symfony\Component\HttpFoundation;
     use Symfony\Component\HttpKernel;
     use Symfony\Component\Routing;
-    use Symfony\Component\EventDispatcher;
-    use Simplex\Framework;
 
     $containerBuilder = new DependencyInjection\ContainerBuilder();
     $containerBuilder->register('context', Routing\RequestContext::class);
@@ -256,4 +256,4 @@ Have fun!
 .. _`Application`: https://github.com/silexphp/Silex/blob/master/src/Silex/Application.php
 
 .. ready: no
-.. revision: e1a710737c9de45b915bff1c6d8383e89621f0ea
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

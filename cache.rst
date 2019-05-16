@@ -24,6 +24,7 @@ Basic uses of the cache looks like this::
 Symfony supports PSR-6 and PSR-16 cache interfaces. You can read more about
 these at the :doc:`component documentation </components/cache>`.
 
+.. _cache-configuration-with-frameworkbundle:
 
 Configuring Cache with FrameworkBundle
 --------------------------------------
@@ -42,7 +43,7 @@ of:
     provider then a service is automatically created.
 
 There are two pools that are always enabled by default. They are ``cache.app`` and
-``cache.system``. The system cache is use for things like annotations, serializer,
+``cache.system``. The system cache is used for things like annotations, serializer,
 and validation. The ``cache.app`` can be used in your code. You can configure which
 adapter (template) they use by using the ``app`` and ``system`` key like:
 
@@ -50,7 +51,7 @@ adapter (template) they use by using the ``app`` and ``system`` key like:
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 app: cache.adapter.filesystem
@@ -58,7 +59,7 @@ adapter (template) they use by using the ``app`` and ``system`` key like:
 
     .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -75,7 +76,7 @@ adapter (template) they use by using the ``app`` and ``system`` key like:
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'app' => 'cache.adapter.filesystem',
@@ -109,7 +110,7 @@ will create pool with service id of ``cache.[type]``
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 directory: '%kernel.cache_dir%/pools' # Only used with cache.adapter.filesystem
@@ -127,7 +128,7 @@ will create pool with service id of ``cache.[type]``
 
     .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -155,7 +156,7 @@ will create pool with service id of ``cache.[type]``
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 // Only used with cache.adapter.filesystem
@@ -183,7 +184,7 @@ You can also create more customized pools. All you need is an adapter:
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 default_memcached_provider: 'memcached://localhost'
@@ -198,7 +199,7 @@ You can also create more customized pools. All you need is an adapter:
 
     .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -208,16 +209,16 @@ You can also create more customized pools. All you need is an adapter:
 
             <framework:config>
                 <framework:cache default_memcached_provider="memcached://localhost">
-                  <framework:pool name="my_cache_pool" adapter="cache.adapter.array"/>
-                  <framework:pool name="cache.acme" adapter="cache.adapter.memcached"/>
-                  <framework:pool name="cache.foobar" adapter="cache.adapter.memcached" provider="memcached://user:password@example.com"/>
+                    <framework:pool name="my_cache_pool" adapter="cache.adapter.array"/>
+                    <framework:pool name="cache.acme" adapter="cache.adapter.memcached"/>
+                    <framework:pool name="cache.foobar" adapter="cache.adapter.memcached" provider="memcached://user:password@example.com"/>
                 </framework:cache>
             </framework:config>
         </container>
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'default_memcached_provider' => 'memcached://localhost',
@@ -249,7 +250,7 @@ For advanced configurations it could sometimes be useful to use a pool as an ada
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 app: my_configured_app_cache
@@ -270,7 +271,7 @@ For advanced configurations it could sometimes be useful to use a pool as an ada
 
     .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -280,18 +281,18 @@ For advanced configurations it could sometimes be useful to use a pool as an ada
 
             <framework:config>
                 <framework:cache app="my_cache_pool">
-                  <framework:pool name="my_cache_pool" adapter="cache.adapter.memcached" provider="memcached://user:password@example.com"/>
-                  <framework:pool name="cache.short_cache" adapter="my_cache_pool" default_lifetime="604800"/>
-                  <framework:pool name="cache.long_cache" adapter="my_cache_pool" default_lifetime="604800"/>
-                  <!-- "cache.adapter.filesystem" is the default for "cache.app" -->
-                  <framework:pool name="my_configured_app_cache" adapter="cache.adapter.filesystem" default_lifetime="3600"/>
+                    <framework:pool name="my_cache_pool" adapter="cache.adapter.memcached" provider="memcached://user:password@example.com"/>
+                    <framework:pool name="cache.short_cache" adapter="my_cache_pool" default_lifetime="604800"/>
+                    <framework:pool name="cache.long_cache" adapter="my_cache_pool" default_lifetime="604800"/>
+                    <!-- "cache.adapter.filesystem" is the default for "cache.app" -->
+                    <framework:pool name="my_configured_app_cache" adapter="cache.adapter.filesystem" default_lifetime="3600"/>
                 </framework:cache>
             </framework:config>
         </container>
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'app' => 'my_configured_app_cache',
@@ -320,7 +321,7 @@ For advanced configurations it could sometimes be useful to use a pool as an ada
 Custom Provider Options
 -----------------------
 
-Some providers have specific options that could be configured. The
+Some providers have specific options that can be configured. The
 :doc:`RedisAdapter </components/cache/adapters/redis_adapter>` allows you to
 create providers with option ``timeout``, ``retry_interval``. etc. To use these
 options with non-default values you need to create your own ``\Redis`` provider
@@ -330,7 +331,7 @@ and use that when configuring the pool.
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 pools:
@@ -344,11 +345,11 @@ and use that when configuring the pool.
                 factory: ['Symfony\Component\Cache\Adapter\RedisAdapter', 'createConnection']
                 arguments:
                     - 'redis://localhost'
-                    - [ retry_interval: 2, timeout: 10 ]
+                    - { retry_interval: 2, timeout: 10 }
 
-.. code-block:: xml
+    .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -358,7 +359,7 @@ and use that when configuring the pool.
 
             <framework:config>
                 <framework:cache>
-                  <framework:pool name="cache.my_redis" adapter="cache.adapter.redis" provider="app.my_custom_redis_provider"/>
+                    <framework:pool name="cache.my_redis" adapter="cache.adapter.redis" provider="app.my_custom_redis_provider"/>
                 </framework:cache>
             </framework:config>
 
@@ -375,7 +376,7 @@ and use that when configuring the pool.
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'pools' => [
@@ -397,7 +398,7 @@ and use that when configuring the pool.
 Creating a Cache Chain
 ----------------------
 
-Different cache adapters has different strengths and weaknesses. Some might be really
+Different cache adapters have different strengths and weaknesses. Some might be really
 quick but small and some may be able to contain a lot of data but are quite slow.
 To get the best of both worlds you may use a chain of adapters. The idea is to
 first look at the quick adapter and then move on to slower adapters. In the worst
@@ -407,7 +408,7 @@ case the value needs to be recalculated.
 
     .. code-block:: yaml
 
-        # config/packages/cache.yaml
+        # app/config/config.yml
         framework:
             cache:
                 pools:
@@ -426,7 +427,7 @@ case the value needs to be recalculated.
 
     .. code-block:: xml
 
-        <!-- config/packages/cache.xml -->
+        <!-- app/config/config.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -436,8 +437,8 @@ case the value needs to be recalculated.
 
             <framework:config>
                 <framework:cache default_memcached_provider="memcached://localhost">
-                  <framework:pool name="my_cache_pool" adapter="app.my_cache_chain_adapter"/>
-                  <framework:pool name="cache.my_redis" adapter="cache.adapter.redis" provider="redis://user:password@example.com"/>
+                    <framework:pool name="my_cache_pool" adapter="app.my_cache_chain_adapter"/>
+                    <framework:pool name="cache.my_redis" adapter="cache.adapter.redis" provider="redis://user:password@example.com"/>
                 </framework:cache>
             </framework:config>
 
@@ -455,7 +456,7 @@ case the value needs to be recalculated.
 
     .. code-block:: php
 
-        // config/packages/cache.php
+        // app/config/config.php
         $container->loadFromExtension('framework', [
             'cache' => [
                 'pools' => [
@@ -519,4 +520,4 @@ Clear all caches everywhere:
     $ php bin/console cache:pool:clear cache.global_clearer
 
 .. ready: no
-.. revision: 9b9e0efcda8d641743be7cd9f2118347750319a1
+.. revision: 6b0b76a7cbe1e43883cfa7ee63de308e6cccc275

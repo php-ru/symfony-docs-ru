@@ -110,7 +110,7 @@ matcher::
         }
     }
 
-Then, you'll need to make sure your class is defined as as service. If you're using
+Then, you'll need to make sure your class is defined as a service. If you're using
 the :ref:`default services.yml configuration <service-container-services-load-example>`,
 you don't need to do anything!
 
@@ -163,4 +163,4 @@ profiler to use this service as the matcher:
         ]);
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 4d6010a7d417e67e9ab812c3bb543151de2e1323

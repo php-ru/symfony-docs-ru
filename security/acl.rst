@@ -124,10 +124,10 @@ Creating an ACL and Adding an ACE
     namespace AppBundle\Controller;
 
     use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-    use Symfony\Component\Security\Core\Exception\AccessDeniedException;
     use Symfony\Component\Security\Acl\Domain\ObjectIdentity;
     use Symfony\Component\Security\Acl\Domain\UserSecurityIdentity;
     use Symfony\Component\Security\Acl\Permission\MaskBuilder;
+    use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
     class BlogController extends Controller
     {
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

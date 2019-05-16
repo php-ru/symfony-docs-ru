@@ -245,10 +245,10 @@ container for any services with the ``app.mail_transport`` tag::
     // src/AppBundle/DependencyInjection/Compiler/MailTransportPass.php
     namespace AppBundle\DependencyInjection\Compiler;
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
-    use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
-    use Symfony\Component\DependencyInjection\Reference;
     use AppBundle\Mail\TransportChain;
+    use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\DependencyInjection\Reference;
 
     class MailTransportPass implements CompilerPassInterface
     {
@@ -281,8 +281,8 @@ bundle::
     // src/AppBundle/AppBundle.php
 
     // ...
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use AppBundle\DependencyInjection\Compiler\MailTransportPass;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
 
     class AppBundle extends Bundle
     {
@@ -409,8 +409,8 @@ To answer this, change the service declaration:
 Notice that you've added a generic ``alias`` key to the tag. To actually
 use this, update the compiler::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Reference;
 
     class TransportCompilerPass implements CompilerPassInterface
@@ -560,4 +560,4 @@ application handlers::
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: f1c624d0f11105f6ddd5446f2cc864d76649fe18
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

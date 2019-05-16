@@ -17,9 +17,9 @@ is not needed when implementing the ``process()`` method in the extension)::
     // src/AppBundle/AppBundle.php
     namespace AppBundle;
 
-    use Symfony\Component\HttpKernel\Bundle\Bundle;
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use AppBundle\DependencyInjection\Compiler\CustomPass;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\HttpKernel\Bundle\Bundle;
 
     class AppBundle extends Bundle
     {
@@ -40,4 +40,4 @@ finally the "real" name. For example, if you want to introduce some sort of
 ``acme_mailer.transport``.
 
 .. ready: no
-.. revision: e95bf63aa8a227079c0fd1ffedf7927826db833b
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

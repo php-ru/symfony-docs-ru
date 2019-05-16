@@ -66,8 +66,8 @@ to your controller, and as attributes of the ``Request`` object:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('blog', new Route('/blog/{page}', [
@@ -102,4 +102,4 @@ path, but you can still access its value from inside your controller, through
 the method's argument, or from the ``Request`` object's ``attributes`` bag.
 
 .. ready: no
-.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

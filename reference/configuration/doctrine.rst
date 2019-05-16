@@ -116,10 +116,10 @@ The following block shows all possible configuration keys:
     to find your PostgreSQL version and ``mysql -V`` to get your MySQL
     version).
 
-    If you are running a MariaDB database, you must prefix the ``server_version``
+    If you are running a MariaDB database, you must prefix the ``server_version``
     value with ``mariadb-`` (e.g. ``server_version: mariadb-10.2.12``).
 
-    Always wrap the server version number with quotes to parse it as a string
+    Always wrap the server version number with quotes to parse it as a string
     instead of a float number. Otherwise, the floating-point representation
     issues can make your version be considered a different number (e.g. ``5.6``
     will be rounded as ``5.5999999999999996447286321199499070644378662109375``).
@@ -194,7 +194,7 @@ can be placed directly under ``doctrine.orm`` config level.
         orm:
             # ...
             query_cache_driver:
-               # ...
+                # ...
             metadata_cache_driver:
                 # ...
             result_cache_driver:
@@ -450,4 +450,4 @@ the path of the bundle.
 .. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

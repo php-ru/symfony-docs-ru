@@ -137,8 +137,8 @@ whereas they cannot access the container parameters::
 
     namespace AppBundle\Repository;
 
-    use Doctrine\ORM\EntityRepository;
     use AppBundle\Entity\Post;
+    use Doctrine\ORM\EntityRepository;
 
     class PostRepository extends EntityRepository
     {
@@ -211,7 +211,7 @@ through environment variables:
 .. versionadded:: 3.2
 
     Support for runtime environment variables via the ``%env(...)%`` syntax
-    was added in Symfony 3.2. Prior to version 3.2, you needed to use the
+    was introduced in Symfony 3.2. Prior to version 3.2, you needed to use the
     :doc:`special SYMFONY__ variables </configuration/external_parameters>`.
 
 ----
@@ -222,4 +222,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

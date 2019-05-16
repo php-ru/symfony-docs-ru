@@ -50,10 +50,6 @@ In addition, there are other groups created to manage specific topics:
 Active Core Members
 ~~~~~~~~~~~~~~~~~~~
 
-.. role:: leader
-.. role:: merger
-.. role:: decider
-
 * **Project Leader**:
 
   * **Fabien Potencier** (`fabpot`_).
@@ -262,4 +258,4 @@ discretion of the **Project Leader**.
 .. _`OskarStark`: https://github.com/OskarStark
 
 .. ready: no
-.. revision: b682cc471a7c7cd8a2486c4d24e9e6acba4a949c
+.. revision: d217392a2e4f0c7ca1fe611a5c81c6b2064d442e

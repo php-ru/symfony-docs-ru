@@ -133,15 +133,15 @@ following directory structure, which is the same used by default in Symfony 4:
 
     your-project/
     ├── config/
-    │   ├── bundles.php
-    │   ├── packages/
-    │   ├── routes.yaml
-    │   └── services.yaml
+    │   ├── bundles.php
+    │   ├── packages/
+    │   ├── routes.yaml
+    │   └── services.yaml
     ├── public/
-    │   └── index.php
+    │   └── index.php
     ├── src/
-    │   ├── ...
-    │   └── Kernel.php
+    │   ├── ...
+    │   └── Kernel.php
     ├── templates/
     └── vendor/
 
@@ -226,4 +226,4 @@ manually after a recipe is installed.
 .. _`Symfony Recipes documentation`: https://github.com/symfony/recipes/blob/master/README.rst
 
 .. ready: no
-.. revision: 8b9966f8e54ebffbe7b692289bec05e1cea3567e
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

@@ -61,8 +61,8 @@ when rendering the field:
     .. code-block:: php
 
         <?= $view['form']->widget($form['publishAt'], [
-                  'separator' => '====='
+            'separator' => '=====',
         ]) ?>
 
 .. ready: no
-.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

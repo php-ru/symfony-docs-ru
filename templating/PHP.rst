@@ -482,9 +482,9 @@ form is rendered.
                         'AppBundle:Form',
                     ],
                 ],
-             ],
+            ],
 
-             // ...
+            // ...
         ]);
 
 By default, the PHP engine uses a *div* layout when rendering forms. Some people,
@@ -536,7 +536,7 @@ resource to use such a layout:
                 ],
             ],
 
-             // ...
+            // ...
         ]);
 
 If you only want to make the change in one template, add the following line to
@@ -600,4 +600,4 @@ original template:
 .. _`@Template`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/view
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

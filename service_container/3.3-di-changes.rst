@@ -573,7 +573,7 @@ Start by updating the service ids to class names:
     Services associated with global PHP classes (i.e. not using PHP namespaces)
     must maintain the ``class`` parameter. For example, when using the old Twig
     classes (e.g. ``Twig_Extensions_Extension_Intl`` instead of ``Twig\Extensions\IntlExtension``),
-    you can't redefine the service as ``Twig_Extensions_Extension_Intl: ~`` and
+    you can't redefine the service as ``Twig_Extensions_Extension_Intl: ~`` and
     you must keep the original ``class`` parameter.
 
 .. caution::
@@ -637,10 +637,10 @@ Now you're ready to default all services to be private:
     # ...
 
     services:
-         _defaults:
-             autowire: true
-             autoconfigure: true
-    +          public: false
+        _defaults:
+            autowire: true
+            autoconfigure: true
+    +       public: false
 
 Thanks to this, any services created in this file cannot be fetched directly from
 the container. But, since the old service id's are aliases in a separate file (``legacy_aliases.yml``),
@@ -810,4 +810,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

@@ -164,8 +164,8 @@ as you normally do:
 .. caution::
 
     If you get a "class not found" error during this step, you may need to
-    run ``export SYMFONY_ENV=prod`` (or ``export APP_ENV=prod`` if you're
-    using :doc:`Symfony Flex </setup/flex>`) before running this command so
+    run ``export SYMFONY_ENV=prod`` (or ``export APP_ENV=prod`` if you're
+    using :doc:`Symfony Flex </setup/flex>`) before running this command so
     that the ``post-install-cmd`` scripts run in the ``prod`` environment.
 
 D) Clear your Symfony Cache
@@ -250,4 +250,4 @@ kernel and return your project's root directory::
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: d2e3e6b99afbe26d6f3ff6670809f5aa146398d5
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

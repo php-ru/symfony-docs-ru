@@ -270,8 +270,8 @@ Commit and push
 
 .. note::
 
-   The first ``git push`` takes much longer as all composer dependencies get
-   downloaded. All subsequent deploys are done within seconds.
+    The first ``git push`` takes much longer as all composer dependencies get
+    downloaded. All subsequent deploys are done within seconds.
 
 That's it! Your application is being deployed on fortrabbit. More information
 about `database migrations and tunneling`_ can be found in the fortrabbit
@@ -284,4 +284,4 @@ documentation.
 .. _`Sign up`: https://dashboard.fortrabbit.com
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

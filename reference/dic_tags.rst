@@ -262,11 +262,11 @@ services:
 
             <services>
                 <service id="app.mysql_lock" public="false"
-                         class="AppBundle\Lock\MysqlLock"/>
+                    class="AppBundle\Lock\MysqlLock"/>
                 <service id="app.postgresql_lock" public="false"
-                         class="AppBundle\Lock\PostgresqlLock"/>
+                    class="AppBundle\Lock\PostgresqlLock"/>
                 <service id="app.sqlite_lock" public="false"
-                         class="AppBundle\Lock\SqliteLock"/>
+                    class="AppBundle\Lock\SqliteLock"/>
             </services>
         </container>
 
@@ -313,11 +313,11 @@ the generic ``app.lock`` service can be defined as follows:
 
             <services>
                 <service id="app.mysql_lock" public="false"
-                         class="AppBundle\Lock\MysqlLock"/>
+                    class="AppBundle\Lock\MysqlLock"/>
                 <service id="app.postgresql_lock" public="false"
-                         class="AppBundle\Lock\PostgresqlLock"/>
+                    class="AppBundle\Lock\PostgresqlLock"/>
                 <service id="app.sqlite_lock" public="false"
-                         class="AppBundle\Lock\SqliteLock"/>
+                    class="AppBundle\Lock\SqliteLock"/>
 
                 <service id="app.lock">
                     <tag name="auto_alias" format="app.%database_type%_lock"/>
@@ -1388,4 +1388,4 @@ Bridge.
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

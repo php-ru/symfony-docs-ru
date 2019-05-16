@@ -23,8 +23,8 @@ Usage
 The :class:`Symfony\\Component\\Process\\Process` class allows you to execute
 a command in a sub-process::
 
-    use Symfony\Component\Process\Process;
     use Symfony\Component\Process\Exception\ProcessFailedException;
+    use Symfony\Component\Process\Process;
 
     $process = new Process(['ls', '-lsa']);
     $process->run();
@@ -421,7 +421,7 @@ Use :method:`Symfony\\Component\\Process\\Process::disableOutput` and
     .. versionadded:: 3.1
 
         The ability to pass a callback to these methods when output is disabled
-        was added in Symfony 3.1.
+        was introduced in Symfony 3.1.
 
 Finding the Executable PHP Binary
 ---------------------------------
@@ -442,4 +442,4 @@ absolute path of the executable PHP binary available on your server::
 .. _`PHP streams`: http://www.php.net/manual/en/book.stream.php
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

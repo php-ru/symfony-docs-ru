@@ -110,8 +110,8 @@ the same features and performance, so choose the one you prefer:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         // Matches /blog exactly
@@ -248,8 +248,8 @@ To fix this, add a *requirement* that the ``{page}`` wildcard can *only* match n
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('blog_list', new Route('/blog/{page}', [
@@ -340,8 +340,8 @@ So how can you make ``blog_list`` once again match when the user visits
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('blog_list', new Route(
@@ -402,12 +402,12 @@ With all of this in mind, check out this advanced example:
 
         # app/config/routing.yml
         article_show:
-          path:     /articles/{_locale}/{year}/{slug}.{_format}
-          defaults: { _controller: AppBundle:Article:show, _format: html }
-          requirements:
-              _locale:  en|fr
-              _format:  html|rss
-              year:     \d+
+            path:     /articles/{_locale}/{year}/{slug}.{_format}
+            defaults: { _controller: AppBundle:Article:show, _format: html }
+            requirements:
+                _locale:  en|fr
+                _format:  html|rss
+                year:     \d+
 
     .. code-block:: xml
 
@@ -433,8 +433,8 @@ With all of this in mind, check out this advanced example:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add(
@@ -806,4 +806,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

@@ -404,32 +404,32 @@ application, configure it with the following content:
 .. code-block:: xml
 
     <configuration>
-      <system.webServer>
-        <rewrite>
-          <rules>
-            <clear/>
-            <rule name="BlockAccessToPublic" patternSyntax="Wildcard" stopProcessing="true">
-              <match url="*"/>
-              <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
-                <add input="{URL}" pattern="/web/*"/>
-              </conditions>
-              <action type="CustomResponse" statusCode="403" statusReason="Forbidden: Access is denied." statusDescription="You do not have permission to view this directory or page using the credentials that you supplied."/>
-            </rule>
-            <rule name="RewriteAssetsToPublic" stopProcessing="true">
-              <match url="^(.*)(\.css|\.js|\.jpg|\.png|\.gif|\.ico)$"/>
-              <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
-              </conditions>
-              <action type="Rewrite" url="web/{R:0}"/>
-            </rule>
-            <rule name="RewriteRequestsToPublic" stopProcessing="true">
-              <match url="^(.*)$"/>
-              <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
-              </conditions>
-              <action type="Rewrite" url="web/app.php/{R:0}"/>
-            </rule>
-          </rules>
-        </rewrite>
-      </system.webServer>
+        <system.webServer>
+            <rewrite>
+                <rules>
+                    <clear/>
+                    <rule name="BlockAccessToPublic" patternSyntax="Wildcard" stopProcessing="true">
+                        <match url="*"/>
+                        <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                            <add input="{URL}" pattern="/web/*"/>
+                        </conditions>
+                        <action type="CustomResponse" statusCode="403" statusReason="Forbidden: Access is denied." statusDescription="You do not have permission to view this directory or page using the credentials that you supplied."/>
+                    </rule>
+                    <rule name="RewriteAssetsToPublic" stopProcessing="true">
+                        <match url="^(.*)(\.css|\.js|\.jpg|\.png|\.gif|\.ico)$"/>
+                        <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        </conditions>
+                        <action type="Rewrite" url="web/{R:0}"/>
+                    </rule>
+                    <rule name="RewriteRequestsToPublic" stopProcessing="true">
+                        <match url="^(.*)$"/>
+                        <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                        </conditions>
+                        <action type="Rewrite" url="web/app.php/{R:0}"/>
+                    </rule>
+                </rules>
+            </rewrite>
+        </system.webServer>
     </configuration>
 
 As you can see, the latest rule ``RewriteRequestsToPublic`` is responsible for
@@ -458,4 +458,4 @@ of steps needed so that deployment becomes even easier.
 .. _`SymfonyAzureEdition`: https://github.com/beberlei/symfony-azure-edition/
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

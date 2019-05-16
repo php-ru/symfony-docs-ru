@@ -68,14 +68,14 @@ on its type:
 
     {# 1. Simple variables #}
     {# $this->render('template.html.twig', [
-           'name' => 'Fabien',
-       ]) #}
+        'name' => 'Fabien',
+    ]) #}
     {{ name }}
 
     {# 2. Arrays #}
     {# $this->render('template.html.twig', [
-           'user' => ['name' => 'Fabien']
-       ]) #}
+        'user' => ['name' => 'Fabien'],
+    ]) #}
     {{ user.name }}
 
     {# alternative syntax for arrays #}
@@ -83,8 +83,8 @@ on its type:
 
     {# 3. Objects #}
     {# $this->render('template.html.twig', [
-           'user' => new User('Fabien')
-       ]) #}
+        'user' => new User('Fabien'),
+    ]) #}
     {{ user.name }}
     {{ user.getName }}
 
@@ -291,4 +291,4 @@ controller and that's exactly the topic of the :doc:`next part of this tutorial
 .. _`Twig documentation`: https://twig.symfony.com/doc/2.x/
 
 .. ready: no
-.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

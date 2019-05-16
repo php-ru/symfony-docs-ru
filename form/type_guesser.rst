@@ -86,12 +86,12 @@ With this knowledge, you can implement the ``guessType()`` method of the
 
     namespace AppBundle\Form\TypeGuesser;
 
-    use Symfony\Component\Form\Guess\Guess;
-    use Symfony\Component\Form\Guess\TypeGuess;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
     use Symfony\Component\Form\Extension\Core\Type\IntegerType;
     use Symfony\Component\Form\Extension\Core\Type\NumberType;
-    use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\Guess\Guess;
+    use Symfony\Component\Form\Guess\TypeGuess;
 
     class PHPDocTypeGuesser implements FormTypeGuesserInterface
     {
@@ -228,8 +228,8 @@ and tag it with ``form.type_guesser``:
     :method:`Symfony\\Component\\Form\\FormFactoryBuilder::addTypeGuessers` of
     the ``FormFactoryBuilder`` to register new type guessers::
 
-        use Symfony\Component\Form\Forms;
         use Acme\Form\PHPDocTypeGuesser;
+        use Symfony\Component\Form\Forms;
 
         $formFactory = Forms::createFormFactoryBuilder()
             // ...
@@ -239,4 +239,4 @@ and tag it with ``form.type_guesser``:
         // ...
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

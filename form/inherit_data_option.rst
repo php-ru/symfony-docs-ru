@@ -47,8 +47,8 @@ Start with building two forms for these entities, ``CompanyType`` and ``Customer
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     class CompanyType extends AbstractType
     {
@@ -65,9 +65,9 @@ Start with building two forms for these entities, ``CompanyType`` and ``Customer
     // src/AppBundle/Form/Type/CustomerType.php
     namespace AppBundle\Form\Type;
 
-    use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
 
     class CustomerType extends AbstractType
     {
@@ -87,10 +87,10 @@ for that::
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
-    use Symfony\Component\OptionsResolver\OptionsResolver;
     use Symfony\Component\Form\Extension\Core\Type\TextareaType;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
 
     class LocationType extends AbstractType
     {
@@ -161,4 +161,4 @@ location form that you can reuse wherever you need it.
     Forms with the ``inherit_data`` option set cannot have ``*_SET_DATA`` event listeners.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

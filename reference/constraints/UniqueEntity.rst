@@ -35,20 +35,21 @@ your user table:
 
     .. code-block:: php-annotations
 
-        // src/AppBundle/Entity/Author.php
+        // src/AppBundle/Entity/User.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Constraints as Assert;
         use Doctrine\ORM\Mapping as ORM;
 
-        // DON'T forget this use statement!!!
+        // DON'T forget the following use statement!!!
         use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+        use Symfony\Component\Validator\Constraints as Assert;
 
         /**
          * @ORM\Entity
          * @UniqueEntity("email")
          */
-        class Author
+        class User
         {
             /**
              * @ORM\Column(name="email", type="string", length=255, unique=true)
@@ -60,7 +61,7 @@ your user table:
     .. code-block:: yaml
 
         # src/AppBundle/Resources/config/validation.yml
-        AppBundle\Entity\Author:
+        AppBundle\Entity\User:
             constraints:
                 - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
             properties:
@@ -75,7 +76,7 @@ your user table:
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
-            <class name="AppBundle\Entity\Author">
+            <class name="AppBundle\Entity\User">
                 <constraint name="Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity">
                     <option name="fields">email</option>
                 </constraint>
@@ -87,15 +88,15 @@ your user table:
 
     .. code-block:: php
 
-        // src/AppBundle/Entity/Author.php
+        // src/AppBundle/Entity/User.php
         namespace AppBundle\Entity;
+
+        // DON'T forget the following use statement!!!
+        use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
         use Symfony\Component\Validator\Constraints as Assert;
 
-        // DON'T forget this use statement!!!
-        use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-
-        class Author
+        class User
         {
             public static function loadValidatorMetadata(ClassMetadata $metadata)
             {
@@ -113,6 +114,12 @@ your user table:
     They may occur when another entity is persisted by an external process after
     this validation has passed and before this entity is actually persisted in
     the database.
+
+.. caution::
+
+    This constraint cannot deal with duplicates found in a collection of items
+    that haven't been persisted as entities yet. You'll need to create your own
+    validator to handle that case.
 
 Options
 -------
@@ -270,8 +277,8 @@ Consider this example:
         // src/AppBundle/Entity/Service.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Service
         {
@@ -306,4 +313,4 @@ also has a ``null`` value, validation would fail.
 .. _`countable PHP variable`: https://php.net/manual/function.is-countable.php
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

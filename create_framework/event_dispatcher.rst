@@ -88,9 +88,9 @@ now dispatched::
     // example.com/src/Simplex/ResponseEvent.php
     namespace Simplex;
 
+    use Symfony\Component\EventDispatcher\Event;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\EventDispatcher\Event;
 
     class ResponseEvent extends Event
     {
@@ -304,4 +304,4 @@ needs. Stop whenever you see fit, and further evolve the code from there.
 .. _`Rack`: https://github.com/rack/rack
 
 .. ready: no
-.. revision: 73473b7455450c8d72a7550475c289faff89b229
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

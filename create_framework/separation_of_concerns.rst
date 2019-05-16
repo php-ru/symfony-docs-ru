@@ -100,9 +100,9 @@ Move the controller to ``Calendar\Controller\LeapYearController``::
     // example.com/src/Calendar/Controller/LeapYearController.php
     namespace Calendar\Controller;
 
+    use Calendar\Model\LeapYear;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
-    use Calendar\Model\LeapYear;
 
     class LeapYearController
     {
@@ -180,4 +180,4 @@ a well defined goal:
 * ``src/app.php``: The application configuration/framework customization.
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

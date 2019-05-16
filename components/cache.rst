@@ -33,8 +33,8 @@ Cache (PSR-6) Versus Simple Cache (PSR-16)
 This component includes *two* different approaches to caching:
 
 :ref:`PSR-6 Caching <cache-component-psr6-caching>`:
-     A fully-featured cache system, which includes cache "pools", more advanced
-     cache "items", and :ref:`cache tagging for invalidation <cache-component-tags>`.
+    A fully-featured cache system, which includes cache "pools", more advanced
+    cache "items", and :ref:`cache tagging for invalidation <cache-component-tags>`.
 
 :ref:`PSR-16 Simple Caching <cache-component-psr16-caching>`:
     A simple way to store, fetch and remove items from a cache.
@@ -195,4 +195,4 @@ Advanced Usage (PSR-6)
 .. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

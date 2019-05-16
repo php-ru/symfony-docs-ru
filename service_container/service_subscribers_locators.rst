@@ -288,8 +288,8 @@ include as many services as needed in it.
     .. code-block:: php
 
         // app/config/services.php
-        use Symfony\Component\DependencyInjection\ServiceLocator;
         use Symfony\Component\DependencyInjection\Reference;
+        use Symfony\Component\DependencyInjection\ServiceLocator;
 
         // ...
 
@@ -369,4 +369,4 @@ will share identical locators amongst all the services referencing them::
 .. _`Command pattern`: https://en.wikipedia.org/wiki/Command_pattern
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

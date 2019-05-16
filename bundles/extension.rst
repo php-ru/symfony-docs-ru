@@ -93,8 +93,8 @@ the extension!
 For instance, assume you have a file called ``services.xml`` in the
 ``Resources/config`` directory of your bundle, your ``load()`` method looks like::
 
-    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
     // ...
     public function load(array $configs, ContainerBuilder $container)
@@ -141,7 +141,7 @@ I/O operations and increases the application performance.
 
 .. versionadded:: 3.2
 
-   The ``addAnnotatedClassesToCompile()`` method was added in Symfony 3.2.
+    The ``addAnnotatedClassesToCompile()`` method was introduced in Symfony 3.2.
 
 Your bundles can also add their own classes into this file thanks to the
 ``addClassesToCompile()`` and ``addAnnotatedClassesToCompile()`` methods (both
@@ -178,7 +178,7 @@ class names::
 
 .. versionadded:: 3.2
 
-   The option to add classes to compile using patterns was introduced in Symfony 3.2.
+    The option to add classes to compile using patterns was introduced in Symfony 3.2.
 
 The classes to compile can also be added using file path patterns::
 
@@ -209,4 +209,4 @@ the full classmap executing the ``dump-autoload`` command of Composer.
     these classes from the ``classes.php`` file.
 
 .. ready: no
-.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df
+.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3

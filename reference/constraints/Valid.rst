@@ -148,8 +148,8 @@ stores an ``Address`` instance in the ``$address`` property::
         // src/AppBundle/Entity/Address.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Address
         {
@@ -164,8 +164,8 @@ stores an ``Address`` instance in the ``$address`` property::
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -226,8 +226,8 @@ an invalid address. To prevent that, add the ``Valid`` constraint to the
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -262,4 +262,4 @@ arrays: Arrays are traversed in either case. Keys are not validated.
 .. include:: /reference/constraints/_groups-option.rst.inc
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

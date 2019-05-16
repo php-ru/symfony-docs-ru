@@ -90,8 +90,8 @@ resulting .txt file can be converted to a binary .res file with the
 :class:`Symfony\\Component\\Intl\\ResourceBundle\\Compiler\\BundleCompiler`
 class::
 
-    use Symfony\Component\Intl\ResourceBundle\Writer\TextBundleWriter;
     use Symfony\Component\Intl\ResourceBundle\Compiler\BundleCompiler;
+    use Symfony\Component\Intl\ResourceBundle\Writer\TextBundleWriter;
 
     $writer = new TextBundleWriter();
     $writer->write('/path/to/bundle', 'en', [
@@ -359,4 +359,4 @@ Learn more
 .. _ICU library: http://site.icu-project.org/
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

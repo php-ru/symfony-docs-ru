@@ -71,8 +71,8 @@ will contain a credit card number.
         // src/AppBundle/Entity/Transaction.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Transaction
         {
@@ -113,4 +113,4 @@ You can use the following parameters in this message:
 .. _`Luhn algorithm`: https://en.wikipedia.org/wiki/Luhn_algorithm
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

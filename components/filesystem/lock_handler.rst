@@ -5,7 +5,7 @@ LockHandler
 
     The ``LockHandler`` class was deprecated in Symfony 3.4 and it will be
     removed in Symfony 4.0. Use :ref:`SemaphoreStore <lock-store-semaphore>`
-    or :ref:`FlockStore <lock-store-flock>` from the Lock component instead.
+    or :ref:`FlockStore <lock-store-flock>` from the Lock component instead.
 
 What is a Lock?
 ---------------
@@ -82,7 +82,7 @@ PHP code will wait indefinitely until the lock is released by another process.
 
         use Symfony\Component\Filesystem\LockHandler;
 
-         if (!(new LockHandler('hello.lock'))->lock()) {
+        if (!(new LockHandler('hello.lock'))->lock()) {
             // the resource "hello" is already locked by another process
 
             return 0;
@@ -96,4 +96,4 @@ PHP code will wait indefinitely until the lock is released by another process.
     :method:`Symfony\\Component\\Filesystem\\LockHandler::release` method.
 
 .. ready: no
-.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

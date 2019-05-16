@@ -201,8 +201,8 @@ It uses an access map (which should be an instance of :class:`Symfony\\Component
 which contains request matchers and a corresponding set of attributes that
 are required for the current user to get access to the application::
 
-    use Symfony\Component\Security\Http\AccessMap;
     use Symfony\Component\HttpFoundation\RequestMatcher;
+    use Symfony\Component\Security\Http\AccessMap;
     use Symfony\Component\Security\Http\Firewall\AccessListener;
 
     $accessMap = new AccessMap();
@@ -240,4 +240,4 @@ decision manager::
 
 
 .. ready: no
-.. revision: defe52ec9eb552eb23a56a2b4a513337c5dbd8d3
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

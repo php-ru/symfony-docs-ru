@@ -44,7 +44,7 @@ you might add the following:
              *      maxMessage = "You cannot be taller than {{ limit }}cm to enter"
              * )
              */
-             protected $height;
+            protected $height;
         }
 
     .. code-block:: yaml
@@ -84,8 +84,8 @@ you might add the following:
         // src/AppBundle/Entity/Participant.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Participant
         {
@@ -161,8 +161,8 @@ date must lie within the current year like this:
         // src/AppBundle/Entity/Event.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Event
         {
@@ -231,8 +231,8 @@ dates. If you want to fix the timezone, append it to the date string:
         // src/AppBundle/Entity/Person.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Event
         {
@@ -301,8 +301,8 @@ can check that a delivery date starts within the next five hours like this:
         // src/AppBundle/Entity/Order.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Order
         {
@@ -394,4 +394,4 @@ You can use the following parameters in this message:
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

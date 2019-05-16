@@ -133,12 +133,12 @@ putting *everything* in ``index.php``, create a new ``app/AppKernel.php`` to
 hold the kernel. Now it looks like this::
 
     // app/AppKernel.php
+    use Doctrine\Common\Annotations\AnnotationRegistry;
     use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
     use Symfony\Component\Config\Loader\LoaderInterface;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\HttpKernel\Kernel;
     use Symfony\Component\Routing\RouteCollectionBuilder;
-    use Doctrine\Common\Annotations\AnnotationRegistry;
 
     // require Composer's autoloader
     $loader = require __DIR__.'/../vendor/autoload.php';
@@ -203,8 +203,8 @@ hold the kernel. Now it looks like this::
 
 .. versionadded:: 3.4
 
-    Support for annotation routing without an external bundle was added in
-    Symfony 3.4. Prior to version 3.4, you needed to install the
+    Support for annotation routing without an external bundle was introduced
+    in Symfony 3.4. Prior to version 3.4, you needed to install the
     SensioFrameworkExtraBundle.
 
 Unlike the previous kernel, this loads an external ``app/config/config.yml`` file,
@@ -351,4 +351,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features with less boilerplate configuration and code.
 
 .. ready: no
-.. revision: 4b7dfec901e157d3026c217a8ad87ec1fc13c2e3
+.. revision: 9654d1aa7c2effbc9b318146e7057df4ba4b10cc

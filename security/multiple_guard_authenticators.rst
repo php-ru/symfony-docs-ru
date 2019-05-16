@@ -24,7 +24,7 @@ This is how your security configuration can look in action:
 
         # app/config/security.yml
         security:
-             # ...
+            # ...
             firewalls:
                 default:
                     anonymous: ~
@@ -59,8 +59,8 @@ This is how your security configuration can look in action:
     .. code-block:: php
 
         // app/config/security.php
-        use AppBundle\Security\LoginFormAuthenticator;
         use AppBundle\Security\FacebookConnectAuthenticator;
+        use AppBundle\Security\LoginFormAuthenticator;
 
         $container->loadFromExtension('security', [
             // ...
@@ -175,4 +175,4 @@ the solution is to split the configuration into two separate firewalls:
         ]);
 
 .. ready: no
-.. revision: acd93d64dc317150822ac024ec3ff354310cb591
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

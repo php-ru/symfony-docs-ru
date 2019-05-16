@@ -344,8 +344,8 @@ Testing a Command that Expects Input
 If you want to write a unit test for a command which expects some kind of input
 from the command line, you need to set the inputs that the command expects::
 
-    use Symfony\Component\Console\Helper\QuestionHelper;
     use Symfony\Component\Console\Helper\HelperSet;
+    use Symfony\Component\Console\Helper\QuestionHelper;
     use Symfony\Component\Console\Tester\CommandTester;
 
     // ...
@@ -393,4 +393,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

@@ -22,12 +22,12 @@ Usage
 The following example demonstrates how you can use the
 :class:`Symfony\\Component\\ClassLoader\\Psr4ClassLoader` autoloader to use
 Symfony's Yaml component. Imagine, you downloaded both the ClassLoader and
-Yaml component as ZIP packages and unpacked them to a ``libs`` directory.
+Yaml component as ZIP packages and unpacked them to a ``lib/`` directory.
 The directory structure will look like this:
 
 .. code-block:: text
 
-    libs/
+    lib/
         ClassLoader/
             Psr4ClassLoader.php
             ...
@@ -61,4 +61,4 @@ the Yaml component is ready to be used.
 .. _PSR-4: https://www.php-fig.org/psr/psr-4/
 
 .. ready: no
-.. revision: df24d340d3b5f107d401d40393b5803c8b3991f5
+.. revision: 4e412a3a63e146485a52ed0f74d5f091accdf5d4

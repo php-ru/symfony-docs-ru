@@ -108,13 +108,13 @@ set an authenticated token in the token storage if successful::
     // src/AppBundle/Security/Firewall/WsseListener.php
     namespace AppBundle\Security\Firewall;
 
+    use AppBundle\Security\Authentication\Token\WsseUserToken;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\HttpKernel\Event\GetResponseEvent;
     use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
     use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
     use Symfony\Component\Security\Core\Exception\AuthenticationException;
     use Symfony\Component\Security\Http\Firewall\ListenerInterface;
-    use AppBundle\Security\Authentication\Token\WsseUserToken;
 
     class WsseListener implements ListenerInterface
     {
@@ -202,13 +202,13 @@ the ``PasswordDigest`` header value matches with the user's password::
     // src/AppBundle/Security/Authentication/Provider/WsseProvider.php
     namespace AppBundle\Security\Authentication\Provider;
 
+    use AppBundle\Security\Authentication\Token\WsseUserToken;
     use Psr\Cache\CacheItemPoolInterface;
     use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
-    use Symfony\Component\Security\Core\User\UserProviderInterface;
+    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
     use Symfony\Component\Security\Core\Exception\AuthenticationException;
     use Symfony\Component\Security\Core\Exception\NonceExpiredException;
-    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-    use AppBundle\Security\Authentication\Token\WsseUserToken;
+    use Symfony\Component\Security\Core\User\UserProviderInterface;
 
     class WsseProvider implements AuthenticationProviderInterface
     {
@@ -307,13 +307,13 @@ create a class which implements
     // src/AppBundle/DependencyInjection/Security/Factory/WsseFactory.php
     namespace AppBundle\DependencyInjection\Security\Factory;
 
+    use AppBundle\Security\Authentication\Provider\WsseProvider;
+    use AppBundle\Security\Firewall\WsseListener;
+    use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
+    use Symfony\Component\Config\Definition\Builder\NodeDefinition;
     use Symfony\Component\DependencyInjection\ChildDefinition;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Reference;
-    use Symfony\Component\Config\Definition\Builder\NodeDefinition;
-    use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\SecurityFactoryInterface;
-    use AppBundle\Security\Authentication\Provider\WsseProvider;
-    use AppBundle\Security\Firewall\WsseListener;
 
     class WsseFactory implements SecurityFactoryInterface
     {
@@ -461,8 +461,8 @@ factory in your bundle class::
     namespace AppBundle;
 
     use AppBundle\DependencyInjection\Security\Factory\WsseFactory;
-    use Symfony\Component\HttpKernel\Bundle\Bundle;
     use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\HttpKernel\Bundle\Bundle;
 
     class AppBundle extends Bundle
     {
@@ -555,10 +555,10 @@ the ``addConfiguration()`` method::
 
         public function addConfiguration(NodeDefinition $node)
         {
-          $node
-            ->children()
-                ->scalarNode('lifetime')->defaultValue(300)
-            ->end();
+            $node
+                ->children()
+                    ->scalarNode('lifetime')->defaultValue(300)
+                ->end();
         }
     }
 
@@ -653,4 +653,4 @@ in the factory and consumed or passed to the other classes in the container.
 .. _`Symfony Polyfill`: https://github.com/symfony/polyfill
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

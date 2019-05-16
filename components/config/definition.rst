@@ -52,8 +52,8 @@ implements the :class:`Symfony\\Component\\Config\\Definition\\ConfigurationInte
 
     namespace Acme\DatabaseConfiguration;
 
-    use Symfony\Component\Config\Definition\ConfigurationInterface;
     use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+    use Symfony\Component\Config\Definition\ConfigurationInterface;
 
     class DatabaseConfiguration implements ConfigurationInterface
     {
@@ -201,7 +201,7 @@ above, it is possible to have multiple connection arrays (containing a ``driver`
 
 .. versionadded:: 3.3
 
-    The ``castToArray()`` helper was added in Symfony 3.3.
+    The ``castToArray()`` helper was introduced in Symfony 3.3.
 
 Sometimes, to improve the user experience of your application or bundle, you may
 allow to use a simple string or numeric value where an array value is required.
@@ -809,9 +809,9 @@ any value is not of the expected type, is mandatory and yet undefined, or
 could not be validated in some other way, an exception will be thrown.
 Otherwise the result is a clean array of configuration values::
 
-    use Symfony\Component\Yaml\Yaml;
-    use Symfony\Component\Config\Definition\Processor;
     use Acme\DatabaseConfiguration;
+    use Symfony\Component\Config\Definition\Processor;
+    use Symfony\Component\Yaml\Yaml;
 
     $config = Yaml::parse(
         file_get_contents(__DIR__.'/src/Matthias/config/config.yml')
@@ -830,4 +830,4 @@ Otherwise the result is a clean array of configuration values::
     );
 
 .. ready: no
-.. revision: 6b107ba518883744f403844e90712dc6026c7cff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

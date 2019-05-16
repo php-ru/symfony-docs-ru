@@ -82,8 +82,8 @@ the user's current password:
         // src/AppBundle/Form/Model/ChangePassword.php
         namespace AppBundle\Form\Model;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Security\Core\Validator\Constraints as SecurityAssert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class ChangePassword
         {
@@ -116,4 +116,4 @@ This message has no parameters.
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: ce77fdbc897f3382e79b19c67911b4a00876ace1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

@@ -55,7 +55,7 @@ following script to determine your web server user and grant the needed permissi
 
 .. note::
 
-    The first ``setfacl`` command sets permissions for future files and folders,
+    The first ``setfacl`` command sets permissions for future files and folders,
     while the second one sets permissions on the existing files and folders.
     Both of these commands assign permissions for the system user and the Apache
     user.
@@ -86,4 +86,4 @@ To achieve this, put the following line at the beginning of the ``bin/console``,
 .. _`enable ACL support`: https://help.ubuntu.com/community/FilePermissionsACLs
 
 .. ready: no
-.. revision: ab9e665a24b4d97a1bba895500f2afa72bccd187
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

@@ -134,9 +134,8 @@ using Varnish 3:
     .. code-block:: varnish3
 
         sub vcl_fetch {
-            /* By default, Varnish3 ignores Cache-Control: no-cache and private
-               https://www.varnish-cache.org/docs/3.0/tutorial/increasing_your_hitrate.html#cache-control
-             */
+            // By default, Varnish3 ignores Cache-Control: no-cache and private
+            // https://www.varnish-cache.org/docs/3.0/tutorial/increasing_your_hitrate.html#cache-control
             if (beresp.http.Cache-Control ~ "private" ||
                 beresp.http.Cache-Control ~ "no-cache" ||
                 beresp.http.Cache-Control ~ "no-store"
@@ -246,4 +245,4 @@ proxy before it has expired, it adds complexity to your caching setup.
 .. _`User Context`: http://foshttpcachebundle.readthedocs.org/en/latest/features/user-context.html
 
 .. ready: no
-.. revision: c7087bfa4d83e393a2ac3daaacb1499fcd5bd804
+.. revision: 4fe7960ef0669ecebe7b9076589a7fc35f710164

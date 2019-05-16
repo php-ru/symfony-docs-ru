@@ -116,8 +116,8 @@ the name of the encoder to use::
     // src/Acme/UserBundle/Entity/User.php
     namespace Acme\UserBundle\Entity;
 
-    use Symfony\Component\Security\Core\User\UserInterface;
     use Symfony\Component\Security\Core\Encoder\EncoderAwareInterface;
+    use Symfony\Component\Security\Core\User\UserInterface;
 
     class User implements UserInterface, EncoderAwareInterface
     {
@@ -182,4 +182,4 @@ This creates an encoder named ``app_encoder`` from a service named
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

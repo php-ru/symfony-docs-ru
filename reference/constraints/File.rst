@@ -134,8 +134,8 @@ below a certain file size and a valid PDF, add the following:
         // src/AppBundle/Entity/Author.php
         namespace AppBundle\Entity;
 
-        use Symfony\Component\Validator\Mapping\ClassMetadata;
         use Symfony\Component\Validator\Constraints as Assert;
+        use Symfony\Component\Validator\Mapping\ClassMetadata;
 
         class Author
         {
@@ -395,4 +395,4 @@ This message has no parameters.
 .. _`Wikipedia: Binary prefix`: http://en.wikipedia.org/wiki/Binary_prefix
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

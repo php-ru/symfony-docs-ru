@@ -18,6 +18,11 @@ The Symfony server is distributed as a free installable binary without any
 dependency and support for Linux, macOS and Windows. Go to `symfony.com/download`_
 and follow the instructions for your operating system.
 
+.. note::
+
+    If you want to report a bug or suggest a new feature, please create an issue
+    on `symfony/cli`_.
+
 Getting Started
 ---------------
 
@@ -55,7 +60,7 @@ run the Symfony server in the background:
 Enabling TLS
 ------------
 
-Browsing the secure version of your apps locally is important to detect
+Browsing the secure version of your applications locally is important to detect
 problems with mixed content early, and to run libraries that only run in HTTPS.
 Traditionally this has been painful and complicated to set up, but the Symfony
 server automates everything. First, run this command:
@@ -348,11 +353,23 @@ commands from the Symfony server:
     # creates a new project based on the Symfony Demo application
     $ symfony new --demo my_project_name
 
+You can create a project depending on a **development** version as well (note
+that Composer will also set the stability to ``dev`` for all root dependencies):
+
+.. code-block:: terminal
+
+    # creates a new project based on Symfony's master branch
+    $ symfony new --version=dev-master my_project_name
+
+    # creates a new project based on Symfony's 4.3 dev branch
+    $ symfony new --version=4.3.x-dev my_project_name
+
 .. _`symfony.com/download`: https://symfony.com/download
+.. _`symfony/cli`: https://github.com/symfony/cli
 .. _`different ways of installing Symfony`: https://symfony.com/download
 .. _`Docker`: https://en.wikipedia.org/wiki/Docker_(software)
 .. _`SymfonyCloud`: https://symfony.com/cloud/
 .. _`Read SymfonyCloud technical docs`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: 6c7095198b8425c2f75df273ca086edd037ee62c
+.. revision: 7a9a069d7c67e592b3e41f4317314e87fb27805e

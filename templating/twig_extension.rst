@@ -49,7 +49,7 @@ Create a class that extends ``AbstractExtension`` and fill in the logic::
 
 .. note::
 
-    Prior to Twig 1.26, your extension had to define an additional ``getName()``
+    Prior to Twig 1.26, your extension had to define an additional ``getName()``
     method that returned a string with the extension's internal name (e.g.
     ``app.my_extension``). When your extension needs to be compatible with Twig
     versions before 1.26, include this method which is omitted in the example
@@ -111,7 +111,7 @@ be significant.
 
 That's why Twig allows to decouple the extension definition from its
 implementation. Following the same example as before, the first change would be
-to remove the ``priceFilter()`` method from the extension and update the PHP
+to remove the ``formatPrice()`` method from the extension and update the PHP
 callable defined in ``getFilters()``::
 
     // src/AppBundle/Twig/AppExtension.php
@@ -127,14 +127,14 @@ callable defined in ``getFilters()``::
         {
             return [
                 // the logic of this filter is now implemented in a different class
-                new TwigFilter('price', [AppRuntime::class, 'priceFilter']),
+                new TwigFilter('price', [AppRuntime::class, 'formatPrice']),
             ];
         }
     }
 
 Then, create the new ``AppRuntime`` class (it's not required but these classes
 are suffixed with ``Runtime`` by convention) and include the logic of the
-previous ``priceFilter()`` method::
+previous ``formatPrice()`` method::
 
     // src/AppBundle/Twig/AppRuntime.php
     namespace AppBundle\Twig;
@@ -149,7 +149,7 @@ previous ``priceFilter()`` method::
             // extensions, you'll need to inject services using this constructor
         }
 
-        public function priceFilter($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
+        public function formatPrice($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
         {
             $price = number_format($number, $decimals, $decPoint, $thousandsSep);
             $price = '$'.$price;
@@ -171,4 +171,4 @@ for this class and :doc:`tag your service </service_container/tags>` with ``twig
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 15c6be82a2f783f8d69ea1183ea467e98a7b2526

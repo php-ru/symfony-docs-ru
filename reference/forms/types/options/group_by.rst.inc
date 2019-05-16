@@ -1,7 +1,7 @@
 group_by
 ~~~~~~~~
 
-**type**: ``array``, ``callable`` or ``string`` **default**: ``null``
+**type**: ``string`` or ``callable`` **default**: ``null``
 
 You can group the ``<option>`` elements of a ``<select>`` into ``<optgroup>``
 by passing a multi-dimensional array to ``choices``. See the
@@ -42,4 +42,4 @@ If you return ``null``, the option won't be grouped. You can also pass a string
 details about using a property path.
 
 .. ready: no
-.. revision: 68d1f8bbcd35382375645ced9317d4928cb64b71
+.. revision: 4be9672820d4ce63fc19ce21f186027ec06a483b

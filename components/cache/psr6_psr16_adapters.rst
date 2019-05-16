@@ -36,8 +36,8 @@ instead. No problem! The Cache component provides the
 :class:`Symfony\\Component\\Cache\\Adapter\\SimpleCacheAdapter` class for exactly
 this use-case::
 
-    use Symfony\Component\Cache\Simple\FilesystemCache;
     use Symfony\Component\Cache\Adapter\SimpleCacheAdapter;
+    use Symfony\Component\Cache\Simple\FilesystemCache;
 
     // the PSR-16 cache object that you want to use
     $psr16Cache = new FilesystemCache();
@@ -86,4 +86,4 @@ this use-case::
     $githubApiClient = new GitHubApiClient($psr16Cache);
 
 .. ready: no
-.. revision: 21e3daa48fc83030a00dd1c7219f373bbecf06a7
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

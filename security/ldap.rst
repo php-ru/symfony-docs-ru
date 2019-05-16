@@ -98,8 +98,8 @@ An LDAP client can be simply configured using the built-in
     .. code-block:: php
 
         // app/config/services.php
-        use Symfony\Component\Ldap\Ldap;
         use Symfony\Component\Ldap\Adapter\ExtLdap\Adapter;
+        use Symfony\Component\Ldap\Ldap;
 
         $container->register(Ldap::class)
             ->addArgument(new Reference(Adapter::class);
@@ -313,12 +313,12 @@ providers with different ``base_dn``. The value of this option must be a valid
 search string (e.g. ``uid="{username}"``). The placeholder value will be
 replaced by the actual username.
 
-When this option is used, ``dn_string`` has to be updated accordingly. Following
-the previous example, if your users have the following two DN:
-``dc=companyA,dc=example,dc=com`` and ``dc=companyB,dc=example,dc=com``, then
-``dn_string`` should be ``dc=example,dc=com``. If the ``query_string`` option is
-``uid="{username}"``, then the authentication provider can authenticate users
-from both DN.
+When this option is used, ``query_string`` will search in the DN specified by
+``dn_string`` and the DN resulted of the ``query_string`` will be used to
+authenticate the user with their password. Following the previous example, if
+your users have the following two DN: ``dc=companyA,dc=example,dc=com`` and
+``dc=companyB,dc=example,dc=com``, then ``dn_string`` should be
+``dc=example,dc=com``.
 
 Bear in mind that usernames must be unique across both DN, as the authentication
 provider won't be able to select the correct user for the bind process if more
@@ -497,4 +497,4 @@ Configuration example for form login and query_string
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a
+.. revision: bcb245e29d237152f04c544730a399b5e6a9bafb

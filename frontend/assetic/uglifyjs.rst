@@ -296,7 +296,7 @@ helper:
 .. code-block:: html+twig
 
     {% stylesheets 'bundles/App/css/*' filter='uglifycss' filter='cssrewrite' %}
-         <link rel="stylesheet" href="{{ asset_url }}"/>
+        <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
 Just like with the ``uglifyjs2`` filter, if you prefix the filter name with
@@ -310,4 +310,4 @@ not in debug mode.
 .. _`package.json`: http://browsenpm.org/package.json
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

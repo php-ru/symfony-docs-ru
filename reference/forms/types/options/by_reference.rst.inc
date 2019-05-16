@@ -10,9 +10,9 @@ called in all cases.
 
 To explain this further, here's a simple example::
 
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\EmailType;
     use Symfony\Component\Form\Extension\Core\Type\FormType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
     // ...
 
     $builder = $this->createFormBuilder($article);
@@ -51,4 +51,4 @@ if you need the adder and remover (e.g. ``addAuthor()`` and ``removeAuthor()``)
 to be called.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

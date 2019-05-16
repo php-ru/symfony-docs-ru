@@ -64,8 +64,8 @@ inside your routing configuration:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('contact', new Route('/{_locale}/contact', [
@@ -154,8 +154,8 @@ path):
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('some_route', new Route('/%app.route_prefix%/contact', [
@@ -180,4 +180,4 @@ path):
     :doc:`/configuration/using_parameters_in_dic`.
 
 .. ready: no
-.. revision: e18236c84206b5a2ef982bd981cf87d8754cf58a
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

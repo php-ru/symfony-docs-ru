@@ -259,11 +259,11 @@ the same ``getAuthorEmail()`` logic you used above::
 
     namespace AppBundle\Security;
 
+    use AppBundle\Entity\Post;
     use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
     use Symfony\Component\Security\Core\Authorization\AccessDecisionManagerInterface;
     use Symfony\Component\Security\Core\Authorization\Voter\Voter;
     use Symfony\Component\Security\Core\User\UserInterface;
-    use AppBundle\Entity\Post;
 
     class PostVoter extends Voter
     {
@@ -390,4 +390,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: ab4f29b303d73cdfa9721ecae485342c37c57bfb
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

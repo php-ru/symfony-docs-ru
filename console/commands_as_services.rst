@@ -112,7 +112,7 @@ Or set the ``command`` attribute on the ``console.command`` tag in your service 
             <services>
 
                 <service id="AppBundle\Command\SunshineCommand">
-                     <tag name="console.command" command="app:sunshine"/>
+                    <tag name="console.command" command="app:sunshine"/>
                 </service>
 
             </services>
@@ -147,4 +147,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

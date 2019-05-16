@@ -8,7 +8,7 @@
     Annotation classes aren't loaded automatically, so you must load them
     using a class loader like this::
 
-        use Composer\Autoload\ClassLoader;
+        use Composer\Autoload\ClassLoader;
         use Doctrine\Common\Annotations\AnnotationRegistry;
 
         /** @var ClassLoader $loader */
@@ -17,3 +17,6 @@
         AnnotationRegistry::registerLoader([$loader, 'loadClass']);
 
         return $loader;
+
+.. ready: no
+.. revision: b6e27bd1dd1f8221ba8d0b1f1f1a955ab66f9f33

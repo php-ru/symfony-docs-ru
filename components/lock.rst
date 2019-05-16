@@ -146,6 +146,10 @@ to reset the TTL to its original value::
         $lock->release();
     }
 
+This component also provides two useful methods related to expiring locks:
+``getExpiringDate()`` (which returns ``null`` or a ``\DateTimeImmutable``
+object) and ``isExpired()`` (which returns a boolean).
+
 Available Stores
 ----------------
 
@@ -241,9 +245,9 @@ is being acquired, it forwards the call to all the managed stores, and it
 collects their responses. If a simple majority of stores have acquired the lock,
 then the lock is considered as acquired; otherwise as not acquired::
 
-    use Symfony\Component\Lock\Strategy\ConsensusStrategy;
     use Symfony\Component\Lock\Store\CombinedStore;
     use Symfony\Component\Lock\Store\RedisStore;
+    use Symfony\Component\Lock\Strategy\ConsensusStrategy;
 
     $stores = [];
     foreach (['server1', 'server2', 'server3'] as $server) {
@@ -491,4 +495,4 @@ are still running.
 .. _`PHP semaphore functions`: http://php.net/manual/en/book.sem.php
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

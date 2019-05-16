@@ -39,10 +39,10 @@ This is possible inside your ``app/config/config.yml`` file:
 
         // app/config/config.php
         $container->loadFromExtension('twig', [
-             // ...
-             'globals' => [
-                 'ga_tracking' => 'UA-xxxxx-x',
-             ],
+            // ...
+            'globals' => [
+                'ga_tracking' => 'UA-xxxxx-x',
+            ],
         ]);
 
 Now, the variable ``ga_tracking`` is available in all Twig templates:
@@ -95,9 +95,9 @@ system, which lets you isolate or reuse the value:
 
         // app/config/config.php
         $container->loadFromExtension('twig', [
-             'globals' => [
-                 'ga_tracking' => '%ga_tracking%',
-             ],
+            'globals' => [
+                'ga_tracking' => '%ga_tracking%',
+            ],
         ]);
 
 The same variable is available exactly as before.
@@ -151,11 +151,11 @@ This should feel familiar, as it's the same syntax you use in service configurat
 
         // app/config/config.php
         $container->loadFromExtension('twig', [
-             // ...
-             'globals' => [
-                 'user_management' => '@AppBundle\Service\UserManagement',
-             ],
+            // ...
+            'globals' => [
+                'user_management' => '@AppBundle\Service\UserManagement',
+            ],
         ]);
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

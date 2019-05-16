@@ -10,7 +10,7 @@ how to customize your form based on three common use-cases:
 1) :ref:`form-events-underlying-data`
 
    Example: you have a "Product" form and need to modify/add/remove a field
-    based on the data on the underlying Product being edited.
+   based on the data on the underlying Product being edited.
 
 2) :ref:`form-events-user-data`
 
@@ -144,10 +144,10 @@ you can also move the logic for creating the ``name`` field to an
     // src/AppBundle/Form/EventListener/AddNameFieldSubscriber.php
     namespace AppBundle\Form\EventListener;
 
-    use Symfony\Component\Form\FormEvent;
-    use Symfony\Component\Form\FormEvents;
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
     use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormEvent;
+    use Symfony\Component\Form\FormEvents;
 
     class AddNameFieldSubscriber implements EventSubscriberInterface
     {
@@ -209,11 +209,11 @@ Using an event listener, your form might look like this::
     namespace AppBundle\Form\Type;
 
     use Symfony\Component\Form\AbstractType;
-    use Symfony\Component\Form\FormBuilderInterface;
-    use Symfony\Component\Form\FormEvents;
-    use Symfony\Component\Form\FormEvent;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
+    use Symfony\Component\Form\FormBuilderInterface;
+    use Symfony\Component\Form\FormEvent;
+    use Symfony\Component\Form\FormEvents;
 
     class FriendMessageFormType extends AbstractType
     {
@@ -259,8 +259,8 @@ security helper to fill in the listener logic::
     use AppBundle\Entity\User;
     use Doctrine\ORM\EntityRepository;
     use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+    use Symfony\Component\Form\Extension\Core\Type\TextType;
     use Symfony\Component\Security\Core\Security;
     // ...
 
@@ -376,11 +376,11 @@ sport like this::
     // src/AppBundle/Form/Type/SportMeetupType.php
     namespace AppBundle\Form\Type;
 
+    use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     use Symfony\Component\Form\AbstractType;
     use Symfony\Component\Form\FormBuilderInterface;
     use Symfony\Component\Form\FormEvent;
     use Symfony\Component\Form\FormEvents;
-    use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     // ...
 
     class SportMeetupType extends AbstractType
@@ -443,9 +443,9 @@ The type would now look like::
     namespace AppBundle\Form\Type;
 
     // ...
-    use Symfony\Component\Form\FormInterface;
-    use Symfony\Bridge\Doctrine\Form\Type\EntityType;
     use AppBundle\Entity\Sport;
+    use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+    use Symfony\Component\Form\FormInterface;
 
     class SportMeetupType extends AbstractType
     {
@@ -512,10 +512,10 @@ your application. Assume that you have a sport meetup creation controller::
     // src/AppBundle/Controller/MeetupController.php
     namespace AppBundle\Controller;
 
-    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-    use Symfony\Component\HttpFoundation\Request;
     use AppBundle\Entity\SportMeetup;
     use AppBundle\Form\Type\SportMeetupType;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\HttpFoundation\Request;
     // ...
 
     class MeetupController extends Controller
@@ -581,4 +581,4 @@ The major benefit of submitting the whole form to just extract the updated
 code from above to generate the submitted form can be reused.
 
 .. ready: no
-.. revision: 46c4dd11d88646c29d08780a55e9b2a8ab086613
+.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832

@@ -57,10 +57,10 @@ added but are processed when the container's ``compile()`` method is called.
 
 A very simple extension may just load configuration files into the container::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
-    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
-    use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
+    use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
+    use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
     class AcmeDemoExtension implements ExtensionInterface
     {
@@ -113,8 +113,8 @@ If this file is loaded into the configuration then the values in it are
 only processed when the container is compiled at which point the Extensions
 are loaded::
 
-    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\Config\FileLocator;
+    use Symfony\Component\DependencyInjection\ContainerBuilder;
     use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
     $containerBuilder = new ContainerBuilder();
@@ -325,7 +325,7 @@ compilation::
     {
         public function process(ContainerBuilder $container)
         {
-           // ... do something during the compilation
+            // ... do something during the compilation
         }
 
         // ...
@@ -379,7 +379,7 @@ class implementing the ``CompilerPassInterface``::
     {
         public function process(ContainerBuilder $container)
         {
-           // ... do something during the compilation
+            // ... do something during the compilation
         }
     }
 
@@ -425,7 +425,7 @@ been run, use::
 
 .. versionadded:: 3.2
 
-    The option to prioritize compiler passes was added in Symfony 3.2.
+    The option to prioritize compiler passes was introduced in Symfony 3.2.
 
 You can also control the order in which compiler passes are run for each
 compilation phase. Use the optional third argument of ``addCompilerPass()`` to
@@ -578,4 +578,4 @@ have the cache will be considered stale.
     is taken care of for you.
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8

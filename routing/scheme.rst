@@ -54,8 +54,8 @@ the URI scheme with the ``schemes`` setting:
     .. code-block:: php
 
         // app/config/routing.php
-        use Symfony\Component\Routing\RouteCollection;
         use Symfony\Component\Routing\Route;
+        use Symfony\Component\Routing\RouteCollection;
 
         $routes = new RouteCollection();
         $routes->add('secure', new Route('/secure', [
@@ -96,4 +96,4 @@ to always use ``http``.
     :doc:`/security/force_https` for more details).
 
 .. ready: no
-.. revision: 0f1f2ea715cc2d8ea98bd5906dcd364eca90d9bc
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

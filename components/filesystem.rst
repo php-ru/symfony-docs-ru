@@ -21,8 +21,8 @@ Usage
 The :class:`Symfony\\Component\\Filesystem\\Filesystem` class is the unique
 endpoint for filesystem operations::
 
-    use Symfony\Component\Filesystem\Filesystem;
     use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
+    use Symfony\Component\Filesystem\Filesystem;
 
     $filesystem = new Filesystem();
 
@@ -343,4 +343,4 @@ Learn More
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

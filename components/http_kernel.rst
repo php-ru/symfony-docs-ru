@@ -101,12 +101,12 @@ is really simple and involves creating an
 (explained below). To complete your working kernel, you'll add more event
 listeners to the events discussed below::
 
-    use Symfony\Component\HttpFoundation\Request;
-    use Symfony\Component\HttpKernel\HttpKernel;
     use Symfony\Component\EventDispatcher\EventDispatcher;
+    use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\RequestStack;
     use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
     use Symfony\Component\HttpKernel\Controller\ControllerResolver;
+    use Symfony\Component\HttpKernel\HttpKernel;
 
     // create the Request object
     $request = Request::createFromGlobals();
@@ -786,4 +786,4 @@ Learn more
 .. _variadic: http://php.net/manual/en/functions.arguments.php
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

@@ -56,8 +56,8 @@ Class
 The first optional argument of the ``Definition`` class is the fully qualified
 class name of the object returned when the service is fetched from the container::
 
-    use AppBundle\Config\UserConfigManager;
     use AppBundle\Config\CustomConfigManager;
+    use AppBundle\Config\UserConfigManager;
     use Symfony\Component\DependencyInjection\Definition;
 
     $definition = new Definition(UserConfigManager::class);
@@ -146,4 +146,4 @@ Notice that Symfony will internally call the PHP statement ``require_once``,
 which means that your file will be included only once per request.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

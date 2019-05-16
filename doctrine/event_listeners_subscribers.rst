@@ -95,9 +95,9 @@ a ``postPersist()`` method, which will be called when the event is dispatched::
     // src/AppBundle/EventListener/SearchIndexer.php
     namespace AppBundle\EventListener;
 
+    use AppBundle\Entity\Product;
     // for Doctrine < 2.4: use Doctrine\ORM\Event\LifecycleEventArgs;
     use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
-    use AppBundle\Entity\Product;
 
     class SearchIndexer
     {
@@ -140,11 +140,11 @@ interface and have an event method for each event it subscribes to::
     // src/AppBundle/EventListener/SearchIndexerSubscriber.php
     namespace AppBundle\EventListener;
 
+    use AppBundle\Entity\Product;
     use Doctrine\Common\EventSubscriber;
     // for Doctrine < 2.4: use Doctrine\ORM\Event\LifecycleEventArgs;
     use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
     use Doctrine\ORM\Events;
-    use AppBundle\Entity\Product;
 
     class SearchIndexerSubscriber implements EventSubscriber
     {
@@ -238,7 +238,7 @@ to the tag like so:
 
 .. note::
 
-    Marking an event listener as ``lazy`` has nothing to do with lazy service
+    Marking an event listener as ``lazy`` has nothing to do with lazy service
     definitions which are described :doc:`in their own article </service_container/lazy_services>`
 
 Priorities for Event Listeners
@@ -299,4 +299,4 @@ numbers mean that listeners are invoked earlier.
 .. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e

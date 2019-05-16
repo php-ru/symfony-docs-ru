@@ -39,9 +39,9 @@ template reference (:class:`Symfony\\Component\\Templating\\TemplateReferenceInt
 It also needs a template loader (:class:`Symfony\\Component\\Templating\\Loader\\LoaderInterface`)
 which uses the template reference to actually find and load the template::
 
+    use Symfony\Component\Templating\Loader\FilesystemLoader;
     use Symfony\Component\Templating\PhpEngine;
     use Symfony\Component\Templating\TemplateNameParser;
-    use Symfony\Component\Templating\Loader\FilesystemLoader;
 
     $filesystemLoader = new FilesystemLoader(__DIR__.'/views/%name%');
 
@@ -194,8 +194,8 @@ choose which one to use for the template, the
 method is used::
 
     use Acme\Templating\CustomEngine;
-    use Symfony\Component\Templating\PhpEngine;
     use Symfony\Component\Templating\DelegatingEngine;
+    use Symfony\Component\Templating\PhpEngine;
 
     $templating = new DelegatingEngine([
         new PhpEngine(...),
@@ -216,4 +216,4 @@ Learn More
 .. _Packagist: https://packagist.org/packages/symfony/templating
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1

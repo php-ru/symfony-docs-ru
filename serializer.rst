@@ -10,7 +10,8 @@ JSON or XML) is a very complex topic. Symfony comes with a
 tools that you can leverage for your solution.
 
 In fact, before you start, get familiar with the serializer, normalizers
-and encoders by reading the :doc:`Serializer Component </components/serializer>`.
+and encoders by reading the :doc:`Serializer Component </components/serializer>`
+documentation.
 
 Activating the Serializer
 -------------------------
@@ -299,4 +300,4 @@ take a look at how this bundle works.
 .. _`Data URIs`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 8c3df83372455f9abd01ed0c14b4ae88e5003a1d

@@ -50,9 +50,9 @@ resolver. Modify the framework to make use of them::
 
     // ...
 
-    use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
-    use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
     use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
+    use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
+    use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
 
     class Framework
     {
@@ -151,8 +151,8 @@ Last, but not the least, let's write a test for when we actually have a proper
 Response::
 
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\HttpKernel\Controller\ControllerResolver;
     use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
+    use Symfony\Component\HttpKernel\Controller\ControllerResolver;
     // ...
 
     public function testControllerResponse()
@@ -222,4 +222,4 @@ safely think about the next batch of features we want to add to our framework.
 .. _`XDebug`: https://xdebug.org/
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
