@@ -74,11 +74,12 @@ Next, create an ``index.php`` file that creates a kernel class and executes it::
     $response->send();
     $kernel->terminate($request, $response);
 
-That's it! To test it, you can start the built-in web server:
+That's it! To test it, start the :doc:`Symfony Local Web Server
+</setup/symfony_server>`:
 
 .. code-block:: terminal
 
-    $ php -S localhost:8000
+    $ symfony server:start
 
 Then see the JSON response in your browser:
 
@@ -335,12 +336,13 @@ this:
     ├─ composer.json
     └─ composer.lock
 
-As before you can use PHP built-in server:
+As before you can use the :doc:`Symfony Local Web Server
+</setup/symfony_server>`:
 
 .. code-block:: terminal
 
     cd web/
-    $ php -S localhost:8000
+    $ symfony server:start
 
 Then see webpage in browser:
 
@@ -351,4 +353,4 @@ Hey, that looks a lot like a *traditional* Symfony application! You're right: th
 features with less boilerplate configuration and code.
 
 .. ready: no
-.. revision: 9654d1aa7c2effbc9b318146e7057df4ba4b10cc
+.. revision: 473e07285d64208a95fdf0bd85b582e9ba70905c
