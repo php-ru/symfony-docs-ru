@@ -153,12 +153,12 @@ web root directory:
 Now, configure your web server root directory to point to ``web/`` and all
 other files won't be accessible from the client anymore.
 
-To test your changes in a browser (``http://localhost:4321/hello?name=Fabien``), run
-the PHP built-in server:
+To test your changes in a browser (``http://localhost:4321/hello?name=Fabien``),
+run the :doc:`Symfony Local Web Server </setup/symfony_server>`:
 
 .. code-block:: terminal
 
-    $ php -S 127.0.0.1:4321 -t web/ web/front.php
+    $ symfony server:start --port=4321 --passthru=front.php
 
 .. note::
 
@@ -231,4 +231,4 @@ variable.
     extracting the URL map to a configuration file.
 
 .. ready: no
-.. revision: 6f3049986396459130ef2437b6423e1077ee8fb8
+.. revision: 473e07285d64208a95fdf0bd85b582e9ba70905c

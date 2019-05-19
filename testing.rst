@@ -669,7 +669,7 @@ narrow down your node selection by chaining the method calls::
     $crawler
         ->filter('h1')
         ->reduce(function ($node, $i) {
-            if (!$node->getAttribute('class')) {
+            if (!$node->attr('class')) {
                 return false;
             }
         })
@@ -1065,4 +1065,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 3f34d3aed44789236528de26dd983a76828e1bca
+.. revision: 85af863db5f9ac0addee27742e8be4b0ed26a659
