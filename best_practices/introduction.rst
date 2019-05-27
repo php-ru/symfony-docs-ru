@@ -47,11 +47,10 @@ of these best practices. But by following these, you'll be able to develop
 applications faster, with less complexity and with the same or even higher
 quality. It's also a moving target that will continue to improve.
 
-Keep in mind that these are **optional recommendations** that you and your
-team may or may not follow to develop Symfony applications. If you want to
-continue using your own best practices and methodologies, you can of course
-do it. Symfony is flexible enough to adapt to your needs. That will never
-change.
+Keep in mind that these are **optional recommendations** that you and your team
+may or may not follow to develop Symfony applications. If you want to continue
+using your own best practices and methodologies, you can do it. Symfony is
+flexible enough to adapt to your needs. That will never change.
 
 Who this Book Is for (Hint: It's not a Tutorial)
 ------------------------------------------------
@@ -106,4 +105,4 @@ Next: :doc:`/best_practices/creating-the-project`
 .. _`download and install`: https://symfony.com/download
 
 .. ready: no
-.. revision: 6f76cc3f18f21fca42e3c38d5499a73bb2b4332d
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -335,7 +335,7 @@ the argument by its name:
             ])
         ;
 
-You can of course also use normal :ref:`constructor injection <services-constructor-injection>`
+You can also use normal :ref:`constructor injection <services-constructor-injection>`
 in your controllers.
 
 .. caution::
@@ -751,4 +751,4 @@ Learn more about Controllers
 .. _`unvalidated redirects security vulnerability`: https://www.owasp.org/index.php/Open_redirect
 
 .. ready: no
-.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

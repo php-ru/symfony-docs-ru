@@ -514,7 +514,7 @@ is ``bcrypt``:
             // ...
         ]);
 
-Of course, your users' passwords now need to be encoded with this exact algorithm.
+Your users' passwords now need to be encoded with this exact algorithm.
 For hardcoded users, you can use the built-in command:
 
 .. code-block:: terminal
@@ -915,7 +915,7 @@ user is logged in (you don't care about roles), then you can use
 
 .. tip::
 
-    You can of course also use this in ``access_control``.
+    You can also use this in ``access_control``.
 
 ``IS_AUTHENTICATED_FULLY`` isn't a role, but it kind of acts like one, and every
 user that has successfully logged in will have this. In fact, there are three
@@ -1329,4 +1329,4 @@ Other Security Related Topics
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony3-security
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

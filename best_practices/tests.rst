@@ -104,8 +104,8 @@ The built-in functional testing client is great, but it can't be used to
 test any JavaScript behavior on your pages. If you need to test this, consider
 using the `Mink`_ library from within PHPUnit.
 
-Of course, if you have a heavy JavaScript frontend, you should consider using
-pure JavaScript-based testing tools.
+If you have a heavy JavaScript frontend, you should consider using pure
+JavaScript-based testing tools.
 
 Learn More about Functional Tests
 ---------------------------------
@@ -122,4 +122,4 @@ your test fixtures using `Faker`_ and `Alice`_.
 .. _`Alice`: https://github.com/nelmio/alice
 
 .. ready: no
-.. revision: 96f68fedaf40b506ab74dadd24dc5f802fe1f401
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -111,9 +111,9 @@ to decide which bundles to create. The logic for that is in ``registerBundles()`
 a method meant to be extended by you when you start adding bundles to your
 application.
 
-You are, of course, free to create your own, alternative or additional
-``AppKernel`` variants. All you need is to adapt your (or add a new) front
-controller to make use of the new kernel.
+You are free to create your own, alternative or additional ``AppKernel``
+variants. All you need is to adapt your (or add a new) front controller to make
+use of the new kernel.
 
 .. note::
 
@@ -154,9 +154,9 @@ used in the :method:`Symfony\\Component\\HttpKernel\\KernelInterface::registerCo
 method to decide which configuration files to load.
 
 The Symfony Standard Edition's `AppKernel`_ class implements this method by
-loading the ``app/config/config_*environment*.yml`` file. You are, of course,
-free to implement this method differently if you need a more sophisticated
-way of loading your configuration.
+loading the ``app/config/config_*environment*.yml`` file. You are free to
+implement this method differently if you need a more sophisticated way of
+loading your configuration.
 
 .. _front controller: https://en.wikipedia.org/wiki/Front_Controller_pattern
 .. _Symfony Standard Edition: https://github.com/symfony/symfony-standard
@@ -169,4 +169,4 @@ way of loading your configuration.
 .. _template methods: https://en.wikipedia.org/wiki/Template_method_pattern
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -369,9 +369,9 @@ objects).
     Remember that you can see all of the queries made during a request via
     the web debug toolbar.
 
-Of course, if you know up front that you'll need to access both objects, you
-can avoid the second query by issuing a join in the original query. Add the
-following method to the ``ProductRepository`` class::
+If you know up front that you'll need to access both objects, you can avoid the
+second query by issuing a join in the original query. Add the following method
+to the ``ProductRepository`` class::
 
     // src/AppBundle/Repository/ProductRepository.php
     public function findOneByIdJoinedToCategory($productId)
@@ -420,4 +420,4 @@ Doctrine's `Association Mapping Documentation`_.
 .. _`Mastering Doctrine Relations`: https://symfonycasts.com/screencast/symfony3-doctrine-relations
 
 .. ready: no
-.. revision: 2a01088737e06729dbbfa09b98132943a4a095ab
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

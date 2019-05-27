@@ -44,7 +44,7 @@ in your browser, these notices are shown in the web dev toolbar:
    :align: center
    :class: with-browser
 
-Of course ultimately, you want to stop using the deprecated functionality.
+Ultimately, you want to stop using the deprecated functionality.
 Sometimes, this is easy: the warning might tell you exactly what to change.
 
 But other times, the warning might be unclear: a setting somewhere might
@@ -162,4 +162,4 @@ of.
 .. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: 4182c8c6e3b327603748b3f9d531058a84728484
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

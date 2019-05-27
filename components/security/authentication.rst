@@ -90,7 +90,7 @@ authentication providers, each supporting a different type of token.
 
 .. note::
 
-    You may of course write your own authentication manager, it only has
+    You may write your own authentication manager, it only has
     to implement :class:`Symfony\\Component\\Security\\Core\\Authentication\\AuthenticationManagerInterface`.
 
 .. _authentication_providers:
@@ -323,4 +323,4 @@ the ``switch_user`` firewall listener.
 .. _`BasePasswordEncoder::checkPasswordLength`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

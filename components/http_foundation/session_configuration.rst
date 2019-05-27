@@ -69,7 +69,7 @@ handlers by providing six callback functions which PHP calls internally at
 various points in the session workflow.
 
 The Symfony HttpFoundation component provides some by default and these can
-easily serve as examples if you wish to write your own.
+serve as examples if you wish to write your own.
 
 * :class:`Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\PdoSessionHandler`
 * :class:`Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\MemcacheSessionHandler`
@@ -319,4 +319,4 @@ without knowledge of the specific save handler.
 .. _`php.net/memcached.setoption`: https://php.net/memcached.setoption
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

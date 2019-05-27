@@ -19,10 +19,10 @@ primarily under the ``firewalls`` key.
     API only), we recommend having only *one* firewall entry with the ``anonymous``
     key enabled.
 
-Most applications only have one authentication system and one set of users.
-For this reason, you only need *one* firewall entry. There are exceptions
-of course, especially if you have separated web and API sections on your
-site. But the point is to keep things simple.
+Most applications only have one authentication system and one set of users. For
+this reason, you only need *one* firewall entry. If you have separated web and
+API sections on your site, you will need more firewall entries. But the point is
+to keep things simple.
 
 Additionally, you should use the ``anonymous`` key under your firewall. If
 you need to require users to be logged in for different sections of your
@@ -390,4 +390,4 @@ Next: :doc:`/best_practices/web-assets`
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

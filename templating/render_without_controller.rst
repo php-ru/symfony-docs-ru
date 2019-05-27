@@ -53,7 +53,7 @@ can do this without creating a controller:
 The ``FrameworkBundle:Template:template`` controller will simply render whatever
 template you've passed as the ``template`` default value.
 
-You can of course also use this trick when rendering embedded controllers
+You can also use this trick when rendering embedded controllers
 from within a template. But since the purpose of rendering a controller from
 within a template is typically to prepare some data in a custom controller,
 this is probably only useful if you'd like to cache this page partial (see
@@ -123,4 +123,4 @@ will be made public, as long as ``maxAge`` or ``sharedAge`` are passed.
 If set to ``true``, the Response will be marked as private.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

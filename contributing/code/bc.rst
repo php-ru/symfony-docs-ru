@@ -22,7 +22,7 @@ method signature.
 
 Also, not every BC break has the same impact on application code. While some BC
 breaks require you to make significant changes to your classes or your
-architecture, others are fixed as easily as changing the name of a method.
+architecture, others can be fixed changing the name of a single method.
 
 That's why we created this page for you. The section "Using Symfony Code" will
 tell you how you can ensure that your application won't break completely when
@@ -453,4 +453,4 @@ Turn static into non static                         No
 .. _float values: https://php.net/manual/en/function.floatval.php
 
 .. ready: no
-.. revision: bb177d34199150074e032e7b2c34dba4112a0de6
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

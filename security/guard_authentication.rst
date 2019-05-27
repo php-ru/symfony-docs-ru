@@ -447,7 +447,7 @@ that describes *how* authentication failed via its ``$exception->getMessageKey()
 ``$exception->getMessageData()``) method. The message will be different based on *where*
 authentication fails (i.e. ``getUser()`` versus ``checkCredentials()``).
 
-But, you can easily return a custom message by throwing a
+But, you can return a custom message by throwing a
 :class:`Symfony\\Component\\Security\\Core\\Exception\\CustomUserMessageAuthenticationException`.
 You can throw this from ``getCredentials()``, ``getUser()`` or ``checkCredentials()``
 to cause a failure::
@@ -630,4 +630,4 @@ Frequently Asked Questions
 .. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

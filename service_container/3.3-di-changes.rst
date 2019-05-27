@@ -410,8 +410,8 @@ it implements ``EventSubscriberInterface``.
 In this case, you've created a class that implements ``EventSubscriberInterface``
 and registered it as a service. This is more than enough for the container to know
 that you want this to be used as an event subscriber: more configuration is not needed.
-And the tags system is its own, Symfony-specific mechanism. And of course, you can
-always set ``autoconfigure`` to ``false`` in ``services.yml``, or disable it for a specific
+And the tags system is its own, Symfony-specific mechanism. You can always set
+``autoconfigure`` to ``false`` in ``services.yml``, or disable it for a specific
 service.
 
     Does this mean tags are dead? Does this work for all tags?
@@ -810,4 +810,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

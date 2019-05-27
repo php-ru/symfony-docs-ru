@@ -5,7 +5,7 @@ How to Control the Rendering of a Form
 ======================================
 
 So far, you've seen how an entire form can be rendered with just one line
-of code. Of course, you'll usually need much more flexibility when rendering:
+of code. You'll usually need much more flexibility when rendering:
 
 .. code-block:: twig
 
@@ -117,4 +117,4 @@ Read this to know everything about the helpers available and the options
 that can be used with each.
 
 .. ready: no
-.. revision: 7c1cf8a7149d641ac11e55169de4c7e2561e46f2
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

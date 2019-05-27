@@ -105,7 +105,7 @@ specifically tailored to the requirements of Symfony.
     Helps you build a native Debian package for your Symfony project.
 
 Basic scripting
-    You can of course use shell, `Ant`_ or any other build tool to script
+    You can use shell, `Ant`_ or any other build tool to script
     the deploying of your project.
 
 Common Post-Deployment Tasks
@@ -250,4 +250,4 @@ kernel and return your project's root directory::
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
 
 .. ready: no
-.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -155,10 +155,10 @@ listen on. Each pool can also be run under a different UID and GID:
 Using mod_proxy_fcgi with Apache 2.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are running Apache 2.4, you can easily use ``mod_proxy_fcgi`` to pass
-incoming requests to PHP-FPM. Configure PHP-FPM to listen on a TCP or Unix socket,
-enable ``mod_proxy`` and ``mod_proxy_fcgi`` in your Apache configuration, and
-use the ``SetHandler`` directive to pass requests for PHP files to PHP FPM:
+If you are running Apache 2.4, you can use ``mod_proxy_fcgi`` to pass incoming
+requests to PHP-FPM. Configure PHP-FPM to listen on a TCP or Unix socket, enable
+``mod_proxy`` and ``mod_proxy_fcgi`` in your Apache configuration, and use the
+``SetHandler`` directive to pass requests for PHP files to PHP FPM:
 
 .. code-block:: apache
 
@@ -344,4 +344,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: ff8b8bf981404785e528c9aa6f872c1cb3681b64
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

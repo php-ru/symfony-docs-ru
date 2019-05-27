@@ -235,7 +235,7 @@ Creating Links between Pages
 Creating links between pages is a must for web applications. Instead of
 hardcoding URLs in templates, the ``path()`` function knows how to generate
 URLs based on the routing configuration. That way, all your URLs
-can be easily updated by just changing the configuration:
+can be updated by just changing the configuration:
 
 .. code-block:: html+twig
 
@@ -254,7 +254,7 @@ Including Assets: Images, JavaScripts and Stylesheets
 -----------------------------------------------------
 
 What would the Internet be without images, JavaScripts and stylesheets?
-Symfony provides the ``asset()`` function to deal with them easily:
+Symfony provides the ``asset()`` function to deal with them:
 
 .. code-block:: html+twig
 
@@ -291,4 +291,4 @@ controller and that's exactly the topic of the :doc:`next part of this tutorial
 .. _`Twig documentation`: https://twig.symfony.com/doc/2.x/
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -69,7 +69,7 @@ directory:
 
 The registered namespace is called ``foo_bar``, which refers to the
 ``vendor/acme/foo-bar/templates`` directory. Assuming there's a file
-called ``sidebar.twig`` in that directory, you can use it easily:
+called ``sidebar.twig`` in that directory, you can use it as follows:
 
 .. code-block:: twig
 
@@ -132,4 +132,4 @@ in the previous three directories:
     {{ include('@theme/header.twig') }}
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

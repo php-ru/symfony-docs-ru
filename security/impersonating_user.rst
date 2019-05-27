@@ -126,7 +126,7 @@ over the user's roles until you find one that is a ``SwitchUserRole`` object::
         }
     }
 
-Of course, this feature needs to be made available to a small group of users.
+This feature needs to be made available to a small group of users.
 By default, access is restricted to users having the ``ROLE_ALLOWED_TO_SWITCH``
 role. The name of this role can be modified via the ``role`` setting. For
 extra security, you can also change the query parameter name via the ``parameter``
@@ -226,4 +226,4 @@ a switch user occurs.
 For more details about event subscribers, see :doc:`/event_dispatcher`.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

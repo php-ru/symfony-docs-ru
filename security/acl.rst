@@ -227,7 +227,7 @@ permission. While this effectively also allows the user to perform any
 operation such as view, edit, etc. on the domain object, there are cases where
 you may want to grant these permissions explicitly.
 
-The ``MaskBuilder`` can be used for creating bit masks easily by combining
+The ``MaskBuilder`` can be used for creating bit masks by combining
 several base permissions::
 
     $builder = new MaskBuilder();
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

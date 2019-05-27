@@ -182,9 +182,9 @@ as the third argument to the ``validate()`` method::
 If no groups are specified, all constraints that belong to the group ``Default``
 will be applied.
 
-Of course, you'll usually work with validation indirectly through the form
+You'll usually work with validation indirectly through the form
 library. For information on how to use validation groups inside forms, see
 :doc:`/form/validation_groups`.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -1,6 +1,6 @@
 .. sidebar:: Expiration and Validation
 
-    You can of course use both validation and expiration within the same ``Response``.
+    You can use both validation and expiration within the same ``Response``.
     As expiration wins over validation, you can benefit from the best of both worlds.
     In other words, by using both expiration and validation, you can instruct the cache
     to serve the cached content, while checking back at some interval (the expiration)
@@ -14,4 +14,4 @@
 .. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html
 
 .. ready: no
-.. revision: 53128619fe42919df43eae593605871c45344f99
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

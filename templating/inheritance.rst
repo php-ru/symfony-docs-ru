@@ -51,8 +51,7 @@ When building your application, you may choose to follow this method or simply
 make each page template extend the base application template directly
 (e.g. ``{% extends 'base.html.twig' %}``). The three-template model is a
 best-practice method used by vendor bundles so that the base template for a
-bundle can be easily overridden to properly extend your application's base
-layout.
+bundle can be overridden to properly extend your application's base layout.
 
 .. ready: no
-.. revision: 3a6f6621e80f0e20e150b2ab152af138f5d33673
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

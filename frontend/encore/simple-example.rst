@@ -23,7 +23,7 @@ application: it will *require* all of the dependencies it needs (e.g. jQuery or 
 
 Encore's job (via Webpack) is simple: to read and follow *all* of the ``require``
 statements and create one final ``app.js`` (and ``app.css``) that contains *everything*
-your app needs. Of course, Encore can do a lot more: minify files, pre-process Sass/LESS,
+your app needs. Encore can do a lot more: minify files, pre-process Sass/LESS,
 support React, Vue.js, etc.
 
 Configuring Encore/Webpack
@@ -348,4 +348,4 @@ Encore support many more features! For a full list of what you can do, see
 .. _`ECMAScript 6 modules`: https://hacks.mozilla.org/2015/08/es6-in-depth-modules/
 
 .. ready: no
-.. revision: 2f96d393e770085a73b3d74dde20bcbab8488a19
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

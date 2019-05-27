@@ -38,8 +38,7 @@ you can use as is or as a start for your very own. It will start with a simple
 framework and more features will be added with time. Eventually, you will have
 a fully-featured full-stack web framework.
 
-And of course, each step will be the occasion to learn more about some of the
-Symfony Components.
+Each step will be the occasion to learn more about some of the Symfony Components.
 
 Many modern web frameworks advertize themselves as being MVC frameworks. This
 tutorial won't talk about the MVC pattern, as the Symfony Components are able to
@@ -116,4 +115,4 @@ introduce the HttpFoundation Component and see what it brings us.
 .. _`Composer`: http://packagist.org/about-composer
 
 .. ready: no
-.. revision: 473e07285d64208a95fdf0bd85b582e9ba70905c
+.. revision: cdb1c3ca33126998691de690fc6c2e67a378291e

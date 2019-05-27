@@ -123,7 +123,7 @@ Lowering Maximum Quality
 
 By default, the ``jpegoptim`` filter doesn't alter the quality level of the JPEG
 image. Use the ``max`` option to configure the maximum quality setting (in a
-scale of ``0`` to ``100``). The reduction in the image file size will of course
+scale of ``0`` to ``100``). The reduction in the image file size will
 be at the expense of its quality:
 
 .. configuration-block::
@@ -299,4 +299,4 @@ file:
 .. _`LiipImagineBundle`: https://github.com/liip/LiipImagineBundle
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

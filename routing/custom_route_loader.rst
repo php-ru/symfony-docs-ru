@@ -290,7 +290,7 @@ can also make use of the provided resolver, an instance of
 :class:`Symfony\\Component\\Config\\Loader\\LoaderResolver`, to load secondary
 routing resources.
 
-Of course you still need to implement
+You still need to implement
 :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::supports`
 and :method:`Symfony\\Component\\Config\\Loader\\LoaderInterface::load`.
 Whenever you want to load another resource - for instance a YAML routing
@@ -345,4 +345,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

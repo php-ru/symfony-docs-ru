@@ -1,7 +1,7 @@
 How to Use Multiple Guard Authenticators
 ========================================
 
-The Guard authentication component allows you to easily use many different
+The Guard authentication component allows you to use many different
 authenticators at a time.
 
 An entry point is a service id (of one of your authenticators) whose
@@ -175,4 +175,4 @@ the solution is to split the configuration into two separate firewalls:
         ]);
 
 .. ready: no
-.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

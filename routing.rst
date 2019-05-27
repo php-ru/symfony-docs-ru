@@ -661,8 +661,7 @@ is a bidirectional system: mapping the URL to a controller and
 a route back to a URL.
 
 To generate a URL, you need to specify the name of the route (e.g. ``blog_show``)
-and any wildcards (e.g. ``slug = my-blog-post``) used in the path for that
-route. With this information, any URL can easily be generated::
+and any wildcards (e.g. ``slug = my-blog-post``) used in the path for that route::
 
     class MainController extends Controller
     {
@@ -806,4 +805,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

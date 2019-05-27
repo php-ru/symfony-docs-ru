@@ -15,7 +15,7 @@ Embedding a Single Object
 -------------------------
 
 Suppose that each ``Task`` belongs to a simple ``Category`` object. Start,
-of course, by creating the ``Category`` object::
+by creating the ``Category`` object::
 
     // src/AppBundle/Entity/Category.php
     namespace AppBundle\Entity;
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

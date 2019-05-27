@@ -848,7 +848,7 @@ you don't need to do *anything*: the service will be automatically loaded. Then,
 implements ``Twig\Extension\ExtensionInterface``. And thanks to ``autowire``, you can even add
 constructor arguments without any configuration.
 
-Of course, you can still :ref:`manually configure the service <services-manually-wire-args>`
+You can still :ref:`manually configure the service <services-manually-wire-args>`
 if you need to.
 
 .. _container-public:
@@ -1193,4 +1193,4 @@ Learn more
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony3-fundamentals
 
 .. ready: no
-.. revision: 9654d1aa7c2effbc9b318146e7057df4ba4b10cc
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

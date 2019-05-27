@@ -248,8 +248,8 @@ will be passed two parameters:
     A :class:`\\Symfony\\Component\\HttpKernel\\Log\\DebugLoggerInterface`
     instance which may be ``null`` in some circumstances.
 
-Instead of creating a new exception controller from scratch you can, of course,
-also extend the default :class:`Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController`.
+Instead of creating a new exception controller from scratch you can also extend
+the default :class:`Symfony\\Bundle\\TwigBundle\\Controller\\ExceptionController`.
 In that case, you might want to override one or both of the ``showAction()`` and
 ``findTemplate()`` methods. The latter one locates the template to be used.
 
@@ -355,4 +355,4 @@ time and again, you can have just one (or several) listeners deal with them.
 .. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

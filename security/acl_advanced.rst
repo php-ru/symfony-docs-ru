@@ -23,7 +23,7 @@ objectives:
 
 - providing a way to efficiently retrieve a large amount of ACLs/ACEs for your
   domain objects, and to modify them;
-- providing a way to easily make decisions of whether a person is allowed to
+- providing a way to make decisions of whether a person is allowed to
   perform an action on a domain object or not.
 
 As indicated by the first point, one of the main capabilities of Symfony's
@@ -204,4 +204,4 @@ parent ACL exists, an exception will be thrown.
 .. _JMSSecurityExtraBundle: https://github.com/schmittjoh/JMSSecurityExtraBundle
 
 .. ready: no
-.. revision: b48d0c77d3f164ca8903ea3e8e7f0486eb6376df
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

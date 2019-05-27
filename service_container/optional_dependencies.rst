@@ -112,8 +112,8 @@ call if the service exists and remove the method call if it does not:
     them is missing, those elements are removed but the method call is still
     made with the remaining elements of the collection.
 
-In YAML, the special ``@?`` syntax tells the service container that the dependency
-is optional. Of course, the ``NewsletterManager`` must also be rewritten by
+In YAML, the special ``@?`` syntax tells the service container that the
+dependency is optional. The ``NewsletterManager`` must also be rewritten by
 adding a ``setLogger()`` method::
 
         public function setLogger(LoggerInterface $logger)
@@ -122,4 +122,4 @@ adding a ``setLogger()`` method::
         }
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

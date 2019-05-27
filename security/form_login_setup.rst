@@ -8,7 +8,7 @@ How to Build a Traditional Login Form
     your ``User`` object and gives you many routes and controllers for common
     tasks like login, registration and forgot password.
 
-In this entry, you'll build a traditional login form. Of course, when the
+In this entry, you'll build a traditional login form. When the
 user logs in, you can load your users from anywhere - like the database.
 See :ref:`security-user-providers` for details.
 
@@ -381,4 +381,4 @@ for more details.
 .. _`FOSUserBundle`: https://github.com/FriendsOfSymfony/FOSUserBundle
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -47,11 +47,11 @@ this path, update the ``framework.session.save_path`` configuration key:
 Storing Sessions Elsewhere (e.g. database)
 ------------------------------------------
 
-Of course, you can store your session data anywhere by using the ``handler_id`` option.
+You can store your session data anywhere by using the ``handler_id`` option.
 See :doc:`/components/http_foundation/session_configuration` for a discussion of
 session save handlers. There are also articles about storing sessions in a
 :doc:`relational database </doctrine/pdo_session_storage>`
 or a :doc:`NoSQL database </doctrine/mongodb_session_storage>`.
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

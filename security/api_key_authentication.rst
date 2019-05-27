@@ -17,8 +17,9 @@ The API Key Authenticator
 -------------------------
 
 Authenticating a user based on the Request information should be done via a
-pre-authentication mechanism. The :class:`Symfony\\Component\\Security\\Http\\Authentication\\SimplePreAuthenticatorInterface`
-allows you to implement such a scheme really easily.
+pre-authentication mechanism using the
+:class:`Symfony\\Component\\Security\\Http\\Authentication\\SimplePreAuthenticatorInterface`
+class.
 
 Your exact situation may differ, but in this example, a token is read
 from an ``apikey`` query parameter, the proper username is loaded from that
@@ -149,7 +150,7 @@ In this specific example, the following things happen in ``authenticateToken()``
 
 The goal is ultimately to use the ``$apiKey`` to find or create a ``User``
 object. *How* you do this (e.g. query a database) and the exact class for
-your ``User`` object may vary. Those differences will be most obvious in your
+your ``User`` object may vary. Those differences will be most notable in your
 user provider.
 
 The User Provider
@@ -608,4 +609,4 @@ current URL is before creating the token in ``createToken()``::
 That's it! Have fun!
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

@@ -131,7 +131,7 @@ or by using the second argument of the constructor::
         {
             public function __construct(ParserCacheInterface $parser = null, array $providers = [])
             {
-                // prepends the default provider to let users override it easily
+                // prepends the default provider to let users override it
                 array_unshift($providers, new StringExpressionLanguageProvider());
 
                 parent::__construct($parser, $providers);
@@ -140,4 +140,4 @@ or by using the second argument of the constructor::
 
 
 .. ready: no
-.. revision: 6518bc07e146feed098d747d02d060bcc6a551dc
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
