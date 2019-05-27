@@ -101,9 +101,9 @@ This class uses the name of the environment - which is passed to the Kernel's
 method and is available via :method:`Symfony\\Component\\HttpKernel\\Kernel::getEnvironment` -
 to decide which bundles to enable. The logic for that is in ``registerBundles()``.
 
-You are, of course, free to create your own, alternative or additional
-``Kernel`` variants. All you need is to adapt your (or add a new) front
-controller to make use of the new kernel.
+You are free to create your own, alternative or additional ``Kernel`` variants.
+All you need is to adapt your (or add a new) front controller to make use of the
+new kernel.
 
 .. note::
 
@@ -145,4 +145,4 @@ differently if you need a more sophisticated way of loading your configuration.
 .. _decorate: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: a669ceb1ea7e6297a8aba9e602b33a69271f3c7d
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

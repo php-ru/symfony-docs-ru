@@ -2,11 +2,11 @@ Creating a Bug Reproducer
 =========================
 
 The main Symfony code repository receives thousands of issues reports per year.
-Some of those issues are so obvious or easy to understand, that Symfony Core
-developers can fix them without any other information. However, other issues are
-much harder to understand because developers can't easily reproduce them in their
-computers. That's when we'll ask you to create a "bug reproducer", which is the
-minimum amount of code needed to make the bug appear when executed.
+Some of those issues are easy to understand and the Symfony Core developers can
+fix them without any other information. However, other issues are much harder to
+understand because developers can't reproduce them in their computers. That's
+when we'll ask you to create a "bug reproducer", which is the minimum amount of
+code needed to make the bug appear when executed.
 
 Reproducing Simple Bugs
 -----------------------
@@ -81,4 +81,4 @@ until you can reproduce the bug.
 .. _`new repository`: https://github.com/new
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

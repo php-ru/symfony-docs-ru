@@ -6,8 +6,8 @@ Testing with Sessions
 =====================
 
 Symfony is designed from the ground up with code-testability in mind. In order
-to make your code which utilizes session easily testable, we provide two separate
-mock storage mechanisms for both unit testing and functional testing.
+to test your code which utilizes sessions, we provide two separate mock storage
+mechanisms for both unit testing and functional testing.
 
 Testing code using real sessions is tricky because PHP's workflow state is global
 and it is not possible to have multiple concurrent sessions in the same PHP
@@ -58,4 +58,4 @@ separate PHP processes, change the storage engine to
     $session = new Session(new MockFileSessionStorage());
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

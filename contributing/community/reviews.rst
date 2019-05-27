@@ -24,7 +24,7 @@ On the `Symfony issue tracker`_, you can find many items in a `Needs Review`_
 status:
 
 * **Bug Reports**: Bug reports need to be checked for completeness.
-  Is any important information missing? Can the bug be *easily* reproduced?
+  Is any important information missing? Can the bug be reproduced?
 
 * **Pull Requests**: Pull requests contain code that fixes a bug or implements
   new functionality. Reviews of pull requests ensure that they are implemented
@@ -146,7 +146,7 @@ Pick a pull request from the `PRs in need of review`_ and follow these steps:
    * Does the PR stay within scope to address *only* that issue?
    * Does the PR contain automated tests? Do those tests cover all relevant
      edge cases?
-   * Does the PR contain sufficient comments to easily understand its code?
+   * Does the PR contain sufficient comments to understand its code?
    * Does the code break backward compatibility? If yes, does the PR header say
      so?
    * Does the PR contain deprecations? If yes, does the PR header say so? Does
@@ -223,4 +223,4 @@ Pick a pull request from the `PRs in need of review`_ and follow these steps:
 .. _`Needs Review`: https://github.com/symfony/symfony/labels/Status%3A%20Needs%20Review
 
 .. ready: no
-.. revision: 9f6ad6c03ecc516f317794561f568b1091618001
+.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879

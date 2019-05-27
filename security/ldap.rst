@@ -112,7 +112,7 @@ An LDAP client can be configured using the built-in
         use Symfony\Component\Ldap\Ldap;
 
         $container->register(Ldap::class)
-            ->addArgument(new Reference(Adapter::class);
+            ->addArgument(new Reference(Adapter::class));
 
         $container
             ->register(Adapter::class)
@@ -284,7 +284,7 @@ load the user ``fabpot``, the final string will be: ``(uid=fabpot)``.
 If you pass ``null`` as the value of this option, the default filter is used
 ``({uid_key}={username})``.
 
-The username will be escaped, in order to prevent `LDAP injection`_.
+In order to prevent `LDAP injection`_, the username will be escaped.
 
 The syntax for the ``filter`` key is defined by `RFC4515`_.
 
@@ -516,4 +516,4 @@ Configuration example for form login and query_string
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 77c55b240b708a69a96b82caad41e33a53cd32d8
+.. revision: 9d601653689e726b41c6ecd3f6d96916c59a494b

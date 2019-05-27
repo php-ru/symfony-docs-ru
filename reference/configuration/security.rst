@@ -240,6 +240,12 @@ encoding algorithm. Also, each algorithm defines different config options:
             ],
         ]);
 
+.. deprecated:: 4.3
+
+    The ``threads`` configuration option was deprecated in Symfony 4.3. No
+    alternative is provided because starting from Symfony 5.0 this value will be
+    hardcoded to ``1`` (one thread).
+
 .. versionadded:: 4.3
 
     The ``sodium`` algorithm was introduced in Symfony 4.3. In previous Symfony
@@ -754,4 +760,4 @@ role inheritance rules by creating a role hierarchy, as explained in
 .. _`cryptographic salt`: https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 .. ready: no
-.. revision: 8d9d7b52ed9a3863e80c5b59590ca2f67a3dd4e4
+.. revision: 730689c2e678a50fa3eca59848600c4d50f680a5

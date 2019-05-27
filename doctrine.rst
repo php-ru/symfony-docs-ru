@@ -242,9 +242,9 @@ your production database up-to-date.
 Migrations & Adding more Fields
 -------------------------------
 
-But what if you need to add a new field property to ``Product``, like a ``description``?
-You can edit the class to add the new property. But, you can also use ``make:entity``
-again:
+But what if you need to add a new field property to ``Product``, like a
+``description``? You can edit the class to add the new property. But, you can
+also use ``make:entity`` again:
 
 .. code-block:: terminal
 
@@ -818,4 +818,4 @@ Learn more
 .. _`Doctrine screencast series`: https://symfonycasts.com/screencast/symfony-doctrine
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

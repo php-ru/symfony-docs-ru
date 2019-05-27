@@ -104,8 +104,8 @@ The error controller reads as follows::
         }
     }
 
-Voilà! Clean and customizable error management without efforts. And
-if your ``ErrorController`` throws an exception, HttpKernel will handle it nicely.
+*Voilà!* Clean and customizable error management without efforts. And if your
+``ErrorController`` throws an exception, HttpKernel will handle it nicely.
 
 In chapter two, we talked about the ``Response::prepare()`` method, which
 ensures that a Response is compliant with the HTTP specification. It is
@@ -203,4 +203,4 @@ many websites; a code that has been audited for security issues and that has
 proven to scale well.
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

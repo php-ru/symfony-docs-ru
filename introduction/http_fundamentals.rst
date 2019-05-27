@@ -275,11 +275,11 @@ and more.
     that you can use in *any* PHP project. This also contains classes for handling
     sessions, file uploads and more.
 
-If Symfony offered nothing else, you would already have a toolkit for conveniently
-accessing request information and an object-oriented interface for creating
-the response. Even as you learn the many powerful features in Symfony, keep
-in mind that the goal of your application is always *to interpret a request
-and create the appropriate response based on your application logic*.
+If Symfony offered nothing else, you would already have a toolkit for accessing
+request information and an object-oriented interface for creating the response.
+Even as you learn the many powerful features in Symfony, keep in mind that the
+goal of your application is always *to interpret a request and create the
+appropriate response based on your application logic*.
 
 The Journey from the Request to the Response
 --------------------------------------------
@@ -399,4 +399,4 @@ Here's what we've learned so far:
 .. _`Swift Mailer`: http://swiftmailer.org/
 
 .. ready: no
-.. revision: 543b184945600c4c8146b782b994a73f0e1a2786
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

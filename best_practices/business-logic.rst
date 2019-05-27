@@ -109,8 +109,8 @@ distributed among developers, with a slight preference towards YAML.
 Both formats have the same performance, so this is ultimately a matter of
 personal taste.
 
-We recommend YAML because it's friendly to newcomers and concise. You can
-use any of the other formats if you prefer another format.
+We recommend YAML because it's friendly to newcomers and concise, but you can
+use whatever format you like.
 
 Using a Persistence Layer
 -------------------------
@@ -283,4 +283,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

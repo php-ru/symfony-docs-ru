@@ -633,8 +633,8 @@ of a role::
         // ...
     }
 
-You can use ``IS_AUTHENTICATED_FULLY`` anywhere roles are used: like ``access_control``
-or in Twig.
+You can use ``IS_AUTHENTICATED_FULLY`` anywhere roles are used: like
+``access_control`` or in Twig.
 
 ``IS_AUTHENTICATED_FULLY`` isn't a role, but it kind of acts like one, and every
 user that has logged in will have this. Actually, there are 3 special attributes
@@ -1014,4 +1014,4 @@ Authorization (Denying Access)
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 61327968b79a7c756f6dbee927c2c3af3cf46d6e
+.. revision: f2e535517b314ae90a20150a1faa9634fb832989

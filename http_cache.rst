@@ -13,7 +13,7 @@ Caching on the Shoulders of Giants
 ----------------------------------
 
 With HTTP Caching, you cache the full output of a page (i.e. the response) and bypass
-your application *entirely* on subsequent requests. Of course, caching entire responses
+your application *entirely* on subsequent requests. Caching entire responses
 isn't always possible for highly dynamic sites, or is it? With
 :doc:`Edge Side Includes (ESI) </http_cache/esi>`, you can use the power of HTTP caching
 on only *fragments* of your site.
@@ -425,4 +425,4 @@ Learn more
 .. _`they can be cached`: https://tools.ietf.org/html/draft-ietf-httpbis-p2-semantics-20#section-2.3.4
 
 .. ready: no
-.. revision: 7aa3f7501dc7caadc51319306f49e9dd9a0bca8e
+.. revision: f2e535517b314ae90a20150a1faa9634fb832989

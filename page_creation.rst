@@ -264,8 +264,8 @@ Great news! You've already worked inside the most important directories in your
 project:
 
 ``config/``
-    Contains... configuration of course!. You will configure routes, :doc:`services </service_container>`
-    and packages.
+    Contains... configuration!. You will configure routes,
+    :doc:`services </service_container>` and packages.
 
 ``src/``
     All your PHP code lives here.
@@ -337,4 +337,4 @@ Go Deeper with HTTP & Framework Fundamentals
 .. _`Flex recipes`: https://flex.symfony.com
 
 .. ready: no
-.. revision: 8b23729d19c8ec55dfc58819adec4d53d26a0ee6
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

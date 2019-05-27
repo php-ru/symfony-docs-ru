@@ -69,8 +69,8 @@ the ``_controller`` route attribute::
         $response = new Response('An error occurred', 500);
     }
 
-A route can now be associated with any controller and within a
-controller, you can still use the ``render_template()`` to render a template::
+A route can now be associated with any controller and within a controller, you
+can still use the ``render_template()`` to render a template::
 
     $routes->add('hello', new Routing\Route('/hello/{name}', [
         'name' => 'World',
@@ -181,4 +181,4 @@ probably all you need to create simple websites like those fancy one-page
 .. _`websites`: https://kottke.org/08/02/single-serving-sites
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb

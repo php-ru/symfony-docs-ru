@@ -259,7 +259,7 @@ some form values and submit the corresponding form::
     of form fields (e.g. ``select()`` and ``tick()``). For details, see the
     `Forms`_ section below.
 
-Now that you can easily navigate through an application, use assertions to test
+Now that you can navigate through an application, use assertions to test
 that it actually does what you expect it to. Use the Crawler to make assertions
 on the DOM::
 
@@ -1065,4 +1065,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: 85af863db5f9ac0addee27742e8be4b0ed26a659
+.. revision: f2e535517b314ae90a20150a1faa9634fb832989

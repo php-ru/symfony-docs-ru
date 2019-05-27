@@ -305,8 +305,8 @@ form_rest(form_view, variables)
 
 This renders all fields that have not yet been rendered for the given form.
 It's a good idea to always have this somewhere inside your form as it'll
-render hidden fields for you and make any fields you forgot to render more
-obvious (since it'll render the field for you).
+render hidden fields for you and make any fields you forgot to render easier to
+spot (since it'll render the field for you).
 
 .. code-block:: twig
 
@@ -433,4 +433,4 @@ Variable                Usage
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: 6b404e2eac3296d529dcdb34722bae2b2bf22f28
+.. revision: f2e535517b314ae90a20150a1faa9634fb832989
