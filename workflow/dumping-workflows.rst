@@ -30,6 +30,9 @@ with the ``WorkflowDumpCommand``:
 
     $ php bin/console workflow:dump name | dot -Tsvg -o graph.svg
 
+    # highlight 'place1' and 'place2' in the dumped workflow
+    $ php bin/console workflow:dump name place1 place2 | dot -Tsvg -o graph.svg
+
 .. note::
 
     The ``dot`` command is part of Graphviz. You can download it and read
@@ -38,4 +41,4 @@ with the ``WorkflowDumpCommand``:
 .. _Graphviz.org: http://www.graphviz.org
 
 .. ready: no
-.. revision: c1fd166b918c2deca6da4dd3d0408b48de64ccea
+.. revision: bd2c2c7a66c0774d90520883300049fe159d9eb9

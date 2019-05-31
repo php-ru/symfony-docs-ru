@@ -41,7 +41,7 @@ configure the service container to use the
 
             AppBundle\Email\NewsletterManager:
                 # call the static method that creates the object
-                factory: ['AppBundle\Email\NewsletterManagerStaticFactory', createNewsletterManager]
+                factory: ['AppBundle\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
                 # define the class of the created object
                 class: AppBundle\Email\NewsletterManager
 
@@ -107,7 +107,7 @@ Configuration of the service container then looks like this:
 
             AppBundle\Email\NewsletterManager:
                 # call a method on the specified factory service
-                factory: 'AppBundle\Email\NewsletterManagerFactory:createNewsletterManager'
+                factory: ['@AppBundle\Email\NewsletterManagerFactory', 'createNewsletterManager']
                 class: AppBundle\Email\NewsletterManager
 
     .. code-block:: xml
@@ -149,21 +149,6 @@ Configuration of the service container then looks like this:
                 new Reference(NewsletterManagerFactory::class),
                 'createNewsletterManager',
             ]);
-
-.. note::
-
-    The traditional configuration syntax in YAML files used an array to define
-    the factory service and the method name:
-
-    .. code-block:: yaml
-
-        # app/config/services.yml
-        AppBundle\Email\NewsletterManager:
-            class: AppBundle\Email\NewsletterManager
-            # new syntax
-            factory: 'AppBundle\Email\NewsletterManagerFactory:createNewsletterManager'
-            # old syntax
-            factory: ['@AppBundle\Email\NewsletterManagerFactory', createNewsletterManager]
 
 .. _factories-passing-arguments-factory-method:
 
@@ -228,4 +213,4 @@ example takes the ``templating`` service as an argument:
             ]);
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: 519ccf3490f95cd10908e89402e4dd3bc8e9e787

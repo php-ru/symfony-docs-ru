@@ -309,7 +309,7 @@ the following command to install the Doctrine fixtures bundle:
 
 .. code-block:: terminal
 
-    $ composer require doctrine/doctrine-fixtures-bundle
+    $ composer require --dev doctrine/doctrine-fixtures-bundle
 
 Then, enable the bundle in ``AppKernel.php``, but only for the ``dev`` and
 ``test`` environments::
@@ -372,4 +372,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 2a2f402264017a576ec40e0546a1c78a0526386d
