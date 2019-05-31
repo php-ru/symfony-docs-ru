@@ -1,10 +1,6 @@
 Negative
 ========
 
-.. versionadded:: 4.3
-
-    The ``Negative`` constraint was introduced in Symfony 4.3.
-
 Validates that a value is a negative number. Zero is neither positive nor
 negative, so you must use :doc:`/reference/constraints/NegativeOrZero` if you
 want to allow zero as value.
@@ -105,4 +101,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: e861d6434db149f8438ba86037db17d8823f8af7
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

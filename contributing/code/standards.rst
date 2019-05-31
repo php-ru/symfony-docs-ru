@@ -268,7 +268,7 @@ Documentation
 * When adding a new class or when making significant changes to an existing class,
   an ``@author`` tag with personal contact information may be added, or expanded.
   Please note it is possible to have the personal contact information updated or
-  removed per request to the doc:`core team </contributing/code/core_team>`.
+  removed per request to the :doc:`core team </contributing/code/core_team>`.
 
 License
 ~~~~~~~
@@ -288,4 +288,4 @@ License
 .. _`snake_case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: f22d2d54d6bf3ad377e814a6f728d30a530a0bc8
+.. revision: 3b135ec048548203c14f6192a856ccce1c139dce

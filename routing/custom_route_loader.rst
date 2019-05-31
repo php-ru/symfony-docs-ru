@@ -137,11 +137,6 @@ extend or implement any special class, but the called method must return a
 
     If your service is invokable, you don't need to precise the method to use.
 
-.. versionadded:: 4.3
-
-    The support of the ``__invoke()`` method to create invokable route loader
-    services was introduced in Symfony 4.3.
-
 Creating a custom Loader
 ------------------------
 
@@ -375,4 +370,4 @@ configuration file - you can call the
 .. _`ChainRouter`: https://symfony.com/doc/current/cmf/components/routing/chain.html
 
 .. ready: no
-.. revision: 5d6766afc43db244ac586455b88f3050ef35be40
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

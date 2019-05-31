@@ -28,7 +28,7 @@ To use it, first register a new handler service:
 
                     # If you're using Doctrine & want to re-use that connection, then:
                     # comment-out the above 2 lines and uncomment the line below
-                    # - !service { class: PDO, factory: 'database_connection:getWrappedConnection' }
+                    # - !service { class: PDO, factory: ['@database_connection', 'getWrappedConnection'] }
                     # If you get transaction issues (e.g. after login) uncomment the line below
                     # - { lock_mode: 1 }
 
@@ -275,4 +275,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: 04a043b8d16b6423e5b493e2828f6184a44cddb9
+.. revision: f8b867fd0cb34e8c368b30f57de57fbbc633a26d

@@ -50,6 +50,9 @@ Inside a Symfony application, you can dump the files with those commands using
     $ php bin/console workflow:dump workflow_name | dot -Tsvg -o workflow_name.svg
     $ php bin/console workflow:dump workflow_name --dump-format=puml | java -jar plantuml.jar -p  > workflow_name.png
 
+    # highlight 'place1' and 'place2' in the dumped workflow
+    $ php bin/console workflow:dump name place1 place2 | dot -Tsvg -o graph.svg
+
 .. note::
 
     The ``dot`` command is part of Graphviz. You can download it and read
@@ -63,4 +66,4 @@ Inside a Symfony application, you can dump the files with those commands using
 .. _PlantUML.com: http://plantuml.com/
 
 .. ready: no
-.. revision: d6b8d18d04459b441d3a39a961bdf77e9bea29d5
+.. revision: 297275c1c5577b7304dd155437851e29ead78d46

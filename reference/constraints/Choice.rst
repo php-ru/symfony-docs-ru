@@ -322,10 +322,6 @@ Parameter          Description
 ``{{ value }}``    The current (invalid) value
 =================  ============================================================
 
-.. versionadded:: 4.3
-
-    The ``{{ choices }}`` parameter was introduced in Symfony 4.3.
-
 message
 ~~~~~~~
 
@@ -370,10 +366,6 @@ Parameter          Description
 ``{{ value }}``    The current (invalid) value
 =================  ============================================================
 
-.. versionadded:: 4.3
-
-    The ``{{ choices }}`` parameter was introduced in Symfony 4.3.
-
 multiple
 ~~~~~~~~
 
@@ -404,4 +396,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 165e57347c9e28fd348b6f3b2c6240180cbb1370
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

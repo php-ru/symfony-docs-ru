@@ -197,9 +197,9 @@ of Symfony and the latest beta release:
         include:
               # Minimum supported dependencies with the latest and oldest PHP version
             - php: 7.2
-              env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
+              env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="max[self]=0"
             - php: 7.0
-              env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="weak_vendors"
+              env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest" SYMFONY_DEPRECATIONS_HELPER="max[self]=0"
 
               # Test the latest stable release
             - php: 7.0
@@ -558,4 +558,4 @@ Learn more
 .. _`Travis Cron`: https://docs.travis-ci.com/user/cron-jobs/
 
 .. ready: no
-.. revision: 737cc7f3046bd9272cf4c5c652f727998e6d01ca
+.. revision: 988badf2f025e0c57b2da5ed8c5d60fd0f68a586

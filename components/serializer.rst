@@ -223,11 +223,6 @@ normalized data, instead of the denormalizer re-creating them. Note that
 arrays of objects. Those will still be replaced when present in the normalized
 data.
 
-.. versionadded:: 4.3
-
-    The ``AbstractObjectNormalizer::DEEP_OBJECT_TO_POPULATE`` option was
-    introduced in Symfony 4.3.
-
 .. _component-serializer-attributes-groups:
 
 Attributes Groups
@@ -433,12 +428,6 @@ key in the ``context`` parameter of the desired serializer method::
 
     $serializer = new Serializer([$normalizer], [$encoder]);
     $serializer->serialize($person, 'json', ['ignored_attributes' => ['age']]); // Output: {"name":"foo"}
-
-.. deprecated:: 4.2
-
-    The :method:`Symfony\\Component\\Serializer\\Normalizer\\AbstractNormalizer::setIgnoredAttributes`
-    method that was used as an alternative to the ``ignored_attributes`` option
-    was deprecated in Symfony 4.2.
 
 .. _component-serializer-converting-property-names-when-serializing-and-deserializing:
 
@@ -647,14 +636,19 @@ When serializing, you can set a callback to format a specific object property::
     use Symfony\Component\Serializer\Serializer;
 
     $encoder = new JsonEncoder();
-    $normalizer = new GetSetMethodNormalizer();
 
     // all callback parameters are optional (you can omit the ones you don't use)
     $callback = function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = []) {
         return $innerObject instanceof \DateTime ? $innerObject->format(\DateTime::ISO8601) : '';
     };
 
-    $normalizer->setCallbacks(['createdAt' => $callback]);
+    $defaultContext = [
+        AbstractNormalizer::CALLBACKS => [
+            'createdAt' => $callback,
+        ],
+    ];
+
+    $normalizer = new GetSetMethodNormalizer(null, null, null, null, null, $defaultContext);
 
     $serializer = new Serializer([$normalizer], [$encoder]);
 
@@ -788,10 +782,6 @@ The ``CsvEncoder`` encodes to and decodes from CSV.
 
 You can pass the context key ``as_collection`` in order to have the results
 always as a collection.
-
-.. deprecated:: 4.2
-
-    Relying on the default value ``false`` is deprecated since Symfony 4.2.
 
 The ``XmlEncoder``
 ~~~~~~~~~~~~~~~~~~
@@ -939,12 +929,6 @@ when such a case is encountered::
 The ``setCircularReferenceLimit()`` method of this normalizer sets the number
 of times it will serialize the same object before considering it a circular
 reference. Its default value is ``1``.
-
-.. deprecated:: 4.2
-
-    The :method:`Symfony\\Component\\Serializer\\Normalizer\\AbstractNormalizer::setCircularReferenceHandler`
-    method is deprecated since Symfony 4.2. Use the ``circular_reference_handler``
-    key of the context instead.
 
 Instead of throwing an exception, circular references can also be handled
 by custom callables. This is especially useful when serializing entities
@@ -1476,4 +1460,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 898a6c1e68db443e6c5c6558572f1d58da5763db
+.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c

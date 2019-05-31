@@ -223,10 +223,6 @@ support blocking, and expects a TTL to avoid stalled locks::
 MongoDbStore
 ~~~~~~~~~~~~
 
-.. versionadded:: 4.3
-
-    The ``MongoDbStore`` was introduced in Symfony 4.3.
-
 The MongoDbStore saves locks on a MongoDB server, it requires a
 ``\MongoDB\Client`` connection from `mongodb/mongodb`_. This store does not
 support blocking and expects a TTL to avoid stalled locks::
@@ -702,4 +698,4 @@ are still running.
 .. _`Replica Set Read and Write Semantics`: https://docs.mongodb.com/manual/applications/replication/
 
 .. ready: no
-.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

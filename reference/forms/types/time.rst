@@ -137,10 +137,6 @@ input_format
 
 **type**: ``string`` **default**: ``H:i:s``
 
-.. versionadded:: 4.3
-
-    The ``input_format`` option was introduced in Symfony 4.3.
-
 If the ``input`` option is set to ``string``, this option specifies the format
 of the time. This must be a valid `PHP time format`_.
 
@@ -243,4 +239,4 @@ Form Variables
 .. _`PHP time format`: https://secure.php.net/manual/en/function.date.php
 
 .. ready: no
-.. revision: 78faf26ffc2ca6b6e8e7ded55e8604db4cc774b0
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

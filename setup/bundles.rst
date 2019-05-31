@@ -142,7 +142,7 @@ following recommended configuration as the starting point of your own configurat
     matrix:
         include:
             - php: 5.3.3
-              env: COMPOSER_FLAGS='--prefer-lowest --prefer-stable' SYMFONY_DEPRECATIONS_HELPER=weak
+              env: COMPOSER_FLAGS='--prefer-lowest --prefer-stable' SYMFONY_DEPRECATIONS_HELPER=max[total]=999999
             - php: 5.6
               env: SYMFONY_VERSION='2.7.*'
             - php: 5.6
@@ -205,4 +205,4 @@ adding a ``setDefined()`` method. The recommended check in this case would be::
 .. _`Symfony Upgrade Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: 84e6684caf5dd0be15bff7bf7ae49598e0d50f5d
+.. revision: 2a750ead452880edabd91172345d17fc439b06f1

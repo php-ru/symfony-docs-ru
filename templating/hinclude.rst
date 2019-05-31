@@ -97,12 +97,6 @@ in your application configuration:
             ],
         ]);
 
-.. versionadded:: 4.3
-
-    The ``framework.fragments.hinclude_default_template`` option was introduced
-    in Symfony 4.3. In previous Symfony versions it was called
-    ``framework.templating.hinclude_default_template``.
-
 You can define default templates per ``render()`` function (which will override
 any global default template that is defined):
 
@@ -121,4 +115,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: 23a27d063309f88c5bedbfb996cfe9d258575aa4
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

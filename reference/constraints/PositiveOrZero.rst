@@ -1,10 +1,6 @@
 PositiveOrZero
 ==============
 
-.. versionadded:: 4.3
-
-    The ``PositiveOrZero`` constraint was introduced in Symfony 4.3.
-
 Validates that a value is a positive number or equal to zero. If you don't
 want to allow zero as value, use :doc:`/reference/constraints/Positive` instead.
 
@@ -104,4 +100,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: e861d6434db149f8438ba86037db17d8823f8af7
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

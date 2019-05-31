@@ -63,8 +63,8 @@ state of the current configuration to build a new one:
 
     // define the first configuration
     Encore
-        .setOutputPath('public/build/')
-        .setPublicPath('/build')
+        .setOutputPath('public/build/first_build/')
+        .setPublicPath('/build/first_build')
         .addEntry('app', './assets/js/app.js')
         .addStyleEntry('global', './assets/css/global.scss')
         .enableSassLoader()
@@ -83,8 +83,8 @@ state of the current configuration to build a new one:
 
     // define the second configuration
     Encore
-        .setOutputPath('public/build/')
-        .setPublicPath('/build')
+        .setOutputPath('public/build/second_build/')
+        .setPublicPath('/build/second_build')
         .addEntry('mobile', './assets/js/mobile.js')
         .addStyleEntry('mobile', './assets/css/mobile.less')
         .enableLessLoader()
@@ -113,10 +113,10 @@ Next, define the output directories of each build:
 
     # config/packages/webpack_encore.yaml
     webpack_encore:
-        output_path: '%kernel.public_dir%/public/default_build'
+        output_path: '%kernel.project_dir%/public/default_build'
         builds:
-            firstConfig: '%kernel.public_dir%/public/first_build'
-            secondConfig: '%kernel.public_dir%/public/second_build'
+            firstConfig: '%kernel.project_dir%/public/first_build'
+            secondConfig: '%kernel.project_dir%/public/second_build'
 
 Finally, use the third optional parameter of the ``encore_entry_*_tags()``
 functions to specify which build to use:
@@ -224,4 +224,4 @@ The following loaders are configurable with ``configureLoaderRule()``:
 .. _`Watching Options`: https://webpack.js.org/configuration/watch/#watchoptions
 
 .. ready: no
-.. revision: cc2bf103e52ba4842cacdd9f9b90d0d90a16c539
+.. revision: b96f9af9954b16f90f025703dbb026d0ab1c0225

@@ -1,10 +1,6 @@
 Timezone
 ========
 
-.. versionadded:: 4.3
-
-    The ``Timezone`` constraint was introduced in Symfony 4.3.
-
 Validates that a value is a valid timezone identifier (e.g. ``Europe/Paris``).
 
 ==========  ======================================================================
@@ -147,4 +143,4 @@ The value of this option must be a valid `ISO 3166-1 alpha-2`_ country code
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 .. ready: no
-.. revision: e861d6434db149f8438ba86037db17d8823f8af7
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

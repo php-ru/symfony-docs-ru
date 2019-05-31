@@ -171,11 +171,6 @@ values for the year, month and day fields::
 
 .. include:: /reference/forms/types/options/date_format.rst.inc
 
-.. deprecated:: 4.3
-
-    Using the ``format`` option when the ``html5`` option is enabled is deprecated
-    since Symfony 4.3.
-
 .. include:: /reference/forms/types/options/html5.rst.inc
 
 .. _form-reference-date-input:
@@ -255,4 +250,4 @@ Field Variables
 .. _`Bootstrap Datepicker`: https://github.com/eternicode/bootstrap-datepicker
 
 .. ready: no
-.. revision: 8c4b4c0c6ee2437597a45bf535cb1a5b33ae8d88
+.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4

@@ -357,22 +357,21 @@ with these tasks:
 
 .. code-block:: terminal
 
-    # updates the French translation file with the missing strings found in templates/
+    # updates the French translation file with the missing strings for that locale
     $ php bin/console translation:update --dump-messages --force fr
 
-    # updates the English translation file with the missing strings found in AppBundle
-    $ php bin/console translation:update --dump-messages --force en AppBundle
+The ``translation:update`` command looks for missing translations in:
+
+* Templates stored in the ``templates/`` directory (or any other directory
+  defined in the :ref:`twig.default_path <config-twig-default-path>` and
+  :ref:`twig.paths <config-twig-paths>` config options);
+* Any PHP file/class that injects or :doc:`autowires </service_container/autowiring>`
+  the ``translator`` service and makes calls to the ``trans()`` function.
 
 .. note::
 
     If you want to see the missing translation strings without actually updating
     the translation files, remove the ``--force`` option from the command above.
-
-.. tip::
-
-    If you need to extract translation strings from other sources, such as
-    controllers, forms and flash messages, consider using the more advanced
-    third-party `TranslationBundle`_.
 
 .. _translation-resource-locations:
 
@@ -382,19 +381,10 @@ Translation Resource/File Names and Locations
 Symfony looks for message files (i.e. translations) in the following default locations:
 
 * the ``translations/`` directory (at the root of the project);
-
-* the ``src/Resources/<bundle name>/translations/`` directory;
-
 * the ``Resources/translations/`` directory inside of any bundle.
 
-.. deprecated:: 4.2
-
-    Using the ``src/Resources/<bundle name>/translations/`` directory to store
-    translations was deprecated in Symfony 4.2. Use instead the directory
-    defined in the ``default_path`` option (which is ``translations/`` by default).
-
 The locations are listed here with the highest priority first. That is, you can
-override the translation messages of a bundle in any of the top two directories.
+override the translation messages of a bundle in the first directory.
 
 The override mechanism works at a key level: only the overridden keys need
 to be listed in a higher priority message file. When a key is not found
@@ -564,7 +554,6 @@ Learn more
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 .. _`Translatable Extension`: http://atlantic18.github.io/DoctrineExtensions/doc/translatable.html
 .. _`Translatable Behavior`: https://github.com/KnpLabs/DoctrineBehaviors
-.. _`TranslationBundle`: https://github.com/php-translation/symfony-bundle
 
 .. ready: no
-.. revision: de41795e29b42be1211d5606d5541bb1547e4a36
+.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c

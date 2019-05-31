@@ -145,7 +145,6 @@ encoding algorithm. Also, each algorithm defines different config options:
                     algorithm:   'sodium'
                     memory_cost:  16384 # Amount in KiB. (16384 = 16 MiB)
                     time_cost:    2     # Number of iterations
-                    threads:      4     # Number of parallel threads
 
                 # PBKDF2 encoder using SHA512 hashing with default options
                 App\Entity\User: 'sha512'
@@ -183,14 +182,12 @@ encoding algorithm. Also, each algorithm defines different config options:
 
                 <!-- Sodium encoder with custom options -->
                 <!-- memory_cost: amount in KiB. (16384 = 16 MiB)
-                     time_cost: number of iterations
-                     threads: number of parallel threads -->
+                     time_cost: number of iterations -->
                 <encoder
                     class="App\Entity\User"
                     algorithm="sodium"
                     memory_cost="16384"
                     time_cost="2"
-                    threads="4"
                 />
 
                 <!-- PBKDF2 encoder using SHA512 hashing with default options -->
@@ -230,7 +227,6 @@ encoding algorithm. Also, each algorithm defines different config options:
                     'algorithm' => 'sodium',
                     'memory_cost' => 16384, // Amount in KiB. (16384 = 16 MiB)
                     'time_cost' => 2,       // Number of iterations
-                    'threads' => 4,         // Number of parallel threads
                 ],
 
                 // PBKDF2 encoder using SHA512 hashing with default options
@@ -239,17 +235,6 @@ encoding algorithm. Also, each algorithm defines different config options:
                 ],
             ],
         ]);
-
-.. deprecated:: 4.3
-
-    The ``threads`` configuration option was deprecated in Symfony 4.3. No
-    alternative is provided because starting from Symfony 5.0 this value will be
-    hardcoded to ``1`` (one thread).
-
-.. versionadded:: 4.3
-
-    The ``sodium`` algorithm was introduced in Symfony 4.3. In previous Symfony
-    versions it was called ``argon2i``.
 
 .. tip::
 
@@ -262,11 +247,6 @@ encoding algorithm. Also, each algorithm defines different config options:
 
 Using the Sodium Password Encoder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. versionadded:: 4.3
-
-    The ``SodiumPasswordEncoder`` was introduced in Symfony 4.3. In previous
-    Symfony versions it was called ``Argon2iPasswordEncoder``.
 
 It uses the `Argon2 key derivation function`_ and it's the encoder recommended
 by Symfony. Argon2 support was introduced in PHP 7.2, but if you use an earlier
@@ -540,25 +520,6 @@ The ``invalidate_session`` option allows to redefine this behavior. Set this
 option to ``false`` in every firewall and the user will only be logged out from
 the current firewall and not the other ones.
 
-logout_on_user_change
-~~~~~~~~~~~~~~~~~~~~~
-
-**type**: ``boolean`` **default**: ``true``
-
-.. deprecated:: 4.1
-
-    The ``logout_on_user_change`` option was deprecated in Symfony 4.1.
-
-If ``false`` this option makes Symfony to not trigger a logout when the user has
-changed. Doing that is deprecated, so this option should set to ``true`` or
-unset to avoid getting deprecation messages.
-
-The user is considered to have changed when the user class implements
-:class:`Symfony\\Component\\Security\\Core\\User\\EquatableInterface` and the
-``isEqualTo()`` method returns ``false``. Also, when any of the properties
-required by the :class:`Symfony\\Component\\Security\\Core\\User\\UserInterface`
-(like the username, password or salt) changes.
-
 success_handler
 ~~~~~~~~~~~~~~~
 
@@ -760,4 +721,4 @@ role inheritance rules by creating a role hierarchy, as explained in
 .. _`cryptographic salt`: https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 .. ready: no
-.. revision: 730689c2e678a50fa3eca59848600c4d50f680a5
+.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c

@@ -301,6 +301,8 @@ on. Set it to ``0`` to disable all the optimizations. You can even enable or
 disable these optimizations selectively, as explained in the Twig documentation
 about `the optimizer extension`_.
 
+.. _config-twig-default-path:
+
 default_path
 ~~~~~~~~~~~~
 
@@ -315,19 +317,12 @@ paths
 
 **type**: ``array`` **default**: ``null``
 
-.. deprecated:: 4.2
-
-    Using the ``src/Resources/views/`` directory to store templates was
-    deprecated in Symfony 4.2. Use instead the directory defined in the
-    ``default_path`` option (which is ``templates/`` by default).
-
 This option defines the directories where Symfony will look for Twig templates
 in addition to the default locations. Symfony looks for the templates in the
 following order:
 
 #. The directories defined in this option;
 #. The ``Resources/views/`` directories of the bundles used in the application;
-#. The ``src/Resources/views/`` directory of the application;
 #. The directory defined in the ``default_path`` option.
 
 The values of the ``paths`` option are defined as ``key: value`` pairs where the
@@ -432,4 +427,4 @@ and the non-existing values are replaced by ``null``.
 .. _`the optimizer extension`: https://twig.symfony.com/doc/2.x/api.html#optimizer-extension
 
 .. ready: no
-.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa
+.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4

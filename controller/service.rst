@@ -103,14 +103,14 @@ which is a common practice when following the `ADR pattern`_
 
     .. code-block:: yaml
 
-        # app/config/routing.yml
+        # config/routes.yaml
         hello:
             path:     /hello/{name}
             defaults: { _controller: app.hello_controller }
 
     .. code-block:: xml
 
-        <!-- app/config/routing.xml -->
+        <!-- config/routes.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <routes xmlns="http://symfony.com/schema/routing"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -190,4 +190,4 @@ If you want to know what type-hints to use for each service, see the
 .. _`ADR pattern`: https://en.wikipedia.org/wiki/Action%E2%80%93domain%E2%80%93responder
 
 .. ready: no
-.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972
+.. revision: f97b6cf8c6c179560ff35ffa0d9433c0a842ae89

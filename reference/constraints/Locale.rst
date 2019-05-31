@@ -8,10 +8,13 @@ the two letter `ISO 639-1`_ *language* code (e.g. ``fr``), or the language code
 followed by an underscore (``_``) and the `ISO 3166-1 alpha-2`_ *country* code
 (e.g. ``fr_FR`` for French/France).
 
+The given locale values are *canonicalized* before validating them to avoid
+issues with wrong uppercase/lowercase values and to remove unneeded elements
+(e.g. ``FR-fr.utf8`` will be validated as ``fr_FR``).
+
 ==========  ===================================================================
 Applies to  :ref:`property or method <validation-property-target>`
-Options     - `canonicalize`_
-            - `groups`_
+Options     - `groups`_
             - `message`_
             - `payload`_
 Class       :class:`Symfony\\Component\\Validator\\Constraints\\Locale`
@@ -89,19 +92,6 @@ Basic Usage
 Options
 -------
 
-canonicalize
-~~~~~~~~~~~~
-
-**type**: ``boolean`` **default**: ``false``
-
-.. deprecated:: 4.1
-
-    Using this option with value ``false`` was deprecated in Symfony 4.1 and it
-    will throw an exception in Symfony 5.0. Use ``true`` instead.
-
-If ``true``, the :phpmethod:`Locale::canonicalize` method will be applied before checking
-the validity of the given locale (e.g. ``FR-fr.utf8`` is transformed into ``fr_FR``).
-
 .. include:: /reference/constraints/_groups-option.rst.inc
 
 message
@@ -126,4 +116,4 @@ Parameter        Description
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4

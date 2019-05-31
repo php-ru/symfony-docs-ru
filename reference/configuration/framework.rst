@@ -90,30 +90,51 @@ Configuration
 
 * `http_client`_
 
-  * `auth_basic`_
-  * `auth_bearer`_
-  * `base_uri`_
-  * `bindto`_
-  * `buffer`_
-  * `cafile`_
-  * `capath`_
-  * `capture_peer_cert_chain`_
-  * `ciphers`_
-  * `headers`_
-  * `http_version`_
-  * `local_cert`_
-  * `local_pk`_
+  * :ref:`default_options <reference-http-client-default-options>`
+
+      * `bindto`_
+      * `cafile`_
+      * `capath`_
+      * `ciphers`_
+      * `headers`_
+      * `http_version`_
+      * `local_cert`_
+      * `local_pk`_
+      * `max_redirects`_
+      * `no_proxy`_
+      * `passphrase`_
+      * `peer_fingerprint`_
+      * `proxy`_
+      * `resolve`_
+      * `timeout`_
+      * `verify_host`_
+      * `verify_peer`_
+
   * `max_host_connections`_
-  * `max_redirects`_
-  * `no_proxy`_
-  * `passphrase`_
-  * `peer_fingerprint`_
-  * `proxy`_
-  * `query`_
-  * `resolve`_
-  * `timeout`_
-  * `verify_host`_
-  * `verify_peer`_
+  * :ref:`scoped_clients <reference-http-client-scoped-clients>`
+
+      * `scope`_
+      * `auth_basic`_
+      * `auth_bearer`_
+      * `base_uri`_
+      * `bindto`_
+      * `cafile`_
+      * `capath`_
+      * `ciphers`_
+      * `headers`_
+      * `http_version`_
+      * `local_cert`_
+      * `local_pk`_
+      * `max_redirects`_
+      * `no_proxy`_
+      * `passphrase`_
+      * `peer_fingerprint`_
+      * `proxy`_
+      * `query`_
+      * `resolve`_
+      * `timeout`_
+      * `verify_host`_
+      * `verify_peer`_
 
 * `http_method_override`_
 * `ide`_
@@ -187,16 +208,6 @@ Configuration
   * `storage_id`_
   * `use_cookies`_
 
-* `templating`_
-
-  * :ref:`cache <reference-templating-cache>`
-  * `engines`_
-  * :ref:`form <reference-templating-form>`
-
-    * `resources`_
-
-  * `loaders`_
-
 * `test`_
 * `translator`_
 
@@ -224,7 +235,6 @@ Configuration
     * `endpoint`_
 
   * `static_method`_
-  * `strict_email`_
   * `translation_domain`_
 
 * `workflows`_
@@ -425,10 +435,6 @@ disallow_search_engine_index
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **type**: ``boolean`` **default**: ``true`` when the debug mode is enabled, ``false`` otherwise.
-
-.. versionadded:: 4.3
-
-    The ``disallow_search_engine_index`` option was introduced in Symfony 4.3.
 
 If ``true``, Symfony adds a ``X-Robots-Tag: noindex`` HTTP tag to all responses
 (unless your own app adds that header, in which case it's not modified). This
@@ -634,12 +640,6 @@ hinclude_default_template
 
 **type**: ``string`` **default**: ``null``
 
-.. versionadded:: 4.3
-
-    The ``framework.fragments.hinclude_default_template`` option was introduced
-    in Symfony 4.3. In previous Symfony versions it was defined under
-    ``framework.templating.hinclude_default_template``.
-
 Sets the content shown during the loading of the fragment or when JavaScript
 is disabled. This can be either a template name or the content itself.
 
@@ -662,8 +662,13 @@ when the request starts with this path.
 http_client
 ~~~~~~~~~~~
 
-If there's only one HTTP client defined in the app, you can configure it
-directly under the ``framework.http_client`` option:
+When the HttpClient component is installed, an HTTP client is available
+as a service named ``http_client`` or using the autowiring alias
+:class:`Symfony\\Contracts\\HttpClient\\HttpClientInterface`.
+
+.. _reference-http-client-default-options:
+
+This service can be configured using ``framework.http_client.default_options``:
 
 .. code-block:: yaml
 
@@ -671,14 +676,17 @@ directly under the ``framework.http_client`` option:
     framework:
         # ...
         http_client:
-            headers: [{ 'X-Powered-By': 'ACME App' }]
             max_host_connections: 10
-            max_redirects: 7
+            default_options:
+                headers: [{ 'X-Powered-By': 'ACME App' }]
+                max_redirects: 7
 
-If the app defines multiple HTTP clients, you must give them a unique name and
-define them under the type of HTTP client you are creating (``http_clients`` for
-regular clients and ``api_clients`` for clients that include utilities to
-consume APIs):
+.. _reference-http-client-scoped-clients:
+
+Multiple pre-configured HTTP client services can be defined, each with its
+service name defined as a key under ``scoped_clients``. Scoped clients inherit
+the default options defined for the ``http_client`` service. You can override
+these options and can define a few others:
 
 .. code-block:: yaml
 
@@ -686,14 +694,20 @@ consume APIs):
     framework:
         # ...
         http_client:
-            http_clients:
-                crawler:
+            scoped_clients:
+                my_api.client:
+                    auth_bearer: secret_bearer_token
                     # ...
-                default:
-                    # ...
-            api_clients:
-                github:
-                    # ...
+
+Options defined for scoped clients apply only to URLs that match either their
+`base_uri`_ or the `scope`_ option when it is defined. Non-matching URLs always
+use default options.
+
+Each scoped client also defines a corresponding named autowiring alias.
+If you use for example
+``Symfony\Contracts\HttpClient\HttpClientInterface $myApiClient``
+as the type and name of an argument, autowiring will inject the ``my_api.client``
+service into your autowired classes.
 
 auth_basic
 ..........
@@ -743,15 +757,6 @@ bindto
 A network interface name, IP address, a host name or a UNIX socket to use as the
 outgoing network interface.
 
-buffer
-......
-
-**type**: ``boolean``
-
-.. TODO: improve this useless description
-
-Indicates if the response should be buffered or not.
-
 cafile
 ......
 
@@ -766,14 +771,6 @@ capath
 **type**: ``string``
 
 The path to a directory that contains one or more certificate authority files.
-
-capture_peer_cert_chain
-.......................
-
-**type**: ``boolean``
-
-If ``true``, the response includes a ``peer_certificate_chain`` attribute with
-the peer certificates (OpenSSL X.509 resources).
 
 ciphers
 .......
@@ -887,17 +884,27 @@ resolve
 
 A list of hostnames and their IP addresses to pre-populate the DNS cache used by
 the HTTP client in order to avoid a DNS lookup for those hosts. This option is
-useful both to improve performance and to make your tests easier.
+useful to improve security when IPs are checked before the URL is passed to the
+client and to make your tests easier.
 
 The value of this option is an associative array of ``domain => IP address``
 (e.g ``['symfony.com' => '46.137.106.254', ...]``).
+
+scope
+.....
+
+**type**: ``string``
+
+For scoped clients only: the regular expression that the URL must match before
+applying all other non-default options. By default, the scope is derived from
+`base_uri`_.
 
 timeout
 .......
 
 **type**: ``float`` **default**: depends on your PHP config
 
-Time, in seconds, to wait for a response. If the response takes longer, a
+Time, in seconds, to wait for a response. If the response stales for longer, a
 :class:`Symfony\\Component\\HttpClient\\Exception\\TransportException` is thrown.
 Its default value is the same as the value of PHP's `default_socket_timeout`_
 config option.
@@ -1847,119 +1854,6 @@ package:
     If you request an asset that is *not found* in the ``manifest.json`` file, the original -
     *unmodified* - asset path will be returned.
 
-templating
-~~~~~~~~~~
-
-.. _reference-templating-form:
-
-form
-....
-
-resources
-"""""""""
-
-**type**: ``string[]`` **default**: ``['FrameworkBundle:Form']``
-
-.. deprecated:: 4.3
-
-    The integration of the Templating component in FrameworkBundle has been
-    deprecated since version 4.3 and will be removed in 5.0. Form theming with
-    PHP templates will no longer be supported and you'll need to use Twig instead.
-
-A list of all resources for form theming in PHP. This setting is not required
-if you're :ref:`using the Twig format for your themes <forms-theming-twig>`.
-
-Assume you have custom global form themes in ``templates/form_themes/``, you can
-configure this like:
-
-.. configuration-block::
-
-    .. code-block:: yaml
-
-        # config/packages/framework.yaml
-        framework:
-            templating:
-                form:
-                    resources:
-                        - 'form_themes'
-
-    .. code-block:: xml
-
-        <!-- config/packages/framework.xml -->
-        <?xml version="1.0" encoding="UTF-8" ?>
-        <container xmlns="http://symfony.com/schema/dic/services"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xmlns:framework="http://symfony.com/schema/dic/symfony"
-            xsi:schemaLocation="http://symfony.com/schema/dic/services
-                https://symfony.com/schema/dic/services/services-1.0.xsd
-                http://symfony.com/schema/dic/symfony https://symfony.com/schema/dic/symfony/symfony-1.0.xsd">
-
-            <framework:config>
-                <framework:templating>
-                    <framework:form>
-                        <framework:resource>form_themes</framework:resource>
-                    </framework:form>
-                </framework:templating>
-            </framework:config>
-        </container>
-
-    .. code-block:: php
-
-        // config/packages/framework.php
-        $container->loadFromExtension('framework', [
-            'templating' => [
-                'form' => [
-                    'resources' => [
-                        'form_themes',
-                    ],
-                ],
-            ],
-        ]);
-
-.. note::
-
-    The default form templates from ``FrameworkBundle:Form`` will always
-    be included in the form resources.
-
-.. seealso::
-
-    See :ref:`forms-theming-global` for more information.
-
-.. _reference-templating-cache:
-
-cache
-.....
-
-**type**: ``string``
-
-The path to the cache directory for templates. When this is not set, caching
-is disabled.
-
-.. note::
-
-    When using Twig templating, the caching is already handled by the
-    TwigBundle and doesn't need to be enabled for the FrameworkBundle.
-
-engines
-.......
-
-**type**: ``string[]`` / ``string`` **required**
-
-The Templating Engine to use. This can either be a string (when only one
-engine is configured) or an array of engines.
-
-At least one engine is required.
-
-loaders
-.......
-
-**type**: ``string[]``
-
-An array (or a string when configuring just one loader) of service ids for
-templating loaders. Templating loaders are used to find and load templates
-from a resource (e.g. a filesystem or database). Templating loaders must
-implement :class:`Symfony\\Component\\Templating\\Loader\\LoaderInterface`.
-
 translator
 ~~~~~~~~~~
 
@@ -2043,10 +1937,6 @@ throw_exception_on_invalid_property_path
 
 **type**: ``boolean`` **default**: ``true``
 
-.. versionadded:: 4.3
-
-    The ``throw_exception_on_invalid_property_path`` option was introduced in Symfony 4.3.
-
 When enabled, the ``property_accessor`` service throws an exception when you
 try to access an invalid property path of an object.
 
@@ -2119,13 +2009,9 @@ has been compromised in a data breach.
 enabled
 .......
 
-**type**: ``boolean`` **default**: ``false``
+**type**: ``boolean`` **default**: ``true``
 
-.. versionadded:: 4.3
-
-    The ``enabled`` option was introduced in Symfony 4.3.
-
-If you set this option to ``true``, no HTTP requests will be made and the given
+If you set this option to ``false``, no HTTP requests will be made and the given
 password will be considered valid. This is useful when you don't want or can't
 make HTTP requests, such as in ``dev`` and ``test`` environments or in
 continuous integration servers.
@@ -2134,10 +2020,6 @@ endpoint
 ........
 
 **type**: ``string`` **default**: ``null``
-
-.. versionadded:: 4.3
-
-    The ``endpoint`` option was introduced in Symfony 4.3.
 
 By default, the :doc:`NotCompromisedPassword </reference/constraints/NotCompromisedPassword>`
 constraint uses the public API provided by `haveibeenpwned.com`_. This option
@@ -2154,20 +2036,6 @@ Defines the name of the static method which is called to load the validation
 metadata of the class. You can define an array of strings with the names of
 several methods. In that case, all of them will be called in that order to load
 the metadata.
-
-strict_email
-............
-
-**type**: ``Boolean`` **default**: ``false``
-
-.. deprecated:: 4.1
-
-    The ``strict_email`` option was deprecated in Symfony 4.1. Use the new
-    ``email_validation_mode`` option instead.
-
-If this option is enabled, the `egulias/email-validator`_ library will be
-used by the :doc:`/reference/constraints/Email` constraint validator. Otherwise,
-the validator uses a simple regular expression to validate email addresses.
 
 email_validation_mode
 .....................
@@ -2744,4 +2612,4 @@ to know their differences.
 .. _`haveibeenpwned.com`: https://haveibeenpwned.com/
 
 .. ready: no
-.. revision: f5b081e4046bf2a619dece1056693e1c1dd2b5d7
+.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c

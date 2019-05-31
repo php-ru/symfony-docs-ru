@@ -318,10 +318,6 @@ the ``switch_user`` firewall listener.
 The ``Symfony\Component\Security\Http\Event\DeauthenticatedEvent`` event is triggered when a token has been deauthenticated
 because of a user change, it can help you doing some clean-up task when a logout has been triggered.
 
-.. versionadded:: 4.3
-
-    The ``Symfony\Component\Security\Http\Event\DeauthenticatedEvent`` event was introduced in Symfony 4.3.
-
 .. seealso::
 
     For more information on switching users, see
@@ -331,4 +327,4 @@ because of a user change, it can help you doing some clean-up task when a logout
 .. _`BasePasswordEncoder::checkPasswordLength`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php
 
 .. ready: no
-.. revision: 1444b136ffd46ab57c389c20dd7e2ec8e9361e6c
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

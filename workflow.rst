@@ -46,7 +46,7 @@ like this:
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # config/framework.yaml
         framework:
             workflows:
                 blog_publishing:
@@ -197,8 +197,8 @@ As configured, the following property is used by the marking store::
 With this workflow named ``blog_publishing``, you can get help to decide
 what actions are allowed on a blog post::
 
-    use Symfony\Component\Workflow\Exception\LogicException;
     use App\Entity\BlogPost;
+    use Symfony\Component\Workflow\Exception\LogicException;
 
     $post = BlogPost();
 
@@ -318,7 +318,7 @@ workflow leaves a place::
     class WorkflowLogger implements EventSubscriberInterface
     {
         private $logger;
-        
+
         public function __construct(LoggerInterface $logger)
         {
             $this->logger = $logger;
@@ -502,10 +502,6 @@ place::
         }
     }
 
-.. versionadded:: 4.1
-
-    The transition blockers were introduced in Symfony 4.1.
-
 Usage in Twig
 -------------
 
@@ -558,10 +554,6 @@ The following example shows these functions in action:
 
 Storing Metadata
 ----------------
-
-.. versionadded:: 4.1
-
-    The feature to store metadata in workflows was introduced in Symfony 4.1.
 
 In case you need it, you can store arbitrary metadata in workflows, their
 places, and their transitions using the ``metadata`` option. This metadata can
@@ -680,8 +672,8 @@ requires:
 
 Then you can access this metadata in your controller as follows::
 
-    use Symfony\Component\Workflow\Registry;
     use App\Entity\BlogPost;
+    use Symfony\Component\Workflow\Registry;
 
     public function myController(Registry $registry, BlogPost $post)
     {
@@ -757,4 +749,4 @@ Learn more
    workflow/dumping-workflows
 
 .. ready: no
-.. revision: d6b8d18d04459b441d3a39a961bdf77e9bea29d5
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

@@ -439,10 +439,6 @@ This way, the ``$value`` argument will receive the previously normalized
 value, otherwise you can prepend the new normalizer by passing ``true`` as
 third argument.
 
-.. versionadded:: 4.3
-
-    The ``addNormalizer()`` method was introduced in Symfony 4.3.
-
 Default Values that Depend on another Option
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -836,4 +832,4 @@ options in your code.
 .. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
 
 .. ready: no
-.. revision: 337a9e2446f7d38f726c6b5c6e3a4c59e5faaa1b
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

@@ -66,9 +66,5 @@ which route is associated with the given URL:
     | Condition    | context.getMethod() in ['GET', 'HEAD', 'POST']          |
     +--------------+---------------------------------------------------------+
 
-.. versionadded:: 4.3
-
-    The ``Condition`` was added to the router debug output in Symfony 4.3.
-
 .. ready: no
-.. revision: 2a29904c0700e2ef602f0636a57d9249139874d1
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

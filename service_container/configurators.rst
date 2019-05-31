@@ -136,10 +136,10 @@ all the classes are already loaded as services. All you need to do is specify th
 
             # override the services to set the configurator
             App\Mail\NewsletterManager:
-                configurator: 'App\Mail\EmailConfigurator:configure'
+                configurator: ['@App\Mail\EmailConfigurator', 'configure']
 
             App\Mail\GreetingCardManager:
-                configurator: 'App\Mail\EmailConfigurator:configure'
+                configurator: ['@App\Mail\EmailConfigurator', 'configure']
 
     .. code-block:: xml
 
@@ -184,22 +184,7 @@ all the classes are already loaded as services. All you need to do is specify th
         $container->getDefinition(GreetingCardManager::class)
             ->setConfigurator([new Reference(EmailConfigurator::class), 'configure']);
 
-The traditional configurator syntax in YAML files used an array to define
-the service id and the method name:
-
-.. code-block:: yaml
-
-    app.newsletter_manager:
-        # new syntax
-        configurator: 'App\Mail\EmailConfigurator:configure'
-        # old syntax
-        configurator: ['@App\Mail\EmailConfigurator', configure]
-
 .. _configurators-invokable:
-
-.. versionadded:: 4.3
-
-    Invokable configurators for services were introduced in Symfony 4.3.
 
 Services can be configured via invokable configurators (replacing the
 ``configure()`` method with ``__invoke()``) by omitting the method name, just as
@@ -273,4 +258,4 @@ That's it! When requesting the ``App\Mail\NewsletterManager`` or
 passed to the ``EmailConfigurator::configure()`` method.
 
 .. ready: no
-.. revision: 112184bcca1c43c6760de303dc3a3446caa3cf17
+.. revision: 2f903fb771aedcd53dadd5caeef7d44ed763ca77

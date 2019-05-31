@@ -235,7 +235,7 @@ the following command to install the Doctrine fixtures bundle:
 
 .. code-block:: terminal
 
-    $ composer require doctrine/doctrine-fixtures-bundle
+    $ composer require --dev doctrine/doctrine-fixtures-bundle
 
 Then, this bundle is enabled automatically, but only for the ``dev`` and
 ``test`` environments::
@@ -283,4 +283,4 @@ Next: :doc:`/best_practices/controllers`
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: adfc77ff06fd29156622e81d548e8e57d8d6000e

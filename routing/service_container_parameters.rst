@@ -75,10 +75,6 @@ inside your routing configuration:
             ;
         };
 
-.. versionadded:: 4.3
-
-    Support for boolean container parameters in routes was introduced in Symfony 4.3.
-
 You can now control and set the  ``app.locales`` parameter somewhere
 in your container:
 
@@ -212,4 +208,4 @@ container:
     :doc:`/configuration/using_parameters_in_dic`.
 
 .. ready: no
-.. revision: 275cee41ab6da722f133792161486c28dc7842b6
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

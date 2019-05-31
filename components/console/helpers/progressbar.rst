@@ -118,10 +118,6 @@ If ``$iterable = [1, 2]``, the previous code will output the following:
      1/2 [==============>-------------]  50%
      2/2 [============================] 100%
 
-.. versionadded:: 4.3
-
-    The ``iterate()`` method was introduced in Symfony 4.3.
-
 Customizing the Progress Bar
 ----------------------------
 
@@ -404,4 +400,4 @@ After a couple of iterations, the output in the terminal will look like this:
     68/100 [===================>--------]  68%
 
 .. ready: no
-.. revision: aac5cf68675cb4bb7e59affb512ef7410d21e380
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

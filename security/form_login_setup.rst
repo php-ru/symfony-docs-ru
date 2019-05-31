@@ -74,7 +74,7 @@ class that processes the login submit and 4) updates the main security config fi
         }
     }
 
-Edit the ``security.yml`` file in order to allow access for anyone to the
+Edit the ``security.yaml`` file in order to allow access for anyone to the
 ``/login`` route:
 
 .. configuration-block::
@@ -423,4 +423,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca
+.. revision: f97b6cf8c6c179560ff35ffa0d9433c0a842ae89

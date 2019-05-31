@@ -75,8 +75,7 @@ middleware stack. The component comes with a set of middleware that you can use.
 When using the message bus with Symfony's FrameworkBundle, the following middleware
 are configured for you:
 
-#. :class:`Symfony\\Component\\Messenger\\Middleware\\LoggingMiddleware` (logs the processing of your messages)
-#. :class:`Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware` (enables asynchronous processing)
+#. :class:`Symfony\\Component\\Messenger\\Middleware\\SendMessageMiddleware` (enables asynchronous processing, logs the processing of your messages if you pass a logger)
 #. :class:`Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware` (calls the registered handler(s))
 
 Example::
@@ -315,4 +314,4 @@ Learn more
 .. _SimpleBus project: http://simplebus.io
 
 .. ready: no
-.. revision: 5c7d9a91bbb8dc4076d4cb44d06b91d34656473b
+.. revision: 6bf9ef5d835f9e870e2ca92173aa9b8d853a5895

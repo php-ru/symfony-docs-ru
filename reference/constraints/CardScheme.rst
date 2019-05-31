@@ -138,14 +138,10 @@ Valid values are:
 * ``UATP``
 * ``VISA``
 
-.. versionadded:: 4.3
-
-    The ``UATP`` and ``MIR`` number schemes were introduced in Symfony 4.3.
-
 For more information about the used schemes, see
 `Wikipedia: Issuer identification number (IIN)`_.
 
 .. _`Wikipedia: Issuer identification number (IIN)`: https://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29
 
 .. ready: no
-.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

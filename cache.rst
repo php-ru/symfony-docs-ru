@@ -30,10 +30,6 @@ Basic uses of the cache looks like this::
 Symfony supports the Cache Contracts, PSR-6/16 and Doctrine Cache interfaces.
 You can read more about these at the :doc:`component documentation </components/cache>`.
 
-.. versionadded:: 4.2
-
-    The cache contracts were introduced in Symfony 4.2.
-
 .. _cache-configuration-with-frameworkbundle:
 
 Configuring Cache with FrameworkBundle
@@ -215,7 +211,7 @@ You can also create more customized pools:
                     # uses the "foobar.cache" pool as its backend but controls
                     # the lifetime and (like all pools) has a separate cache namespace
                     short_cache:
-                        adapter: cache.foobar
+                        adapter: foobar.cache
                         default_lifetime: 60
 
     .. code-block:: xml
@@ -612,10 +608,6 @@ To see all available cache pools:
 
     $ php bin/console cache:pool:list
 
-.. versionadded:: 4.3
-
-    The ``cache:pool:list`` command was introduced in Symfony 4.3.
-
 Clear one pool:
 
 .. code-block:: terminal
@@ -635,4 +627,4 @@ Clear all caches everywhere:
     $ php bin/console cache:pool:clear cache.global_clearer
 
 .. ready: no
-.. revision: 898a6c1e68db443e6c5c6558572f1d58da5763db
+.. revision: 2f903fb771aedcd53dadd5caeef7d44ed763ca77

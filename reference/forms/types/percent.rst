@@ -61,10 +61,6 @@ symbol
 
 **type**: ``boolean`` or ``string`` **default**: ``true``
 
-.. versionadded:: 4.3
-
-    The ``symbol`` option was introduced in Symfony 4.3.
-
 By default, fields are rendered with a percentage sign ``%`` after the input.
 Setting the value to ``false`` will not display the percentage sign. Setting the
 value to a ``string`` (e.g. ``‱``), will show that string instead of the default
@@ -137,4 +133,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 3e35008f2761af158056f16341932e8db13fd95d
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

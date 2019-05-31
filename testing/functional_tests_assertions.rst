@@ -4,11 +4,6 @@
 Functional Test specific Assertions
 ===================================
 
-.. versionadded:: 4.3
-
-    The shortcut methods for assertions using ``WebTestCase`` were introduced
-    in Symfony 4.3.
-
 When doing functional tests, sometimes you need to make complex assertions in
 order to check whether the ``Request``, the ``Response`` or the ``Crawler``
 contain the expected information to make your test succeed.
@@ -83,4 +78,4 @@ Panther only uses the ``BrowserKit`` component.
 .. _`symfony/panther`: https://github.com/symfony/panther
 
 .. ready: no
-.. revision: 3b1a1a13277e89cf8f16b58ad1fe0eab22982b3b
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

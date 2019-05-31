@@ -215,10 +215,6 @@ its existence, attributes, text, etc.
 The ``assertSelectorTextContains`` method is not a native PHPUnit assertion and is
 available thanks to the ``WebTestCase`` class.
 
-.. versionadded:: 4.3
-
-    The ``WebTestCase`` assertions were introduced in Symfony 4.3
-
 .. seealso::
 
     Using native PHPUnit methods, the same assertion would look like this::
@@ -1065,4 +1061,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: f2e535517b314ae90a20150a1faa9634fb832989
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

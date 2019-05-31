@@ -94,9 +94,13 @@ Below are common examples of valid DSNs showing a combination of available value
         'redis:?host[localhost]&host[localhost:6379]&host[/var/run/redis.sock:]&auth=my-password&redis_cluster=1'
     );
 
-.. versionadded:: 4.2
+`Redis Sentinel`_, which provides high availability for Redis, is also supported
+when using the Predis library. Use the ``redis_sentinel`` parameter to set the
+name of your service group::
 
-    The option to define multiple servers in a single DSN was introduced in Symfony 4.2.
+    RedisAdapter::createConnection(
+        'redis:?host[redis1:26379]&host[redis2:26379]&host[redis3:26379]&redis_sentinel=mymaster'
+    );
 
 .. note::
 
@@ -184,6 +188,7 @@ Available Options
 .. _`Predis`: https://packagist.org/packages/predis/predis
 .. _`Predis Connection Parameters`: https://github.com/nrk/predis/wiki/Connection-Parameters#list-of-connection-parameters
 .. _`TCP-keepalive`: https://redis.io/topics/clients#tcp-keepalive
+.. _`Redis Sentinel`: https://redis.io/topics/sentinel
 
 .. ready: no
-.. revision: e1037e9cd67777af8901c3d823ffdd33465fc587
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

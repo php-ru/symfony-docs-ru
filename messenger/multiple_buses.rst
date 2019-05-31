@@ -96,8 +96,14 @@ an **event bus**. The event bus could have zero or more subscribers.
             ],
         ]);
 
-This will generate the ``messenger.bus.commands``, ``messenger.bus.queries``
-and ``messenger.bus.events`` services that you can inject in your services.
+This will create three new services:
+
+* ``messenger.bus.commands``: autowireable with the :class:`Symfony\\Component\\Messenger\\MessageBusInterface`
+  type-hint (because this is the ``default_bus``);
+
+* ``messenger.bus.queries``: autowireable with the ``MessageBusInterface $messengerBusQueries``;
+
+* ``messenger.bus.queries``: autowireable with the ``MessageBusInterface $messengerBusEvents``.
 
 Type-hints and Auto-wiring
 --------------------------
@@ -289,4 +295,4 @@ You can also restrict the list to a specific bus by providing its name as argume
 .. _article about CQRS: https://martinfowler.com/bliki/CQRS.html
 
 .. ready: no
-.. revision: 23d1ab28b7c703b30af437943d381927da921f05
+.. revision: 3e670803994c4bb86285aa8304cba73ff7f3f2a5

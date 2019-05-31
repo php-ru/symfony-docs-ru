@@ -169,11 +169,6 @@ This will produce: ``He is an author``
 Accessing a non Existing Property Path
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionadded:: 4.3
-
-    The ``disableExceptionOnInvalidPropertyPath()`` method was introduced in
-    Symfony 4.3.
-
 By default a :class:`Symfony\\Component\\PropertyAccess\\Exception\\NoSuchPropertyException`
 is thrown if the property path passed to :method:`PropertyAccessor::getValue<Symfony\\Component\\PropertyAccess\\PropertyAccessor::getValue>`
 does not exist. You can change this behavior using the
@@ -495,4 +490,4 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: 112184bcca1c43c6760de303dc3a3446caa3cf17
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

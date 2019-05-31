@@ -59,10 +59,6 @@ label_translation_parameters
 
 **type**: ``array`` **default**: ``[]``
 
-.. versionadded:: 4.3
-
-    The ``label_translation_parameters`` option was introduced in Symfony 4.3.
-
 The content of the `label`_ option is translated before displaying it, so it
 can contain :ref:`translation placeholders <component-translation-placeholders>`.
 This option defines the values used to replace those placeholders.
@@ -93,4 +89,4 @@ placeholders.
 .. include:: /reference/forms/types/options/attr_translation_parameters.rst.inc
 
 .. ready: no
-.. revision: 8c4b4c0c6ee2437597a45bf535cb1a5b33ae8d88
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

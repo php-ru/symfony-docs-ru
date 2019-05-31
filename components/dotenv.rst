@@ -104,10 +104,6 @@ You can adjust the variable defining the environment, default environment and te
 environments by passing them as additional arguments to ``Dotenv::loadEnv()``
 (see :method:`Symfony\\Component\\Dotenv\\Dotenv::loadEnv` for details).
 
-.. versionadded:: 4.2
-
-    The ``Dotenv::loadEnv()`` method was introduced in Symfony 4.2.
-
 You should never store a ``.env`` file in your code repository as it might
 contain sensitive information; create a ``.env.dist`` file (or multiple
 environment-specific ones as shown above) with sensible defaults instead.
@@ -155,4 +151,4 @@ Embed commands via ``$()`` (not supported on Windows):
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

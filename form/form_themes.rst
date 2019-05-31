@@ -294,10 +294,6 @@ field without having to :doc:`create a custom form type </form/create_custom_fie
         ]);
     }
 
-.. versionadded:: 4.3
-
-    The ``block_prefix`` option was introduced in Symfony 4.3.
-
 Now you can use ``wrapped_text_row``, ``wrapped_text_widget``, etc. as the block
 names.
 
@@ -608,4 +604,4 @@ is a collection of fields (e.g. a whole form), and not just an individual field:
 .. _`Twig parent() function`: https://twig.symfony.com/doc/2.x/functions/parent.html
 
 .. ready: no
-.. revision: 165e57347c9e28fd348b6f3b2c6240180cbb1370
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

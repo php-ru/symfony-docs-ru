@@ -1,10 +1,6 @@
 NotCompromisedPassword
 ======================
 
-.. versionadded:: 4.3
-
-    The ``NotCompromisedPassword`` constraint was introduced in Symfony 4.3.
-
 Validates that the given password has not been compromised by checking that it is
 not included in any of the public data breaches tracked by `haveibeenpwned.com`_.
 
@@ -137,4 +133,4 @@ to a higher value because it could decrease the security of your application.
 .. _`k-anonimity password validation`: https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/
 
 .. ready: no
-.. revision: e861d6434db149f8438ba86037db17d8823f8af7
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

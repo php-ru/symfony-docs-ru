@@ -315,10 +315,6 @@ spot (since it'll render the field for you).
 form_parent(form_view)
 ......................
 
-.. versionadded:: 4.3
-
-    The ``form_parent()`` function was introduced in Symfony 4.3.
-
 Returns the parent form view or ``null`` if the form view already is the
 root form. Using this function should be preferred over accessing the parent
 form using ``form.parent``. The latter way will produce different results
@@ -433,4 +429,4 @@ Variable                Usage
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: f2e535517b314ae90a20150a1faa9634fb832989
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

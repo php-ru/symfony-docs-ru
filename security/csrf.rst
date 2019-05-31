@@ -113,10 +113,6 @@ You can also customize the rendering of the CSRF form field creating a custom
 the field (e.g. define ``{% block csrf_token_widget %} ... {% endblock %}`` to
 customize the entire form field contents).
 
-.. versionadded:: 4.3
-
-    The ``csrf_token`` form field prefix was introduced in Symfony 4.3.
-
 CSRF Protection in Login Forms
 ------------------------------
 
@@ -166,4 +162,4 @@ to check its validity::
 .. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
 
 .. ready: no
-.. revision: e8e7b44cd6370d06bb2e7328e6547fcd33a7bbaf
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

@@ -70,10 +70,6 @@ helper method allows creating and configuring a `Memcached`_ class instance usin
         'memcached:?host[localhost]&host[localhost:12345]&host[/some/memcached.sock:]=3'
     );
 
-.. versionadded:: 4.2
-
-    The option to define multiple servers in a single DSN was introduced in Symfony 4.2.
-
 The `Data Source Name (DSN)`_ for this adapter must use the following format:
 
 .. code-block:: text
@@ -304,4 +300,4 @@ Available Options
 .. _`Domain Name System (DNS)`: https://en.wikipedia.org/wiki/Domain_Name_System
 
 .. ready: no
-.. revision: 1ae951bbf9e59a7b1dd4add9d3be24d90839a191
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

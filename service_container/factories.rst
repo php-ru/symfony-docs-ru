@@ -41,7 +41,7 @@ configure the service container to use the
 
             App\Email\NewsletterManager:
                 # call the static method
-                factory: ['App\Email\NewsletterManagerStaticFactory', createNewsletterManager]
+                factory: ['App\Email\NewsletterManagerStaticFactory', 'createNewsletterManager']
 
     .. code-block:: xml
 
@@ -104,7 +104,7 @@ Configuration of the service container then looks like this:
 
             App\Email\NewsletterManager:
                 # call a method on the specified factory service
-                factory: 'App\Email\NewsletterManagerFactory:createNewsletterManager'
+                factory: ['@App\Email\NewsletterManagerFactory', 'createNewsletterManager']
 
     .. code-block:: xml
 
@@ -144,20 +144,6 @@ Configuration of the service container then looks like this:
                 'createNewsletterManager',
             ]);
 
-.. note::
-
-    The traditional configuration syntax in YAML files used an array to define
-    the factory service and the method name:
-
-    .. code-block:: yaml
-
-        # config/services.yaml
-        App\Email\NewsletterManager:
-            # new syntax
-            factory: 'App\Email\NewsletterManagerFactory:createNewsletterManager'
-            # old syntax
-            factory: ['@App\Email\NewsletterManagerFactory', createNewsletterManager]
-
 .. _factories-invokable:
 
 Suppose you now change your factory method to ``__invoke()`` so that your
@@ -174,10 +160,6 @@ factory service can be used as a callback::
             return $newsletterManager;
         }
     }
-
-.. versionadded:: 4.3
-
-    Invokable factories for services were introduced in Symfony 4.3.
 
 Services can be created and configured via invokable factories by omitting the
 method name, just as routes can reference
@@ -248,7 +230,7 @@ example takes the ``templating`` service as an argument:
             # ...
 
             App\Email\NewsletterManager:
-                factory:   'App\Email\NewsletterManagerFactory:createNewsletterManager'
+                factory:   ['@App\Email\NewsletterManagerFactory', createNewsletterManager]
                 arguments: ['@templating']
 
     .. code-block:: xml
@@ -286,4 +268,4 @@ example takes the ``templating`` service as an argument:
             ]);
 
 .. ready: no
-.. revision: 112184bcca1c43c6760de303dc3a3446caa3cf17
+.. revision: 2f903fb771aedcd53dadd5caeef7d44ed763ca77

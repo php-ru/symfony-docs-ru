@@ -343,11 +343,6 @@ any service whose class implements ``Psr\Log\LoggerAwareInterface`` will
 receive a call to its method ``setLogger()`` with the default logger service
 passed as a service.
 
-.. versionadded:: 4.2
-
-    The automatic call to ``setLogger()`` when implementing ``LoggerAwareInterface``
-    was introduced in Symfony 4.2.
-
 If you want to use in your own services a pre-configured logger which uses a
 specific channel (``app`` by default), use the ``monolog.logger`` tag  with the
 ``channel`` property as explained in the
@@ -388,4 +383,4 @@ Learn more
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php#L25
 
 .. ready: no
-.. revision: 7305bf0b9e21bf928e1ed3f61024eeca6bad6ac1
+.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee

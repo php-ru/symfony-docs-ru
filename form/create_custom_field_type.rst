@@ -164,12 +164,6 @@ link for details), create a ``shipping_widget`` block to handle this:
         {% endspaceless %}
     {% endblock %}
 
-.. note::
-
-    Symfony 4.2 deprecated calling ``FormRenderer::searchAndRenderBlock`` for
-    fields that have already been rendered. That's why the previous example
-    includes the ``... if not child.rendered`` statement.
-
 .. tip::
 
     You can further customize the template used to render each children of the
@@ -289,4 +283,4 @@ Have fun!
 .. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40
+.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4

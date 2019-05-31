@@ -97,9 +97,9 @@ done!
 
     Sometimes, you can't fix all deprecations (e.g. something was deprecated
     in 3.4 and you still need to support 3.3). In these cases, you can still
-    use the bridge to fix as many deprecations as possible and then switch
-    to the weak test mode to make your tests pass again. You can do this by
-    using the ``SYMFONY_DEPRECATIONS_HELPER`` env variable:
+    use the bridge to fix as many deprecations as possible and then allow
+    more of them to make your tests pass again. You can do this by using the
+    ``SYMFONY_DEPRECATIONS_HELPER`` env variable:
 
     .. code-block:: xml
 
@@ -108,11 +108,15 @@ done!
             <!-- ... -->
 
             <php>
-                <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak"/>
+                <env name="SYMFONY_DEPRECATIONS_HELPER" value="max[total]=999999"/>
             </php>
         </phpunit>
 
-    (you can also execute the command like ``SYMFONY_DEPRECATIONS_HELPER=weak phpunit``).
+    You can also execute the command like:
+
+    .. code-block:: terminal
+
+        $ SYMFONY_DEPRECATIONS_HELPER=max[total]=999999 php ./bin/phpunit
 
 .. _upgrade-major-symfony-composer:
 
@@ -163,4 +167,4 @@ This takes some work, but is optional. For details, see :ref:`upgrade-to-flex`.
 .. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
 
 .. ready: no
-.. revision: 688ecbac0590ea407fbe3c941c4b4c5031a78c2b
+.. revision: 64141fc17f6fb1bc7f3502029815f5746f96b735
