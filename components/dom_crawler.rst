@@ -482,6 +482,9 @@ To work with multi-dimensional fields::
         <input name="multi[]"/>
         <input name="multi[]"/>
         <input name="multi[dimensional]"/>
+        <input name="multi[dimensional][]" value="1"/>
+        <input name="multi[dimensional][]" value="2"/>
+        <input name="multi[dimensional][]" value="3"/>
     </form>
 
 Pass an array of values::
@@ -493,6 +496,11 @@ Pass an array of values::
     $form->setValues(['multi' => [
         1             => 'value',
         'dimensional' => 'an other value',
+    ]]);
+
+    // tick multiple checkboxes at once
+    $form->setValues(['multi' => [
+        'dimensional' => [1, 3] // it uses the input value to determine which checkbox to tick
     ]]);
 
 This is great, but it gets better! The ``Form`` object allows you to interact
@@ -570,7 +578,6 @@ the whole form or specific field(s)::
     $form['country']->select('Invalid value');
 
 .. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
-.. _Packagist: https://packagist.org/packages/symfony/dom-crawler
 
 Learn more
 ----------
@@ -579,4 +586,4 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

@@ -255,7 +255,7 @@ MySQL
         `sess_data` BLOB NOT NULL,
         `sess_time` INTEGER UNSIGNED NOT NULL,
         `sess_lifetime` MEDIUMINT NOT NULL
-    ) COLLATE utf8_bin, ENGINE = InnoDB;
+    ) COLLATE utf8mb4_bin, ENGINE = InnoDB;
 
 .. note::
 
@@ -311,4 +311,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 0392c6002cf1ab98cb2a3aee4a5a0d884831c2b9

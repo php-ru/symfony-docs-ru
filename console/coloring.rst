@@ -74,11 +74,11 @@ You can also set these colors and options directly inside the tagname::
     or use the :method:`Symfony\\Component\\Console\\Formatter\\OutputFormatter::escape`
     method to escape all the tags included in the given string.
 
-.. _Cmder: http://cmder.net/
+.. _Cmder: https://cmder.net/
 .. _ConEmu: https://conemu.github.io/
 .. _ANSICON: https://github.com/adoxa/ansicon/releases
 .. _Mintty: https://mintty.github.io/
 .. _Hyper: https://hyper.is/
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 23a8e258a7ec3d8b7de466796e90e4ce7d9f650a

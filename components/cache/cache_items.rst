@@ -58,7 +58,7 @@ corresponding *getter* methods::
 Cache Item Expiration
 ~~~~~~~~~~~~~~~~~~~~~
 
-By default cache items are stored permanently. In practice, this "permanent
+By default, cache items are stored permanently. In practice, this "permanent
 storage" can vary greatly depending on the type of cache being used, as
 explained in the :doc:`/components/cache/cache_pools` article.
 
@@ -114,4 +114,4 @@ for cache hits::
     }
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

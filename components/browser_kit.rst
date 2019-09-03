@@ -247,8 +247,7 @@ Learn more
 * :doc:`/components/css_selector`
 * :doc:`/components/dom_crawler`
 
-.. _`Packagist`: https://packagist.org/packages/symfony/browser-kit
 .. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

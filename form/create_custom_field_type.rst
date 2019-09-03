@@ -5,7 +5,7 @@ How to Create a Custom Form Field Type
 ======================================
 
 Symfony comes with a bunch of core field types available for building forms.
-However there are situations where you may want to create a custom form field
+However, there are situations where you may want to create a custom form field
 type for a specific purpose. This article assumes you need a field definition
 that holds a shipping option, based on the existing choice field. This section
 explains how the field is defined and how you can customize its layout.
@@ -151,7 +151,7 @@ link for details), create a ``shipping_widget`` block to handle this:
 
 .. tip::
 
-    You can further customize the template used to render each children of the
+    You can further customize the template used to render each child of the
     choice type. The block to override in that case is named "block name" +
     ``_entry_`` + "element name" (``label``, ``errors`` or ``widget``) (e.g. to
     customize the labels of the children of the Shipping widget you'd need to
@@ -312,7 +312,6 @@ See :ref:`service-container-creating-service` for more details.
 Have fun!
 
 .. _`ChoiceType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/ChoiceType.php
-.. _`FieldType`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Form/Extension/Core/Type/FieldType.php
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

@@ -717,10 +717,7 @@ Learn more
     /reference/forms/types
     /http_cache/form_csrf_caching
 
-.. _`Symfony Form component`: https://github.com/symfony/form
-.. _`DateTime`: https://php.net/manual/en/class.datetime.php
-.. _`2.8 UPGRADE Log`: https://github.com/symfony/symfony/blob/2.8/UPGRADE-2.8.md#form
 .. _`Symfony Forms screencast series`: https://symfonycasts.com/screencast/symfony3-forms
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

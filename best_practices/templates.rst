@@ -153,7 +153,7 @@ be used as a Twig extension.
 Next: :doc:`/best_practices/forms`
 
 .. _`Twig`: https://twig.symfony.com/
-.. _`Parsedown`: http://parsedown.org/
+.. _`Parsedown`: https://parsedown.org/
 
 .. ready: no
-.. revision: 009931f3c4099f59bd9a5c1c5b43a193ee1a6c4a
+.. revision: 23a8e258a7ec3d8b7de466796e90e4ce7d9f650a

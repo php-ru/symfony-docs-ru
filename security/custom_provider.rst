@@ -352,7 +352,5 @@ is compared to the hashed password returned by your ``getPassword()`` method.
                 ],
             ]);
 
-.. _MessageDigestPasswordEncoder: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/MessageDigestPasswordEncoder.php
-
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

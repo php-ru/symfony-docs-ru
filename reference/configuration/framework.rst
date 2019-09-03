@@ -142,6 +142,7 @@ Configuration
 
 * `session`_
 
+  * `cache_limiter`_
   * `cookie_domain`_
   * `cookie_httponly`_
   * `cookie_lifetime`_
@@ -845,7 +846,7 @@ name
 
 **type**: ``string`` **default**: ``null``
 
-This specifies the name of the session cookie. By default it will use the
+This specifies the name of the session cookie. By default, it will use the
 cookie name which is defined in the ``php.ini`` with the ``session.name``
 directive.
 
@@ -864,15 +865,59 @@ cookie_path
 
 **type**: ``string`` **default**: ``/``
 
-This determines the path to set in the session cookie. By default it will
+This determines the path to set in the session cookie. By default, it will
 use ``/``.
+
+cache_limiter
+.............
+
+**type**: ``string`` or ``int`` **default**: ``''``
+
+If set to ``0``, Symfony won't set any particular header related to the cache
+and it will rely on the cache control method configured in the
+`session.cache-limiter`_ PHP.ini option.
+
+Unlike the other session options, ``cache_limiter`` is set as a regular
+:doc:`container parameter </service_container/parameters>`:
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # app/config/services.yml
+        parameters:
+            session.storage.options:
+                cache_limiter: 0
+
+    .. code-block:: xml
+
+        <!-- app/config/services.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+            <parameters>
+                <parameter key="session.storage.options" type="collection">
+                    <parameter key="cache_limiter">0</parameter>
+                </parameter>
+            </parameters>
+        </container>
+
+    .. code-block:: php
+
+        // app/config/services.php
+        $container->setParameter('session.storage.options', [
+            'cache_limiter' => 0,
+        ]);
 
 cookie_domain
 .............
 
 **type**: ``string`` **default**: ``''``
 
-This determines the domain to set in the session cookie. By default it's
+This determines the domain to set in the session cookie. By default, it's
 blank, meaning the host name of the server which generated the cookie according
 to the cookie specification.
 
@@ -1028,7 +1073,7 @@ use_cookies
 **type**: ``boolean`` **default**: ``null``
 
 This specifies if the session ID is stored on the client side using cookies or
-not. By default it will use the value defined in the ``php.ini`` with the
+not. By default, it will use the value defined in the ``php.ini`` with the
 ``session.use_cookies`` directive.
 
 assets
@@ -2332,6 +2377,7 @@ to know their differences.
 .. _`blue/green deployment`: http://martinfowler.com/bliki/BlueGreenDeployment.html
 .. _`gulp-rev`: https://www.npmjs.com/package/gulp-rev
 .. _`webpack-manifest-plugin`: https://www.npmjs.com/package/webpack-manifest-plugin
+.. _`session.cache-limiter`: https://www.php.net/manual/en/session.configuration.php#ini.session.cache-limiter
 
 .. ready: no
-.. revision: 7f2ad5dd4fe9696b769ff2c8f4a903a45a8fc657
+.. revision: c73516f87a0c1c365cfa486c13c54095dcd0fa1d

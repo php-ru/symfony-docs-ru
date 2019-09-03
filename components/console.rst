@@ -66,7 +66,5 @@ Learn more
     /components/console/helpers/index
     /console/*
 
-.. _Packagist: https://packagist.org/packages/symfony/console
-
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

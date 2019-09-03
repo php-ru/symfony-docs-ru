@@ -352,11 +352,9 @@ Learn more
     /reference/forms/types/language
     /reference/forms/types/locale
 
-.. _Packagist: https://packagist.org/packages/symfony/intl
-.. _Icu component: https://packagist.org/packages/symfony/icu
 .. _intl extension: https://php.net/manual/en/book.intl.php
 .. _install the intl extension: https://php.net/manual/en/intl.setup.php
 .. _ICU library: http://site.icu-project.org/
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

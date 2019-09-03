@@ -552,7 +552,7 @@ For even more details, see :doc:`/security/ldap`.
 You can authenticate to an LDAP server using the LDAP variants of the
 ``form_login`` and ``http_basic`` authentication providers. Simply use
 ``form_login_ldap`` and ``http_basic_ldap``, which will attempt to
-``bind`` against a LDAP server instead of using password comparison.
+``bind`` against an LDAP server instead of using password comparison.
 
 Both authentication providers have the same arguments as their normal
 counterparts, with the addition of two configuration keys:
@@ -588,7 +588,7 @@ statically using the ``dn_string`` config option.
 **User provider**
 
 Users will still be fetched from the configured user provider. If you
-wish to fetch your users from a LDAP server, you will need to use the
+wish to fetch your users from an LDAP server, you will need to use the
 ``ldap`` user provider, in addition to one of the two authentication
 providers (``form_login_ldap`` or ``http_basic_ldap``).
 
@@ -616,7 +616,7 @@ HTTP-Digest Authentication
 
 .. deprecated:: 3.4
 
-    HTTP-Digest Authentication was deprecated in Symfony 3.4 and it will be
+    HTTP-Digest Authentication was deprecated in Symfony 3.4 and will be
     removed in Symfony 4.0.
 
 To use HTTP-Digest authentication you need to provide a realm and a secret:
@@ -752,11 +752,11 @@ providers
 ---------
 
 This options defines how the application users are loaded (from a database,
-a LDAP server, a configuration file, etc.) Read the following articles to learn
+an LDAP server, a configuration file, etc.) Read the following articles to learn
 more about each of those providers:
 
 * :doc:`Load users from a database </security/entity_provider>`
-* :doc:`Load users from a LDAP server </security/ldap>`
+* :doc:`Load users from an LDAP server </security/ldap>`
 * :ref:`Load users from a configuration file <security-user-providers>`
 * :doc:`Create your own user provider </security/custom_provider>`
 
@@ -768,7 +768,6 @@ role inheritance rules by creating a role hierarchy, as explained in
 :ref:`security-role-hierarchy`.
 
 .. _`PBKDF2`: https://en.wikipedia.org/wiki/PBKDF2
-.. _`ircmaxell/password-compat`: https://packagist.org/packages/ircmaxell/password-compat
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 .. _`Session Fixation`: https://www.owasp.org/index.php/Session_fixation
 .. _`ACL (Access Control List)`: https://en.wikipedia.org/wiki/Access_control_list
@@ -778,4 +777,4 @@ role inheritance rules by creating a role hierarchy, as explained in
 .. _`cryptographic salt`: https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

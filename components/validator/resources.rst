@@ -100,8 +100,8 @@ prefixed classes included in doc block comments (``/** ... */``). For example::
     class User
     {
         /**
-        * @Assert\NotBlank
-        */
+         * @Assert\NotBlank
+         */
         protected $name;
     }
 
@@ -193,7 +193,5 @@ You can set this custom implementation using
     and caches using the ``add*Mapping()`` methods anymore. You now have to
     inject them into your custom metadata factory yourself.
 
-.. _`Packagist`: https://packagist.org
-
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

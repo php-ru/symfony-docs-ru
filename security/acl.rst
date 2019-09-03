@@ -215,8 +215,8 @@ checks whether the user has any of them.
 
 .. note::
 
-    You can define up to 32 base permissions (depending on your OS PHP might
-    vary between 30 to 32). In addition, you can also define cumulative
+    You can define up to 32 base permissions (depending on your OS, PHP might
+    vary between 30 and 32). In addition, you can also define cumulative
     permissions.
 
 Cumulative Permissions
@@ -251,4 +251,4 @@ The user is now allowed to view, edit, delete, and un-delete objects.
 .. _`MongoDBAclBundle`: https://github.com/IamPersistent/MongoDBAclBundle
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

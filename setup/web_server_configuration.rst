@@ -75,6 +75,8 @@ and increase web server performance:
         ServerAlias www.domain.tld
 
         DocumentRoot /var/www/project/web
+        DirectoryIndex /app.php
+
         <Directory /var/www/project/web>
             AllowOverride None
             Order Allow,Deny
@@ -344,4 +346,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: aaf4b48b7cc2d581a063eb5558bcf3fcbeeaa408

@@ -735,8 +735,8 @@ block of the base template.
 
 You can also include assets located in your bundles' ``Resources/public`` folder.
 You will need to run the ``php bin/console assets:install target [--symlink]``
-command, which copies (or symlinks) files into the correct location. (target
-is by default the "web/" directory of your application).
+command, which copies (or symlinks) files into the correct location. (By default,
+the target is the ``web/`` directory of your application.)
 
 .. code-block:: html+twig
 
@@ -805,10 +805,7 @@ Learn more
 .. _`tags`: https://twig.symfony.com/doc/2.x/tags/index.html
 .. _`filters`: https://twig.symfony.com/doc/2.x/filters/index.html
 .. _`functions`: https://twig.symfony.com/doc/2.x/functions/index.html
-.. _`add your own extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 .. _`with_context`: https://twig.symfony.com/doc/2.x/functions/include.html
-.. _`include() function`: https://twig.symfony.com/doc/2.x/functions/include.html
-.. _`{% include %} tag`: https://twig.symfony.com/doc/2.x/tags/include.html
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

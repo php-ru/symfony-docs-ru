@@ -46,7 +46,7 @@ cache directory:
 
 .. code-block:: terminal
 
-    $ On Unix run this command. On Windows, clear this directory manually
+    # On Unix run this command. On Windows, clear this directory manually
     $ rm -rf node_modules/.cache/babel-loader/
 
 Creating a .babelrc File
@@ -65,4 +65,4 @@ configuration added by Encore.
 .. _`Babel`: http://babeljs.io/
 
 .. ready: no
-.. revision: 0973a0175d35a726697904d3c8b4a9bbb8edbc4e
+.. revision: 090065cbee270cd1037baa6cef4dfbb1437fc33b

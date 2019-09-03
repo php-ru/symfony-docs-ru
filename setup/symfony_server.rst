@@ -14,9 +14,9 @@ PHP application and even with HTML/SPA (single page applications).
 Installation
 ------------
 
-The Symfony server is distributed as a free installable binary without any
-dependency and support for Linux, macOS and Windows. Go to `symfony.com/download`_
-and follow the instructions for your operating system.
+The Symfony server is distributed as a free installable binary and has support
+for Linux, macOS and Windows. Go to `symfony.com/download`_ and follow the
+instructions for your operating system.
 
 .. note::
 
@@ -104,7 +104,7 @@ root directory:
     directory to set the same PHP version for a group of projects under that
     directory.
 
-Run command if you don't remember all the PHP versions installed on your
+Run the command below if you don't remember all the PHP versions installed on your
 computer:
 
 .. code-block:: terminal
@@ -372,4 +372,4 @@ that Composer will also set the stability to ``dev`` for all root dependencies):
 .. _`Read SymfonyCloud technical docs`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: 7a9a069d7c67e592b3e41f4317314e87fb27805e
+.. revision: c3cf3c1dbe6daa630122579b3fde3d57193535c8

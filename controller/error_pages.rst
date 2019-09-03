@@ -207,7 +207,7 @@ configuration option to point to it:
 
         # app/config/config.yml
         twig:
-            exception_controller: AppBundle:Exception:showException
+            exception_controller: AppBundle:Exception:showAction
 
     .. code-block:: xml
 
@@ -222,7 +222,7 @@ configuration option to point to it:
                 https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
-                <twig:exception-controller>AppBundle:Exception:showException</twig:exception-controller>
+                <twig:exception-controller>AppBundle:Exception:showAction</twig:exception-controller>
             </twig:config>
 
         </container>
@@ -231,7 +231,7 @@ configuration option to point to it:
 
         // app/config/config.php
         $container->loadFromExtension('twig', [
-            'exception_controller' => 'AppBundle:Exception:showException',
+            'exception_controller' => 'AppBundle:Exception:showAction',
             // ...
         ]);
 
@@ -350,9 +350,7 @@ time and again, you can have just one (or several) listeners deal with them.
     and takes measures like redirecting the user to the login page, logging them
     out and other things.
 
-.. _`WebfactoryExceptionsBundle`: https://github.com/webfactory/exceptions-bundle
 .. _`Symfony Standard Edition`: https://github.com/symfony/symfony-standard/
-.. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

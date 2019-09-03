@@ -20,15 +20,21 @@ Symfony provides a dedicated application called the **Symfony Installer** to eas
 the creation of Symfony applications. This installer is a PHP 5.4 compatible
 executable that needs to be installed on your system only once:
 
+**Linux and macOS systems**:
+
+.. class:: command-linux
 .. code-block:: terminal
 
-    # Linux and macOS systems
     $ sudo mkdir -p /usr/local/bin
     $ sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
     $ sudo chmod a+x /usr/local/bin/symfony
 
-    # Windows systems
-    c:\> php -r "file_put_contents('symfony', file_get_contents('https://symfony.com/installer'));"
+**Windows systems**:
+
+.. class:: command-windows
+.. code-block:: terminal
+
+    > php -r "file_put_contents('symfony', file_get_contents('https://symfony.com/installer'));"
 
 .. note::
 
@@ -37,21 +43,22 @@ executable that needs to be installed on your system only once:
     environment variable and create a ``symfony.bat`` file to create the global
     command or move it to any other directory convenient for you:
 
+    .. class:: command-windows
     .. code-block:: terminal
 
         # for example, if WAMP is used ...
-        c:\> move symfony c:\wamp\bin\php
+        > move symfony c:\wamp\bin\php
         # create symfony.bat in the same folder
-        c:\> cd c:\wamp\bin\php
-        c:\> (echo @ECHO OFF & echo php "%~dp0symfony" %*) > symfony.bat
+        > cd c:\wamp\bin\php
+        > (echo @ECHO OFF & echo php "%~dp0symfony" %*) > symfony.bat
         # ... then, execute the command as:
-        c:\> symfony
+        > symfony
 
         # moving it to your projects folder ...
-        c:\> move symfony c:\projects
+        > move symfony c:\projects
         # ... then, execute the command as
-        c:\> cd projects
-        c:\projects\> php symfony
+        > cd projects
+        > php symfony
 
 .. _installation-creating-the-app:
 
@@ -135,9 +142,8 @@ applications with `Composer`_, the dependency manager used by modern PHP
 applications.
 
 If you don't have Composer installed in your computer, start by
-:doc:`installing Composer globally </setup/composer>`. Then, execute the
-``create-project`` command to create a new Symfony application based on its
-latest stable version:
+`installing Composer`_. Then, execute the ``create-project`` command to create a
+new Symfony application based on its latest stable version:
 
 .. code-block:: terminal
 
@@ -315,18 +321,18 @@ Go Deeper with Setup
     setup/new_project_git
     setup/built_in_web_server
     setup/web_server_configuration
-    setup/composer
     setup/*
 
 .. _`Joyful Development with Symfony`: https://symfonycasts.com/screencast/symfony3
 .. _`Composer`: https://getcomposer.org/
+.. _`installing Composer`: https://getcomposer.org/download/
 .. _`Phar extension`: https://php.net/manual/en/intro.phar.php
 .. _`Symfony Standard Edition`: https://github.com/symfony/symfony-standard
-.. _`The Symfony Demo application`: https://github.com/symfony/demo
+.. _`The Symfony Demo Application`: https://github.com/symfony/demo
 .. _`The Symfony CMF Standard Edition`: https://github.com/symfony-cmf/standard-edition
 .. _`Symfony CMF`: http://cmf.symfony.com/
 .. _`The Symfony REST Edition`: https://github.com/gimler/symfony-rest-edition
 .. _`FOSRestBundle`: https://github.com/FriendsOfSymfony/FOSRestBundle
 
 .. ready: no
-.. revision: ca97daa6bb50f08791487ed1ef9e147bb893499f
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

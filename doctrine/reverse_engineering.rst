@@ -169,7 +169,7 @@ entity in the ``BlogComment`` entity class.
 
 The generated entities are now ready to be used. Have fun!
 
-.. _`Doctrine tools documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/tools.html#reverse-engineering
+.. _`Doctrine tools documentation`: https://www.doctrine-project.org/projects/doctrine-orm/en/latest/reference/tools.html#reverse-engineering
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: 23a8e258a7ec3d8b7de466796e90e4ce7d9f650a

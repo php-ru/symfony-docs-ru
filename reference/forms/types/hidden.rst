@@ -9,7 +9,7 @@ The hidden type represents a hidden input field.
 +-------------+----------------------------------------------------------------------+
 | Rendered as | ``input`` ``hidden`` field                                           |
 +-------------+----------------------------------------------------------------------+
-| Overriden   | - `compound`_                                                        |
+| Overridden  | - `compound`_                                                        |
 | options     | - `error_bubbling`_                                                  |
 |             | - `required`_                                                        |
 +-------------+----------------------------------------------------------------------+
@@ -56,4 +56,4 @@ These options inherit from the :doc:`FormType </reference/forms/types/form>`:
 .. include:: /reference/forms/types/options/property_path.rst.inc
 
 .. ready: no
-.. revision: feb68dd29181fef80f4c65beafa5c75ad2245812
+.. revision: 8e54de5e905238e0595985348b4fc41c418549ff

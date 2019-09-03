@@ -144,7 +144,7 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
 .. sidebar:: Setting the Default in the Extension
 
     There are some instances of ``%kernel.debug%`` usage within a ``Configurator``
-    class in TwigBundle and AsseticBundle. However this is because the default
+    class in TwigBundle and AsseticBundle. However, this is because the default
     parameter value is set by the Extension class. For example in AsseticBundle,
     you can find::
 
@@ -156,4 +156,4 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
     ``%kernel.debug%`` but rather the new ``%assetic.debug%`` parameter.
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

@@ -9,7 +9,6 @@ Community
     reviews
     mentoring
     speaker-mentoring
-    other
 
 .. ready: no
-.. revision: 26813d561ae19f6dd9d1cc8d1ac9fc619cec4e7b
+.. revision: 108491317f80b5761ec0cb9bf1b4ba29667e730c

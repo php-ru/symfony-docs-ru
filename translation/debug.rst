@@ -51,7 +51,7 @@ you've already setup some translations for the ``fr`` locale inside an AcmeDemoB
 
     .. code-block:: xml
 
-        <!-- src/Acme/AcmeDemoBundle/Resources/translations/messages.fr.xliff -->
+        <!-- src/Acme/AcmeDemoBundle/Resources/translations/messages.fr.xlf -->
         <?xml version="1.0"?>
         <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
             <file source-language="en" datatype="plaintext" original="file.ext">
@@ -82,7 +82,7 @@ and for the ``en`` locale:
 
     .. code-block:: xml
 
-        <!-- src/Acme/AcmeDemoBundle/Resources/translations/messages.en.xliff -->
+        <!-- src/Acme/AcmeDemoBundle/Resources/translations/messages.en.xlf -->
         <?xml version="1.0"?>
         <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
             <file source-language="en" datatype="plaintext" original="file.ext">
@@ -178,7 +178,7 @@ You can see that the translations of the message are identical in the ``fr``
 and ``en`` locales which means this message was probably copied from French
 to English and maybe you forgot to translate it.
 
-By default all domains are inspected, but it is possible to specify a single
+By default, all domains are inspected, but it is possible to specify a single
 domain:
 
 .. code-block:: terminal
@@ -195,4 +195,4 @@ switches:
     $ php bin/console debug:translation en AcmeDemoBundle --only-missing
 
 .. ready: no
-.. revision: b407409c25db736ef0128251840609f79466dd88
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

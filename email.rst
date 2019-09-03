@@ -114,8 +114,8 @@ an email is pretty straightforward::
                 ),
                 'text/html'
             )
-            /*
-             * If you also want to include a plaintext version of the message
+
+            // you can remove the following code if you don't define a text version for your emails
             ->addPart(
                 $this->renderView(
                     'Emails/registration.txt.twig',
@@ -123,7 +123,6 @@ an email is pretty straightforward::
                 ),
                 'text/plain'
             )
-            */
         ;
 
         $mailer->send($message);
@@ -173,4 +172,4 @@ Learn more
 .. _`Amazon SES`: http://aws.amazon.com/ses/
 
 .. ready: no
-.. revision: f57eabeef223046c6805927dea73bad87ecb1aa1
+.. revision: d78f17daa5a9d193f712671f3786606d6e198545

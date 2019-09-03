@@ -22,7 +22,7 @@ Form Rendering Functions
 ------------------------
 
 This reference manual covers all the possible Twig functions available for
-rendering forms. There are several different functions available and
+rendering forms. There are several functions available and
 each is responsible for rendering a different part of a form (e.g. labels,
 errors, widgets, etc).
 
@@ -384,4 +384,4 @@ done by using a public ``vars`` property on the
 .. _`the Twig documentation`: https://twig.symfony.com/doc/2.x/templates.html#test-operator
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

@@ -83,7 +83,11 @@ days
 List of days available to the days field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'days' => range(1, 31)
+    // values displayed to users range from 0 to 30 (both inclusive)
+    'days' => range(1, 31),
+
+    // values displayed to users range from 1 to 31 (both inclusive)
+    'days' => array_combine(range(1, 31), range(1, 31)),
 
 placeholder
 ~~~~~~~~~~~
@@ -112,7 +116,11 @@ hours
 List of hours available to the hours field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'hours' => range(1, 24)
+    // values displayed to users range from 0 to 23 (both inclusive)
+    'hours' => range(1, 24),
+
+    // values displayed to users range from 1 to 24 (both inclusive)
+    'hours' => array_combine(range(1, 24), range(1, 24)),
 
 input
 ~~~~~
@@ -146,6 +154,7 @@ are ``null``, so they display the "humanized version" of the child names (``Inve
         'invert' => null,
         'years' => null,
         'months' => null,
+        'weeks' => null,
         'days' => null,
         'hours' => null,
         'minutes' => null,
@@ -160,7 +169,11 @@ minutes
 List of minutes available to the minutes field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'minutes' => range(1, 60)
+    // values displayed to users range from 0 to 59 (both inclusive)
+    'minutes' => range(1, 60),
+
+    // values displayed to users range from 1 to 60 (both inclusive)
+    'minutes' => array_combine(range(1, 60), range(1, 60)),
 
 months
 ~~~~~~
@@ -170,7 +183,11 @@ months
 List of months available to the months field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'months' => range(1, 12)
+    // values displayed to users range from 0 to 11 (both inclusive)
+    'months' => range(1, 12),
+
+    // values displayed to users range from 1 to 12 (both inclusive)
+    'months' => array_combine(range(1, 12), range(1, 12)),
 
 seconds
 ~~~~~~~
@@ -180,7 +197,11 @@ seconds
 List of seconds available to the seconds field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'seconds' => range(1, 60)
+    // values displayed to users range from 0 to 59 (both inclusive)
+    'seconds' => range(1, 60),
+
+    // values displayed to users range from 1 to 60 (both inclusive)
+    'seconds' => array_combine(range(1, 60), range(1, 60)),
 
 weeks
 ~~~~~
@@ -190,7 +211,11 @@ weeks
 List of weeks available to the weeks field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'weeks' => range(1, 52)
+    // values displayed to users range from 0 to 51 (both inclusive)
+    'weeks' => range(1, 52),
+
+    // values displayed to users range from 1 to 52 (both inclusive)
+    'weeks' => array_combine(range(1, 52), range(1, 52)),
 
 widget
 ~~~~~~
@@ -303,7 +328,11 @@ years
 List of years available to the years field type. This option is only relevant
 when the ``widget`` option is set to ``choice``::
 
-    'years' => range(1, 100)
+    // values displayed to users range from 0 to 99 (both inclusive)
+    'years' => range(1, 100),
+
+    // values displayed to users range from 1 to 100 (both inclusive)
+    'years' => array_combine(range(1, 100), range(1, 100)),
 
 Inherited Options
 -----------------
@@ -342,4 +371,4 @@ with_years    ``Boolean``  The value of the `with_years`_ option.
 .. _`ISO 8601`: https://en.wikipedia.org/wiki/ISO_8601
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: e76a40935f6651f85df8e9543fa8be9b394157d8

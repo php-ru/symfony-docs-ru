@@ -60,7 +60,7 @@ Next, add a new ``category`` property to the ``Task`` class::
 .. tip::
 
     The ``Valid`` Constraint has been added to the property ``category``. This
-    cascades the validation to the corresponding entity. If you omit this constraint
+    cascades the validation to the corresponding entity. If you omit this constraint,
     the child entity would not be validated.
 
 Now that your application has been updated to reflect the new requirements,
@@ -138,4 +138,4 @@ For more information see the :doc:`/form/form_collections` article and the
 :doc:`CollectionType </reference/forms/types/collection>` reference.
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

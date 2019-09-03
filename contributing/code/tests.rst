@@ -18,7 +18,7 @@ Before Running the Tests
 
 To run the Symfony test suite, install the external dependencies used during the
 tests, such as Doctrine, Twig and Monolog. To do so,
-:doc:`install Composer </setup/composer>` and execute the following:
+`install Composer`_ and execute the following:
 
 .. code-block:: terminal
 
@@ -54,10 +54,11 @@ what's going on and if the tests are broken because of the new code.
     On Windows, install the `Cmder`_, `ConEmu`_, `ANSICON`_ or `Mintty`_ free applications
     to see colored test results.
 
+.. _`install Composer`: https://getcomposer.org/download/
 .. _Cmder: http://cmder.net/
 .. _ConEmu: https://conemu.github.io/
 .. _ANSICON: https://github.com/adoxa/ansicon/releases
 .. _Mintty: https://mintty.github.io/
 
 .. ready: no
-.. revision: dc35a224ffeefa02c7e8cdee51fcf99315ce045a
+.. revision: f93d963da4d51311e1e82f8ef771a446b0e49659

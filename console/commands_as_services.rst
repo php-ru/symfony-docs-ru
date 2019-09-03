@@ -10,7 +10,7 @@ recommended setup.
 
 Symfony also looks in the ``Command/`` directory of each bundle for commands
 non registered as a service and automatically registers those classes as
-commands. However this auto-registration was deprecated in Symfony 3.4. In
+commands. However, this auto-registration was deprecated in Symfony 3.4. In
 Symfony 4.0, commands won't be auto-registered anymore.
 
 .. note::
@@ -35,6 +35,7 @@ For example, suppose you want to log something from within your command::
 
     class SunshineCommand extends Command
     {
+        protected static $defaultName = 'app:sunshine';
         private $logger;
 
         public function __construct(LoggerInterface $logger)
@@ -48,7 +49,6 @@ For example, suppose you want to log something from within your command::
         protected function configure()
         {
             $this
-                ->setName('app:sunshine')
                 ->setDescription('Good morning!');
         }
 
@@ -147,4 +147,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 1e50fcf7cbf730344ce5179a26aa0b4d5927766a

@@ -18,10 +18,11 @@ In those cases, you can define the command as **hidden** by setting the
 
     class LegacyCommand extends Command
     {
+        protected static $defaultName = 'app:legacy';
+
         protected function configure()
         {
             $this
-                ->setName('app:legacy')
                 ->setHidden(true)
                 // ...
             ;
@@ -36,4 +37,4 @@ in command listings, so end-users are not aware of their existence.
     Hidden commands are still available using the JSON or XML descriptor.
 
 .. ready: no
-.. revision: 6790971a3df432aa288d3948a4782796e4491da8
+.. revision: 1e50fcf7cbf730344ce5179a26aa0b4d5927766a

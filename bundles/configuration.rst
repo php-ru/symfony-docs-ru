@@ -390,7 +390,7 @@ Providing an XML Schema
 
 XML has a very useful feature called `XML schema`_. This allows you to
 describe all possible elements and attributes and their values in an XML Schema
-Definition (an xsd file). This XSD file is used by IDEs for auto completion and
+Definition (an XSD file). This XSD file is used by IDEs for auto completion and
 it is used by the Config component to validate the elements.
 
 In order to use the schema, the XML configuration file must provide an
@@ -444,4 +444,4 @@ Assuming the XSD file is called ``hello-1.0.xsd``, the schema location will be
 .. _`snake case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

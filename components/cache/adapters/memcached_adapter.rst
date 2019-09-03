@@ -240,7 +240,7 @@ Available Options
 
 ``server_failure_limit`` (type: ``int``, default: ``0``)
     Specifies the failure limit for server connection attempts before marking
-    the server as "dead". The server will remaining in the server pool unless
+    the server as "dead". The server will remain in the server pool unless
     ``auto_eject_hosts`` is enabled.
 
     Valid option values include *any positive integer*.
@@ -300,7 +300,6 @@ Available Options
 .. _`Memcached server`: https://memcached.org/
 .. _`Memcached`: http://php.net/manual/en/class.memcached.php
 .. _`Data Source Name (DSN)`: https://en.wikipedia.org/wiki/Data_source_name
-.. _`Domain Name System (DNS)`: https://en.wikipedia.org/wiki/Domain_Name_System
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

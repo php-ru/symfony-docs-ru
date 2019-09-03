@@ -150,6 +150,51 @@ This component also provides two useful methods related to expiring locks:
 ``getExpiringDate()`` (which returns ``null`` or a ``\DateTimeImmutable``
 object) and ``isExpired()`` (which returns a boolean).
 
+The Owner of The Lock
+---------------------
+
+Locks that are acquired for the first time are owned[1]_ by the ``Lock`` instance that acquired
+it. If you need to check whether the current ``Lock`` instance is (still) the owner of
+a lock, you can use the ``isAcquired()`` method::
+
+    if ($lock->isAcquired()) {
+        // We (still) own the lock
+    }
+
+Because of the fact that some lock stores have expiring locks (as seen and explained
+above), it is possible for an instance to lose the lock it acquired automatically::
+
+    // If we cannot acquire ourselves, it means some other process is already working on it
+    if (!$lock->acquire()) {
+        return;
+    }
+
+    $this->beginTransaction();
+
+    // Perform a very long process that might exceed TTL of the lock
+
+    if ($lock->isAcquired()) {
+        // Still all good, no other instance has acquired the lock in the meantime, we're safe
+        $this->commit();
+    } else {
+        // Bummer! Our lock has apparently exceeded TTL and another process has started in
+        // the meantime so it's not safe for us to commit.
+        $this->rollback();
+        throw new \Exception('Process failed');
+    }
+
+.. caution::
+
+    A common pitfall might be to use the ``isAcquired()`` method to check if
+    a lock has already been acquired by any process. As you can see in this example
+    you have to use ``acquire()`` for this. The ``isAcquired()`` method is used to check
+    if the lock has been acquired by the **current process** only!
+
+.. [1] Technically, the true owners of the lock are the ones that share the same instance of ``Key``,
+    not ``Lock``. But from a user perspective, ``Key`` is internal and you will likely only be working
+    with the ``Lock`` instance so it's easier to think of the ``Lock`` instance as being the one that
+    is the owner of the lock.
+
 Available Stores
 ----------------
 
@@ -491,8 +536,7 @@ configuration must not be started while old processes with old configuration
 are still running.
 
 .. _`locks`: https://en.wikipedia.org/wiki/Lock_(computer_science)
-.. _Packagist: https://packagist.org/packages/symfony/lock
-.. _`PHP semaphore functions`: http://php.net/manual/en/book.sem.php
+.. _`PHP semaphore functions`: https://php.net/manual/en/book.sem.php
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

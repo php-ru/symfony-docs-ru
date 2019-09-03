@@ -44,7 +44,7 @@ To log a message, inject the default logger in your controller::
     }
 
 The ``logger`` service has different methods for different logging levels/priorities.
-See LoggerInterface_ for a list of all of the methods on the logger.
+See `LoggerInterface`_ for a list of all of the methods on the logger.
 
 Monolog
 -------
@@ -377,4 +377,4 @@ Learn more
 .. _`Monolog Configuration`: https://github.com/symfony/monolog-bundle/blob/master/DependencyInjection/Configuration.php#L25
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

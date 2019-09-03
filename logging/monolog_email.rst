@@ -4,7 +4,7 @@
 How to Configure Monolog to Email Errors
 ========================================
 
-Monolog_ can be configured to send an email when an error occurs with an
+`Monolog`_ can be configured to send an email when an error occurs with an
 application. The configuration for this requires a few nested handlers
 in order to avoid receiving too many emails. This configuration looks
 complicated at first but each handler is fairly straightforward when
@@ -321,4 +321,4 @@ now be both written to the log file and emailed.
 .. _Monolog: https://github.com/Seldaek/monolog
 
 .. ready: no
-.. revision: c638c32de9544beddda9c5da6d74018b7dc8ea48
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

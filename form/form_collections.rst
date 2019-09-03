@@ -445,6 +445,12 @@ you will learn about next!).
     otherwise the form will still use ``setTag()`` even if ``by_reference`` is ``false``.
     You'll learn more about the ``removeTag()`` method later in this article.
 
+.. caution::
+
+    Symfony can only make the plural-to-singular conversion (e.g. from the
+    ``tags`` property to the ``addTag()`` method) for English words. Code
+    written in any other language won't work as expected.
+
 .. sidebar:: Doctrine: Cascading Relations and saving the "Inverse" side
 
     To save the new tags with Doctrine, you need to consider a couple more
@@ -715,9 +721,9 @@ the relationship between the removed ``Tag`` and ``Task`` object.
     elements of the collection. More advanced functionality like moving or duplicating
     an element in the collection and customizing the buttons is also possible.
 
-.. _`Owning Side and Inverse Side`: http://docs.doctrine-project.org/en/latest/reference/unitofwork-associations.html
+.. _`Owning Side and Inverse Side`: https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/unitofwork-associations.html
 .. _`JSFiddle`: http://jsfiddle.net/847Kf/4/
 .. _`symfony-collection`: https://github.com/ninsuo/symfony-collection
 
 .. ready: no
-.. revision: 9d12a345ce4880783c84415b29101b45a124c45b
+.. revision: f81f76c91c032afbdb9bd7a48eef75559c8ab8b3

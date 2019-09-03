@@ -143,7 +143,7 @@ match).
 
 .. caution::
 
-    However the slash ``/`` is ignored by default in placeholder values because
+    However, the slash ``/`` is ignored by default in placeholder values because
     the router uses it as separator between different placeholders.
     To learn more about this, you can read
     :ref:`routing/slash_in_parameter`.
@@ -805,4 +805,4 @@ Learn more about Routing
 .. _`BeSimpleI18nRoutingBundle`: https://github.com/BeSimple/BeSimpleI18nRoutingBundle
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

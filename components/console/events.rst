@@ -169,7 +169,7 @@ Listeners receive a
     It is then dispatched just after the ``ConsoleEvents::ERROR`` event.
     The exit code received in this case is the exception code.
 
-.. _`reserved exit codes`: http://www.tldp.org/LDP/abs/html/exitcodes.html
+.. _`reserved exit codes`: https://www.tldp.org/LDP/abs/html/exitcodes.html
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 23a8e258a7ec3d8b7de466796e90e4ce7d9f650a

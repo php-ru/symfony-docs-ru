@@ -199,7 +199,7 @@ assetic.formula_loader
 **Purpose**: Add a formula loader to the current asset manager
 
 A Formula loader is a class implementing
-``Assetic\\Factory\Loader\\FormulaLoaderInterface`` interface. This class
+``Assetic\Factory\Loader\FormulaLoaderInterface`` interface. This class
 is responsible for loading assets from a particular kind of resources (for
 instance, twig template). Assetic ships loaders for PHP and Twig templates.
 
@@ -1383,9 +1383,8 @@ Bridge.
 
 .. _`Twig's documentation`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 .. _`Twig official extension repository`: https://github.com/fabpot/Twig-extensions
-.. _`KernelEvents`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/HttpKernel/KernelEvents.php
 .. _`SwiftMailer's Plugin Documentation`: http://swiftmailer.org/docs/plugins.html
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

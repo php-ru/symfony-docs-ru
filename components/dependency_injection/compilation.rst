@@ -473,7 +473,7 @@ makes dumping the compiled container easy::
     }
 
 ``ProjectServiceContainer`` is the default name given to the dumped container
-class. However you can change this with the ``class`` option when you
+class. However, you can change this with the ``class`` option when you
 dump it::
 
     // ...
@@ -578,4 +578,4 @@ have the cache will be considered stale.
     is taken care of for you.
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

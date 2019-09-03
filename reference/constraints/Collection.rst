@@ -94,7 +94,8 @@ following:
                 profileData:
                     - Collection:
                         fields:
-                            personal_email: Email
+                            personal_email: 
+                                - Email: ~
                             short_bio:
                                 - NotBlank: ~
                                 - Length:
@@ -354,4 +355,4 @@ You can use the following parameters in this message:
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 1440ca358e629b61d99df23f1f5e1d557ab79c8a

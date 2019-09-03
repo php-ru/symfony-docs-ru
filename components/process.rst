@@ -331,7 +331,7 @@ a different timeout (in seconds) to the ``setTimeout()`` method::
     $process->run();
 
 If the timeout is reached, a
-:class:`Symfony\\Component\\Process\\Exception\\RuntimeException` is thrown.
+:class:`Symfony\\Component\\Process\\Exception\\ProcessTimedOutException` is thrown.
 
 For long running commands, it is your responsibility to perform the timeout
 check regularly::
@@ -437,9 +437,7 @@ absolute path of the executable PHP binary available on your server::
     // $phpBinaryPath = '/usr/local/bin/php' (the result will be different on your computer)
 
 .. _`pid`: https://en.wikipedia.org/wiki/Process_identifier
-.. _`PHP Documentation`: https://php.net/manual/en/pcntl.constants.php
-.. _Packagist: https://packagist.org/packages/symfony/process
-.. _`PHP streams`: http://www.php.net/manual/en/book.stream.php
+.. _`PHP streams`: https://www.php.net/manual/en/book.stream.php
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 4345e08fc814e297973386054213107477e9c584

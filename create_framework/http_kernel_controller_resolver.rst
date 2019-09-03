@@ -28,7 +28,7 @@ Update the route definition accordingly::
     ]));
 
 The move is pretty straightforward and makes a lot of sense as soon as you
-create more pages but you might have noticed a non-desirable side-effect...
+create more pages but you might have noticed a non-desirable side effect...
 The ``LeapYearController`` class is *always* instantiated, even if the
 requested URL does not match the ``leap_year`` route. This is bad for one main
 reason: performance wise, all controllers for all routes must now be
@@ -204,7 +204,6 @@ Think about it once more: our framework is more robust and more flexible than
 ever and it still has less than 50 lines of code.
 
 .. _`reflection`: https://php.net/reflection
-.. _`FrameworkExtraBundle`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

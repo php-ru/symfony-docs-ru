@@ -44,10 +44,11 @@ You can rely on the logger to use this dependency inside a command::
 
     class MyCommand extends Command
     {
+        protected static $defaultName = 'my:command';
+
         protected function configure()
         {
             $this
-                ->setName('my:command')
                 ->setDescription(
                     'Use an external dependency requiring a PSR-3 logger'
                 )
@@ -120,4 +121,4 @@ the command.
 .. _PSR-3: https://www.php-fig.org/psr/psr-3/
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 1e50fcf7cbf730344ce5179a26aa0b4d5927766a

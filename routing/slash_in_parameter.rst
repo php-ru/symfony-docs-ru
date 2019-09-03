@@ -85,7 +85,7 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     use the ``.+`` requirement for the parameters that allow slashes. For example,
     if the pattern is ``/share/{token}.{_format}`` and ``{token}`` allows any
     character, the ``/share/foo/bar.json`` URL will consider ``foo/bar.json``
-    as the token and the format will be empty. This can be solved replacing the
+    as the token and the format will be empty. This can be solved by replacing the
     ``.+`` requirement by ``[^.]+`` to allow any character except dots.
 
 .. note::
@@ -97,4 +97,4 @@ That's it! Now, the ``{token}`` parameter can contain the ``/`` character.
     and the token, and ``token`` will be empty.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 050affd9ddf25473195539a911efae78291105e5

@@ -58,7 +58,7 @@ the Finder instance.
 
     The ``Finder`` object doesn't reset its internal state automatically.
     This means that you need to create a new instance if you do not want
-    get mixed results.
+    to get mixed results.
 
 .. caution::
 
@@ -334,7 +334,6 @@ The contents of returned files can be read with
 .. _protocol:     https://php.net/manual/en/wrappers.php
 .. _Streams:      https://php.net/streams
 .. _IEC standard: https://physics.nist.gov/cuu/Units/binary.html
-.. _Packagist:    https://packagist.org/packages/symfony/finder
 
 .. ready: no
-.. revision: 5ee0c1b810e595e52f252b8002c287ee18026eff
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

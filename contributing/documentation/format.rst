@@ -194,7 +194,7 @@ describe how the behavior has changed:
         Support for annotation routing without an external bundle was introduced
         in Symfony 3.4. Prior, you needed to install the SensioFrameworkExtraBundle.
 
-For a deprecation use the ``.. deprecated:: 3.X`` directive:
+For a deprecation use the ``.. deprecated:: 3.x`` directive:
 
 .. code-block:: rst
 
@@ -211,12 +211,12 @@ Symfony 4.0 were released today, 3.0 to 3.4 ``versionadded`` and ``deprecated``
 tags would be removed from the new ``4.0`` branch.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Sphinx: http://sphinx-doc.org/
+.. _Sphinx: https://www.sphinx-doc.org/
 .. _`Symfony documentation`: https://github.com/symfony/symfony-docs
-.. _`reStructuredText Primer`: http://sphinx-doc.org/rest.html
+.. _`reStructuredText Primer`: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 .. _`reStructuredText Reference`: http://docutils.sourceforge.net/docs/user/rst/quickref.html
-.. _`Sphinx Markup Constructs`: http://sphinx-doc.org/markup/
+.. _`Sphinx Markup Constructs`: https://www.sphinx-doc.org/en/1.7/markup/index.html
 .. _`supported languages`: http://pygments.org/languages/
 
 .. ready: no
-.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49
+.. revision: 46c1510bbc3897843031d1a7c19fbd2b2dd44914

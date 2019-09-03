@@ -193,7 +193,7 @@ them from re-implementing the logic required to walk through a
 
 The :class:`Symfony\\Component\\VarDumper\\Dumper\\HtmlDumper` limits string
 length and nesting depth of the output to make it more readable. These options
-can be overriden by the third optional parameter of the
+can be overridden by the third optional parameter of the
 :method:`dump(Data $data) <Symfony\\Component\\VarDumper\\Dumper\\DataDumperInterface::dump>`
 method::
 
@@ -237,19 +237,22 @@ output produced by the different casters.
 If ``DUMP_STRING_LENGTH`` is set, then the length of a string is displayed
 next to its content::
 
+    use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
 
+    $varCloner = new VarCloner();
     $var = ['test'];
+    
     $dumper = new CliDumper();
-    echo $dumper->dump($var, true);
+    echo $dumper->dump($varCloner->cloneVar($var), true);
 
     // array:1 [
     //   0 => "test"
     // ]
 
     $dumper = new CliDumper(null, null, AbstractDumper::DUMP_STRING_LENGTH);
-    echo $dumper->dump($var, true);
+    echo $dumper->dump($varCloner->cloneVar($var), true);
 
     // (added string length before the string)
     // array:1 [
@@ -259,34 +262,40 @@ next to its content::
 If ``DUMP_LIGHT_ARRAY`` is set, then arrays are dumped in a shortened format
 similar to PHP's short array notation::
 
+    use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
 
+    $varCloner = new VarCloner();
     $var = ['test'];
+    
     $dumper = new CliDumper();
-    echo $dumper->dump($var, true);
+    echo $dumper->dump($varCloner->cloneVar($var), true);
 
     // array:1 [
     //   0 => "test"
     // ]
 
     $dumper = new CliDumper(null, null, AbstractDumper::DUMP_LIGHT_ARRAY);
-    echo $dumper->dump($var, true);
+    echo $dumper->dump($varCloner->cloneVar($var), true);
 
     // (no more array:1 prefix)
     // [
     //   0 => "test"
     // ]
 
-If you would like to use both options, then you can just    combine them by
-using a the logical OR operator ``|``::
+If you would like to use both options, then you can just combine them by
+using the logical OR operator ``|``::
 
+    use Symfony\Component\VarDumper\Cloner\VarCloner;
     use Symfony\Component\VarDumper\Dumper\AbstractDumper;
     use Symfony\Component\VarDumper\Dumper\CliDumper;
 
+    $varCloner = new VarCloner();
     $var = ['test'];
+    
     $dumper = new CliDumper(null, null, AbstractDumper::DUMP_STRING_LENGTH | AbstractDumper::DUMP_LIGHT_ARRAY);
-    echo $dumper->dump($var, true);
+    echo $dumper->dump($varCloner->cloneVar($var), true);
 
     // [
     //   0 => (4) "test"
@@ -424,4 +433,4 @@ that holds a file name or a URL, you can wrap them in a ``LinkStub`` to tell
     }
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: aecc29a9185a13e4c98cfcaaa7586c3896d03010

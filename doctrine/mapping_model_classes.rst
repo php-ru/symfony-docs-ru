@@ -146,7 +146,5 @@ Annotations, XML, Yaml, PHP and StaticPHP. The arguments are:
 
     Adjust accordingly for the other Doctrine implementations.
 
-.. _`CouchDB Mapping Compiler Pass pull request`: https://github.com/doctrine/DoctrineCouchDBBundle/pull/27
-
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

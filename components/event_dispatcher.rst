@@ -13,7 +13,7 @@ Introduction
 ------------
 
 Object-oriented code has gone a long way to ensuring code extensibility.
-By creating classes that have well defined responsibilities, your code becomes
+By creating classes that have well-defined responsibilities, your code becomes
 more flexible and a developer can extend them with subclasses to modify
 their behaviors. But if they want to share the changes with other developers
 who have also made their own subclasses, code inheritance is no longer the
@@ -86,7 +86,7 @@ The unique event name can be any string, but optionally follows a few simple
 naming conventions:
 
 * Use only lowercase letters, numbers, dots (``.``) and underscores (``_``);
-* Prefix names with a namespace followed by a dot (e.g. ``order.``, ``user.*``);
+* Prefix names with a namespace followed by a dot (e.g. ``order.*``, ``user.*``);
 * End names with a verb that indicates what action has been taken (e.g.
   ``order.placed``).
 
@@ -521,7 +521,6 @@ Learn More
 .. _Observer: https://en.wikipedia.org/wiki/Observer_pattern
 .. _Closures: https://php.net/manual/en/functions.anonymous.php
 .. _PHP callable: https://php.net/manual/en/language.pseudo-types.php#language.types.callback
-.. _Packagist: https://packagist.org/packages/symfony/event-dispatcher
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

@@ -86,7 +86,7 @@ scale
 
 This specifies how many decimals will be allowed until the field rounds the
 submitted value (via ``rounding_mode``). This option inherits from
-:doc:`number </reference/forms/types/number>` type and is overriden to ``0`` for
+:doc:`number </reference/forms/types/number>` type and is overridden to ``0`` for
 ``IntegerType``.
 
 Inherited Options
@@ -125,4 +125,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/required.rst.inc
 
 .. ready: no
-.. revision: 3ef5c401bf3a476a68fed7e46e14a2a30f949755
+.. revision: 8e54de5e905238e0595985348b4fc41c418549ff

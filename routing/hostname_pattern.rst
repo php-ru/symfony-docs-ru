@@ -79,8 +79,8 @@ You can also match any route with the HTTP *host* of the incoming request.
 
         return $routes;
 
-Both routes match the same path ``/``, however the first one will match
-only if the host is ``m.example.com``.
+Both routes match the same path, ``/``. However, the first one will only
+match if the host is ``m.example.com``.
 
 Using Placeholders
 ------------------
@@ -419,4 +419,4 @@ past url matching in your functional tests::
     );
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

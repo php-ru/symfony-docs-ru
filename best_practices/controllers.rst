@@ -6,8 +6,8 @@ means that controllers should hold just the thin layer of *glue-code*
 needed to coordinate the different parts of the application.
 
 As a rule of thumb, you should follow the 5-10-20 rule, where controllers should
-only define 5 variables or less, contain 10 actions or less and include 20 lines
-of code or less in each action. This isn't an exact science, but it should
+only define 5 variables or fewer, contain 10 actions or fewer and include 20 lines
+of code or fewer in each action. This isn't an exact science, but it should
 help you realize when code should be refactored out of the controller and
 into a service.
 
@@ -226,4 +226,4 @@ Next: :doc:`/best_practices/templates`
 .. _`ParamConverter`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/converters.html
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

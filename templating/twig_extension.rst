@@ -167,8 +167,7 @@ work! Otherwise, :ref:`create a service <service-container-creating-service>`
 for this class and :doc:`tag your service </service_container/tags>` with ``twig.runtime``.
 
 .. _`global variables`: https://twig.symfony.com/doc/2.x/advanced.html#id1
-.. _`functions`: https://twig.symfony.com/doc/2.x/advanced.html#id2
 .. _`Twig Extensions`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 
 .. ready: no
-.. revision: 15c6be82a2f783f8d69ea1183ea467e98a7b2526
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

@@ -484,13 +484,12 @@ service by defining it as a service with one or more of the following
 * ``property_info.description_extractor`` if it provides description information.
 * ``property_info.access_extractor`` if it provides access information.
 
-.. _Packagist: https://packagist.org/packages/symfony/property-info
 .. _`phpDocumentor Reflection`: https://github.com/phpDocumentor/ReflectionDocBlock
 .. _`phpdocumentor/reflection-docblock`: https://packagist.org/packages/phpdocumentor/reflection-docblock
-.. _`Doctrine ORM`: http://www.doctrine-project.org/projects/orm.html
+.. _`Doctrine ORM`: https://www.doctrine-project.org/projects/orm.html
 .. _`symfony/serializer`: https://packagist.org/packages/symfony/serializer
 .. _`symfony/doctrine-bridge`: https://packagist.org/packages/symfony/doctrine-bridge
 .. _`doctrine/orm`: https://packagist.org/packages/doctrine/orm
 
 .. ready: no
-.. revision: fd839b919a247342f310077cd9a1e7387947ba91
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

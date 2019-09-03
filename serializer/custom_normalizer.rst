@@ -47,7 +47,7 @@ to customize the normalized data. To do that, leverage the ``ObjectNormalizer``:
             return $data;
         }
 
-        public function supportsNormalization($data, $format = null)
+        public function supportsNormalization($data, $format = null, array $context = [])
         {
             return $data instanceof Topic;
         }
@@ -62,4 +62,4 @@ If you're using the :ref:`default services.yml configuration <service-container-
 this is done automatically!
 
 .. ready: no
-.. revision: cd1fa2570a418f0ac7a0e3d95f8e34c8561eeeec
+.. revision: 9a44b3f9cc4f4554471d99805dd45e3dd61b3958

@@ -129,7 +129,13 @@ work:
   </contributing/code/maintenance>` (you may have to choose a higher branch if
   the feature you are fixing was introduced in a later version);
 
- * ``master``, if you are adding a new feature.
+* ``master``, if you are adding a new feature.
+
+  The only exception is when a new :doc:`major Symfony version </contributing/community/releases>`
+  (4.0, 5.0, etc.) comes out every two years. Because of the
+  :ref:`special development process <major-version-development>` of those versions,
+  you need to use the previous minor version for the features (e.g. use ``3.4``
+  instead of ``4.0``, use ``4.4`` instead of ``5.0``, etc.)
 
 .. note::
 
@@ -219,7 +225,7 @@ in mind the following:
     as defined in `PSR-1`_ and `PSR-2`_.
 
     A status is posted below the pull request description with a summary
-    of any problems it detects or any Travis CI build failures.
+    of any problems it detects or any `Travis-CI`_ build failures.
 
 .. tip::
 
@@ -355,7 +361,7 @@ As long as you have items in the todo-list, please prefix the pull request
 title with "[WIP]". If you do not yet want to trigger the automated tests,
 you can also set the PR to `draft status`_.
 
-In the pull request description, give as much details as possible about your
+In the pull request description, give as much detail as possible about your
 changes (don't hesitate to give code examples to illustrate your points). If
 your pull request is about adding a new feature or modifying an existing one,
 explain the rationale for the changes. The pull request description helps the
@@ -409,12 +415,8 @@ before merging.
 
 .. _ProGit: https://git-scm.com/book
 .. _GitHub: https://github.com/join
-.. _`GitHub's Documentation`: https://help.github.com/articles/ignoring-files
+.. _`GitHub's documentation`: https://help.github.com/articles/ignoring-files
 .. _Symfony repository: https://github.com/symfony/symfony
-.. _dev mailing-list: https://groups.google.com/group/symfony-devs
-.. _travis-ci.org: https://travis-ci.org/
-.. _`travis-ci.org status icon`: https://about.travis-ci.com/docs/user/status-images/
-.. _`travis-ci.org Getting Started Guide`: https://about.travis-ci.com/docs/user/getting-started/
 .. _`documentation repository`: https://github.com/symfony/symfony-docs
 .. _`fabbot`: https://fabbot.io
 .. _`PSR-1`: https://www.php-fig.org/psr/psr-1/
@@ -425,4 +427,4 @@ before merging.
 .. _`draft status`: https://help.github.com/en/articles/about-pull-requests#draft-pull-requests
 
 .. ready: no
-.. revision: 8f586a7df0093f385069c524379d293cd5171e25
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

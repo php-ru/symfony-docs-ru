@@ -25,7 +25,7 @@ that fit the philosophy of the framework as envisioned by its original creator
 
 .. note::
 
-    **Best practice** is a noun that means *"a well defined procedure that is
+    **Best practice** is a noun that means *"a well-defined procedure that is
     known to produce near-optimum results"*. And that's exactly what this
     guide aims to provide. Even if you don't agree with every recommendation,
     we believe these will help you build great applications with less complexity.
@@ -105,4 +105,4 @@ Next: :doc:`/best_practices/creating-the-project`
 .. _`download and install`: https://symfony.com/download
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

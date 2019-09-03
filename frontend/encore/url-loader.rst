@@ -48,7 +48,7 @@ key from the object that is passed to the ``configureUrlLoader()`` method:
         })
     ;
 
-.. _`URL loader`: https://github.com/webpack-contrib/url-loader
+.. _`URL Loader`: https://github.com/webpack-contrib/url-loader
 
 .. ready: no
-.. revision: cf5d474d474a78e1307bbe49e8931d5e852cb51f
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

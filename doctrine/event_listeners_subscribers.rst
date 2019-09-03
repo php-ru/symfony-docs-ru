@@ -16,9 +16,17 @@ whenever an object in your database is saved.
 
 Doctrine defines two types of objects that can listen to Doctrine events:
 listeners and subscribers. Both are very similar, but listeners are a bit
-more straightforward. For more, see `The Event System`_ on Doctrine's website.
+more straightforward. For more, see `The Event System`_ on Doctrine's documentation.
 
-The Doctrine website also explains all existing events that can be listened to.
+Before using them, keep in mind that Doctrine events are intended for
+persistence hooks (i.e. *"save also this when saving that"*). They should not be
+used for domain logic, such as logging changes, setting ``updatedAt`` and
+``createdAt`` properties, etc.
+
+.. seealso::
+
+    This article covers listeners and subscribers for Doctrine ORM. If you are
+    using ODM for MongoDB, read the `DoctrineMongoDBBundle documentation`_.
 
 Configuring the Listener/Subscriber
 -----------------------------------
@@ -297,6 +305,7 @@ numbers mean that listeners are invoked earlier.
 
 .. _`The Event System`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/events.html
 .. _`the DoctrineBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineBundle/entity-listeners.html
+.. _`DoctrineMongoDBBundle documentation`: https://symfony.com/doc/current/bundles/DoctrineMongoDBBundle/index.html
 
 .. ready: no
-.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e
+.. revision: 5d338c1e631309a39c8bda53f317761594cc1e0c

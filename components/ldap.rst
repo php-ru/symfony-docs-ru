@@ -141,7 +141,5 @@ delete existing ones::
     // Removing an existing entry
     $entryManager->remove(new Entry('cn=Test User,dc=symfony,dc=com'));
 
-.. _Packagist: https://packagist.org/packages/symfony/ldap
-
 .. ready: no
-.. revision: e0b3cbb5bc94b351f733b4869857381f6532943e
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

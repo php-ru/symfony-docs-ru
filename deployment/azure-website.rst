@@ -156,7 +156,7 @@ Enabling the PHP intl Extension
 no longer necessary.** You can check if the ``intl`` extension is enabled in the
 :phpfunction:`phpinfo` page.
 
-However if the ``intl`` extension is not enabled you can follow these steps.
+However, if the ``intl`` extension is not enabled you can follow these steps.
 
 This is the tricky part of the guide! To enable the ``intl`` extension, there is
 no need to upload any DLL files as the ``php_intl.dll`` file already exists on
@@ -458,4 +458,4 @@ of steps needed so that deployment becomes even easier.
 .. _`SymfonyAzureEdition`: https://github.com/beberlei/symfony-azure-edition/
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

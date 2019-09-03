@@ -117,11 +117,12 @@ you'll need to do:
 A) Check Requirements
 ~~~~~~~~~~~~~~~~~~~~~
 
-Check if your server meets the requirements by running:
+Check if your server meets the requirements by running the following command
+provided by the ``symfony`` binary created when `installing Symfony`_:
 
 .. code-block:: terminal
 
-    $ php bin/symfony_requirements
+    $ symfony check:requirements
 
 .. _b-configure-your-app-config-parameters-yml-file:
 
@@ -248,6 +249,7 @@ kernel and return your project's root directory::
 .. _`Deployer`: http://deployer.org/
 .. _`Git Tagging`: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 .. _`EasyDeployBundle`: https://github.com/EasyCorp/easy-deploy-bundle
+.. _`installing Symfony`: https://symfony.com/download
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 6f816efdef065bef74db663865c395ebd2ed62db

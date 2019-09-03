@@ -17,7 +17,7 @@ Installation
 
 .. code-block:: terminal
 
-    $ composer require --dev symfony/dotenv
+    $ composer require symfony/dotenv
 
 .. include:: /components/require_autoload.rst.inc
 
@@ -97,6 +97,14 @@ Use environment variables in values by prefixing variables with ``$``:
     DB_USER=root
     DB_PASS=${DB_USER}pass # Include the user as a password prefix
 
+.. note::
+
+    The order is important when some env var depends on the value of other env
+    vars. In the above example, ``DB_PASS`` must be defined after ``DB_USER``.
+    Moreover, if you define multiple ``.env`` files and put ``DB_PASS`` first,
+    its value will depend on the ``DB_USER`` value defined in other files
+    instead of the value defined in this file.
+
 Embed commands via ``$()`` (not supported on Windows):
 
 .. code-block:: terminal
@@ -107,8 +115,7 @@ Embed commands via ``$()`` (not supported on Windows):
 
     Note that using ``$()`` might not work depending on your shell.
 
-.. _Packagist: https://packagist.org/packages/symfony/dotenv
 .. _twelve-factor applications: http://www.12factor.net/
 
 .. ready: no
-.. revision: 5be35bf75dea1eb80bdd41aa9ce67686b71ebb3e
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

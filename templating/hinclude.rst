@@ -4,7 +4,7 @@
 How to Embed Asynchronous Content with hinclude.js
 ==================================================
 
-Controllers can be embedded asynchronously using the hinclude.js_ JavaScript library.
+Controllers can be embedded asynchronously using the `hinclude.js`_ JavaScript library.
 As the embedded content comes from another page (or controller for that matter),
 Symfony uses a version of the standard ``render()`` function to configure ``hinclude``
 tags:
@@ -115,4 +115,4 @@ Or you can also specify a string to display as the default content:
 .. _`hinclude.js`: http://mnot.github.io/hinclude/
 
 .. ready: no
-.. revision: 39da837707899ab563d050d3bb28db037e8ed3f7
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

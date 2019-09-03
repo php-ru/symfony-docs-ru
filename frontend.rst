@@ -117,9 +117,9 @@ Other Front-End Articles
 .. _`Webpack`: https://webpack.js.org/
 .. _`Webpacker`: https://github.com/rails/webpacker
 .. _`Mix`: https://laravel.com/docs/mix
-.. _`Symfony`: http://symfony.com/
+.. _`Symfony`: https://symfony.com/
 .. _`Full API`: https://github.com/symfony/webpack-encore/blob/master/index.js
 .. _`Webpack Encore screencast series`: https://symfonycasts.com/screencast/webpack-encore
 
 .. ready: no
-.. revision: 86c897fde303831288d30c0a22aa7093db41abb5
+.. revision: 676454f16feeef0866454f23f230e1d08264765e

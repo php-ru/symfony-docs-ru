@@ -1187,10 +1187,9 @@ Learn more
 
     /service_container/*
 
-.. _`service-oriented architecture`: https://en.wikipedia.org/wiki/Service-oriented_architecture
 .. _`Symfony Standard Edition (version 3.3) services.yml`: https://github.com/symfony/symfony-standard/blob/3.3/app/config/services.yml
 .. _`glob pattern`: https://en.wikipedia.org/wiki/Glob_(programming)
 .. _`Symfony Fundamentals screencast series`: https://symfonycasts.com/screencast/symfony3-fundamentals
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

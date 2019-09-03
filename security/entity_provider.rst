@@ -528,7 +528,7 @@ User object to make sure that they represent the same user. For example, if
 the ``username`` on the 2 User objects doesn't match for some reason, then
 the user will be logged out for security reasons.
 
-Even though this all happens automatically, there are a few important side-effects.
+Even though this all happens automatically, there are a few important side effects.
 
 First, the :phpclass:`Serializable` interface and its ``serialize()`` and ``unserialize()``
 methods have been added to allow the ``User`` class to be serialized
@@ -553,4 +553,4 @@ or worry about it.
 .. _`it must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

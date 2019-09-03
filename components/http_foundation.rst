@@ -523,6 +523,26 @@ if it should::
 
     BinaryFileResponse::trustXSendfileTypeHeader();
 
+.. note::
+
+    The ``BinaryFileResponse`` will only handle ``X-Sendfile`` if the particular header is present.
+    For Apache, this is not the default case.
+
+    To add the header use the ``mod_headers`` Apache module and add the following to the Apache configuration:
+
+    .. code-block:: apache
+
+        <IfModule mod_xsendfile.c>
+          # This is already present somewhere...
+          XSendFile on
+          XSendFilePath ...some path...
+
+          # This needs to be added:
+          <IfModule mod_headers.c>
+            RequestHeader set X-Sendfile-Type X-Sendfile
+          </IfModule>
+        </IfModule>
+
 With the ``BinaryFileResponse``, you can still set the ``Content-Type`` of the sent file,
 or change its ``Content-Disposition``::
 
@@ -644,11 +664,10 @@ Learn More
     /session/*
     /http_cache/*
 
-.. _Packagist: https://packagist.org/packages/symfony/http-foundation
 .. _Nginx: https://www.nginx.com/resources/wiki/start/topics/examples/xsendfile/
 .. _Apache: https://tn123.org/mod_xsendfile/
 .. _`JSON Hijacking`: http://haacked.com/archive/2009/06/25/json-hijacking.aspx
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

@@ -4,10 +4,11 @@
 How to Use Bundle Inheritance to Override Parts of a Bundle
 ===========================================================
 
-.. caution::
+.. deprecated:: 3.4
 
     Bundle inheritance is deprecated since Symfony 3.4 and will be removed in
-    4.0.
+    4.0, but you can :doc:`override any part of a bundle </bundles/override>`
+    without using bundle inheritance.
 
 When working with third-party bundles, you'll probably come across a situation
 where you want to override a file in that third-party bundle with a file
@@ -112,4 +113,4 @@ The same goes for routing files and some other resources.
 .. _`FOSUserBundle`: https://github.com/friendsofsymfony/fosuserbundle
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 049e5e98e903a65f8006e5f31db9274b8b71d3f1

@@ -6,7 +6,7 @@ The PHPUnit Bridge
 ==================
 
     The PHPUnit Bridge provides utilities to report legacy tests and usage of
-    deprecated code and a helper for time-sensitive tests.
+    deprecated code and a helper for time and network-sensitive tests.
 
 It comes with the following features:
 
@@ -19,10 +19,10 @@ It comes with the following features:
 
 * Displays the stack trace of a deprecation on-demand;
 
-* Provides a ``ClockMock`` and ``DnsMock`` helper classes for time or network-sensitive tests.
+* Provides a ``ClockMock`` and ``DnsMock`` helper classes for time and network-sensitive tests;
 
 * Provides a modified version of PHPUnit that does not embed ``symfony/yaml`` nor
-  ``prophecy`` to prevent any conflicts with these dependencies.
+  ``prophecy`` to prevent any conflicts with these dependencies;
 
 Installation
 ------------
@@ -124,6 +124,32 @@ The summary includes:
             <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
 
+Running Tests in Parallel
+-------------------------
+
+The modified PHPUnit script allows running tests in parallel by providing
+a directory containing multiple test suites with their own ``phpunit.xml.dist``.
+
+.. code-block:: terminal
+
+    ├── tests/
+    │   ├── Functional/
+    │   │   ├── ...
+    │   │   └── phpunit.xml.dist
+    │   ├── Unit/
+    │   │   ├── ...
+    │   │   └── phpunit.xml.dist
+
+.. code-block:: terminal
+
+    $ ./vendor/bin/simple-phpunit tests/
+
+The modified PHPUnit script will recursively go through the provided directory,
+up to a depth of 3 subfolders or the value specified by the environment variable
+``SYMFONY_PHPUNIT_MAX_DEPTH``, looking for ``phpunit.xml.dist`` files and then
+running each suite it finds in parallel, collecting their output and displaying
+each test suite's results in their own section.
+
 Trigger Deprecation Notices
 ---------------------------
 
@@ -183,7 +209,7 @@ message, enclosed with ``/``. For example, with:
         </php>
     </phpunit>
 
-PHPUnit_ will stop your test suite once a deprecation notice is triggered whose
+`PHPUnit`_ will stop your test suite once a deprecation notice is triggered whose
 message contains the ``"foobar"`` string.
 
 Making Tests Fail
@@ -378,6 +404,7 @@ different class, do it explicitly using ``ClockMock::register(MyClass::class)``:
 
     use App\MyClass;
     use PHPUnit\Framework\TestCase;
+    use Symfony\Bridge\PhpUnit\ClockMock;
 
     /**
      * @group time-sensitive
@@ -439,6 +466,7 @@ constraint to test the validity of the email domain::
             $result = $validator->validate('foo@example.com', $constraint);
 
             // ...
+        }
     }
 
 In order to avoid making a real network connection, add the ``@dns-sensitive``
@@ -463,6 +491,7 @@ the data you expect to get for the given hosts::
             $result = $validator->validate('foo@example.com', $constraint);
 
             // ...
+        }
     }
 
 The ``withMockedHosts()`` method configuration is defined as an array. The keys
@@ -572,8 +601,13 @@ If you have installed the bridge through Composer, you can run it by calling e.g
 
 .. tip::
 
-    Set the ``SYMFONY_PHPUNIT_VERSION`` env var to e.g. ``5.5`` to change the
-    base version of PHPUnit to ``5.5`` instead of the default ``5.3``.
+    It's possible to change the base version of PHPUnit by setting the
+    ``SYMFONY_PHPUNIT_VERSION`` env var in the ``phpunit.xml.dist`` file (e.g.
+    ``<server name="SYMFONY_PHPUNIT_VERSION" value="5.5"/>``). This is the
+    preferred method as it can be committed to your version control repository.
+
+    It's also possible to set ``SYMFONY_PHPUNIT_VERSION`` as a real env var
+    (not defined in a :doc:`dotenv </components/dotenv>` file).
 
 .. tip::
 
@@ -685,12 +719,11 @@ not find the SUT:
         </listener>
     </listeners>
 
-.. _PHPUnit: https://phpunit.de
+.. _`PHPUnit`: https://phpunit.de
 .. _`PHPUnit event listener`: https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Framework_TestListener
 .. _`PHPUnit's assertStringMatchesFormat()`: https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringMatchesFormat
 .. _`PHP error handler`: https://php.net/manual/en/book.errorfunc.php
 .. _`environment variable`: https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.php-ini-constants-variables
-.. _Packagist: https://packagist.org/packages/symfony/phpunit-bridge
 .. _`@-silencing operator`: https://php.net/manual/en/language.operators.errorcontrol.php
 .. _`@-silenced`: https://php.net/manual/en/language.operators.errorcontrol.php
 .. _`Travis CI`: https://travis-ci.org/
@@ -699,4 +732,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 56e30d24ab27650d5e68addbf0db3c59675cfe84
+.. revision: 4056ef3b52833d0ab79ce0324775035cdb143314

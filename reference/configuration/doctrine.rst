@@ -157,8 +157,6 @@ which is the first one defined or the one configured via the
 Each connection is also accessible via the ``doctrine.dbal.[name]_connection``
 service where ``[name]`` is the name of the connection.
 
-.. _DBAL documentation: http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
-
 Doctrine ORM Configuration
 --------------------------
 
@@ -259,7 +257,7 @@ dir
 ...
 
 Path to the mapping or entity files (depending on the driver). If this path
-is relative it is assumed to be relative to the bundle root. This only works
+is relative, it is assumed to be relative to the bundle root. This only works
 if the name of your mapping is a bundle name. If you want to use this option
 to specify absolute paths you should prefix the path with the kernel parameters
 that exist in the DIC (for example ``%kernel.project_dir%``).
@@ -447,7 +445,7 @@ If the ``dir`` configuration is set and the ``is_bundle`` configuration
 is ``true``, the DoctrineBundle will prefix the ``dir`` configuration with
 the path of the bundle.
 
-.. _`DQL User Defined Functions`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/dql-user-defined-functions.html
+.. _DBAL documentation: https://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

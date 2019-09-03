@@ -300,7 +300,5 @@ Learn More
 
     var_dumper/*
 
-.. _Packagist: https://packagist.org/packages/symfony/var-dumper
-
 .. ready: no
-.. revision: 26b31ac2a2c939aeb80b7e445c8769359578ff83
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

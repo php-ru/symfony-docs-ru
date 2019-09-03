@@ -201,14 +201,13 @@ deployment process too):
 
 .. code-block:: terminal
 
-    $ composer dump-autoload --optimize --no-dev --classmap-authoritative
+    $ composer dump-autoload --no-dev --classmap-authoritative
 
-* ``--optimize`` dumps every PSR-0 and PSR-4 compatible class used in your
-  application;
 * ``--no-dev`` excludes the classes that are only needed in the development
-  environment (e.g. tests);
-* ``--classmap-authoritative`` prevents Composer from scanning the file
-  system for classes that are not found in the class map.
+  environment (i.e. ``require-dev`` dependencies and ``autoload-dev`` rules);
+* ``--classmap-authoritative`` creates a class map for PSR-0 and PSR-4 compatible classes
+  used in your application and prevents Composer from scanning the file system for
+  classes that are not found in the class map. (see: `Composer's autoloader optimization`_).
 
 Learn more
 ----------
@@ -227,4 +226,4 @@ Learn more
 .. _`open_basedir`: https://php.net/manual/ini.core.php#ini.open-basedir
 
 .. ready: no
-.. revision: 8cf7481c7f9404b84807ed103891149f9e64341c
+.. revision: 127cc9effde4cafbeee0bc36ecb7367c771f28e8

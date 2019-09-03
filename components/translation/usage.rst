@@ -104,7 +104,7 @@ for the individual translation, and can be the message in the main locale (e.g.
 *"Symfony is great"*) of your application or a unique identifier (e.g.
 ``symfony.great`` - see the sidebar below).
 
-Translation files can be created in several different formats, XLIFF being the
+Translation files can be created in several formats, XLIFF being the
 recommended format. These files are parsed by one of the loader classes.
 
 .. configuration-block::
@@ -351,7 +351,7 @@ effect after removing the explicit rules:
     '{0} There are no apples|[20,Inf[ There are many apples|There is one apple|a_few: There are %count% apples'
 
 For example, for ``1`` apple, the standard rule ``There is one apple`` will
-be used. For ``2-19`` apples, the second standard rule 
+be used. For ``2-19`` apples, the second standard rule
 ``There are %count% apples`` will be selected.
 
 An :class:`Symfony\\Component\\Translation\\Interval` can represent a finite set
@@ -495,4 +495,4 @@ code needed to generate the previous XLIFF file::
 .. _`ISO 31-11`: https://en.wikipedia.org/wiki/Interval_(mathematics)#Notations_for_intervals
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

@@ -70,7 +70,7 @@ Now you can create, retrieve, update and delete items using this object::
 
     // retrieve the cache item
     if (!$cache->has('stats.products_count')) {
-        // ... item does not exists in the cache
+        // ... item does not exist in the cache
     }
 
     // retrieve the value stored by the item
@@ -171,7 +171,7 @@ Now you can create, retrieve, update and delete items using this cache pool::
     // retrieve the cache item
     $productsCount = $cache->getItem('stats.products_count');
     if (!$productsCount->isHit()) {
-        // ... item does not exists in the cache
+        // ... item does not exist in the cache
     }
     // retrieve the value stored by the item
     $total = $productsCount->get();
@@ -195,4 +195,4 @@ Advanced Usage (PSR-6)
 .. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
 
 .. ready: no
-.. revision: cbe6e454869e8a7c7dd4a9b1e106f9fe8109d7c3
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

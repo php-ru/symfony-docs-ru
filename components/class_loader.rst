@@ -9,7 +9,7 @@ The ClassLoader Component
 
 .. caution::
 
-    The ClassLoader component was deprecated in Symfony 3.3 and it will be
+    The ClassLoader component was deprecated in Symfony 3.3 and will be
     removed in 4.0. As an alternative, use any of the `class loading optimizations`_
     provided by Composer.
 
@@ -71,8 +71,7 @@ Learn More
 .. _PSR-0: https://www.php-fig.org/psr/psr-0/
 .. _PSR-4: https://www.php-fig.org/psr/psr-4/
 .. _`autoloading mechanism`: https://php.net/manual/en/language.oop5.autoload.php
-.. _Packagist: https://packagist.org/packages/symfony/class-loader
 .. _`class loading optimizations`: https://getcomposer.org/doc/articles/autoloader-optimization.md
 
 .. ready: no
-.. revision: 7bd5608d89d18eeea82c09dbcafe6249c6883982
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

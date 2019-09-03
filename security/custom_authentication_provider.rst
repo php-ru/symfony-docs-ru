@@ -649,8 +649,7 @@ in the factory and consumed or passed to the other classes in the container.
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 .. _`WSSE`: http://www.xml.com/pub/a/2003/12/17/dive.html
 .. _`nonce`: https://en.wikipedia.org/wiki/Cryptographic_nonce
-.. _`timing attacks`: https://en.wikipedia.org/wiki/Timing_attack
 .. _`Symfony Polyfill`: https://github.com/symfony/polyfill
 
 .. ready: no
-.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

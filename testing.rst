@@ -449,7 +449,7 @@ or perform more complex requests. Some useful examples::
     );
 
 Last but not least, you can force each request to be executed in its own PHP
-process to avoid any side-effects when working with several clients in the same
+process to avoid any side effects when working with several clients in the same
 script::
 
     $client->insulate();
@@ -984,4 +984,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: cdb1c3ca33126998691de690fc6c2e67a378291e
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

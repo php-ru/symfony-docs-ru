@@ -9,7 +9,7 @@ The ``TelType`` field is a text field that is rendered using the HTML5
 of this type is not validated in any way, because formats for telephone numbers
 vary too much depending on each country.
 
-Nevertheless it may be useful to use this type in web applications because some
+Nevertheless, it may be useful to use this type in web applications because some
 browsers (e.g. smartphone browsers) adapt the input keyboard to make it easier
 to input phone numbers.
 
@@ -67,4 +67,4 @@ The default value is ``''`` (the empty string).
 .. include:: /reference/forms/types/options/trim.rst.inc
 
 .. ready: no
-.. revision: 58d8aa3e3ad8ba8c08e15c105ad5271b968ad0d5
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

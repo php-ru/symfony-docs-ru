@@ -37,7 +37,7 @@ a PHP script, it's better to reproduce the bug by forking the Symfony Standard
 edition. To do so:
 
 #. Go to https://github.com/symfony/symfony-standard and click on the **Fork**
-   button to make a fork of that repository or go to your already forked copy.
+   button to make a fork of that repository or go to your already-forked copy.
 #. Clone the forked repository into your computer:
    ``git clone git://github.com/YOUR-GITHUB-USERNAME/symfony-standard.git``
 #. Browse the project and create a new branch (e.g. ``issue_23567``,
@@ -78,4 +78,4 @@ In short, the idea is to keep adding small and incremental changes to the defaul
 Symfony Standard edition until you can reproduce the bug.
 
 .. ready: no
-.. revision: cc9d8ece0d582831be3e7edc9e2c14141d34a879
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

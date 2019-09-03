@@ -39,8 +39,5 @@ Or you can even load just the CSRF token with an AJAX request and replace the
 form field value with it. Take a look at :doc:`hinclude.js </templating/hinclude>`
 for a nice solution.
 
-.. _`Cross-site request forgery`: http://en.wikipedia.org/wiki/Cross-site_request_forgery
-.. _`Security CSRF Component`: https://github.com/symfony/security-csrf
-
 .. ready: no
-.. revision: 0a6ced4c1b3e7415c6c9bffd669428d5ee372e8c
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

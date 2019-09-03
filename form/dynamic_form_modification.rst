@@ -365,7 +365,7 @@ Dynamic Generation for Submitted Forms
 Another case that can appear is that you want to customize the form specific to
 the data that was submitted by the user. For example, imagine you have a registration
 form for sports gatherings. Some events will allow you to specify your preferred
-position on the field. This would be a ``choice`` field for example. However the
+position on the field. This would be a ``choice`` field for example. However, the
 possible choices will depend on each sport. Football will have attack, defense,
 goalkeeper etc... Baseball will have a pitcher but will not have a goalkeeper. You
 will need the correct options in order for validation to pass.
@@ -581,4 +581,4 @@ The major benefit of submitting the whole form to just extract the updated
 code from above to generate the submitted form can be reused.
 
 .. ready: no
-.. revision: 7f6bbc7afe4de4248870c22eae3bff7302553832
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

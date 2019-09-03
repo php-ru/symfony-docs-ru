@@ -425,7 +425,7 @@ use this, update the compiler::
                 foreach ($tags as $attributes) {
                     $definition->addMethodCall('addTransport', [
                         new Reference($id),
-                        $attributes["alias"]
+                        $attributes['alias']
                     ]);
                 }
             }
@@ -560,4 +560,4 @@ application handlers::
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: b6a8e9609e03b93a5f7964cbb1a60f80f8279504

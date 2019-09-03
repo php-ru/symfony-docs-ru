@@ -135,7 +135,6 @@ central repository to work. You then have several solutions:
 .. _`Git`: https://git-scm.com/
 .. _`SVN`: https://subversion.apache.org/
 .. _`Subversion`: https://subversion.apache.org/
-.. _`Symfony Standard Edition`: https://symfony.com/download
 .. _`Version Control with Subversion`: http://svnbook.red-bean.com/
 .. _`GitHub`: https://github.com/
 .. _`Google code`: https://code.google.com/hosting/
@@ -143,4 +142,4 @@ central repository to work. You then have several solutions:
 .. _`Gna`: http://gna.org/
 
 .. ready: no
-.. revision: 979274b0209eb07c732d192d1b00af62af5bbf65
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

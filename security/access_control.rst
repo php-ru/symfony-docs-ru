@@ -134,9 +134,7 @@ options:
 * ``roles`` If the user does not have the given role, then access is denied
   (internally, an :class:`Symfony\\Component\\Security\\Core\\Exception\\AccessDeniedException`
   is thrown). If this value is an array of multiple roles, the user must have
-  at least one of them (when using the default ``affirmative`` strategy in the
-  :ref:`Access Decision Manager <components-security-access-decision-manager>`)
-  or all of them when using the ``unanimous`` strategy;
+  at least one of them.
 
 * ``allow_if`` If the expression returns false, then access is denied;
 
@@ -352,4 +350,4 @@ the user will be redirected to ``https``:
         ]);
 
 .. ready: no
-.. revision: d14992116a29795b2135bfa042d04305eea6df0c
+.. revision: 4b76554f55ec3166f1b0dc8ee9ba628f80842051

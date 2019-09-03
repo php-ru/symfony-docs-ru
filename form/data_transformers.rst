@@ -308,7 +308,7 @@ Now, you can use your ``TaskType``::
     // ...
 
 Cool, you're done! Your user will be able to enter an issue number into the
-text field and it will be transformed back into an Issue object. This means
+text field, which will be transformed back into an Issue object. This means
 that, after a successful submission, the Form component will pass a real
 ``Issue`` object to ``Task::setIssue()`` instead of the issue number.
 
@@ -466,4 +466,4 @@ for a ``date`` field.
     As a general rule, the normalized data should contain as much information as possible.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

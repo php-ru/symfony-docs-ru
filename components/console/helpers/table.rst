@@ -69,7 +69,7 @@ You can add a table separator anywhere in the output by passing an instance of
     | 80-902734-1-6 | And Then There Were None | Agatha Christie  |
     +---------------+--------------------------+------------------+
 
-By default the width of the columns is calculated automatically based on their
+By default, the width of the columns is calculated automatically based on their
 contents. Use the :method:`Symfony\\Component\\Console\\Helper\\Table::setColumnWidths`
 method to set the column widths explicitly::
 
@@ -275,4 +275,4 @@ You can use the ``colspan`` and ``rowspan`` options at the same time which allow
 you to create any table layout you may wish.
 
 .. ready: no
-.. revision: 3506a7e8ca6f3fa58f05e1fcfc5c1552094007d1
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

@@ -19,9 +19,9 @@ an individual field, you can set it in the data option::
 .. caution::
 
     The ``data`` option *always* overrides the value taken from the domain data
-    (object) when rendering. This means the object value is also overriden when
+    (object) when rendering. This means the object value is also overridden when
     the form edits an already persisted object, causing it to lose its
     persisted value when the form is submitted.
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: e6c21b2d78e6e420b37099fb250122793f5857c2
