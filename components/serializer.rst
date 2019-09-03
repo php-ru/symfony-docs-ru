@@ -638,13 +638,13 @@ When serializing, you can set a callback to format a specific object property::
     $encoder = new JsonEncoder();
 
     // all callback parameters are optional (you can omit the ones you don't use)
-    $callback = function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = []) {
+    $dateCallback = function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = []) {
         return $innerObject instanceof \DateTime ? $innerObject->format(\DateTime::ISO8601) : '';
     };
 
     $defaultContext = [
         AbstractNormalizer::CALLBACKS => [
-            'createdAt' => $callback,
+            'createdAt' => $dateCallback,
         ],
     ];
 
@@ -713,7 +713,7 @@ There are several types of normalizers available:
 :class:`Symfony\\Component\\Serializer\\Normalizer\\DateTimeNormalizer`
     This normalizer converts :phpclass:`DateTimeInterface` objects (e.g.
     :phpclass:`DateTime` and :phpclass:`DateTimeImmutable`) into strings.
-    By default it uses the RFC3339_ format.
+    By default, it uses the `RFC3339`_ format.
 
 :class:`Symfony\\Component\\Serializer\\Normalizer\\DataUriNormalizer`
     This normalizer converts :phpclass:`SplFileInfo` objects into a data URI
@@ -721,7 +721,7 @@ There are several types of normalizers available:
 
 :class:`Symfony\\Component\\Serializer\\Normalizer\\DateIntervalNormalizer`
     This normalizer converts :phpclass:`DateInterval` objects into strings.
-    By default it uses the ``P%yY%mM%dDT%hH%iM%sS`` format.
+    By default, it uses the ``P%yY%mM%dDT%hH%iM%sS`` format.
 
 :class:`Symfony\\Component\\Serializer\\Normalizer\\ConstraintViolationListNormalizer`
     This normalizer converts objects that implement
@@ -754,17 +754,17 @@ Built-in Encoders
 The Serializer component provides several built-in encoders:
 
 :class:`Symfony\\Component\\Serializer\\Encoder\\JsonEncoder`
-    This class encodes and decodes data in JSON_.
+    This class encodes and decodes data in `JSON`_.
 
 :class:`Symfony\\Component\\Serializer\\Encoder\\XmlEncoder`
-    This class encodes and decodes data in XML_.
+    This class encodes and decodes data in `XML`_.
 
 :class:`Symfony\\Component\\Serializer\\Encoder\\YamlEncoder`
-    This encoder encodes and decodes data in YAML_. This encoder requires the
+    This encoder encodes and decodes data in `YAML`_. This encoder requires the
     :doc:`Yaml Component </components/yaml>`.
 
 :class:`Symfony\\Component\\Serializer\\Encoder\\CsvEncoder`
-    This encoder encodes and decodes data in CSV_.
+    This encoder encodes and decodes data in `CSV`_.
 
 All these encoders are enabled by default when using the Serializer component
 in a Symfony application.
@@ -926,9 +926,9 @@ when such a case is encountered::
 
     echo $serializer->serialize($organization, 'json'); // Throws a CircularReferenceException
 
-The ``setCircularReferenceLimit()`` method of this normalizer sets the number
-of times it will serialize the same object before considering it a circular
-reference. Its default value is ``1``.
+The key ``circular_reference_limit`` in the default context sets the number of
+times it will serialize the same object before considering it a circular
+reference. The default value is ``1``.
 
 Instead of throwing an exception, circular references can also be handled
 by custom callables. This is especially useful when serializing entities
@@ -1073,11 +1073,16 @@ having unique identifiers::
     $level2->child = $level3;
 
     $classMetadataFactory = new ClassMetadataFactory(new AnnotationLoader(new AnnotationReader()));
-    $normalizer = new ObjectNormalizer($classMetadataFactory);
+
     // all callback parameters are optional (you can omit the ones you don't use)
-    $normalizer->setMaxDepthHandler(function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = []) {
+    $maxDepthHandler = function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = []) {
         return '/foos/'.$innerObject->id;
-    });
+    };
+
+    $defaultContext = [
+        AbstractObjectNormalizer::MAX_DEPTH_HANDLER => $maxDepthHandler,
+    ];
+    $normalizer = new ObjectNormalizer($classMetadataFactory, null, null, null, null, null, $defaultContext);
 
     $serializer = new Serializer([$normalizer]);
 
@@ -1449,7 +1454,6 @@ Learn more
 
 .. _`PSR-1 standard`: https://www.php-fig.org/psr/psr-1/
 .. _`JMS serializer`: https://github.com/schmittjoh/serializer
-.. _Packagist: https://packagist.org/packages/symfony/serializer
 .. _RFC3339: https://tools.ietf.org/html/rfc3339#section-5.8
 .. _JSON: http://www.json.org/
 .. _XML: https://www.w3.org/XML/
@@ -1460,4 +1464,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com
 
 .. ready: no
-.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c
+.. revision: 6eb7bf202b8e985e3d7ee12dd69b27d3211fb4a7

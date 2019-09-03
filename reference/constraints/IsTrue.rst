@@ -72,7 +72,7 @@ Then you can constrain this method with ``IsTrue``.
 
     .. code-block:: xml
 
-        <!-- src/Acme/Blogbundle/Resources/config/validation.xml -->
+        <!-- config/validator/validation.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -135,4 +135,4 @@ Parameter        Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: ff1e1cf3e8489880b80591814c8721534039cd31

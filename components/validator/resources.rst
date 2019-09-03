@@ -71,7 +71,7 @@ configure the locations of these files::
     use Symfony\Component\Validator\Validation;
 
     $validator = Validation::createValidatorBuilder()
-        ->addYamlMapping('config/validation.yaml')
+        ->addYamlMapping('validator/validation.yaml')
         ->getValidator();
 
 .. note::
@@ -100,8 +100,8 @@ prefixed classes included in doc block comments (``/** ... */``). For example::
     class User
     {
         /**
-        * @Assert\NotBlank
-        */
+         * @Assert\NotBlank
+         */
         protected $name;
     }
 
@@ -136,7 +136,7 @@ multiple mappings::
     $validator = Validation::createValidatorBuilder()
         ->enableAnnotationMapping()
         ->addMethodMapping('loadValidatorMetadata')
-        ->addXmlMapping('config/validation.xml')
+        ->addXmlMapping('validator/validation.xml')
         ->getValidator();
 
 Caching
@@ -193,7 +193,5 @@ You can set this custom implementation using
     and caches using the ``add*Mapping()`` methods anymore. You now have to
     inject them into your custom metadata factory yourself.
 
-.. _`Packagist`: https://packagist.org
-
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

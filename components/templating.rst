@@ -214,7 +214,5 @@ Learn More
     /templating
     /templating/*
 
-.. _Packagist: https://packagist.org/packages/symfony/templating
-
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

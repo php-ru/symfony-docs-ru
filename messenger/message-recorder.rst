@@ -52,8 +52,8 @@ using the ``DispatchAfterCurrentBusMiddleware`` and adding a
     use App\Messenger\Event\UserRegistered;
     use Doctrine\ORM\EntityManagerInterface;
     use Symfony\Component\Messenger\Envelope;
-    use Symfony\Component\Messenger\Stamp\DispatchAfterCurrentBusStamp;
     use Symfony\Component\Messenger\MessageBusInterface;
+    use Symfony\Component\Messenger\Stamp\DispatchAfterCurrentBusStamp;
 
     class RegisterUserHandler
     {
@@ -107,7 +107,7 @@ using the ``DispatchAfterCurrentBusMiddleware`` and adding a
 
         public function __invoke(UserRegistered $event)
         {
-            $user = $this->em->getRepository(User::class)->find(new User($event->getUuid()));
+            $user = $this->em->getRepository(User::class)->find($event->getUuid());
 
             $this->mailer->send(new RawMessage('Welcome '.$user->getFirstName()));
         }
@@ -135,4 +135,4 @@ chain. Also, the ``dispatch_after_current_bus`` middleware must be loaded for
 *all* of the buses being used.
 
 .. ready: no
-.. revision: bfccca2d3021e356257b6f73021c546dd2daa4d4
+.. revision: 6e72c647c8f8fd3e7a5a75e7ff757ae85f529c69

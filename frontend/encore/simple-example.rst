@@ -302,8 +302,10 @@ Then, tell Encore to enable the Sass pre-processor:
 Because you just changed your ``webpack.config.js`` file, you'll need to restart
 Encore. When you do, you'll see an error!
 
->   Error: Install sass-loader & node-sass to use enableSassLoader()
->     yarn add sass-loader@^7.0.1 node-sass --dev
+.. code-block:: terminal
+
+    >   Error: Install sass-loader & node-sass to use enableSassLoader()
+    >     yarn add sass-loader@^7.0.1 node-sass --dev
 
 Encore supports many features. But, instead of forcing all of them on you, when
 you need a feature, Encore will tell you what you need to install. Run:
@@ -322,7 +324,7 @@ Compiling Only a CSS File
 .. caution::
 
     Using ``addStyleEntry()`` is supported, but not recommended. A better option
-    is to use follow the pattern above: use ``addEntry()`` to point to a JavaScript
+    is to follow the pattern above: use ``addEntry()`` to point to a JavaScript
     file, then require the CSS needed from inside of that.
 
 If you want to only compile a CSS file, that's possible via ``addStyleEntry()``:
@@ -348,4 +350,4 @@ Encore support many more features! For a full list of what you can do, see
 .. _`ECMAScript 6 modules`: https://hacks.mozilla.org/2015/08/es6-in-depth-modules/
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: 84a0f107c60a0eb09a6909cd12dfd846264c5b0a

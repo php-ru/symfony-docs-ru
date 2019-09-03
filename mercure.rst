@@ -47,7 +47,7 @@ Installation
 Installing the Symfony Component
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In applications using :doc:`Symfony Flex </setup/flex>`, run this command to
+In applications using :ref:`Symfony Flex <symfony-flex>`, run this command to
 install the Mercure support before using it:
 
 .. code-block:: terminal
@@ -101,7 +101,7 @@ to the Mercure Hub to be authorized to publish updates.
 
 This JWT should be stored in the ``MERCURE_JWT_SECRET`` environment variable.
 
-The JWT must be signed with the same secret key than the one used by
+The JWT must be signed with the same secret key as the one used by
 the Hub to verify the JWT (``aVerySecretKey`` in our example).
 Its payload must contain at least the following structure to be allowed to
 publish:
@@ -169,12 +169,12 @@ service, including controllers::
     }
 
 The first parameter to pass to the ``Update`` constructor is
-the **topic** being updated. This topic should be an IRI_
+the **topic** being updated. This topic should be an `IRI`_
 (Internationalized Resource Identifier, RFC 3987): a unique identifier
 of the resource being dispatched.
 
 Usually, this parameter contains the original URL of the resource
-transmitted to the client, but it can be any valid IRI_, it doesn't
+transmitted to the client, but it can be any valid `IRI`_, it doesn't
 have to be an URL that exists (similarly to XML namespaces).
 
 The second parameter of the constructor is the content of the update.
@@ -189,10 +189,10 @@ Subscribing to updates in JavaScript is straightforward:
 
 .. code-block:: javascript
 
-    const es = new EventSource('http://localhost:3000/hub?topic=' + encodeURIComponent('http://example.com/books/1'));
-    es.onmessage = e => {
+    const eventSource = new EventSource('http://localhost:3000/hub?topic=' + encodeURIComponent('http://example.com/books/1'));
+    eventSource.onmessage = event => {
         // Will be called every time an update is published by the server
-        console.log(JSON.parse(e.data));
+        console.log(JSON.parse(event.data));
     }
 
 Mercure also allows to subscribe to several topics,
@@ -201,16 +201,16 @@ and to use URI Templates as patterns:
 .. code-block:: javascript
 
     // URL is a built-in JavaScript class to manipulate URLs
-    const u = new URL('http://localhost:3000/hub');
-    u.searchParams.append('topic', 'http://example.com/books/1');
+    const url = new URL('http://localhost:3000/hub');
+    url.searchParams.append('topic', 'http://example.com/books/1');
     // Subscribe to updates of several Book resources
-    u.searchParams.append('topic', 'http://example.com/books/2');
+    url.searchParams.append('topic', 'http://example.com/books/2');
     // All Review resources will match this pattern
-    u.searchParams.append('topic', 'http://example.com/reviews/{id}');
+    url.searchParams.append('topic', 'http://example.com/reviews/{id}');
 
-    const es = new EventSource(u);
-    es.onmessage = e => {
-        console.log(JSON.parse(e.data));
+    const eventSource = new EventSource(url);
+    eventSource.onmessage = event => {
+        console.log(JSON.parse(event.data));
     }
 
 .. tip::
@@ -283,10 +283,10 @@ by using the ``AbstractController::addLink`` helper method::
     // src/Controller/DiscoverController.php
     namespace App\Controller;
 
-    use Fig\Link\Link;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\JsonResponse;
     use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\WebLink\LInk;
 
     class DiscoverController extends AbstractController
     {
@@ -317,12 +317,12 @@ and to subscribe to it:
             const hubUrl = response.headers.get('Link').match(/<([^>]+)>;\s+rel=(?:mercure|"[^"]*mercure[^"]*")/)[1];
 
             // Append the topic(s) to subscribe as query parameter
-            const h = new URL(hubUrl);
-            h.searchParams.append('topic', 'http://example.com/books/{id}');
+            const hub = new URL(hubUrl);
+            hub.searchParams.append('topic', 'http://example.com/books/{id}');
 
             // Subscribe to updates
-            const es = new EventSource(h);
-            es.onmessage = e => console.log(e.data);
+            const eventSource = new EventSource(hub);
+            eventSource.onmessage = event => console.log(event.data);
         });
 
 Authorization
@@ -383,12 +383,12 @@ And here is the controller::
     // src/Controller/DiscoverController.php
     namespace App\Controller;
 
-    use Fig\Link\Link;
     use Lcobucci\JWT\Builder;
     use Lcobucci\JWT\Signer\Hmac\Sha256;
     use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
     use Symfony\Component\HttpFoundation\Request;
     use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\WebLink\Link;
 
     class DiscoverController extends AbstractController
     {
@@ -400,7 +400,7 @@ And here is the controller::
             $username = $this->getUser()->getUsername(); // Retrieve the username of the current user
             $token = (new Builder())
                 // set other appropriate JWT claims, such as an expiration date
-                ->set('mercure', ['subscribe' => "http://example.com/user/$username"]) // could also include the security roles, or anything else
+                ->set('mercure', ['subscribe' => ["http://example.com/user/$username"]]) // could also include the security roles, or anything else
                 ->sign(new Sha256(), $this->getParameter('mercure_secret_key')) // don't forget to set this parameter! Test value: aVerySecretKey
                 ->getToken();
 
@@ -534,7 +534,6 @@ its Mercure support.
 .. _`a polyfill`: https://github.com/Yaffle/EventSource
 .. _`high-level implementations`: https://github.com/dunglas/mercure#tools
 .. _`In this recording`: https://www.youtube.com/watch?v=UI1l0JOjLeI
-.. _`API Platform`: https://api-platform.com
 .. _`Mercure.rocks`: https://mercure.rocks
 .. _`API Platform distribution`: https://api-platform.com/docs/distribution/
 .. _`JSON Web Token`: https://tools.ietf.org/html/rfc7519
@@ -545,4 +544,4 @@ its Mercure support.
 .. _`the online debugger`: https://uri-template-tester.mercure.rocks
 
 .. ready: no
-.. revision: 165e57347c9e28fd348b6f3b2c6240180cbb1370
+.. revision: 20745f18f62b03e97dc42fe12984b0d57a694181

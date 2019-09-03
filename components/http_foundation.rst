@@ -413,7 +413,7 @@ attribute::
 
     use Symfony\Component\HttpFoundation\Cookie;
 
-    $response->headers->setCookie(new Cookie('foo', 'bar'));
+    $response->headers->setCookie(Cookie::create('foo', 'bar'));
 
 The
 :method:`Symfony\\Component\\HttpFoundation\\ResponseHeaderBag::setCookie`
@@ -566,6 +566,26 @@ if it should::
 
     BinaryFileResponse::trustXSendfileTypeHeader();
 
+.. note::
+
+    The ``BinaryFileResponse`` will only handle ``X-Sendfile`` if the particular header is present.
+    For Apache, this is not the default case.
+
+    To add the header use the ``mod_headers`` Apache module and add the following to the Apache configuration:
+
+    .. code-block:: apache
+
+        <IfModule mod_xsendfile.c>
+          # This is already present somewhere...
+          XSendFile on
+          XSendFilePath ...some path...
+
+          # This needs to be added:
+          <IfModule mod_headers.c>
+            RequestHeader set X-Sendfile-Type X-Sendfile
+          </IfModule>
+        </IfModule>
+
 With the ``BinaryFileResponse``, you can still set the ``Content-Type`` of the sent file,
 or change its ``Content-Disposition``::
 
@@ -678,11 +698,10 @@ Learn More
     /session/*
     /http_cache/*
 
-.. _Packagist: https://packagist.org/packages/symfony/http-foundation
 .. _Nginx: https://www.nginx.com/resources/wiki/start/topics/examples/xsendfile/
 .. _Apache: https://tn123.org/mod_xsendfile/
 .. _`JSON Hijacking`: http://haacked.com/archive/2009/06/25/json-hijacking.aspx
 .. _OWASP guidelines: https://www.owasp.org/index.php/OWASP_AJAX_Security_Guidelines#Always_return_JSON_with_an_Object_on_the_outside
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

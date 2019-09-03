@@ -39,10 +39,9 @@ create files and execute the following commands:
 This command creates a new directory called ``blog`` that contains a fresh new
 project based on the most recent stable Symfony version available.
 
-.. tip::
+.. seealso::
 
-    The technical requirements to run Symfony are simple. If you want to check
-    if your system meets those requirements, read :doc:`/reference/requirements`.
+    Check out the :ref:`technical requirements for running Symfony applications <symfony-tech-requirements>`.
 
 Structuring the Application
 ---------------------------
@@ -101,4 +100,4 @@ Next: :doc:`/best_practices/configuration`
 .. _`Symfony Skeleton`: https://github.com/symfony/skeleton
 
 .. ready: no
-.. revision: de0e40b5603071efaadff8cd2e260341b0ea59c8
+.. revision: 455d613198e969618db41c40b377c130b1a8eb8d

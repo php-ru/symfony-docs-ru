@@ -131,7 +131,7 @@ If you want to modify that title, use this alternative syntax:
 
 .. code-block:: rst
 
-    :doc:`Spooling Email </email/spool>`
+    :doc:`Doctrine Associations </doctrine/associations>`
 
 .. note::
 
@@ -175,48 +175,47 @@ If you are documenting a brand new feature, a change or a deprecation that's
 been made in Symfony, you should precede your description of the change with
 the corresponding directive and a short description:
 
-For a new feature or a behavior change use the ``.. versionadded:: 3.x``
+For a new feature or a behavior change use the ``.. versionadded:: 5.x``
 directive:
 
 .. code-block:: rst
 
-    .. versionadded:: 3.4
+    .. versionadded:: 5.2
 
-        The special ``!`` template prefix was introduced in Symfony 3.4.
+        ... ... ... was introduced in Symfony 5.2.
 
 If you are documenting a behavior change, it may be helpful to *briefly*
 describe how the behavior has changed:
 
 .. code-block:: rst
 
-    .. versionadded:: 3.4
+    .. versionadded:: 5.2
 
-        Support for annotation routing without an external bundle was introduced
-        in Symfony 3.4. Prior, you needed to install the SensioFrameworkExtraBundle.
+       ... ... ... was introduced in Symfony 5.2. Prior to this,
+       ... ... ... ... ... ... ... ... .
 
-For a deprecation use the ``.. deprecated:: 3.X`` directive:
+For a deprecation use the ``.. deprecated:: 5.x`` directive:
 
 .. code-block:: rst
 
-    .. deprecated:: 3.3
+    .. deprecated:: 5.2
 
-        This technique is discouraged and the ``addClassesToCompile()`` method was
-        deprecated in Symfony 3.3 because modern PHP versions make it unnecessary.
+        ... ... ... was deprecated in Symfony 5.2.
 
-Whenever a new major version of Symfony is released (e.g. 3.0, 4.0, etc),
+Whenever a new major version of Symfony is released (e.g. 6.0, 7.0, etc),
 a new branch of the documentation is created from the ``master`` branch.
 At this point, all the ``versionadded`` and ``deprecated`` tags for Symfony
 versions that have a lower major version will be removed. For example, if
-Symfony 4.0 were released today, 3.0 to 3.4 ``versionadded`` and ``deprecated``
-tags would be removed from the new ``4.0`` branch.
+Symfony 6.0 were released today, 5.0 to 5.4 ``versionadded`` and ``deprecated``
+tags would be removed from the new ``6.0`` branch.
 
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Sphinx: http://sphinx-doc.org/
+.. _Sphinx: https://www.sphinx-doc.org/
 .. _`Symfony documentation`: https://github.com/symfony/symfony-docs
-.. _`reStructuredText Primer`: http://sphinx-doc.org/rest.html
+.. _`reStructuredText Primer`: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 .. _`reStructuredText Reference`: http://docutils.sourceforge.net/docs/user/rst/quickref.html
-.. _`Sphinx Markup Constructs`: http://sphinx-doc.org/markup/
+.. _`Sphinx Markup Constructs`: https://www.sphinx-doc.org/en/1.7/markup/index.html
 .. _`supported languages`: http://pygments.org/languages/
 
 .. ready: no
-.. revision: 65b24d6fcadb1f8a855aa4769151d985c4a25e49
+.. revision: b5e5d4ddc8a752a34d719f4713d5e5c7d6719ec5

@@ -57,6 +57,11 @@ Browser
 Crawler
 ~~~~~~~
 
+.. note::
+
+    You cannot use the :doc:`Crawler </components/dom_crawler>` assertions,
+    when using `symfony/panther`_ for end-to-end testing.
+
 - ``assertSelectorExists()``
 - ``assertSelectorNotExists()``
 - ``assertSelectorTextContains()``
@@ -67,15 +72,7 @@ Crawler
 - ``assertInputValueSame()``
 - ``assertInputValueNotSame()``
 
-Troubleshooting
----------------
-
-These assertions will not work with `symfony/panther`_ as they use the
-``Request`` and ``Response`` objects from the ``HttpFoundation``
-component, and the ``KernelBrowser`` from the ``FrameworkBundle``.
-Panther only uses the ``BrowserKit`` component.
-
 .. _`symfony/panther`: https://github.com/symfony/panther
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 38e9dc6169936cef8f71f758e96c92e848d75f1e

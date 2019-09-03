@@ -21,9 +21,10 @@ There are two steps to upgrading a minor version:
 1) Update the Symfony Library via Composer
 ------------------------------------------
 
-Your ``composer.json`` file should already be configured to allow your Symfony
-packages to be upgraded to minor versions. But, if a package was not upgraded,
-check that the version constrains of your Symfony dependencies are like this:
+The ``composer.json`` file is configured to allow Symfony packages to be
+upgraded to patch versions. But, if you would like the packages to be upgraded
+to minor versions, check that the version constrains of the Symfony dependencies
+are like this:
 
 .. code-block:: json
 
@@ -40,6 +41,19 @@ check that the version constrains of your Symfony dependencies are like this:
             "...": "..."
         },
         "...": "...",
+    }
+
+At the bottom of your ``composer.json`` file, in the ``extra`` block you can
+find a data setting for the symfony version. Make sure to also upgrade
+this one. For instance, update it to ``4.3.*`` to upgrade to Symfony 4.3:
+
+.. code-block:: json
+
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "4.3.*"
+        }
     }
 
 Next, use Composer to download new versions of the libraries:
@@ -73,4 +87,4 @@ These documents can also be found in the `Symfony Repository`_.
 .. _`UPGRADE-4.1.md`: https://github.com/symfony/symfony/blob/4.1/UPGRADE-4.1.md
 
 .. ready: no
-.. revision: b9033aac8958712b0a349e343cb8ebb36111b788
+.. revision: 2119d9800fd50d4b5cf8bc3713d9ccf5811bb084

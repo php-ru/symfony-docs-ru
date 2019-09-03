@@ -24,6 +24,7 @@ For example, suppose you want to log something from within your command::
 
     class SunshineCommand extends Command
     {
+        protected static $defaultName = 'app:sunshine';
         private $logger;
 
         public function __construct(LoggerInterface $logger)
@@ -37,7 +38,6 @@ For example, suppose you want to log something from within your command::
         protected function configure()
         {
             $this
-                ->setName('app:sunshine')
                 ->setDescription('Good morning!');
         }
 
@@ -131,4 +131,4 @@ only when the ``app:sunshine`` command is actually called.
     Calling the ``list`` command will instantiate all commands, including lazy commands.
 
 .. ready: no
-.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4
+.. revision: c4e46080ed222ba7d89603f9e197df07f431633a

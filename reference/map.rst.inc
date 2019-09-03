@@ -28,7 +28,6 @@
 
   * :doc:`/reference/dic_tags`
   * :doc:`/reference/events`
-  * :doc:`/reference/requirements`
 
 .. ready: no
-.. revision: 7cdf54aec34164d2d99f3551e38e2668ed53491d
+.. revision: 455d613198e969618db41c40b377c130b1a8eb8d

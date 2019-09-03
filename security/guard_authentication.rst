@@ -296,7 +296,7 @@ Each authenticator needs the following methods:
     If ``getUser()`` returns a User object, this method is called. Your job is to
     verify if the credentials are correct. For a login form, this is where you would
     check that the password is correct for the user. To pass authentication, return
-    ``true``. If you return *anything* else
+    ``true``. If you return ``false``
     (or throw an :ref:`AuthenticationException <guard-customize-error>`),
     authentication will fail.
 
@@ -509,9 +509,8 @@ Frequently Asked Questions
     question) or use the ``User`` object from FOSUserBundle and create your own
     authenticator(s) (just like in this article).
 
-.. _`must be quoted with backticks`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 .. _`Social Authentication`: https://github.com/knpuniversity/oauth2-client-bundle#authenticating-with-guard
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: d3d7bc2eada6fc0de74ea8cd09eabbd6dcb6e585

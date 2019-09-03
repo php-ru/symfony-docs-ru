@@ -14,9 +14,8 @@ PHP application and even with HTML/SPA (single page applications).
 Installation
 ------------
 
-The Symfony server is distributed as a free installable binary without any
-dependency and support for Linux, macOS and Windows. Go to `symfony.com/download`_
-and follow the instructions for your operating system.
+The Symfony server is part of the ``symfony`` binary created when you
+`install Symfony`_ and has support for Linux, macOS and Windows.
 
 .. note::
 
@@ -104,7 +103,7 @@ root directory:
     directory to set the same PHP version for a group of projects under that
     directory.
 
-Run command if you don't remember all the PHP versions installed on your
+Run the command below if you don't remember all the PHP versions installed on your
 computer:
 
 .. code-block:: terminal
@@ -315,61 +314,11 @@ debug any issues.
 
 `Read SymfonyCloud technical docs`_.
 
-Bonus Features
---------------
-
-In addition to being a local web server, the Symfony server provides other
-useful features:
-
-Looking for Security Vulnerabilities
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Instead of installing the :doc:`Symfony Security Checker </security/security_checker>`
-as a dependency of your projects, you can run the following command:
-
-.. code-block:: terminal
-
-    $ symfony security:check
-
-This command uses the same vulnerability database as the Symfony Security
-Checker but it does not make HTTP calls to the official API endpoint. Everything
-(except cloning the public database) is done locally, which is the best for CI
-(*continuous integration*) scenarios.
-
-Creating Symfony Projects
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In addition to the `different ways of installing Symfony`_, you can use these
-commands from the Symfony server:
-
-.. code-block:: terminal
-
-    # creates a new project based on symfony/skeleton
-    $ symfony new my_project_name
-
-    # creates a new project based on symfony/website-skeleton
-    $ symfony new --full my_project_name
-
-    # creates a new project based on symfony/demo
-    $ symfony new --demo my_project_name
-
-You can create a project depending on a **development** version as well (note
-that Composer will also set the stability to ``dev`` for all root dependencies):
-
-.. code-block:: terminal
-
-    # creates a new project based on Symfony's master branch
-    $ symfony new --version=dev-master my_project_name
-
-    # creates a new project based on Symfony's 4.3 dev branch
-    $ symfony new --version=4.3.x-dev my_project_name
-
-.. _`symfony.com/download`: https://symfony.com/download
+.. _`install Symfony`: https://symfony.com/download
 .. _`symfony/cli`: https://github.com/symfony/cli
-.. _`different ways of installing Symfony`: https://symfony.com/download
 .. _`Docker`: https://en.wikipedia.org/wiki/Docker_(software)
 .. _`SymfonyCloud`: https://symfony.com/cloud/
 .. _`Read SymfonyCloud technical docs`: https://symfony.com/doc/master/cloud/intro.html
 
 .. ready: no
-.. revision: e1bf6f69056d829139a4ad4b5a861716e62b589c
+.. revision: e614ed1d61941804aced0a5f9b3bdb3d48f17f9f

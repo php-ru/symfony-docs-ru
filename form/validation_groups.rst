@@ -8,21 +8,22 @@ Validation Groups
 -----------------
 
 If your object takes advantage of :doc:`validation groups </validation/groups>`,
-you'll need to specify which validation group(s) your form should use::
+you'll need to specify which validation group(s) your form should use. Pass
+this as an option when :ref:`creating forms in controllers <creating-forms-in-controllers>`::
 
     $form = $this->createFormBuilder($user, [
         'validation_groups' => ['registration'],
     ])->add(...);
 
-If you're creating :ref:`form classes <form-creating-form-classes>` (a good
-practice), then you'll need to add the following to the ``configureOptions()``
-method::
+When :ref:`creating forms in classes <creating-forms-in-classes>`, add the
+following to the ``configureOptions()`` method::
 
     use Symfony\Component\OptionsResolver\OptionsResolver;
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
+            // ...
             'validation_groups' => ['registration'],
         ]);
     }
@@ -34,4 +35,4 @@ group *and* all constraints that are not in a group, use::
     'validation_groups' => ['Default', 'registration']
 
 .. ready: no
-.. revision: a4440f903683700db6b3cbd281387684af93bc42
+.. revision: 3f0406f0c645544d213efeefe125dbc0bba8902d

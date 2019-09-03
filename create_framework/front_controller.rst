@@ -220,7 +220,7 @@ We have the first version of our framework::
 
     $response->send();
 
-Adding a new page is a two step process: add an entry in the map and create a
+Adding a new page is a two-step process: add an entry in the map and create a
 PHP template in ``src/pages/``. From a template, get the Request data via the
 ``$request`` variable and tweak the Response headers via the ``$response``
 variable.
@@ -231,4 +231,4 @@ variable.
     extracting the URL map to a configuration file.
 
 .. ready: no
-.. revision: 473e07285d64208a95fdf0bd85b582e9ba70905c
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

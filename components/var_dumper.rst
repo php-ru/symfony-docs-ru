@@ -224,6 +224,9 @@ option. Read more about this and other options in
     are supported (``Ctrl. + G`` or ``Cmd. + G``, ``F3``, etc.) When
     finished, press ``Esc.`` to hide the box again.
 
+    If you want to use your browser search input, press ``Ctrl. + F`` or
+    ``Cmd. + F`` again while having focus on VarDumper's search input.
+
 Using the VarDumper Component in your PHPUnit Test Suite
 --------------------------------------------------------
 
@@ -241,6 +244,16 @@ This will provide you with two new assertions:
     is like the previous method but accepts placeholders in the expected dump,
     based on the ``assertStringMatchesFormat()`` method provided by PHPUnit.
 
+The ``VarDumperTestTrait`` also includes these other methods:
+
+:method:`Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait::setUpVarDumper`
+    is used to configure the available casters and their options, which is a way
+    to only control the fields you're expecting and allows writing concise tests.
+
+:method:`Symfony\\Component\\VarDumper\\Test\\VarDumperTestTrait::tearDownVarDumper`
+    is called automatically after each case to reset the custom configuration
+    made in ``setUpVarDumper()``.
+
 Example::
 
     use PHPUnit\Framework\TestCase;
@@ -250,14 +263,33 @@ Example::
     {
         use VarDumperTestTrait;
 
+        protected function setUp()
+        {
+            $casters = [
+                \DateTimeInterface::class => static function (\DateTimeInterface $date, array $a, Stub $stub): array {
+                    $stub->class = 'DateTime';
+                    return ['date' => $date->format('d/m/Y')];
+                },
+            ];
+
+            $flags = CliDumper::DUMP_LIGHT_ARRAY | CliDumper::DUMP_COMMA_SEPARATOR;
+
+            // this configures the casters & flags to use for all the tests in this class.
+            // If you need custom configurations per test rather than for the whole class,
+            // call this setUpVarDumper() method from those tests instead.
+            $this->setUpVarDumper($casters, $flags);
+        }
+
         public function testWithDumpEquals()
         {
             $testedVar = [123, 'foo'];
 
+            // the expected dump contents don't have the default VarDumper structure
+            // because of the custom casters and flags used in the test
             $expectedDump = <<<EOTXT
-    array:2 [
-      0 => 123
-      1 => "foo"
+    [
+      123,
+      "foo",
     ]
     EOTXT;
 
@@ -407,7 +439,5 @@ Learn More
 
     var_dumper/*
 
-.. _Packagist: https://packagist.org/packages/symfony/var-dumper
-
 .. ready: no
-.. revision: 0a9e117bfac1554033cfd0e19ea59acf0d3b52ef
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

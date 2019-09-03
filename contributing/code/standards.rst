@@ -209,7 +209,7 @@ Naming Conventions
 
 * Prefix all abstract classes with ``Abstract`` except PHPUnit ``*TestCase``.
   Please note some early Symfony classes do not follow this convention and
-  have not been renamed for backward compatibility reasons. However all new
+  have not been renamed for backward compatibility reasons. However, all new
   abstract classes must follow this naming convention;
 
 * Suffix interfaces with ``Interface``;
@@ -288,4 +288,4 @@ License
 .. _`snake_case`: https://en.wikipedia.org/wiki/Snake_case
 
 .. ready: no
-.. revision: 3b135ec048548203c14f6192a856ccce1c139dce
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

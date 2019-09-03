@@ -27,12 +27,12 @@ The most common way to listen to an event is to register an **event listener**::
     namespace App\EventListener;
 
     use Symfony\Component\HttpFoundation\Response;
-    use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+    use Symfony\Component\HttpKernel\Event\ExceptionEvent;
     use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
     class ExceptionListener
     {
-        public function onKernelException(GetResponseForExceptionEvent $event)
+        public function onKernelException(ExceptionEvent $event)
         {
             // You get the exception object from the received event
             $exception = $event->getException();
@@ -63,7 +63,7 @@ The most common way to listen to an event is to register an **event listener**::
 .. tip::
 
     Each event receives a slightly different type of ``$event`` object. For
-    the ``kernel.exception`` event, it is :class:`Symfony\\Component\\HttpKernel\\Event\\GetResponseForExceptionEvent`.
+    the ``kernel.exception`` event, it is :class:`Symfony\\Component\\HttpKernel\\Event\\ExceptionEvent`.
     Check out the :doc:`Symfony events reference </reference/events>` to see
     what type of object each event provides.
 
@@ -151,7 +151,7 @@ listen to the same ``kernel.exception`` event::
     namespace App\EventSubscriber;
 
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-    use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+    use Symfony\Component\HttpKernel\Event\ExceptionEvent;
     use Symfony\Component\HttpKernel\KernelEvents;
 
     class ExceptionSubscriber implements EventSubscriberInterface
@@ -168,17 +168,17 @@ listen to the same ``kernel.exception`` event::
             ];
         }
 
-        public function processException(GetResponseForExceptionEvent $event)
+        public function processException(ExceptionEvent $event)
         {
             // ...
         }
 
-        public function logException(GetResponseForExceptionEvent $event)
+        public function logException(ExceptionEvent $event)
         {
             // ...
         }
 
-        public function notifyException(GetResponseForExceptionEvent $event)
+        public function notifyException(ExceptionEvent $event)
         {
             // ...
         }
@@ -207,11 +207,11 @@ or a "sub request"::
     // src/EventListener/RequestListener.php
     namespace App\EventListener;
 
-    use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+    use Symfony\Component\HttpKernel\Event\RequestEvent;
 
     class RequestListener
     {
-        public function onKernelRequest(GetResponseEvent $event)
+        public function onKernelRequest(RequestEvent $event)
         {
             if (!$event->isMasterRequest()) {
                 // don't do anything if it's not the master request
@@ -267,4 +267,4 @@ Learn more
     event_dispatcher/method_behavior
 
 .. ready: no
-.. revision: 543b184945600c4c8146b782b994a73f0e1a2786
+.. revision: c05478943520757b42fdf779a4c688def5211023

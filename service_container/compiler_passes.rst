@@ -68,7 +68,7 @@ and process the services inside the ``process()`` method::
 Working with Compiler Passes in Bundles
 ---------------------------------------
 
-`Bundles </bundles>`_ can define compiler passes in the ``build()`` method of
+:doc:`Bundles </bundles>` can define compiler passes in the ``build()`` method of
 the main bundle class (this is not needed when implementing the ``process()``
 method in the extension)::
 
@@ -96,4 +96,4 @@ bundle then by convention, tag names consist of the name of the bundle
 in your AcmeMailerBundle, you should call it ``acme_mailer.transport``.
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 6053234549348ec20cbc1461aea8191f56913f9e

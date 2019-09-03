@@ -7,9 +7,9 @@ Deploying to Heroku
 ===================
 
 To deploy to Heroku, see their official documentation:
-`Getting Started with Symfony on Heroku`_.
+`Deploying Symfony 4 Apps on Heroku`_.
 
-.. _`Getting Started with Symfony on Heroku`: https://devcenter.heroku.com/articles/getting-started-with-symfony
+.. _`Deploying Symfony 4 Apps on Heroku`: https://devcenter.heroku.com/articles/deploying-symfony4
 
 .. ready: no
-.. revision: 5b6ef2a9cbe2eded17c7c2c3e441605d8a7b6591
+.. revision: 27c8da8cbc8d4f213aa8b91e4011db5e7551092b

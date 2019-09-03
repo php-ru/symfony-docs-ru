@@ -21,10 +21,10 @@ to customize the normalized data. To do that, leverage the ``ObjectNormalizer``:
 
     use App\Entity\Topic;
     use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-    use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+    use Symfony\Component\Serializer\Normalizer\ContextAwareNormalizerInterface;
     use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-    class TopicNormalizer implements NormalizerInterface
+    class TopicNormalizer implements ContextAwareNormalizerInterface
     {
         private $router;
         private $normalizer;
@@ -47,7 +47,7 @@ to customize the normalized data. To do that, leverage the ``ObjectNormalizer``:
             return $data;
         }
 
-        public function supportsNormalization($data, $format = null)
+        public function supportsNormalization($data, $format = null, array $context = [])
         {
             return $data instanceof Topic;
         }
@@ -62,4 +62,4 @@ If you're using the :ref:`default services.yaml configuration <service-container
 this is done automatically!
 
 .. ready: no
-.. revision: 297275c1c5577b7304dd155437851e29ead78d46
+.. revision: a756044deb858e63540626c3e9e9c85b99b8706c

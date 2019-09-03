@@ -39,7 +39,7 @@ can insulate your clients::
     $this->assertRegExp('/Hello/', $sally->getResponse()->getContent());
 
 Insulated clients transparently execute their requests in a dedicated and
-clean PHP process, thus avoiding any side-effects.
+clean PHP process, thus avoiding any side effects.
 
 .. tip::
 
@@ -55,4 +55,4 @@ clean PHP process, thus avoiding any side-effects.
     the only solution is to disable insulation for those tests.
 
 .. ready: no
-.. revision: a89cfa34660cc0b1e65f7326eb983222b6d5b76c
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

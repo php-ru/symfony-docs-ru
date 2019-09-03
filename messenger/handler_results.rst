@@ -2,7 +2,7 @@
     single: Messenger; Getting results / Working with command & query buses
 
 Getting Results from your Handler
----------------------------------
+=================================
 
 When a message is handled, the :class:`Symfony\\Component\\Messenger\\Middleware\\HandleMessageMiddleware`
 adds a :class:`Symfony\\Component\\Messenger\\Stamp\\HandledStamp` for each object that handled the message.
@@ -20,11 +20,6 @@ You can use this to get the value returned by the handler(s)::
     // or get info about all of handlers
     $handledStamps = $envelope->all(HandledStamp::class);
 
-A :class:`Symfony\\Component\\Messenger\\HandleTrait` also exists in order to ease
-leveraging a Messenger bus for synchronous needs.
-The :method:`Symfony\\Component\\Messenger\\HandleTrait::handle` method ensures
-there is exactly one handler registered and returns its result.
-
 Working with Command & Query Buses
 ----------------------------------
 
@@ -36,8 +31,10 @@ buses are central pieces of the application. Read Martin Fowler's
 As queries are usually synchronous and expected to be handled once,
 getting the result from the handler is a common need.
 
-To avoid boilerplate code, you can leverage the ``HandleTrait`` in any class
-that has a ``$messageBus`` property::
+A :class:`Symfony\\Component\\Messenger\\HandleTrait` exists to get the result
+of the handler when processing synchronously. It also ensures that exactly one
+handler is registered. The ``HandleTrait`` can be used in any class that has a
+``$messageBus`` property::
 
     // src/Action/ListItems.php
     namespace App\Action;
@@ -105,4 +102,4 @@ wherever you need a query bus behavior instead of the ``MessageBusInterface``::
 .. _`article about CQRS`: https://martinfowler.com/bliki/CQRS.html
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: 9707b69c37e69a4874939736a8eb6e6c5a166688

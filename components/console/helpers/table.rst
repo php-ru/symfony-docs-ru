@@ -88,7 +88,7 @@ You can optionally display titles at the top and the bottom of the table::
     | 80-902734-1-6 | And Then There Were None | Agatha Christie  |
     +---------------+--------- Page 1/2 -------+------------------+
 
-By default the width of the columns is calculated automatically based on their
+By default, the width of the columns is calculated automatically based on their
 contents. Use the :method:`Symfony\\Component\\Console\\Helper\\Table::setColumnWidths`
 method to set the column widths explicitly::
 
@@ -395,4 +395,4 @@ This will display the following table in the terminal:
     +---------+
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 8dd96b996c144d35a8e1e01a296b4129b4307ab2

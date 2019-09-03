@@ -145,7 +145,6 @@ delete existing ones::
     // Removing an existing entry
     $entryManager->remove(new Entry('cn=Test User,dc=symfony,dc=com'));
 
-
 Batch Updating
 ______________
 
@@ -174,7 +173,5 @@ Possible operation types are ``LDAP_MODIFY_BATCH_ADD``, ``LDAP_MODIFY_BATCH_REMO
 ``$values`` must be ``NULL`` when using ``LDAP_MODIFY_BATCH_REMOVE_ALL``
 operation type.
 
-.. _Packagist: https://packagist.org/packages/symfony/ldap
-
 .. ready: no
-.. revision: f60923be19b855aea1bef5f3df937204df65215c
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

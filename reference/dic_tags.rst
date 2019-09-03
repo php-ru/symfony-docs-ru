@@ -26,6 +26,7 @@ Tag Name                                  Usage
 `kernel.event_subscriber`_                To subscribe to a set of different events/hooks in Symfony
 `kernel.fragment_renderer`_               Add new HTTP content rendering strategies
 `kernel.reset`_                           Allows to clean up services between requests
+`mime.mime_type_guesser`_                 Add your own logic for guessing MIME types
 `monolog.logger`_                         Logging with a custom logging channel
 `monolog.processor`_                      Add a custom processor for logging
 `routing.loader`_                         Register a custom service that loads routes
@@ -238,7 +239,7 @@ form.type_guesser
 
 **Purpose**: Add your own logic for "form type guessing"
 
-This tag allows you to add your own logic to the :ref:`form guessing <forms-field-guessing>`
+This tag allows you to add your own logic to the :ref:`form guessing <form-type-guessing>`
 process. By default, form guessing is done by "guessers" based on the validation
 metadata and Doctrine metadata (if you're using Doctrine) or Propel metadata
 (if you're using Propel).
@@ -464,6 +465,17 @@ This is mostly useful when running your projects in application servers that
 reuse the Symfony application between requests to improve performance. This tag
 is applied for example to the built-in :doc:`data collectors </profiler/data_collector>`
 of the profiler to delete all their information.
+
+.. _dic_tags-mime:
+
+mime.mime_type_guesser
+----------------------
+
+**Purpose**: Add your own logic for guessing MIME types
+
+This tag is used to register your own :ref:`MIME type guessers <components-mime-type-guess>`
+in case the guessers provided by the :doc:`Mime component </components/mime>`
+don't fit your needs.
 
 .. _dic_tags-monolog:
 
@@ -1216,9 +1228,8 @@ Bridge.
 
 .. _`Twig's documentation`: https://twig.symfony.com/doc/2.x/advanced.html#creating-an-extension
 .. _`Twig official extension repository`: https://github.com/fabpot/Twig-extensions
-.. _`KernelEvents`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/HttpKernel/KernelEvents.php
 .. _`SwiftMailer's Plugin Documentation`: http://swiftmailer.org/docs/plugins.html
 .. _`Twig Loader`: https://twig.symfony.com/doc/2.x/api.html#loaders
 
 .. ready: no
-.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

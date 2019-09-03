@@ -27,7 +27,5 @@ Encore, you're done!
 
 Your ``.js`` and ``.jsx`` files will now be transformed through ``babel-preset-react``.
 
-.. _`babel-preset-react`: https://babeljs.io/docs/plugins/preset-react/
-
 .. ready: no
-.. revision: 167329811b60c49e8b5b97dd394f6a9ebcfb68aa
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

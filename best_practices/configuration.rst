@@ -16,9 +16,8 @@ application behavior.
 .. best-practice::
 
     Define the infrastructure-related configuration options as
-    :doc:`environment variables </configuration/environment_variables>`. During
-    development, use the ``.env`` and ``.env.local`` files at the root of your
-    project to set these.
+    :ref:`environment variables <config-env-vars>`. During development, use the
+    ``.env`` and ``.env.local`` files at the root of your project to set these.
 
 By default, Symfony adds these types of options to the ``.env`` file when
 installing new dependencies in the app:
@@ -84,7 +83,7 @@ layer of configuration that's not needed because you don't need or want these
 configuration values to change on each server.
 
 The configuration options defined in the ``services.yaml`` may vary from one
-:doc:`environment </configuration/environments>` to another. That's why Symfony
+:ref:`environment <configuration-environments>` to another. That's why Symfony
 supports defining ``config/services_dev.yaml`` and ``config/services_prod.yaml``
 files so that you can override specific values for each environment.
 
@@ -190,4 +189,4 @@ Next: :doc:`/best_practices/business-logic`
 .. _`constant() function`: https://twig.symfony.com/doc/2.x/functions/constant.html
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: 27bd3bb9e295a20c49d82b18d9152a8d31dbb5f0

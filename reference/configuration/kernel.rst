@@ -91,7 +91,7 @@ Cache Directory
 
 This returns the absolute path of the cache directory of your Symfony project.
 It's calculated automatically based on the current
-:doc:`environment </configuration/environments>`.
+:ref:`environment <configuration-environments>`.
 
 This value is exposed via the ``kernel.cache_dir`` configuration parameter and
 the :method:`Symfony\\Component\\HttpKernel\\Kernel::getCacheDir` method. To
@@ -105,7 +105,7 @@ Log Directory
 
 This returns the absolute path of the log directory of your Symfony project.
 It's calculated automatically based on the current
-:doc:`environment </configuration/environments>`.
+:ref:`environment <configuration-environments>`.
 
 This value is exposed via the ``kernel.log_dir`` configuration parameter and
 the :method:`Symfony\\Component\\HttpKernel\\Kernel::getLogDir` method. To
@@ -171,4 +171,4 @@ achieve a strict reproducible build:
 .. _`reproducible builds`: https://en.wikipedia.org/wiki/Reproducible_builds
 
 .. ready: no
-.. revision: ce64ac294bf9ec5479fa0b9a1976b5b24d7433b4
+.. revision: aeeef55658351d63eb559320adae5ec012acd662

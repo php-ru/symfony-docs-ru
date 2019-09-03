@@ -21,7 +21,7 @@ their code. Instead, you can execute the command directly.
     overhead.
 
 Imagine you want to send spooled Swift Mailer messages by
-:doc:`using the swiftmailer:spool:send command </email/spool>`.
+:doc:`using the swiftmailer:spool:send command </email>`.
 Run this command from inside your controller via::
 
     // src/Controller/SpoolController.php
@@ -111,4 +111,4 @@ and supports optional themes.
 .. _`as a Twig Extension`: https://github.com/sensiolabs/ansi-to-html#twig-integration
 
 .. ready: no
-.. revision: 543b184945600c4c8146b782b994a73f0e1a2786
+.. revision: c2e92a5dd0a3ea3488ea5ba441dedf5ee0dd8d63

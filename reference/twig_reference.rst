@@ -356,27 +356,6 @@ trans
 Translates the text into the current language. More information in
 :ref:`Translation Filters <translation-filters>`.
 
-transchoice
-~~~~~~~~~~~
-
-.. code-block:: twig
-
-    {{ message|transchoice(count, arguments = [], domain = null, locale = null) }}
-
-``message``
-    **type**: ``string``
-``count``
-    **type**: ``integer``
-``arguments`` *(optional)*
-    **type**: ``array`` **default**: ``[]``
-``domain`` *(optional)*
-    **type**: ``string`` **default**: ``null``
-``locale`` *(optional)*
-    **type**: ``string`` **default**: ``null``
-
-Translates the text with pluralization support. More information in
-:ref:`Translation Filters <translation-filters>`.
-
 yaml_encode
 ~~~~~~~~~~~
 
@@ -585,25 +564,6 @@ trans
 
 Renders the translation of the content. More information in :ref:`translation-tags`.
 
-transchoice
-~~~~~~~~~~~
-
-.. code-block:: twig
-
-    {% transchoice count with vars from domain into locale %}{% endtranschoice %}
-
-``count``
-    **type**: ``integer``
-``vars`` *(optional)*
-    **type**: ``array`` **default**: ``[]``
-``domain`` *(optional)*
-    **type**: ``string`` **default**: ``null``
-``locale`` *(optional)*
-    **type**: ``string`` **default**: ``null``
-
-Renders the translation of the content with pluralization support, more
-information in :ref:`translation-tags`.
-
 trans_default_domain
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -666,4 +626,4 @@ The available attributes are:
 .. _`Twig Bridge`: https://github.com/symfony/symfony/tree/master/src/Symfony/Bridge/Twig/Extension
 
 .. ready: no
-.. revision: f60923be19b855aea1bef5f3df937204df65215c
+.. revision: 3eb8bcab444c98050ca726cce3b59a390ce59ed1

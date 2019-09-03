@@ -42,7 +42,7 @@ is a negative number or equal to zero:
         App\Entity\UnderGroundGarage:
             properties:
                 level:
-                    - NegativeOrZero
+                    - NegativeOrZero: ~
 
     .. code-block:: xml
 
@@ -100,4 +100,4 @@ Parameter                      Description
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 3c7a8c1998efc7ac44e61d98613e130b7ec25ed7

@@ -128,8 +128,8 @@ created by using the special ``"\0"`` property name to define their internal val
         "\0" => [$inputArray]
     ]);
 
-.. _`OPCache`: https://php.net/opcache
+.. _`OPcache`: https://php.net/opcache
 .. _`PSR-2`: https://www.php-fig.org/psr/psr-2/
 
 .. ready: no
-.. revision: 928832ad216f9abba7be7798245dc5e1fe6e9040
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

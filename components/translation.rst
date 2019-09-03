@@ -232,9 +232,8 @@ Learn More
     /translation/*
     /validation/translations
 
-.. _Packagist: https://packagist.org/packages/symfony/translation
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
 .. _`ISO 639-1`: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

@@ -75,7 +75,11 @@ The point is, you can set ``empty_data`` to the exact "new" object that you want
 .. tip::
 
     In order to pass arguments to the ``BlogType`` constructor, you'll need to
-    :doc:`register it as a service and tag with form.type </form/form_dependencies>`.
+    :ref:`register the form as a service <service-container-creating-service>`
+    and :doc:`tag it </service_container/tags>` with ``form.type``.
+    If you're using the
+    :ref:`default services.yaml configuration <service-container-services-load-example>`,
+    this is already done for you.
 
 .. _forms-empty-data-closure:
 
@@ -101,4 +105,4 @@ The closure must accept a ``FormInterface`` instance as the first argument::
     }
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: ac08120d4985b9647e319f5b10b1cb2cb248391e

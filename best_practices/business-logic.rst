@@ -276,11 +276,10 @@ Next: :doc:`/best_practices/controllers`
 
 .. _`full definition`: https://en.wikipedia.org/wiki/Business_logic
 .. _`Doctrine project`: http://www.doctrine-project.org/
-.. _`Doctrine ORM support`: https://symfony.com/doc/current/doctrine.html
 .. _`fixture class`: https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html#writing-simple-fixtures
 .. _`PSR-1`: https://www.php-fig.org/psr/psr-1/
 .. _`PSR-2`: https://www.php-fig.org/psr/psr-2/
 .. _`PHP-CS-Fixer`: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 .. ready: no
-.. revision: adfc77ff06fd29156622e81d548e8e57d8d6000e
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

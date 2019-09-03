@@ -94,7 +94,7 @@ public methods and properties.
 .. caution::
 
     Classes, properties and methods that bear the tag ``@internal`` as well as
-    the classes located in the various ``*\\Tests\\`` namespaces are an
+    the classes located in the various ``*\Tests\`` namespaces are an
     exception to this rule. They are meant for internal use only and should
     not be accessed by your own code.
 
@@ -445,12 +445,7 @@ Turn static into non static                         No
 
 .. [9] Allowed for the ``void`` return type.
 
-.. _Semantic Versioning: https://semver.org/
-.. _scalar type: https://php.net/manual/en/function.is-scalar.php
-.. _boolean values: https://php.net/manual/en/function.boolval.php
-.. _string values: https://php.net/manual/en/function.strval.php
-.. _integer values: https://php.net/manual/en/function.intval.php
-.. _float values: https://php.net/manual/en/function.floatval.php
+.. _`Semantic Versioning`: https://semver.org/
 
 .. ready: no
-.. revision: 04d727d6f85e21b57948a415129a11ce081fe12b
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

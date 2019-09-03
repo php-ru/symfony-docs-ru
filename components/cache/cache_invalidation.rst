@@ -10,7 +10,7 @@ change in the state of your model. The most basic kind of invalidation is direct
 items deletion. But when the state of a primary resource has spread across
 several cached items, keeping them in sync can be difficult.
 
-The Symfony Cache component provides two mechanisms to help solving this problem:
+The Symfony Cache component provides two mechanisms to help solve this problem:
 
 * :ref:`Tags-based invalidation <cache-component-tags>` for managing data dependencies;
 * :ref:`Expiration based invalidation <cache-component-expiration>` for time-related dependencies.
@@ -99,4 +99,4 @@ lifetime or their expiration date with the PSR-6 interface, as explained in the
 :doc:`/components/cache/cache_items` article.
 
 .. ready: no
-.. revision: 4f7b9c40e45ce574d9f39b7f2c98265172318426
+.. revision: 8dd96b996c144d35a8e1e01a296b4129b4307ab2

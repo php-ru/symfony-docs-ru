@@ -37,7 +37,7 @@ using these deprecated features in the last version before the major (e.g.
 
 To help you with this, deprecation notices are triggered whenever you end up
 using a deprecated feature. When visiting your application in the
-:doc:`dev environment </configuration/environments>`
+:ref:`dev environment <configuration-environments>`
 in your browser, these notices are shown in the web dev toolbar:
 
 .. image:: /_images/install/deprecations-in-profiler.png
@@ -162,9 +162,7 @@ of.
 
 When upgrading to Symfony 4, you will probably also want to upgrade to the new
 Symfony 4 directory structure so that you can take advantage of Symfony Flex.
-This takes some work, but is optional. For details, see :ref:`upgrade-to-flex`.
-
-.. _`Symfony-Upgrade-Fixer`: https://github.com/umpirsky/Symfony-Upgrade-Fixer
+This takes some work, but is optional. For details, see :doc:`/setup/flex`.
 
 .. ready: no
-.. revision: 64141fc17f6fb1bc7f3502029815f5746f96b735
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

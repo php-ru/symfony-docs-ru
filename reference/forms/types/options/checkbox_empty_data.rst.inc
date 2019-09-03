@@ -5,7 +5,7 @@ empty_data
 
 This option determines what value the field will return when the ``placeholder``
 choice is selected. In the checkbox and the radio type, the value of ``empty_data``
-is overriden by the value returned by the data transformer (see :doc:`/form/data_transformers`).
+is overridden by the value returned by the data transformer (see :doc:`/form/data_transformers`).
 
 .. ready: no
-.. revision: 91805f1212ce1d0bf244b65fc4e0d8cd23adfe89
+.. revision: e6c21b2d78e6e420b37099fb250122793f5857c2

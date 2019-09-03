@@ -23,10 +23,11 @@ Have a look at the following command that has three options::
 
     class DemoArgsCommand extends Command
     {
+        protected static $defaultName = 'demo:args';
+
         protected function configure()
         {
             $this
-                ->setName('demo:args')
                 ->setDescription('Describe args behaviors')
                 ->setDefinition(
                     new InputDefinition([
@@ -93,4 +94,4 @@ Input                           ``bar``            ``cat``      ``arg``
 .. _docopt: http://docopt.org/
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 1e50fcf7cbf730344ce5179a26aa0b4d5927766a

@@ -567,9 +567,9 @@ For even more details, see :doc:`/security/ldap`.
 **Authentication**
 
 You can authenticate to an LDAP server using the LDAP variants of the
-``form_login``, ``http_basic`` and ``json_login`` authentication providers. Simply use
-``form_login_ldap``, ``http_basic_ldap`` and ``json_login_ldap``, which will attempt to
-``bind`` against a LDAP server instead of using password comparison.
+``form_login``, ``http_basic`` and ``json_login`` authentication providers. Use
+``form_login_ldap``, ``http_basic_ldap`` and ``json_login_ldap``, which will
+attempt to ``bind`` against an LDAP server instead of using password comparison.
 
 Both authentication providers have the same arguments as their normal
 counterparts, with the addition of two configuration keys:
@@ -605,7 +605,7 @@ statically using the ``dn_string`` config option.
 **User provider**
 
 Users will still be fetched from the configured user provider. If you wish to
-fetch your users from a LDAP server, you will need to use the
+fetch your users from an LDAP server, you will need to use the
 :doc:`LDAP User Provider </security/ldap>` and any of these authentication
 providers: ``form_login_ldap`` or ``http_basic_ldap`` or ``json_login_ldap``.
 
@@ -697,11 +697,11 @@ providers
 ---------
 
 This options defines how the application users are loaded (from a database,
-a LDAP server, a configuration file, etc.) Read the following articles to learn
+an LDAP server, a configuration file, etc.) Read the following articles to learn
 more about each of those providers:
 
 * :ref:`Load users from a database <security-entity-user-provider>`
-* :ref:`Load users from a LDAP server <security-ldap-user-provider>`
+* :ref:`Load users from an LDAP server <security-ldap-user-provider>`
 * :ref:`Load users from a configuration file <security-memory-user-provider>`
 * :ref:`Create your own user provider <custom-user-provider>`
 
@@ -713,7 +713,6 @@ role inheritance rules by creating a role hierarchy, as explained in
 :ref:`security-role-hierarchy`.
 
 .. _`PBKDF2`: https://en.wikipedia.org/wiki/PBKDF2
-.. _`ircmaxell/password-compat`: https://packagist.org/packages/ircmaxell/password-compat
 .. _`libsodium`: https://pecl.php.net/package/libsodium
 .. _`Session Fixation`: https://www.owasp.org/index.php/Session_fixation
 .. _`Argon2 key derivation function`: https://en.wikipedia.org/wiki/Argon2
@@ -721,4 +720,4 @@ role inheritance rules by creating a role hierarchy, as explained in
 .. _`cryptographic salt`: https://en.wikipedia.org/wiki/Salt_(cryptography)
 
 .. ready: no
-.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

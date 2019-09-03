@@ -48,7 +48,7 @@ but can return any other format based on the format requested by the user.
 The request format is most often managed by the routing, where a route can
 be configured so that ``/about-us`` sets the request format to ``html`` while
 ``/about-us.xml`` sets the format to ``xml``. This can be achieved by using the
-special ``_format`` placeholder in your route definition::
+:ref:`special _format parameter <routing-format-parameter>` in your route definition::
 
     /**
      * @Route("/{slug}.{_format}", defaults={"_format"="html"}, requirements={"_format"="html|xml"}))
@@ -67,10 +67,6 @@ format:
         View as XML
     </a>
 
-.. seealso::
-
-    For more information, see this :ref:`Advanced Routing Example <advanced-routing-example>`.
-
 .. tip::
 
     When building APIs, using file name extensions often isn't the best
@@ -81,4 +77,4 @@ format:
 .. _Request Format Listener: http://symfony.com/doc/current/bundles/FOSRestBundle/3-listener-support.html#format-listener
 
 .. ready: no
-.. revision: 765d692d890d687505d1b2ad3c6bb7233dd11549
+.. revision: 1268ba7b43be6d6793bb149f2d58b4f34570312e

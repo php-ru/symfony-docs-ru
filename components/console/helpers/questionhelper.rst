@@ -188,6 +188,8 @@ provide a callback function to dynamically generate suggestions::
     // ...
     public function execute(InputInterface $input, OutputInterface $output)
     {
+        $helper = $this->getHelper('question');
+
         // This function is called whenever the input changes and new
         // suggestions are needed.
         $callback = function (string $userInput): array {
@@ -210,6 +212,26 @@ provide a callback function to dynamically generate suggestions::
         $question->setAutocompleterCallback($callback);
 
         $filePath = $helper->ask($input, $output, $question);
+    }
+
+Do not Trim the Answer
+~~~~~~~~~~~~~~~~~~~~~~
+
+You can also specify if you want to not trim the answer by setting it directly with
+:method:`Symfony\\Component\\Console\\Question\\Question::setTrimmable`::
+
+    use Symfony\Component\Console\Question\Question;
+
+    // ...
+    public function execute(InputInterface $input, OutputInterface $output)
+    {
+        // ...
+        $helper = $this->getHelper('question');
+
+        $question = new Question('What is the name of the child?');
+        $question->setTrimmable(false);
+        // if the users inputs 'elsa ' it will not be trimmed and you will get 'elsa ' as value
+        $name = $helper->ask($input, $output, $question);
     }
 
 Hiding the User's Response
@@ -418,4 +440,4 @@ This way you can test any user interaction (even complex ones) by passing the ap
     console object and therefore you can't test them on Windows.
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 9116f6b99f97bcd316a5cf8d4d2ac93809a7961b

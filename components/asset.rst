@@ -30,7 +30,7 @@ simple. Hardcoding URLs can be a disadvantage because:
   is essential for some applications because it allows you to control how
   the assets are cached. The Asset component allows you to define different
   versioning strategies for each package;
-* **Moving assets location** is cumbersome and error-prone: it requires you to
+* **Moving assets' location** is cumbersome and error-prone: it requires you to
   carefully update the URLs of all assets included in all templates. The Asset
   component allows to move assets effortlessly just by changing the base path
   value associated with the package of assets;
@@ -302,7 +302,7 @@ constructor::
     // result: http://static2.example.com/images/icon.png?v1
 
 For each asset, one of the URLs will be randomly used. But, the selection
-is deterministic, meaning that each asset will be always served by the same
+is deterministic, meaning that each asset will always be served by the same
 domain. This behavior simplifies the management of HTTP cache.
 
 Request Context Aware Assets
@@ -399,8 +399,10 @@ improve performance::
 Learn more
 ----------
 
-.. _Packagist: https://packagist.org/packages/symfony/asset
+* :doc:`How to manage CSS and JavaScript assets in Symfony applications </frontend>`
+* :doc:`WebLink component </components/web_link>` to preload assets using HTTP/2.
+
 .. _`Webpack`: https://webpack.js.org/
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

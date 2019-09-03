@@ -37,7 +37,7 @@ This means that the following scenarios will work:
 Installation
 ------------
 
-In applications using :doc:`Symfony Flex </setup/flex>`, run this command to
+In applications using :ref:`Symfony Flex <symfony-flex>`, run this command to
 install the Ldap component before using it:
 
 .. code-block:: terminal
@@ -149,6 +149,7 @@ use the ``ldap`` user provider.
                         search_password: password
                         default_roles: ROLE_USER
                         uid_key: uid
+                        extra_fields: ['email']
 
     .. code-block:: xml
 
@@ -189,6 +190,7 @@ use the ``ldap`` user provider.
                         'search_password' => 'password',
                         'default_roles' => 'ROLE_USER',
                         'uid_key' => 'uid',
+                        'extra_fields' => ['email'],
                     ],
                 ],
             ],
@@ -267,6 +269,14 @@ implementation. Commonly used values are:
 
 If you pass ``null`` as the value of this option, the default UID key is used
 ``sAMAccountName``.
+
+extra_fields
+............
+
+**type**: ``array`` **default**: ``null``
+
+Defines the custom fields to pull from the LDAP server. If any field does not
+exist, an ``\InvalidArgumentException`` will be thrown.
 
 filter
 ......
@@ -516,4 +526,4 @@ Configuration example for form login and query_string
 .. _`LDAP injection`: http://projects.webappsec.org/w/page/13246947/LDAP%20Injection
 
 .. ready: no
-.. revision: 9d601653689e726b41c6ecd3f6d96916c59a494b
+.. revision: 9047a17b01ad3d1f5f9a5a6a90d64cebdb491930

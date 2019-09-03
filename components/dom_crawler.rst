@@ -161,6 +161,10 @@ Namespaces can be explicitly registered with the
     $crawler->registerNamespace('m', 'http://search.yahoo.com/mrss/');
     $crawler = $crawler->filterXPath('//m:group//yt:aspectRatio');
 
+Verify if the current node matches a selector::
+
+    $crawler->matches('p.lorem');
+
 Node Traversing
 ~~~~~~~~~~~~~~~
 
@@ -190,6 +194,10 @@ Get all the child or parent nodes::
 Get all the direct child nodes matching a CSS selector::
 
     $crawler->filter('body')->children('p.lorem');
+
+Get the first parent (heading toward the document root) of the element that matches the provided selector::
+
+    $crawler->closest('p.lorem');
 
 .. note::
 
@@ -321,6 +329,11 @@ and :phpclass:`DOMNode` objects::
         // avoid the exception passing an argument that html() returns when node does not exist
         $html = $crawler->html('Default <strong>HTML</strong> content');
 
+    Or you can get the outer HTML of the first node using
+    :method:`Symfony\\Component\\DomCrawler\\Crawler::outerHtml`::
+
+        $html = $crawler->outerHtml();
+
 Expression Evaluation
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -346,30 +359,34 @@ This behavior is best illustrated with examples::
     $crawler->addHtmlContent($html);
 
     $crawler->filterXPath('//span[contains(@id, "article-")]')->evaluate('substring-after(@id, "-")');
-    /* array:3 [
-      0 => "100"
-      1 => "101"
-      2 => "102"
-    ]
+    /* Result:
+    [
+        0 => '100',
+        1 => '101',
+        2 => '102',
+    ];
     */
 
     $crawler->evaluate('substring-after(//span[contains(@id, "article-")]/@id, "-")');
-    /* array:1 [
-      0 => "100"
+    /* Result:
+    [
+        0 => '100',
     ]
     */
 
     $crawler->filterXPath('//span[@class="article"]')->evaluate('count(@id)');
-    /* array:3 [
-      0 => 1.0
-      1 => 1.0
-      2 => 1.0
+    /* Result:
+    [
+        0 => 1.0,
+        1 => 1.0,
+        2 => 1.0,
     ]
     */
 
     $crawler->evaluate('count(//span[@class="article"])');
-    /* array:1 [
-      0 => 3.0
+    /* Result:
+    [
+        0 => 3.0,
     ]
     */
 
@@ -491,6 +508,9 @@ To work with multi-dimensional fields::
         <input name="multi[]"/>
         <input name="multi[]"/>
         <input name="multi[dimensional]"/>
+        <input name="multi[dimensional][]" value="1"/>
+        <input name="multi[dimensional][]" value="2"/>
+        <input name="multi[dimensional][]" value="3"/>
     </form>
 
 Pass an array of values::
@@ -502,6 +522,11 @@ Pass an array of values::
     $form->setValues(['multi' => [
         1             => 'value',
         'dimensional' => 'an other value',
+    ]]);
+
+    // tick multiple checkboxes at once
+    $form->setValues(['multi' => [
+        'dimensional' => [1, 3] // it uses the input value to determine which checkbox to tick
     ]]);
 
 This is great, but it gets better! The ``Form`` object allows you to interact
@@ -585,8 +610,7 @@ Learn more
 * :doc:`/components/css_selector`
 
 .. _`Goutte`: https://github.com/FriendsOfPHP/Goutte
-.. _Packagist: https://packagist.org/packages/symfony/dom-crawler
 .. _`html5-php library`: https://github.com/Masterminds/html5-php
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 151378f6e05a2644490cc4fac7c086abccc563f9

@@ -8,8 +8,8 @@ The Messenger Component
     The Messenger component helps applications send and receive messages to/from
     other applications or via message queues.
 
-    The component is greatly inspired by Matthias Noback's series of `blog posts
-    about command buses`_ and the `SimpleBus project`_.
+    The component is greatly inspired by Matthias Noback's series of
+    `blog posts about command buses`_ and the `SimpleBus project`_.
 
 .. seealso::
 
@@ -200,7 +200,8 @@ Your own Sender
 
 Imagine that you already have an ``ImportantAction`` message going through the
 message bus and being handled by a handler. Now, you also want to send this
-message as an email.
+message as an email (using the :doc:`Mime </components/mime>` and
+:doc:`Mailer </components/mailer>` components).
 
 Using the :class:`Symfony\\Component\\Messenger\\Transport\\Sender\\SenderInterface`,
 you can create your own message sender::
@@ -208,15 +209,17 @@ you can create your own message sender::
     namespace App\MessageSender;
 
     use App\Message\ImportantAction;
+    use Symfony\Component\Mailer\MailerInterface;
     use Symfony\Component\Messenger\Envelope;
     use Symfony\Component\Messenger\Transport\Sender\SenderInterface;
+    use Symfony\Component\Mime\Email;
 
     class ImportantActionToEmailSender implements SenderInterface
     {
         private $mailer;
         private $toEmail;
 
-        public function __construct(\Swift_Mailer $mailer, string $toEmail)
+        public function __construct(MailerInterface $mailer, string $toEmail)
         {
             $this->mailer = $mailer;
             $this->toEmail = $toEmail;
@@ -231,12 +234,10 @@ you can create your own message sender::
             }
 
             $this->mailer->send(
-                (new \Swift_Message('Important action made'))
-                    ->setTo($this->toEmail)
-                    ->setBody(
-                        '<h1>Important action</h1><p>Made by '.$message->getUsername().'</p>',
-                        'text/html'
-                    )
+                (new Email())
+                    ->to($this->toEmail)
+                    ->subject('Important action made')
+                    ->html('<h1>Important action</h1><p>Made by '.$message->getUsername().'</p>')
             );
 
             return $envelope;
@@ -275,20 +276,29 @@ do is to write your own CSV receiver::
             $this->filePath = $filePath;
         }
 
-        public function receive(callable $handler): void
+        public function get(): iterable
         {
             $ordersFromCsv = $this->serializer->deserialize(file_get_contents($this->filePath), 'csv');
 
             foreach ($ordersFromCsv as $orderFromCsv) {
                 $order = new NewOrder($orderFromCsv['id'], $orderFromCsv['account_id'], $orderFromCsv['amount']);
 
-                $handler(new Envelope($order));
+                $envelope = new Envelope($order);
+
+                $handler($envelope);
             }
+
+            return [$envelope];
         }
 
-        public function stop(): void
+        public function ack(Envelope $envelope): void
         {
-            // noop
+            // Add information about the handled message
+        }
+
+        public function reject(Envelope $envelope): void
+        {
+            // Reject the message if needed
         }
     }
 
@@ -310,8 +320,8 @@ Learn more
     /messenger
     /messenger/*
 
-.. _blog posts about command buses: https://matthiasnoback.nl/tags/command%20bus/
-.. _SimpleBus project: http://simplebus.io
+.. _`blog posts about command buses`: https://matthiasnoback.nl/tags/command%20bus/
+.. _`SimpleBus project`: http://docs.simplebus.io/en/latest/
 
 .. ready: no
-.. revision: 6bf9ef5d835f9e870e2ca92173aa9b8d853a5895
+.. revision: bc1d0adf21985b88f655110f361f3cea9a2fdc5c

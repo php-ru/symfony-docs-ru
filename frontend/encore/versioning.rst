@@ -68,10 +68,27 @@ like normal:
 
     <img src="{{ asset('build/images/logo.png') }}">
 
+Troubleshooting
+---------------
+
+Asset Versioning and Deployment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When deploying a new version of your application, versioned assets will include
+a new hash, making the previous assets no longer available. This is usually not
+a problem when deploying applications using a rolling update, blue/green or
+symlink strategies.
+
+However, even when applying those techniques, there could be a lapse of time
+when some publicly/privately cached response requests the previous version of
+the assets. If your application can't afford to serve any broken asset, the best
+solution is to use a CDN (or custom made service) that keeps all the old assets
+cached for some time.
+
 Learn more
 ----------
 
 * :doc:`/components/asset`
 
 .. ready: no
-.. revision: 25b242e827a68c224859e966728ad262bfa303f3
+.. revision: 30c8fcb88d6e476501f84bb5cb3d1e379cebd541

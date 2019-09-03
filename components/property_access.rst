@@ -486,8 +486,7 @@ Or you can pass parameters directly to the constructor (not the recommended way)
     // ...
     $propertyAccessor = new PropertyAccessor(true); // this enables handling of magic __call
 
-.. _Packagist: https://packagist.org/packages/symfony/property-access
 .. _The Inflector component: https://github.com/symfony/inflector
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

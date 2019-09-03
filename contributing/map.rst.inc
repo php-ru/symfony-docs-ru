@@ -32,11 +32,10 @@
   * :doc:`Release Process </contributing/community/releases>`
   * :doc:`Respectful Review comments </contributing/community/review-comments>`
   * :doc:`Community Reviews </contributing/community/reviews>`
-  * :doc:`Other Resources </contributing/community/other>`
 
 * **Diversity**
 
   * :doc:`Governance </contributing/diversity/governance>`
 
 .. ready: no
-.. revision: b75912f4e424feb7acbc586fda611f58b52e8251
+.. revision: 108491317f80b5761ec0cb9bf1b4ba29667e730c

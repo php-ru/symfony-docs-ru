@@ -152,7 +152,7 @@ you need is this JavaScript code:
         jQuery('.add-another-collection-widget').click(function (e) {
             var list = jQuery(jQuery(this).attr('data-list-selector'));
             // Try to find the counter of the list or use the length of the list
-            var counter = list.data('widget-counter') | list.children().length;
+            var counter = list.data('widget-counter') || list.children().length;
 
             // grab the prototype template
             var newWidget = list.attr('data-prototype');
@@ -324,7 +324,7 @@ type::
 entry_type
 ~~~~~~~~~~
 
-**type**: ``string`` **default**: ``Symfony\\Component\\Form\\Extension\\Core\\Type\\TextType``
+**type**: ``string`` **default**: ``'Symfony\Component\Form\Extension\Core\Type\TextType'``
 
 This is the field type for each item in this collection (e.g. ``TextType``,
 ``ChoiceType``, etc). For example, if you have an array of email addresses,
@@ -448,4 +448,4 @@ allow_delete  ``boolean``  The value of the `allow_delete`_ option.
 ============  ===========  ========================================
 
 .. ready: no
-.. revision: 946e7e55556f78e3a9eea0c8ba8c4f317d7d2f40
+.. revision: 924454d7a26bff8008e831b8957e118ece9117ea

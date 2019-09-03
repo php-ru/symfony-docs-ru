@@ -23,8 +23,8 @@ Besides bug fixes, other minor changes can be accepted in a patch version:
   issues (any such patches must come with numbers that show a significant
   improvement on real-world code);
 
-* **Newer versions of PHP/HHVM**: Fixes that add support for newer versions of
-  PHP or HHVM are acceptable if they don't break the unit test suite;
+* **Newer versions of PHP**: Fixes that add support for newer versions of
+  PHP are acceptable if they don't break the unit test suite;
 
 * **Newer versions of popular OSes**: Fixes that add support for newer versions
   of popular OSes (Linux, MacOS and Windows) are acceptable if they don't break
@@ -80,4 +80,4 @@ are never accepted in a patch version:
     considered as bug fixes.
 
 .. ready: no
-.. revision: 201de67711ba5270f04508408769575567eff31e
+.. revision: 3c71d1a378521f02e18deb08a922c8bf5933cffe

@@ -157,7 +157,7 @@ or you decided not to maintain it anymore), you can deprecate its definition:
     .. code-block:: yaml
 
         app.mailer:
-            alias: '@AppBundle\Mail\PhpMailer'
+            alias: '@App\Mail\PhpMailer'
 
             # this will display a generic deprecation message...
             deprecated: true
@@ -344,4 +344,4 @@ definition does not modify the deprecated status, it will inherit the status fro
 the definition that is decorated.
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 55f03c70d0268edecc7b27ba294e2e648eb884ca

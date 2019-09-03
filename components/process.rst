@@ -96,6 +96,12 @@ with a non-zero code)::
         echo $exception->getMessage();
     }
 
+.. tip::
+
+    You can get the last output time in seconds by using the
+    :method:`Symfony\\Component\\Process\\Process::getLastOutputTime` method.
+    This method returns ``null`` if the process wasn't started!
+
 Using Features From the OS Shell
 --------------------------------
 
@@ -350,6 +356,23 @@ instead::
     );
     $process->run();
 
+Using a Prepared Command Line
+-----------------------------
+
+You can run the process by using a a prepared command line using the
+double bracket notation. You can use a placeholder in order to have a
+process that can only be changed with the values and without changing
+the PHP code::
+
+    use Symfony\Component\Process\Process;
+
+    $process = Process::fromShellCommandline('echo "$name"');
+    $process->run(null, ['name' => 'Elsa']);
+
+.. caution::
+
+    A prepared command line will not be escaped automatically!
+
 Process Timeout
 ---------------
 
@@ -363,7 +386,7 @@ a different timeout (in seconds) to the ``setTimeout()`` method::
     $process->run();
 
 If the timeout is reached, a
-:class:`Symfony\\Component\\Process\\Exception\\RuntimeException` is thrown.
+:class:`Symfony\\Component\\Process\\Exception\\ProcessTimedOutException` is thrown.
 
 For long running commands, it is your responsibility to perform the timeout
 check regularly::
@@ -474,14 +497,9 @@ whether `TTY`_ is supported on the current operating system::
 
     $process = (new Process())->setTty(Process::isTtySupported());
 
-.. _`Symfony Issue#5759`: https://github.com/symfony/symfony/issues/5759
-.. _`PHP Bug#39992`: https://bugs.php.net/bug.php?id=39992
-.. _`exec`: https://en.wikipedia.org/wiki/Exec_(operating_system)
 .. _`pid`: https://en.wikipedia.org/wiki/Process_identifier
-.. _`PHP Documentation`: https://php.net/manual/en/pcntl.constants.php
-.. _Packagist: https://packagist.org/packages/symfony/process
-.. _`PHP streams`: http://www.php.net/manual/en/book.stream.php
+.. _`PHP streams`: https://www.php.net/manual/en/book.stream.php
 .. _`TTY`: https://en.wikipedia.org/wiki/Tty_(unix)
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 1a5ea53a9e2920adbe350423dd18bf7cec3f5391

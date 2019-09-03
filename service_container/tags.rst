@@ -434,7 +434,7 @@ use this, update the compiler::
                 foreach ($tags as $attributes) {
                     $definition->addMethodCall('addTransport', [
                         new Reference($id),
-                        $attributes["alias"]
+                        $attributes['alias']
                     ]);
                 }
             }
@@ -470,7 +470,7 @@ first  constructor argument to the ``App\HandlerCollection`` service:
 
             App\HandlerCollection:
                 # inject all services tagged with app.handler as first argument
-                arguments: [!tagged app.handler]
+                arguments: [!tagged_iterator app.handler]
 
     .. code-block:: xml
 
@@ -492,7 +492,7 @@ first  constructor argument to the ``App\HandlerCollection`` service:
 
                 <service id="App\HandlerCollection">
                     <!-- inject all services tagged with app.handler as first argument -->
-                    <argument type="tagged" tag="app.handler"/>
+                    <argument type="tagged_iterator" tag="app.handler"/>
                 </service>
             </services>
         </container>
@@ -564,4 +564,4 @@ application handlers::
     Note that any other custom attributes will be ignored by this feature.
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 411a37421b655b4c4797058eb132dc4f927c31d1

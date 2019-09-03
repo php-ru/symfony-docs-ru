@@ -78,7 +78,7 @@ this use-case::
     $psr6Cache = new FilesystemAdapter();
 
     // a PSR-16 cache that uses your cache internally!
-    $psr16Cache = new Psr6Cache($psr6Cache);
+    $psr16Cache = new Psr16Cache($psr6Cache);
 
     // now use this wherever you want
     $githubApiClient = new GitHubApiClient($psr16Cache);
@@ -86,4 +86,4 @@ this use-case::
 .. _`PSR-16`: http://www.php-fig.org/psr/psr-16/
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 74d2e3275c6f748715d63d360dd4c01599568e35

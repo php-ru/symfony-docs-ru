@@ -143,8 +143,8 @@ And set it in the constructor of ``Configuration`` via the ``Extension`` class::
 .. tip::
 
     There are some instances of ``%kernel.debug%`` usage within a
-    ``Configurator`` class for example in TwigBundle. However this is because
+    ``Configurator`` class for example in TwigBundle. However, this is because
     the default parameter value is set by the Extension class.
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: 8dd96b996c144d35a8e1e01a296b4129b4307ab2

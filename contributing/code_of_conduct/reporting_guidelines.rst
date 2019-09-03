@@ -69,7 +69,7 @@ let them know what action (if any) we'll be taking. We'll take into account feed
 from the reporter on the appropriateness of our response, but our response will be
 determined by what will be best for community safety.
 
-The CARE team keeps a private record of all incidents. By default all reports
+The CARE team keeps a private record of all incidents. By default, all reports
 are shared with the entire CARE team unless the reporter specifically asks
 to exclude specific CARE team members, in which case these CARE team
 members will not be included in any communication on the incidents as well as records
@@ -98,4 +98,4 @@ Adopted by `Symfony`_ organizers on 21 February 2018.
 .. _`Symfony`: https://symfony.com
 
 .. ready: no
-.. revision: dad5cfb41574eaec1c8ee153114972867e9cd4c8
+.. revision: 97f4eebf06cffad93f9084a83f44050f6624518b

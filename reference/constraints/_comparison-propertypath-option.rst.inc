@@ -9,5 +9,12 @@ For example, if you want to compare the ``$endDate`` property of some object
 with regard to the ``$startDate`` property of the same object, use
 ``propertyPath="startDate"`` in the comparison constraint of ``$endDate``.
 
+.. tip::
+
+    When using this option, its value is available in error messages as the
+    ``{{ compared_value_path }}`` placeholder. Although it's not intended to
+    include it in the error messages displayed to end users, it's useful when
+    using APIs for doing any mapping logic on client-side.
+
 .. ready: no
-.. revision: f856772c4cd79e4e38df415efd342853eb522575
+.. revision: b270e2d12102ae4be90b438f8fb37e57827aabc3

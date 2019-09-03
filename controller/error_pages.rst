@@ -17,7 +17,7 @@ customize error pages, so run this command to make sure the bundle is installed:
 
     $ composer require twig
 
-In the :doc:`development environment </configuration/environments>`,
+In the :ref:`development environment <configuration-environments>`,
 Symfony catches all the exceptions and displays a special **exception page**
 with lots of debug information to help you discover the root problem:
 
@@ -150,7 +150,7 @@ Fortunately, the default ``ExceptionController`` allows you to preview your
 *error* pages during development.
 
 To use this feature, you need to load some special routes provided by TwigBundle
-(if the application uses :doc:`Symfony Flex </setup/flex>` they are loaded
+(if the application uses :ref:`Symfony Flex <symfony-flex>` they are loaded
 automatically when installing Twig support):
 
 .. configuration-block::
@@ -213,7 +213,7 @@ configuration option to point to it:
 
         # config/packages/twig.yaml
         twig:
-            exception_controller: App\Controller\ExceptionController::showException
+            exception_controller: App\Controller\ExceptionController::showAction
 
     .. code-block:: xml
 
@@ -228,7 +228,7 @@ configuration option to point to it:
                 https://symfony.com/schema/dic/twig/twig-1.0.xsd">
 
             <twig:config>
-                <twig:exception-controller>App\Controller\ExceptionController::showException</twig:exception-controller>
+                <twig:exception-controller>App\Controller\ExceptionController::showAction</twig:exception-controller>
             </twig:config>
 
         </container>
@@ -237,7 +237,7 @@ configuration option to point to it:
 
         // config/packages/twig.php
         $container->loadFromExtension('twig', [
-            'exception_controller' => 'App\Controller\ExceptionController::showException',
+            'exception_controller' => 'App\Controller\ExceptionController::showAction',
             // ...
         ]);
 
@@ -339,7 +339,7 @@ error pages.
 .. note::
 
     If your listener calls ``setResponse()`` on the
-    :class:`Symfony\\Component\\HttpKernel\\Event\\GetResponseForExceptionEvent`,
+    :class:`Symfony\\Component\\HttpKernel\\Event\\ExceptionEvent`,
     event, propagation will be stopped and the response will be sent to
     the client.
 
@@ -357,9 +357,6 @@ time and again, you can have just one (or several) listeners deal with them.
     out and other things.
 
 .. _`TwigBundle`: https://github.com/symfony/twig-bundle
-.. _`WebfactoryExceptionsBundle`: https://github.com/webfactory/exceptions-bundle
-.. _`Symfony Standard Edition`: https://github.com/symfony/symfony-standard/
-.. _`ExceptionListener`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Http/Firewall/ExceptionListener.php
 
 .. ready: no
-.. revision: a1b6ded076dd708703ef48ecafe8a3e67dd36972
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

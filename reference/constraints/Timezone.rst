@@ -5,11 +5,12 @@ Validates that a value is a valid timezone identifier (e.g. ``Europe/Paris``).
 
 ==========  ======================================================================
 Applies to  :ref:`property or method <validation-property-target>`
-Options     - `groups`_
+Options     - `countryCode`_
+            - `groups`_
+            - `intlCompatible`_
             - `message`_
             - `payload`_
             - `zone`_
-            - `countryCode`_
 Class       :class:`Symfony\\Component\\Validator\\Constraints\\Timezone`
 Validator   :class:`Symfony\\Component\\Validator\\Constraints\\TimezoneValidator`
 ==========  ======================================================================
@@ -18,7 +19,7 @@ Basic Usage
 -----------
 
 Suppose you have a ``UserSettings`` class, with a ``timezone`` field that is a
-string meant to contain a timezone identifier (e.g. ``America/New_York``):
+string which contains any of the `PHP timezone identifiers`_ (e.g. ``America/New_York``):
 
 .. configuration-block::
 
@@ -81,7 +82,33 @@ string meant to contain a timezone identifier (e.g. ``America/New_York``):
 Options
 -------
 
+countryCode
+~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``null``
+
+If the ``zone`` option is set to ``\DateTimeZone::PER_COUNTRY``, this option
+restricts the valid timezone identifiers to the ones that belong to the given
+country.
+
+The value of this option must be a valid `ISO 3166-1 alpha-2`_ country code
+(e.g. ``CN`` for China).
+
 .. include:: /reference/constraints/_groups-option.rst.inc
+
+intlCompatible
+~~~~~~~~~~~~~~
+
+**type**: ``boolean`` **default**: ``false``
+
+This constraint considers valid both the `PHP timezone identifiers`_ and the
+:ref:`ICU timezones <component-intl-timezones>` provided by Symfony's
+:doc:`Intl component </components/intl>`
+
+However, the timezones provided by the Intl component can be different from the
+timezones provided by PHP's Intl extension (because they use different ICU
+versions). If this option is set to ``true``, this constraint only considers
+valid the values created with the PHP ``\IntlTimeZone::createTimeZone()`` method.
 
 message
 ~~~~~~~
@@ -127,20 +154,8 @@ In addition, there are some special zone values:
 * ``\DateTimeZone::PER_COUNTRY`` restricts the valid timezones to a certain
   country (which is defined using the ``countryCode`` option).
 
-countryCode
-~~~~~~~~~~~
-
-**type**: ``string`` **default**: ``null``
-
-If the ``zone`` option is set to ``\DateTimeZone::PER_COUNTRY``, this option
-restricts the valid timezone identifiers to the ones that belong to the given
-country.
-
-The value of this option must be a valid `ISO 3166-1 alpha-2`_ country code
-(e.g. ``CN`` for China).
-
-.. _`DateTimeZone`: https://www.php.net/datetimezone
+.. _`PHP timezone identifiers`: https://www.php.net/manual/en/timezones.php
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: bc1d0adf21985b88f655110f361f3cea9a2fdc5c

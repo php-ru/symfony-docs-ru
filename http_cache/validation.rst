@@ -219,7 +219,6 @@ headers that must not be present for ``304`` responses (see
 :method:`Symfony\\Component\\HttpFoundation\\Response::setNotModified`).
 
 .. _`expiration model`: https://tools.ietf.org/html/rfc2616#section-13.2
-.. _`validation model`: http://tools.ietf.org/html/rfc2616#section-13.3
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

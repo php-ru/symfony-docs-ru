@@ -12,14 +12,10 @@ command helps you to find these missing or unused translation messages templates
 
 .. code-block:: twig
 
-    {# messages can be found when using the trans/transchoice filters and tags #}
+    {# messages can be found when using the trans filter and tag #}
     {% trans %}Symfony is great{% endtrans %}
 
     {{ 'Symfony is great'|trans }}
-
-    {{ 'Symfony is great'|transchoice(1) }}
-
-    {% transchoice 1 %}Symfony is great{% endtranschoice %}
 
 .. caution::
 
@@ -42,7 +38,7 @@ you've already setup some translations for the ``fr`` locale:
 
     .. code-block:: xml
 
-        <!-- translations/messages.fr.xliff -->
+        <!-- translations/messages.fr.xlf -->
         <?xml version="1.0"?>
         <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
             <file source-language="en" datatype="plaintext" original="file.ext">
@@ -73,7 +69,7 @@ and for the ``en`` locale:
 
     .. code-block:: xml
 
-        <!-- translations/messages.en.xliff -->
+        <!-- translations/messages.en.xlf -->
         <?xml version="1.0"?>
         <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
             <file source-language="en" datatype="plaintext" original="file.ext">
@@ -169,7 +165,7 @@ You can see that the translations of the message are identical in the ``fr``
 and ``en`` locales which means this message was probably copied from French
 to English and maybe you forgot to translate it.
 
-By default all domains are inspected, but it is possible to specify a single
+By default, all domains are inspected, but it is possible to specify a single
 domain:
 
 .. code-block:: terminal
@@ -186,4 +182,4 @@ unused or only the missing messages, by using the ``--only-unused`` or
     $ php bin/console debug:translation en --only-missing
 
 .. ready: no
-.. revision: f2e6e1acc75b3e461e95a8a6a6940cc2289225bd
+.. revision: 8dd96b996c144d35a8e1e01a296b4129b4307ab2

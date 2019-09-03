@@ -21,7 +21,7 @@ correct locale however you want::
     namespace App\EventSubscriber;
 
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-    use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+    use Symfony\Component\HttpKernel\Event\RequestEvent;
     use Symfony\Component\HttpKernel\KernelEvents;
 
     class LocaleSubscriber implements EventSubscriberInterface
@@ -33,7 +33,7 @@ correct locale however you want::
             $this->defaultLocale = $defaultLocale;
         }
 
-        public function onKernelRequest(GetResponseEvent $event)
+        public function onKernelRequest(RequestEvent $event)
         {
             $request = $event->getRequest();
             if (!$request->hasPreviousSession()) {
@@ -63,7 +63,7 @@ you're done! Symfony will automatically know about the event subscriber and call
 the ``onKernelRequest`` method on each request.
 
 To see it working, either set the ``_locale`` key on the session manually (e.g.
-via some "Change Locale" route & controller), or create a route with a the :ref:`_locale default <translation-locale-url>`.
+via some "Change Locale" route & controller), or create a route with the :ref:`_locale default <translation-locale-url>`.
 
 .. sidebar:: Explicitly Configure the Subscriber
 
@@ -187,4 +187,4 @@ event::
     the ``User`` entity.
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 281730fb5db8d7d2929f200dfe92e9f66f3037f5

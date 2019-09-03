@@ -373,12 +373,12 @@ create the class::
     // ...
 
     use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-    use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+    use Symfony\Component\HttpKernel\Event\ResponseEvent;
     use Symfony\Component\HttpKernel\KernelEvents;
 
     class SetHeaderSusbcriber implements EventSubscriberInterface
     {
-        public function onKernelResponse(FilterResponseEvent $event)
+        public function onKernelResponse(ResponseEvent $event)
         {
             $event->getResponse()->headers->set('X-SYMFONY-3.3', 'Less config');
         }
@@ -802,4 +802,4 @@ You can now take advantage of the new features going forward.
 .. _`FrameworkExtension for 3.3.0`: https://github.com/symfony/symfony/blob/7938fdeceb03cc1df277a249cf3da70f0b50eb98/src/Symfony/Bundle/FrameworkBundle/DependencyInjection/FrameworkExtension.php#L247-L284
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: 00f3807495f10e5ec72142ff0d0ed591b485a7f0

@@ -7,12 +7,12 @@ Messenger: Sync & Queued Message Handling
 Messenger provides a message bus with the ability to send messages and then
 handle them immediately in your application or send them through transports
 (e.g. queues) to be handled later. To learn more deeply about it, read the
-:doc:`Messenger component docs </components/messenger>` docs.
+:doc:`Messenger component docs </components/messenger>`.
 
 Installation
 ------------
 
-In applications using :doc:`Symfony Flex </setup/flex>`, run this command to
+In applications using :ref:`Symfony Flex <symfony-flex>`, run this command to
 install messenger:
 
 .. code-block:: terminal
@@ -249,7 +249,7 @@ you can configure them to be sent to a transport:
             ],
         ]);
 
-Thanks to this, the ``App\\Message\\SmsNotification`` will be sent to the ``async``
+Thanks to this, the ``App\Message\SmsNotification`` will be sent to the ``async``
 transport and its handler(s) will *not* be called immediately. Any messages not
 matched under ``routing`` will still be handled immediately.
 
@@ -368,7 +368,7 @@ Handling Messages Synchronously
 
 If a message doesn't :ref:`match any routing rules <messenger-routing>`, it won't
 be sent to any transport and will be handled immediately. In some cases (like
-when :ref:`sending handlers to different transports<messenger-handlers-different-transports>`),
+when `binding handlers to different transports`_),
 it's easier or more flexible to handle this explicitly: by creating a ``sync``
 transport and "sending" messages there to be handled immediately:
 
@@ -614,9 +614,11 @@ config and start your workers:
 
     $ sudo supervisorctl update
 
-    $ sudo supervisorctl start messenger-consume
+    $ sudo supervisorctl start messenger-consume:*
 
 See the `Supervisor docs`_ for more details.
+
+.. _messenger-retries-failures:
 
 Retries & Failures
 ------------------
@@ -704,7 +706,11 @@ to retry them:
     $ php bin/console messenger:failed:retry 20 30 --force
 
     # remove a message without retrying it
-    $ php bin/console messenger:failed:retry 20
+    $ php bin/console messenger:failed:remove 20
+
+If the message fails again, it will be re-sent back to the failure transport
+due to the normal :ref:`retry rules <messenger-retries-failures>`. Once the max
+retry has been hit, the message will be discarded permanently.
 
 .. _messenger-transports-config:
 
@@ -748,6 +754,17 @@ your Envelope::
         new AmqpStamp('custom-routing-key', AMQP_NOPARAM, $attributes)
     ]);
 
+.. caution::
+
+    The consumers do not show up in an admin panel as this transport does not rely on
+    ``\AmqpQueue::consume()`` which is blocking. Having a blocking receiver makes
+    the ``--time-limit/--memory-limit`` options of the ``messenger:consume`` command as well as
+    the ``messenger:stop-workers`` command inefficient, as they all rely on the fact that
+    the receiver returns immediately no matter if it finds a message or not. The consume
+    worker is responsible for iterating until it receives a message to handle and/or until one
+    of the stop conditions is reached. Thus, the worker's stop logic cannot be reached if it
+    is stuck in a blocking call.
+
 Doctrine Transport
 ~~~~~~~~~~~~~~~~~~
 
@@ -764,12 +781,17 @@ a table named ``messenger_messages`` (this is configurable) when the transport i
 first used. You can disable that with the ``auto_setup`` option and set the table
 up manually by calling the ``messenger:setup-transports`` command.
 
-.. caution::
+.. tip::
 
-    If you use Doctrine Migrations, each generated migration will try to drop
-    the ``messenger_messages`` table and needs to be removed manually. You
-    cannot (yet) use ``doctrine.dbal.schema_filter`` to avoid. See
-    https://github.com/symfony/symfony/issues/31623.
+    To avoid tools like Doctrine Migrations from trying to remove this table because
+    it's not part of your normal schema, you can set the ``schema_filter`` option:
+
+    .. code-block:: yaml
+
+        # config/packages/doctrine.yaml
+        doctrine:
+            dbal:
+                schema_filter: '~^(?!messenger_messages)~'
 
 The transport has a number of options:
 
@@ -828,22 +850,22 @@ The transport has a number of options:
 
 Options defined under ``options`` take precedence over ones defined in the DSN.
 
-==================  =================================== =======
-     Option               Description                   Default
-==================  =================================== =======
-table_name          Name of the table                   messenger_messages
-queue_name          Name of the queue (a column in the  default
-                    table, to use-use one table for
+==================  ===================================  ======================
+     Option         Description                          Default
+==================  ===================================  ======================
+table_name          Name of the table                    messenger_messages
+queue_name          Name of the queue (a column in the   default
+                    table, to use one table for
                     multiple transports)
-redeliver_timeout   Timeout before retrying a messages  3600
+redeliver_timeout   Timeout before retrying a message    3600
                     that's in the queue but in the
                     "handling" state (if a worker died
                     for some reason, this will occur,
                     eventually you should retry the
-                    message)
+                    message) - in seconds.
 auto_setup          Whether the table should be created
-                    automatically during send / get.    true
-==================  =================================== =======
+                    automatically during send / get.     true
+==================  ===================================  ======================
 
 Redis Transport
 ~~~~~~~~~~~~~~~
@@ -854,27 +876,35 @@ The Redis transport uses `streams`_ to queue messages.
 
     # .env
     MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages
+    # Full DSN Example
+    MESSENGER_TRANSPORT_DSN=redis://password@localhost:6379/messages/symfony/consumer?auto_setup=true&serializer=1&stream_max_entries=0
 
-To use the Redis transport, you will need the Redis PHP extension (^4.2) and
+To use the Redis transport, you will need the Redis PHP extension (^4.3) and
 a running Redis server (^5.0).
 
 .. caution::
 
     The Redis transport does not support "delayed" messages.
 
-A number of options can be configured via the DSN of via the ``options`` key
+A number of options can be configured via the DSN or via the ``options`` key
 under the transport in ``messenger.yaml``:
 
-==================  =================================== =======
-     Option               Description                   Default
-==================  =================================== =======
-stream              The Redis stream name               messages
-group               The Redis consumer group name       symfony
-consumer            Consumer name used in Redis         consumer
-serializer          How to serialize the final payload  ``Redis::SERIALIZER_PHP``
+==================  =====================================  =========================
+     Option               Description                      Default
+==================  =====================================  =========================
+stream              The Redis stream name                  messages
+group               The Redis consumer group name          symfony
+consumer            Consumer name used in Redis            consumer
+auto_setup          Create the Redis group automatically?  true
+auth                The Redis password
+serializer          How to serialize the final payload     ``Redis::SERIALIZER_PHP``
                     in Redis (the
                     ``Redis::OPT_SERIALIZER`` option)
-==================  =================================== =======
+stream_max_entries  The maximum number of entries which    ``0`` (which means "no trimming")
+                    the stream will be trimmed to. Set
+                    it to a large enough number to
+                    avoid losing pending messages
+==================  =====================================  =========================
 
 In Memory Transport
 ~~~~~~~~~~~~~~~~~~~
@@ -913,9 +943,16 @@ during a request::
 
             /* @var InMemoryTransport $transport */
             $transport = self::$container->get('messenger.transport.async_priority_normal');
-            $this->assertCount(1, $transport->get());
+            $this->assertCount(1, $transport->getSent());
         }
     }
+
+.. note::
+
+        All ``in-memory`` transports will be reset automatically after each test **in**
+        test classes extending
+        :class:`Symfony\\Bundle\\FrameworkBundle\\Test\\KernelTestCase`
+        or :class:`Symfony\\Bundle\\FrameworkBundle\\Test\\WebTestCase`.
 
 Serializing Messages
 ~~~~~~~~~~~~~~~~~~~~
@@ -1042,9 +1079,7 @@ A handler class can handle multiple messages or configure itself by implementing
         }
     }
 
-.. _messenger-handlers-different-transports:
-
-Sending Handlers to Different Transports
+Binding Handlers to Different Transports
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each message can have multiple handlers, and when a message is consumed
@@ -1216,17 +1251,18 @@ collection of middleware (and their order). By default, the middleware configure
 for each bus looks like this:
 
 #. ``add_bus_name_stamp_middleware`` - adds a stamp to record which bus this
-   message was dispatched into.
+   message was dispatched into;
 
-#. ``dispatch_after_current_bus``- see :doc:`/messenger/message-recorder`.
+#. ``dispatch_after_current_bus``- see :doc:`/messenger/message-recorder`;
 
-#. ``failed_message_processing_middleware`` - sends failed messages to the
-   :ref:`failure transport <messenger-failure-transport>`.
+#. ``failed_message_processing_middleware`` - processes messages that are being
+   retried via the :ref:`failure transport <messenger-failure-transport>` to make
+   them properly function as if they were being received from their original transport;
 
 #. Your own collection of middleware_;
 
 #. ``send_message`` - if routing is configured for the transport, this sends
-   messages to that transport and stops the middleware chain.
+   messages to that transport and stops the middleware chain;
 
 #. ``handle_message`` - calls the message handler(s) for the given message.
 
@@ -1411,9 +1447,9 @@ Learn more
 
     /messenger/*
 
-.. _`enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
+.. _`Enqueue's transport`: https://github.com/php-enqueue/messenger-adapter
 .. _`streams`: https://redis.io/topics/streams-intro
 .. _`Supervisor docs`: http://supervisord.org/
 
 .. ready: no
-.. revision: 1edf64c83e5b5ae4d7ffc3e6ba55ebb1fe968105
+.. revision: f09513191dbe3a61004e848f26bb60fc0cb0be3c

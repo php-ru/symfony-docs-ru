@@ -246,7 +246,7 @@ Installation
 ------------
 
 Bundles should set ``"type": "symfony-bundle"`` in their ``composer.json`` file.
-With this, :doc:`Symfony Flex </setup/flex>` will be able to automatically
+With this, :ref:`Symfony Flex <symfony-flex>` will be able to automatically
 enable your bundle when it's installed.
 
 If your bundle requires any setup (e.g. configuration, new files, changes to
@@ -306,26 +306,15 @@ following standardized instructions in your ``README.md`` file.
         ### Step 2: Enable the Bundle
 
         Then, enable the bundle by adding it to the list of registered bundles
-        in the `app/AppKernel.php` file of your project:
+        in the `config/bundles.php` file of your project:
 
         ```php
-        // app/AppKernel.php
+        // config/bundles.php
 
-        // ...
-        class AppKernel extends Kernel
-        {
-            public function registerBundles()
-            {
-                $bundles = [
-                    // ...
-                    new <vendor>\<bundle-name>\<bundle-long-name>(),
-                ];
-
-                // ...
-            }
-
+        return [
             // ...
-        }
+            <vendor>\<bundle-name>\<bundle-long-name>::class => ['all' => true],
+        ];
         ```
 
     .. code-block:: rst
@@ -362,26 +351,13 @@ following standardized instructions in your ``README.md`` file.
         ~~~~~~~~~~~~~~~~~~~~~~~~~
 
         Then, enable the bundle by adding it to the list of registered bundles
-        in the ``app/AppKernel.php`` file of your project::
+        in the ``config/bundles.php`` file of your project::
 
-            // app/AppKernel.php
-
-            // ...
-            class AppKernel extends Kernel
-            {
-                public function registerBundles()
-                {
-                    $bundles = [
-                        // ...
-
-                        new <vendor>\<bundle-name>\<bundle-long-name>(),
-                    ];
-
-                    // ...
-                }
-
+            // config/bundles.php
+            return [
                 // ...
-            }
+                <vendor>\<bundle-name>\<bundle-long-name>::class => ['all' => true],
+            ];
 
         .. _`installation chapter`: https://getcomposer.org/doc/00-intro.md
 
@@ -555,7 +531,7 @@ Learn more
 .. _`choose any license`: https://choosealicense.com/
 .. _`valid license identifier`: https://spdx.org/licenses/
 .. _`Travis CI`: https://travis-ci.org/
-.. _`Travis Cron`: https://docs.travis-ci.com/user/cron-jobs/
+.. _`Travis cron`: https://docs.travis-ci.com/user/cron-jobs/
 
 .. ready: no
-.. revision: 988badf2f025e0c57b2da5ed8c5d60fd0f68a586
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

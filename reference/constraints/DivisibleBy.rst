@@ -115,18 +115,9 @@ comparison value.
 
 .. include:: /reference/constraints/_payload-option.rst.inc
 
-propertyPath
-~~~~~~~~~~~~
-
-**type**: ``string``
-
-It defines the object property whose value is used to make the comparison.
-
-For example, if you want to compare the ``$value`` property of some object
-with regard to the ``$increments`` property of the same object, use
-``propertyPath="increments"`` in the comparison constraint of ``$value``.
+.. include:: /reference/constraints/_comparison-propertypath-option.rst.inc
 
 .. include:: /reference/constraints/_comparison-value-option.rst.inc
 
 .. ready: no
-.. revision: 99d467045614d0952875eff0b7e8bc298a4fddca
+.. revision: feee926bc184b7559c817841da14216c62850623

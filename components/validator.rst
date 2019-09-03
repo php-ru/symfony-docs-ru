@@ -89,7 +89,6 @@ Learn More
     /validation/*
 
 .. _`JSR-303 Bean Validation specification`: http://jcp.org/en/jsr/detail?id=303
-.. _Packagist: https://packagist.org/packages/symfony/validator
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

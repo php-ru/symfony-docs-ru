@@ -16,7 +16,7 @@ request to generate the response.
 
 This single kernel approach is a convenient default, but Symfony applications
 can define any number of kernels. Whereas
-:doc:`environments </configuration/environments>` execute the same application
+:ref:`environments <configuration-environments>` execute the same application
 with different configurations, kernels can execute different parts of the same
 application.
 
@@ -225,4 +225,4 @@ the default ``src/`` directory:
         └─ index.php
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 27bd3bb9e295a20c49d82b18d9152a8d31dbb5f0

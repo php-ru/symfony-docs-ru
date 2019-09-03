@@ -1,0 +1,11 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+.. ready: no
+.. revision: 90535a14b63324c344b52d99d5e597bda5696792

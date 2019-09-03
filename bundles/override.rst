@@ -178,9 +178,9 @@ For this reason, you can override any bundle translation file from the main
 
 For example, to override the translations defined in the
 ``Resources/translations/FOSUserBundle.es.yml`` file of the FOSUserBundle,
-create a``<your-project>/translations/FOSUserBundle.es.yml`` file.
+create a ``<your-project>/translations/FOSUserBundle.es.yml`` file.
 
 .. _`the Doctrine documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/inheritance-mapping.html#overrides
 
 .. ready: no
-.. revision: 2511d350e504c5a5bf201d418a38a460bcb7fbce
+.. revision: d733b8a1c99c3275e3a4d61d261a94f5c3e217c5

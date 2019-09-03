@@ -5,9 +5,10 @@
 The OptionsResolver Component
 =============================
 
-    The OptionsResolver component is :phpfunction:`array_replace` on steroids.
-    It allows you to create an options system with required options, defaults,
-    validation (type, value), normalization and more.
+    The OptionsResolver component is an improved replacement for the
+    :phpfunction:`array_replace` PHP function. It allows you to create an
+    options system with required options, defaults, validation (type, value),
+    normalization and more.
 
 Installation
 ------------
@@ -739,6 +740,13 @@ method::
     somewhere, either its value is provided by the user or the option is evaluated
     within closures of lazy options and normalizers.
 
+.. note::
+
+    When using an option deprecated by you in your own library, you can pass
+    ``false`` as the second argument of the
+    :method:`Symfony\\Component\\OptionsResolver\\Options::offsetGet()` method
+    to not trigger the deprecation warning.
+
 Instead of passing the message, you may also pass a closure which returns
 a string (the deprecation message) or an empty string to ignore the deprecation.
 This closure is useful to only deprecate some of the allowed types or values of
@@ -828,8 +836,5 @@ method ``clearOptionsConfig()`` and call it periodically::
 That's it! You now have all the tools and knowledge needed to process
 options in your code.
 
-.. _Packagist: https://packagist.org/packages/symfony/options-resolver
-.. _CHANGELOG: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/OptionsResolver/CHANGELOG.md#260
-
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

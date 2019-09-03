@@ -31,6 +31,9 @@ and your generated code may be slightly different:
 
     Choose a name for the controller class (e.g. SecurityController) [SecurityController]:
     > SecurityController
+    
+    Do you want to generate a '/logout' URL? (yes/no) [yes]:
+    > yes
 
      created: src/Security/LoginFormAuthenticator.php
      updated: config/packages/security.yaml
@@ -423,4 +426,4 @@ can be used to read (like in the example above) or set this value manually.
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: f97b6cf8c6c179560ff35ffa0d9433c0a842ae89
+.. revision: a72a8abb0716f0413e3f240e6f1a975615a4fd98

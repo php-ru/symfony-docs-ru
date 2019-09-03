@@ -230,7 +230,7 @@ You can also create more customized pools:
                     <framework:pool name="my_cache_pool" adapter="cache.adapter.array"/>
                     <framework:pool name="acme.cache" adapter="cache.adapter.memcached"/>
                     <framework:pool name="foobar.cache" adapter="cache.adapter.memcached" provider="memcached://user:password@example.com"/>
-                    <framework:pool name="short_cache" adapter="foobar.cache" default_lifetime="60"/>
+                    <framework:pool name="short_cache" adapter="foobar.cache" default-lifetime="60"/>
                 </framework:cache>
             </framework:config>
         </container>
@@ -274,7 +274,7 @@ Each custom pool becomes a service where the service id is the name of the pool
 using the camel case version of its name - e.g. ``custom_thing.cache`` can be
 injected automatically by naming the argument ``$customThingCache`` and type-hinting it
 with either :class:`Symfony\\Contracts\\Cache\\CacheInterface` or
-``Psr\\Cache\\CacheItemPoolInterface``::
+``Psr\Cache\CacheItemPoolInterface``::
 
     use Symfony\Contracts\Cache\CacheInterface;
 
@@ -385,17 +385,11 @@ case the value needs to be recalculated.
             cache:
                 pools:
                     my_cache_pool:
-                        adapter: app.my_cache_chain_adapter
-                    cache.my_redis:
-                        adapter: cache.adapter.redis
-                        provider: 'redis://user:password@example.com'
-
-        services:
-            app.my_cache_chain_adapter:
-                class: Symfony\Component\Cache\Adapter\ChainAdapter
-                arguments:
-                    - ['cache.adapter.array', 'cache.my_redis', 'cache.adapter.file']
-                    - 31536000 # One year
+                        default_lifetime: 31536000  # One year
+                        adapters:
+                          - cache.adapter.array
+                          - cache.adapter.apcu
+                          - {name: cache.adapter.redis, provider: 'redis://user:password@example.com'}
 
     .. code-block:: xml
 
@@ -409,21 +403,13 @@ case the value needs to be recalculated.
 
             <framework:config>
                 <framework:cache>
-                    <framework:pool name="my_cache_pool" adapter="app.my_cache_chain_adapter"/>
-                    <framework:pool name="cache.my_redis" adapter="cache.adapter.redis" provider="redis://user:password@example.com"/>
+                    <framework:pool name="my_cache_pool" default-lifetime="31536000">
+                        <framework:adapter name="cache.adapter.array"/>
+                        <framework:adapter name="cache.adapter.apcu"/>
+                        <framework:adapter name="cache.adapter.redis" provider="redis://user:password@example.com"/>
+                    </framework:pool>
                 </framework:cache>
             </framework:config>
-
-            <services>
-                <service id="app.my_cache_chain_adapter" class="Symfony\Component\Cache\Adapter\ChainAdapter">
-                    <argument type="collection">
-                        <argument type="service" value="cache.adapter.array"/>
-                        <argument type="service" value="cache.my_redis"/>
-                        <argument type="service" value="cache.adapter.file"/>
-                    </argument>
-                    <argument>31536000</argument>
-                </service>
-            </services>
         </container>
 
     .. code-block:: php
@@ -433,29 +419,16 @@ case the value needs to be recalculated.
             'cache' => [
                 'pools' => [
                     'my_cache_pool' => [
-                        'adapter' => 'app.my_cache_chain_adapter',
-                    ],
-                    'cache.my_redis' => [
-                        'adapter' => 'cache.adapter.redis',
-                        'provider' => 'redis://user:password@example.com',
+                        'default_lifetime' => 31536000, // One year
+                        'adapters' => [
+                            'cache.adapter.array',
+                            'cache.adapter.apcu',
+                            ['name' => 'cache.adapter.redis', 'provider' => 'redis://user:password@example.com'],
+                        ],
                     ],
                 ],
             ],
         ]);
-
-        $container->getDefinition('app.my_cache_chain_adapter', \Symfony\Component\Cache\Adapter\ChainAdapter::class)
-            ->addArgument([
-                new Reference('cache.adapter.array'),
-                new Reference('cache.my_redis'),
-                new Reference('cache.adapter.file'),
-            ])
-            ->addArgument(31536000);
-
-.. note::
-
-    In this configuration there is a ``cache.my_redis`` pool that is used as an
-    adapter in the ``app.my_cache_chain_adapter``
-
 
 Using Cache Tags
 ----------------
@@ -468,13 +441,13 @@ the same key could be invalidate with one function call::
     use Symfony\Contracts\Cache\ItemInterface;
 
     $value0 = $pool->get('item_0', function (ItemInterface $item) {
-        $item->tag(['foo', 'bar'])
+        $item->tag(['foo', 'bar']);
 
         return 'debug';
     });
 
     $value1 = $pool->get('item_1', function (ItemInterface $item) {
-        $item->tag('foo')
+        $item->tag('foo');
 
         return 'debug';
     });
@@ -583,14 +556,14 @@ achieved by specifying the adapter.
 
 .. note::
 
-    The interface :class:`Symfony\\Contracts\\Cache\\TagAwareCacheInterface`` is
+    The interface :class:`Symfony\\Contracts\\Cache\\TagAwareCacheInterface` is
     autowired to the ``cache.app`` service.
 
 Clearing the Cache
 ------------------
 
 To clear the cache you can use the ``bin/console cache:pool:clear [pool]`` command.
-That will remove all the entries from your storage and you wil have to recalculate
+That will remove all the entries from your storage and you will have to recalculate
 all values. You can also group your pools into "cache clearers". There are 3 cache
 clearers by default:
 
@@ -627,4 +600,4 @@ Clear all caches everywhere:
     $ php bin/console cache:pool:clear cache.global_clearer
 
 .. ready: no
-.. revision: 2f903fb771aedcd53dadd5caeef7d44ed763ca77
+.. revision: 6eb7bf202b8e985e3d7ee12dd69b27d3211fb4a7

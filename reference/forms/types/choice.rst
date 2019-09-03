@@ -59,8 +59,9 @@ To use this field, you must specify *either* ``choices`` or ``choice_loader`` op
 Example Usage
 -------------
 
-The easiest way to use this field is to specify the choices directly via
-the ``choices`` option::
+The easiest way to use this field is to define the ``choices`` option to specify
+the choices as an associative array where the keys are the labels displayed to
+end users and the array values are the internal values used in the form field::
 
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
     // ...
@@ -341,4 +342,4 @@ Field Variables
     test instead when using Twig.
 
 .. ready: no
-.. revision: 90ad0e2ad25c5869251208feef50d3bde2e58510
+.. revision: 347cb7fac2f48c893e9cca6ab77d9b7adfa2f1e8

@@ -92,49 +92,52 @@ Configuration
 
   * :ref:`default_options <reference-http-client-default-options>`
 
-      * `bindto`_
-      * `cafile`_
-      * `capath`_
-      * `ciphers`_
-      * `headers`_
-      * `http_version`_
-      * `local_cert`_
-      * `local_pk`_
-      * `max_redirects`_
-      * `no_proxy`_
-      * `passphrase`_
-      * `peer_fingerprint`_
-      * `proxy`_
-      * `resolve`_
-      * `timeout`_
-      * `verify_host`_
-      * `verify_peer`_
+    * `bindto`_
+    * `cafile`_
+    * `capath`_
+    * `ciphers`_
+    * `headers`_
+    * `http_version`_
+    * `local_cert`_
+    * `local_pk`_
+    * `max_redirects`_
+    * `no_proxy`_
+    * `passphrase`_
+    * `peer_fingerprint`_
+    * `proxy`_
+    * `resolve`_
+    * `timeout`_
+    * `max_duration`_
+    * `verify_host`_
+    * `verify_peer`_
 
   * `max_host_connections`_
   * :ref:`scoped_clients <reference-http-client-scoped-clients>`
 
-      * `scope`_
-      * `auth_basic`_
-      * `auth_bearer`_
-      * `base_uri`_
-      * `bindto`_
-      * `cafile`_
-      * `capath`_
-      * `ciphers`_
-      * `headers`_
-      * `http_version`_
-      * `local_cert`_
-      * `local_pk`_
-      * `max_redirects`_
-      * `no_proxy`_
-      * `passphrase`_
-      * `peer_fingerprint`_
-      * `proxy`_
-      * `query`_
-      * `resolve`_
-      * `timeout`_
-      * `verify_host`_
-      * `verify_peer`_
+    * `scope`_
+    * `auth_basic`_
+    * `auth_bearer`_
+    * `auth_ntlm`_
+    * `base_uri`_
+    * `bindto`_
+    * `cafile`_
+    * `capath`_
+    * `ciphers`_
+    * `headers`_
+    * `http_version`_
+    * `local_cert`_
+    * `local_pk`_
+    * `max_redirects`_
+    * `no_proxy`_
+    * `passphrase`_
+    * `peer_fingerprint`_
+    * `proxy`_
+    * `query`_
+    * `resolve`_
+    * `timeout`_
+    * `max_duration`_
+    * `verify_host`_
+    * `verify_peer`_
 
 * `http_method_override`_
 * `ide`_
@@ -189,6 +192,7 @@ Configuration
 
 * `session`_
 
+  * `cache_limiter`_
   * `cookie_domain`_
   * `cookie_httponly`_
   * `cookie_lifetime`_
@@ -243,8 +247,9 @@ Configuration
   * :ref:`name <reference-workflows-name>`
 
     * `audit_trail`_
-    * `initial_place`_
+    * `initial_marking`_
     * `marking_store`_
+    * `metadata`_
     * `places`_
     * `supports`_
     * `support_strategy`_
@@ -290,7 +295,8 @@ named ``kernel.http_method_override``.
 
 .. seealso::
 
-    For more information, see :doc:`/form/action_method`.
+    :ref:`Changing the Action and HTTP Method <forms-change-action-method>` of
+    Symfony forms.
 
 .. caution::
 
@@ -678,7 +684,7 @@ This service can be configured using ``framework.http_client.default_options``:
         http_client:
             max_host_connections: 10
             default_options:
-                headers: [{ 'X-Powered-By': 'ACME App' }]
+                headers: { 'X-Powered-By': 'ACME App' }
                 max_redirects: 7
 
 .. _reference-http-client-scoped-clients:
@@ -712,11 +718,11 @@ service into your autowired classes.
 auth_basic
 ..........
 
-**type**: ``array``
+**type**: ``string``
 
 The username and password used to create the ``Authorization`` HTTP header
 used in HTTP Basic authentication. The value of this option must follow the
-format ``['username', 'password']``.
+format ``username:password``.
 
 auth_bearer
 ...........
@@ -725,6 +731,16 @@ auth_bearer
 
 The token used to create the ``Authorization`` HTTP header used in HTTP Bearer
 authentication (also called token authentication).
+
+auth_ntlm
+.........
+
+**type**: ``string``
+
+The username and password used to create the ``Authorization`` HTTP header used
+in the `Microsoft NTLM authentication protocol`_. The value of this option must
+follow the format ``username:password``. This authentication mechanism requires
+using the cURL-based transport.
 
 base_uri
 ........
@@ -909,6 +925,14 @@ Time, in seconds, to wait for a response. If the response stales for longer, a
 Its default value is the same as the value of PHP's `default_socket_timeout`_
 config option.
 
+max_duration
+............
+
+**type**: ``float`` **default**: 0
+
+The maximum execution time, in seconds, that the request and the response are
+allowed to take. A value lower than or equal to 0 means it is unlimited.
+
 verify_host
 ...........
 
@@ -1088,7 +1112,7 @@ strict_requirements
 **type**: ``mixed`` **default**: ``true``
 
 Determines the routing generator behavior. When generating a route that
-has specific :doc:`requirements </routing/requirements>`, the generator
+has specific :ref:`parameter requirements <routing-requirements>`, the generator
 can behave differently in case the used parameters do not meet these requirements.
 
 The value can be one of:
@@ -1150,7 +1174,7 @@ name
 
 **type**: ``string`` **default**: ``null``
 
-This specifies the name of the session cookie. By default it will use the
+This specifies the name of the session cookie. By default, it will use the
 cookie name which is defined in the ``php.ini`` with the ``session.name``
 directive.
 
@@ -1169,22 +1193,66 @@ cookie_path
 
 **type**: ``string`` **default**: ``/``
 
-This determines the path to set in the session cookie. By default it will
+This determines the path to set in the session cookie. By default, it will
 use ``/``.
+
+cache_limiter
+.............
+
+**type**: ``string`` or ``int`` **default**: ``''``
+
+If set to ``0``, Symfony won't set any particular header related to the cache
+and it will rely on the cache control method configured in the
+`session.cache-limiter`_ PHP.ini option.
+
+Unlike the other session options, ``cache_limiter`` is set as a regular
+:ref:`container parameter <configuration-parameters>`:
+
+.. configuration-block::
+
+    .. code-block:: yaml
+
+        # config/services.yaml
+        parameters:
+            session.storage.options:
+                cache_limiter: 0
+
+    .. code-block:: xml
+
+        <!-- config/services.xml -->
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <container xmlns="http://symfony.com/schema/dic/services"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://symfony.com/schema/dic/services
+                https://symfony.com/schema/dic/services/services-1.0.xsd">
+
+            <parameters>
+                <parameter key="session.storage.options" type="collection">
+                    <parameter key="cache_limiter">0</parameter>
+                </parameter>
+            </parameters>
+        </container>
+
+    .. code-block:: php
+
+        // config/services.php
+        $container->setParameter('session.storage.options', [
+            'cache_limiter' => 0,
+        ]);
 
 cookie_domain
 .............
 
 **type**: ``string`` **default**: ``''``
 
-This determines the domain to set in the session cookie. By default it's
+This determines the domain to set in the session cookie. By default, it's
 blank, meaning the host name of the server which generated the cookie according
 to the cookie specification.
 
 cookie_samesite
 ...............
 
-**type**: ``string`` or ``null`` **default**: ``null``
+**type**: ``string`` or ``null`` **default**: ``'lax'``
 
 It controls the way cookies are sent when the HTTP request was not originated
 from the same domain the cookies are associated to. Setting this option is
@@ -1215,10 +1283,10 @@ The possible values for this option are:
 cookie_secure
 .............
 
-**type**: ``boolean`` or ``string`` **default**: ``false``
+**type**: ``boolean`` or ``null`` **default**: ``null``
 
 This determines whether cookies should only be sent over secure connections. In
-addition to ``true`` and ``false``, there's a special ``'auto'`` value that
+addition to ``true`` and ``false``, there's a special ``null`` value that
 means ``true`` for HTTPS requests and ``false`` for HTTP requests.
 
 cookie_httponly
@@ -1388,7 +1456,7 @@ use_cookies
 **type**: ``boolean`` **default**: ``null``
 
 This specifies if the session ID is stored on the client side using cookies or
-not. By default it will use the value defined in the ``php.ini`` with the
+not. By default, it will use the value defined in the ``php.ini`` with the
 ``session.use_cookies`` directive.
 
 assets
@@ -1871,7 +1939,7 @@ Whether or not to enable the ``translator`` service in the service container.
 fallbacks
 .........
 
-**type**: ``string|array`` **default**: ``['en']``
+**type**: ``string|array`` **default**: value of `default_locale`_
 
 This option is used when the translation key for the current locale wasn't
 found.
@@ -2525,12 +2593,12 @@ audit_trail
 If set to ``true``, the :class:`Symfony\\Component\\Workflow\\EventListener\\AuditTrailListener`
 will be enabled.
 
-initial_place
-"""""""""""""
+initial_marking
+"""""""""""""""
 
-**type**: ``string`` **default**: ``null``
+**type**: ``string`` | ``array``
 
-One of the ``places`` or ``null``. If not null and the supported object is not
+One of the ``places`` or ``empty``. If not null and the supported object is not
 already initialized via the workflow, this place will be set.
 
 marking_store
@@ -2542,8 +2610,16 @@ Each marking store can define any of these options:
 
 * ``arguments`` (**type**: ``array``)
 * ``service`` (**type**: ``string``)
-* ``type`` (**type**: ``string`` **possible values**: ``'multiple_state'`` or
-  ``'single_state'``)
+* ``type`` (**type**: ``string`` **allow value**: ``'method'``)
+
+metadata
+""""""""
+
+**type**: ``array``
+
+Metadata available for the workflow configuration.
+Note that ``places`` and ``transitions`` can also have their own
+``metadata`` entry.
 
 places
 """"""
@@ -2610,6 +2686,8 @@ to know their differences.
 .. _`default_socket_timeout`: https://php.net/manual/en/filesystem.configuration.php#ini.default-socket-timeout
 .. _`PEM formatted`: https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail
 .. _`haveibeenpwned.com`: https://haveibeenpwned.com/
+.. _`session.cache-limiter`: https://www.php.net/manual/en/session.configuration.php#ini.session.cache-limiter
+.. _`Microsoft NTLM authentication protocol`: https://docs.microsoft.com/en-us/windows/desktop/secauthn/microsoft-ntlm
 
 .. ready: no
-.. revision: 234cf3eb5c6ff474f5af16b515015acc9165906c
+.. revision: 76c50c48caf6322e13573b716d5734ac91758fb8

@@ -321,8 +321,7 @@ Whenever something wrong happens, an exception implementing
     An :class:`Symfony\\Component\\Filesystem\\Exception\\IOException` is
     thrown if directory creation fails.
 
-.. _`Packagist`: https://packagist.org/packages/symfony/filesystem
 .. _`umask`: https://en.wikipedia.org/wiki/Umask
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

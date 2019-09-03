@@ -150,7 +150,6 @@ you can import them with ``require()`` function:
         }
     }
 
-.. _`babel-preset-react`: https://babeljs.io/docs/plugins/preset-react/
 .. _`Vue.js`: https://vuejs.org/
 .. _`vue-loader options`: https://vue-loader.vuejs.org/options.html
 .. _`Encore's index.js file`: https://github.com/symfony/webpack-encore/blob/master/index.js
@@ -159,4 +158,4 @@ you can import them with ``require()`` function:
 .. _`CSS Modules`: https://github.com/css-modules/css-modules
 
 .. ready: no
-.. revision: 816fa586059a29df548816d8bd6bfbc2a2e7980e
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

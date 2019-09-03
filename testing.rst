@@ -33,7 +33,7 @@ command:
 
 .. note::
 
-    The ``./bin/phpunit`` command is created by :doc:`Symfony Flex </setup/flex>`
+    The ``./bin/phpunit`` command is created by :ref:`Symfony Flex <symfony-flex>`
     when installing the ``phpunit-bridge`` package. If the command is missing, you
     can remove the package (``composer remove symfony/phpunit-bridge``) and install
     it again. Another solution is to remove the project's ``symfony.lock`` file and
@@ -476,7 +476,7 @@ or perform more complex requests. Some useful examples::
     );
 
 Last but not least, you can force each request to be executed in its own PHP
-process to avoid any side-effects when working with several clients in the same
+process to avoid any side effects when working with several clients in the same
 script::
 
     $client->insulate();
@@ -712,7 +712,7 @@ given text (or the first clickable image with that ``alt`` attribute)::
 
 If you need access to the :class:`Symfony\\Component\\DomCrawler\\Link` object
 that provides helpful methods specific to links (such as ``getMethod()`` and
-``getUri()``), use the ``selectLink()`` method instead:
+``getUri()``), use the ``selectLink()`` method instead::
 
     $client = static::createClient();
     $crawler = $client->request('GET', '/post/hello-world');
@@ -1061,4 +1061,4 @@ Learn more
 .. _`data providers`: https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 9047a17b01ad3d1f5f9a5a6a90d64cebdb491930

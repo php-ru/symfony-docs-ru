@@ -188,7 +188,7 @@ representation to the inline one::
 Indentation
 ...........
 
-By default the YAML component will use 4 spaces for indentation. This can be
+By default, the YAML component will use 4 spaces for indentation. This can be
 changed using the third argument as follows::
 
     // uses 8 spaces for indentation
@@ -277,7 +277,7 @@ representation of the object as a map.
 Handling Invalid Types
 ~~~~~~~~~~~~~~~~~~~~~~
 
-By default the parser will encode invalid types as ``null``. You can make the
+By default, the parser will encode invalid types as ``null``. You can make the
 parser throw exceptions by using the ``PARSE_EXCEPTION_ON_INVALID_TYPE``
 flag::
 
@@ -289,14 +289,12 @@ Similarly you can use ``DUMP_EXCEPTION_ON_INVALID_TYPE`` when dumping::
     $data = new \stdClass(); // by default objects are invalid.
     Yaml::dump($data, 2, 4, Yaml::DUMP_EXCEPTION_ON_INVALID_TYPE); // throws an exception
 
-    echo $yaml; // { foo: bar }
-
 Date Handling
 ~~~~~~~~~~~~~
 
-By default the YAML parser will convert unquoted strings which look like a
+By default, the YAML parser will convert unquoted strings which look like a
 date or a date-time into a Unix timestamp; for example ``2016-05-27`` or
-``2016-05-27T02:59:43.1Z`` (ISO-8601_)::
+``2016-05-27T02:59:43.1Z`` (`ISO-8601`_)::
 
     Yaml::parse('2016-05-27'); // 1464307200
 
@@ -309,7 +307,7 @@ flag::
 Dumping Multi-line Literal Blocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In YAML multiple lines can be represented as literal blocks, by default the
+In YAML, multiple lines can be represented as literal blocks. By default, the
 dumper will encode multiple lines as an inline string::
 
     $string = ["string" => "Multiple\nLine\nString"];
@@ -377,6 +375,19 @@ objects, they are automatically transformed into YAML tags::
     $dumped = Yaml::dump($data);
     // $dumped = '!my_tag { foo: bar }'
 
+Dumping Null Values
+~~~~~~~~~~~~~~~~~~~
+
+The official YAML specification uses both ``null`` and ``~`` to represent null
+values. This component uses ``null`` by default when dumping null values but
+you can dump them as ``~`` with the ``DUMP_NULL_AS_TILDE`` flag::
+
+    $dumped = Yaml::dump(['foo' => null]);
+    // foo: null
+
+    $dumped = Yaml::dump(['foo' => null], 2, 4, Yaml::DUMP_NULL_AS_TILDE);
+    // foo: ~
+
 Syntax Validation
 ~~~~~~~~~~~~~~~~~
 
@@ -442,10 +453,9 @@ Learn More
 
     yaml/*
 
-.. _YAML: http://yaml.org/
-.. _Packagist: https://packagist.org/packages/symfony/yaml
+.. _`YAML`: http://yaml.org/
 .. _`YAML 1.2 version specification`: http://yaml.org/spec/1.2/spec.html
-.. _ISO-8601: http://www.iso.org/iso/iso8601
+.. _`ISO-8601`: http://www.iso.org/iso/iso8601
 
 .. ready: no
-.. revision: 933621bb56bc0b39eec291c6a1fa2d56a36bde08
+.. revision: ad98c6feba89298a686df496b5386e71c4423fa0

@@ -284,7 +284,7 @@ The generated code will be the following::
 
     $this->services[Foo::class] = new Baz(new Bar(new Foo()));
 
-.. _decorator pattern: https://en.wikipedia.org/wiki/Decorator_pattern
+.. _`Decorator pattern`: https://en.wikipedia.org/wiki/Decorator_pattern
 
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

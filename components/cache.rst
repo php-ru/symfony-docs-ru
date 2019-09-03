@@ -182,7 +182,7 @@ Now you can create, retrieve, update and delete items using this cache pool::
     // retrieve the cache item
     $productsCount = $cache->getItem('stats.products_count');
     if (!$productsCount->isHit()) {
-        // ... item does not exists in the cache
+        // ... item does not exist in the cache
     }
     // retrieve the value stored by the item
     $total = $productsCount->get();
@@ -203,10 +203,8 @@ Advanced Usage
 
 .. _`PSR-6`: http://www.php-fig.org/psr/psr-6/
 .. _`Cache Contracts`: https://github.com/symfony/contracts/blob/master/Cache/CacheInterface.php
-.. _`PSR-16`: http://www.php-fig.org/psr/psr-16/
-.. _Doctrine Cache: https://www.doctrine-project.org/projects/cache.html
-.. _Stampede prevention: https://en.wikipedia.org/wiki/Cache_stampede
+.. _`Stampede prevention`: https://en.wikipedia.org/wiki/Cache_stampede
 .. _Probabilistic early expiration: https://en.wikipedia.org/wiki/Cache_stampede#Probabilistic_early_expiration
 
 .. ready: no
-.. revision: de41795e29b42be1211d5606d5541bb1547e4a36
+.. revision: 39d8994194c430b3c9a72feb6858aa5378dfaaf8

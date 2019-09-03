@@ -3,9 +3,9 @@ preferred_choices
 
 **type**: ``array``, ``callable`` or ``string`` **default**: ``[]``
 
-This option allows you to move certain choices to the top of your list with a visual
-separator between them and the rest of the options. If you have a form of languages,
-you can list the most popular on top, like Bork Bork and Pirate::
+This option allows you to display certain choices at the top of your list with a
+visual separator between them and the complete list of options. If you have a
+form of languages, you can list the most popular on top, like Bork Bork and Pirate::
 
     use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
     // ...
@@ -65,4 +65,4 @@ when rendering the field:
         ]) ?>
 
 .. ready: no
-.. revision: 5218163d1c653de4599ac9eacf854f75c8eed8b8
+.. revision: 4564410dc37a558ac95311949d9e1c69fbc1983e

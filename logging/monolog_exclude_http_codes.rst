@@ -60,5 +60,13 @@ logging these HTTP codes based on the MonologBundle configuration:
             ],
         ]);
 
+.. caution::
+
+    Combining ``excluded_http_codes`` with a ``passthru_level`` lower than
+    ``error`` (i.e. ``debug``, ``info``, ``notice`` or ``warning``) will not
+    actually exclude log messages for those HTTP codes because they are logged
+    with level of ``error`` or higher and ``passthru_level`` takes precedence
+    over the HTTP codes being listed in ``excluded_http_codes``.
+
 .. ready: no
-.. revision: db87ab539049c237c3c2a604557717d0a3128dd6
+.. revision: d28649df4bb0caa753ecce77ec59e3cf67bab261

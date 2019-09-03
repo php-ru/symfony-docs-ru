@@ -69,7 +69,7 @@ To use it, first register a new handler service:
 .. tip::
 
     Configure the database credentials
-    :doc:`using environment variables in the config file </configuration/environment_variables>`
+    :ref:`using environment variables in the config file <config-env-vars>`
     to make your application more secure.
 
 Next, tell Symfony to use your service as the session handler:
@@ -219,7 +219,7 @@ MySQL
         `sess_data` BLOB NOT NULL,
         `sess_time` INTEGER UNSIGNED NOT NULL,
         `sess_lifetime` MEDIUMINT NOT NULL
-    ) COLLATE utf8_bin, ENGINE = InnoDB;
+    ) COLLATE utf8mb4_bin, ENGINE = InnoDB;
 
 .. note::
 
@@ -275,4 +275,4 @@ Microsoft SQL Server
 .. _`strict SQL mode`: https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
 
 .. ready: no
-.. revision: f8b867fd0cb34e8c368b30f57de57fbbc633a26d
+.. revision: ccac381d5da7e99148a9c8c74d454ccbf0dc41f6

@@ -6,7 +6,8 @@ The PHPUnit Bridge
 ==================
 
     The PHPUnit Bridge provides utilities to report legacy tests and usage of
-    deprecated code and a helper for time-sensitive tests.
+    deprecated code and helpers for mocking native functions related to time,
+    DNS and class existence.
 
 It comes with the following features:
 
@@ -19,10 +20,13 @@ It comes with the following features:
 
 * Displays the stack trace of a deprecation on-demand;
 
-* Provides a ``ClockMock`` and ``DnsMock`` helper classes for time or network-sensitive tests.
+* Provides a ``ClockMock``, ``DnsMock`` and ``ClassExistsMock`` classes for tests
+  sensitive to time, network or class existence;
 
-* Provides a modified version of PHPUnit that does not embed ``symfony/yaml`` nor
-  ``prophecy`` to prevent any conflicts with these dependencies.
+* Provides a modified version of PHPUnit that allows 1. separating the
+  dependencies of your app from those of phpunit to prevent any unwanted
+  constraints to apply; 2. running tests in parallel when a test suite is split
+  in several phpunit.xml files; 3. recording and replaying skipped tests;
 
 Installation
 ------------
@@ -124,6 +128,32 @@ The summary includes:
             <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener"/>
         </listeners>
 
+Running Tests in Parallel
+-------------------------
+
+The modified PHPUnit script allows running tests in parallel by providing
+a directory containing multiple test suites with their own ``phpunit.xml.dist``.
+
+.. code-block:: terminal
+
+    ├── tests/
+    │   ├── Functional/
+    │   │   ├── ...
+    │   │   └── phpunit.xml.dist
+    │   ├── Unit/
+    │   │   ├── ...
+    │   │   └── phpunit.xml.dist
+
+.. code-block:: terminal
+
+    $ ./vendor/bin/simple-phpunit tests/
+
+The modified PHPUnit script will recursively go through the provided directory,
+up to a depth of 3 subfolders or the value specified by the environment variable
+``SYMFONY_PHPUNIT_MAX_DEPTH``, looking for ``phpunit.xml.dist`` files and then
+running each suite it finds in parallel, collecting their output and displaying
+each test suite's results in their own section.
+
 Trigger Deprecation Notices
 ---------------------------
 
@@ -183,7 +213,7 @@ message, enclosed with ``/``. For example, with:
         </php>
     </phpunit>
 
-PHPUnit_ will stop your test suite once a deprecation notice is triggered whose
+`PHPUnit`_ will stop your test suite once a deprecation notice is triggered whose
 message contains the ``"foobar"`` string.
 
 Making Tests Fail
@@ -295,10 +325,6 @@ class autoloading time. This can be disabled with the ``debug-class-loader`` opt
         </listener>
     </listeners>
 
-.. versionadded:: 4.2
-
-    The ``DebugClassLoader`` integration was introduced in Symfony 4.2.
-
 Write Assertions about Deprecations
 -----------------------------------
 
@@ -339,7 +365,7 @@ Running the following command will display the full stack trace:
 
 .. code-block:: terminal
 
-    $ SYMFONY_DEPRECATIONS_HELPER='regex=/Doctrine\\Common\\ClassLoader is deprecated\./' ./vendor/bin/simple-phpunit
+    $ SYMFONY_DEPRECATIONS_HELPER='/Doctrine\\Common\\ClassLoader is deprecated\./' ./vendor/bin/simple-phpunit
 
 Time-sensitive Tests
 --------------------
@@ -455,6 +481,7 @@ different class, do it explicitly using ``ClockMock::register(MyClass::class)``:
 
     use App\MyClass;
     use PHPUnit\Framework\TestCase;
+    use Symfony\Bridge\PhpUnit\ClockMock;
 
     /**
      * @group time-sensitive
@@ -500,46 +527,48 @@ functions:
 Use Case
 ~~~~~~~~
 
-Consider the following example that uses the ``checkMX`` option of the ``Email``
-constraint to test the validity of the email domain::
+Consider the following example that tests a custom class called ``DomainValidator``
+which defines a ``checkDnsRecord`` option to also validate that a domain is
+associated to a valid host::
 
+    use App\Validator\DomainValidator;
     use PHPUnit\Framework\TestCase;
-    use Symfony\Component\Validator\Constraints\Email;
 
     class MyTest extends TestCase
     {
         public function testEmail()
         {
-            $validator = ...
-            $constraint = new Email(['checkMX' => true]);
-
-            $result = $validator->validate('foo@example.com', $constraint);
+            $validator = new DomainValidator(['checkDnsRecord' => true]);
+            $isValid = $validator->validate('example.com');
 
             // ...
+        }
     }
 
 In order to avoid making a real network connection, add the ``@dns-sensitive``
 annotation to the class and use the ``DnsMock::withMockedHosts()`` to configure
 the data you expect to get for the given hosts::
 
+    use App\Validator\DomainValidator;
     use PHPUnit\Framework\TestCase;
-    use Symfony\Component\Validator\Constraints\Email;
+    use Symfony\Bridge\PhpUnit\DnsMock;
 
     /**
      * @group dns-sensitive
      */
-    class MyTest extends TestCase
+    class DomainValidatorTest extends TestCase
     {
         public function testEmails()
         {
-            DnsMock::withMockedHosts(['example.com' => [['type' => 'MX']]]);
+            DnsMock::withMockedHosts([
+                'example.com' => [['type' => 'A', 'ip' => '1.2.3.4']],
+            ]);
 
-            $validator = ...
-            $constraint = new Email(['checkMX' => true]);
-
-            $result = $validator->validate('foo@example.com', $constraint);
+            $validator = new DomainValidator(['checkDnsRecord' => true]);
+            $isValid = $validator->validate('example.com');
 
             // ...
+        }
     }
 
 The ``withMockedHosts()`` method configuration is defined as an array. The keys
@@ -559,6 +588,78 @@ conditions::
             ],
         ],
     ]);
+
+Class Existence Based Tests
+---------------------------
+
+Tests that behave differently depending on existing classes, for example Composer's
+development dependencies, are often hard to test for the alternate case. For that
+reason, this component also provides mocks for these PHP functions:
+
+* :phpfunction:`class_exists`
+* :phpfunction:`interface_exists`
+* :phpfunction:`trait_exists`
+
+Use Case
+~~~~~~~~
+
+Consider the following example that relies on the ``Vendor\DependencyClass`` to
+toggle a behavior::
+
+    use Vendor\DependencyClass;
+
+    class MyClass
+    {
+        public function hello(): string
+        {
+            if (class_exists(DependencyClass::class)) {
+                return 'The dependency bahavior.';
+            }
+
+            return 'The default behavior.';
+        }
+    }
+
+A regular test case for ``MyClass`` (assuming the development dependencies
+are installed during tests) would look like::
+
+    use MyClass;
+    use PHPUnit\Framework\TestCase;
+
+    class MyClassTest extends TestCase
+    {
+        public function testHello()
+        {
+            $class = new MyClass();
+            $result = $class->hello(); // "The dependency bahavior."
+
+            // ...
+        }
+    }
+
+In order to test the default behavior instead use the
+``ClassExistsMock::withMockedClasses()`` to configure the expected
+classes, interfaces and/or traits for the code to run::
+
+    use MyClass;
+    use PHPUnit\Framework\TestCase;
+    use Vendor\DependencyClass;
+
+    class MyClassTest extends TestCase
+    {
+        // ...
+
+        public function testHelloDefault()
+        {
+            ClassExistsMock::register(MyClass::class);
+            ClassExistsMock::withMockedClasses([DependencyClass::class => false]);
+
+            $class = new MyClass();
+            $result = $class->hello(); // "The default bahavior."
+
+            // ...
+        }
+    }
 
 Troubleshooting
 ---------------
@@ -621,8 +722,8 @@ Modified PHPUnit script
 This bridge provides a modified version of PHPUnit that you can call by using
 its ``bin/simple-phpunit`` command. It has the following features:
 
-* Does not embed ``symfony/yaml`` nor ``prophecy`` to prevent any conflicts with
-  these dependencies;
+* Works with a standalone vendor directory that doesn't conflict with yours;
+* Does not embed ``prophecy`` to prevent any conflicts with its dependencies;
 * Uses PHPUnit 4.8 when run with PHP <=5.5, PHPUnit 5.7 when run with PHP >=5.6
   and PHPUnit 6.5 when run with PHP >=7.2;
 * Collects and replays skipped tests when the ``SYMFONY_PHPUNIT_SKIPPED_TESTS``
@@ -634,9 +735,20 @@ its ``bin/simple-phpunit`` command. It has the following features:
 
 The script writes the modified PHPUnit it builds in a directory that can be
 configured by the ``SYMFONY_PHPUNIT_DIR`` env var, or in the same directory as
-the ``simple-phpunit`` if it is not provided.
+the ``simple-phpunit`` if it is not provided. It's also possible to set this
+env var in the ``phpunit.xml.dist`` file.
 
-It's also possible to set this env var in the ``phpunit.xml.dist`` file.
+By default, these are the PHPUnit versions used depending on the installed PHP versions:
+
+=====================  ===============================
+Installed PHP version  PHPUnit version used by default
+=====================  ===============================
+PHP <= 5.5             PHPUnit 4.8
+PHP 5.6                PHPUnit 5.7
+PHP 7.0                PHPUnit 6.5
+PHP 7.1                PHPUnit 7.5
+PHP >= 7.2             PHPUnit 8.3
+=====================  ===============================
 
 If you have installed the bridge through Composer, you can run it by calling e.g.:
 
@@ -646,10 +758,13 @@ If you have installed the bridge through Composer, you can run it by calling e.g
 
 .. tip::
 
-    Set the ``SYMFONY_PHPUNIT_VERSION`` env var to e.g. ``5.5`` to change the
-    base version of PHPUnit to ``5.5`` instead of the default ``5.3``.
+    It's possible to change the base version of PHPUnit by setting the
+    ``SYMFONY_PHPUNIT_VERSION`` env var in the ``phpunit.xml.dist`` file (e.g.
+    ``<server name="SYMFONY_PHPUNIT_VERSION" value="5.5"/>``). This is the
+    preferred method as it can be committed to your version control repository.
 
-    It's also possible to set this env var in the ``phpunit.xml.dist`` file.
+    It's also possible to set ``SYMFONY_PHPUNIT_VERSION`` as a real env var
+    (not defined in a :ref:`dotenv file <config-dot-env>`).
 
 .. tip::
 
@@ -763,12 +878,11 @@ not find the SUT:
         </listener>
     </listeners>
 
-.. _PHPUnit: https://phpunit.de
+.. _`PHPUnit`: https://phpunit.de
 .. _`PHPUnit event listener`: https://phpunit.de/manual/current/en/extending-phpunit.html#extending-phpunit.PHPUnit_Framework_TestListener
 .. _`PHPUnit's assertStringMatchesFormat()`: https://phpunit.de/manual/current/en/appendixes.assertions.html#appendixes.assertions.assertStringMatchesFormat
 .. _`PHP error handler`: https://php.net/manual/en/book.errorfunc.php
 .. _`environment variable`: https://phpunit.de/manual/current/en/appendixes.configuration.html#appendixes.configuration.php-ini-constants-variables
-.. _Packagist: https://packagist.org/packages/symfony/phpunit-bridge
 .. _`@-silencing operator`: https://php.net/manual/en/language.operators.errorcontrol.php
 .. _`@-silenced`: https://php.net/manual/en/language.operators.errorcontrol.php
 .. _`Travis CI`: https://travis-ci.org/
@@ -777,4 +891,4 @@ not find the SUT:
 .. _`PHP namespace resolutions rules`: https://php.net/manual/en/language.namespaces.rules.php
 
 .. ready: no
-.. revision: 403ad61d81cafcd73e6ba1c30c6fdba1b9439514
+.. revision: c7931e48af2d8a6eda26a1a40bbc0aeef4068ab6

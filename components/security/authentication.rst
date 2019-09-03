@@ -13,7 +13,7 @@ an *authenticated* token if the supplied credentials were found to be valid.
 The listener should then store the authenticated token using
 :class:`the token storage <Symfony\\Component\\Security\\Core\\Authentication\\Token\\Storage\\TokenStorageInterface>`::
 
-    use Symfony\Component\HttpKernel\Event\GetResponseEvent;
+    use Symfony\Component\HttpKernel\Event\RequestEvent;
     use Symfony\Component\Security\Core\Authentication\AuthenticationManagerInterface;
     use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
     use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
@@ -38,7 +38,7 @@ The listener should then store the authenticated token using
 
         // ...
 
-        public function handle(GetResponseEvent $event)
+        public function handle(RequestEvent $event)
         {
             $request = $event->getRequest();
 
@@ -283,7 +283,7 @@ security.authentication.success  ``AuthenticationEvents::AUTHENTICATION_SUCCESS`
 security.authentication.failure  ``AuthenticationEvents::AUTHENTICATION_FAILURE``                  :class:`Symfony\\Component\\Security\\Core\\Event\\AuthenticationFailureEvent`
 security.interactive_login       ``SecurityEvents::INTERACTIVE_LOGIN``                             :class:`Symfony\\Component\\Security\\Http\\Event\\InteractiveLoginEvent`
 security.switch_user             ``SecurityEvents::SWITCH_USER``                                   :class:`Symfony\\Component\\Security\\Http\\Event\\SwitchUserEvent`
-security.logout_on_change        ``Symfony\Component\Security\Http\Event\DeauthenticatedEvent``    :class:`Symfony\\Component\\Security\\Http\\EventDeauthenticatedEvent`
+security.logout_on_change        ``Symfony\Component\Security\Http\Event\DeauthenticatedEvent``    :class:`Symfony\\Component\\Security\\Http\\Event\\DeauthenticatedEvent`
 ===============================  ================================================================= ==============================================================================
 
 Authentication Success and Failure Events
@@ -324,7 +324,6 @@ because of a user change, it can help you doing some clean-up task when a logout
     :doc:`/security/impersonating_user`.
 
 .. _`CVE-2013-5750`: https://symfony.com/blog/cve-2013-5750-security-issue-in-fosuserbundle-login-form
-.. _`BasePasswordEncoder::checkPasswordLength`: https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Encoder/BasePasswordEncoder.php
 
 .. ready: no
-.. revision: bcc55c55a68ab728fe56730fbc7d044bdf557fee
+.. revision: 922f6c1829207fc9ed5fe34e8c5a7741fd2e0af0

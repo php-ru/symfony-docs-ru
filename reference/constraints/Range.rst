@@ -9,8 +9,11 @@ Options     - `groups`_
             - `invalidMessage`_
             - `max`_
             - `maxMessage`_
+            - `maxPropertyPath`_
             - `min`_
             - `minMessage`_
+            - `minPropertyPath`_
+            - `notInRangeMessage`_
             - `payload`_
 Class       :class:`Symfony\\Component\\Validator\\Constraints\\Range`
 Validator   :class:`Symfony\\Component\\Validator\\Constraints\\RangeValidator`
@@ -358,6 +361,24 @@ Parameter        Description
 ``{{ value }}``  The current (invalid) value
 ===============  ==============================================================
 
+maxPropertyPath
+~~~~~~~~~~~~~~~
+
+**type**: ``string``
+
+It defines the object property whose value is used as ``max`` option.
+
+For example, if you want to compare the ``$submittedDate`` property of some object
+with regard to the ``$deadline`` property of the same object, use
+``maxPropertyPath="deadline"`` in the range constraint of ``$submittedDate``.
+
+.. tip::
+
+    When using this option, its value is available in error messages as the
+    ``{{ max_limit_path }}`` placeholder. Although it's not intended to
+    include it in the error messages displayed to end users, it's useful when
+    using APIs for doing any mapping logic on client-side.
+
 min
 ~~~
 
@@ -383,10 +404,46 @@ Parameter        Description
 ``{{ value }}``  The current (invalid) value
 ===============  ==============================================================
 
+minPropertyPath
+~~~~~~~~~~~~~~~
+
+**type**: ``string``
+
+It defines the object property whose value is used as ``min`` option.
+
+For example, if you want to compare the ``$endDate`` property of some object
+with regard to the ``$startDate`` property of the same object, use
+``minPropertyPath="startDate"`` in the range constraint of ``$endDate``.
+
+.. tip::
+
+    When using this option, its value is available in error messages as the
+    ``{{ min_limit_path }}`` placeholder. Although it's not intended to
+    include it in the error messages displayed to end users, it's useful when
+    using APIs for doing any mapping logic on client-side.
+
+notInRangeMessage
+~~~~~~~~~~~~~~~~~
+
+**type**: ``string`` **default**: ``This value should be between {{ min }} and {{ max }}.``
+
+The message that will be shown if the underlying value is less than the
+`min`_ option or greater than the `max`_ option.
+
+You can use the following parameters in this message:
+
+===============  ==============================================================
+Parameter        Description
+===============  ==============================================================
+``{{ max }}``    The upper limit
+``{{ min }}``    The lower limit
+``{{ value }}``  The current (invalid) value
+===============  ==============================================================
+
 .. include:: /reference/constraints/_payload-option.rst.inc
 
 .. _`is_numeric`: https://php.net/manual/en/function.is-numeric.php
 .. _`accepted by the DateTime constructor`: https://php.net/manual/en/datetime.formats.php
 
 .. ready: no
-.. revision: 2be18a39f4260314dd90c392085338f42f5dc450
+.. revision: 3b4cb35d0af744d3cecfb520964056d945e32608

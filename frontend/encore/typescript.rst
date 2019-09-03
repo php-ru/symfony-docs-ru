@@ -33,8 +33,7 @@ processed by ``ts-loader``.
 
 .. _`TypeScript`: https://www.typescriptlang.org/
 .. _`ts-loader options`: https://github.com/TypeStrong/ts-loader#options
-.. _`fork-ts-checker-webpack-plugin`: https://www.npmjs.com/package/fork-ts-checker-webpack-plugin
 .. _`Encore's index.js file`: https://github.com/symfony/webpack-encore/blob/master/index.js
 
 .. ready: no
-.. revision: c2b36a281ba6cfc92c8e94712a7ba60fe69d822e
+.. revision: 3aeb73e4c4f0c0b348343b506f64be9ce81b6590

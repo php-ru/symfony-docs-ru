@@ -41,13 +41,13 @@ Symfony application:
 
 Can we already load the project in a browser? Yes! You can setup
 :doc:`Nginx or Apache </setup/web_server_configuration>` and configure their
-document root to be the ``public/`` directory. But, for development, Symfony has
-its own server. Install and run it with:
+document root to be the ``public/`` directory. But, for development, it's better
+to :doc:`install the Symfony local web server </setup/symfony_server>` and run
+it as follows:
 
 .. code-block:: terminal
 
-    $ composer require --dev server
-    $ php bin/console server:start
+    $ symfony server:start
 
 Try your new app by going to ``http://localhost:8000`` in a browser!
 
@@ -200,4 +200,4 @@ Keep reading with :doc:`/quick_tour/flex_recipes`.
 .. _`Composer`: https://getcomposer.org/
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: 511f7711f1f53c0453b498c2ea80882deffd2427

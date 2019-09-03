@@ -235,14 +235,13 @@ proxy before it has expired, it adds complexity to your caching setup.
 
 .. _`Varnish`: https://www.varnish-cache.org
 .. _`Edge Architecture`: http://www.w3.org/TR/edge-arch
-.. _`GZIP and Varnish`: https://www.varnish-cache.org/docs/3.0/phk/gzip.html
-.. _`Clean the cookies header`: https://www.varnish-cache.org/trac/wiki/VCLExampleRemovingSomeCookies
+.. _`clean the cookies header`: https://www.varnish-cache.org/trac/wiki/VCLExampleRemovingSomeCookies
 .. _`Surrogate-Capability Header`: http://www.w3.org/TR/edge-arch
 .. _`cache invalidation`: http://tools.ietf.org/html/rfc2616#section-13.10
 .. _`FOSHttpCacheBundle`: http://foshttpcachebundle.readthedocs.org/
-.. _`default.vcl`: https://github.com/varnish/Varnish-Cache/blob/3.0/bin/varnishd/default.vcl
-.. _`builtin.vcl`: https://github.com/varnish/Varnish-Cache/blob/4.1/bin/varnishd/builtin.vcl
+.. _`default.vcl`: https://github.com/varnishcache/varnish-cache/blob/3.0/bin/varnishd/default.vcl
+.. _`builtin.vcl`: https://github.com/varnishcache/varnish-cache/blob/4.1/bin/varnishd/builtin.vcl
 .. _`User Context`: http://foshttpcachebundle.readthedocs.org/en/latest/features/user-context.html
 
 .. ready: no
-.. revision: c22a1c380fa9699f0194de45a5baea1c45d824c0
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

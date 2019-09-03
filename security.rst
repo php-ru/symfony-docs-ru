@@ -30,7 +30,7 @@ A few other important topics are discussed after.
 1) Installation
 ---------------
 
-In applications using :doc:`Symfony Flex </setup/flex>`, run this command to
+In applications using :ref:`Symfony Flex <symfony-flex>`, run this command to
 install the security feature before using it:
 
 .. code-block:: terminal
@@ -124,10 +124,9 @@ command will pre-configure this for you:
             encoders:
                 # use your user class name here
                 App\Entity\User:
-                    # bcrypt or sodium are recommended
-                    # sodium is more secure, but requires PHP 7.2 or the Sodium extension
-                    algorithm: bcrypt
-                    cost: 12
+                    # Use native password encoder
+                    # This value auto-selects the best possible hashing algorithm.
+                    algorithm: auto
 
     .. code-block:: xml
 
@@ -928,11 +927,6 @@ For example, in a controller extending from the :ref:`base controller <the-base-
     :doc:`security voter </security/voters>` that looks for the user roles
     in the database.
 
-Checking for Security Vulnerabilities in your Dependencies
-----------------------------------------------------------
-
-See :doc:`/security/security_checker`.
-
 Frequently Asked Questions
 --------------------------
 
@@ -964,7 +958,6 @@ Frequently Asked Questions
     the log message:
 
 **Cannot refresh token because user has changed**
-
     If you see this, there are two possible causes. First, there may be a problem
     loading your User from the session. See :ref:`user_session_refresh`. Second,
     if certain user information was changed in the database since the last page
@@ -1005,13 +998,12 @@ Authorization (Denying Access)
     security/access_denied_handler
     security/acl
     security/force_https
-    security/security_checker
 
-.. _`frameworkextrabundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
+.. _`FrameworkExtraBundle documentation`: https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 .. _`HWIOAuthBundle`: https://github.com/hwi/HWIOAuthBundle
 .. _`Symfony ACL bundle`: https://github.com/symfony/acl-bundle
 .. _`Symfony Security screencast series`: https://symfonycasts.com/screencast/symfony-security
 .. _`MakerBundle`: https://symfony.com/doc/current/bundles/SymfonyMakerBundle/index.html
 
 .. ready: no
-.. revision: f2e535517b314ae90a20150a1faa9634fb832989
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

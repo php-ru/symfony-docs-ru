@@ -18,7 +18,7 @@ To do this, first add a file that executes your bootstrap work::
         ));
     }
 
-    require __DIR__.'/../vendor/autoload.php';
+    require __DIR__.'/../config/bootstrap.php';
 
 Then, configure ``phpunit.xml.dist`` to execute this ``bootstrap.php`` file
 before running the tests:
@@ -52,4 +52,4 @@ This now becomes an environment variable (i.e. ``$_ENV``) that's available
 in the custom bootstrap file (``tests/bootstrap.php``).
 
 .. ready: no
-.. revision: 79e00fe7a127ab9db2d0d8d1c64abbcea84fb36f
+.. revision: f34bd0bec478c5df94709ca7001dc58aa9d223e7

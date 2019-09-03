@@ -418,6 +418,8 @@ Take a look at the previous example in more detail:
 Whether you're creating or updating objects, the workflow is always the same: Doctrine
 is smart enough to know if it should INSERT or UPDATE your entity.
 
+.. _automatic_object_validation:
+
 Validating Objects
 ------------------
 
@@ -427,11 +429,10 @@ some basic validation tasks::
     // src/Controller/ProductController.php
     namespace App\Controller;
 
-    // ...
+    use App\Entity\Product;
     use Symfony\Component\HttpFoundation\Response;
     use Symfony\Component\Validator\Validator\ValidatorInterface;
-
-    use App\Entity\Product;
+    // ...
 
     class ProductController extends AbstractController
     {
@@ -484,10 +485,6 @@ This automatic validation is a nice feature to improve your productivity, but it
 doesn't replace the validation configuration entirely. You still need to add
 some :doc:`validation constraints </reference/constraints>` to ensure that data
 provided by the user is correct.
-
-.. versionadded:: 4.3
-
-    The automatic validation has been added in Symfony 4.3.
 
 Fetching Objects from the Database
 ----------------------------------
@@ -670,11 +667,11 @@ But what if you need a more complex query? When you generated your entity with
 
     use App\Entity\Product;
     use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-    use Symfony\Bridge\Doctrine\RegistryInterface;
+    use Doctrine\Common\Persistence\ManagerRegistry;
 
     class ProductRepository extends ServiceEntityRepository
     {
-        public function __construct(RegistryInterface $registry)
+        public function __construct(ManagerRegistry $registry)
         {
             parent::__construct($registry, Product::class);
         }
@@ -692,7 +689,7 @@ a new method for this to your repository::
     // ...
     class ProductRepository extends ServiceEntityRepository
     {
-        public function __construct(RegistryInterface $registry)
+        public function __construct(ManagerRegistry $registry)
         {
             parent::__construct($registry, Product::class);
         }
@@ -876,7 +873,6 @@ Learn more
 .. _`Doctrine's Mapping Types documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html
 .. _`Query Builder`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/query-builder.html
 .. _`Doctrine Query Language`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/dql-doctrine-query-language.html
-.. _`Mapping Types Documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#property-mapping
 .. _`Reserved SQL keywords documentation`: http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/basic-mapping.html#quoting-reserved-words
 .. _`DoctrineMongoDBBundle`: https://symfony.com/doc/current/bundles/DoctrineMongoDBBundle/index.html
 .. _`DoctrineFixturesBundle`: https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
@@ -890,4 +886,4 @@ Learn more
 .. _`API Platform`: https://api-platform.com/docs/core/validation/
 
 .. ready: no
-.. revision: 3da08e3815e3421b885dbee86418d7a3452a2fd3
+.. revision: bc1d0adf21985b88f655110f361f3cea9a2fdc5c

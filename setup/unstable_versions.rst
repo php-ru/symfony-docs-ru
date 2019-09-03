@@ -7,9 +7,10 @@ they are released as stable versions.
 Creating a New Project Based on an Unstable Symfony Version
 -----------------------------------------------------------
 
+
 Suppose that the Symfony 4.0 version hasn't been released yet and you want to create
-a new project to test its features. First, :doc:`install the Composer </setup/composer>`
-package manager. Then, open a command console, enter your project's directory and
+a new project to test its features. First, `install the Composer package manager`_.
+Then, open a command console, enter your project's directory and
 execute the following command:
 
 .. code-block:: terminal
@@ -73,5 +74,7 @@ Symfony version has deprecated some of its features.
         $ git checkout master
         $ git branch -D testing_new_symfony
 
+.. _`install the Composer package manager`: https://getcomposer.org/download/
+
 .. ready: no
-.. revision: 43e6621d65f36d7e7f8a4cd12c8a99e419c51102
+.. revision: bf60675f0b5301ba601da6627a80d20884fd286b

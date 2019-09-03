@@ -38,7 +38,7 @@ to register event listeners and dispatch events::
 
     // dispatches an event
     $event = ...;
-    $traceableEventDispatcher->dispatch('event.the_name', $event);
+    $traceableEventDispatcher->dispatch($event, 'event.the_name');
 
 After your application has been processed, you can use the
 :method:`Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcherInterface::getCalledListeners`
@@ -53,4 +53,4 @@ method returns an array of event listeners that have not been called::
     $notCalledListeners = $traceableEventDispatcher->getNotCalledListeners();
 
 .. ready: no
-.. revision: 219b7f88713f162934ae238c09c26986e23db457
+.. revision: 33e2201bd0d3418a58c381a70c409cb54f66f145

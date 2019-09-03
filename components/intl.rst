@@ -5,8 +5,8 @@
 The Intl Component
 ==================
 
-    A PHP replacement layer for the C `intl extension`_ that also provides
-    access to the localization data of the `ICU library`_.
+    This component provides access to the localization data of the `ICU library`_.
+    It also provides a PHP replacement layer for the C `intl extension`_.
 
 .. caution::
 
@@ -66,7 +66,8 @@ This component provides the following ICU data:
 Language and Script Names
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``Languages`` class provides access to the name of all languages::
+The ``Languages`` class provides access to the name of all languages
+according to the `ISO 639-1 alpha-2`_ list and the `ISO 639-2 alpha-3`_ list::
 
     use Symfony\Component\Intl\Languages;
 
@@ -76,7 +77,14 @@ The ``Languages`` class provides access to the name of all languages::
     // ('languageCode' => 'languageName')
     // => ['ab' => 'Abkhazian', 'ace' => 'Achinese', ...]
 
+    $languages = Languages::getAlpha3Names();
+    // ('languageCode' => 'languageName')
+    // => ['abk' => 'Abkhazian', 'ace' => 'Achinese', ...]
+
     $language = Languages::getName('fr');
+    // => 'French'
+
+    $language = Languages::getAlpha3Name('fra');
     // => 'French'
 
 All methods accept the translation locale as the last, optional parameter,
@@ -85,12 +93,30 @@ which defaults to the current default locale::
     $languages = Languages::getNames('de');
     // => ['ab' => 'Abchasisch', 'ace' => 'Aceh', ...]
 
+    $languages = Languages::getAlpha3Names('de');
+    // => ['abk' => 'Abchasisch', 'ace' => 'Aceh', ...]
+
     $language = Languages::getName('fr', 'de');
     // => 'Französisch'
 
-You can also check if a given language code is valid::
+    $language = Languages::getAlpha3Name('fra', 'de');
+    // => 'Französisch'
+
+If the given locale doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given language code is valid::
 
     $isValidLanguage = Languages::exists($languageCode);
+
+Or if you have a alpha3 language code you want to check::
+
+    $isValidLanguage = Languages::alpha3CodeExists($alpha3Code);
+
+You may convert codes between two-letter alpha2 and three-letter alpha3 codes::
+
+    $alpha3Code = Languages::getAlpha3Code($alpha2Code);
+
+    $alpha2Code = Languages::getAlpha2Code($alpha3Code);
 
 The ``Scripts`` class provides access to the optional four-letter script code
 that can follow the language code according to the `Unicode ISO 15924 Registry`_
@@ -111,13 +137,15 @@ for traditional Chinese)::
 All methods accept the translation locale as the last, optional parameter,
 which defaults to the current default locale::
 
-    $languages = Scripts::getNames('de');
+    $scripts = Scripts::getNames('de');
     // => ['Adlm' => 'Adlam', 'Afak' => 'Afaka', ...]
 
-    $language = Scripts::getName('Hans', 'de');
+    $script = Scripts::getName('Hans', 'de');
     // => 'Vereinfacht'
 
-You can also check if a given script code is valid::
+If the given script code doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given script code is valid::
 
     $isValidScript = Scripts::exists($scriptCode);
 
@@ -125,19 +153,26 @@ Country Names
 ~~~~~~~~~~~~~
 
 The ``Countries`` class provides access to the name of all countries according
-to the `ISO 3166-1 alpha-2`_ list of officially recognized countries and
-territories::
+to the `ISO 3166-1 alpha-2`_ list and the `ISO 3166-1 alpha-3`_ list
+of officially recognized countries and territories::
 
     use Symfony\Component\Intl\Countries;
 
     \Locale::setDefault('en');
 
     $countries = Countries::getNames();
-    // ('countryCode' => 'countryName')
+    // ('alpha2Code' => 'countryName')
     // => ['AF' => 'Afghanistan', 'AX' => 'Åland Islands', ...]
+
+    $countries = Countries::getAlpha3Names();
+    // ('alpha3Code' => 'countryName')
+    // => ['AFG' => 'Afghanistan', 'ALA' => 'Åland Islands', ...]
 
     $country = Countries::getName('GB');
     // => 'United Kingdom'
+
+    $country = Countries::getAlpha3Name('NOR');
+    // => 'Norway'
 
 All methods accept the translation locale as the last, optional parameter,
 which defaults to the current default locale::
@@ -145,12 +180,30 @@ which defaults to the current default locale::
     $countries = Countries::getNames('de');
     // => ['AF' => 'Afghanistan', 'EG' => 'Ägypten', ...]
 
+    $countries = Countries::getAlpha3Names('de');
+    // => ['AFG' => 'Afghanistan', 'EGY' => 'Ägypten', ...]
+
     $country = Countries::getName('GB', 'de');
     // => 'Vereinigtes Königreich'
 
-You can also check if a given country code is valid::
+    $country = Countries::getAlpha3Name('GBR', 'de');
+    // => 'Vereinigtes Königreich'
 
-    $isValidCountry = Countries::exists($countryCode);
+If the given country code doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given country code is valid::
+
+    $isValidCountry = Countries::exists($alpha2Code);
+
+Or if you have a alpha3 country code you want to check::
+
+    $isValidCountry = Countries::alpha3CodeExists($alpha3Code);
+
+You may convert codes between two-letter alpha2 and three-letter alpha3 codes::
+
+    $alpha3Code = Countries::getAlpha3Code($alpha2Code);
+
+    $alpha2Code = Countries::getAlpha2Code($alpha3Code);
 
 Locales
 ~~~~~~~
@@ -180,7 +233,9 @@ which defaults to the current default locale::
     $locale = Locales::getName('zh_Hans_MO', 'de');
     // => 'Chinesisch (Vereinfacht, Sonderverwaltungsregion Macau)'
 
-You can also check if a given locale code is valid::
+If the given locale code doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given locale code is valid::
 
     $isValidLocale = Locales::exists($localeCode);
 
@@ -220,9 +275,13 @@ the current default locale::
     $currency = Currencies::getName('INR', 'de');
     // => 'Indische Rupie'
 
-You can also check if a given currency code is valid::
+If the given currency code doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given currency code is valid::
 
     $isValidCurrency = Currencies::exists($currencyCode);
+
+.. _component-intl-timezones:
 
 Timezones
 ~~~~~~~~~
@@ -294,7 +353,9 @@ you can pass the locale as the third optional argument::
     $offset = Timezones::getGmtOffset('Europe/Madrid', strtotime('October 28, 2019'), 'ar')); // $offset = 'غرينتش+01:00'
     $offset = Timezones::getGmtOffset('Europe/Madrid', strtotime('October 28, 2019'), 'dz')); // $offset = 'ཇི་ཨེམ་ཏི་+01:00'
 
-Finally, you can also check if a given timezone ID is valid::
+If the given timezone ID doesn't exist, the methods trigger a
+:class:`Symfony\\Component\\Intl\\Exception\\MissingResourceException`. In addition
+to catching the exception, you can also check if a given timezone ID is valid::
 
     $isValidTimezone = Timezones::exists($timezoneId);
 
@@ -311,15 +372,16 @@ Learn more
     /reference/forms/types/locale
     /reference/forms/types/timezone
 
-.. _Packagist: https://packagist.org/packages/symfony/intl
-.. _Icu component: https://packagist.org/packages/symfony/icu
 .. _intl extension: https://php.net/manual/en/book.intl.php
 .. _install the intl extension: https://php.net/manual/en/intl.setup.php
 .. _ICU library: http://site.icu-project.org/
 .. _`Unicode ISO 15924 Registry`: https://www.unicode.org/iso15924/iso15924-codes.html
 .. _`ISO 3166-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+.. _`ISO 3166-1 alpha-3`: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
 .. _`UTC/GMT time offsets`: https://en.wikipedia.org/wiki/List_of_UTC_time_offsets
 .. _`daylight saving time (DST)`: https://en.wikipedia.org/wiki/Daylight_saving_time
+.. _`ISO 639-1 alpha-2`: https://en.wikipedia.org/wiki/ISO_639-1
+.. _`ISO 639-2 alpha-3`: https://en.wikipedia.org/wiki/ISO_639-2
 
 .. ready: no
-.. revision: 2f903fb771aedcd53dadd5caeef7d44ed763ca77
+.. revision: 1132596d239b19c8b1888fc02bd9ab12f98e4f9e

@@ -41,10 +41,10 @@ excluded_ajax_paths
 
 **type**: ``string`` **default**: ``'^/((index|app(_[\w]+)?)\.php/)?_wdt'``
 
-When the toolbar logs Ajax requests, it matches their URLs against this regular
+When the toolbar logs AJAX requests, it matches their URLs against this regular
 expression. If the URL matches, the request is not displayed in the toolbar. This
-is useful when the application makes lots of Ajax requests or they are heavy and
-you want to exclude some of them.
+is useful when the application makes lots of AJAX requests, or if they are heavy
+and you want to exclude some of them.
 
 .. _intercept_redirects:
 
@@ -72,4 +72,4 @@ in the ``dev`` and ``test`` environments and to ``false`` in the ``prod``
 environment.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: 8dd96b996c144d35a8e1e01a296b4129b4307ab2

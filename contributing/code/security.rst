@@ -1,9 +1,9 @@
 Security Issues
 ===============
 
-This document explains how Symfony security issues are handled by the Symfony
-core team (Symfony being the code hosted on the main ``symfony/symfony`` `Git
-repository`_).
+This document explains how Symfony security issues are handled by the
+Symfony core team (Symfony being the code hosted on the main ``symfony/symfony``
+`Git repository`_).
 
 Reporting a Security Issue
 --------------------------
@@ -38,7 +38,8 @@ confirmed, the core team works on a solution following these steps:
 #. Publish the post on the official Symfony `blog`_ (it must also be added to
    the "`Security Advisories`_" category);
 #. Update the public `security advisories database`_ maintained by the
-   FriendsOfPHP organization and which is used by the ``security:check`` command.
+   FriendsOfPHP organization and which is used by
+   :ref:`the check:security command <security-checker>`.
 
 .. note::
 
@@ -169,18 +170,17 @@ Security Advisories
 .. tip::
 
     You can check your Symfony application for known security vulnerabilities
-    using the ``security:check`` command (see :doc:`/security/security_checker`).
+    using :ref:`the check:security command <security-checker>`.
 
 Check the `Security Advisories`_ blog category for a list of all security
 vulnerabilities that were fixed in Symfony releases, starting from Symfony
 1.0.0.
 
-.. _Git repository: https://github.com/symfony/symfony
+.. _`Git repository`: https://github.com/symfony/symfony
 .. _blog: https://symfony.com/blog/
-.. _Security Advisories: https://symfony.com/blog/category/security-advisories
 .. _`security advisories database`: https://github.com/FriendsOfPHP/security-advisories
 .. _`mitre.org`: https://cveform.mitre.org/
 .. _`Security Advisories`: https://symfony.com/blog/category/security-advisories
 
 .. ready: no
-.. revision: 1c4d8fcc7282caf401ef4677fb3087dad3f08475
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

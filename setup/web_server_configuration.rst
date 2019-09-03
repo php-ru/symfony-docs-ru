@@ -93,6 +93,8 @@ and increase web server performance:
         ServerAlias www.domain.tld
 
         DocumentRoot /var/www/project/public
+        DirectoryIndex /index.php
+
         <Directory /var/www/project/public>
             AllowOverride None
             Order Allow,Deny
@@ -355,4 +357,4 @@ For advanced Nginx configuration options, read the official `Nginx documentation
 .. _`Nginx documentation`: https://www.nginx.com/resources/wiki/start/topics/recipes/symfony/
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: 848db94dd18ec3e3a0e41cc921e65e803576bf89

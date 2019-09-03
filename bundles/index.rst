@@ -7,11 +7,10 @@ Bundles
     :maxdepth: 2
 
     override
-    inheritance
     best_practices
     configuration
     extension
     prepend_extension
 
 .. ready: no
-.. revision: 9f32377f6add0e86bd15ad0b0f7d18428d7ae56d
+.. revision: 2b75334bc440d35543d68dd39d001c04510567c9

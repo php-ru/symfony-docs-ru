@@ -80,8 +80,8 @@ object to read data off of the correct PHP superglobals (i.e. ``$_POST`` or
 .. seealso::
 
     If you need more control over exactly when your form is submitted or which
-    data is passed to it, you can use the :method:`Symfony\\Component\\Form\\FormInterface::submit`
-    for this. Read more about it :ref:`form-call-submit-directly`.
+    data is passed to it,
+    :doc:`use the submit() method to handle form submissions </form/direct_submit>`.
 
 .. sidebar:: Integration with the HttpFoundation Component
 
@@ -224,7 +224,7 @@ to bootstrap or access Twig and add the :class:`Symfony\\Bridge\\Twig\\Extension
 
 .. versionadded:: 1.30
 
-    The ``Twig\\RuntimeLoader\\FactoryRuntimeLoader`` was introduced in Twig 1.30.
+    The ``Twig\RuntimeLoader\FactoryRuntimeLoader`` was introduced in Twig 1.30.
 
 The exact details of your `Twig Configuration`_ will vary, but the goal is
 always to add the :class:`Symfony\\Bridge\\Twig\\Extension\\FormExtension`
@@ -264,7 +264,7 @@ installed:
     $ composer require symfony/translation symfony/config
 
 Next, add the :class:`Symfony\\Bridge\\Twig\\Extension\\TranslationExtension`
-to your ``Twig\\Environment`` instance::
+to your ``Twig\Environment`` instance::
 
     use Symfony\Bridge\Twig\Extension\TranslationExtension;
     use Symfony\Component\Form\Forms;
@@ -775,9 +775,8 @@ Learn more
 
     /form/*
 
-.. _Packagist: https://packagist.org/packages/symfony/form
 .. _Twig: https://twig.symfony.com
 .. _`Twig Configuration`: https://twig.symfony.com/doc/2.x/intro.html
 
 .. ready: no
-.. revision: 8db66a57848bdb010c14788e61b29690a8ddc3cb
+.. revision: f8de8f346ade3f1034e89271274e08ec71d1a08e

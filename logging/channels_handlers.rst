@@ -15,8 +15,8 @@ the channel).
 .. note::
 
     Each channel corresponds to a logger service (``monolog.logger.XXX``)
-    in the container (use the ``debug:container`` command to see a full list)
-    and those are injected into different services.
+    in the container (use the ``php bin/console debug:container monolog`` command
+    to see a full list) and those are injected into different services.
 
 .. _logging-channel-handler:
 
@@ -96,7 +96,7 @@ from the ``security`` channel:
 
 .. caution::
 
-    The ``channels`` configuration only works for top level handlers. Handlers
+    The ``channels`` configuration only works for top-level handlers. Handlers
     that are nested inside a group, buffer, filter, fingers crossed or other
     such handler will ignore this configuration and will process every message
     passed to them.
@@ -174,4 +174,4 @@ inject this service into others, you must update the service configuration to
 :ref:`choose the specific service to inject <services-wire-specific-service>`.
 
 .. ready: no
-.. revision: 242aadda2d0c90dbc76495a73af9cb68f90777d6
+.. revision: a3ba52f8e4fd5ba3d90b65750429b1995afadd06

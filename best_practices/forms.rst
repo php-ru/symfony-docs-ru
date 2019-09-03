@@ -212,6 +212,8 @@ Handling a form submit usually follows a similar template::
         // render the template
     }
 
+.. _best-practice-handle-form:
+
 We recommend that you use a single action for both rendering the form and
 handling the form submit. For example, you *could* have a ``new()`` action that
 *only* renders the form and a ``create()`` action that *only* processes the form
@@ -221,4 +223,4 @@ submit. Both those actions will be almost identical. So it's much simpler to let
 Next: :doc:`/best_practices/i18n`
 
 .. ready: no
-.. revision: 8b45bd0b1eb8353d0981f119eae99e0b7590b232
+.. revision: 3f0406f0c645544d213efeefe125dbc0bba8902d

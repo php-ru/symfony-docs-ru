@@ -167,8 +167,8 @@ to access protected resources as if the user had actually authenticated upon
 visiting the site.
 
 In some cases, however, you may want to force the user to actually re-authenticate
-before accessing certain resources. For example, you might allow "remember me"
-users to change their password. You can do this by leveraing a few special "roles"::
+before accessing certain resources. For example, you might not allow "remember me"
+users to change their password. You can do this by leveraging a few special "roles"::
 
     // src/Controller/AccountController.php
     // ...
@@ -306,4 +306,4 @@ service you just created:
         ]);
 
 .. ready: no
-.. revision: e1037e9cd67777af8901c3d823ffdd33465fc587
+.. revision: ee91e8dd640f70ce3cbf9984f664d9bdded471e0

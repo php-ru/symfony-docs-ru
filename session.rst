@@ -180,6 +180,7 @@ the default ``AttributeBag`` by the ``NamespacedAttributeBag``:
 
         # config/services.yaml
         session:
+            public: true
             class: Symfony\Component\HttpFoundation\Session\Session
             arguments: ['@session.storage', '@session.namespacedattributebag', '@session.flash_bag']
 
@@ -226,4 +227,4 @@ More about Sessions
 .. _`HttpFoundation component`: https://symfony.com/components/HttpFoundation
 
 .. ready: no
-.. revision: 95fd311f7f3b5a62e1478cac6a6adb4d0afab945
+.. revision: 315103ff805da0ccc5c86ebeb4a2ddea17f26dc0
